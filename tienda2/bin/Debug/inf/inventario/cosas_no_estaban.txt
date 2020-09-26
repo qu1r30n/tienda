@@ -1,0 +1,4 @@
+movimiento origen: 1|1166|elim|elim|elim|elim|elim|elim|
+movimiento origen: 1|1166|elim|elim|elim|elim|elim|elim|
+movimiento origen: 1|1166|elim|elim|elim|elim|elim|elim|elim|rango|extra|
+movimiento origen: 1|1166|elim|elim|elim|elim|elim|elim|elim|rango|
