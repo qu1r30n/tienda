@@ -11,7 +11,7 @@ namespace tienda2.clases
 
         char[] G_parametros = { '|' };
 
-        public void modelo_compra(string codigo, string costo_compra, string cantidad, string provedor,string nom_producto,string id_producto,bool compra_directa=false)
+        public void modelo_compra(string codigo, string costo_compra, string cantidad, string provedor,string nom_producto,string id_producto,bool compra_directa=true)
         {
             DateTime fecha_hora = DateTime.Now;
             string hora_min_seg = fecha_hora.ToString("HH:mm:ss");

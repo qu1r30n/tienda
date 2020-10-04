@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using tienda2.clases;
 
 namespace tienda2.desinger
 {
@@ -14,6 +15,8 @@ namespace tienda2.desinger
     {
 
         char[] G_parametros = { '|' };
+        string G_datos_de_boton="";
+        int G_celdas_totales = 0;
 
 
         public ventana_emergente()
@@ -25,17 +28,24 @@ namespace tienda2.desinger
 
         public string proceso_ventana_emergente(string[] nom_datos_recolectados, int modificara = 0, string[] infoextra = null, char caracter_spliteo = '°')
         {
-            string[] arraytextbox = new string[1];
+            string[] arraytextbox = new string[nom_datos_recolectados.Length];
+            G_celdas_totales = nom_datos_recolectados.Length;
+
             int x = 120;
             int y = 0;
             int ancho = 100;
             int alto = 50;
             int acumleft = 0;
             int separacion_y = 15;
-            int contador_en_horisontal_txtbox = 0; ;
+            int contador_en_horisontal_txtbox = 0;
+
+            string hola = "";
+            string union = "";
+
             if (nom_datos_recolectados.Length != 0)
             {
                 string bandera1 = "0", bandera2 = "0",bandera3 = "0";
+
                 for (int i = 0; i < nom_datos_recolectados.Length; i++)
                 {
                     string[] espliteado = nom_datos_recolectados[i].Split(caracter_spliteo);
@@ -90,14 +100,19 @@ namespace tienda2.desinger
 
                     }
 
-                    else if (espliteado[0] == "2")//labels
+                    else if (espliteado[0] == "2")//labels y textbox
                     {
                         bandera2 = "1";
                         Label lb = new Label();
+                        Label lbl2 = new Label();
+                        arraytextbox[i] = espliteado[2];
                         if (contador_en_horisontal_txtbox <= 4)
                         {
                             lb.Top = y;
                             lb.Left = acumleft;
+
+                            lbl2.Top = y + separacion_y;
+                            lbl2.Left = acumleft;
 
                         }
                         else
@@ -107,37 +122,81 @@ namespace tienda2.desinger
                             acumleft = 0;
                             lb.Top = y;
                             lb.Left = acumleft;
+
+                            lbl2.Top = y + separacion_y;
+                            lbl2.Left = acumleft;
+                            
                         }
+
                         contador_en_horisontal_txtbox = contador_en_horisontal_txtbox + 1;
+
+
+                        if (espliteado.Length == 3)
+                        {
+                            lbl2.Text = espliteado[2];
+                        }
+
                         nom_datos_recolectados[i] = espliteado[1];
 
                         lb.Text = nom_datos_recolectados[i];
 
+                        lbl2.Width = ancho;
+                        //lbl2.Height = alto;
+
                         lb.AutoSize = true;
                         this.Controls.Add(lb);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
+                        this.Controls.Add(lbl2);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
                         acumleft = acumleft + x;
+
+
 
                     }
 
                     else if (espliteado[0] == "3")//botones
                     {
+
                         bandera3 = "1";
                         Button btn_nuevoboton = new Button();
-                        btn_nuevoboton.Width = ancho;
-                        btn_nuevoboton.Height = alto;
-                        btn_nuevoboton.Top = y + 60;
-                        btn_nuevoboton.Left = x;
                         btn_nuevoboton.Name = espliteado[2];
                         btn_nuevoboton.Text = espliteado[1];
-                        this.Controls.Add(btn_nuevoboton);
-                        btn_nuevoboton.Click += new EventHandler(nuevoBoton_Click);
+
+
+                        if (contador_en_horisontal_txtbox <= 4)
+                        {
+                            btn_nuevoboton.Top = y + separacion_y;
+                            btn_nuevoboton.Left = acumleft;
+                        }
+                        else
+                        {
+                            contador_en_horisontal_txtbox = 0;
+                            y = y + 40;
+                            acumleft = 0;
+
+                            btn_nuevoboton.Top = y + separacion_y;
+                            btn_nuevoboton.Left = acumleft;
+                        }
+
+                        contador_en_horisontal_txtbox = contador_en_horisontal_txtbox + 1;
+
+                        btn_nuevoboton.Width = ancho;
+                        btn_nuevoboton.Height = alto;
+
+                        this.Controls.Add(btn_nuevoboton);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
+                        acumleft = acumleft + x;
                         
-                        x=x+120;
+                        this.Controls.Add(btn_nuevoboton);
+
+                        string parametros = i+"°"+ espliteado[2];
+                        //btn_nuevoboton.Click += new EventHandler(nuevoBoton_Click); 
+                        
+                        btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola=nuevoBoton_Click(sender1, e1, parametros,infoextra));
+                        
 
                     }
 
                 }
                 
+
                 if (bandera1 == "1")
                 {
                     Button btn_aceptar = new Button();
@@ -156,8 +215,10 @@ namespace tienda2.desinger
                     //----------------------------------------------------------------------------------------------------------------------------
                     if (btn_aceptar.DialogResult == DialogResult)
                     {
-                        arraytextbox = boton_aceptar(arraytextbox);
+                        arraytextbox = boton_aceptar(arraytextbox,modificara,infoextra,caracter_spliteo);
+                        
                     }
+                    
                     //------------------------------------------------------------------------------------------------------------------
 
                 }
@@ -165,12 +226,13 @@ namespace tienda2.desinger
                 else if (bandera2=="1" || bandera3 == "1" && bandera1 != "1")
                 {
                     this.ShowDialog();
+                    union = hola;
                 }
 
             }
             else { MessageBox.Show("no has puesto ningun dato"); }
 
-            string union = "";
+            
             if (arraytextbox[0] != null)
             {
                 for (int i = 0; i < arraytextbox.Length; i++)
@@ -181,38 +243,55 @@ namespace tienda2.desinger
             return union;
         }
 
-        public string[] boton_aceptar(string[] arraytextbox)
+        public string[] boton_aceptar(string[] arraytextbox, int modificara = 0, string[] infoextra = null, char caracter_spliteo = '°')
         {
-            int K = 0;
             tex_base bas = new tex_base();
             operaciones_archivos op = new operaciones_archivos();
             string temp2 = "";
 
-            foreach (var obj in this.Controls)//checa cuantos objeto del tipo textbox  y pone el arreglo global conforme a la cantidad de textbox
+            string [] info_detro_celda = G_datos_de_boton.Split(G_parametros[0]);
+
+            for (int i = 0; i < info_detro_celda.Length; i++)
             {
-                if (obj is TextBox)
+                string[] posicion_y_datos = info_detro_celda[i].Split(caracter_spliteo);
+                if (posicion_y_datos.Length>=2)
                 {
-                    arraytextbox = new string[K + 1];
-                    K++;
+                    arraytextbox[Convert.ToInt32(posicion_y_datos[0])] = posicion_y_datos[1];
                 }
             }
 
-            K = 0;
-            foreach (var obj in this.Controls) //aqui agrega al arreglo global "arraytextbox" la informacion
+            int k = 0;
+            for (int j = 0; j < this.Controls.Count; j++) //aqui agrega al arreglo global "arraytextbox" la informacion
             {
-
-                if (obj is TextBox)
+                object obj = this.Controls[j];
+                
+                for (int i = k; i < arraytextbox.Length; i++)
                 {
-
-                    TextBox temp = (TextBox)obj;
-                    arraytextbox[K] = temp.Text;
-                    temp2 = temp2 + temp.Text + G_parametros[0];
-                    K++;
+                    
+                    if (obj is TextBox && arraytextbox[i]==null)
+                    {
+                        TextBox temp = (TextBox)obj;
+                        arraytextbox[i] = temp.Text;
+                        k = i;
+                        break;
+                    }
                 }
+                
             }
+
+
+            
+
+            for (int i = 0; i < arraytextbox.Length ; i++)
+            {
+                temp2 = temp2 + arraytextbox[i] + G_parametros[0];
+            }
+            operaciones_textos op_tex = new operaciones_textos();
+            op_tex.trimend_paresido(temp2, G_parametros[0]);
+
 
             bas.crear_archivo_y_directorio("inf\\inventario\\cosas_no_estaban.txt");
-            /*
+            
             switch (modificara)
             {
                 case 0:
@@ -234,19 +313,43 @@ namespace tienda2.desinger
                     bas.agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
                     break;
             }
-            */
+            
             this.Close();
             return arraytextbox;
 
         }
 
-        public void nuevoBoton_Click(object sender, EventArgs e)
+        public string nuevoBoton_Click(object sender, EventArgs e, string seccion,string[] info_extra=null)
         {
             //comprobamos en que boton se a clicado
             Button btn = sender as Button;
 
+            //G_datos_de_boton = G_datos_de_boton + seccion + G_parametros[0];
+
+            if (info_extra!=null)
+            {
+                if (info_extra[0] == "solo_botones")
+                {
+                    string[] seccion_espliteado = seccion.Split('°');
+                    seccion = seccion_espliteado[1];
+                    G_datos_de_boton =seccion;
+                    this.Close();
+                }
+                else
+                {
+                    G_datos_de_boton = G_datos_de_boton + seccion + G_parametros[0];
+                    this.Close();
+                }
+            }
+            else
+            {
+                G_datos_de_boton = G_datos_de_boton + seccion + G_parametros[0];
+            }
+            
             //y vemos el resutado
-            MessageBox.Show("pulsado el boton: " + btn.Text + "\nsu valor es: " + btn.Name);
+            //MessageBox.Show("pulsado el boton: " + btn.Text + "\nsu valor es: " + seccion);
+            
+            return G_datos_de_boton;
         }
 
         public static string InputBox(string title = "aqui tu titulo", string promptText = "aqui la pregunta", string value = "aqui el valor")

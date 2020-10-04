@@ -1,4 +1,2 @@
-movimiento origen: 1|1166|elim|elim|elim|elim|elim|elim|
-movimiento origen: 1|1166|elim|elim|elim|elim|elim|elim|
-movimiento origen: 1|1166|elim|elim|elim|elim|elim|elim|elim|rango|extra|
-movimiento origen: 1|1166|elim|elim|elim|elim|elim|elim|elim|rango|
+movimiento origen: 1|1166|producto|precio|nakljsad|cantidad|costo_compra|marca|grupo|no poner nada|
+movimiento origen: 1|1167|producto|precio de venta|jafoids|cantidad|costo de compra|marca|grupo|no poner nada|

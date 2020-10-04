@@ -132,11 +132,24 @@ namespace tienda2.desinger
 
         private void btn_procesar_venta_Click(object sender, EventArgs e)
         {
+            ventana_emergente ventana_emerg = new ventana_emergente();
+            string[] enviar = { "3°venta_directa°1", "3°preVenta°2" };
+            string[] info = {"solo_botones"};
+            string valor_devuelto=ventana_emerg.proceso_ventana_emergente(enviar,0,info);
+            bool compra_directa;
+            if (valor_devuelto=="1")
+            {
+                compra_directa = true;
+            }
+            else
+            {
+                compra_directa = false;
+            }
             modelo_compra_venta mod_com_ven = new modelo_compra_venta();
             for (int i = 0; i < lst_compras.Items.Count; i++)
             {
                 string[] item_spliteado = lst_compras.Items[i].ToString().Split(G_parametros);
-                mod_com_ven.modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1],item_spliteado[5]);
+                mod_com_ven.modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1],item_spliteado[5],compra_directa);
             }
 
         }

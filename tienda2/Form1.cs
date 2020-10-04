@@ -21,9 +21,10 @@ namespace tienda2
         {
 
             InitializeComponent();
-            ventana_emergente vent_emergent = new ventana_emergente();
-            string[] enviar = { "1°id°1", "1°marca°1" };
-            string mensage = vent_emergent.proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
+            //ventana_emergente vent_emergent = new ventana_emergente();
+            //string[] enviar = { "3°id°9", "3°marca°1", "3°ned°5" };
+            //string[] info = { "solo_botones" };
+            //string mensage = vent_emergent.proceso_ventana_emergente(enviar, 0,info);//el uno significa que modificara el inventario
             tex_base bas_pru = new tex_base();
 
             

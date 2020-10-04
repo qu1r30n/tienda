@@ -1,4 +1,4 @@
-id|producto|costo|0|catidad|costo_compra|marca|grupo|rango|
+id|producto|precio_de_venta|0|cantidad|costo_compra|marca|grupo|multiusos|
 1|pomada labial cereza|5|1|0|0|pomada labiual|||
 2|ariel jabon 250g|11.5|11.5|1|10.35||||
 3|chicle orbit 5.6g|2.5|2201302|0|1|orbit|||
@@ -132,7 +132,7 @@ id|producto|costo|0|catidad|costo_compra|marca|grupo|rango|
 131|maruchan res|10|41789001925|3|9|maruchan|sopas||
 132|maruchan camaron|10|41789001956|3|9|maruchan|sopas||
 133|maruchan cama/chilepiqui|10|41789001987|5|9|maruchan|sopas||
-134|rastrillo bic confort 3 hojas|12|70330724341|-1|10|bic|||
+134|rastrillo bic confort 3 hojas|12|70330724341|9|10|bic|||
 135|cajeta quemada coronado 370gr|36|74323083651|6|32.4|coronado|mermeladas||
 136|frijoles con choriso 430g|15|78883240547|0|0|la sierra|||
 137|jack daniels aple|30|82184000984|1000|27|jack daniels|licores||
@@ -150,7 +150,9 @@ id|producto|costo|0|catidad|costo_compra|marca|grupo|rango|
 149|arizona sandia 680ml|13|613008738846|2|11.7|arizona|jugos||
 150|arizona ponche de frutas 680ml|13|613008738860|999|11.7|arizona|jugos||
 151|arizona te verde 680ml|13|613008738884|4|11.7||jugos||
-152|delicias350g|20|615380000122|0|0|delocias|||
+152|navaja de afeitar|5|8801038200026|0|3|dorco|||
+153|pila AAA eveready|9|8999002604755|0|5|eveready|||
+154|delicias350g|20|615380000122|0|0|delocias|||
 155|totis palitos chile y limòn 25g|6|643795549271|0|5.4|de la costeña|botana||
 156|NEXT 10 tabletas|1.5|650240010538|0|0|next|||
 157|alliviax 10 tabletas|10.5|650240013805|0|0|alliviax|||
@@ -1158,9 +1160,7 @@ id|producto|costo|0|catidad|costo_compra|marca|grupo|rango|
 1159|kinder delice 39g|10|8000500267035|18|9||||
 1160|jugoso al sarten maggi 23.4gr|15|8585002432315|1|13.5||||
 1161|fabuloso complit 500ml|23|8718951167513|0|0|fabuloso|||
-1162|navaja de afeitar|5|8801038200026|0|3|dorco|||
-1163|pila AAA eveready|9|8999002604755|0|5|eveready|||
-1164|frituras saldaña|8|frituras saldaña|67|7.2||||
-1165|totopos|17|totopos|6|15.3||||
-1166|bocadin10.5g|2||0|1|bimbo|||
-1167|foco ruby 100watts|10||0|0|ruby|||
+1162|frituras saldaña|8|frituras saldaña|67|7.2||||
+1163|totopos|17|totopos|6|15.3||||
+1164|bocadin10.5g|2||0|1|bimbo|||
+1165|foco ruby 100watts|10||0|0|ruby|||
