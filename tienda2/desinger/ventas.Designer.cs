@@ -37,6 +37,8 @@
             this.btn_eliminar_seleccionado = new System.Windows.Forms.Button();
             this.lst_ventas = new System.Windows.Forms.ListBox();
             this.txt_buscar_producto = new System.Windows.Forms.TextBox();
+            this.txt_nom_producto = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,11 +129,31 @@
             this.txt_buscar_producto.TabIndex = 8;
             this.txt_buscar_producto.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_buscar_producto_PreviewKeyDown);
             // 
+            // txt_nom_producto
+            // 
+            this.txt_nom_producto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_nom_producto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_nom_producto.Location = new System.Drawing.Point(12, 313);
+            this.txt_nom_producto.Name = "txt_nom_producto";
+            this.txt_nom_producto.Size = new System.Drawing.Size(150, 20);
+            this.txt_nom_producto.TabIndex = 8;
+            this.txt_nom_producto.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_nom_producto_PreviewKeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(168, 320);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "nombre del producto";
+            // 
             // ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 315);
+            this.ClientSize = new System.Drawing.Size(382, 340);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_cuenta);
             this.Controls.Add(this.pb_product);
             this.Controls.Add(this.btn_elim_ultimo);
@@ -140,6 +162,7 @@
             this.Controls.Add(this.btn_eliminar_todo);
             this.Controls.Add(this.btn_eliminar_seleccionado);
             this.Controls.Add(this.lst_ventas);
+            this.Controls.Add(this.txt_nom_producto);
             this.Controls.Add(this.txt_buscar_producto);
             this.Name = "ventas";
             this.Text = "ventas";
@@ -160,5 +183,7 @@
         private System.Windows.Forms.Button btn_eliminar_seleccionado;
         private System.Windows.Forms.ListBox lst_ventas;
         private System.Windows.Forms.TextBox txt_buscar_producto;
+        private System.Windows.Forms.TextBox txt_nom_producto;
+        private System.Windows.Forms.Label label1;
     }
 }

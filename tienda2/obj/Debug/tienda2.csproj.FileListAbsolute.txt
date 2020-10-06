@@ -20,7 +20,6 @@ C:\Users\qu1r30n\source\repos\tienda2\tienda2\bin\Debug\tienda2.pdb
 C:\Users\qu1r30n\source\repos\tienda2\tienda2\obj\Debug\tienda2.exe
 C:\Users\qu1r30n\source\repos\tienda2\tienda2\obj\Debug\tienda2.pdb
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.csprojAssemblyReference.cache
-D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.agregar_producto.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.area_principal.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.comparar.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.compras.resources

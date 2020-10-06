@@ -28,9 +28,6 @@ namespace tienda2.desinger
 
         public string proceso_ventana_emergente(string[] nom_datos_recolectados, int modificara = 0, string[] infoextra = null, char caracter_spliteo = '°')
         {
-            string[] arraytextbox = new string[nom_datos_recolectados.Length];
-            G_celdas_totales = nom_datos_recolectados.Length;
-
             int x = 120;
             int y = 0;
             int ancho = 100;
@@ -39,20 +36,48 @@ namespace tienda2.desinger
             int separacion_y = 15;
             int contador_en_horisontal_txtbox = 0;
 
+            string[] info= { "" };
+
             string hola = "";
             string union = "";
 
+            string bandera1 = "0", bandera2 = "0", bandera3 = "0";
+
+            for (int i = 0; i < nom_datos_recolectados.Length; i++)
+            {
+                string [] tipo_de_datos=nom_datos_recolectados[i].Split(caracter_spliteo);
+
+                if (tipo_de_datos[0]=="1")
+                {
+                    bandera1 = "1";
+                }
+                else if (tipo_de_datos[0] == "2")
+                {
+                    bandera2 = "1";
+                }
+                else if (tipo_de_datos[0] == "3")
+                {
+                    bandera3 = "1";
+                }
+            }
+            if (bandera3 == "1" && bandera1 == "0" && bandera2 == "0")
+            {
+                info [0]="solo_botones" ;
+            }
+
+            string[] arraytextbox = new string[nom_datos_recolectados.Length];
+            G_celdas_totales = nom_datos_recolectados.Length;
+
+            
+
             if (nom_datos_recolectados.Length != 0)
             {
-                string bandera1 = "0", bandera2 = "0",bandera3 = "0";
-
                 for (int i = 0; i < nom_datos_recolectados.Length; i++)
                 {
                     string[] espliteado = nom_datos_recolectados[i].Split(caracter_spliteo);
                     
                     if (espliteado[0] == "1")//labels y textbox
                     {
-                        bandera1 = "1";
                         Label lb = new Label();
                         TextBox txt = new TextBox();
                         if (contador_en_horisontal_txtbox <= 4)
@@ -102,7 +127,6 @@ namespace tienda2.desinger
 
                     else if (espliteado[0] == "2")//labels y textbox
                     {
-                        bandera2 = "1";
                         Label lb = new Label();
                         Label lbl2 = new Label();
                         arraytextbox[i] = espliteado[2];
@@ -154,8 +178,6 @@ namespace tienda2.desinger
 
                     else if (espliteado[0] == "3")//botones
                     {
-
-                        bandera3 = "1";
                         Button btn_nuevoboton = new Button();
                         btn_nuevoboton.Name = espliteado[2];
                         btn_nuevoboton.Text = espliteado[1];
@@ -188,8 +210,17 @@ namespace tienda2.desinger
 
                         string parametros = i+"°"+ espliteado[2];
                         //btn_nuevoboton.Click += new EventHandler(nuevoBoton_Click); 
+                        if (info[0]== "solo_botones")
+                        {
+                            
+                            btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola = nuevoBoton_Click(sender1, e1, parametros, info));
+                        }
+                        else
+                        {
+                            btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola = nuevoBoton_Click(sender1, e1, parametros));
+                        }
                         
-                        btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola=nuevoBoton_Click(sender1, e1, parametros,infoextra));
+
                         
 
                     }
@@ -217,6 +248,10 @@ namespace tienda2.desinger
                     {
                         arraytextbox = boton_aceptar(arraytextbox,modificara,infoextra,caracter_spliteo);
                         
+                    }
+                    else
+                    {
+                        arraytextbox = new[] { "" };
                     }
                     
                     //------------------------------------------------------------------------------------------------------------------

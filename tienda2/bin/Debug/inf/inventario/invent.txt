@@ -1160,7 +1160,4 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|marca|grupo|multiusos|
 1159|kinder delice 39g|10|8000500267035|18|9||||
 1160|jugoso al sarten maggi 23.4gr|15|8585002432315|1|13.5||||
 1161|fabuloso complit 500ml|23|8718951167513|0|0|fabuloso|||
-1162|frituras saldaña|8|frituras saldaña|67|7.2||||
-1163|totopos|17|totopos|6|15.3||||
-1164|bocadin10.5g|2||0|1|bimbo|||
-1165|foco ruby 100watts|10||0|0|ruby|||
+1162|0|0||0|0|0|0||

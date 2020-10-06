@@ -28,6 +28,54 @@ namespace tienda2.desinger
         {
             string temp = txt_buscar_producto.Text + "|" + lbl_nombre_producto.Text + "|" + txt_cantidad.Text + "|" + txt_costo_compra.Text + "|" + txt_provedor.Text + "|" + lbl_id.Text;
             lst_compras.Items.Add(temp);
+            
+            
+            string temporal = "";
+            string[] temporal_s;
+            decimal total = 0;
+            decimal total_cost_com = 0;
+            try
+            {
+                for (int coll = 0; coll < lst_compras.Items.Count; coll++)
+                {
+                    temporal = "" + lst_compras.Items[coll];
+                    temporal_s = temporal.Split(G_parametros);
+
+                    if (temporal_s[0] != "")
+                    {
+                        total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
+                        total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
+                    }
+
+                }
+                lbl_cuenta.Text = "" + total;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+            txt_buscar_producto.Focus();
+
+            txt_buscar_producto.Text = "";
+            txt_cantidad.Text = "";
+            txt_costo_compra.Text = "";
+            txt_nom_producto.Text = "";
+            txt_provedor.Text = "";
+            if (rdb_codigo_barras.Checked)
+            {
+                txt_buscar_producto.Focus();
+            }
+            else if (rdb_producto.Checked)
+            {
+                txt_nom_producto.Focus();
+            }
+            else
+            {
+                txt_nom_producto.Focus();
+            }
+
         }
 
         private void recargar_texbox()
@@ -104,7 +152,7 @@ namespace tienda2.desinger
             {
                 string[] info = txt_nom_producto.Text.Split(G_parametros);
                 procesar_codigo2(info[0]);
-                txt_costo_compra.Focus();
+                txt_cantidad.Focus();
             }
         }
         private void procesar_codigo2(string codigo)
@@ -134,8 +182,7 @@ namespace tienda2.desinger
         {
             ventana_emergente ventana_emerg = new ventana_emergente();
             string[] enviar = { "3°venta_directa°1", "3°preVenta°2" };
-            string[] info = {"solo_botones"};
-            string valor_devuelto=ventana_emerg.proceso_ventana_emergente(enviar,0,info);
+            string valor_devuelto=ventana_emerg.proceso_ventana_emergente(enviar,0);
             bool compra_directa;
             if (valor_devuelto=="1")
             {
@@ -191,7 +238,7 @@ namespace tienda2.desinger
 
                     if (temporal_s[0] != "")
                     {
-                        total = total + Convert.ToDecimal(temporal_s[2]);
+                        total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
                         total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
                     }
 
@@ -223,7 +270,7 @@ namespace tienda2.desinger
 
                     if (temporal_s[0] != "")
                     {
-                        total = total + Convert.ToDecimal(temporal_s[2]);
+                        total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
                         total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
                     }
 
@@ -255,7 +302,7 @@ namespace tienda2.desinger
 
                     if (temporal_s[0] != "")
                     {
-                        total = total + Convert.ToDecimal(temporal_s[2]);
+                        total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
                         total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
                     }
 

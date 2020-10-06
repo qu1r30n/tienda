@@ -15,6 +15,7 @@ namespace tienda2.desinger
     {
         char[] G_parametros = { '|' };
         List<string> G_productos = new List<string>();
+
         public ventas()
         {
             InitializeComponent();
@@ -230,14 +231,14 @@ namespace tienda2.desinger
         {
             
             tex_base bas = new tex_base();
-            /*
-                string[] imprimir = bas.leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7", "" + G_parametros[0]);
-                txt_buscar_producto.AutoCompleteCustomSource.Clear();
-                for (int k = 1; k < imprimir.Length; k++)
-                {
-                    txt_buscar_producto.AutoCompleteCustomSource.Add("" + imprimir[k]);
-                }
-            */
+            
+            string[] imprimir = bas.leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7", "" + G_parametros[0]);
+            txt_nom_producto.AutoCompleteCustomSource.Clear();
+            for (int k = 1; k < imprimir.Length; k++)
+            {
+                txt_nom_producto.AutoCompleteCustomSource.Add("" + imprimir[k]);
+            }
+
             string[] imprimir2 = bas.leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7", "" + G_parametros[0]);
 
             for (int k = 1; k < imprimir2.Length; k++)
@@ -275,12 +276,19 @@ namespace tienda2.desinger
                 ventana_emergente vent_emergent = new ventana_emergente();
 
                 //-------------------------------------------------------------
-                string[] enviar = { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta", "2°codigo de barras°" + espliteado[0], "1°cantidad", "1°costo de compra", "1°marca", "1°grupo", "1°no poner nada" };
+                string[] enviar = { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta", "2°codigo de barras°" + espliteado[0], "1°cantidad", "1°costo de compra", "1°marca", "1°grupo", "2°no poner nada°" };
                 string mensage = vent_emergent.proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
                 string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
-                string[] temp2 = { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6] };//aqui lo pongo en el orden que deve llevar
-                string temp3 = string.Join(G_parametros[0]+"", temp2);//uno todo en un string conforme al parametro o caracter de separacion
-                G_productos.Add(temp3);//agrego en lista de productos
+                string[] temp2;
+                string temp3="";
+                if (temp.Length>2)
+                {
+                    temp2 = new [] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6] };//aqui lo pongo en el orden que deve llevar
+                    temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
+                    G_productos.Add(temp3);//agrego en lista de productos
+                }
+                
+                
                 txt_buscar_producto.AutoCompleteCustomSource.Add(temp3);//agrego en el autocompletar
                 
                 txt_buscar_producto.Text = "";
@@ -299,7 +307,32 @@ namespace tienda2.desinger
             lbl_cuenta.Text = "" + total;
         }
 
-        
+        private void txt_nom_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyValue == (char)(Keys.Enter))
+            {
+                string[] info = txt_nom_producto.Text.Split(G_parametros);
+                procesar_codigo2(info[0]);
+                txt_buscar_producto.Focus();
+
+            }
+        }
+        private void procesar_codigo2(string codigo)
+        {
+
+            for (int i = 0; i < G_productos.Count; i++)
+            {
+                String[] temp = G_productos[i].Split(G_parametros);
+                if (codigo == temp[3])
+                {
+                    txt_buscar_producto.Text = temp[0];
+                    txt_nom_producto.Text = temp[3];
+                    break;
+                }
+            }
+        }
+
+
     }
 }
 
