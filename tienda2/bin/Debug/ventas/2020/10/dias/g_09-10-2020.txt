@@ -1,0 +1,5 @@
+14:13|7501000127344|10|lors|marinela|9|90|1
+14:50|75007614|24|coca-cola 600ml|coca-cola|11.7|280.8|1
+14:54|75007614|24|coca-cola 600ml|coca-cola|11.7|280.8|1
+15:04|75007614|24|coca-cola 600ml|coca-cola|11.7|280.8|1°paketes
+16:05|75007614|24|coca-cola 600ml|coca-cola|11.7|280.8|1°paketes_de_24

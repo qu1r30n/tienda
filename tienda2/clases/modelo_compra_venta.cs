@@ -11,7 +11,7 @@ namespace tienda2.clases
 
         char[] G_parametros = { '|' };
 
-        public void modelo_compra(string codigo, string costo_compra, string cantidad, string provedor,string nom_producto,string id_producto,bool compra_directa=true)
+        public void modelo_compra(string codigo, string costo_compra, string cantidad, string provedor,string nom_producto,string id_producto,string info_extra=null,bool compra_directa=true)
         {
             DateTime fecha_hora = DateTime.Now;
             string hora_min_seg = fecha_hora.ToString("HH:mm:ss");
@@ -32,7 +32,7 @@ namespace tienda2.clases
                 
                 dir_arch = "ventas\\" + año + "\\" + mes + "\\dias\\g_" + dia_mes_año + ".txt";
                 //no se para que es el ultimo 0 bas.agregar(dir_arch, hora + "|" + codigo + "|" + cantidad + "|" + nom_producto + "|"+ provedor + "|" + "0");
-                bas.agregar(dir_arch, hora_min + "|" + codigo + "|" + cantidad + "|" + nom_producto + "|"+ provedor + "|" + costo_compra + "|" + (Convert.ToDecimal(costo_compra)*Convert.ToInt32(cantidad)) );//muestra total cada horas
+                bas.agregar(dir_arch, hora_min + "|" + codigo + "|" + cantidad + "|" + nom_producto + "|"+ provedor + "|" + costo_compra + "|" + (Convert.ToDecimal(costo_compra)*Convert.ToInt32(cantidad)) + "|" + info_extra );//muestra total cada horas
 
                 dir_arch = "ventas\\" + año + "\\" + mes + "\\g_" + mes + ".txt";
                 op.actualisar_resumen_compras(dir_arch, dia, Convert.ToDecimal(costo_compra));//muestra total de cada dias
@@ -58,7 +58,7 @@ namespace tienda2.clases
                 string[] cantidades_en_juego = bas.leer("ventas\\total_en_juego.txt"), cantidades_en_juego_espliteada;
                 Decimal dinero_ganado = 0, dinero_gastado = 0;
                 cantidades_en_juego_espliteada = cantidades_en_juego[0].Split(G_parametros);
-                dinero_ganado = Convert.ToInt32(cantidades_en_juego_espliteada[1]);
+                dinero_ganado = Convert.ToDecimal(cantidades_en_juego_espliteada[1]);
 
                 if (dinero_ganado >= dinero_gastado)
                 {
@@ -75,7 +75,7 @@ namespace tienda2.clases
                 bas.editar_espesifico(dir_arch, 0, id_producto, "6", provedor);
 
                 dir_arch = "pedidos/" + dia_mes_año + "_" + provedor + ".txt";
-                bas.si_existe_suma_sino_agrega(dir_arch,2,codigo,"0",cantidad, "1|" + costo_compra +"|"+(Convert.ToDecimal(costo_compra)*Convert.ToInt32(cantidad)));
+                bas.si_existe_suma_sino_agrega(dir_arch,2,codigo,"0",cantidad, "1|" + costo_compra +"|"+(Convert.ToDecimal(costo_compra)*Convert.ToInt32(cantidad)) + "|" + info_extra);
                 
                 
                 

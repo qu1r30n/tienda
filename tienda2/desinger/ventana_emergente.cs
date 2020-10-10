@@ -212,17 +212,13 @@ namespace tienda2.desinger
                         //btn_nuevoboton.Click += new EventHandler(nuevoBoton_Click); 
                         if (info[0]== "solo_botones")
                         {
-                            
                             btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola = nuevoBoton_Click(sender1, e1, parametros, info));
+
                         }
                         else
                         {
                             btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola = nuevoBoton_Click(sender1, e1, parametros));
                         }
-                        
-
-                        
-
                     }
 
                 }
@@ -275,6 +271,7 @@ namespace tienda2.desinger
                     union = union + arraytextbox[i] + G_parametros[0];
                 }
             }
+
             return union;
         }
 

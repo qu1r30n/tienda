@@ -21,6 +21,7 @@ namespace tienda2
         {
 
             InitializeComponent();
+            
             //ventana_emergente vent_emergent = new ventana_emergente();
             //string[] enviar = { "3°id°9", "3°marca°1", "3°ned°5" };
             //string[] info = { "solo_botones" };
@@ -79,8 +80,11 @@ namespace tienda2
             tex_base adm = new tex_base();//llamamos a la clase tex_base
             area_principal area = new area_principal();//este es el form area_principal y es al que entrara si pone el usuario y contraseña bien
             string temp = adm.seleccionar("inf\\us\\ad.txt",0,txt_usuario.Text,"1");//guarda el id del usuario pas y datos en texto
-            string[] texto = temp.Split(G_parametros);
-            if (texto[0] == txt_pass.Text)
+            if (temp=="")
+            {
+                temp=null;
+            }
+            if (temp == txt_pass.Text)
             {
                 txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 txt_pass.Text = "";//bora lo que tiene el textbox contraseña
@@ -102,8 +106,11 @@ namespace tienda2
             tex_base user = new tex_base();//llamamos a la clase tex_base
             ventas vent = new ventas();//este es el form ventas y es al que entrara si pone el usuario y contraseña bien
             string temp = user.seleccionar("inf\\us\\user.txt", 0, txt_usuario.Text, "1");
-            string[] texto = temp.Split(G_parametros);
-            if (texto[0] == txt_pass.Text)
+            if (temp == "")
+            {
+                temp = null;
+            }
+            if (temp == txt_pass.Text)
             {
                 txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 txt_pass.Text = "";//bora lo que tiene el textbox contraseña
@@ -124,8 +131,11 @@ namespace tienda2
             tex_base invitado = new tex_base();//llamamos a la clase tex_base
             ventas vent = new ventas();//este es el form ventas y es al que entrara si pone el usuario y contraseña bien
             string temp = invitado.seleccionar("inf\\us\\invitado.txt", 0, txt_usuario.Text, "1");
-            string[] texto = temp.Split(G_parametros);
-            if (texto[0] == txt_pass.Text)
+            if (temp == "")
+            {
+                temp = null;
+            }
+            if (temp == txt_pass.Text)
             {
                 txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 txt_pass.Text = "";//bora lo que tiene el textbox contraseña

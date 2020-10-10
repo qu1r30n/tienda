@@ -252,7 +252,7 @@
             // 
             // btn_procesar_venta
             // 
-            this.btn_procesar_venta.Location = new System.Drawing.Point(783, 273);
+            this.btn_procesar_venta.Location = new System.Drawing.Point(783, 272);
             this.btn_procesar_venta.Name = "btn_procesar_venta";
             this.btn_procesar_venta.Size = new System.Drawing.Size(75, 23);
             this.btn_procesar_venta.TabIndex = 6;

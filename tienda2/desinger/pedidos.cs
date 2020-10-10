@@ -26,7 +26,29 @@ namespace tienda2.desinger
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            string temp = txt_buscar_producto.Text + "|" + lbl_nombre_producto.Text + "|" + txt_cantidad.Text + "|" + txt_costo_compra.Text + "|" + txt_provedor.Text + "|" + lbl_id.Text;
+            
+            ventana_emergente ven_emer = new ventana_emergente();
+            string[] enviar = {"3°es_paquete°1", "3°es_por_pieza°2" };
+            string datos_ventana_emerg = ven_emer.proceso_ventana_emergente(enviar);
+            string temp = "";
+            if (datos_ventana_emerg=="1")
+            {
+                ventana_emergente ven_emer2 = new ventana_emergente();
+                string[] enviar2 = { "1°costo°"+txt_costo_compra.Text, "1°numero paketes°" + txt_cantidad.Text, "1°cantidad_por_paquete" };
+                string datos_ventana_emergente2 = ven_emer2.proceso_ventana_emergente(enviar2);
+                string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
+                string total_de_productos_por_paquetes = ""+(Convert.ToDouble(mensaje2_espli[1])* Convert.ToDouble(mensaje2_espli[2]));
+                string costo_por_producto = "" + Math.Round((Convert.ToDouble(mensaje2_espli[0])/Convert.ToDouble(total_de_productos_por_paquetes)),2);
+
+                txt_cantidad.Text = total_de_productos_por_paquetes;
+                txt_costo_compra.Text = costo_por_producto;
+                temp = txt_buscar_producto.Text + "|" + lbl_nombre_producto.Text + "|" + txt_cantidad.Text + "|" + txt_costo_compra.Text + "|" + txt_provedor.Text + "|" + lbl_id.Text + "|" + mensaje2_espli[1]+"°paketes_de_"+mensaje2_espli[2];
+            }
+            else
+            {
+                temp = txt_buscar_producto.Text + "|" + lbl_nombre_producto.Text + "|" + txt_cantidad.Text + "|" + txt_costo_compra.Text + "|" + txt_provedor.Text + "|" + lbl_id.Text;
+            }
+            
             lst_compras.Items.Add(temp);
             
             
@@ -138,10 +160,18 @@ namespace tienda2.desinger
                 //------------------------------------------------------------
                 ventana_emergente vent_emergent = new ventana_emergente();
                 //-------------------------------------------------------------
-                string[] enviar = { "1°id°" + (cantidad_produc.Length), "1°producto", "1°precio", "1°codigo°" + espliteado[0], "1°cantidad", "1°compra", "1°marca" };
+                string[] enviar = { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta", "2°codigo de barras°" + espliteado[0], "1°cantidad", "1°costo de compra", "1°marca", "1°grupo", "2°no poner nada°" };
                 string mensage = vent_emergent.proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
-                MessageBox.Show("ya se agrego el producto: " + mensage);
-                txt_buscar_producto.Text = "";
+                string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
+                string[] temp2;
+                string temp3 = "";
+                if (temp.Length > 2)
+                {
+                    temp2 = new[] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6] };//aqui lo pongo en el orden que deve llevar
+                    temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
+                    G_productos.Add(temp3);//agrego en lista de productos
+                }
+                txt_buscar_producto.AutoCompleteCustomSource.Add(temp3);//agrego en el autocompletar
             }
 
         }
@@ -157,13 +187,13 @@ namespace tienda2.desinger
         }
         private void procesar_codigo2(string codigo)
         {
-            
             for (int i = 0; i < G_productos.Count; i++)
             {
                 String[] temp = G_productos[i].Split(G_parametros);
                 if (codigo == temp[3])
                 {
                     txt_buscar_producto.Text = temp[0];
+                    lbl_id.Text = temp[1];
                     lbl_nombre_producto.Text = temp[3];
                     lbl_precio_compra_cant.Text = temp[5];
                     lbl_precio_venta.Text = temp[2];
@@ -196,7 +226,7 @@ namespace tienda2.desinger
             for (int i = 0; i < lst_compras.Items.Count; i++)
             {
                 string[] item_spliteado = lst_compras.Items[i].ToString().Split(G_parametros);
-                mod_com_ven.modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1],item_spliteado[5],compra_directa);
+                mod_com_ven.modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1],item_spliteado[5],item_spliteado[6],compra_directa);
             }
 
         }
