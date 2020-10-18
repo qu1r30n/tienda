@@ -16,7 +16,7 @@ namespace tienda2.clases
             DateTime fecha_hora = DateTime.Now;
             string hora_min_seg = fecha_hora.ToString("HH:mm:ss");
             string hora_min = fecha_hora.ToString("HH:mm");
-            string dia_mes_año = fecha_hora.ToString("dd-MM-yyyy");
+            string dia_mes_año = fecha_hora.ToString("yyyy-MM-dd");
             string dia = fecha_hora.ToString("dd");
             string mes = fecha_hora.ToString("MM");
             string año = fecha_hora.ToString("yyyy");
@@ -48,9 +48,6 @@ namespace tienda2.clases
 
                 dir_arch = "ventas\\ganancia_real.txt";
                 op.actualisar_ganancia_real(dir_arch, "dinero_hay: ", -1 * Convert.ToDecimal(costo_compra));//muestra ganancia real
-                
-                
-                
                 
 
 
@@ -85,12 +82,12 @@ namespace tienda2.clases
 
 
         }
-        public void modelo_venta(string [] codigo)
+        public void modelo_venta(string [] codigo,string [] cantidades_vendidas)
         {
             string codigos_unidos = string.Join("°",codigo);
             DateTime fecha_hora = DateTime.Now;
             string hora_min_seg = fecha_hora.ToString("HH:mm:ss");
-            string dia_mes_año = fecha_hora.ToString("dd-MM-yyyy");
+            string dia_mes_año = fecha_hora.ToString("yyyy-MM-dd");
             string dia = fecha_hora.ToString("dd");
             string mes = fecha_hora.ToString("MM");
             string año = fecha_hora.ToString("yyyy");
@@ -131,17 +128,17 @@ namespace tienda2.clases
 
             for (int i = 0; i < ids_productos.Length; i++)
             {
-                op.actualisar_inventario("inf\\inventario\\invent.txt", "" + ids_productos[i], -1);
-                op.actualisar_resumen_venta("ventas\\" + año + "\\" + mes + "\\dias\\p_" + dia_mes_año + ".txt", "" + ids_productos[i], 1);
-                op.actualisar_resumen_venta("ventas\\" + año + "\\" + mes + "\\p_" + mes + ".txt", "" + ids_productos[i], 1);//muestra total de cada dias
-                op.actualisar_resumen_venta("ventas\\" + año + "\\p_" + año + ".txt", "" + ids_productos[i], 1);//muestra total de cada mes
-                op.actualisar_resumen_venta("ventas\\p_total_años.txt", "" + ids_productos[i], 1);//muestra total de cada año
+                if (cantidades_vendidas[i]=="")
+                {
+                    cantidades_vendidas[i] = "1";
+                }
+                op.actualisar_inventario("inf\\inventario\\invent.txt", "" + ids_productos[i], Convert.ToDecimal(cantidades_vendidas[i]) * -1);
+                op.actualisar_resumen_venta("ventas\\" + año + "\\" + mes + "\\dias\\p_" + dia_mes_año + ".txt", "" + ids_productos[i], Convert.ToDecimal(cantidades_vendidas[i]));
+                op.actualisar_resumen_venta("ventas\\" + año + "\\" + mes + "\\p_" + mes + ".txt", "" + ids_productos[i], Convert.ToDecimal(cantidades_vendidas[i]));//muestra total de cada dias
+                op.actualisar_resumen_venta("ventas\\" + año + "\\p_" + año + ".txt", "" + ids_productos[i], Convert.ToDecimal(cantidades_vendidas[i]));//muestra total de cada mes
+                op.actualisar_resumen_venta("ventas\\p_total_años.txt", "" + ids_productos[i], Convert.ToDecimal(cantidades_vendidas[i]));//muestra total de cada año
                 
             }
-
-
         }
-
-        
     }
 }

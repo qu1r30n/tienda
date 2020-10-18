@@ -16,7 +16,7 @@ namespace tienda2
         char[] G_parametros = { '|' };
         string[] G_linea, G_buscar, G_remplasar;
 
-        public void crear_archivo_y_directorio(string FILE_NAME, string columnas = null, string valor_inicial = null)//FILE_NAME la direccion del archivo    columnas: es para crearlas y se separan la columnas por un '|' valor_inicial: no se utilisa en este programa era para poner un tipo eslogan o un titulo  pero en este programa no lo nesesite
+        public void crear_archivo_y_directorio(string FILE_NAME, string valor_inicial = null, string[] columnas = null)//FILE_NAME la direccion del archivo    columnas: es para crearlas y se separan la columnas por un '|' valor_inicial: no se utilisa en este programa era para poner un tipo eslogan o un titulo  pero en este programa no lo nesesite
         {
             char[] parametro2 = { '/', '\\' };//estos seran los parametros de separacion de el split
             G_entrando = "";
@@ -41,17 +41,18 @@ namespace tienda2
                 FileStream fs0 = new FileStream(FILE_NAME, FileMode.CreateNew);//crea una variable tipo filestream "fs0"  y crea el archivo
                 fs0.Close();//cierra fs0 para que se pueda usar despues
 
-                StreamWriter sw = new StreamWriter(FILE_NAME, true);//crea una variable de tipo streamWrite para escribir en el archivo y el true es para escribir asta abajo
+                
 
                 if (valor_inicial != null)// si al llamar a la funcion  le pusiste valor_inicial las escribe //se utilisa para que sea como un titulo o un eslogan pero lo utilisaremos en este prog
                 {
-                    sw.WriteLine(valor_inicial);//escribe aqui el valor inicial si es que lo pusiste
+                    agregar(FILE_NAME,valor_inicial);//escribe aqui el valor inicial si es que lo pusiste
                 }
 
-                sw.Close();//sierra el sw para ser usado despues //es importantisimo cerrarlos por que si no cierras uno  sera un relajo despues por que el debuguer no te indica donde quedo abierto
                 if (columnas != null)//si al llamar a la funcion le pusistes columnas a agregar//recuerda que se separan por comas
                 {
-                    agregar(FILE_NAME, columnas);//agrega las columnas
+
+                    string columnas_unidas = string.Join(""+G_parametros[0], columnas);
+                    agregar(FILE_NAME, columnas_unidas);//agrega las columnas
                     columnas = null;//al terminar pone la columna denuevo a null
                 }
 
@@ -400,6 +401,48 @@ namespace tienda2
                 exito_o_fallo = "2)error:" + error;
                 File.Delete(dir_tem);//borramos el archivo original
             }
+            return exito_o_fallo;
+        }
+
+        public string editar_una_columna(string direccion_archivo, int columna, string info_editar, char caracter_separacion = '|')
+        {
+            StreamReader sr = new StreamReader(direccion_archivo);
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+            string exito_o_fallo="";
+
+            try
+            {
+                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+                {
+                    string linea = sr.ReadLine();//leemos linea y lo guardamos en palabra
+                    string[] palabra = linea.Split(caracter_separacion);
+                    palabra[columna] = info_editar;
+                    string linea_editada = "";
+
+                    for (int i = 0; i < palabra.Length; i++)
+                    {
+                        linea_editada = linea_editada + palabra[i] + caracter_separacion;
+                    }
+                    linea_editada = trimend_paresido(linea_editada, caracter_separacion);
+
+                    sw.WriteLine(linea_editada);
+                }
+                exito_o_fallo = "1)exito";
+                sr.Close();
+                sw.Close();
+                File.Delete(direccion_archivo);//borramos el archivo original
+                File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+            }
+            catch(Exception error)
+            {
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = "2)error:" + error;
+                File.Delete(dir_tem);//borramos el archivo original
+            }
+
+
             return exito_o_fallo;
         }
 

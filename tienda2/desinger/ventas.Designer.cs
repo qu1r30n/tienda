@@ -31,7 +31,6 @@
             this.lbl_cuenta = new System.Windows.Forms.Label();
             this.pb_product = new System.Windows.Forms.PictureBox();
             this.btn_elim_ultimo = new System.Windows.Forms.Button();
-            this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_procesar_venta = new System.Windows.Forms.Button();
             this.btn_eliminar_todo = new System.Windows.Forms.Button();
             this.btn_eliminar_seleccionado = new System.Windows.Forms.Button();
@@ -39,6 +38,11 @@
             this.txt_buscar_producto = new System.Windows.Forms.TextBox();
             this.txt_nom_producto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_nom_product_list = new System.Windows.Forms.Label();
+            this.lbl_costo_product_list = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +50,7 @@
             // 
             this.lbl_cuenta.AutoSize = true;
             this.lbl_cuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cuenta.Location = new System.Drawing.Point(249, 280);
+            this.lbl_cuenta.Location = new System.Drawing.Point(207, 328);
             this.lbl_cuenta.Name = "lbl_cuenta";
             this.lbl_cuenta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_cuenta.Size = new System.Drawing.Size(24, 25);
@@ -70,16 +74,6 @@
             this.btn_elim_ultimo.Text = "eliminar ultimo";
             this.btn_elim_ultimo.UseVisualStyleBackColor = true;
             this.btn_elim_ultimo.Click += new System.EventHandler(this.btn_elim_ultimo_Click);
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.Location = new System.Drawing.Point(168, 284);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(75, 23);
-            this.btn_agregar.TabIndex = 10;
-            this.btn_agregar.Text = "agregar";
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // btn_procesar_venta
             // 
@@ -118,12 +112,13 @@
             this.lst_ventas.Name = "lst_ventas";
             this.lst_ventas.Size = new System.Drawing.Size(239, 251);
             this.lst_ventas.TabIndex = 16;
+            this.lst_ventas.SelectedIndexChanged += new System.EventHandler(this.lst_ventas_SelectedIndexChanged);
             // 
             // txt_buscar_producto
             // 
             this.txt_buscar_producto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_buscar_producto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_buscar_producto.Location = new System.Drawing.Point(12, 287);
+            this.txt_buscar_producto.Location = new System.Drawing.Point(54, 307);
             this.txt_buscar_producto.Name = "txt_buscar_producto";
             this.txt_buscar_producto.Size = new System.Drawing.Size(150, 20);
             this.txt_buscar_producto.TabIndex = 8;
@@ -133,31 +128,82 @@
             // 
             this.txt_nom_producto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txt_nom_producto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_nom_producto.Location = new System.Drawing.Point(12, 313);
+            this.txt_nom_producto.Location = new System.Drawing.Point(54, 333);
             this.txt_nom_producto.Name = "txt_nom_producto";
             this.txt_nom_producto.Size = new System.Drawing.Size(150, 20);
-            this.txt_nom_producto.TabIndex = 8;
+            this.txt_nom_producto.TabIndex = 15;
             this.txt_nom_producto.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_nom_producto_PreviewKeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(168, 320);
+            this.label1.Location = new System.Drawing.Point(9, 337);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 17;
-            this.label1.Text = "nombre del producto";
+            this.label1.Text = "nombre";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 310);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "codigo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(209, 310);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "TOTAL";
+            // 
+            // lbl_nom_product_list
+            // 
+            this.lbl_nom_product_list.AutoSize = true;
+            this.lbl_nom_product_list.Location = new System.Drawing.Point(9, 266);
+            this.lbl_nom_product_list.Name = "lbl_nom_product_list";
+            this.lbl_nom_product_list.Size = new System.Drawing.Size(104, 13);
+            this.lbl_nom_product_list.TabIndex = 19;
+            this.lbl_nom_product_list.Text = "nombre del producto";
+            // 
+            // lbl_costo_product_list
+            // 
+            this.lbl_costo_product_list.AutoSize = true;
+            this.lbl_costo_product_list.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_costo_product_list.Location = new System.Drawing.Point(12, 279);
+            this.lbl_costo_product_list.Name = "lbl_costo_product_list";
+            this.lbl_costo_product_list.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_costo_product_list.Size = new System.Drawing.Size(24, 25);
+            this.lbl_costo_product_list.TabIndex = 11;
+            this.lbl_costo_product_list.Text = "$";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(-254, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "nombre del producto";
             // 
             // ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 340);
+            this.ClientSize = new System.Drawing.Size(382, 359);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_nom_product_list);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_costo_product_list);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_cuenta);
             this.Controls.Add(this.pb_product);
             this.Controls.Add(this.btn_elim_ultimo);
-            this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.btn_procesar_venta);
             this.Controls.Add(this.btn_eliminar_todo);
             this.Controls.Add(this.btn_eliminar_seleccionado);
@@ -177,7 +223,6 @@
         private System.Windows.Forms.Label lbl_cuenta;
         private System.Windows.Forms.PictureBox pb_product;
         private System.Windows.Forms.Button btn_elim_ultimo;
-        private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.Button btn_procesar_venta;
         private System.Windows.Forms.Button btn_eliminar_todo;
         private System.Windows.Forms.Button btn_eliminar_seleccionado;
@@ -185,5 +230,10 @@
         private System.Windows.Forms.TextBox txt_buscar_producto;
         private System.Windows.Forms.TextBox txt_nom_producto;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_nom_product_list;
+        private System.Windows.Forms.Label lbl_costo_product_list;
+        private System.Windows.Forms.Label label5;
     }
 }

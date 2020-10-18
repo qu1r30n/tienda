@@ -41,7 +41,6 @@
             this.lbl_nuevo_cantidad = new System.Windows.Forms.Label();
             this.txt_costo_compra = new System.Windows.Forms.TextBox();
             this.lbl_codigo = new System.Windows.Forms.Label();
-            this.txt_provedor = new System.Windows.Forms.TextBox();
             this.lbl_provedor = new System.Windows.Forms.Label();
             this.lbl_nom_producto_buscar = new System.Windows.Forms.Label();
             this.txt_nom_producto = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.lbl_id = new System.Windows.Forms.Label();
             this.btn_cargar_pedido = new System.Windows.Forms.Button();
             this.lbl_cuenta = new System.Windows.Forms.Label();
+            this.txt_provedor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_buscar_producto
@@ -176,13 +176,6 @@
             this.lbl_codigo.Size = new System.Drawing.Size(86, 13);
             this.lbl_codigo.TabIndex = 10;
             this.lbl_codigo.Text = "codigo de barras";
-            // 
-            // txt_provedor
-            // 
-            this.txt_provedor.Location = new System.Drawing.Point(810, 18);
-            this.txt_provedor.Name = "txt_provedor";
-            this.txt_provedor.Size = new System.Drawing.Size(100, 20);
-            this.txt_provedor.TabIndex = 4;
             // 
             // lbl_provedor
             // 
@@ -334,6 +327,15 @@
             this.lbl_cuenta.TabIndex = 41;
             this.lbl_cuenta.Text = "$";
             // 
+            // txt_provedor
+            // 
+            this.txt_provedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_provedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_provedor.Location = new System.Drawing.Point(810, 18);
+            this.txt_provedor.Name = "txt_provedor";
+            this.txt_provedor.Size = new System.Drawing.Size(94, 20);
+            this.txt_provedor.TabIndex = 4;
+            // 
             // pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,7 +392,6 @@
         private System.Windows.Forms.Label lbl_nuevo_cantidad;
         private System.Windows.Forms.TextBox txt_costo_compra;
         private System.Windows.Forms.Label lbl_codigo;
-        private System.Windows.Forms.TextBox txt_provedor;
         private System.Windows.Forms.Label lbl_provedor;
         private System.Windows.Forms.Label lbl_nom_producto_buscar;
         private System.Windows.Forms.TextBox txt_nom_producto;
@@ -407,5 +408,6 @@
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Button btn_cargar_pedido;
         private System.Windows.Forms.Label lbl_cuenta;
+        private System.Windows.Forms.TextBox txt_provedor;
     }
 }

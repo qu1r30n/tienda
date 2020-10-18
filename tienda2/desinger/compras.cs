@@ -27,7 +27,7 @@ namespace tienda2.desinger
             DateTime fecha_hora = DateTime.Now;
             Decimal cantidad = Convert.ToDecimal(txt_cantidad_gastada.Text);
             string poductos_ya_unidos = txt_razon.Text + G_parametros[0] + txt_quien_facturo.Text;
-            string direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("dd-MM-yyyy") + ".txt",
+            string direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyy-MM-dd") + ".txt",
                    direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".txt",
                    direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".txt",
                    direccion4 = "ventas\\g_total_años.txt",

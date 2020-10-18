@@ -128,7 +128,7 @@ namespace tienda2
             return list_string;//devuelve la lista para ser usada
         }
 
-        public void actualisar_resumen_venta(string FILE_NAME,string fecha ,decimal precio,decimal costos_de_compra=0)
+        public void actualisar_resumen_venta(string FILE_NAME,string fecha ,decimal precio_o_cantidadProducto,decimal costos_de_compra=0)
         {
             char[] parametros2 = { '/', '\\' };
             tex_base bas = new tex_base();
@@ -166,7 +166,7 @@ namespace tienda2
                         }
                         else
                         {
-                            string escribir = fecha + G_parametros[0] + (precio + Convert.ToDecimal(linea[1])) + G_parametros[0] + (costos_de_compra + Convert.ToDecimal(linea[2]));
+                            string escribir = fecha + G_parametros[0] + (precio_o_cantidadProducto + Convert.ToDecimal(linea[1])) + G_parametros[0] + (costos_de_compra + Convert.ToDecimal(linea[2]));
                             sw.WriteLine(escribir);
                             bol = true;
 
@@ -175,13 +175,13 @@ namespace tienda2
                 }
                 if (bol == false)
                 {
-                    string escribir = fecha + G_parametros[0] + precio + G_parametros[0] + costos_de_compra;
+                    string escribir = fecha + G_parametros[0] + precio_o_cantidadProducto + G_parametros[0] + costos_de_compra;
                     sw.WriteLine(escribir);
                 }
             }
             catch (Exception)
             {
-                string escribir = fecha + G_parametros[0] + precio + G_parametros[0] + costos_de_compra;
+                string escribir = fecha + G_parametros[0] + precio_o_cantidadProducto + G_parametros[0] + costos_de_compra;
                 sw.WriteLine(escribir);
 
             }
@@ -330,7 +330,7 @@ namespace tienda2
             File.Move(G_temp, FILE_NAME);//renombramos el archivo temporal por el que tenia el original
         }
 
-        public void actualisar_inventario(string FILE_NAME, string id_produc_act, int cantidad_a_act)
+        public void actualisar_inventario(string FILE_NAME, string id_produc_act, decimal cantidad_a_act)
         {
             tex_base bas = new tex_base();
             string[] G_linea, linea;

@@ -33,20 +33,23 @@ namespace tienda2.desinger
             string temp = "";
             if (datos_ventana_emerg=="1")
             {
+                string cantidad_por_pakete=bas.seleccionar("inf\\inventario\\invent.txt",3,txt_buscar_producto.Text,"9");
+
                 ventana_emergente ven_emer2 = new ventana_emergente();
-                string[] enviar2 = { "1°costo°"+txt_costo_compra.Text, "1°numero paketes°" + txt_cantidad.Text, "1°cantidad_por_paquete" };
+                string[] enviar2 = { "1°costo°"+txt_costo_compra.Text, "1°numero paketes°" + txt_cantidad.Text, "1°cantidad_por_paquete°"+cantidad_por_pakete};
                 string datos_ventana_emergente2 = ven_emer2.proceso_ventana_emergente(enviar2);
                 string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
+                bas.editar_espesifico("inf\\inventario\\invent.txt",3,txt_buscar_producto.Text,"9",mensaje2_espli[2]);
                 string total_de_productos_por_paquetes = ""+(Convert.ToDouble(mensaje2_espli[1])* Convert.ToDouble(mensaje2_espli[2]));
                 string costo_por_producto = "" + Math.Round((Convert.ToDouble(mensaje2_espli[0])/Convert.ToDouble(total_de_productos_por_paquetes)),2);
 
                 txt_cantidad.Text = total_de_productos_por_paquetes;
                 txt_costo_compra.Text = costo_por_producto;
-                temp = txt_buscar_producto.Text + "|" + lbl_nombre_producto.Text + "|" + txt_cantidad.Text + "|" + txt_costo_compra.Text + "|" + txt_provedor.Text + "|" + lbl_id.Text + "|" + mensaje2_espli[1]+"°paketes_de_"+mensaje2_espli[2];
+                temp = txt_buscar_producto.Text + "|" + lbl_nombre_producto.Text + "|" + txt_cantidad.Text + "|" + txt_costo_compra.Text + "|" + txt_provedor.Text + "|" + lbl_id.Text + "|" + mensaje2_espli[1]+"°paketes_de°"+mensaje2_espli[2];
             }
             else
             {
-                temp = txt_buscar_producto.Text + "|" + lbl_nombre_producto.Text + "|" + txt_cantidad.Text + "|" + txt_costo_compra.Text + "|" + txt_provedor.Text + "|" + lbl_id.Text;
+                temp = txt_buscar_producto.Text + "|" + lbl_nombre_producto.Text + "|" + txt_cantidad.Text + "|" + txt_costo_compra.Text + "|" + txt_provedor.Text + "|" + lbl_id.Text + "|";
             }
             
             lst_compras.Items.Add(temp);
@@ -79,6 +82,11 @@ namespace tienda2.desinger
             }
 
             txt_buscar_producto.Focus();
+            lbl_id.Text = "";
+            lbl_nombre_producto.Text = "";
+            lbl_precio_compra_cant.Text = "";
+            lbl_precio_venta.Text = "";
+            lbl_cantidad_cant.Text = "";
 
             txt_buscar_producto.Text = "";
             txt_cantidad.Text = "";
@@ -116,6 +124,15 @@ namespace tienda2.desinger
             {
                 txt_nom_producto.AutoCompleteCustomSource.Add("" + imprimir2[k]);
             }
+
+            string[] imprimir3 = bas.leer("inf\\inventario\\provedores.txt", "0|1", "" + G_parametros[0]);
+            txt_provedor.AutoCompleteCustomSource.Clear();
+            for (int k = 1; k < imprimir3.Length; k++)
+            {
+                txt_provedor.AutoCompleteCustomSource.Add("" + imprimir3[k]);
+            }
+
+
         }
 
         private void txt_buscar_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -228,6 +245,8 @@ namespace tienda2.desinger
                 string[] item_spliteado = lst_compras.Items[i].ToString().Split(G_parametros);
                 mod_com_ven.modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1],item_spliteado[5],item_spliteado[6],compra_directa);
             }
+            lst_compras.Items.Clear();
+            lbl_cuenta.Text = "0";
 
         }
 

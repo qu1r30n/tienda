@@ -44,7 +44,7 @@ namespace tienda2.desinger
             if (dec == true)
             {
                 operaciones_archivos op = new operaciones_archivos();
-                op.respaldos_ventas("ventas", direccion + "\\respaldo_" + fecha_hora.ToString("dd-MM-yyyy") + "\\ventas", true);
+                op.respaldos_ventas("ventas", direccion + "\\respaldo_" + fecha_hora.ToString("yyyy-MM-dd") + "\\ventas", true);
                 op.respaldo_inventario("inf\\inventario", direccion + "\\respaldo\\inf\\inventario");
                 lbl_direccion.Text = "oprime boton donde guararlos para buscar donde poner el respaldo";
                 dec = false;

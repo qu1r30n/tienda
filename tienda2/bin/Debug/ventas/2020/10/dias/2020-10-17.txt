@@ -1,0 +1,5 @@
+11:17:21 |70330724341 |12 |rastrillo bic confort 3 hojas |10
+12:00:13 |70330724341 |12 |rastrillo bic confort 3 hojas |10
+12:26:40 |1 |5 |pomada labial cereza |0
+13:25:11 |1°70330724341 |17 |pomada labial cereza°rastrillo bic confort 3 hojas |10
+13:28:02 |70330724341°1 |17 |pomada labial cereza°rastrillo bic confort 3 hojas |10
