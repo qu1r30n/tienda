@@ -1,6 +1,6 @@
 id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|cantidad_productos_por_paquete
 1|pomada labial cereza|1|1|9.266|0|pomada labiual|2°producto||
-2|ariel jabon 250g|11.5|11.5|1|10.35||1°producto||
+2|lors|10|7501000127344|18|0|marinela|1°producto||
 3|chicle orbit 5.6g|2.5|2201302|0|1|orbit|1°producto||
 4|orbit hierbabuena 5.6g|2.5|2261003|0|1|orbit|1°producto||
 5|bubulubu  35g|9|7432354|26|8.1||1°producto||
@@ -114,7 +114,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 113|gatorade fresandia 1lt|26|36731328007|1000|23.4|gatorade|1°producto||
 114|gatorade limonada 500ml|18|36731502001|0|0|gatorade|1°producto||
 115|gatorade ponche frutas 500ml|18|36731506009|0|0|gatorade|1°producto||
-116|agua skarch 1l|6|40232838699|9|5.4|skarch|1°producto||
+116|agua skarch 1l|6|40232838699|8|5.4|skarch|1°producto||
 117|titan mandarina 3lts|25|40232886652|2|22.5|titan|1°producto||
 118|titan piña 3 lts|25|40232886669|1000|22.5|titan|1°producto||
 119|titan manzana 3lts|25|40232886676|1000|22.5|titan|1°producto||
@@ -142,7 +142,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 141|valentina amarilla 370ml|10|97339000054|1000|9|valentina|1°producto||
 142|valentina negra 370ml|10|97339000061|1000|9|valentina|1°producto||
 143|papel higienico premier 4pz|26.5|99072000674|0|0|premier|1°producto||
-144|choco huevo sorpresa12g|15|603554102017|10|12|las delicias|1°producto||
+144|choco huevo sorpresa12g|15|603554102017|8|12|las delicias|1°producto||
 145|skarch 10L|26|606110023924|7|23.4|skarch|1°producto||
 146|red-cola 355ml|6|606110024006|24|5.4|red-cola|1°producto||
 147|arizona mucho mango 680ml|13|613008738808|1000|11.7|arizona|1°producto||
@@ -320,7 +320,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 319|cepillodental|20|3014260846725|3|18||1°producto||
 320|encendedor big|15|3086126788722|0|0|encendedor|1°producto||
 321|cigarro winston capsula menta 20'|54|4033100076428|0|49|camel|1°producto||
-322|stella artois lager 250ml|16|5410228240945|1|14.4||1°producto||
+322|stella artois lager 250ml|16|5410228240945|0|14.4||1°producto||
 323|skyblue manzana verde|20|6648040012900|1000|18|sky|1°producto||
 324|cepillo colgate|12|6910021007206|5|10.8||1°producto||
 325|foco chiyoda plus 100w|10|7404005961329|1000|9|chiyoda|1°producto||
@@ -676,7 +676,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 675|jabon zote 400g|17.5|7501026005671|0|0|zote|1°producto||
 676|teoellak 400g|17.6|7501026031052|0|0|tepeyak|1°producto||
 677|resistol 30g|4|7501028835580|o|3|resistol|1°producto||
-678|cafe trujillo 50g|25|7501029032889|2|22.5||1°producto||
+678|cafe trujillo 50g|25|7501029032889|4|22.5|trujillo|1°producto||
 679|kronk 31g|6|7501030417989|0|4|kronk|1°producto||
 680|leche nito chocolate 236ml|10|7501030418412|6|9|bimbo|1°producto||
 681|principe maxitubo 210g|22|7501030418504|0|0|marinela|1°producto||
@@ -1157,7 +1157,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1156|trident uva/naranja|10|7622210938732|3|9||1°producto||
 1157|curitas 100pzs|1.5|7702003476594|0|0.5|curitas|1°producto||
 1158|stevia 25 sobres|1.5|7792129003187|0|0|stevia|1°producto||
-1159|kinder delice 39g|10|8000500267035|18|9||1°producto||
+1159|kinder delice 39g|10|8000500267035|19|9|kinder|1°producto||
 1160|jugoso al sarten maggi 23.4gr|15|8585002432315|1|13.5||1°producto||
 1161|fabuloso complit 500ml|23|8718951167513|0|0|fabuloso|1°producto||
 1162||0||0|0|0|0||
@@ -1248,4 +1248,3 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1247|sponch 180g|22|7503030374842|10|0|marinela pastel|1°producto||
 1248|suavicremas bites 50g|10|7503028643448|10|0|marinela galleta|1°producto||
 1249|plativolos 90gr|10|7503029151829|10|0|marinela|1°producto||
-1250|lors|10|7501000127344|20|0|marinela|1°producto||

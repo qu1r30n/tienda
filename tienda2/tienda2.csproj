@@ -47,73 +47,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clases\modelo_compra_venta.cs" />
-    <Compile Include="clases\operaciones_textos.cs" />
-    <Compile Include="desinger\area_principal.cs">
+    <Compile Include="clases\Modelo_compra_venta.cs" />
+    <Compile Include="clases\Operaciones_textos.cs" />
+    <Compile Include="desinger\Area_principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\area_principal.Designer.cs">
-      <DependentUpon>area_principal.cs</DependentUpon>
+    <Compile Include="desinger\Area_principal.Designer.cs">
+      <DependentUpon>Area_principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\cambiar_precio.cs">
+    <Compile Include="desinger\Cambiar_precio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\cambiar_precio.Designer.cs">
-      <DependentUpon>cambiar_precio.cs</DependentUpon>
+    <Compile Include="desinger\Cambiar_precio.Designer.cs">
+      <DependentUpon>Cambiar_precio.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\comparar.cs">
+    <Compile Include="desinger\Comparar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\comparar.Designer.cs">
-      <DependentUpon>comparar.cs</DependentUpon>
+    <Compile Include="desinger\Comparar.Designer.cs">
+      <DependentUpon>Comparar.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\compras.cs">
+    <Compile Include="desinger\Compras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\compras.Designer.cs">
-      <DependentUpon>compras.cs</DependentUpon>
+    <Compile Include="desinger\Compras.Designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\confirmar_venta.cs">
+    <Compile Include="desinger\Confirmar_venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\confirmar_venta.Designer.cs">
-      <DependentUpon>confirmar_venta.cs</DependentUpon>
+    <Compile Include="desinger\Confirmar_venta.Designer.cs">
+      <DependentUpon>Confirmar_venta.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\empleados.cs">
+    <Compile Include="desinger\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\empleados.Designer.cs">
-      <DependentUpon>empleados.cs</DependentUpon>
+    <Compile Include="desinger\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\inventario.cs">
+    <Compile Include="desinger\Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\inventario.Designer.cs">
-      <DependentUpon>inventario.cs</DependentUpon>
+    <Compile Include="desinger\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\pedidos.cs">
+    <Compile Include="desinger\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\pedidos.Designer.cs">
-      <DependentUpon>pedidos.cs</DependentUpon>
+    <Compile Include="desinger\Pedidos.Designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\respaldo.cs">
+    <Compile Include="desinger\Respaldo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\respaldo.Designer.cs">
-      <DependentUpon>respaldo.cs</DependentUpon>
+    <Compile Include="desinger\Respaldo.Designer.cs">
+      <DependentUpon>Respaldo.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\ventana_emergente.cs">
+    <Compile Include="desinger\Ventana_emergente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\ventana_emergente.Designer.cs">
-      <DependentUpon>ventana_emergente.cs</DependentUpon>
+    <Compile Include="desinger\Ventana_emergente.Designer.cs">
+      <DependentUpon>Ventana_emergente.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\ventas.cs">
+    <Compile Include="desinger\Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\ventas.Designer.cs">
-      <DependentUpon>ventas.cs</DependentUpon>
+    <Compile Include="desinger\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -122,42 +122,42 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="clases\formatos_entrada_salida.cs" />
-    <Compile Include="clases\operaciones_archivos.cs" />
+    <Compile Include="clases\Operaciones_archivos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="clases\tex_base.cs" />
-    <EmbeddedResource Include="desinger\area_principal.resx">
-      <DependentUpon>area_principal.cs</DependentUpon>
+    <Compile Include="clases\Tex_base.cs" />
+    <EmbeddedResource Include="desinger\Area_principal.resx">
+      <DependentUpon>Area_principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\cambiar_precio.resx">
-      <DependentUpon>cambiar_precio.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Cambiar_precio.resx">
+      <DependentUpon>Cambiar_precio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\comparar.resx">
-      <DependentUpon>comparar.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Comparar.resx">
+      <DependentUpon>Comparar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\compras.resx">
-      <DependentUpon>compras.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\confirmar_venta.resx">
-      <DependentUpon>confirmar_venta.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Confirmar_venta.resx">
+      <DependentUpon>Confirmar_venta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\empleados.resx">
-      <DependentUpon>empleados.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\inventario.resx">
-      <DependentUpon>inventario.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\pedidos.resx">
-      <DependentUpon>pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\respaldo.resx">
-      <DependentUpon>respaldo.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Respaldo.resx">
+      <DependentUpon>Respaldo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\ventana_emergente.resx">
-      <DependentUpon>ventana_emergente.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Ventana_emergente.resx">
+      <DependentUpon>Ventana_emergente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\ventas.resx">
-      <DependentUpon>ventas.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

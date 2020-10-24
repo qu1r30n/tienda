@@ -9,99 +9,21 @@ using System.Threading;
 
 namespace tienda2
 {
-    class operaciones_archivos
+
+    class Operaciones_archivos
     {
         static public string direccion_programa = System.Windows.Forms.Application.ExecutablePath.ToString();
-
+        Tex_base bas = new Tex_base();//bas es la clase tex_base
         string G_palabra = "",G_temp = "";
         char[] G_parametros = { '|' };
         bool bandera = false;
 
-        public string[] revicion_total(string FILE_NAME)
-        {
-            string[] linea;
-            ArrayList lista = new ArrayList();
-            decimal total = 0;
-            decimal total_compra = 0;
-            StreamReader sr = new StreamReader(FILE_NAME);
-            while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
-            {
-                G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
-                if (G_palabra != null)
-                {
-                    linea = G_palabra.Split(G_parametros);
-                    lista.Add(linea[0] + G_parametros[0] + linea[1]);
-                    total = total + Convert.ToDecimal(linea[1]);
-                    total_compra = total_compra + Convert.ToDecimal(linea[2]);
+        
 
-                }
-            }
-            string[] list_string = new string[lista.Count + 1];
-            for (int op = 0; op < lista.Count; op++)
-            {
-                list_string[op] = "" + (lista[op]);
-            }
-            list_string[lista.Count] = "total|" + total+ "  |total_compra|"+total_compra+"  |ganancia_real|"+(total-total_compra);
-            sr.Close();
-            return list_string;//devuelve la lista para ser usada
-        }
-
-        public string[] revicion_total_horas(string FILE_NAME,int decicion=0)
-        {
-            string[] linea;
-            string union = "";
-            ArrayList lista = new ArrayList();
-            decimal total = 0;
-            decimal total_compra = 0;
-            StreamReader sr = new StreamReader(FILE_NAME);
-            while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
-            {
-                G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
-                if (G_palabra != null)
-                {
-                    linea = G_palabra.Split(G_parametros);
-                    if (decicion==0)
-                    {
-                        lista.Add(linea[0] + G_parametros[0] + G_parametros[0] + linea[2]);
-                        total = total + Convert.ToDecimal(linea[2]);
-                        total_compra = total_compra + Convert.ToDecimal(linea[4]);
-                    }
-                    else
-                    {
-                        for (int i = 0; i < linea.Length; i++)
-                        {
-                            if (i<linea.Length-1)
-                            {
-                                union = union + linea[i] + G_parametros[0];
-                            }
-                            else
-                            {
-                                union = union + linea[i];
-                            }
-                            
-                        }
-                        lista.Add(union);
-                        union = "";
-                        total = total + Convert.ToDecimal(linea[2]);
-                        total_compra = total_compra + Convert.ToDecimal(linea[4]);
-                    }
-                    
-                }
-            }
-            string[] list_string = new string[lista.Count + 1];
-            for (int op = 0; op < lista.Count; op++)
-            {
-                list_string[op] = "" + (lista[op]);
-            }
-            list_string[lista.Count] = "total|" + total + "  |total_compra|" + total_compra + "  |ganancia_real|" + (total - total_compra);
-            sr.Close();
-            return list_string;//devuelve la lista para ser usada
-        }
-
-        public string[] contenido_directorio(string FILE_NAME,string decicion=null)
+        public string[] Contenido_directorio(string direccion_archivo,string decicion=null)
         {
             ArrayList lista = new ArrayList();
-            DirectoryInfo di = new DirectoryInfo(FILE_NAME);
+            DirectoryInfo di = new DirectoryInfo(direccion_archivo);
 
             if (decicion==null)
             {
@@ -113,7 +35,7 @@ namespace tienda2
 
             else
             {
-                foreach (var fi in di.GetFiles(FILE_NAME))
+                foreach (var fi in di.GetFiles(direccion_archivo))
                 {
                     lista.Add("" + fi);
                 }
@@ -128,15 +50,15 @@ namespace tienda2
             return list_string;//devuelve la lista para ser usada
         }
 
-        public void actualisar_resumen_venta(string FILE_NAME,string fecha ,decimal precio_o_cantidadProducto,decimal costos_de_compra=0)
+        public void Actualisar_resumen_venta(string direccion_archivo,string fecha ,decimal precio_o_cantidadProducto,decimal costos_de_compra=0)
         {
             char[] parametros2 = { '/', '\\' };
-            tex_base bas = new tex_base();
+            
             bool bol=false;
-            string[] G_linea,linea, temp = { "", "" };
-            G_linea = FILE_NAME.Split(parametros2);//esplitea la direccion
+            string[] G_linea,linea;
+            G_linea = direccion_archivo.Split(parametros2);//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
-            bas.crear_archivo_y_directorio(FILE_NAME);
+            bas.Crear_archivo_y_directorio(direccion_archivo);
             for (int i = 1; i < G_linea.Length; i++)//checa si es el ultimo directorio 
             {
                 if (i == G_linea.Length - 1)//si llego al archivo le va a colocar un temp_ y el nombre del archivo
@@ -145,9 +67,9 @@ namespace tienda2
                 }
                 G_temp = G_temp + "\\" + G_linea[i];//le pone la barrita para pasarselo a la funcion de crear achivos
             }
-            bas.crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
+            bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
 
-            StreamReader sr = new StreamReader(FILE_NAME);//abrimos el archivo a leer
+            StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
             StreamWriter sw = new StreamWriter(G_temp,true);//abrimos el archivo a escribir
             try
             {
@@ -191,21 +113,20 @@ namespace tienda2
             sw.Close();
             sw.Dispose();
             Thread.Sleep(20);
-            File.Delete(FILE_NAME);//borramos el archivo original
+            File.Delete(direccion_archivo);//borramos el archivo original
             Thread.Sleep(20);
-            File.Move(G_temp, FILE_NAME);//renombramos el archivo temporal por el que tenia el original
+            File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
-
-        public void actualisar_resumen_compras(string FILE_NAME, string fecha, decimal precio)
+        public void Actualisar_resumen_compras(string direccion_archivo, string fecha, decimal precio)
         {
             char[] parametros2 = { '/', '\\' };
-            tex_base bas = new tex_base();
+            Tex_base bas = new Tex_base();
             bool bol = false;
-            string[] G_linea, linea, temp = { "", "" };
-            G_linea = FILE_NAME.Split(parametros2);//esplitea la direccion
+            string[] G_linea, linea;
+            G_linea = direccion_archivo.Split(parametros2);//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
-            bas.crear_archivo_y_directorio(FILE_NAME);
+            bas.Crear_archivo_y_directorio(direccion_archivo);
             for (int i = 1; i < G_linea.Length; i++)//checa si es el ultimo directorio 
             {
                 if (i == G_linea.Length - 1)//si llego al archivo le va a colocar un temp_ y el nombre del archivo
@@ -214,9 +135,9 @@ namespace tienda2
                 }
                 G_temp = G_temp + "\\" + G_linea[i];//le pone la barrita para pasarselo a la funcion de crear achivos
             }
-            bas.crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
+            bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
 
-            StreamReader sr = new StreamReader(FILE_NAME);//abrimos el archivo a leer
+            StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
             StreamWriter sw = new StreamWriter(G_temp, true);//abrimos el archivo a escribir
             try
             {
@@ -260,21 +181,20 @@ namespace tienda2
             sw.Close();
             sw.Dispose();
             Thread.Sleep(20);
-            File.Delete(FILE_NAME);//borramos el archivo original
+            File.Delete(direccion_archivo);//borramos el archivo original
             Thread.Sleep(20);
-            File.Move(G_temp, FILE_NAME);//renombramos el archivo temporal por el que tenia el original
+            File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
-
-        public void actualisar_ganancia_real(string FILE_NAME, string fecha, decimal precio, decimal costo_compra = 0)
+        public void Actualisar_ganancia_real(string direccion_archivo, string fecha, decimal precio, decimal costo_compra = 0)
         {
             char[] parametros2 = { '/', '\\' };
-            tex_base bas = new tex_base();
+            Tex_base bas = new Tex_base();
             bool bol = false;
-            string[] G_linea, linea, temp = { "", "" };
-            G_linea = FILE_NAME.Split(parametros2);//esplitea la direccion
+            string[] G_linea, linea;
+            G_linea = direccion_archivo.Split(parametros2);//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
-            bas.crear_archivo_y_directorio(FILE_NAME);
+            bas.Crear_archivo_y_directorio(direccion_archivo);
             for (int i = 1; i < G_linea.Length; i++)//checa si es el ultimo directorio 
             {
                 if (i == G_linea.Length - 1)//si llego al archivo le va a colocar un temp_ y el nombre del archivo
@@ -283,9 +203,9 @@ namespace tienda2
                 }
                 G_temp = G_temp + "\\" + G_linea[i];//le pone la barrita para pasarselo a la funcion de crear achivos
             }
-            bas.crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
+            bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
 
-            StreamReader sr = new StreamReader(FILE_NAME);//abrimos el archivo a leer
+            StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
             StreamWriter sw = new StreamWriter(G_temp, true);//abrimos el archivo a escribir
             try
             {
@@ -325,18 +245,18 @@ namespace tienda2
             sw.Close();
             sw.Dispose();
             Thread.Sleep(20);
-            File.Delete(FILE_NAME);//borramos el archivo original
+            File.Delete(direccion_archivo);//borramos el archivo original
             Thread.Sleep(20);
-            File.Move(G_temp, FILE_NAME);//renombramos el archivo temporal por el que tenia el original
+            File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
-        public void actualisar_inventario(string FILE_NAME, string id_produc_act, decimal cantidad_a_act)
+        public void Actualisar_inventario(string direccion_archivo, string codigo_barras, decimal cantidad_a_act)
         {
-            tex_base bas = new tex_base();
+            Tex_base bas = new Tex_base();
             string[] G_linea, linea;
-            G_linea = FILE_NAME.Split('\\');//esplitea la direccion
+            G_linea = direccion_archivo.Split('\\');//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
-            bas.crear_archivo_y_directorio(FILE_NAME);
+            bas.Crear_archivo_y_directorio(direccion_archivo);
             for (int i = 1; i < G_linea.Length; i++)//checa si es el ultimo directorio 
             {
                 if (i == G_linea.Length - 1)//si llego al archivo le va a colocar un temp_ y el nombre del archivo
@@ -345,9 +265,9 @@ namespace tienda2
                 }
                 G_temp = G_temp + "\\" + G_linea[i];//le pone la barrita para pasarselo a la funcion de crear achivos
             }
-            bas.crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
+            bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
 
-            StreamReader sr = new StreamReader(FILE_NAME);//abrimos el archivo a leer
+            StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
             StreamWriter sw = new StreamWriter(G_temp, true);//abrimos el archivo a escribir
             try
             {
@@ -359,7 +279,7 @@ namespace tienda2
                     {
                         linea = G_palabra.Split(G_parametros);
 
-                        if (linea[0] != id_produc_act)
+                        if (linea[3] != codigo_barras)
                         {
                             temp = "";
                             for (int i = 0; i < linea.Length; i++)
@@ -442,22 +362,20 @@ namespace tienda2
             sr.Close();
             sw.Close();
             Thread.Sleep(1);
-            File.Delete(FILE_NAME);//borramos el archivo original
+            File.Delete(direccion_archivo);//borramos el archivo original
             Thread.Sleep(1);
-            File.Move(G_temp, FILE_NAME);//renombramos el archivo temporal por el que tenia el original
+            File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
-        
-
-        public void actualisar_pedido(string FILE_NAME, string DATOS)
+        public void Actualisar_pedido(string direccion_archivo, string DATOS)
         {
 
             bandera = false;
-            tex_base bas = new tex_base();
+            Tex_base bas = new Tex_base();
             string[] G_linea, linea,dat_esplit=DATOS.Split(G_parametros);
-            G_linea = FILE_NAME.Split('\\');//esplitea la direccion
+            G_linea = direccion_archivo.Split('\\');//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
-            bas.crear_archivo_y_directorio(FILE_NAME);
+            bas.Crear_archivo_y_directorio(direccion_archivo);
             for (int i = 1; i < G_linea.Length; i++)//checa si es el ultimo directorio 
             {
                 if (i == G_linea.Length - 1)//si llego al archivo le va a colocar un temp_ y el nombre del archivo
@@ -466,9 +384,9 @@ namespace tienda2
                 }
                 G_temp = G_temp + "\\" + G_linea[i];//le pone la barrita para pasarselo a la funcion de crear achivos
             }
-            bas.crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
+            bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
 
-            StreamReader sr = new StreamReader(FILE_NAME);//abrimos el archivo a leer
+            StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
             StreamWriter sw = new StreamWriter(G_temp, true);//abrimos el archivo a escribir
             try
             {
@@ -513,17 +431,17 @@ namespace tienda2
             sr.Close();
             sw.Close();
             Thread.Sleep(1);
-            File.Delete(FILE_NAME);//borramos el archivo original
+            File.Delete(direccion_archivo);//borramos el archivo original
             Thread.Sleep(1);
-            File.Move(G_temp, FILE_NAME);//renombramos el archivo temporal por el que tenia el original
+            File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
-        public void ExecuteCommand(string _Command)
+        public void Executar_comandos(string _Comando)
         {
             //Indicamos que deseamos inicializar el proceso cmd.exe junto a un comando de arranque. 
             //(/C, le indicamos al proceso cmd que deseamos que cuando termine la tarea asignada se cierre el proceso).
             //Para mas informacion consulte la ayuda de la consola con cmd.exe /? 
-            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + _Command);
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", "/c " + _Comando);
 
             procStartInfo.RedirectStandardOutput = true;// Indicamos que la salida del proceso se redireccione en un Stream
             procStartInfo.UseShellExecute = false;
@@ -538,7 +456,7 @@ namespace tienda2
 
         }
 
-        public void respaldos_ventas(string direccion_a_copiar, string direccion_a_pegar, bool copiar_sub_directorios)
+        public void Respaldos_ventas(string direccion_a_copiar, string direccion_a_pegar)
         {
 
             //Now Create all of the directories
@@ -565,7 +483,7 @@ namespace tienda2
             }
         }
 
-        public void respaldo_inventario(string direccion_a_copiar, string direccion_a_pegar)
+        public void Respaldo_inventario(string direccion_a_copiar, string direccion_a_pegar)
         {
             //Now Create all of the directories
 
@@ -591,7 +509,7 @@ namespace tienda2
             }
         }
 
-        public void eliminar_carpeta(string direccion)
+        public void Eliminar_carpeta(string direccion)
         {
             try
             {
@@ -604,30 +522,30 @@ namespace tienda2
             
         }
 
-        public void pedido (string FILE_NAME,string[]agregar)
+        public void Pedido (string direccion_archivo,string[]agregar)
         {
-            tex_base bas = new tex_base();
-            operaciones_archivos op = new operaciones_archivos();
-            bas.crear_archivo_y_directorio(FILE_NAME);
+            Tex_base bas = new Tex_base();
+            Operaciones_archivos op = new Operaciones_archivos();
+            bas.Crear_archivo_y_directorio(direccion_archivo);
 
             for (int i = 0; i < agregar.Length; i++)
             {
-                op.actualisar_pedido(FILE_NAME, agregar[i]);
+                op.Actualisar_pedido(direccion_archivo, agregar[i]);
                 if (!bandera)
                 {
-                    bas.agregar(FILE_NAME, agregar[i]);
+                    bas.Agregar(direccion_archivo, agregar[i]);
                 }
             }
         }
 
-        public void actualisar_costo_compra(string FILE_NAME, string id_produc_act, decimal cantidad_a_act)
+        public void Actualisar_costo_compra(string direccion_archivo, string id_produc_act, decimal cantidad_a_act)
         {
             int columna_modificar = 5;
-            tex_base bas = new tex_base();
+            Tex_base bas = new Tex_base();
             string[] G_linea, linea;
-            G_linea = FILE_NAME.Split('\\');//esplitea la direccion
+            G_linea = direccion_archivo.Split('\\');//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
-            bas.crear_archivo_y_directorio(FILE_NAME);
+            bas.Crear_archivo_y_directorio(direccion_archivo);
             for (int i = 1; i < G_linea.Length; i++)//checa si es el ultimo directorio 
             {
                 if (i == G_linea.Length - 1)//si llego al archivo le va a colocar un temp_ y el nombre del archivo
@@ -636,9 +554,9 @@ namespace tienda2
                 }
                 G_temp = G_temp + "\\" + G_linea[i];//le pone la barrita para pasarselo a la funcion de crear achivos
             }
-            bas.crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
+            bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
 
-            StreamReader sr = new StreamReader(FILE_NAME);//abrimos el archivo a leer
+            StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
             StreamWriter sw = new StreamWriter(G_temp, true);//abrimos el archivo a escribir
             try
             {
@@ -704,9 +622,9 @@ namespace tienda2
             sr.Close();
             sw.Close();
             Thread.Sleep(1);
-            File.Delete(FILE_NAME);//borramos el archivo original
+            File.Delete(direccion_archivo);//borramos el archivo original
             Thread.Sleep(1);
-            File.Move(G_temp, FILE_NAME);//renombramos el archivo temporal por el que tenia el original
+            File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
     }

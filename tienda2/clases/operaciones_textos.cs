@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace tienda2.clases
 {
-    class operaciones_textos
+    class Operaciones_textos
     {
-        public string trimend_paresido(string texto, char caracter_separacion = '|')
+        public string Trimend_paresido(string texto, char caracter_separacion = '|')
         {
             string texto_editado = "";
             string[] texto_spliteado = texto.Split(caracter_separacion);

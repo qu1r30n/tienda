@@ -1,6 +1,6 @@
 ﻿namespace tienda2.desinger
 {
-    partial class confirmar_venta
+    partial class Confirmar_venta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,67 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_pagar = new System.Windows.Forms.Button();
-            this.txt_dinero = new System.Windows.Forms.TextBox();
-            this.lbl_dinero = new System.Windows.Forms.Label();
-            this.lbl_total = new System.Windows.Forms.Label();
-            this.lbl_titulo_total = new System.Windows.Forms.Label();
+            this.Btn_pagar = new System.Windows.Forms.Button();
+            this.Txt_dinero = new System.Windows.Forms.TextBox();
+            this.Lbl_dinero = new System.Windows.Forms.Label();
+            this.Lbl_total = new System.Windows.Forms.Label();
+            this.Lbl_titulo_total = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_pagar
+            // Btn_pagar
             // 
-            this.btn_pagar.Location = new System.Drawing.Point(258, 8);
-            this.btn_pagar.Name = "btn_pagar";
-            this.btn_pagar.Size = new System.Drawing.Size(75, 50);
-            this.btn_pagar.TabIndex = 9;
-            this.btn_pagar.Text = "pagar";
-            this.btn_pagar.UseVisualStyleBackColor = true;
-            this.btn_pagar.Click += new System.EventHandler(this.btn_pagar_Click);
+            this.Btn_pagar.Location = new System.Drawing.Point(258, 8);
+            this.Btn_pagar.Name = "Btn_pagar";
+            this.Btn_pagar.Size = new System.Drawing.Size(75, 50);
+            this.Btn_pagar.TabIndex = 9;
+            this.Btn_pagar.Text = "pagar";
+            this.Btn_pagar.UseVisualStyleBackColor = true;
+            this.Btn_pagar.Click += new System.EventHandler(this.Btn_pagar_Click);
             // 
-            // txt_dinero
+            // Txt_dinero
             // 
-            this.txt_dinero.Location = new System.Drawing.Point(152, 24);
-            this.txt_dinero.Name = "txt_dinero";
-            this.txt_dinero.Size = new System.Drawing.Size(100, 20);
-            this.txt_dinero.TabIndex = 8;
+            this.Txt_dinero.Location = new System.Drawing.Point(152, 24);
+            this.Txt_dinero.Name = "Txt_dinero";
+            this.Txt_dinero.Size = new System.Drawing.Size(100, 20);
+            this.Txt_dinero.TabIndex = 8;
             // 
-            // lbl_dinero
+            // Lbl_dinero
             // 
-            this.lbl_dinero.AutoSize = true;
-            this.lbl_dinero.Location = new System.Drawing.Point(149, 9);
-            this.lbl_dinero.Name = "lbl_dinero";
-            this.lbl_dinero.Size = new System.Drawing.Size(74, 13);
-            this.lbl_dinero.TabIndex = 7;
-            this.lbl_dinero.Text = "dinero que dio";
+            this.Lbl_dinero.AutoSize = true;
+            this.Lbl_dinero.Location = new System.Drawing.Point(149, 9);
+            this.Lbl_dinero.Name = "Lbl_dinero";
+            this.Lbl_dinero.Size = new System.Drawing.Size(74, 13);
+            this.Lbl_dinero.TabIndex = 7;
+            this.Lbl_dinero.Text = "dinero que dio";
             // 
-            // lbl_total
+            // Lbl_total
             // 
-            this.lbl_total.AutoSize = true;
-            this.lbl_total.Location = new System.Drawing.Point(12, 27);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(13, 13);
-            this.lbl_total.TabIndex = 6;
-            this.lbl_total.Text = "$";
+            this.Lbl_total.AutoSize = true;
+            this.Lbl_total.Location = new System.Drawing.Point(12, 27);
+            this.Lbl_total.Name = "Lbl_total";
+            this.Lbl_total.Size = new System.Drawing.Size(13, 13);
+            this.Lbl_total.TabIndex = 6;
+            this.Lbl_total.Text = "$";
             // 
-            // lbl_titulo_total
+            // Lbl_titulo_total
             // 
-            this.lbl_titulo_total.AutoSize = true;
-            this.lbl_titulo_total.Location = new System.Drawing.Point(12, 9);
-            this.lbl_titulo_total.Name = "lbl_titulo_total";
-            this.lbl_titulo_total.Size = new System.Drawing.Size(66, 13);
-            this.lbl_titulo_total.TabIndex = 5;
-            this.lbl_titulo_total.Text = "total a pagar";
+            this.Lbl_titulo_total.AutoSize = true;
+            this.Lbl_titulo_total.Location = new System.Drawing.Point(12, 9);
+            this.Lbl_titulo_total.Name = "Lbl_titulo_total";
+            this.Lbl_titulo_total.Size = new System.Drawing.Size(66, 13);
+            this.Lbl_titulo_total.TabIndex = 5;
+            this.Lbl_titulo_total.Text = "total a pagar";
             // 
             // confirmar_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 71);
-            this.Controls.Add(this.btn_pagar);
-            this.Controls.Add(this.txt_dinero);
-            this.Controls.Add(this.lbl_dinero);
-            this.Controls.Add(this.lbl_total);
-            this.Controls.Add(this.lbl_titulo_total);
+            this.Controls.Add(this.Btn_pagar);
+            this.Controls.Add(this.Txt_dinero);
+            this.Controls.Add(this.Lbl_dinero);
+            this.Controls.Add(this.Lbl_total);
+            this.Controls.Add(this.Lbl_titulo_total);
             this.Name = "confirmar_venta";
             this.Text = "confirmar_venta";
             this.ResumeLayout(false);
@@ -98,10 +98,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_pagar;
-        public System.Windows.Forms.TextBox txt_dinero;
-        private System.Windows.Forms.Label lbl_dinero;
-        public System.Windows.Forms.Label lbl_total;
-        private System.Windows.Forms.Label lbl_titulo_total;
+        private System.Windows.Forms.Button Btn_pagar;
+        public System.Windows.Forms.TextBox Txt_dinero;
+        private System.Windows.Forms.Label Lbl_dinero;
+        public System.Windows.Forms.Label Lbl_total;
+        private System.Windows.Forms.Label Lbl_titulo_total;
     }
 }

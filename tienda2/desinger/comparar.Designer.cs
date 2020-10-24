@@ -1,6 +1,6 @@
 ﻿namespace tienda2.desinger
 {
-    partial class comparar
+    partial class Comparar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rdb_gastos = new System.Windows.Forms.RadioButton();
-            this.rdb_productos = new System.Windows.Forms.RadioButton();
-            this.rdb_ventas = new System.Windows.Forms.RadioButton();
-            this.btn_comparar = new System.Windows.Forms.Button();
+            this.Rdb_gastos = new System.Windows.Forms.RadioButton();
+            this.Rdb_productos = new System.Windows.Forms.RadioButton();
+            this.Rdb_ventas = new System.Windows.Forms.RadioButton();
+            this.Btn_comparar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,48 +40,48 @@
             this.cmb_mes = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // rdb_gastos
+            // Rdb_gastos
             // 
-            this.rdb_gastos.AutoSize = true;
-            this.rdb_gastos.Location = new System.Drawing.Point(298, 52);
-            this.rdb_gastos.Name = "rdb_gastos";
-            this.rdb_gastos.Size = new System.Drawing.Size(56, 17);
-            this.rdb_gastos.TabIndex = 43;
-            this.rdb_gastos.TabStop = true;
-            this.rdb_gastos.Text = "gastos";
-            this.rdb_gastos.UseVisualStyleBackColor = true;
+            this.Rdb_gastos.AutoSize = true;
+            this.Rdb_gastos.Location = new System.Drawing.Point(298, 52);
+            this.Rdb_gastos.Name = "Rdb_gastos";
+            this.Rdb_gastos.Size = new System.Drawing.Size(56, 17);
+            this.Rdb_gastos.TabIndex = 43;
+            this.Rdb_gastos.TabStop = true;
+            this.Rdb_gastos.Text = "gastos";
+            this.Rdb_gastos.UseVisualStyleBackColor = true;
             // 
-            // rdb_productos
+            // Rdb_productos
             // 
-            this.rdb_productos.AutoSize = true;
-            this.rdb_productos.Location = new System.Drawing.Point(155, 52);
-            this.rdb_productos.Name = "rdb_productos";
-            this.rdb_productos.Size = new System.Drawing.Size(72, 17);
-            this.rdb_productos.TabIndex = 42;
-            this.rdb_productos.TabStop = true;
-            this.rdb_productos.Text = "productos";
-            this.rdb_productos.UseVisualStyleBackColor = true;
+            this.Rdb_productos.AutoSize = true;
+            this.Rdb_productos.Location = new System.Drawing.Point(155, 52);
+            this.Rdb_productos.Name = "Rdb_productos";
+            this.Rdb_productos.Size = new System.Drawing.Size(72, 17);
+            this.Rdb_productos.TabIndex = 42;
+            this.Rdb_productos.TabStop = true;
+            this.Rdb_productos.Text = "productos";
+            this.Rdb_productos.UseVisualStyleBackColor = true;
             // 
-            // rdb_ventas
+            // Rdb_ventas
             // 
-            this.rdb_ventas.AutoSize = true;
-            this.rdb_ventas.Location = new System.Drawing.Point(12, 52);
-            this.rdb_ventas.Name = "rdb_ventas";
-            this.rdb_ventas.Size = new System.Drawing.Size(57, 17);
-            this.rdb_ventas.TabIndex = 41;
-            this.rdb_ventas.TabStop = true;
-            this.rdb_ventas.Text = "ventas";
-            this.rdb_ventas.UseVisualStyleBackColor = true;
+            this.Rdb_ventas.AutoSize = true;
+            this.Rdb_ventas.Location = new System.Drawing.Point(12, 52);
+            this.Rdb_ventas.Name = "Rdb_ventas";
+            this.Rdb_ventas.Size = new System.Drawing.Size(57, 17);
+            this.Rdb_ventas.TabIndex = 41;
+            this.Rdb_ventas.TabStop = true;
+            this.Rdb_ventas.Text = "ventas";
+            this.Rdb_ventas.UseVisualStyleBackColor = true;
             // 
-            // btn_comparar
+            // Btn_comparar
             // 
-            this.btn_comparar.Location = new System.Drawing.Point(12, 97);
-            this.btn_comparar.Name = "btn_comparar";
-            this.btn_comparar.Size = new System.Drawing.Size(75, 23);
-            this.btn_comparar.TabIndex = 40;
-            this.btn_comparar.Text = "comparar";
-            this.btn_comparar.UseVisualStyleBackColor = true;
-            this.btn_comparar.Click += new System.EventHandler(this.btn_comparar_Click);
+            this.Btn_comparar.Location = new System.Drawing.Point(12, 97);
+            this.Btn_comparar.Name = "Btn_comparar";
+            this.Btn_comparar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_comparar.TabIndex = 40;
+            this.Btn_comparar.Text = "comparar";
+            this.Btn_comparar.UseVisualStyleBackColor = true;
+            this.Btn_comparar.Click += new System.EventHandler(this.Btn_comparar_Click);
             // 
             // label3
             // 
@@ -139,10 +139,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 134);
-            this.Controls.Add(this.rdb_gastos);
-            this.Controls.Add(this.rdb_productos);
-            this.Controls.Add(this.rdb_ventas);
-            this.Controls.Add(this.btn_comparar);
+            this.Controls.Add(this.Rdb_gastos);
+            this.Controls.Add(this.Rdb_productos);
+            this.Controls.Add(this.Rdb_ventas);
+            this.Controls.Add(this.Btn_comparar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -158,10 +158,10 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton rdb_gastos;
-        private System.Windows.Forms.RadioButton rdb_productos;
-        private System.Windows.Forms.RadioButton rdb_ventas;
-        private System.Windows.Forms.Button btn_comparar;
+        private System.Windows.Forms.RadioButton Rdb_gastos;
+        private System.Windows.Forms.RadioButton Rdb_productos;
+        private System.Windows.Forms.RadioButton Rdb_ventas;
+        private System.Windows.Forms.Button Btn_comparar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

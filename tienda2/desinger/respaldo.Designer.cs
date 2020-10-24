@@ -1,6 +1,6 @@
 ﻿namespace tienda2.desinger
 {
-    partial class respaldo
+    partial class Respaldo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,61 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_usar_respaldo = new System.Windows.Forms.Button();
-            this.lbl_direccion = new System.Windows.Forms.Label();
-            this.btn_respaldar = new System.Windows.Forms.Button();
-            this.btn_donde_guardar = new System.Windows.Forms.Button();
+            this.Btn_usar_respaldo = new System.Windows.Forms.Button();
+            this.Lbl_direccion = new System.Windows.Forms.Label();
+            this.Btn_respaldar = new System.Windows.Forms.Button();
+            this.Btn_donde_guardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btn_usar_respaldo
+            // Btn_usar_respaldo
             // 
-            this.btn_usar_respaldo.Location = new System.Drawing.Point(181, 122);
-            this.btn_usar_respaldo.Name = "btn_usar_respaldo";
-            this.btn_usar_respaldo.Size = new System.Drawing.Size(75, 45);
-            this.btn_usar_respaldo.TabIndex = 7;
-            this.btn_usar_respaldo.Text = "usar respaldo";
-            this.btn_usar_respaldo.UseVisualStyleBackColor = true;
-            this.btn_usar_respaldo.Click += new System.EventHandler(this.btn_usar_respaldo_Click);
+            this.Btn_usar_respaldo.Location = new System.Drawing.Point(181, 122);
+            this.Btn_usar_respaldo.Name = "Btn_usar_respaldo";
+            this.Btn_usar_respaldo.Size = new System.Drawing.Size(75, 45);
+            this.Btn_usar_respaldo.TabIndex = 7;
+            this.Btn_usar_respaldo.Text = "usar respaldo";
+            this.Btn_usar_respaldo.UseVisualStyleBackColor = true;
+            this.Btn_usar_respaldo.Click += new System.EventHandler(this.Btn_usar_respaldo_Click);
             // 
-            // lbl_direccion
+            // Lbl_direccion
             // 
-            this.lbl_direccion.AutoSize = true;
-            this.lbl_direccion.Location = new System.Drawing.Point(9, 70);
-            this.lbl_direccion.MaximumSize = new System.Drawing.Size(300, 0);
-            this.lbl_direccion.Name = "lbl_direccion";
-            this.lbl_direccion.Size = new System.Drawing.Size(283, 26);
-            this.lbl_direccion.TabIndex = 6;
-            this.lbl_direccion.Text = "oprime boton donde guararlos para buscar donde poner el respaldo";
+            this.Lbl_direccion.AutoSize = true;
+            this.Lbl_direccion.Location = new System.Drawing.Point(9, 70);
+            this.Lbl_direccion.MaximumSize = new System.Drawing.Size(300, 0);
+            this.Lbl_direccion.Name = "Lbl_direccion";
+            this.Lbl_direccion.Size = new System.Drawing.Size(283, 26);
+            this.Lbl_direccion.TabIndex = 6;
+            this.Lbl_direccion.Text = "oprime boton donde guararlos para buscar donde poner el respaldo";
             // 
-            // btn_respaldar
+            // Btn_respaldar
             // 
-            this.btn_respaldar.Location = new System.Drawing.Point(12, 122);
-            this.btn_respaldar.Name = "btn_respaldar";
-            this.btn_respaldar.Size = new System.Drawing.Size(75, 45);
-            this.btn_respaldar.TabIndex = 5;
-            this.btn_respaldar.Text = "respaldar";
-            this.btn_respaldar.UseVisualStyleBackColor = true;
-            this.btn_respaldar.Click += new System.EventHandler(this.btn_respaldar_Click);
+            this.Btn_respaldar.Location = new System.Drawing.Point(12, 122);
+            this.Btn_respaldar.Name = "Btn_respaldar";
+            this.Btn_respaldar.Size = new System.Drawing.Size(75, 45);
+            this.Btn_respaldar.TabIndex = 5;
+            this.Btn_respaldar.Text = "respaldar";
+            this.Btn_respaldar.UseVisualStyleBackColor = true;
+            this.Btn_respaldar.Click += new System.EventHandler(this.Btn_respaldar_Click);
             // 
-            // btn_donde_guardar
+            // Btn_donde_guardar
             // 
-            this.btn_donde_guardar.Location = new System.Drawing.Point(12, 12);
-            this.btn_donde_guardar.Name = "btn_donde_guardar";
-            this.btn_donde_guardar.Size = new System.Drawing.Size(75, 36);
-            this.btn_donde_guardar.TabIndex = 4;
-            this.btn_donde_guardar.Text = "dond guardarlos";
-            this.btn_donde_guardar.UseVisualStyleBackColor = true;
-            this.btn_donde_guardar.Click += new System.EventHandler(this.btn_donde_guardar_Click);
+            this.Btn_donde_guardar.Location = new System.Drawing.Point(12, 12);
+            this.Btn_donde_guardar.Name = "Btn_donde_guardar";
+            this.Btn_donde_guardar.Size = new System.Drawing.Size(75, 36);
+            this.Btn_donde_guardar.TabIndex = 4;
+            this.Btn_donde_guardar.Text = "dond guardarlos";
+            this.Btn_donde_guardar.UseVisualStyleBackColor = true;
+            this.Btn_donde_guardar.Click += new System.EventHandler(this.Btn_donde_guardar_Click);
             // 
             // respaldo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(296, 204);
-            this.Controls.Add(this.btn_usar_respaldo);
-            this.Controls.Add(this.lbl_direccion);
-            this.Controls.Add(this.btn_respaldar);
-            this.Controls.Add(this.btn_donde_guardar);
+            this.Controls.Add(this.Btn_usar_respaldo);
+            this.Controls.Add(this.Lbl_direccion);
+            this.Controls.Add(this.Btn_respaldar);
+            this.Controls.Add(this.Btn_donde_guardar);
             this.Name = "respaldo";
             this.Text = "respaldo";
             this.ResumeLayout(false);
@@ -92,9 +92,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_usar_respaldo;
-        private System.Windows.Forms.Label lbl_direccion;
-        private System.Windows.Forms.Button btn_respaldar;
-        private System.Windows.Forms.Button btn_donde_guardar;
+        private System.Windows.Forms.Button Btn_usar_respaldo;
+        private System.Windows.Forms.Label Lbl_direccion;
+        private System.Windows.Forms.Button Btn_respaldar;
+        private System.Windows.Forms.Button Btn_donde_guardar;
     }
 }

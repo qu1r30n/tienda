@@ -10,42 +10,39 @@ using System.Windows.Forms;
 
 namespace tienda2.desinger
 {
-    public partial class comparar : Form
+    public partial class Comparar : Form
     {
         char[] G_parametros = { '|' };
 
-        string direc_tem = "";
+        //string direc_tem = "";
 
-        public string direccion_grafica { get; set; }
+        public string Direccion_grafica { get; set; }
 
-        public string palabra_reconocimiento { get; set; }
+        public string Palabra_reconocimiento { get; set; }
 
-        public static string checkbox_en_uso;
+        public static string Checkbox_en_uso;
 
         //----------------------------------------------
-        private area_principal _parent;
-        public comparar(area_principal parent)
+        private Area_principal _parent;
+        public Comparar(Area_principal parent)
         {
 
             _parent = parent;
             //---------------------------------------------------
 
             InitializeComponent();
-            rdb_ventas.Checked = true;
+            Rdb_ventas.Checked = true;
             try
             {
                 DateTime fecha_hora = DateTime.Now;
                 cmb_año.Text = fecha_hora.ToString("yyyy");
                 cmb_mes.Text = fecha_hora.ToString("MM");
 
-                combo_a("ventas\\total_años.txt");
-                combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".txt");
-                combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
+                Combo_a("ventas\\total_años.Txt");
+                Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".Txt");
+                Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".Txt");
 
-
-                tex_base bas = new tex_base();
-
-                direc_tem = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".txt";
+                //direc_tem = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".Txt";
 
                 if (cmb_año.Items.Count == 0)
                 {
@@ -60,14 +57,14 @@ namespace tienda2.desinger
             }
         }
 
-        private void btn_comparar_Click(object sender, EventArgs e)
+        private void Btn_comparar_Click(object sender, EventArgs e)
         {
 
-            if (rdb_ventas.Checked)
+            if (Rdb_ventas.Checked)
             {
-                if (checkbox_en_uso == "0")
+                if (Checkbox_en_uso == "0")
                 {
-                    modelo_grafica(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
+                    Modelo_grafica(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
                 }
                 else
                 {
@@ -75,11 +72,11 @@ namespace tienda2.desinger
                 }
 
             }
-            else if (rdb_productos.Checked)
+            else if (Rdb_productos.Checked)
             {
-                if (checkbox_en_uso == "1")
+                if (Checkbox_en_uso == "1")
                 {
-                    modelo_grafica_productos(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
+                    Modelo_grafica_productos(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
                 }
                 else
                 {
@@ -88,11 +85,11 @@ namespace tienda2.desinger
             }
 
 
-            else if (rdb_gastos.Checked)
+            else if (Rdb_gastos.Checked)
             {
-                if (checkbox_en_uso == "2")
+                if (Checkbox_en_uso == "2")
                 {
-                    modelo_grafica_gastos(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
+                    Modelo_grafica_gastos(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
                 }
                 else
                 {
@@ -102,15 +99,16 @@ namespace tienda2.desinger
             this.Close();
         }
 
-        public void combo_a(string FILE_NAME)
+        public void Combo_a(string direccion_archivo)
         {
             string temp;
             cmb_año.Items.Clear();
-            operaciones_archivos op = new operaciones_archivos();
-            DateTime fecha_hora = DateTime.Now;
-            string[] archivos = op.revicion_total(FILE_NAME);
+            
+            //elim9_combo_a = 0;
+            Tex_base bas = new Tex_base();
+            string[] archivos = bas.Leer(direccion_archivo);
             string[] espliteado;
-            for (int i = 0; i < archivos.Length - 1; i++)
+            for (int i = 0; i < archivos.Length; i++)
             {
                 temp = archivos[i];
                 espliteado = temp.Split(G_parametros);
@@ -118,25 +116,25 @@ namespace tienda2.desinger
             }
         }
 
-        private void cmb_año_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cmb_año_SelectedIndexChanged(object sender, EventArgs e)
         {
-            combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".txt");
+            Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".Txt");
         }
 
-        private void cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
+        private void Cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
+            Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".Txt");
         }
 
-        public void combo_m(string FILE_NAME)
+        public void Combo_m(string direccion_archivo)
         {
             string temp;
             cmb_mes.Items.Clear();
-            operaciones_archivos op = new operaciones_archivos();
-            DateTime fecha_hora = DateTime.Now;
-            string[] archivos = op.revicion_total(FILE_NAME);
+            //elim10_combo_m = 0;
+            Tex_base bas = new Tex_base();
+            string[] archivos = bas.Leer(direccion_archivo);
             string[] espliteado;
-            for (int i = 0; i < archivos.Length - 1; i++)
+            for (int i = 0; i < archivos.Length; i++)
             {
                 temp = archivos[i];
                 espliteado = temp.Split(G_parametros);
@@ -145,15 +143,15 @@ namespace tienda2.desinger
 
         }
 
-        public void combo_d(string FILE_NAME)
+        public void Combo_d(string direccion_archivo)
         {
             string temp;
             cmb_dia.Items.Clear();
-            operaciones_archivos op = new operaciones_archivos();
-            DateTime fecha_hora = DateTime.Now;
-            string[] archivos = op.revicion_total(FILE_NAME);
+            //elim11_combo_d = 0;
+            Tex_base bas = new Tex_base();
+            string[] archivos = bas.Leer(direccion_archivo);
             string[] espliteado;
-            for (int i = 0; i < archivos.Length - 1; i++)
+            for (int i = 0; i < archivos.Length; i++)
             {
                 temp = archivos[i];
                 espliteado = temp.Split(G_parametros);
@@ -162,26 +160,26 @@ namespace tienda2.desinger
         }
 
 
-        public void modelo_grafica(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = true)
+        public void Modelo_grafica(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = true)
         {
 
-            _parent.lst_ventas.Items.Clear();
+            _parent.Lst_ventas.Items.Clear();
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\total_años.txt", palabra_reconocimiento, "total_años", comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\total_años.Txt", Palabra_reconocimiento, "total_años", comparacion);
             }
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\" + c_año + ".txt", palabra_reconocimiento, c_año, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_año + ".Txt", Palabra_reconocimiento, c_año, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt", palabra_reconocimiento, c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".Txt", Palabra_reconocimiento, c_año + "-" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.grafica_horas_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_dia + "-" + c_mes + "-" + c_año + ".txt", palabra_reconocimiento, c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_dia + "-" + c_mes + "-" + c_año + ".Txt", Palabra_reconocimiento, c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
             }
             else
             {
@@ -189,25 +187,25 @@ namespace tienda2.desinger
             }
         }
 
-        public void modelo_grafica_productos(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
+        public void Modelo_grafica_productos(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
         {
-            _parent.lst_ventas.Items.Clear();
+            _parent.Lst_ventas.Items.Clear();
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\p_total_años.txt", palabra_reconocimiento, "p_total_años", comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\p_total_años.Txt", Palabra_reconocimiento, "p_total_años", comparacion);
             }
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\p_" + c_año + ".txt", palabra_reconocimiento, "p_" + c_año, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\p_" + c_año + ".Txt", Palabra_reconocimiento, "p_" + c_año, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".txt", palabra_reconocimiento, "p_" + c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".Txt", Palabra_reconocimiento, "p_" + c_año + "-" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.grafica_horas_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_dia + "-" + c_mes + "-" + c_año + ".txt", palabra_reconocimiento, "p_" + c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_dia + "-" + c_mes + "-" + c_año + ".Txt", Palabra_reconocimiento, "p_" + c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
             }
             else
             {
@@ -215,25 +213,25 @@ namespace tienda2.desinger
             }
         }
 
-        public void modelo_grafica_gastos(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
+        public void Modelo_grafica_gastos(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
         {
-            _parent.lst_ventas.Items.Clear();
+            _parent.Lst_ventas.Items.Clear();
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\g_total_años.txt", palabra_reconocimiento, "g_total_años", comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\g_total_años.Txt", Palabra_reconocimiento, "g_total_años", comparacion);
             }
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\g_" + c_año + ".txt", palabra_reconocimiento, "g_" + c_año, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\g_" + c_año + ".Txt", Palabra_reconocimiento, "g_" + c_año, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.grafica_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt", palabra_reconocimiento, "g_" + c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".Txt", Palabra_reconocimiento, "g_" + c_año + "-" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.grafica_horas_para_comparar(direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_dia + "-" + c_mes + "-" + c_año + ".txt", palabra_reconocimiento, "g_" + c_año + "-" + c_mes + "-" + c_dia, 1, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_dia + "-" + c_mes + "-" + c_año + ".Txt", Palabra_reconocimiento, "g_" + c_año + "-" + c_mes + "-" + c_dia, 1, comparacion);
             }
             else
             {

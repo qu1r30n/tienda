@@ -1,6 +1,6 @@
 ﻿namespace tienda2.desinger
 {
-    partial class compras
+    partial class Compras
     {
         /// <summary>
         /// Required designer variable.
@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_guardar_compra = new System.Windows.Forms.Button();
-            this.txt_cantidad_gastada = new System.Windows.Forms.TextBox();
-            this.txt_quien_facturo = new System.Windows.Forms.TextBox();
-            this.txt_razon = new System.Windows.Forms.TextBox();
+            this.Btn_guardar_compra = new System.Windows.Forms.Button();
+            this.Txt_cantidad_gastada = new System.Windows.Forms.TextBox();
+            this.Txt_quien_facturo = new System.Windows.Forms.TextBox();
+            this.Txt_razon = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_guardar_compra
+            // Btn_guardar_compra
             // 
-            this.btn_guardar_compra.Location = new System.Drawing.Point(15, 147);
-            this.btn_guardar_compra.Name = "btn_guardar_compra";
-            this.btn_guardar_compra.Size = new System.Drawing.Size(111, 34);
-            this.btn_guardar_compra.TabIndex = 13;
-            this.btn_guardar_compra.Text = "guarda compra";
-            this.btn_guardar_compra.UseVisualStyleBackColor = true;
-            this.btn_guardar_compra.Click += new System.EventHandler(this.btn_guardar_compra_Click);
+            this.Btn_guardar_compra.Location = new System.Drawing.Point(15, 147);
+            this.Btn_guardar_compra.Name = "Btn_guardar_compra";
+            this.Btn_guardar_compra.Size = new System.Drawing.Size(111, 34);
+            this.Btn_guardar_compra.TabIndex = 13;
+            this.Btn_guardar_compra.Text = "guarda compra";
+            this.Btn_guardar_compra.UseVisualStyleBackColor = true;
+            this.Btn_guardar_compra.Click += new System.EventHandler(this.Btn_guardar_compra_Click);
             // 
-            // txt_cantidad_gastada
+            // Txt_cantidad_gastada
             // 
-            this.txt_cantidad_gastada.Location = new System.Drawing.Point(15, 120);
-            this.txt_cantidad_gastada.Name = "txt_cantidad_gastada";
-            this.txt_cantidad_gastada.Size = new System.Drawing.Size(100, 20);
-            this.txt_cantidad_gastada.TabIndex = 12;
+            this.Txt_cantidad_gastada.Location = new System.Drawing.Point(15, 120);
+            this.Txt_cantidad_gastada.Name = "Txt_cantidad_gastada";
+            this.Txt_cantidad_gastada.Size = new System.Drawing.Size(100, 20);
+            this.Txt_cantidad_gastada.TabIndex = 12;
             // 
-            // txt_quien_facturo
+            // Txt_quien_facturo
             // 
-            this.txt_quien_facturo.Location = new System.Drawing.Point(15, 77);
-            this.txt_quien_facturo.Name = "txt_quien_facturo";
-            this.txt_quien_facturo.Size = new System.Drawing.Size(229, 20);
-            this.txt_quien_facturo.TabIndex = 11;
+            this.Txt_quien_facturo.Location = new System.Drawing.Point(15, 77);
+            this.Txt_quien_facturo.Name = "Txt_quien_facturo";
+            this.Txt_quien_facturo.Size = new System.Drawing.Size(229, 20);
+            this.Txt_quien_facturo.TabIndex = 11;
             // 
-            // txt_razon
+            // Txt_razon
             // 
-            this.txt_razon.Location = new System.Drawing.Point(12, 25);
-            this.txt_razon.Name = "txt_razon";
-            this.txt_razon.Size = new System.Drawing.Size(386, 20);
-            this.txt_razon.TabIndex = 10;
+            this.Txt_razon.Location = new System.Drawing.Point(12, 25);
+            this.Txt_razon.Name = "Txt_razon";
+            this.Txt_razon.Size = new System.Drawing.Size(386, 20);
+            this.Txt_razon.TabIndex = 10;
             // 
             // label3
             // 
@@ -100,10 +100,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 188);
-            this.Controls.Add(this.btn_guardar_compra);
-            this.Controls.Add(this.txt_cantidad_gastada);
-            this.Controls.Add(this.txt_quien_facturo);
-            this.Controls.Add(this.txt_razon);
+            this.Controls.Add(this.Btn_guardar_compra);
+            this.Controls.Add(this.Txt_cantidad_gastada);
+            this.Controls.Add(this.Txt_quien_facturo);
+            this.Controls.Add(this.Txt_razon);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -116,10 +116,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_guardar_compra;
-        private System.Windows.Forms.TextBox txt_cantidad_gastada;
-        private System.Windows.Forms.TextBox txt_quien_facturo;
-        private System.Windows.Forms.TextBox txt_razon;
+        private System.Windows.Forms.Button Btn_guardar_compra;
+        private System.Windows.Forms.TextBox Txt_cantidad_gastada;
+        private System.Windows.Forms.TextBox Txt_quien_facturo;
+        private System.Windows.Forms.TextBox Txt_razon;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace tienda2.desinger
 {
-    public partial class empleados : Form
+    public partial class Empleados : Form
     {
-        public empleados()
+        public Empleados()
         {
             InitializeComponent();
         }
 
-        private void btn_buscar_Click(object sender, EventArgs e)
+        private void Btn_buscar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_eliminar_Click(object sender, EventArgs e)
+        private void Btn_eliminar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_agregar_Click(object sender, EventArgs e)
+        private void Btn_agregar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_editar_Click(object sender, EventArgs e)
+        private void Btn_editar_Click(object sender, EventArgs e)
         {
 
         }

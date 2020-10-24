@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace tienda2.desinger
 {
-    public partial class respaldo : Form
+    public partial class Respaldo : Form
     {
         string direccion = "";
         bool dec = false;
         char[] G_parametros = { '|' };
-        public respaldo()
+        public Respaldo()
         {
             InitializeComponent();
         }
 
-        private void btn_donde_guardar_Click(object sender, EventArgs e)
+        private void Btn_donde_guardar_Click(object sender, EventArgs e)
         {
             
             FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -28,7 +28,7 @@ namespace tienda2.desinger
             {
                 MessageBox.Show(fbd.SelectedPath);
                 direccion = fbd.SelectedPath;
-                lbl_direccion.Text = direccion;
+                Lbl_direccion.Text = direccion;
                 dec = true;
                 fbd.Reset();
             }
@@ -38,29 +38,29 @@ namespace tienda2.desinger
             }
         }
 
-        private void btn_respaldar_Click(object sender, EventArgs e)
+        private void Btn_respaldar_Click(object sender, EventArgs e)
         {
             DateTime fecha_hora = DateTime.Now;
             if (dec == true)
             {
-                operaciones_archivos op = new operaciones_archivos();
-                op.respaldos_ventas("ventas", direccion + "\\respaldo_" + fecha_hora.ToString("yyyy-MM-dd") + "\\ventas", true);
-                op.respaldo_inventario("inf\\inventario", direccion + "\\respaldo\\inf\\inventario");
-                lbl_direccion.Text = "oprime boton donde guararlos para buscar donde poner el respaldo";
+                Operaciones_archivos op = new Operaciones_archivos();
+                op.Respaldos_ventas("ventas", direccion + "\\respaldo_" + fecha_hora.ToString("yyyy-MM-dd") + "\\ventas");
+                op.Respaldo_inventario("inf\\inventario", direccion + "\\respaldo\\inf\\inventario");
+                Lbl_direccion.Text = "oprime boton donde guararlos para buscar donde poner el respaldo";
                 dec = false;
             }
         }
 
-        private void btn_usar_respaldo_Click(object sender, EventArgs e)
+        private void Btn_usar_respaldo_Click(object sender, EventArgs e)
         {
             if (dec == true)
             {
-                operaciones_archivos op = new operaciones_archivos();
-                op.eliminar_carpeta(".\\ventas");
-                op.eliminar_carpeta(".\\inf\\inventario");
-                op.respaldos_ventas(direccion, "" + G_parametros[0], true);
-                op.respaldo_inventario(direccion, "inf");
-                lbl_direccion.Text = "oprime boton donde guararlos para buscar donde poner el respaldo";
+                Operaciones_archivos op = new Operaciones_archivos();
+                op.Eliminar_carpeta(".\\ventas");
+                op.Eliminar_carpeta(".\\inf\\inventario");
+                op.Respaldos_ventas(direccion, "" + G_parametros[0]);
+                op.Respaldo_inventario(direccion, "inf");
+                Lbl_direccion.Text = "oprime boton donde guararlos para buscar donde poner el respaldo";
                 dec = false;
             }
         }

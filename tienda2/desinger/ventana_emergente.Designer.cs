@@ -1,6 +1,6 @@
 ﻿namespace tienda2.desinger
 {
-    partial class ventana_emergente
+    partial class Ventana_emergente
     {
         /// <summary>
         /// Required designer variable.
