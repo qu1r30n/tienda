@@ -18,8 +18,8 @@ namespace tienda2.desinger
         {
             InitializeComponent();
             Tex_base bas = new Tex_base();
-            bas.Crear_archivo_y_directorio("inf\\inventario\\invent.Txt","id|producto|precio|codigo|cantidad|compra|marca|");
-            string[] imprimir = bas.Leer("inf\\inventario\\invent.Txt", "0|1|2|3|4", "" + G_parametros[0]);
+            bas.Crear_archivo_y_directorio("inf\\inventario\\invent.txt","id|producto|precio|codigo|cantidad|compra|marca|");
+            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "0|1|2|3|4", "" + G_parametros[0]);
             for (int i = 0; i < imprimir.Length; i++)
             {
                 Lst_productos.Items.Add(imprimir[i]);
@@ -42,13 +42,13 @@ namespace tienda2.desinger
             Btn_edit_por.Hide();
 
             Tex_base bas = new Tex_base();
-            bas.Crear_archivo_y_directorio("inf\\inventario\\invent.Txt","id|producto|precio|codigo|cantidad|compra|marca|");
+            bas.Crear_archivo_y_directorio("inf\\inventario\\invent.txt","id|producto|precio|codigo|cantidad|compra|marca|");
             if ("" != Txt_precio.Text && "" != Txt_nombre.Text)
             {
-                // este es el antiguo raro agregar estudiar despues bas.agregar("inf\\inventario\\invent.Txt", Txt_id_producto.Text + G_parametros[0] + Txt_nombre.Text + G_parametros[0] + Txt_precio.Text + G_parametros[0] + Txt_codigo.Text + G_parametros[0] + Txt_cantidad.Text, "id|producto|precio|codigo|cantidad|compra|marca|");
-                bas.Agregar("inf\\inventario\\invent.Txt", Txt_id_producto.Text + G_parametros[0] + Txt_nombre.Text + G_parametros[0] + Txt_precio.Text + G_parametros[0] + Txt_codigo.Text + G_parametros[0] + Txt_cantidad.Text);
+                // este es el antiguo raro agregar estudiar despues bas.agregar("inf\\inventario\\invent.txt", Txt_id_producto.Text + G_parametros[0] + Txt_nombre.Text + G_parametros[0] + Txt_precio.Text + G_parametros[0] + Txt_codigo.Text + G_parametros[0] + Txt_cantidad.Text, "id|producto|precio|codigo|cantidad|compra|marca|");
+                bas.Agregar("inf\\inventario\\invent.txt", Txt_id_producto.Text + G_parametros[0] + Txt_nombre.Text + G_parametros[0] + Txt_precio.Text + G_parametros[0] + Txt_codigo.Text + G_parametros[0] + Txt_cantidad.Text);
                 Lst_productos.Items.Clear();
-                string[] imprimir = bas.Leer("inf\\inventario\\invent.Txt", "0|1|2|3|4", "" + G_parametros[0]);
+                string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "0|1|2|3|4", "" + G_parametros[0]);
                 for (int i = 0; i < imprimir.Length; i++)
                 {
                     Lst_productos.Items.Add(imprimir[i]);
@@ -92,10 +92,10 @@ namespace tienda2.desinger
             Btn_edit_por.Hide();
 
             Tex_base bas = new Tex_base();
-            bas.Crear_archivo_y_directorio("inf\\inventario\\invent.Txt","id|producto|precio|codigo|cantidad|compra|marca|");
-            bas.Eliminar("inf\\inventario\\invent.Txt", Txt_nombre.Text);
+            bas.Crear_archivo_y_directorio("inf\\inventario\\invent.txt","id|producto|precio|codigo|cantidad|compra|marca|");
+            bas.Eliminar("inf\\inventario\\invent.txt", Txt_nombre.Text);
             Lst_productos.Items.Clear();
-            string[] leido = bas.Leer("inf\\inventario\\invent.Txt", "0|1|2|3|4", "" + G_parametros[0]);
+            string[] leido = bas.Leer("inf\\inventario\\invent.txt", "0|1|2|3|4", "" + G_parametros[0]);
             foreach (var item in leido)
             {
                 Lst_productos.Items.Add(item);
@@ -106,15 +106,15 @@ namespace tienda2.desinger
         private void Btn_edit_por_Click(object sender, EventArgs e)
         {
             Tex_base bas = new Tex_base();
-            bas.Crear_archivo_y_directorio("inf\\inventario\\invent.Txt","id|producto|precio|codigo|cantidad|compra|marca|");
+            bas.Crear_archivo_y_directorio("inf\\inventario\\invent.txt","id|producto|precio|codigo|cantidad|compra|marca|");
             if ("" != Txt_precio.Text && "" != Txt_nombre.Text)
             {
 
-                MessageBox.Show(bas.Editar("inf\\inventario\\invent.Txt", Txt_id_producto.Text + G_parametros[0] + Txt_nombre.Text + G_parametros + Txt_precio.Text + G_parametros + Txt_codigo.Text + G_parametros + Txt_cantidad.Text, Txt_edit_id_producto.Text + G_parametros + Txt_edit_nombre.Text + G_parametros + Txt_edit_precio.Text + G_parametros + Txt_edit_codigo.Text + G_parametros + Txt_edit_cantidad.Text, "0|1|2|3|4"));
+                MessageBox.Show(bas.Editar("inf\\inventario\\invent.txt", Txt_id_producto.Text + G_parametros[0] + Txt_nombre.Text + G_parametros + Txt_precio.Text + G_parametros + Txt_codigo.Text + G_parametros + Txt_cantidad.Text, Txt_edit_id_producto.Text + G_parametros + Txt_edit_nombre.Text + G_parametros + Txt_edit_precio.Text + G_parametros + Txt_edit_codigo.Text + G_parametros + Txt_edit_cantidad.Text, "0|1|2|3|4"));
 
                 Lst_productos.Items.Clear();
 
-                foreach (var item in bas.Leer("inf\\inventario\\invent.Txt", "0|1|2|3|4", "" + G_parametros[0]))
+                foreach (var item in bas.Leer("inf\\inventario\\invent.txt", "0|1|2|3|4", "" + G_parametros[0]))
                 {
                     Lst_productos.Items.Add(item);
                 }

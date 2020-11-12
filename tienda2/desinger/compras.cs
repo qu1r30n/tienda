@@ -27,11 +27,11 @@ namespace tienda2.desinger
             DateTime fecha_hora = DateTime.Now;
             Decimal cantidad = Convert.ToDecimal(Txt_cantidad_gastada.Text);
             string poductos_ya_unidos = Txt_razon.Text + G_parametros[0] + Txt_quien_facturo.Text;
-            string direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyy-MM-dd") + ".Txt",
-                   direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".Txt",
-                   direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".Txt",
-                   direccion4 = "ventas\\g_total_años.Txt",
-                   direccion5 = "ventas\\total_en_juego.Txt";
+            string direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyy-MM-dd") + ".txt",
+                   direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".txt",
+                   direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".txt",
+                   direccion4 = "ventas\\g_total_años.txt",
+                   direccion5 = "ventas\\total_en_juego.txt";
 
             DialogResult boton = MessageBox.Show("seguro que quieres realisar la compra de:   " + Txt_cantidad_gastada.Text + "   ?", "Alerta", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (boton == DialogResult.OK)

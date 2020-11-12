@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace tienda2.clases
 {
@@ -10,6 +6,7 @@ namespace tienda2.clases
     {
         public string Trimend_paresido(string texto, char caracter_separacion = '|')
         {
+            
             string texto_editado = "";
             string[] texto_spliteado = texto.Split(caracter_separacion);
 
@@ -45,6 +42,40 @@ namespace tienda2.clases
 
 
             return texto_editado;
+        }
+
+        public string join_paresido(char caracter_union_filas, string[] texto, string columna_extraer = null, string caracter_union_columnas = null)
+        {
+            string resultado = "";
+            if (columna_extraer!=null)
+            {
+                char caracter_union_columnas_caracter = Convert.ToChar(caracter_union_columnas);
+                for (int i = 0; i < texto.Length; i++)
+                {
+                    string[] columnas_extraer_arreglo = columna_extraer.Split(caracter_union_columnas_caracter);
+                    for (int j = 0; j < columnas_extraer_arreglo.Length; j++)
+                    {
+                        string[] temp;
+                        temp = texto[i].Split(caracter_union_columnas_caracter);
+                        resultado = resultado + temp[Convert.ToInt32(columnas_extraer_arreglo[j])] + caracter_union_columnas;
+
+                    }
+                    resultado = Trimend_paresido(resultado, caracter_union_columnas_caracter);
+                    resultado = resultado  + caracter_union_filas;
+
+                }
+            }
+            else
+            {
+                
+                for (int i = 0; i < texto.Length; i++)
+                {
+                    resultado = resultado + texto[i] + caracter_union_filas;
+                }
+            }
+            resultado=Trimend_paresido(resultado,caracter_union_filas);
+
+            return resultado;
         }
     }
 }

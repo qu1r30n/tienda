@@ -18,14 +18,10 @@ namespace tienda2
         static public string direccion_programa = Application.ExecutablePath.ToString();
         public Form1()
         {
+            
 
             InitializeComponent();
-            
-            //ventana_emergente vent_emergent = new ventana_emergente();
-            //string[] enviar = { "3°id°9", "3°marca°1", "3°ned°5" };
-            //string[] info = { "solo_botones" };
-            //string mensage = vent_emergent.proceso_ventana_emergente(enviar, 0,info);//el uno significa que modificara el inventario
-            
+            Operaciones_archivos op = new Operaciones_archivos();
             
 
             //en esta seccion crearemos los archivos que nesesitaremos para la base
@@ -37,47 +33,56 @@ namespace tienda2
             
             string direccion1, direccion2, direccion3, direccion4, direccion5; //variables de direcciones
 
-            direccion1 = "inf\\inventario\\invent.Txt";
-            direccion2 = "inf\\inventario\\provedores.Txt";
+            direccion1 = "inf\\inventario\\invent.txt";
+            direccion2 = "inf\\inventario\\provedores.txt";
             bas.Crear_archivo_y_directorio(direccion1, "id|producto|precio_de_venta|0|cantidad|costo_compra|marca|grupo|multiusos|cantidad_productos_por_paquete");
             bas.Crear_archivo_y_directorio(direccion2, "provedor|id|");
 
 
-            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\" + fecha_hora.ToString("yyyy-MM-dd") + ".Txt"; // direccion1= ventas/2016/11/dias/28-11-2016.Txt
-            direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".Txt"; // direccion2= ventas/2016/11/11.Txt
-            direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("yyyy") + ".Txt"; // direccion3 = ventas/2016/2016.Txt
-            direccion4 = "ventas\\total_años.Txt"; // no hace falta explicacion
-            direccion5 = "ventas\\total_en_juego.Txt"; // no hace falta explicacion
+            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\" + fecha_hora.ToString("yyyy-MM-dd") + ".txt"; // direccion1= ventas/2016/11/dias/28-11-2016.Txt
+            direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".txt"; // direccion2= ventas/2016/11/11.Txt
+            direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("yyyy") + ".txt"; // direccion3 = ventas/2016/2016.Txt
+            direccion4 = "ventas\\total_años.txt"; // no hace falta explicacion
+            direccion5 = "ventas\\total_en_juego.txt"; // no hace falta explicacion
             bas.Crear_archivo_y_directorio(direccion1);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion2);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion3);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion4);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion5);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
 
-            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyy-MM-dd") + ".Txt"; //aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/11/dias/g_28-11-2016.Txt
-            direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".Txt";//aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/11/g_11.Txt
-            direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".Txt";//aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/g_2016.Txt
-            direccion4 = "ventas\\g_total_años.Txt";//no hace falta explicacion o si?
+            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyy-MM-dd") + ".txt"; //aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/11/dias/g_28-11-2016.Txt
+            direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".txt";//aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/11/g_11.Txt
+            direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".txt";//aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/g_2016.Txt
+            direccion4 = "ventas\\g_total_años.txt";//no hace falta explicacion o si?
             bas.Crear_archivo_y_directorio(direccion1);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion2);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion3);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion4);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
 
-            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\p_" + fecha_hora.ToString("yyyy-MM-dd") + ".Txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/11/dias/p_28-11-2016.Txt
-            direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\p_" + fecha_hora.ToString("MM") + ".Txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/11/p_11.Txt
-            direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\p_" + fecha_hora.ToString("yyyy") + ".Txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/p_2016.Txt
-            direccion4 = "ventas\\p_total_años.Txt";
+            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\p_" + fecha_hora.ToString("yyyy-MM-dd") + ".txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/11/dias/p_28-11-2016.Txt
+            direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\p_" + fecha_hora.ToString("MM") + ".txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/11/p_11.Txt
+            direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\p_" + fecha_hora.ToString("yyyy") + ".txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/p_2016.Txt
+            direccion4 = "ventas\\p_total_años.txt";
             bas.Crear_archivo_y_directorio(direccion1);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion2);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion3);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion4);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
 
-            
+
 
             //
             #endregion
+            //ordenar informacion de mayor a menor
+            //meses dentro de años
+            op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("yyyy") + ".txt", 0, "numero");
+            op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".txt", 0, "numero");
+            op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\p_" + fecha_hora.ToString("yyyy") + ".txt", 0, "numero");
 
-
+            //dias dentro de meses
+            op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".txt", 0, "numero");
+            op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".txt", 0, "numero");
+            op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\p_" + fecha_hora.ToString("MM") + ".txt", 1, "numero");
+            
 
         }
 
@@ -85,7 +90,7 @@ namespace tienda2
         {
             Tex_base adm = new Tex_base();//llamamos a la clase tex_base
             Area_principal area = new Area_principal();//este es el form Area_principal y es al que entrara si pone el usuario y contraseña bien
-            string temp = adm.Seleccionar("inf\\us\\ad.Txt",0,Txt_usuario.Text,"1");//guarda el id del usuario pas y datos en texto
+            string temp = adm.Seleccionar("inf\\us\\ad.txt",0,Txt_usuario.Text,"1");//guarda el id del usuario pas y datos en texto
             if (temp=="")
             {
                 temp=null;
@@ -111,7 +116,7 @@ namespace tienda2
         {
             Tex_base user = new Tex_base();//llamamos a la clase tex_base
             Ventas vent = new Ventas();//este es el form ventas y es al que entrara si pone el usuario y contraseña bien
-            string temp = user.Seleccionar("inf\\us\\user.Txt", 0, Txt_usuario.Text, "1");
+            string temp = user.Seleccionar("inf\\us\\user.txt", 0, Txt_usuario.Text, "1");
             if (temp == "")
             {
                 temp = null;
@@ -136,7 +141,7 @@ namespace tienda2
         {
             Tex_base invitado = new Tex_base();//llamamos a la clase tex_base
             Ventas vent = new Ventas();//este es el form ventas y es al que entrara si pone el usuario y contraseña bien
-            string temp = invitado.Seleccionar("inf\\us\\invitado.Txt", 0, Txt_usuario.Text, "1");
+            string temp = invitado.Seleccionar("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
             if (temp == "")
             {
                 temp = null;

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using tienda2.clases;
 
 namespace tienda2.desinger
 {
@@ -15,6 +16,7 @@ namespace tienda2.desinger
     {
         char[] G_parametros = { '|' };
         List<string> G_productos = new List<string>();
+        string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
 
         public Ventas()
         {
@@ -142,8 +144,8 @@ namespace tienda2.desinger
 
             Confirmar_venta cv = new Confirmar_venta();
 
-            cv.arra_lis.Clear();
-            cv.ids_productos.Clear();
+            cv.codigo_barras_list.Clear();
+            cv.nombre_productos.Clear();
             
             for (int coll = 0; coll < Lst_ventas.Items.Count; coll++)
             {
@@ -151,8 +153,8 @@ namespace tienda2.desinger
                 temporal_s = temporal.Split(G_parametros);
 
 
-                cv.arra_lis.Add("" + temporal_s[0]);
-                cv.ids_productos.Add("" + temporal_s[1]);
+                cv.codigo_barras_list.Add("" + temporal_s[0]);
+                cv.nombre_productos.Add("" + temporal_s[3]);
                 if (temporal_s[0] != "")
                 {
                     total = total + Convert.ToDecimal(temporal_s[2]);
@@ -183,14 +185,14 @@ namespace tienda2.desinger
             
             Tex_base bas = new Tex_base();
             
-            string[] imprimir = bas.Leer("inf\\inventario\\invent.Txt", "1|0|2|3|4|5|6|7|8", "" + G_parametros[0]);
+            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7|8", "" + G_parametros[0]);
             Txt_nom_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir.Length; k++)
             {
                 Txt_nom_producto.AutoCompleteCustomSource.Add("" + imprimir[k]);
             }
 
-            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.Txt", "3|0|2|1|4|5|6|7|8", "" + G_parametros[0]);
+            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7|8", "" + G_parametros[0]);
 
             for (int k = 1; k < imprimir2.Length; k++)
             {
@@ -268,33 +270,62 @@ namespace tienda2.desinger
                     break;
                 }
             }
-            
-            
+
+
             if (bandera == false)
             {
 
                 Tex_base bas = new Tex_base();
-                string[] cantidad_produc = bas.Leer("inf\\inventario\\invent.Txt", "0", "" + G_parametros[0]);//el 0 solo regresa la primera columna que creo es el id
+                string[] info_invent = bas.Leer("inf\\inventario\\invent.txt");
                 string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros);
+                string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);//este regresa los provedores
+                Operaciones_textos op_text = new Operaciones_textos();
+                string provedores_txt = op_text.join_paresido('°', provedores);
+                
                 //------------------------------------------------------------
                 Ventana_emergente vent_emergent = new Ventana_emergente();
-
                 //-------------------------------------------------------------
-                string[] enviar = { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0", "2°codigo de barras°" + espliteado[0], "1°cantidad°1", "1°costo de compra°0", "1°provedor", "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1" };
+                string[] enviar;
+                if (G_prov_anterior==null)
+                {
+                    if (provedores.Length<0)
+                    {
+                        G_prov_anterior = provedores[0];
+                    }
+                    
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0", "2°codigo de barras°" + espliteado[0], "1°cantidad°1", "1°costo de compra°0", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1" };
+                }
+                else
+                {
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0", "2°codigo de barras°" + espliteado[0], "1°cantidad°1", "1°costo de compra°0", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1" };
+                }
+
+                
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
                 string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
+
+
+
                 string[] temp2;
-                string temp3="";
-                if (temp.Length>2)
+                string temp3 = "";
+
+                if (temp.Length >= 3)//por si cierra la ventana no agregue a los text box
                 {
-                    temp2 = new [] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9] };//aqui lo pongo en el orden que deve llevar
+                    G_prov_anterior = temp[6];
+                    temp2 = new[] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9] };//aqui lo pongo en el orden que deve llevar
                     temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
                     G_productos.Add(temp3);//agrego en lista de productos
+                    Txt_buscar_producto.AutoCompleteCustomSource.Add(temp3);//agrego en el autocompletar
+
+                    temp2 = new[] { temp[1], temp[0], temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9] };//aqui lo pongo en el orden que deve llevar
+                    temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
+                    Txt_nom_producto.AutoCompleteCustomSource.Add(temp3);
+
+                    bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", temp[6]);
+
                 }
-                
-                
-                Txt_buscar_producto.AutoCompleteCustomSource.Add(temp3);//agrego en el autocompletar
-                
+
+
                 Txt_buscar_producto.Text = "";
             }
 

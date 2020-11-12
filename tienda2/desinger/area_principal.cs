@@ -12,7 +12,6 @@ namespace tienda2.desinger
 {
     public partial class Area_principal : Form
     {
-
         public Area_principal()
         {
             InitializeComponent();
@@ -21,13 +20,13 @@ namespace tienda2.desinger
 
                 DateTime fecha_hora = DateTime.Now;//guarda la fecha y hora de ahurita
                 Tex_base bas = new Tex_base();//bas es la clase tex_base
-                string direc_tem = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".Txt";//direccion del archivo de hoy
+                string direc_tem = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".txt";//direccion del archivo de hoy
                 cmb_año.Text = fecha_hora.ToString("yyyy");//el combo box del año contendra el año de hoy
                 cmb_mes.Text = fecha_hora.ToString("MM");//el combo box del mes contendra el mes de hoy
 
-                Combo_a("ventas\\total_años.Txt");//extrae de total_años.Txt  todos los años  que se a generedado archivos
-                Combo_m("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("yyyy") + ".Txt");// extrae de el año actual todos los meses que se a generedado archivos
-                Combo_d("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".Txt");// extrae del mes actual todos los dias  que se a generedado archivos
+                Combo_a("ventas\\total_años.txt");//extrae de total_años.Txt  todos los años  que se a generedado archivos
+                Combo_m("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("yyyy") + ".txt");// extrae de el año actual todos los meses que se a generedado archivos
+                Combo_d("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".txt");// extrae del mes actual todos los dias  que se a generedado archivos
 
                 Grafica(direc_tem, fecha_hora.ToString("yyyy-MM"), false);//hace una graficacion de año-mes
 
@@ -41,7 +40,6 @@ namespace tienda2.desinger
             {
                 throw;
             }
-
         }
 
         #region botones y combobox
@@ -128,12 +126,12 @@ namespace tienda2.desinger
 
         private void Cmb_año_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".Txt");
+            Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".txt");
         }
 
         private void Cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".Txt");
+            Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
         }
 
         private void Rdb_ventas_CheckedChanged(object sender, EventArgs e)
@@ -191,7 +189,7 @@ namespace tienda2.desinger
 
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                comp.Direccion_grafica = "ventas\\total_años.Txt";
+                comp.Direccion_grafica = "ventas\\total_años.txt";
                 comp.Palabra_reconocimiento = "total_años";
 
                 if (comparacion == false)
@@ -207,7 +205,7 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_año + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_año + ".txt";
                 comp.Palabra_reconocimiento = c_año;
 
                 if (comparacion == false)
@@ -222,7 +220,7 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt";
                 comp.Palabra_reconocimiento = c_año + "-" + c_mes;
 
                 if (comparacion == false)
@@ -237,7 +235,7 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "-" + c_mes + "-" + c_dia + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
                 comp.Palabra_reconocimiento = c_año + "-" + c_mes + "-" + c_dia;
 
                 if (comparacion == false)
@@ -263,7 +261,7 @@ namespace tienda2.desinger
 
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                comp.Direccion_grafica = "ventas\\p_total_años.Txt";
+                comp.Direccion_grafica = "ventas\\p_total_años.txt";
                 comp.Palabra_reconocimiento = "p_total_años";
                 if (comparacion == false)
                 {
@@ -278,7 +276,7 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\p_" + c_año + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\p_" + c_año + ".txt";
                 comp.Palabra_reconocimiento = "p_" + c_año;
                 if (comparacion == false)
                 {
@@ -293,7 +291,7 @@ namespace tienda2.desinger
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
 
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".txt";
                 comp.Palabra_reconocimiento = "p_" + c_año + "-" + c_mes;
 
                 if (comparacion == false)
@@ -308,7 +306,7 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_año + "-" + c_mes + "-" + c_dia + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
                 comp.Palabra_reconocimiento = "p_" + c_año + "-" + c_mes + "-" + c_dia;
 
                 if (comparacion == false)
@@ -335,7 +333,7 @@ namespace tienda2.desinger
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
 
-                comp.Direccion_grafica = "ventas\\g_total_años.Txt";
+                comp.Direccion_grafica = "ventas\\g_total_años.txt";
                 comp.Palabra_reconocimiento = "g_total_años";
 
                 if (comparacion == false)
@@ -352,7 +350,7 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\g_" + c_año + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\g_" + c_año + ".txt";
                 comp.Palabra_reconocimiento = "g_" + c_año;
                 if (comparacion == false)
                 {
@@ -369,7 +367,7 @@ namespace tienda2.desinger
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
 
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt";
                 comp.Palabra_reconocimiento = "g_" + c_año + "-" + c_mes;
                 if (comparacion == false)
                 {
@@ -385,7 +383,7 @@ namespace tienda2.desinger
             {
 
 
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "-" + c_mes + "-" + c_dia + ".Txt";
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
                 comp.Palabra_reconocimiento = "g_" + c_año + "-" + c_mes + "-" + c_dia;
                 if (comparacion == false)
                 {
@@ -487,13 +485,13 @@ namespace tienda2.desinger
 
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                Grafica_ganancias("ventas\\total_años.Txt", "ventas\\g_total_años.Txt", "total_venta", "total_gasto", comparacion);
+                Grafica_ganancias("ventas\\total_años.txt", "ventas\\g_total_años.txt", "total_venta", "total_gasto", comparacion);
             }
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                direc = "ventas\\" + c_año + "\\" + c_año + ".Txt";
-                direc2 = "ventas\\" + c_año + "\\g_" + c_año + ".Txt";
+                direc = "ventas\\" + c_año + "\\" + c_año + ".txt";
+                direc2 = "ventas\\" + c_año + "\\g_" + c_año + ".txt";
                 nom_serie = c_año;
                 nom_serie2 = "g_" + c_año;
                 Grafica_ganancias(direc, direc2, nom_serie, nom_serie2, comparacion);
@@ -501,8 +499,8 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".Txt";
-                direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".Txt";
+                direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt";
+                direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt";
                 nom_serie = c_año + "-" + c_mes;
                 nom_serie2 = "g_" + c_año + "-" + c_mes;
                 Grafica_ganancias(direc, direc2, nom_serie, nom_serie2, comparacion);
@@ -510,8 +508,8 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "-" + c_mes + "-" + c_dia + ".Txt";
-                direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "-" + c_mes + "-" + c_dia + ".Txt";
+                direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
+                direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
                 nom_serie = c_año + "-" + c_mes + "-" + c_dia;
                 nom_serie2 = "g_" + c_año + "-" + c_mes + "-" + c_dia;
                 Grafica_horas_ganancias(direc, direc2, nom_serie, nom_serie2, 0, comparacion);
@@ -630,8 +628,8 @@ namespace tienda2.desinger
             for (int i = 0; i < historial.Length; i++)
             {
                 esplitedo = historial[i].Split(caracter_de_separacion);
-                chrt_ventas.Series[0].Points.AddXY(esplitedo[0], esplitedo[1]);
-                Lst_ventas.Items.Add(esplitedo[0] + caracter_de_separacion + esplitedo[1]);
+                chrt_ventas.Series[0].Points.AddXY(esplitedo[2], esplitedo[1]);
+                Lst_ventas.Items.Add(esplitedo[0] + caracter_de_separacion + esplitedo[1] + caracter_de_separacion + esplitedo[2]);
             }
             Txt_total.Text = "";
         }
@@ -961,6 +959,13 @@ namespace tienda2.desinger
             cam_precio.Show();
         }
 
-        
+        private void Lst_ventas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Lst_ventas.SelectedItem != null)
+            {
+
+                Txt_total.Text = Lst_ventas.SelectedItem.ToString(); 
+            }
+        }
     }
 }

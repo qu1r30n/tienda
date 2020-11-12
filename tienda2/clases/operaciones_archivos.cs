@@ -118,6 +118,74 @@ namespace tienda2
             File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
+        public void Actualisar_resumen_venta_productos(string direccion_archivo,string codigo_barras ,decimal cantidad,string nombre_producto=null)
+        {
+            char[] parametros2 = { '/', '\\' };
+            
+            bool bol=false;
+            string[] G_linea,linea;
+            G_linea = direccion_archivo.Split(parametros2);//esplitea la direccion
+            G_temp = G_linea[0];//temp es igual al primer directorio
+            bas.Crear_archivo_y_directorio(direccion_archivo);
+            for (int i = 1; i < G_linea.Length; i++)//checa si es el ultimo directorio 
+            {
+                if (i == G_linea.Length - 1)//si llego al archivo le va a colocar un temp_ y el nombre del archivo
+                {
+                    G_linea[i] = "temp_" + G_linea[i];
+                }
+                G_temp = G_temp + "\\" + G_linea[i];//le pone la barrita para pasarselo a la funcion de crear achivos
+            }
+            bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
+
+            StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
+            StreamWriter sw = new StreamWriter(G_temp,true);//abrimos el archivo a escribir
+            try
+            {
+                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+                {
+                    G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
+                    //por aqui empesamos para poderlo comparar
+                    if (G_palabra != null)
+                    {
+                        linea = G_palabra.Split(G_parametros);
+
+                        if (linea[0] != codigo_barras)
+                        {
+                            string escribir = linea[0] + G_parametros[0] + linea[1] + G_parametros[0] + linea[2];
+                            sw.WriteLine(escribir);
+                        }
+                        else
+                        {
+                            string escribir = codigo_barras + G_parametros[0] + (cantidad + Convert.ToDecimal(linea[1])) + G_parametros[0] + nombre_producto;
+                            sw.WriteLine(escribir);
+                            bol = true;
+
+                        }
+                    }
+                }
+                if (bol == false)
+                {
+                    string escribir = codigo_barras + G_parametros[0] + cantidad + G_parametros[0] + nombre_producto;
+                    sw.WriteLine(escribir);
+                }
+            }
+            catch (Exception)
+            {
+                string escribir = codigo_barras + G_parametros[0] + cantidad + G_parametros[0] + nombre_producto;
+                sw.WriteLine(escribir);
+
+            }
+            
+            sr.Close();
+            sr.Dispose();
+            sw.Close();
+            sw.Dispose();
+            Thread.Sleep(20);
+            File.Delete(direccion_archivo);//borramos el archivo original
+            Thread.Sleep(20);
+            File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+        }
+
         public void Actualisar_resumen_compras(string direccion_archivo, string fecha, decimal precio)
         {
             char[] parametros2 = { '/', '\\' };
@@ -625,6 +693,54 @@ namespace tienda2
             File.Delete(direccion_archivo);//borramos el archivo original
             Thread.Sleep(1);
             File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+        }
+
+        public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo, char caracter_separacion = '|')
+        {
+            Tex_base bas = new Tex_base();
+            string[] lineas = bas.Leer(direccion_archivo);
+
+            if (tipo == "numero")
+            {
+                string temporal_apoyo;
+                for (int i = 0; i < lineas.Length; i++)
+                {
+                    string[] num1 = lineas[i].Split(caracter_separacion);
+                    decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
+                    for (int j = i + 1; j < lineas.Length; j++)
+                    {
+                        string[] num2 = lineas[j].Split(caracter_separacion);
+                        decimal num2_decimal = Convert.ToDecimal(num2[columna_comparar]);
+                        if (num1_decimal < num2_decimal)
+                        {
+                            temporal_apoyo = lineas[j];
+                            lineas[j] = lineas[i];
+                            lineas[i] = temporal_apoyo;
+                        }
+                        else if (num1_decimal >= num2_decimal)
+                        {
+                            //no_hacer_nada
+                        }
+                        else
+                        {
+                            //error
+                        }
+                    }//for linea_de_abajo
+                }//for linea_de_arriba
+            }//if tipo
+
+
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+            for (int k = 0; k < lineas.Length; k++)
+            {
+                sw.WriteLine(lineas[k]);
+
+            }
+            sw.Close();
+            File.Delete(direccion_archivo);//borramos el archivo original
+            File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+            return lineas;
         }
 
     }

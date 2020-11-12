@@ -238,6 +238,7 @@
             this.Lst_ventas.Name = "Lst_ventas";
             this.Lst_ventas.Size = new System.Drawing.Size(420, 303);
             this.Lst_ventas.TabIndex = 35;
+            this.Lst_ventas.SelectedIndexChanged += new System.EventHandler(this.Lst_ventas_SelectedIndexChanged);
             // 
             // Btn_empleados
             // 

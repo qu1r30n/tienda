@@ -38,11 +38,11 @@ namespace tienda2.desinger
                 cmb_año.Text = fecha_hora.ToString("yyyy");
                 cmb_mes.Text = fecha_hora.ToString("MM");
 
-                Combo_a("ventas\\total_años.Txt");
-                Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".Txt");
-                Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".Txt");
+                Combo_a("ventas\\total_años.txt");
+                Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".txt");
+                Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
 
-                //direc_tem = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".Txt";
+                //direc_tem = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".txt";
 
                 if (cmb_año.Items.Count == 0)
                 {
@@ -118,12 +118,12 @@ namespace tienda2.desinger
 
         private void Cmb_año_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".Txt");
+            Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".txt");
         }
 
         private void Cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".Txt");
+            Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
         }
 
         public void Combo_m(string direccion_archivo)
@@ -166,20 +166,20 @@ namespace tienda2.desinger
             _parent.Lst_ventas.Items.Clear();
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\total_años.Txt", Palabra_reconocimiento, "total_años", comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\total_años.txt", Palabra_reconocimiento, "total_años", comparacion);
             }
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_año + ".Txt", Palabra_reconocimiento, c_año, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_año + ".txt", Palabra_reconocimiento, c_año, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".Txt", Palabra_reconocimiento, c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt", Palabra_reconocimiento, c_año + "-" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_dia + "-" + c_mes + "-" + c_año + ".Txt", Palabra_reconocimiento, c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_dia + "-" + c_mes + "-" + c_año + ".txt", Palabra_reconocimiento, c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
             }
             else
             {
@@ -192,20 +192,20 @@ namespace tienda2.desinger
             _parent.Lst_ventas.Items.Clear();
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\p_total_años.Txt", Palabra_reconocimiento, "p_total_años", comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\p_total_años.txt", Palabra_reconocimiento, "p_total_años", comparacion);
             }
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\p_" + c_año + ".Txt", Palabra_reconocimiento, "p_" + c_año, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\p_" + c_año + ".txt", Palabra_reconocimiento, "p_" + c_año, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".Txt", Palabra_reconocimiento, "p_" + c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".txt", Palabra_reconocimiento, "p_" + c_año + "-" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_dia + "-" + c_mes + "-" + c_año + ".Txt", Palabra_reconocimiento, "p_" + c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_dia + "-" + c_mes + "-" + c_año + ".txt", Palabra_reconocimiento, "p_" + c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
             }
             else
             {
@@ -218,20 +218,20 @@ namespace tienda2.desinger
             _parent.Lst_ventas.Items.Clear();
             if (c_año == "" && c_mes == "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\g_total_años.Txt", Palabra_reconocimiento, "g_total_años", comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\g_total_años.txt", Palabra_reconocimiento, "g_total_años", comparacion);
             }
 
             else if (c_año != "" && c_mes == "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\g_" + c_año + ".Txt", Palabra_reconocimiento, "g_" + c_año, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\g_" + c_año + ".txt", Palabra_reconocimiento, "g_" + c_año, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".Txt", Palabra_reconocimiento, "g_" + c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt", Palabra_reconocimiento, "g_" + c_año + "-" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_dia + "-" + c_mes + "-" + c_año + ".Txt", Palabra_reconocimiento, "g_" + c_año + "-" + c_mes + "-" + c_dia, 1, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_dia + "-" + c_mes + "-" + c_año + ".txt", Palabra_reconocimiento, "g_" + c_año + "-" + c_mes + "-" + c_dia, 1, comparacion);
             }
             else
             {

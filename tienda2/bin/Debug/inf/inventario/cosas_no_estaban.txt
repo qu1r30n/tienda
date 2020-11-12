@@ -1,0 +1,15 @@
+movimiento origen: 1|1287|sda|0|asd|1|0|marinela|||1|
+movimiento origen: 1|1287|asd|0|asd|1|0|jp|||1|
+movimiento origen: 1|1287|sda|0|asd|1|0|jp|||1|
+movimiento origen: 1|1288|dddd|0|asdj|1|0|pppd|||1|
+movimiento origen: 0|100|1|10|
+movimiento origen: 0|100|1|10|
+movimiento origen: 1|1287|sda|0|asd|1|0|elim|||1|
+movimiento origen: 1|1287|product|0|asdf|1|0|provedor|||1|
+movimiento origen: 1|1287|produc|0|asd|1|0|provedor|||1|
+movimiento origen: 1|1287|sda|0|asd|1|0|provedor|||1|
+movimiento origen: 1|1287|sda|0|asd|1|0|provedor|||1|
+movimiento origen: 1|1288|asd|0|asdfr|1|0|add|||1|
+movimiento origen: 1|1287|sda|0|asd|1|0|prov|||1|
+movimiento origen: 1|1287|dsa|0|asd|1|0|provedor|||1|
+movimiento origen: 1|1288|asd|0|lm|1|0|marinela|||1|

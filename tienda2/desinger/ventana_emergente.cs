@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using tienda2.clases;
 
@@ -60,6 +54,7 @@ namespace tienda2.desinger
                     bandera3 = "1";
                 }
             }
+
             if (bandera3 == "1" && bandera1 == "0" && bandera2 == "0")
             {
                 info [0]="solo_botones" ;
@@ -75,7 +70,7 @@ namespace tienda2.desinger
                 for (int i = 0; i < nom_datos_recolectados.Length; i++)
                 {
                     string[] espliteado = nom_datos_recolectados[i].Split(caracter_spliteo);
-                    
+
                     if (espliteado[0] == "1")//labels y textbox
                     {
                         Label lb = new Label();
@@ -120,12 +115,12 @@ namespace tienda2.desinger
                         this.Controls.Add(lb);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
                         this.Controls.Add(Txt);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
                         acumleft = acumleft + x;
-                        
+
 
 
                     }
 
-                    else if (espliteado[0] == "2")//labels y textbox
+                    else if (espliteado[0] == "2")//labels
                     {
                         Label lb = new Label();
                         Label Lbl2 = new Label();
@@ -149,7 +144,7 @@ namespace tienda2.desinger
 
                             Lbl2.Top = y + separacion_y;
                             Lbl2.Left = acumleft;
-                            
+
                         }
 
                         contador_en_horisontal_Txtbox = contador_en_horisontal_Txtbox + 1;
@@ -205,12 +200,12 @@ namespace tienda2.desinger
 
                         this.Controls.Add(Btn_nuevoboton);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
                         acumleft = acumleft + x;
-                        
+
                         this.Controls.Add(Btn_nuevoboton);
 
-                        string parametros = i+"°"+ espliteado[2];
+                        string parametros = i + "°" + espliteado[2];
                         //Btn_nuevoboton.Click += new EventHandler(nuevoBoton_Click); 
-                        if (info[0]== "solo_botones")
+                        if (info[0] == "solo_botones")
                         {
                             Btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola = NuevoBoton_Click(sender1, e1, parametros, info));
 
@@ -219,6 +214,67 @@ namespace tienda2.desinger
                         {
                             Btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola = NuevoBoton_Click(sender1, e1, parametros));
                         }
+                    }
+
+                    else if (espliteado[0] == "4")
+                    {
+
+                        Label lb = new Label();
+                        ComboBox cmb = new ComboBox();
+                        if (contador_en_horisontal_Txtbox <= 4)
+                        {
+                            lb.Top = y;
+                            lb.Left = acumleft;
+
+                            cmb.Top = y + separacion_y;
+                            cmb.Left = acumleft;
+
+                        }
+                        else
+                        {
+                            contador_en_horisontal_Txtbox = 0;
+                            y = y + 40;
+                            acumleft = 0;
+                            lb.Top = y;
+                            lb.Left = acumleft;
+
+                            cmb.Top = y + separacion_y;
+                            cmb.Left = acumleft;
+                        }
+
+                        contador_en_horisontal_Txtbox = contador_en_horisontal_Txtbox + 1;
+
+                        if (espliteado.Length >= 3)
+                        {
+                            cmb.Text = espliteado[2];
+                            for (int j = 2; j < espliteado.Length; j++)
+                            {
+                                if (espliteado[2]!= espliteado[j])
+                                {
+                                    cmb.Items.Add(espliteado[j]);
+                                    
+                                }
+                                else
+                                {
+                                    espliteado[2] = "";//este sirve para que solo elimine una repeticion por que son 2 las que crea
+                                }
+                                
+                            }
+
+                        }
+
+                        nom_datos_recolectados[i] = espliteado[1];
+
+                        lb.Text = nom_datos_recolectados[i];
+
+                        cmb.Width = ancho;
+                        cmb.Height = alto;
+
+                        lb.AutoSize = true;
+                        this.Controls.Add(lb);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
+                        this.Controls.Add(cmb);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
+                        acumleft = acumleft + x;
+
                     }
 
                 }
@@ -307,6 +363,14 @@ namespace tienda2.desinger
                         k = i;
                         break;
                     }
+                    else if (obj is ComboBox && arraytextbox[i] == null)
+                    
+                    {
+                        ComboBox temp = (ComboBox)obj;
+                        arraytextbox[i] = temp.Text;
+                        k = i;
+                        break;
+                    }
                 }
                 
             }
@@ -322,27 +386,27 @@ namespace tienda2.desinger
             op_tex.Trimend_paresido(temp2, G_parametros[0]);
 
 
-            bas.Crear_archivo_y_directorio("inf\\inventario\\cosas_no_estaban.Txt");
+            bas.Crear_archivo_y_directorio("inf\\inventario\\cosas_no_estaban.txt");
             
             switch (modificara)
             {
                 case 0:
-                    bas.Agregar("inf\\inventario\\cosas_no_estaban.Txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
+                    bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
                     break;
                 case 1:
-                    bas.Agregar("inf\\inventario\\cosas_no_estaban.Txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
-                    bas.Agregar("inf\\inventario\\invent.Txt", temp2);
+                    bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
+                    bas.Agregar("inf\\inventario\\invent.txt", temp2);
                     break;
                 case 2:
-                    bas.Agregar("inf\\inventario\\cosas_no_estaban.Txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
+                    bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
 
-                    op.Actualisar_costo_compra("inf\\inventario\\invent.Txt", infoextra[0], Convert.ToDecimal(arraytextbox[0]));
+                    op.Actualisar_costo_compra("inf\\inventario\\invent.txt", infoextra[0], Convert.ToDecimal(arraytextbox[0]));
                     break;
                 case 3:
-                    bas.Agregar("inf\\inventario\\cosas_no_estaban.Txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
+                    bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
                     break;
                 default:
-                    bas.Agregar("inf\\inventario\\cosas_no_estaban.Txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
+                    bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
                     break;
             }
             
@@ -384,7 +448,7 @@ namespace tienda2.desinger
             return G_datos_de_boton;
         }
 
-        public static string InputBox(string title = "aqui tu titulo", string promptText = "aqui la pregunta", string value = "aqui el valor")
+        public static string txt_entrada(string title = "aqui tu titulo", string promptText = "aqui la pregunta", string value = "aqui el valor")
         {
             Form form = new Form();
             Label label = new Label();

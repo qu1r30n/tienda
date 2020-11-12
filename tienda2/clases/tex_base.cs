@@ -235,7 +235,7 @@ namespace tienda2
         {
 
             StreamReader sr = new StreamReader(direccion_archivo);
-            string dir_tem = direccion_archivo.Replace(".Txt", "_tem.Txt");
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
             StreamWriter sw = new StreamWriter(dir_tem, true);
             string exito_o_fallo;
 
@@ -292,7 +292,7 @@ namespace tienda2
         public string Editar_una_columna(string direccion_archivo, int columna, string info_editar, char caracter_separacion = '|')
         {
             StreamReader sr = new StreamReader(direccion_archivo);
-            string dir_tem = direccion_archivo.Replace(".Txt", "_tem.Txt");
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
             StreamWriter sw = new StreamWriter(dir_tem, true);
             string exito_o_fallo;
 
@@ -333,7 +333,7 @@ namespace tienda2
 
         public void Agregar(string direccion_archivos, string agregando)
         {
-            StreamWriter sw = new StreamWriter(direccion_archivos, true);
+            StreamWriter sw = new StreamWriter(direccion_archivos,true);
             sw.WriteLine(agregando);
             sw.Close();
 
@@ -475,6 +475,7 @@ namespace tienda2
                 }
                 return t;
             }
+            
             sr.Close();
             string[] t2 = new string[linea.Count];
             for (int mnm = 0; mnm < linea.Count; mnm++)
@@ -488,9 +489,8 @@ namespace tienda2
         {
             bool decicion = false;
             string result = "";
-            string[] cantidad = Leer_columnas(direccion_archivo);
             string[] col_spli = nom_columnas.Split(G_parametros);
-            Leer_columnas(direccion_archivo);
+            string[] cantidad = Leer_columnas(direccion_archivo);
 
             for (int z = 0; z < col_spli.Length; z++)
             {
@@ -543,12 +543,12 @@ namespace tienda2
             return result;//editar
         }
 
-        public string Si_existe_suma_sino_agrega(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string info_extra = "", char caracter_separacion = '|')
+        public string Si_existe_suma_sino_desde_el_inventario_agrega(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string info_extra = "", char caracter_separacion = '|')
         {
             Crear_archivo_y_directorio(direccion_archivo);
             bool bandera = false;
             StreamReader sr = new StreamReader(direccion_archivo);
-            string dir_tem = direccion_archivo.Replace(".Txt", "_tem.Txt");
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
             StreamWriter sw = new StreamWriter(dir_tem, true);
             string exito_o_fallo;
 
@@ -597,6 +597,7 @@ namespace tienda2
                                 }
 
                             }
+
                             else
                             {
                                 string[] columnas_editar = numero_columnas_editar.Split(caracter_separacion);
@@ -631,7 +632,7 @@ namespace tienda2
                 if (bandera == false)
                 {
 
-                    string temp = Seleccionar("inf\\inventario\\invent.Txt", 3, comparar, "1|3|0|6|8");
+                    string temp = Seleccionar("inf\\inventario\\invent.txt", 3, comparar, "1|3|0|6|8");
                     string[] texto = temp.Split('°');
 
                     DateTime fecha_y_hora = DateTime.Now;
@@ -659,6 +660,63 @@ namespace tienda2
 
 
                     Agregar(direccion_archivo, texto[0]);
+                }
+
+
+            }
+            catch (Exception error)
+            {
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = "2)error:" + error;
+                File.Delete(dir_tem);//borramos el archivo temporal
+            }
+            return exito_o_fallo;
+        }
+        
+            public string si_no_existe_agega_comparacion(string direccion_archivo, string comparar, char caracter_separacion = '|')
+            {
+            Crear_archivo_y_directorio(direccion_archivo);
+            bool bandera = false;
+            StreamReader sr = new StreamReader(direccion_archivo);
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+            string exito_o_fallo;
+            int num_column_comp = 0;
+
+            try
+            {
+
+                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+                {
+                    string linea = sr.ReadLine();//leemos linea y lo guardamos en linea
+                    if (linea != null)
+                    {
+                        
+
+                        if (linea == comparar)
+                        {
+                            bandera = true;
+                            sw.WriteLine(linea);
+                        }
+                        else
+                        {
+                            sw.WriteLine(linea);
+                        }
+                    }
+                    num_column_comp++;
+                }
+                num_column_comp = 0;
+                
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = "1)exito";
+                File.Delete(direccion_archivo);//borramos el archivo original
+                File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+                
+                if (bandera == false)
+                {
+                    Agregar(direccion_archivo, comparar);
                 }
 
 
@@ -716,7 +774,7 @@ namespace tienda2
         {
             Crear_archivo_y_directorio(direccion_archivo);
             StreamReader sr = new StreamReader(direccion_archivo);
-            string dir_tem = direccion_archivo.Replace(".Txt", "_tem.Txt");
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
             StreamWriter sw = new StreamWriter(dir_tem, true);
             string exito_o_fallo;
 

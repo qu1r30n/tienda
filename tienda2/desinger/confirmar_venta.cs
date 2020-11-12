@@ -15,8 +15,8 @@ namespace tienda2.desinger
     public partial class Confirmar_venta : Form
     {
         Operaciones_textos op_text = new Operaciones_textos();
-        public ArrayList ids_productos = new ArrayList();
-        public ArrayList arra_lis = new ArrayList();
+        public ArrayList nombre_productos = new ArrayList();
+        public ArrayList codigo_barras_list = new ArrayList();
         public ArrayList info_extra = new ArrayList();
         public ArrayList cantidad = new ArrayList();
         
@@ -35,18 +35,21 @@ namespace tienda2.desinger
             Tex_base bas = new Tex_base();
             string temp="";
             string cantidades_de_productos="";
-            for (int i = 0; i < arra_lis.Count; i++)
+            for (int i = 0; i < codigo_barras_list.Count; i++)
             {
-                temp = temp + arra_lis[i] + G_parametros[0];
+                temp = temp + codigo_barras_list[i] + G_parametros[0];
                 cantidades_de_productos = cantidades_de_productos + cantidad[i] + G_parametros[0];
-                bas.Crear_archivo_y_directorio(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyy-MM-dd") + "_vendidos.Txt");
-                bas.Si_existe_suma_sino_agrega(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyy-MM-dd") + "_vendidos.Txt", 2, "" + arra_lis[i], "0","1");
+                
+
+                bas.Crear_archivo_y_directorio(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyy-MM-dd") + "_vendidos.txt");
+                bas.Si_existe_suma_sino_desde_el_inventario_agrega(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyy-MM-dd") + "_vendidos.txt", 2, "" + codigo_barras_list[i], "0","1");
             }
             temp = op_text.Trimend_paresido(temp, G_parametros[0]);
             cantidades_de_productos = op_text.Trimend_paresido(cantidades_de_productos, G_parametros[0]);
 
             string[] codigos_Barras = temp.Split(G_parametros);
             string[] cant_productos = cantidades_de_productos.Split(G_parametros);
+
             Modelo_compra_venta mod_com_vent = new Modelo_compra_venta();
             mod_com_vent.Modelo_venta(codigos_Barras, cant_productos);
             
