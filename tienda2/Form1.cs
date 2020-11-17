@@ -68,8 +68,9 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(direccion3);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion4);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
 
-
-
+            direccion1 = "inf\\inventario\\img\\";
+            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+            
             //
             #endregion
             //ordenar informacion de mayor a menor

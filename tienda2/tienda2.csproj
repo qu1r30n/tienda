@@ -8,14 +8,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>tienda2</RootNamespace>
     <AssemblyName>tienda2</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarcodeStandard, Version=2.2.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.2.6\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -81,17 +85,17 @@
     <Compile Include="desinger\Confirmar_venta.Designer.cs">
       <DependentUpon>Confirmar_venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="desinger\crear_codigo_barras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\crear_codigo_barras.Designer.cs">
+      <DependentUpon>crear_codigo_barras.cs</DependentUpon>
+    </Compile>
     <Compile Include="desinger\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="desinger\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="desinger\Inventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="desinger\Inventario.Designer.cs">
-      <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\Pedidos.cs">
       <SubType>Form</SubType>
@@ -143,11 +147,11 @@
     <EmbeddedResource Include="desinger\Confirmar_venta.resx">
       <DependentUpon>Confirmar_venta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="desinger\crear_codigo_barras.resx">
+      <DependentUpon>crear_codigo_barras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="desinger\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Inventario.resx">
-      <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
@@ -172,8 +176,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

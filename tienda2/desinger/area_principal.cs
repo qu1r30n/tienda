@@ -48,8 +48,8 @@ namespace tienda2.desinger
             Lbl_ganancia.Visible = false;//pone invisible el label de ganancia
             Txt_ganancia.Visible = false;//pone invisible el textbox de ganancia
 
-            Inventario invent = new Inventario();//invent sera el form inventario
-            invent.Show();//muestra el form inventario
+            crear_codigo_barras crear_barras = new crear_codigo_barras();//invent sera el form inventario
+            crear_barras.Show();//muestra el form inventario
         }
 
         private void Btn_nueva_venta_Click(object sender, EventArgs e)
