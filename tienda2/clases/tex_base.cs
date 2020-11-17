@@ -20,13 +20,13 @@ namespace tienda2
         {
             char[] parametro2 = { '/', '\\' };//estos seran los parametros de separacion de el split
             G_entrando = "";
-            string[] path = direccion_archivo.Split(parametro2);//spliteamos la direccion
+            string[] direccion_espliteada = direccion_archivo.Split(parametro2);//spliteamos la direccion
 
-            for (int i = 0; i < path.Length; i++)//pasamos por todas las los directorios y archivo
+            for (int i = 0; i < direccion_espliteada.Length; i++)//pasamos por todas las los directorios y archivo
             {
-                if (i < path.Length - 1)//el path muestra 6 palabras que fueron espliteadas se le resta uno por que los arreglos empiesan desde 0 y solo se le pone el menor que por que la ultima palabra es el archivo
+                if (i < direccion_espliteada.Length - 1)//el path muestra 6 palabras que fueron espliteadas se le resta uno por que los arreglos empiesan desde 0 y solo se le pone el menor que por que la ultima palabra es el archivo
                 {
-                    G_entrando = G_entrando + path[i] + "\\"; // va acumulando los directorios a los que va a entrar ejemplo: ventas\\   ventas\\2016    ventas\\2016\\        ventas\\2016\\11      ventas\\2016\\11\\dias\\  y no muestra el ultimo por que es el archivo y en el if  le dijimos que lo dejara en el penultimo
+                    G_entrando = G_entrando + direccion_espliteada[i] + "\\"; // va acumulando los directorios a los que va a entrar ejemplo: ventas\\   ventas\\2016    ventas\\2016\\        ventas\\2016\\11      ventas\\2016\\11\\dias\\  y no muestra el ultimo por que es el archivo y en el if  le dijimos que lo dejara en el penultimo
                     if (!Directory.Exists(G_entrando))//si el directorio no existe entrara y lo creara
                     {
 
@@ -35,28 +35,34 @@ namespace tienda2
                     }
                 }
             }
+            
 
-            if (!File.Exists(direccion_archivo))//si el archivo no existe entra y lo crea
+
+            if (direccion_espliteada[direccion_espliteada.Length - 1] != "")
             {
-                FileStream fs0 = new FileStream(direccion_archivo, FileMode.CreateNew);//crea una variable tipo filestream "fs0"  y crea el archivo
-                fs0.Close();//cierra fs0 para que se pueda usar despues
-
-                
-
-                if (valor_inicial != null)// si al llamar a la funcion  le pusiste valor_inicial las escribe //se utilisa para que sea como un titulo o un eslogan pero lo utilisaremos en este prog
+                if (!File.Exists(direccion_archivo))//si el archivo no existe entra y lo crea
                 {
-                    Agregar(direccion_archivo,valor_inicial);//escribe aqui el valor inicial si es que lo pusiste
+                    FileStream fs0 = new FileStream(direccion_archivo, FileMode.CreateNew);//crea una variable tipo filestream "fs0"  y crea el archivo
+                    fs0.Close();//cierra fs0 para que se pueda usar despues
+
+
+
+                    if (valor_inicial != null)// si al llamar a la funcion  le pusiste valor_inicial las escribe //se utilisa para que sea como un titulo o un eslogan pero lo utilisaremos en este prog
+                    {
+                        Agregar(direccion_archivo, valor_inicial);//escribe aqui el valor inicial si es que lo pusiste
+                    }
+
+                    if (columnas != null)//si al llamar a la funcion le pusistes columnas a agregar//recuerda que se separan por comas
+                    {
+
+                        string columnas_unidas = string.Join("" + G_parametros[0], columnas);
+                        Agregar(direccion_archivo, columnas_unidas);//agrega las columnas
+
+                    }
+
                 }
-
-                if (columnas != null)//si al llamar a la funcion le pusistes columnas a agregar//recuerda que se separan por comas
-                {
-
-                    string columnas_unidas = string.Join(""+G_parametros[0], columnas);
-                    Agregar(direccion_archivo, columnas_unidas);//agrega las columnas
-                    
-                }
-
             }
+            
         }
 
 
