@@ -57,8 +57,8 @@
             this.Lbl_id = new System.Windows.Forms.Label();
             this.Btn_cargar_pedido = new System.Windows.Forms.Button();
             this.Lbl_cuenta = new System.Windows.Forms.Label();
-            this.Txt_provedor = new System.Windows.Forms.TextBox();
             this.Lbl_nom_product_list = new System.Windows.Forms.Label();
+            this.cmb_provedor = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Txt_buscar_producto
@@ -329,15 +329,6 @@
             this.Lbl_cuenta.TabIndex = 41;
             this.Lbl_cuenta.Text = "$";
             // 
-            // Txt_provedor
-            // 
-            this.Txt_provedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.Txt_provedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.Txt_provedor.Location = new System.Drawing.Point(810, 18);
-            this.Txt_provedor.Name = "Txt_provedor";
-            this.Txt_provedor.Size = new System.Drawing.Size(94, 20);
-            this.Txt_provedor.TabIndex = 4;
-            // 
             // Lbl_nom_product_list
             // 
             this.Lbl_nom_product_list.AutoSize = true;
@@ -347,11 +338,20 @@
             this.Lbl_nom_product_list.TabIndex = 42;
             this.Lbl_nom_product_list.Text = "nombre_precio_produc_seleccionado";
             // 
+            // cmb_provedor
+            // 
+            this.cmb_provedor.FormattingEnabled = true;
+            this.cmb_provedor.Location = new System.Drawing.Point(810, 18);
+            this.cmb_provedor.Name = "cmb_provedor";
+            this.cmb_provedor.Size = new System.Drawing.Size(117, 21);
+            this.cmb_provedor.TabIndex = 43;
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 305);
+            this.Controls.Add(this.cmb_provedor);
             this.Controls.Add(this.Lbl_nom_product_list);
             this.Controls.Add(this.Lbl_cuenta);
             this.Controls.Add(this.Btn_cargar_pedido);
@@ -369,7 +369,6 @@
             this.Controls.Add(this.Txt_nom_producto);
             this.Controls.Add(this.Lbl_nom_producto_buscar);
             this.Controls.Add(this.Lbl_provedor);
-            this.Controls.Add(this.Txt_provedor);
             this.Controls.Add(this.Txt_buscar_producto);
             this.Controls.Add(this.Lbl_nombre_producto);
             this.Controls.Add(this.Lbl_producto);
@@ -420,7 +419,7 @@
         private System.Windows.Forms.Label Lbl_id;
         private System.Windows.Forms.Button Btn_cargar_pedido;
         private System.Windows.Forms.Label Lbl_cuenta;
-        private System.Windows.Forms.TextBox Txt_provedor;
         private System.Windows.Forms.Label Lbl_nom_product_list;
+        private System.Windows.Forms.ComboBox cmb_provedor;
     }
 }

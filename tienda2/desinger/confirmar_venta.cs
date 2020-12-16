@@ -42,7 +42,7 @@ namespace tienda2.desinger
                 
 
                 bas.Crear_archivo_y_directorio(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyy-MM-dd") + "_vendidos.txt");
-                bas.Si_existe_suma_sino_desde_el_inventario_agrega(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyy-MM-dd") + "_vendidos.txt", 2, "" + codigo_barras_list[i], "0","1");
+                bas.Si_existe_suma_sino_desde_el_inventario_agrega(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyy-MM-dd") + "_vendidos.txt", 2, "" + codigo_barras_list[i], "0", ""+cantidad[i]);
             }
             temp = op_text.Trimend_paresido(temp, G_parametros[0]);
             cantidades_de_productos = op_text.Trimend_paresido(cantidades_de_productos, G_parametros[0]);

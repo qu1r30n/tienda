@@ -696,9 +696,9 @@ namespace tienda2
                     string linea = sr.ReadLine();//leemos linea y lo guardamos en linea
                     if (linea != null)
                     {
-                        
 
-                        if (linea == comparar)
+                        string[] linea_espliteada = linea.Split(G_parametros);
+                        if (linea_espliteada[0] == comparar)
                         {
                             bandera = true;
                             sw.WriteLine(linea);
@@ -720,7 +720,7 @@ namespace tienda2
                 
                 if (bandera == false)
                 {
-                    Agregar(direccion_archivo, comparar);
+                    Agregar(direccion_archivo, comparar+G_parametros[0]);
                 }
 
 

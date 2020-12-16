@@ -13,3 +13,19 @@ movimiento origen: 1|1288|asd|0|asdfr|1|0|add|||1|
 movimiento origen: 1|1287|sda|0|asd|1|0|prov|||1|
 movimiento origen: 1|1287|dsa|0|asd|1|0|provedor|||1|
 movimiento origen: 1|1288|asd|0|lm|1|0|marinela|||1|
+movimiento origen: 0|100|1|10|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|pomada ceresa|1.5|
