@@ -21,9 +21,8 @@ namespace tienda2
             
 
             InitializeComponent();
-            Operaciones_archivos op = new Operaciones_archivos();
             
-
+            Operaciones_archivos op = new Operaciones_archivos();
             //en esta seccion crearemos los archivos que nesesitaremos para la base
             #region crea los archivos 
             //crea los archivos de compras por si se hace una busqueda y no estan
@@ -68,8 +67,9 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(direccion3);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion4);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
 
-
-
+            direccion1 = "inf\\inventario\\img\\";
+            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+            
             //
             #endregion
             //ordenar informacion de mayor a menor
@@ -114,6 +114,8 @@ namespace tienda2
 
         private void Btn_usuario_Click(object sender, EventArgs e)
         {
+           
+
             Tex_base user = new Tex_base();//llamamos a la clase tex_base
             Ventas vent = new Ventas();//este es el form ventas y es al que entrara si pone el usuario y contraseña bien
             string temp = user.Seleccionar("inf\\us\\user.txt", 0, Txt_usuario.Text, "1");

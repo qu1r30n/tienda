@@ -33,23 +33,29 @@
             this.Btn_editar = new System.Windows.Forms.Button();
             this.Btn_agregar = new System.Windows.Forms.Button();
             this.Lst_empleados = new System.Windows.Forms.ListBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Lbl_id = new System.Windows.Forms.Label();
+            this.txt_sueldo = new System.Windows.Forms.TextBox();
+            this.txt_fecha_ingreso = new System.Windows.Forms.TextBox();
+            this.txt_apllido_materno = new System.Windows.Forms.TextBox();
+            this.txt_apllido_pat = new System.Windows.Forms.TextBox();
+            this.txt_nom = new System.Windows.Forms.TextBox();
+            this.Label1 = new System.Windows.Forms.Label();
             this.Lbl_sueldo = new System.Windows.Forms.Label();
             this.Lbl_fecha_ingreso = new System.Windows.Forms.Label();
             this.Lbl_am = new System.Windows.Forms.Label();
             this.Lbl_ap = new System.Windows.Forms.Label();
             this.Lbl_nombre = new System.Windows.Forms.Label();
+            this.lbl_tipo = new System.Windows.Forms.Label();
+            this.cmb_cargo = new System.Windows.Forms.ComboBox();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.txt_contrasenia = new System.Windows.Forms.TextBox();
+            this.txt_conf_contr = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Btn_buscar
             // 
-            this.Btn_buscar.Location = new System.Drawing.Point(8, 162);
+            this.Btn_buscar.Location = new System.Drawing.Point(8, 231);
             this.Btn_buscar.Name = "Btn_buscar";
             this.Btn_buscar.Size = new System.Drawing.Size(86, 62);
             this.Btn_buscar.TabIndex = 61;
@@ -59,7 +65,7 @@
             // 
             // Btn_eliminar
             // 
-            this.Btn_eliminar.Location = new System.Drawing.Point(125, 226);
+            this.Btn_eliminar.Location = new System.Drawing.Point(155, 290);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(75, 23);
             this.Btn_eliminar.TabIndex = 60;
@@ -69,7 +75,7 @@
             // 
             // Btn_editar
             // 
-            this.Btn_editar.Location = new System.Drawing.Point(125, 191);
+            this.Btn_editar.Location = new System.Drawing.Point(155, 255);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(75, 23);
             this.Btn_editar.TabIndex = 59;
@@ -79,7 +85,7 @@
             // 
             // Btn_agregar
             // 
-            this.Btn_agregar.Location = new System.Drawing.Point(125, 162);
+            this.Btn_agregar.Location = new System.Drawing.Point(155, 226);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(75, 23);
             this.Btn_agregar.TabIndex = 58;
@@ -90,66 +96,60 @@
             // Lst_empleados
             // 
             this.Lst_empleados.FormattingEnabled = true;
-            this.Lst_empleados.Location = new System.Drawing.Point(206, 2);
+            this.Lst_empleados.Location = new System.Drawing.Point(236, -3);
             this.Lst_empleados.Name = "Lst_empleados";
             this.Lst_empleados.Size = new System.Drawing.Size(178, 316);
             this.Lst_empleados.TabIndex = 57;
+            this.Lst_empleados.SelectedIndexChanged += new System.EventHandler(this.Lst_empleados_SelectedIndexChanged);
             // 
-            // textBox6
+            // txt_sueldo
             // 
-            this.textBox6.Location = new System.Drawing.Point(100, 123);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 56;
+            this.txt_sueldo.Location = new System.Drawing.Point(130, 118);
+            this.txt_sueldo.Name = "txt_sueldo";
+            this.txt_sueldo.Size = new System.Drawing.Size(100, 20);
+            this.txt_sueldo.TabIndex = 56;
             // 
-            // textBox5
+            // txt_fecha_ingreso
             // 
-            this.textBox5.Location = new System.Drawing.Point(100, 101);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 55;
+            this.txt_fecha_ingreso.Location = new System.Drawing.Point(130, 96);
+            this.txt_fecha_ingreso.Name = "txt_fecha_ingreso";
+            this.txt_fecha_ingreso.Size = new System.Drawing.Size(100, 20);
+            this.txt_fecha_ingreso.TabIndex = 55;
             // 
-            // textBox4
+            // txt_apllido_materno
             // 
-            this.textBox4.Location = new System.Drawing.Point(100, 77);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 54;
+            this.txt_apllido_materno.Location = new System.Drawing.Point(130, 72);
+            this.txt_apllido_materno.Name = "txt_apllido_materno";
+            this.txt_apllido_materno.Size = new System.Drawing.Size(100, 20);
+            this.txt_apllido_materno.TabIndex = 54;
             // 
-            // textBox3
+            // txt_apllido_pat
             // 
-            this.textBox3.Location = new System.Drawing.Point(100, 55);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 53;
+            this.txt_apllido_pat.Location = new System.Drawing.Point(130, 50);
+            this.txt_apllido_pat.Name = "txt_apllido_pat";
+            this.txt_apllido_pat.Size = new System.Drawing.Size(100, 20);
+            this.txt_apllido_pat.TabIndex = 53;
             // 
-            // textBox2
+            // txt_nom
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 52;
+            this.txt_nom.Location = new System.Drawing.Point(130, 24);
+            this.txt_nom.Name = "txt_nom";
+            this.txt_nom.Size = new System.Drawing.Size(100, 20);
+            this.txt_nom.TabIndex = 52;
             // 
-            // textBox1
+            // Label1
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 51;
-            // 
-            // Lbl_id
-            // 
-            this.Lbl_id.AutoSize = true;
-            this.Lbl_id.Location = new System.Drawing.Point(79, 7);
-            this.Lbl_id.Name = "Lbl_id";
-            this.Lbl_id.Size = new System.Drawing.Size(15, 13);
-            this.Lbl_id.TabIndex = 50;
-            this.Lbl_id.Text = "id";
+            this.Label1.AutoSize = true;
+            this.Label1.Location = new System.Drawing.Point(106, 2);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(15, 13);
+            this.Label1.TabIndex = 50;
+            this.Label1.Text = "id";
             // 
             // Lbl_sueldo
             // 
             this.Lbl_sueldo.AutoSize = true;
-            this.Lbl_sueldo.Location = new System.Drawing.Point(56, 126);
+            this.Lbl_sueldo.Location = new System.Drawing.Point(86, 125);
             this.Lbl_sueldo.Name = "Lbl_sueldo";
             this.Lbl_sueldo.Size = new System.Drawing.Size(38, 13);
             this.Lbl_sueldo.TabIndex = 49;
@@ -158,7 +158,7 @@
             // Lbl_fecha_ingreso
             // 
             this.Lbl_fecha_ingreso.AutoSize = true;
-            this.Lbl_fecha_ingreso.Location = new System.Drawing.Point(8, 104);
+            this.Lbl_fecha_ingreso.Location = new System.Drawing.Point(38, 103);
             this.Lbl_fecha_ingreso.Name = "Lbl_fecha_ingreso";
             this.Lbl_fecha_ingreso.Size = new System.Drawing.Size(86, 13);
             this.Lbl_fecha_ingreso.TabIndex = 48;
@@ -167,7 +167,7 @@
             // Lbl_am
             // 
             this.Lbl_am.AutoSize = true;
-            this.Lbl_am.Location = new System.Drawing.Point(10, 80);
+            this.Lbl_am.Location = new System.Drawing.Point(40, 79);
             this.Lbl_am.Name = "Lbl_am";
             this.Lbl_am.Size = new System.Drawing.Size(84, 13);
             this.Lbl_am.TabIndex = 47;
@@ -176,7 +176,7 @@
             // Lbl_ap
             // 
             this.Lbl_ap.AutoSize = true;
-            this.Lbl_ap.Location = new System.Drawing.Point(12, 58);
+            this.Lbl_ap.Location = new System.Drawing.Point(42, 57);
             this.Lbl_ap.Name = "Lbl_ap";
             this.Lbl_ap.Size = new System.Drawing.Size(82, 13);
             this.Lbl_ap.TabIndex = 46;
@@ -185,35 +185,105 @@
             // Lbl_nombre
             // 
             this.Lbl_nombre.AutoSize = true;
-            this.Lbl_nombre.Location = new System.Drawing.Point(52, 32);
+            this.Lbl_nombre.Location = new System.Drawing.Point(82, 31);
             this.Lbl_nombre.Name = "Lbl_nombre";
             this.Lbl_nombre.Size = new System.Drawing.Size(42, 13);
             this.Lbl_nombre.TabIndex = 45;
             this.Lbl_nombre.Text = "nombre";
             // 
-            // empleados
+            // lbl_tipo
+            // 
+            this.lbl_tipo.AutoSize = true;
+            this.lbl_tipo.Location = new System.Drawing.Point(72, 156);
+            this.lbl_tipo.Name = "lbl_tipo";
+            this.lbl_tipo.Size = new System.Drawing.Size(34, 13);
+            this.lbl_tipo.TabIndex = 62;
+            this.lbl_tipo.Text = "cargo";
+            // 
+            // cmb_cargo
+            // 
+            this.cmb_cargo.FormattingEnabled = true;
+            this.cmb_cargo.Items.AddRange(new object[] {
+            "admin",
+            "usuario",
+            "invitado"});
+            this.cmb_cargo.Location = new System.Drawing.Point(112, 148);
+            this.cmb_cargo.Name = "cmb_cargo";
+            this.cmb_cargo.Size = new System.Drawing.Size(121, 21);
+            this.cmb_cargo.TabIndex = 63;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(130, 2);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(14, 13);
+            this.lbl_id.TabIndex = 64;
+            this.lbl_id.Text = "#";
+            // 
+            // txt_contrasenia
+            // 
+            this.txt_contrasenia.Location = new System.Drawing.Point(130, 175);
+            this.txt_contrasenia.Name = "txt_contrasenia";
+            this.txt_contrasenia.Size = new System.Drawing.Size(100, 20);
+            this.txt_contrasenia.TabIndex = 65;
+            this.txt_contrasenia.UseSystemPasswordChar = true;
+            // 
+            // txt_conf_contr
+            // 
+            this.txt_conf_contr.Location = new System.Drawing.Point(130, 201);
+            this.txt_conf_contr.Name = "txt_conf_contr";
+            this.txt_conf_contr.Size = new System.Drawing.Size(100, 20);
+            this.txt_conf_contr.TabIndex = 65;
+            this.txt_conf_contr.UseSystemPasswordChar = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(64, 178);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "contraseña";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 204);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.TabIndex = 67;
+            this.label3.Text = "confirmar contraseña";
+            // 
+            // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 325);
+            this.ClientSize = new System.Drawing.Size(448, 325);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt_conf_contr);
+            this.Controls.Add(this.txt_contrasenia);
+            this.Controls.Add(this.lbl_id);
+            this.Controls.Add(this.cmb_cargo);
+            this.Controls.Add(this.lbl_tipo);
             this.Controls.Add(this.Btn_buscar);
             this.Controls.Add(this.Btn_eliminar);
             this.Controls.Add(this.Btn_editar);
             this.Controls.Add(this.Btn_agregar);
             this.Controls.Add(this.Lst_empleados);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Lbl_id);
+            this.Controls.Add(this.txt_sueldo);
+            this.Controls.Add(this.txt_fecha_ingreso);
+            this.Controls.Add(this.txt_apllido_materno);
+            this.Controls.Add(this.txt_apllido_pat);
+            this.Controls.Add(this.txt_nom);
+            this.Controls.Add(this.Label1);
             this.Controls.Add(this.Lbl_sueldo);
             this.Controls.Add(this.Lbl_fecha_ingreso);
             this.Controls.Add(this.Lbl_am);
             this.Controls.Add(this.Lbl_ap);
             this.Controls.Add(this.Lbl_nombre);
-            this.Name = "empleados";
+            this.Name = "Empleados";
             this.Text = "empleados";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -227,17 +297,23 @@
         private System.Windows.Forms.Button Btn_editar;
         private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.ListBox Lst_empleados;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label Lbl_id;
+        private System.Windows.Forms.TextBox txt_sueldo;
+        private System.Windows.Forms.TextBox txt_fecha_ingreso;
+        private System.Windows.Forms.TextBox txt_apllido_materno;
+        private System.Windows.Forms.TextBox txt_apllido_pat;
+        private System.Windows.Forms.TextBox txt_nom;
+        private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Label Lbl_sueldo;
         private System.Windows.Forms.Label Lbl_fecha_ingreso;
         private System.Windows.Forms.Label Lbl_am;
         private System.Windows.Forms.Label Lbl_ap;
         private System.Windows.Forms.Label Lbl_nombre;
+        private System.Windows.Forms.Label lbl_tipo;
+        private System.Windows.Forms.ComboBox cmb_cargo;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.TextBox txt_contrasenia;
+        private System.Windows.Forms.TextBox txt_conf_contr;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

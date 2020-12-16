@@ -43,14 +43,6 @@ namespace tienda2.desinger
         }
 
         #region botones y combobox
-        private void Btn_inventario_Click(object sender, EventArgs e)
-        {
-            Lbl_ganancia.Visible = false;//pone invisible el label de ganancia
-            Txt_ganancia.Visible = false;//pone invisible el textbox de ganancia
-
-            Inventario invent = new Inventario();//invent sera el form inventario
-            invent.Show();//muestra el form inventario
-        }
 
         private void Btn_nueva_venta_Click(object sender, EventArgs e)
         {

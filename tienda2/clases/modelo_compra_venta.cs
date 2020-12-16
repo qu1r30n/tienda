@@ -106,8 +106,13 @@ namespace tienda2.clases
 
                     if (prod_esplit[3] == codigo[i])
                     {
-                        acum_costo_venta = acum_costo_venta + Convert.ToDecimal(prod_esplit[2]);
-                        acum_costo_compra= acum_costo_compra + Convert.ToDecimal(prod_esplit[5]);
+                        if (cantidades_vendidas[i] == "")//con esto se pone la cantidad que se vendio por cada cosa si no tiene cantidad le pone 1 para que sea un producto 
+                        {
+                            cantidades_vendidas[i] = "1";
+                        }
+
+                        acum_costo_venta = acum_costo_venta + (Convert.ToDecimal(prod_esplit[2]) * Convert.ToDecimal(cantidades_vendidas[i]));
+                        acum_costo_compra = acum_costo_compra + (Convert.ToDecimal(prod_esplit[5]) * Convert.ToDecimal(cantidades_vendidas[i]));
                         nom_productos[i] = prod_esplit[1];
                     }
                 }
@@ -136,10 +141,6 @@ namespace tienda2.clases
 
             for (int i = 0; i < codigo.Length; i++)
             {
-                if (cantidades_vendidas[i]=="")
-                {
-                    cantidades_vendidas[i] = "1";
-                }
 
                 
                 direccion = "inf\\inventario\\invent.txt";

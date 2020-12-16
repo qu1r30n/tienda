@@ -190,7 +190,7 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "nombre del producto";
             // 
-            // ventas
+            // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -210,7 +210,7 @@
             this.Controls.Add(this.Lst_ventas);
             this.Controls.Add(this.Txt_nom_producto);
             this.Controls.Add(this.Txt_buscar_producto);
-            this.Name = "ventas";
+            this.Name = "Ventas";
             this.Text = "ventas";
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).EndInit();
             this.ResumeLayout(false);

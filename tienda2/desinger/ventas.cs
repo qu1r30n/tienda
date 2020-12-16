@@ -41,8 +41,8 @@ namespace tienda2.desinger
 
                     if (temporal_s[0] != "")
                     {
-                        total = total + Convert.ToDecimal(temporal_s[2]);
-                        total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
+                        total = total + Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
+                        total_cost_com = total_cost_com + (Convert.ToDecimal(temporal_s[5]) * Convert.ToDecimal(temporal_s[8]));
                     }
 
                 }
@@ -75,8 +75,8 @@ namespace tienda2.desinger
 
                     if (temporal_s[0] != "")
                     {
-                        total = total + Convert.ToDecimal(temporal_s[2]);
-                        total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
+                        total = total + Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
+                        total_cost_com = total_cost_com + (Convert.ToDecimal(temporal_s[5]) * Convert.ToDecimal(temporal_s[8]));
                     }
 
                 }
@@ -118,8 +118,8 @@ namespace tienda2.desinger
 
                     if (temporal_s[0] != "")
                     {
-                        total = total + Convert.ToDecimal(temporal_s[2]);
-                        total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
+                        total = total + Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
+                        total_cost_com = total_cost_com + (Convert.ToDecimal(temporal_s[5]) * Convert.ToDecimal(temporal_s[8]));
                     }
 
                 }
@@ -157,8 +157,8 @@ namespace tienda2.desinger
                 cv.nombre_productos.Add("" + temporal_s[3]);
                 if (temporal_s[0] != "")
                 {
-                    total = total + Convert.ToDecimal(temporal_s[2]);
-                    total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
+                    total = total + Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
+                    total_cost_com = total_cost_com + (Convert.ToDecimal(temporal_s[5]) * Convert.ToDecimal(temporal_s[8]));
                 }
                 cv.cantidad.Add("" + temporal_s[8]);
 
@@ -174,6 +174,7 @@ namespace tienda2.desinger
             Lst_ventas.Items.Clear();
             Lbl_nom_product_list.Text = "nombre del producto";
             Lbl_costo_product_list.Text = "$";
+            Lbl_cuenta.Text = "$";
 
             Txt_buscar_producto.Focus();
             cv.Show();
@@ -215,31 +216,73 @@ namespace tienda2.desinger
                 
                 if (codigo==temp[0])//productos
                 {
+                    if (temp[8]=="")
+                    {
+                        temp[8] = "1";
+                    }
+
                     string[] grupo = temp[7].Split('°');
 
                     Ventana_emergente vent_emergent = new Ventana_emergente();
+                    
                     if (grupo[0]=="1")
                     {
-                        Lst_ventas.Items.Add(G_productos[i]);
+                        bool esta_libre_la_lista_de_repeticiones_de_producto = true;
+                        
                         Txt_buscar_producto.Text = "";
                         Txt_nom_producto.Text = "";
+                        Lbl_costo_product_list.Text = temp[8] + " COSTO: " + temp[2];
+                        Lbl_nom_product_list.Text = temp[3] + "    PRECIO UNITARIO: " + temp[2];
 
-                        Lbl_costo_product_list.Text = temp[2];
-                        Lbl_nom_product_list.Text = temp[3];
+                        for (int j = 0; j < Lst_ventas.Items.Count; j++)
+                        {
+                            string[] item_espliteado = Lst_ventas.Items[j].ToString().Split(G_parametros[0]);
+                            if (codigo == item_espliteado[0])
+                            {
+                                item_espliteado[8] = "" + (Convert.ToDecimal(item_espliteado[8]) + Convert.ToDecimal(temp[8]));
+                                Lbl_costo_product_list.Text = item_espliteado[8] + " COSTO: " + (Convert.ToDecimal(item_espliteado[2]) * Convert.ToDecimal(item_espliteado[8]));
+                                Lst_ventas.Items[j] = string.Join(""+G_parametros[0], item_espliteado);
+                                esta_libre_la_lista_de_repeticiones_de_producto = false;
+                            }
+                        }
+                        if (esta_libre_la_lista_de_repeticiones_de_producto)
+                        {
+                            Lst_ventas.Items.Add(string.Join("" + G_parametros[0], temp));
+                        }
 
                     }
+
                     else if (grupo[0] == "2")//litros
                     {
+                        bool esta_libre_la_lista_de_repeticiones_de_producto = true;
+                        
                         string[] enviar = { "2°producto°"+ temp[3],"1°cantidad en litros(se puede decimal)" };
                         string mensage = vent_emergent.Proceso_ventana_emergente(enviar);
                         string[] informacion_vent_eme = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
+                        temp[8] = informacion_vent_eme[1];
+
                         if (informacion_vent_eme[1]!="")
                         {
-                            temp[2] = "" + (Convert.ToDecimal(temp[2]) * Convert.ToDecimal(informacion_vent_eme[1]));
-                            temp[8] = informacion_vent_eme[1];
-                            Lst_ventas.Items.Add(string.Join("|", temp));
-                            Lbl_costo_product_list.Text = temp[2] + " CANTIDAD: " + informacion_vent_eme[1];
-                            Lbl_nom_product_list.Text = temp[3];
+                            for (int j = 0; j < Lst_ventas.Items.Count; j++)
+                            {
+                                string[] item_espliteado = Lst_ventas.Items[j].ToString().Split(G_parametros[0]);
+                                if (codigo == item_espliteado[0])
+                                {
+                                    item_espliteado[8] = "" + (Convert.ToDecimal(item_espliteado[8]) + Convert.ToDecimal(temp[8]));
+                                    Lbl_costo_product_list.Text = item_espliteado[8] + " COSTO: " + (Convert.ToDecimal(item_espliteado[2]) * Convert.ToDecimal(item_espliteado[8]));
+                                    Lst_ventas.Items[j] = string.Join("" + G_parametros[0], item_espliteado);
+                                    esta_libre_la_lista_de_repeticiones_de_producto = false;
+                                }
+                            }
+                            if (esta_libre_la_lista_de_repeticiones_de_producto)
+                            {
+                                Lst_ventas.Items.Add(string.Join("" + G_parametros[0], temp));
+                                Lbl_costo_product_list.Text = informacion_vent_eme[1] + " COSTO: " + Convert.ToDecimal(temp[2]) * Convert.ToDecimal(informacion_vent_eme[1]);
+                            }
+                            Lbl_nom_product_list.Text = temp[3] + "   PRECIO UNITARIO: " + temp[2];
+
+
+
                         }
                         Txt_buscar_producto.Text = "";
                         Txt_buscar_producto.Focus();
@@ -337,8 +380,8 @@ namespace tienda2.desinger
 
                 if (temporal_s[0] != "")
                 {
-                    total = total + Convert.ToDecimal(temporal_s[2]);
-                    total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
+                    total = total + Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
+                    total_cost_com = total_cost_com + (Convert.ToDecimal(temporal_s[5]) * Convert.ToDecimal(temporal_s[8]));
                 }
             }
             Lbl_cuenta.Text = "" + total;
@@ -375,8 +418,8 @@ namespace tienda2.desinger
             if (Lst_ventas.SelectedItem != null)
             {
                 string[] info_producto_lista = Lst_ventas.SelectedItem.ToString().Split(G_parametros[0]);
-                Lbl_costo_product_list.Text = info_producto_lista[2];
-                Lbl_nom_product_list.Text = info_producto_lista[3];
+                Lbl_costo_product_list.Text = info_producto_lista[8] + " COSTO: " + (Convert.ToDecimal(info_producto_lista[2])* Convert.ToDecimal(info_producto_lista[8]));
+                Lbl_nom_product_list.Text = info_producto_lista[3] + "    PRECIO UNITARIO: " + info_producto_lista[2];
             }
             
         }

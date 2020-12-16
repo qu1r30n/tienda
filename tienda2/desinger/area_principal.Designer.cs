@@ -52,7 +52,6 @@
             this.Lst_ventas = new System.Windows.Forms.ListBox();
             this.Btn_empleados = new System.Windows.Forms.Button();
             this.Btn_nueva_venta = new System.Windows.Forms.Button();
-            this.Btn_inventario = new System.Windows.Forms.Button();
             this.Btn_canbio_precios = new System.Windows.Forms.Button();
             this.chrt_ventas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).BeginInit();
@@ -260,16 +259,6 @@
             this.Btn_nueva_venta.UseVisualStyleBackColor = true;
             this.Btn_nueva_venta.Click += new System.EventHandler(this.Btn_nueva_venta_Click);
             // 
-            // Btn_inventario
-            // 
-            this.Btn_inventario.Location = new System.Drawing.Point(7, 41);
-            this.Btn_inventario.Name = "Btn_inventario";
-            this.Btn_inventario.Size = new System.Drawing.Size(75, 23);
-            this.Btn_inventario.TabIndex = 32;
-            this.Btn_inventario.Text = "inventario";
-            this.Btn_inventario.UseVisualStyleBackColor = true;
-            this.Btn_inventario.Click += new System.EventHandler(this.Btn_inventario_Click);
-            // 
             // Btn_canbio_precios
             // 
             this.Btn_canbio_precios.Location = new System.Drawing.Point(7, 232);
@@ -325,7 +314,6 @@
             this.Controls.Add(this.Lst_ventas);
             this.Controls.Add(this.Btn_empleados);
             this.Controls.Add(this.Btn_nueva_venta);
-            this.Controls.Add(this.Btn_inventario);
             this.Name = "Area_principal";
             this.Text = "Area_principal";
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).EndInit();
@@ -357,7 +345,6 @@
         public System.Windows.Forms.ListBox Lst_ventas;
         private System.Windows.Forms.Button Btn_empleados;
         private System.Windows.Forms.Button Btn_nueva_venta;
-        private System.Windows.Forms.Button Btn_inventario;
         private System.Windows.Forms.Button Btn_canbio_precios;
         private System.Windows.Forms.DataVisualization.Charting.Chart chrt_ventas;
     }

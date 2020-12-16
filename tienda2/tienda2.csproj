@@ -37,6 +37,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,13 +47,13 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clases\Modelo_compra_venta.cs" />
     <Compile Include="clases\Operaciones_textos.cs" />
+    <Compile Include="clases\glob_var_direcciones.cs" />
     <Compile Include="desinger\Area_principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,12 +90,6 @@
     <Compile Include="desinger\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\Inventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="desinger\Inventario.Designer.cs">
-      <DependentUpon>Inventario.cs</DependentUpon>
-    </Compile>
     <Compile Include="desinger\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,7 +120,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="clases\formatos_entrada_salida.cs" />
+    <Compile Include="clases\info_entrada_salida.cs" />
     <Compile Include="clases\Operaciones_archivos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,9 +142,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Inventario.resx">
-      <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
@@ -174,6 +168,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
