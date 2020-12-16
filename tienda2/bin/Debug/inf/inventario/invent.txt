@@ -1,20 +1,20 @@
-id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|cantidad_productos_por_paquete|materia_prima(para_productos_elaborados)
-1|pomada ceresa|5|1|4.5|1|pomada labiual|2°producto||1|
-2|ariel jabon 250g|11.5|11.5|1|10.35||1°producto||1|
+﻿id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|cantidad_productos_por_paquete|
+1|pomada ceresa|5|1|9|1|pomada labiual|1°producto||1|
+2|ariel jabon 250g|11.5|11.5|0|10.35||1°producto||1|
 3|chicle orbit 5.6g|2.5|2201302|0|1|orbit|1°producto||1|
 4|orbit hierbabuena 5.6g|2.5|2261003|0|1|orbit|1°producto||1|
-5|bubulubu  35g|9|7432354|26|8.1|ricolino|1°producto||1|
-6|leche nesquik chocolate 240ml|9|75000011|9|7.2|nesquik|1°producto||7|
-7|cloralex 950ml|14|75000615|3|12.6||1°producto||1|
-8|fabuloso  500ml|16|75001186|2|14.4||1°producto||1|
-9|marlboro rojo 20|63|75001322|225|54|marlboro|1°producto||24|
-10|malboro 14 rojos|37|75001339|7|0|malboro|1°producto||5|
-11|jugo boing mango chico 250ml|6|75001759|1000|5.4|del valle|1°producto||1|
+5|bubulubu  35g|9|7432354|23|8.1|ricolino|1°producto||1|
+6|leche nesquik chocolate 240ml|9|75000011|3|7.2|nesquik|1°producto||7|
+7|cloralex 950ml|14|75000615|2|12.6||1°producto||1|
+8|fabuloso  500ml|16|75001186|1|14.4||1°producto||1|
+9|marlboro rojo 20|63|75001322|268|54|marlboro|1°producto||20|
+10|malboro 14 rojos|47|75001339|4|0|malboro|1°producto||5|
+11|boing mango 250ml|7|75001759|1|5.4|del valle|1°producto||1|
 12|jugo boing fresa chico 250ml|6|75001766|1000|5.4|del valle|1°producto||1|
-13|jugo boing guayaba chico 250ml|7|75001773|1000|5.4|del valle|1°producto||1|
-14|boing manzana 250ml|7|75001797|10|0|boing|1°producto||1|
-15|gerber pera 113gr|11|75001834|1000|9.9|nestle|1°producto||1|
-16|chocorroles piña 100g|15|75002275|5|13.5|marinela|1°producto||1|
+13|jugo boing guayaba chico 250ml|7|75001773|999|5.4|del valle|1°producto||1|
+14|boing manzana 250ml|7|75001797|0|0|boing|1°producto||1|
+15|boing uva 250ml|7|75001834|0|4.3|nestle|1°producto||1|
+16|chocorroles piña 100g|16|75002275|-2|13.5|marinela|1°producto||1|
 17|aceite 123 1lt|32|75002343|0|0|123|1°producto||1|
 18|aceite maravilla 1lt|25.5|75002756|0|0|maravilla|1°producto||1|
 19|gerber durazno 113gr|11|75003371|4|9.9|nestle|1°producto||1|
@@ -24,77 +24,77 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 23|gerber frutas tropicales 113gr|11|75003456|1|9.9|nestle|1°producto||1|
 24|gerber frutas mixtas 113gr|11|75003463|2|9.9|nestle|1°producto||1|
 25|gerber mango 113gr|11|75003487|4|9.9|nestle|1°producto||1|
-26|aceite maravilla 500ml|16.5|75003722|0|0|maravilla|1°producto||1|
-27|coca vidrio 500ml|10|75004699|0|0|coca|1°producto||1|
-28|coca-cola 600ml|14|75007614|73|11.7|coca|1°producto||24|
-29|coca-cola 500ml|10|75009809|996|9|coca|1°producto||24|
-30|nesquik fresa 240ml|9|75009861|61|0|jumex|1°producto||54|
-31|indioi 1.2L|35|75019303|0|0|indio|1°producto||1|
-32|m&m mini4.5|4|75019426|0|0|m&m|1°producto||1|
+26|aceite maravilla 500ml|16.5|75003722|-4|0|maravilla|1°producto||1|
+27|coca vidrio 500ml|10|75004699|-9|0|coca|1°producto||1|
+28|coca-cola 600ml|14|75007614|-38|11.7|coca|1°producto||24|
+29|coca-cola 500ml|12|75009809|972|9|coca|1°producto||24|
+30|nesquik fresa 240ml|9|75009861|59|0|jumex|1°producto||54|
+31|indioi 1.2L|35|75019303|-4|0|indio|1°producto||1|
+32|m&m mini4.5|4|75019426|-1|0|m&m|1°producto||1|
 33|clorets 4 pastillas|2|75019907|2|1.8||1°producto||1|
-34|cigarro capsula mentolada 100 rojo / 20'|63|75021597|5|55|marlboro|1°producto||5|
+34|cigarro capsula mentolada 100 rojo / 20'|63|75021597|10|55|marlboro|1°producto||5|
 35|chicle canels menta 5g|1|75022952|0|0.2|canels|1°producto||1|
 36|cremoino 15g|2.5|75024635|0|0|cremino|1°producto||1|
-37|dannygelatina125g|5.5|75026202|0|0|danone|1°producto||1|
+37|dannygelatina125g|5.5|75026202|-1|0|danone|1°producto||1|
 38|cigarro dalton 20c/cfilttro|37|75027186|0|30|dalton|1°producto||1|
-39|modelo 355ml|17|75027285|10|0|corona|1°producto||1|
+39|modelo 355ml|17|75027285|9|0|corona|1°producto||1|
 40|bon o bon 15g|9|75027971|0|0|BONBON|1°producto||1|
 41|chicle manzana verde 5g|1|75030452|0|0.2|canels|1°producto||1|
-42|cigarro mega ice express 20'|63|75031053|5|55|marlboro|1°producto||5|
+42|cigarro mega ice express 20'|63|75031053|6|55|marlboro|1°producto||5|
 43|lady speed stick 30ml|11|75036492|0|9|speed stick|1°producto||1|
 44|speed stick 30ml|11|75036508|0|9|speed stick|1°producto||1|
 45|serillos clasico|2|75036553|0|1|clasicos|1°producto||1|
 46|pica fresa gigante 12g|1|75038540|0|0.25|vero|1°producto||1|
-47|bonafon 250ml|6|75040840|0|0|bonafon|1°producto||1|
-48|orbit menta5.6g|2.5|75041731|0|1|orbit|1°producto||1|
-49|chicle orbit polar mint 5.6g|2.5|75041748|0|1|orbit|1°producto||1|
-50|jumex 125ml manzana|6|75042998|0|0|jumex|1°producto||1|
-51|jumex 125ml durazno|6|75043001|0|0|jumex|1°producto||1|
-52|jumex 125ml mango|6|75043025|0|0|jumex|1°producto||1|
-53|cigarro kreket mint/clavo 20'|63|75044916|0|55|marlboro|1°producto||1|
-54|chicle trident menta 5.2g|2.5|75045616|0|1|trident|1°producto||1|
-55|trident|2.5|75045623|0|1|trident|1°producto||1|
+47|bonafon 250ml|6|75040840|-5|0|bonafon|1°producto||1|
+48|orbit menta5.6g|2|75041731|31|0.75|orbit|1°producto||1|
+49|orbit polar mint 5.6g|2|75041748|39|0.75|orbit|1°producto||1|
+50|jumex 125ml manzana|6|75042998|-1|0|jumex|1°producto||1|
+51|jumex 125ml durazno|6|75043001|-7|0|jumex|1°producto||1|
+52|jumex 125ml mango|6|75043025|-1|0|jumex|1°producto||1|
+53|cigarro kreket mint/clavo 20'|63|75044916|-1|55|marlboro|1°producto||1|
+54|chicle trident menta 5.2g|2.5|75045616|-2|1|trident|1°producto||1|
+55|trident|2.5|75045623|-3|1|trident|1°producto||1|
 56|chicle trident morsa 5.2g|2.5|75045685|0|1|trident|1°producto||1|
 57|cigarro lucky strike 20' original|56|75048129|0|50|pall mall|1°producto||1|
 58|mi arroz 17g|6|75049232|0|0|knor|1°producto||1|
 59|mi arroz blanco 12g|5|75049256|0|0|knor|1°producto||1|
-60|cigarro lucky strike 4 sabores 20'|63|75051785|0|58|pall mall|1°producto||1|
+60|cigarro lucky strike 4 sabores 20'|63|75051785|-1|58|pall mall|1°producto||1|
 61|chicle bubaloo sabor fresa 5.5g|1|75051938|0|0.3|bubaloo|1°producto||1|
 62|chicle bubaloo menta 5.5g|1|75051952|0|0.3|bubaloo|1°producto||1|
 63|chicle bubaloo mora azul 5.5g|1|75051969|0|0.3|bubaloo|1°producto||1|
 64|chicle bubaloo platano 5.5g|1|75051976|0|0.3|bubaloo|1°producto||1|
 65|chicle bubaloo yerbabuena 5.5g|1|75051983|0|0.3|bubaloo|1°producto||1|
-66|cigarro tokio 20'|56|75052836|0|50|pall mall|1°producto||1|
-67|catsup del monte 320gr|13|75053901|5|11.7|del monte|1°producto||1|
+66|pall mall tokio 20´|56|75052836|8|50|pall mall|1°producto||6|
+67|catsup del monte 320gr|13|75053901|4|11.7|del monte|1°producto||1|
 68|trident fruti mix 5.2g|2.5|75057596|1|0|mondelez|1°producto||1|
-69|bonafon kids manzana 300ml|9|75061678|0|0|bonafon|1°producto||1|
+69|bonafon kids manzana 300ml|9|75061678|-9|0|bonafon|1°producto||1|
 70|bonafon kids mango 300ml|9|75063368|0|0|bonafon|1°producto||1|
-71|bonafon kids naranja 300ml|9|75063375|0|0|bonafon|1°producto||1|
-72|cigarro pepino 20'|56|75064648|0|50|pall mall|1°producto||1|
-73|cigarro fusion summer/sandia 20'|63|75066345|0|55|marlboro|1°producto||1|
-74|trident canela 5.2g|2.5|75066932|0|1|trident|1°producto||1|
-75|chesterfield 15|37|75067823|8|0|marlboro|1°producto||4|
-76|chesterfield 25´|55|75067854|37|47|marlboro|1°producto||8|
-77|cigarro gold 20'|63|75068738|0|55|marlboro|1°producto||1|
-78|cigarro double fusion/velvet 20'|63|75068769|0|55|marlboro|1°producto||1|
-79|cigarro double fusion ruby 20'|63|75068783|5|55|marlboro|1°producto||5|
+71|bonafon kids naranja 300ml|9|75063375|-4|0|bonafon|1°producto||1|
+72|cigarro pepino 20'|56|75064648|-1|50|pall mall|1°producto||1|
+73|cigarro fusion summer/sandia 20'|63|75066345|5|55|marlboro|1°producto||5|
+74|trident canela 5.2g|2.5|75066932|-1|1|trident|1°producto||1|
+75|chesterfield 15|37|75067823|5|0|marlboro|1°producto||4|
+76|chesterfield 25´|55|75067854|59|47|marlboro|1°producto||16|
+77|cigarro gold 20'|63|75068738|1|55|marlboro|1°producto||1|
+78|cigarro double fusion/velvet 20'|63|75068769|4|55|marlboro|1°producto||5|
+79|cigarro double fusion ruby 20'|63|75068783|7|55|marlboro|1°producto||5|
 80|cigarro manzana/menta 20'|56|75069490|0|50|pall mall|1°producto||1|
-81|cigarro L&M 2c/cfiltro|47|75069902|0|40|L&M|1°producto||1|
+81|cigarro L&M 2c/cfiltro|37|75069902|-2|40|L&M|1°producto||1|
 82|cigarro mix pack/chicle 20'|56|75070090|0|50|pall mall|1°producto||1|
 83|cigarro doble menta 20'|56|75071295|0|50|pall mall|1°producto||1|
 84|cigarro original 20'|37|75071776|0|30|pall mall|1°producto||1|
 85|tictac menta 16g|8|78603769|0|0|tictsac|1°producto||1|
 86|tic tac fresa 16g|8|78605831|1|0|ferrero/kinder|1°producto||1|
-87|kinder maxi 21g|8|80050094|2|7.2||1°producto||1|
-88|kinder 12.5g|4|80050315|5|3.6||1°producto||1|
+87|kinder maxi 21g|8|80050094|9|7.2|ferrero/kinder|1°producto||10|
+88|kinder 12.5g|4|80050315|3|3.6||1°producto||1|
 89|huevo kinder niña(o) 20g|20|80051121|8|18|kinder|1°producto||1|
 90|nutella 200g|40|80051671|1|36||1°producto||1|
 91|huevo kinder animalitos 20g|20|80051831|10|18||1°producto||1|
-92|kinder bueno 43g|20|80052760|2|18||1°producto||1|
+92|kinder bueno 43g|20|80052760|5|18|kinder|1°producto||1|
 93|huevo kinder dino 20g|20|80135692|7|16|kinder|1°producto||1|
 94|tic tac menta 16g|8|80863496|5|0|ferrero/kinder|1°producto||1|
-95|huevo kinder dora 20g|20|80892816|2|18||1°producto||1|
-96|tic tac coca 14.5g|8|80996521|0|6|tictac|1°producto||1|
+95|kinder masha&oso 20g|20|80892816|2|16.01|ferrero/kinder|1°producto||1|
+96|tic tac coca 14.5g|8|80996521|-1|6|tictac|1°producto||1|
 97|sedalmerk 500mg|6|3467470001|0|1|sedalmerk|1°producto||1|
 98|chicharron saldaña|8|3805565154|6|7.2||1°producto||1|
 99|fina variedad galleta|20|14437002278|0|15|gabi|1°producto||1|
@@ -103,31 +103,31 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 102|tueni pop paleta caramelo suave sabores 13.93|2|18804051890|0|1|canels|1°producto||1|
 103|palenetas fresa/cereza 13.9|2|18804053764|0|1|canel´s|1°producto||1|
 104|chiclosos la viquita|2|18804054945|0|0|la vaquita|1°producto||1|
-105|orbit americano 16.2g|8|22000279033|-8|0|orbit|1°producto||1|
+105|orbit americano 16.2g|8|22000279033|1|0|orbit|1°producto||1|
 106|cosecha pura mango 200ml|5|24474393444|10|0|pepsi|1°producto||1|
 107|cosecha pura durazno 200ml|5|24474393536|10|0|pepsi|1°producto||1|
 108|del valle mango 413ml|14|32239052000|1000|10.5|coca|1°producto||1|
 109|del valle durazno 413ml|14|32239052017|10|10.5|coca|1°producto||1|
-110|sal la fina 1kg|12|34587030013|10|10.8|la fina|1°producto||1|
-111|gatorade naranja 350ml|10|36731103512|10|9|pepsi|1°producto||1|
+110|sal la fina 1kg|12|34587030013|9|10.8|la fina|1°producto||1|
+111|gatorade naranja 350ml|10|36731103512|8|9|pepsi|1°producto||1|
 112|gatorade lima limon 350ml|10|36731103536|10|9|pepsi|1°producto||1|
 113|gatorade naranja 600ml|22|36731106018|10|18.9|pepsi|1°producto||1|
 114|gatorade limonada 600ml|22|36731106025|10|18.9|pepsi|1°producto||1|
-115|gatorade lima limon 600ml|22|36731106032|10|18.9|pepsi|1°producto||1|
-116|gatorade uva 600ml|22|36731106049|10|18.9|pepsi|1°producto||1|
+115|gatorade lima limon 600ml|22|36731106032|9|18.9|pepsi|1°producto||1|
+116|gatorade uva 600ml|22|36731106049|9|18.9|pepsi|1°producto||1|
 117|gatorade ponche de frutas 600ml|22|36731106063|10|18.9|pepsi|1°producto||1|
 118|gatorade fresa zandia 600ml|22|36731106186|0|18.9|pepsi|1°producto||1|
 119|gatorade blue thonder 500ml|19|36731135919|10|0|pepsi|1°producto||1|
 120|gatorade mora azul 600ml|22|36731136916|10|18.9|pepsi|1°producto||1|
-121|gatorade naranja 1lt|28|36731321008|10|23.4|pepsi|1°producto||1|
+121|gatorade naranja 1lt|28|36731321008|9|23.4|pepsi|1°producto||1|
 122|gatorade limonada 1lt|28|36731322005|10|23.4|pepsi|1°producto||1|
-123|gatorade lima limon 1lt|28|36731323002|10|23.4|pepsi|1°producto||1|
-124|gatorade uva 1lt|28|36731324009|10|23.4|pepsi|1°producto||1|
-125|gatorade ponche de frutas 1lt|28|36731326003|10|23.4|pepsi|1°producto||1|
+123|gatorade lima limon 1lt|28|36731323002|9|23.4|pepsi|1°producto||1|
+124|gatorade uva 1lt|28|36731324009|8|23.4|pepsi|1°producto||1|
+125|gatorade ponche de frutas 1lt|28|36731326003|8|23.4|pepsi|1°producto||1|
 126|gatorade fresandia 1lt|28|36731328007|10|23.4|pepsi|1°producto||1|
 127|gatorade limonada 500ml|18|36731502001|0|0|pepsi|1°producto||1|
-128|gatorade ponche frutas 500ml|18|36731506009|0|0|pepsi|1°producto||1|
-129|agua skarch 1Lt|6|40232838699|7|5.4|skarch|1°producto||1|
+128|gatorade ponche frutas 500ml|18|36731506009|-1|0|pepsi|1°producto||1|
+129|agua skarch 1Lt|6|40232838699|8|5.4|skarch|1°producto||1|
 130|titan mandarina 3lts|25|40232886652|2|22.5|red cola|1°producto||1|
 131|titan piña 3 lts|25|40232886669|1000|22.5|red cola|1°producto||1|
 132|titan manzana 3lts|25|40232886676|1000|22.5|red cola|1°producto||1|
@@ -141,83 +141,83 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 140|titan piña 600ml|10|40232886805|2|9|red cola|1°producto||1|
 141|titan manzana 600ml|10|40232886812|3|9|red cola|1°producto||1|
 142|pila AAA duracel|19|41333666426|1|0|salma|1°producto||1|
-143|maruchan cama/limonyhaba|10|41789001864|8|9|maruchan|1°producto||1|
+143|maruchan cam/limon/haba|12.5|41789001864|8|9|maruchan|1°producto||1|
 144|maruchan pollo64g|12.5|41789001918|0|0|maruchan|1°producto||1|
 145|maruchan res|10|41789001925|3|9|maruchan|1°producto||1|
-146|maruchan camaron|10|41789001956|3|9|maruchan|1°producto||1|
-147|maruchan cama/chilepiqui|10|41789001987|5|9|maruchan|1°producto||1|
-148|rastrillo bic confort 3 hojas|12|70330724341|-5|10|bic|1°producto||10|
+146|maruchan camaron|10|41789001956|1|9|maruchan|1°producto||1|
+147|maruchan cama/chilepiqui|10|41789001987|4|9|maruchan|1°producto||1|
+148|rastrillo bic confort 3 hojas|12|70330724341|10|10|bic|1°producto||10|
 149|cajeta quemada coronado 370gr|36|74323083651|6|32.4|coronado|1°producto||1|
 150|frijoles con choriso 430g|15|78883240547|0|0|la sierra|1°producto||1|
 151|jack daniels aple|30|82184000984|1000|27|jack daniels|1°producto||1|
 152|jack daniel ginger|30|82184038338|1000|27|jack daniels|1°producto||1|
 153|tecate original laton 473ml|18|89826001415|124|15.3|indio|1°producto||24|
-154|salsa valentina 1L amarilla|25|97339000030|-2|23|valentina|1°producto||1|
+154|salsa valentina 1L amarilla|25|97339000030|0|23|valentina|1°producto||1|
 155|valentina amarilla 370ml|15|97339000054|1000|9|valentina|1°producto||1|
 156|valentina negra 370ml|10|97339000061|1000|9|valentina|1°producto||1|
 157|papel higienico premier 4pz|26.5|99072000674|0|0|premier|1°producto||1|
-158|choco huevo sorpresa12g|15|603554102017|6|12|las delicias|1°producto||1|
-159|skarch 10L|26|606110023924|7|23.4|skarch|1°producto||1|
+158|choco huevo sorpresa12g|15|603554102017|10|12|las delicias|1°producto||1|
+159|skarch 10L|26|606110023924|6|23.4|skarch|1°producto||1|
 160|red-cola 355ml|6|606110024006|24|5.4|red-cola|1°producto||1|
-161|arizona mucho mango 680ml|13|613008738808|1000|11.7|arizona|1°producto||1|
-162|arizona kiwi con fresa 680ml|14|613008738822|1|11.7|arizona|1°producto||1|
-163|arizona sandia 680ml|14|613008738846|2|11.7|arizona|1°producto||1|
-164|arizona ponche de frutas 680ml|14|613008738860|999|11.7|arizona|1°producto||1|
-165|arizona te verde 680ml|14|613008738884|4|11.7||1°producto||1|
+161|arizona mucho mango 680ml|13|613008738808|996|11.7|arizona|1°producto||1|
+162|arizona kiwi con fresa 680ml|14|613008738822|0|11.7|arizona|1°producto||1|
+163|arizona sandia 680ml|14|613008738846|1|11.7|arizona|1°producto||1|
+164|arizona ponche de frutas 680ml|14|613008738860|993|11.7|arizona|1°producto||1|
+165|arizona te verde 680ml|14|613008738884|3|11.7||1°producto||1|
 166|delicias350g|20|615380000122|0|0|delocias|1°producto||1|
-167|donitas totis 50g|12|643795541244|10|0|la costeña|1°producto||1|
-168|totis palitos chile y limòn 25g|6|643795549271|0|5.4|costeña|1°producto||1|
+167|donitas totis 50g|12|643795541244|9|0|la costeña|1°producto||1|
+168|totis palitos chile y limòn 25g|6|643795549271|-1|5.4|costeña|1°producto||1|
 169|NEXT 10 tabletas|1.5|650240010538|0|0|next|1°producto||1|
 170|alliviax 10 tabletas|10.5|650240013805|0|0|alliviax|1°producto||1|
 171|mini snikers 9g|3.5|706460200164|104|0|snikers|1°producto||52|
-172|sky arandano|20|721059712750|1000|18|sky|1°producto||1|
+172|sky arandano|20|721059712750|997|18|sky|1°producto||1|
 173|skyblue granada|20|721059722759|1000|18|sky|1°producto||1|
-174|lucas gusano 36g|7|725181035075|0|3|orbit|1°producto||1|
+174|lucas gusano 36g|7|725181035075|-1|3|orbit|1°producto||1|
 175|skwinkles rellenos 26g|7|725181207016|0|3.5|orbit|1°producto||1|
-176|skwinkles salsagheti 24g|7|725181249016|0|3|orbit|1°producto||1|
+176|skwinkles salsagheti 24g|7|725181249016|-1|3|orbit|1°producto||1|
 177|fregon 1pz|8.5|726866050415|0|0|fregon|1°producto||1|
 178|gelatina dgari cereza 120gr|8|735257002445|1000|7.2|dgari|1°producto||1|
 179|gelatina uva 120g|11|735257002452|0|0|dgari|1°producto||1|
 180|gelatina dgari piña 120gr|8|735257002469|1|7.2|dgari|1°producto||1|
 181|gelatina dgari naranja 120gr|8|735257002476|1|7.2|dgari|1°producto||1|
 182|gelatina mandarina 120g|11|735257002483|0|0|dgari|1°producto||1|
-183|gelatina limon dgari 120g|11|735257002490|0|0|dgari|1°producto||1|
+183|gelatina limon dgari 120g|11|735257002490|3|0|casa vargas|1°producto||1|
 184|gelatina dgari jerez 120gr|8|735257002506|2|7.2|dgari|1°producto||1|
-185|gelatina fresa 120g|11|735257002513|0|0|dgari|1°producto||1|
+185|gelatina fresa 120g|11|735257002513|-1|0|dgari|1°producto||1|
 186|gelatina dgari frambuesa 120gr|8|735257002520|1000|7.2|dgari|1°producto||1|
-187|gelatina dgari durazno 120g|8|735257002537|1000|7.2|dgari|1°producto||1|
+187|gelatina dgari durazno 120g|8|735257002537|999|7.2|dgari|1°producto||1|
 188|gelatina manzana 120g|11|735257002568|0|0|dgari|1°producto||1|
 189|gelatina dgari anis 120gr|8|735257002575|1000|7.2|dgari|1°producto||1|
 190|gelatina dgari mango 120gr|8|735257002582|3|7.2|dgari|1°producto||1|
 191|gelatina dgari rompope 120gr|8|735257002629|1|7.2|dgari|1°producto||1|
 192|d`gari vainilla gelatina 120g|9|735257002636|1|8.1|dgari|1°producto||1|
-193|d`gari chocolate 120g|9|735257002650|1|8.1|dgari|1°producto||1|
+193|d`gari chocolate 120g|9|735257002650|4|8.1|casa vargas|1°producto||1|
 194|gelatina dgari nuez 120gr|8|735257002667|2|7.2|dgari|1°producto||1|
 195|flan vainilla dgari 88g|12.5|735257002889|0|0|gari|1°producto||1|
 196|flan vainilla 140g|8|735257005019|1|7.2|dgari|1°producto||1|
-197|salsa la botanera 956ml|20|738545010016|5|18|la botanera|1°producto||1|
-198|salsa botanera 1.400L|28|738545010559|0|25|botanera|1°producto||1|
+197|salsa la botanera 956ml|20|738545010016|8|18|casa vargas|1°producto||1|
+198|salsa botanera 1.400L|28|738545010559|-1|25|botanera|1°producto||1|
 199|esponja multiusos fibra|10|741120000296|1|9||1°producto||1|
-200|tonayan 440ml|17|744293160354|0|0|tonayan|1°producto||1|
-201|tonayan 1L|32|744293160361|0|0|tonayan|1°producto||1|
+200|tonayan 440ml|22.5|744293160354|2|0|casa vargas|1°producto||1|
+201|tonayan 1L|42|744293160361|3|0|casa vargas|1°producto||1|
 202|tequila herradura 700ml|700|744607002103|0|0|herradura|1°producto||1|
 203|new mix vampiro|18|744607588805|1000|16.2|el jimador|1°producto||1|
 204|skyblue citrus|20|744607696012|1000|18|sky|1°producto||1|
 205|new mix paloma|18|744607840804|1000|16.2|el jimador|1°producto||1|
 206|sidral aga 2lt|19|744886193059|5|17.1|red cola|1°producto||1|
-207|zubba 600ml|12|744886225231|19|8.1|zubba|1°producto||1|
-208|zubba 2lts|19|744886522057|13|17.1|zubba|1°producto||4|
+207|zubba 600ml|12|744886225231|18|8.1|zubba|1°producto||1|
+208|zubba 2lts|19|744886522057|12|17.1|zubba|1°producto||4|
 209|paletonn  20g|5|745404566317|0|0|paleton|1°producto||1|
 210|charroncitos charras|12|756702134108|6|10.8||1°producto||1|
 211|chips queso jalapeño 60g|9|756702134344|1000|8.1|barcel|1°producto||1|
-212|tostadas charras 300g|22|756702134719|10|0|charras|1°producto||1|
-213|conejo chocolate  20g|12|756774011567|1|0|turin|1°producto||1|
-214|chocolate turin18g|15|756774011727|0|12|turin|1°producto||1|
+212|tostadas charras 300g|22|756702134719|6|0|charras|1°producto||1|
+213|conejo chocolate  20g|12|756774011567|-4|0|turin|1°producto||1|
+214|chocolate turin18g|15|756774011727|-1|12|turin|1°producto||1|
 215|chocolate turin amargo 18g|15|756774011734|0|12|turin|1°producto||1|
 216|hot nuts fuego|10|757528001742|2|9||1°producto||1|
-217|chips fuego 170g|37|757528001889|1|31.5|barcel|1°producto||1|
+217|chips fuego 170g|37|757528001889|0|31.5|barcel|1°producto||1|
 218|churritos 50g|8|757528002022|0|7|barcel|1°producto||1|
-219|papatinas fuego 25g|8|757528020859|10|0|barcel|1°producto||1|
+219|papatinas fuego 25g|8|757528020859|8|0|barcel|1°producto||1|
 220|golden nuts pepitas 28g|11|757528020897|3|9.9||1°producto||1|
 221|bubulubu dark 35g|9|757528021757|10|0|ricolino|1°producto||1|
 222|bubulubu frost 35g|10|757528023461|0|0|ricolino|1°producto||1|
@@ -229,8 +229,8 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 228|gomilocas hamburguesas|10|757528029616|1|9|ricolino|1°producto||1|
 229|gomilocas pingûinos|10|757528029623|2|9|ricolino|1°producto||1|
 230|kranky|10|757528029630|5|9|ricolino|1°producto||1|
-231|moritas ricolino|10|757528029647|1|9|ricolino|1°producto||1|
-232|panditas clasicas|10|757528029654|3|9|ricolino|1°producto||1|
+231|moritas ricolino|10|757528029647|0|9|ricolino|1°producto||1|
+232|panditas clasicas|10|757528029654|1|9|ricolino|1°producto||1|
 233|panditas saboracido|10|757528029661|3|9|ricolino|1°producto||1|
 234|panditas rellenas|10|757528029678|4|9|ricolino|1°producto||1|
 235|panditas rojos|10|757528029685|4|9|ricolino|1°producto||1|
@@ -250,75 +250,75 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 249|wapas queso loco 50g|10|757528035778|0|9|barcel|1°producto||1|
 250|wapas salsa negra 50g|10|757528035839|0|9|barcel|1°producto||1|
 251|golden nuts enchilados 60g|12|757528035860|2|10.8||1°producto||1|
-252|hot nuts original 75g|10|757528035877|4|9||1°producto||1|
+252|hot nuts original 75g|10|757528035877|3|9||1°producto||1|
 253|hot nuts fuego 75g|10|757528035884|0|0|hot nuts|1°producto||1|
-254|kiyakis clasico 75g|10|757528035891|0|0|kiyakis|1°producto||1|
-255|chips a la diabla 46g|12|757528036447|1000|10.8|barcel|1°producto||1|
+254|kiyakis clasico 75g|10|757528035891|-1|0|kiyakis|1°producto||1|
+255|chips a la diabla 46g|12|757528036447|999|10.8|barcel|1°producto||1|
 256|chips adobadas 46g|12|757528036454|1000|10.8|barcel|1°producto||1|
 257|chips fuego 46g|12|757528036461|1000|10.8|barcel|1°producto||1|
-258|chips jalapeño 46g|12|757528036478|9|10.8|barcel|1°producto||1|
-259|chips sal de mar 46g|12|757528036492|2|10.8|barcel|1°producto||1|
-260|valentones fuego 60g|10|757528036638|3|9||1°producto||1|
-261|bigmix queso 65g|10|757528038298|2|9||1°producto||1|
+258|chips jalapeño 46g|12|757528036478|7|10.8|barcel|1°producto||1|
+259|chips sal de mar 46g|12|757528036492|1|10.8|barcel|1°producto||1|
+260|valentones fuego 60g|10|757528036638|2|9||1°producto||1|
+261|bigmix queso 65g|10|757528038298|0|9||1°producto||1|
 262|bigmix fuego 65g|10|757528038618|1|9||1°producto||1|
 263|takis limbo 56g|10|757528038656|1000|9|barcel|1°producto||1|
-264|chips a la diabla 45g|13|757528038748|2|11.7||1°producto||1|
+264|chips a la diabla 45g|13|757528038748|1|11.7||1°producto||1|
 265|chips adobadas 45g|13|757528038755|2|11.7||1°producto||1|
 266|chips fuego 46g|13|757528038762|9|11.7||1°producto||1|
-267|kranki puff 40g|10|757528039042|0|0|ricolino|1°producto||1|
+267|kranki puff 40g|10|757528039042|-2|0|ricolino|1°producto||1|
 268|chocoretas 50g|10|757528039073|0|0|ricolino|1°producto||1|
 269|gomitas dulci 59.5g|10|757528039080|0|0|ricolino|1°producto||1|
-270|gomitas dientes 55g|10|757528039097|0|0|ricolino|1°producto||1|
+270|gomitas dientes 55g|10|757528039097|-1|0|ricolino|1°producto||1|
 271|gomita pinguino 55g|10|757528039103|0|0|ricolino|1°producto||1|
-272|kranki 50g|10|757528039110|0|0|ricolino|1°producto||1|
+272|kranki 50g|10|757528039110|-6|0|ricolino|1°producto||1|
 273|moritas 50g|10|757528039127|0|0|ricolino|1°producto||1|
-274|panditas clasicos 52.5g|10|757528039134|0|0|ricolino|1°producto||1|
-275|panditas acidos 52.5g|10|757528039141|0|0|ricolino|1°producto||1|
+274|panditas clasicos 52.5g|10|757528039134|-1|0|ricolino|1°producto||1|
+275|panditas acidos 52.5g|10|757528039141|-6|0|ricolino|1°producto||1|
 276|gomitas enchiladas 55g|10|757528039158|10|0|ricolino|1°producto||1|
 277|panditas rellenos 54g|10|757528039172|0|0|ricolino|1°producto||1|
 278|panditas rojos 52.5g|10|757528039189|0|0|ricolino|1°producto||1|
 279|pasitas chocolate 50g|10|757528039196|0|0|ricolino|1°producto||1|
-280|almendras chocolate 30g|10|757528039240|0|0|ricolino|1°producto||1|
+280|almendras chocolate 30g|10|757528039240|-1|0|ricolino|1°producto||1|
 281|gomitas hamburguesa 56g|10|757528039257|0|0|ricolino|1°producto||1|
-282|big mix jalapeño 65g|10|757528039516|0|9|barcel|1°producto||1|
-283|big mix clasico 65g|10|757528039523|0|9|barcel|1°producto||1|
+282|big mix jalapeño 65g|10|757528039516|-1|9|barcel|1°producto||1|
+283|big mix clasico 65g|10|757528039523|-3|9|barcel|1°producto||1|
 284|runers 54g|8|757528039561|4|7.2||1°producto||1|
-285|toreadas chile/habane 38g|13|757528039578|6|11.7||1°producto||1|
+285|toreadas chile/habane 38g|13|757528039578|3|11.7||1°producto||1|
 286|takis salsa brava 65g|11|757528039950|6|9.9||1°producto||1|
 287|takis original|11|757528039967|5|9.9||1°producto||1|
 288|takis fuego 65g|11|757528039974|24|9.9||1°producto||1|
 289|takis huakamole 65g|11|757528039981|0|10|barcel|1°producto||1|
 290|takis salsa brava 60g|11|757528040239|0|10|barcel|1°producto||1|
-291|panditas mango chamoy 54g|10|757528040253|0|0|ricolino|1°producto||1|
+291|panditas mango chamoy 54g|10|757528040253|-1|0|ricolino|1°producto||1|
 292|obleas 14g|3|757528041311|0|2|coca|1°producto||1|
 293|takis origina 68g|12|757528042400|0|10|barcel|1°producto||1|
-294|takis fuego 68g|12|757528042417|0|7|barcel|1°producto||1|
-295|takis wakamole 78g|12|757528042424|10|0|barcel|1°producto||1|
+294|takis fuego 68g|12|757528042417|-10|7|barcel|1°producto||1|
+295|takis wakamole 78g|12|757528042424|8|0|barcel|1°producto||1|
 296|takis salsa brava 78g|12|757528042431|10|0|barcel|1°producto||1|
-297|chips adobadas 46g|13|757528043841|0|11|barcel|1°producto||1|
-298|chips fuego 46g|13|757528043858|0|11|barcel|1°producto||1|
-299|chips jalapeño 46g|13|757528043865|0|11|barcel|1°producto||1|
-300|chips sal 46g|13|757528043872|0|11|barcel|1°producto||1|
+297|chips adobadas 46g|13|757528043841|-2|11|barcel|1°producto||1|
+298|chips fuego 46g|13|757528043858|-2|11|barcel|1°producto||1|
+299|chips jalapeño 46g|13|757528043865|-1|11|barcel|1°producto||1|
+300|chips sal 46g|13|757528043872|-1|11|barcel|1°producto||1|
 301|mini takis fuego 28g|5|757528044008|0|4|barcel|1°producto||1|
 302|golden nuyts enchilados|10|757528044145|0|0|golden nuts|1°producto||1|
 303|goldenm nuts|10|757528044152|0|0|golden nuts|1°producto||1|
 304|wapas|10|757528044237|0|0||1°producto||1|
-305|agua bonafont 1.5Lts|16|758104000159|3|15.3||1°producto||1|
+305|agua bonafont 1.5Lts|16|758104000159|0|15.3||1°producto||1|
 306|bonafont levite 1.5 limon|16|758104001460|2|14.4|bonafont|1°producto||1|
-307|bonafont agua 600ml|8|758104001712|23|7.2||1°producto||1|
-308|bonafon 2lt|18|758104001972|0|0|bonafon|1°producto||1|
+307|bonafont agua 600ml|8|758104001712|15|7.2||1°producto||1|
+308|bonafon 2lt|18|758104001972|-1|0|bonafon|1°producto||1|
 309|agua bonafon 6lt|30|758104003174|0|0|bonafon|1°producto||1|
-310|agua bonafon 4lt|23|758104003938|0|0|bonafon|1°producto||1|
+310|agua bonafon 4lt|23|758104003938|-1|0|bonafon|1°producto||1|
 311|bonafont levite 600 coco|10|758104006519|3|9|bonafont|1°producto||1|
-312|bonafont levite 1 lt coco|13|758104006526|1000|11.7|bonafont|1°producto||1|
+312|bonafont levite 1 lt coco|15|758104006526|999|11.7|bonafont|1°producto||1|
 313|levite bonafont 1.5 piña coco|16|758104006533|10|14.4|bonafont|1°producto||1|
-314|bonafont levite 600 pepino limon|10|758104006618|2|9|bonafont|1°producto||1|
-315|bonafont levite limon-pepino 1lt|13|758104006625|4|11.7|bonafont|1°producto||1|
+314|bonafont levite 600 pepino limon|10|758104006618|0|9|bonafont|1°producto||1|
+315|bonafont levite limon-pepino 1lt|13|758104006625|2|11.7|bonafont|1°producto||1|
 316|agua bona pepino/limon 1ltr|13|758104006632|1|11.7||1°producto||1|
-317|bonafont levite 600 fresa|10|758104006649|6|9|bonafont|1°producto||1|
-318|agua fresa 1L|13|758104006656|5|11.7||1°producto||1|
+317|bonafont levite 600 fresa|10|758104006649|3|9|bonafont|1°producto||1|
+318|agua fresa 1L|13|758104006656|3|11.7||1°producto||1|
 319|bonafont levite 1.5 fresa|17|758104006663|4|14.4|bonafont|1°producto||1|
-320|bonafont levite 1 lt limon|13|758104006724|3|11.7|bonafont|1°producto||1|
+320|bonafont levite 1 lt limon|15|758104006724|1|11.7|bonafont|1°producto||1|
 321|agua levite limon 1.5 L|17|758104006731|8|15.3||1°producto||1|
 322|bonafont levite 600jamaica|10|758104006779|2|9|bonafont|1°producto||1|
 323|levite bonafont 1.5 jamaica|17|758104006793|1|14.4|bonafont|1°producto||1|
@@ -326,15 +326,15 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 325|agua fresa liche 1.5L|17|758104006922|10|0|bonafont|1°producto||1|
 326|bonafont piña/coco 1L|13|758104007097|3|11.7||1°producto||1|
 327|bonafon levite frutos rojos 1lt|13|758104007318|0|0|bonafon|1°producto||1|
-328|levite sandia limon 1L|13|758104007455|10|0|bonafont|1°producto||1|
+328|levite sandia limon 1L|13|758104007455|9|0|bonafont|1°producto||1|
 329|juizzy naranja 2L|20|758104007684|10|0|bonafont|1°producto||1|
-330|agua bonafont 1L|11|758104100422|4|9||1°producto||1|
+330|agua bonafont 1L|11|758104100422|-17|9||1°producto||1|
 331|pomada labial manzana3g|5|759684391101|0|0|jaloma|1°producto||1|
 332|pomada para labios piña|5|759684391156|0|0|ómada labial|1°producto||1|
-333|sabro leche 1L|11|781159053849|24|0|red cola|1°producto||6|
-334|agua skarch 600ml|5|793573264091|9|3.6|skarch|1°producto||1|
+333|sabro leche 1L|11|781159053849|109|0|red cola|1°producto||24|
+334|agua skarch 600ml|5|793573264091|5|3.6|skarch|1°producto||1|
 335|agua skarch 1.5l|7|793573264107|10|6.3|skarch|1°producto||1|
-336|red cola 3lts|25|793573950079|16|20.7|red-cola|1°producto||1|
+336|red cola 3lts|25|793573950079|10|20.7|red-cola|1°producto||1|
 337|cepillo clinic|12|798136320061|7|10.8||1°producto||1|
 338|paleta guanamango 9g|1|798190122939|0|0.5|guna|1°producto||1|
 339|predador enegy 473ml|15|815154022705|0|0|coca|1°producto||1|
@@ -343,37 +343,37 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 342|four loko black 473ml|35|849806002005|3|31.5|four loko|1°producto||1|
 343|encendedor|8|852812005106|0|0|enmcendedor|1°producto||1|
 344|cepillodental|20|3014260846725|2|18||1°producto||1|
-345|encendedor bic|15|3086123397835|1|0|bic|1°producto||1|
-346|encendedor big|15|3086126788722|0|0|encendedor|1°producto||1|
+345|encendedor bic|15|3086123397835|-1|0|bic|1°producto||1|
+346|encendedor big|15|3086126788722|-1|0|encendedor|1°producto||1|
 347|cigarro winston capsula menta 20'|54|4033100076428|0|49|camel|1°producto||1|
-348|stella artois lager 250ml|16|5410228240945|-5|14.4||1°producto||1|
+348|stella artois lager 250ml|16|5410228240945|1|14.4||1°producto||1|
 349|skyblue manzana verde|20|6648040012900|1000|18|sky|1°producto||1|
 350|cepillo colgate|12|6910021007206|5|10.8||1°producto||1|
 351|foco chiyoda plus 100w|10|7404005961329|1000|9|chiyoda|1°producto||1|
 352|quitaesmalte aroma fresco 100ml|10|7500093748566|0|0|esmalte|1°producto||1|
 353|creamies|16|7500093757216|0|12|altea|1°producto||1|
-354|lobo plateado tequila 1L|70|7500327041401|0|0|lobo plateado|1°producto||1|
+354|lobo plateado tequila 1L|70|7500327041401|-10|0|lobo plateado|1°producto||1|
 355|totis churritos chile y limòn 55g|6|7500366000513|4|5.4|la costeña|1°producto||1|
 356|chicharrones totis chile/limon|6|7500366000582|2|5.4||1°producto||1|
-357|totis pap`s clasicas 170g|32|7500366000629|1|14.4|la costeña|1°producto||1|
-358|totis pap`s adobadas 170g|22|7500366000643|1|14.4|la costeña|1°producto||1|
+357|totis pap`s clasicas 170g|32|7500366000629|0|14.4|la costeña|1°producto||1|
+358|totis pap`s adobadas 170g|32|7500366000643|0|14.4|la costeña|1°producto||1|
 359|que totis queso/chedar120g|6|7500366000704|2|5.4||1°producto||1|
-360|totis donitas limôn y sal 28g|7|7500366000711|2|5.4|la costeña|1°producto||1|
-361|totis donitas chile y limon 28g|6|7500366000728|3|5.4|la costeña|1°producto||1|
+360|totis donitas limôn y sal 28g|7|7500366000711|1|5.4|la costeña|1°producto||1|
+361|totis donitas chile y limon 28g|6|7500366000728|2|5.4|la costeña|1°producto||1|
 362|que totis queso chedar 25g|7|7500366000742|4|5.4|la costeña|1°producto||1|
-363|pap`s clasicas 40g|11|7500366000766|9|9.9|la costeña|1°producto||1|
+363|pap`s clasicas 40g|11|7500366000766|8|9.9|la costeña|1°producto||1|
 364|pap`s adobadas|11|7500366000773|9|9.9|la costeña|1°producto||1|
 365|top tops nacho 52g|11|7500366000780|10|0|la costeña|1°producto||1|
-366|toptop`s hot chili52g|11|7500366000797|5|6.3||1°producto||1|
-367|pap`s hot chili|14|7500366001282|4|9.9||1°producto||1|
-368|pap`s onduladas queso|11|7500366001350|6|9.9|la costeña|1°producto||1|
+366|toptop`s hot chili52g|11|7500366000797|2|6.3||1°producto||1|
+367|pap`s hot chili|14|7500366001282|-3|9.9||1°producto||1|
+368|pap`s onduladas queso|11|7500366001350|5|9.9|la costeña|1°producto||1|
 369|pap`s onduladas c/sal|11|7500366001381|4|9.9||1°producto||1|
-370|pap`s hot chili 40g|11|7500366001497|4|9.9||1°producto||1|
-371|pap`s original 70g|14|7500366001749|5|9.9||1°producto||1|
-372|pap`s adobadas|14|7500366001756|5|9.9|la costeña|1°producto||1|
+370|pap`s hot chili 40g|11|7500366001497|1|9.9||1°producto||1|
+371|pap`s original 70g|14|7500366001749|4|9.9||1°producto||1|
+372|pap`s adobadas|14|7500366001756|3|9.9|la costeña|1°producto||1|
 373|pap`s habanero 40g|11|7500366001763|4|9.9||1°producto||1|
-374|toptop`s salsa negra 52g|11|7500366001824|5|6.3||1°producto||1|
-375|totopos 280g|22|7500366002241|0|0|costeña|1°producto||1|
+374|toptop`s salsa negra 52g|11|7500366001824|4|6.3||1°producto||1|
+375|totopos 280g|22|7500366002241|-1|0|costeña|1°producto||1|
 376|cacahuate japones nipon 50g|8|7500366002500|40|4|la costeña|1°producto||1|
 377|mueganos  40g|5|7500366002999|0|0|nipon|1°producto||1|
 378|palomitas unicornio 20g|7|7500366003897|10|0|la costeña|1°producto||1|
@@ -387,136 +387,136 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 386|downy libre enjuague elegance|27|7500435126045|3|24.3||1°producto||1|
 387|ariel revita color|20|7500435139977|1|18||1°producto||1|
 388|ariel revita color 850g|36|7500435153331|0|0|ariel|1°producto||1|
-389|salvo polvo 500g|18|7500435160902|1|0|salvo|1°producto||1|
-390|vuala cajeta|12|7500464333803|0|0|vuala|1°producto||1|
+389|salvo polvo 500g|18|7500435160902|0|0|salvo|1°producto||1|
+390|vuala cajeta|14|7500464333803|-2|0|vuala|1°producto||1|
 391|cremax chocolate 171g|22|7500478002801|0|20|gamesa|1°producto||1|
-392|arena magica|15|7500478003457|0|0|inspireca|1°producto||1|
-393|crakets 135g|13|7500478005512|0|11|gamesa|1°producto||1|
-394|crakets 95g|11|7500478005635|0|9|gamesa|1°producto||1|
+392|arena magica|15|7500478003457|-2|0|inspireca|1°producto||1|
+393|crakets 135g|13|7500478005512|-1|11|gamesa|1°producto||1|
+394|crakets 95g|11|7500478005635|-1|9|gamesa|1°producto||1|
 395|chetos flamin hot 106g|15|7500478006175|0|12|sabritas|1°producto||1|
-396|rufles original 53g|12|7500478007950|3|10.8||1°producto||1|
-397|ruffles salsa roja 53g|12|7500478007967|2|10.8|sabritas|1°producto||1|
-398|ruffles jalapeño 50g|12|7500478007974|5|10.8|sabritas|1°producto||1|
+396|rufles original 53g|12|7500478007950|2|10.8||1°producto||1|
+397|ruffles salsa roja 53g|12|7500478007967|6|10.8|sabritas|1°producto||1|
+398|ruffles jalapeño 50g|12|7500478007974|-1|10.8|sabritas|1°producto||1|
 399|chokis clasica 38g|8|7500478008247|0|7|gamesa|1°producto||1|
 400|chokis 57g|10|7500478008926|1000|9|gamesa|1°producto||1|
 401|karate enchilados 49g|8|7500478009152|0|0|sabritas|1°producto||1|
-402|galletas marias 177g|12|7500478010592|0|10|gamesa|1°producto||1|
+402|galletas marias 177g|12|7500478010592|-2|10|gamesa|1°producto||1|
 403|sab poppers original 33g|10|7500478011995|1|9||1°producto||1|
 404|sab poppers limon/chile 33g|10|7500478012008|1|9||1°producto||1|
 405|kakang flamin hot 125g|15|7500478012787|0|0|sabritas|1°producto||1|
 406|churrumais flamas 55g|7|7500478012817|8|6.3|sabritas|1°producto||1|
 407|emperador chocolate 91g|12|7500478013647|0|10|gamesa|1°producto||1|
 408|emperador vainilla 91g|12|7500478013654|0|10|gamesa|1°producto||1|
-409|emperador nocturno 91g|12|7500478013685|0|10|gamesa|1°producto||1|
+409|emperador nocturno 91g|12|7500478013685|-1|10|gamesa|1°producto||1|
 410|chokis clasica 180.5g|22|7500478013944|0|20|gamesa|1°producto||1|
 411|rufles ultra 130g|24|7500478014460|10|0|sabritas|1°producto||1|
 412|emperador pirueta 96g|12|7500478014477|0|10|gamesa|1°producto||1|
 413|emperador piruetas 57g|8|7500478014521|0|6|gamesa|1°producto||1|
-414|chokis clasica 76g|12|7500478014569|0|10|gamesa|1°producto||1|
+414|chokis clasica 76g|12|7500478014569|-1|10|gamesa|1°producto||1|
 415|chetos poffs 38g|9|7500478014606|0|7|sabritas|1°producto||1|
 416|surtido rico|43|7500478014651|0|40|gamesa|1°producto||1|
-417|chetos bolita 42g|9|7500478015047|0|7|sabritas|1°producto||1|
+417|chetos bolita 42g|9|7500478015047|-5|7|sabritas|1°producto||1|
 418|emperador combinado 200g|22|7500478015085|0|20|gamesa|1°producto||1|
 419|emperador piruetas 211g|22|7500478015108|0|20|gamesa|1°producto||1|
-420|emperador chocolate 200g|22|7500478015238|0|20|gamesa|1°producto||1|
-421|churrumais con limoncito 64g|9|7500478016587|0|7|sabritas|1°producto||1|
+420|emperador chocolate 200g|22|7500478015238|-1|20|gamesa|1°producto||1|
+421|churrumais con limoncito 64g|9|7500478016587|-6|7|sabritas|1°producto||1|
 422|karate salsa negra picante 51g|8|7500478018338|0|0|sabritas|1°producto||1|
 423|doritos dinamita 75g|10|7500478018512|10|0|sabritas|1°producto||1|
 424|kakang chile limon|10|7500478019557|0|0|sabritas|1°producto||1|
 425|kacang sal limon 63g|15|7500478019564|0|0|sabritas|1°producto||1|
-426|cacahuates sal y limon 66g|10|7500478022762|1|0|sabritas|1°producto||1|
-427|cacahuate japones 150g|15|7500478023295|2|12|sabritas|1°producto||1|
-428|cacahuate japones 75g|10|7500478023516|20|7.91|sabritas|1°producto||1|
-429|dalmata 55g|8|7501000103034|0|0|wonder|1°producto||1|
-430|pan blanco 360gCh|23|7501000111091|2|20.7||1°producto||1|
-431|tortillinas tia rosa 10pzs 255g|14|7501000111251|2|11.7||1°producto||1|
-432|tortillinas tia rosa 20pzs|24|7501000111299|1|20.7||1°producto||1|
-433|pan integral 675gG|35|7501000111466|2|31.5||1°producto||1|
-434|medias noches|25|7501000111503|4|22.5||1°producto||1|
-435|bimbollos 8p|33|7501000111602|1|27||1°producto||1|
-436|pan tostado clasico|23|7501000111800|7|18||1°producto||1|
-437|pan molido clasico|15|7501000111855|3|13.5||1°producto||1|
+426|cacahuates sal y limon 66g|10|7500478022762|0|0|sabritas|1°producto||1|
+427|cacahuate japones 150g|15|7500478023295|1|12|sabritas|1°producto||1|
+428|cacahuate japones 75g|10|7500478023516|19|7.91|sabritas|1°producto||1|
+429|dalmata 55g|9|7501000103034|-3|0|wonder|1°producto||1|
+430|pan blanco 360gCh|26|7501000111091|-2|20.7||1°producto||1|
+431|tortillinas tia rosa 10pzs 255g|14|7501000111251|0|11.7||1°producto||1|
+432|tortillinas tia rosa 20pzs|24|7501000111299|-3|20.7||1°producto||1|
+433|pan integral 675gG|38|7501000111466|-4|31.5||1°producto||1|
+434|medias noches|29|7501000111503|0|22.5|bimbo|1°producto||1|
+435|bimbollos 8p|34|7501000111602|-1|27||1°producto||1|
+436|pan tostado clasico|24|7501000111800|4|18||1°producto||1|
+437|pan molido clasico|17|7501000111855|1|13.5||1°producto||1|
 438|roles de canela|14|7501000112128|2|12.6||1°producto||1|
 439|roles glas|14|7501000112166|1|12.6||1°producto||1|
-440|colchones naranja 130g|10|7501000112203|1|9||1°producto||1|
+440|colchones naranja 130g|10|7501000112203|-1|8.25||1°producto||1|
 441|panque c/pasas 255g|30|7501000112302|1|27||1°producto||1|
-442|penque nuez|30|7501000112326|2|27||1°producto||1|
+442|penque nuez|30|7501000112326|1|27||1°producto||1|
 443|pan tostado doble fibra|22|7501000112333|1|19.8||1°producto||1|
 444|panquesitos chispas/chocolate140g|15|7501000112388|3|13.5||1°producto||1|
-445|donitas espolvoreadas 105g|12|7501000112425|4|10.8||1°producto||1|
-446|nito 62g|10|7501000112784|4|9||1°producto||1|
-447|rebanadas|5|7501000112845|7|4.5||1°producto||1|
+445|donitas espolvoreadas 105g|13|7501000112425|1|10.8||1°producto||1|
+446|nito 62g|10|7501000112784|-4|9||1°producto||1|
+447|rebanadas|5|7501000112845|4|4.5||1°producto||1|
 448|bran frutpiña 58g|8|7501000116430|3|7.2||1°producto||1|
-449|barra frut fr|8|7501000116447|4|7.2||1°producto||1|
-450|pan blanco 640gG|30|7501000122332|3|27||1°producto||1|
+449|barra frut fr|8|7501000116447|3|7.2||1°producto||1|
+450|pan blanco 640gG|34|7501000122332|-4|27|bimbo|1°producto||1|
 451|lors|10|7501000127344|20|0|marinela|1°producto||1|
-452|principe 105g|14|7501000128167|5|11.7|marinela|1°producto||1|
+452|principe 105g|14|7501000128167|-3|11.7|marinela|1°producto||1|
 453|barritas piña 75g|10|7501000133031|8|9|marinela|1°producto||1|
-454|barritas fresa 75g|10|7501000133055|4|9|marinela|1°producto||1|
-455|pastisetas 75g|18|7501000133338|1000|16.2|marinela|1°producto||1|
+454|barritas fresa 75g|10|7501000133055|-1|9|marinela|1°producto||1|
+455|pastisetas 75g|18|7501000133338|999|16.2|marinela|1°producto||1|
 456|magnas 200g|12|7501000134465|0|0|tia rosa|1°producto||1|
-457|marias 170g|12|7501000135301|0|0|tia rosa|1°producto||1|
-458|sponch 120g|15|7501000138944|1|13.5|marinela|1°producto||1|
-459|pop karameladas 50g|10|7501000140473|0|7|barcel|1°producto||1|
-460|triki-trakes 85g|10|7501000140855|2|9|marinela|1°producto||1|
-461|bigotes 60g|10|7501000142200|0|0|tia rosa|1°producto||1|
-462|mantecada vainilla 105g|10|7501000142408|0|0|tia rosa|1°producto||1|
+457|marias 170g|11|7501000135301|-2|0|tia rosa|1°producto||1|
+458|sponch 120g|15|7501000138944|-2|13.5|marinela|1°producto||1|
+459|pop karameladas 50g|10|7501000140473|-5|7|barcel|1°producto||1|
+460|triki-trakes 85g|10|7501000140855|-3|9|marinela|1°producto||1|
+461|bigotes 60g|10|7501000142200|-2|0|tia rosa|1°producto||1|
+462|mantecada vainilla 105g|15|7501000142408|-2|12.30|tia rosa|1°producto||1|
 463|doraditas|10|7501000142804|0|0|tia rosa|1°producto||1|
 464|takis huakamoladas 56g|11|7501000148288|5|9.9||1°producto||1|
-465|empanizador crujiente|15|7501000149100|4|13.5||1°producto||1|
-466|gansito 50g|10|7501000153107|10|9|marinela|1°producto||1|
-467|submarinos vainilla 105g|13|7501000153282|2|10.8|marinela|1°producto||1|
-468|submarinos fresa 105g|12|7501000153374|1|10.8|marinela|1°producto||1|
+465|empanizador crujiente|17|7501000149100|3|13.5||1°producto||1|
+466|gansito 50g|10|7501000153107|-10|9|marinela|1°producto||1|
+467|submarinos vainilla 105g|14|7501000153282|2|10.8|marinela|1°producto||1|
+468|submarinos fresa 105g|14|7501000153374|-2|10.8|marinela|1°producto||1|
 469|royo fresa 95g|13|7501000153459|0|0|marinela|1°producto||1|
-470|bonbonetes 55g|8|7501000153718|1|0|marinela|1°producto||1|
-471|rocko grande 44g|5|7501000153763|9|4.5|---------|1°producto||1|
-472|pingüinos 80g|15|7501000153800|4|13.5|marinela|1°producto||1|
-473|submarinos chocolate 105g|12|7501000156214|2|10.8|marinela|1°producto||1|
-474|tostadas milpa real|24|7501000157075|3|22.5|milparreal|1°producto||1|
+470|bonbonetes 55g|8|7501000153718|-2|0|marinela|1°producto||1|
+471|rocko grande 44g|5|7501000153763|11|4.5|marinela|1°producto||10|
+472|pingüinos 80g|16|7501000153800|3|13.5|marinela|1°producto||1|
+473|submarinos chocolate 105g|14|7501000156214|-4|10.8|marinela|1°producto||1|
+474|tostadas milpa real|24|7501000157075|2|22.5|milparreal|1°producto||1|
 475|takis original 56g|10|7501000164370|1000|9|barcel|1°producto||1|
-476|takis salsa brava 56g|10|7501000166923|1000|9|barcel|1°producto||1|
+476|takis salsa brava 56g|12|7501000166923|999|9|barcel|1°producto||1|
 477|golden nuts pepitas|11|7501000168200|2|9.9||1°producto||1|
-478|runners 58g|8|7501000222612|1000|7.2|barcel|1°producto||1|
+478|runners 58g|8|7501000222612|999|7.2|barcel|1°producto||1|
 479|barcel chipotles 52g|8|7501000264834|3|7.2|barcel|1°producto||1|
 480|tostachos 65g|8|7501000264841|4|7.2|barcel|1°producto||1|
-481|chips sal de mar 170g|35|7501000266203|1000|31.5|barcel|1°producto||1|
+481|chips sal de mar 170g|35|7501000266203|999|31.5|barcel|1°producto||1|
 482|chips jalapeño 170g|37|7501000266234|1|31.5|barcel|1°producto||1|
-483|palet apayaso|10|7501000278404|10|9||1°producto||1|
+483|palet apayaso|10|7501000278404|6|9||1°producto||1|
 484|panque marmol 255g|30|7501000310647|3|27||1°producto||1|
-485|pan integral 370gCh|28|7501000336319|2|25.2||1°producto||1|
+485|pan integral 370gCh|28|7501000336319|1|25.2||1°producto||1|
 486|toreadas 40g|10|7501000360604|1000|9|barcel|1°producto||1|
 487|totopos "del hogar" 280gr|20|7501000364695|1|18|del hogar|1°producto||1|
 488|hot nuts original|11|7501000367481|6|9.9||1°producto||1|
-489|mini polvorones|5|7501000392490|1|0|marinela|1°producto||1|
-490|florentinas fresa 83g|12|7501000601738|0|10|gamesa|1°producto||1|
-491|emperador senzo 93g|12|7501000601776|0|10|gamesa|1°producto||1|
+489|mini polvorones|5|7501000392490|-2|0|marinela|1°producto||1|
+490|florentinas fresa 83g|12|7501000601738|-2|9.41|gamesa|1°producto||1|
+491|emperador senzo 93g|12|7501000601776|-2|10|gamesa|1°producto||1|
 492|chokis rellena 90g|12|7501000604685|0|10|gamesa|1°producto||1|
 493|cremax chocolate 90g|12|7501000606566|0|10|gamesa|1°producto||1|
 494|cremax vainilla 90g|12|7501000606573|0|10|gamesa|1°producto||1|
 495|cremax fresa 90g|12|7501000606580|0|10|gamesa|1°producto||1|
 496|mini chokis clasica 369g|6|7501000610228|0|5|gamesa|1°producto||1|
 497|cremax fresa 213g|22|7501000612147|0|20|gamesa|1°producto||1|
-498|cremax vainilla 213g|22|7501000612161|0|20|gamesa|1°producto||1|
+498|cremax vainilla 213g|22|7501000612161|-1|20|gamesa|1°producto||1|
 499|arcoiris 37g|8|7501000624089|0|7|gamesa|1°producto||1|
 500|emperador chocolate 101g|12|7501000626489|1000|10.8|marinela|1°producto||1|
 501|ricanelas 97g|12|7501000628360|0|10|gamesa|1°producto||1|
 502|arcoiris 75g|13|7501000635726|1000|11.7|marinela|1°producto||1|
 503|chokis brownie 64g|12|7501000636495|0|10|gamesa|1°producto||1|
 504|giro 95g|12|7501000640362|0|10|gamesa|1°producto||1|
-505|mamut 44g|6|7501000651375|0|5|gamesa|1°producto||1|
-506|chokis chocobase 84g|12|7501000657797|0|10|gamesa|1°producto||1|
-507|galletas marias azucaradas 150g|12|7501000658329|0|10|gamesa|1°producto||1|
+505|mamut 44g|6|7501000651375|-8|5|gamesa|1°producto||1|
+506|chokis chocobase 84g|12|7501000657797|-1|10|gamesa|1°producto||1|
+507|galletas marias azucaradas 150g|12|7501000658329|-1|10|gamesa|1°producto||1|
 508|saladitas 137g|11|7501000658404|4|9.9||1°producto||1|
 509|saladitas 186g|13|7501000664221|5|11.7||1°producto||1|
 510|marias doradas 278g|22|7501000664382|0|20|gamesa|1°producto||1|
 511|hotcakes|24|7501000665747|0|19|gamesa|1°producto||1|
-512|galleta c/coco clasica 117g|12|7501000669509|-1|10|gamesa|1°producto||1|
+512|galleta c/coco clasica 117g|12|7501000669509|0|10|gamesa|1°producto||1|
 513|mini marias 70g|8|7501000674541|0|7|gamesa|1°producto||1|
 514|surtido rico gamesa 516gr|52|7501000677368|1000|46.8|gamesa|1°producto||1|
 515|gerber verdura c/pollo/pst 113gr|11|7501000904235|1000|9.9|nestle|1°producto||1|
-516|gerber verdura c/res/arroz 113gr|11|7501000904242|1000|9.9|nestle|1°producto||1|
-517|nescafe clasico 14g|10|7501000911783|0|0|nescafe|1°producto||1|
-518|nescafe 42g|29.5|7501000912803|0|0|nestle|1°producto||1|
+516|gerber verdura c/res/arroz 113gr|11|7501000904242|999|9.9|nestle|1°producto||1|
+517|nescafe clasico 14g|10|7501000911783|-10|0|nescafe|1°producto||1|
+518|nescafe 42g|29.5|7501000912803|-1|0|nestle|1°producto||1|
 519|gerber jugo de manzana 175gr|15|7501000922239|1000|13.5|nestle|1°producto||1|
 520|gerber jugo de pera 175gr|15|7501000922246|1000|13.5|nestle|1°producto||1|
 521|pepto bismol 2.4mg|4|7501001155209|0|1.5|pepto bismol|1°producto||1|
@@ -528,12 +528,12 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 527|nesquik 230g|25|7501001625337|1|22.5|nestle|1°producto||1|
 528|mayonesa light mckorni 775g|37|7501003313560|5|33.3||1°producto||1|
 529|mermelada fresa mccormick 270g|25|7501003336125|1000|22.5|mccormick|1°producto||1|
-530|mayonesa|22|7501003340122|0|18|mccormick|1°producto||1|
-531|mayonesa 390g|38.5|7501003340139|1|0|makormic|1°producto||1|
+530|mayonesa|22|7501003340122|-1|18|mccormick|1°producto||1|
+531|mayonesa 390g|38.5|7501003340139|0|0|makormic|1°producto||1|
 532|salsa clasica buf 150g|14.5|7501003393050|0|10|bufalo|1°producto||1|
 533|atole maizena fresa 47gr|8|7501005106801|6|7.2|maizena|1°producto||1|
 534|maizena atole vainilla 47g|10|7501005106979|0|0|maizena|1°producto||1|
-535|maizena chocolate 45g|8.5|7501005107013|0|0|maizena|1°producto||1|
+535|maizena chocolate 45g|8.5|7501005107013|-1|0|maizena|1°producto||1|
 536|atole maizena nuez 47gr|8|7501005107150|5|7.2|maizena|1°producto||1|
 537|maizena atole cajeta 47g|10|7501005107297|0|0|maizena|1°producto||1|
 538|mizena fecula de maiz 160g|17|7501005110389|0|0|mizena|1°producto||1|
@@ -542,24 +542,24 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 541|sopa knor fideos 95gr|11|7501005129923|4|9.9|knorr|1°producto||1|
 542|sopa knor fideo c/pollo 95gr|11|7501005129930|4|9.9|knorr|1°producto||1|
 543|sopa knor estrella 95gr|11|7501005129947|2|9.9|knorr|1°producto||1|
-544|sopa knor municion 95gr|11|7501005134002|4|9.9|knorr|1°producto||1|
-545|caldo de pollo2cubos|5|7501005180306|0|4|knorr|1°producto||1|
+544|sopa knor municion 95gr|11|7501005134002|3|9.9|knorr|1°producto||1|
+545|caldo de pollo2cubos|5|7501005180306|-1|4|knorr|1°producto||1|
 546|knorr tomate 2 cubos|5|7501005180504|0|0|knorr|1°producto||1|
 547|hunts salsa de tomate 360g|8|7501006523959|1|7.2||1°producto||1|
 548|palomitas act II natural 80gr|12|7501006559002|10|10.8|actii|1°producto||1|
-549|act2 mantequilla 80g|12|7501006559019|12|10.8||1°producto||1|
-550|palomintas extra mantequilla 80g|12.5|7501006559026|0|0|actii|1°producto||1|
-551|palomitas infierno actII 88g|12.5|7501006559309|0|0|actii|1°producto||1|
+549|act2 mantequilla 80g|12|7501006559019|11|10.8||1°producto||1|
+550|palomintas extra mantequilla 80g|12.5|7501006559026|-2|0|actii|1°producto||1|
+551|palomitas infierno actII 88g|12.5|7501006559309|-1|0|actii|1°producto||1|
 552|palomitas act II queso jalap 80gr|12|7501006559316|7|10.8|actii|1°producto||1|
 553|ace jabon 250g|9|7501006705942|13|8.1||1°producto||1|
 554|crest 100ml|22|7501006733907|4|19.8||1°producto||1|
 555|detegente ace 500g|20|7501007445557|0|0|ace|1°producto||1|
-556|detergente ariel 500g|23|7501007455730|0|0|ariel|1°producto||1|
+556|detergente ariel 500g|23|7501007455730|-1|0|ariel|1°producto||1|
 557|sardina 425g|33.5|7501007829500|0|0|calmex|1°producto||1|
-558|frootloops 90g|16|7501008004661|1|0|kellogs|1°producto||1|
+558|frootloops 90g|16|7501008004661|0|0|kellogs|1°producto||1|
 559|extra arandano130g|22|7501008021439|0|0|kelloggs|1°producto||1|
-560|zucaritas 260g|34.5|7501008042984|0|0|kelloks|1°producto||1|
-561|cafiaspirina 500mg|2|7501008433515|0|1.3|cafiaspirina|1°producto||1|
+560|zucaritas 260g|34.5|7501008042984|-1|0|kelloks|1°producto||1|
+561|cafiaspirina 500mg|2.5|7501008433515|6|1.3|cafiaspirina|1°producto||1|
 562|alka seltzer|6|7501008443026|0|1.5|bayer|1°producto||1|
 563|tabcin noche|15|7501008485033|0|0|tabcin|1°producto||1|
 564|tacin acvtive|15|7501008485057|0|0|tabcin|1°producto||1|
@@ -571,48 +571,48 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 570|surtido diario 500g|30|7501008754030|4|27||1°producto||1|
 571|rastrillo gillette 3 hojas|23|7501009222729|25|12.5|gillette|1°producto||24|
 572|rastrillo gillette 2 hojas|18|7501009222736|0|15|gillette|1°producto||1|
-573|rastrillo permatch 2 hojas|15|7501009224167|0|12|permatch|1°producto||1|
-574|sabritas sal  42g|12|7501011101456|1|10.8|sabritas|1°producto||1|
-575|sabritas adobadas 42g|12|7501011101463|6|10.8|sabritas|1°producto||1|
-576|sabritas limon 45g|12|7501011101678|4|10.8||1°producto||1|
-577|rufles original 52g|12|7501011102095|0|10|sabritas|1°producto||1|
-578|rufles queso 52g|12|7501011104099|1003|0|sabritas|1°producto||1|
-579|fritos limon y sal 62g|10|7501011110335|3|8.1|sabritas|1°producto||1|
-580|rancheritos 60g|10|7501011111028|8|9|sabritas|1°producto||1|
-581|fritos 62g|10|7501011112254|5|9|sabritas|1°producto||1|
-582|paketaxo botanero 73g|11|7501011112438|5|9|sabritas|1°producto||1|
+573|rastrillo permatch 2 hojas|15|7501009224167|-2|12|permatch|1°producto||1|
+574|sabritas sal  42g|12|7501011101456|-14|10.8|sabritas|1°producto||1|
+575|sabritas adobadas 42g|12|7501011101463|1|10.8|sabritas|1°producto||1|
+576|sabritas limon 45g|12|7501011101678|-2|10.8||1°producto||1|
+577|rufles original 52g|12|7501011102095|-9|10|sabritas|1°producto||1|
+578|rufles queso 52g|12|7501011104099|985|0|sabritas|1°producto||1|
+579|fritos limon y sal 62g|10|7501011110335|-6|8.1|sabritas|1°producto||1|
+580|rancheritos 60g|10|7501011111028|-4|9|sabritas|1°producto||1|
+581|fritos 62g|10|7501011112254|-7|9|sabritas|1°producto||1|
+582|paketaxo botanero 73g|11|7501011112438|-2|9|sabritas|1°producto||1|
 583|ruffles queso 53g|12|7501011114524|6|10.8|sabritas|1°producto||1|
-584|paketaxo quexo 73g|11|7501011114623|0|9|sabritas|1°producto||1|
-585|doritos pizzerolas 61g|11|7501011123380|0|9|sabritas|1°producto||1|
-586|doritos nacho 62g|11|7501011123588|17|9.9|sabritas|1°producto||1|
-587|doritos incognita 62g|11|7501011123878|8|9.9|sabritas|1°producto||1|
-588|doritos flamin hot 62g|11|7501011130272|5|9.9|sabritas|1°producto||1|
-589|doritos 146g|24|7501011131064|10|0|sabritas|1°producto||1|
-590|pake taxo mezclado 170ml|24|7501011135024|11|0|sabritas|1°producto||1|
-591|sabritas habanero 45g|12|7501011137431|3|10|sabritas|1°producto||1|
-592|construy|15|7501011138865|0|0|inspireca|1°producto||1|
+584|paketaxo quexo 73g|11|7501011114623|-10|9|sabritas|1°producto||1|
+585|doritos pizzerolas 61g|11|7501011123380|-3|9|sabritas|1°producto||1|
+586|doritos nacho 62g|11|7501011123588|9|9.9|sabritas|1°producto||1|
+587|doritos incognita 62g|11|7501011123878|4|9.9|sabritas|1°producto||1|
+588|doritos flamin hot 62g|11|7501011130272|1|9.9|sabritas|1°producto||1|
+589|doritos 146g|24|7501011131064|9|0|sabritas|1°producto||1|
+590|pake taxo mezclado 170ml|24|7501011135024|9|0|sabritas|1°producto||1|
+591|sabritas habanero 45g|12|7501011137431|0|10|sabritas|1°producto||1|
+592|construy|15|7501011138865|-3|0|inspireca|1°producto||1|
 593|armables|15|7501011140776|0|0|inspireca|1°producto||1|
-594|crujitos queso y chile 40g|10|7501011142299|5|9|sabritas|1°producto||1|
-595|cheetos torciditos 52g|9|7501011143586|1004|7.2|sabritas|1°producto||1|
-596|sabritasflamin hot 45g|12|7501011143739|2|10.8|sabritas|1°producto||1|
-597|cheetos flamin hot|9|7501011143753|17|7.2|sabritas|1°producto||1|
+594|crujitos queso y chile 40g|10|7501011142299|2|9|sabritas|1°producto||1|
+595|cheetos torciditos 52g|9|7501011143586|989|7.2|sabritas|1°producto||1|
+596|sabritasflamin hot 45g|12|7501011143739|-3|10.8|sabritas|1°producto||1|
+597|cheetos flamin hot|9|7501011143753|12|7.2|sabritas|1°producto||1|
 598|cheetos bolitas 40g|8|7501011143777|1000|7.2|sabritas|1°producto||1|
 599|cheetos poffs 40g|8|7501011143791|1000|7.2|sabritas|1°producto||1|
-600|cheetos nacho 52g|9|7501011143999|1000|7.2|sabritas|1°producto||1|
-601|paketaxo xtra flamin hot 73g|11|7501011144460|0|10|sabritas|1°producto||1|
+600|cheetos nacho 52g|9|7501011143999|995|7.2|sabritas|1°producto||1|
+601|paketaxo xtra flamin hot 73g|11|7501011144460|-3|10|sabritas|1°producto||1|
 602|rockaleta chile 24g|5|7501011145566|0|3|sonrics|1°producto||1|
-603|churramais flamas 64g|9|7501011145764|0|7|sabritas|1°producto||1|
-604|moldeable|15|7501011147942|0|0|inspireca|1°producto||1|
-605|paketaxo mezcladito 73g|11|7501011148963|0|9|sabritas|1°producto||1|
-606|chicharron cerdo natural 30g|12|7501011151079|0|10|sabritas|1°producto||1|
+603|churramais flamas 64g|9|7501011145764|-9|7|sabritas|1°producto||1|
+604|moldeable|15|7501011147942|8|0|sabritas|1°producto||1|
+605|paketaxo mezcladito 73g|11|7501011148963|-3|9|sabritas|1°producto||1|
+606|chicharron cerdo natural 30g|12|7501011151079|-1|10|sabritas|1°producto||1|
 607|sabritones c/chile y limon 165g|25|7501011151086|0|20|sabritas|1°producto||1|
-608|sabritas flamin hot crujiente 49g|12|7501011159242|999|10.8|sabritas|1°producto||1|
-609|pinta frut 20g|12|7501011159969|0|0|inspireca|1°producto||1|
-610|doritos dinamita 62g|11|7501011162587|8|9.9||1°producto||1|
-611|sabritasoriginal grandes|32|7501011165687|1|19.8||1°producto||1|
-612|cheetos colmillos 27g|9|7501011165717|1000|7.2|sabritas|1°producto||1|
+608|sabritas flamin hot crujiente 49g|12|7501011159242|992|10.8|sabritas|1°producto||1|
+609|pinta frut 20g|15|7501011159969|-2|0|inspireca|1°producto||1|
+610|doritos dinamita 62g|11|7501011162587|3|9.9||1°producto||1|
+611|sabritasoriginal grandes|32|7501011165687|1|19.8|sabritas |1°producto||1|
+612|cheetos colmillos 27g|9|7501011165717|998|7.2|sabritas|1°producto||1|
 613|sabritas original 105g|24|7501011167650|0|20|sabritas|1°producto||1|
-614|tix tix polvo chupabarrita 12g|5|7501011176713|30|3|sonrics|1°producto||30|
+614|tix tix polvo chupabarrita 12g|5|7501011176713|27|3|sonrics|1°producto||30|
 615|be ligth/limon  1.5L|14|7501011181755|9|12.6||1°producto||1|
 616|be light jamaica 1.5lt|15|7501011181809|1|13.5|be-light|1°producto||1|
 617|splash berry/blend 500ml|13|7501011350687|1|11.7||1°producto||1|
@@ -621,43 +621,43 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 620|jumex lata-botella mango 500ml|13|7501013100037|1000|11.7|jumex|1°producto||1|
 621|jumex lata-botella durazno 500ml|13|7501013100051|1000|11.7|jumex|1°producto||1|
 622|karmato coctel/tomate 470ml|16|7501013100518|1|14.4||1°producto||1|
-623|bida fresa 250ml|9|7501013100815|10|0|jumex|1°producto||1|
+623|bida fresa 250ml|9|7501013100815|3|0|jumex|1°producto||1|
 624|bida 250ml guallava|9|7501013100822|0|0|jumex|1°producto||1|
-625|bida 250ml uva|9|7501013100846|0|0|jumex|1°producto||1|
-626|bida 250ml freza|9|7501013100853|0|0|jumex|1°producto||1|
-627|jumex lata-bote manzana 473ml|16|7501013101331|1000|11.7|jumex|1°producto||1|
+625|bida 250ml uva|9|7501013100846|-1|0|jumex|1°producto||1|
+626|bida 250ml freza|9|7501013100853|-2|0|jumex|1°producto||1|
+627|jumex bote manzana 473ml|16|7501013101331|8|11.7|jumex|1°producto||1|
 628|jumex lata-botella mango 473ml|13|7501013101348|1000|11.7|jumex|1°producto||1|
 629|jumex lata piñacoco 473|16|7501013101362|0|0|jumex|1°producto||1|
 630|jumex lata guallava 473|16|7501013101782|0|0|jumex|1°producto||1|
-631|jumex lata uva 473ml|16|7501013101799|0|0|jumex|1°producto||1|
-632|bida piña y aloe vera 500ml|12|7501013102130|10|0|jumex|1°producto||1|
+631|jumex lata uva 473ml|16|7501013101799|-4|0|jumex|1°producto||12|
+632|bida piña y aloe vera 500ml|12|7501013102130|6|0|jumex|1°producto||1|
 633|jumex 250ml manzana|9|7501013110425|0|0|jumex|1°producto||1|
 634|jumex 250ml durazno|9|7501013110753|0|0|jumex|1°producto||1|
 635|jumex mango 1L|21|7501013122039|1|18.9||1°producto||1|
-636|jumex piña 1lt|21|7501013122114|2|18.9|jumex|1°producto||1|
-637|jumex naranja 1L|21|7501013122138|1|18.9||1°producto||1|
+636|jumex piña 1lt|21|7501013122114|1|18.9|jumex|1°producto||1|
+637|jumex naranja 1L|21|7501013122138|0|18.9||1°producto||1|
 638|jumex uva 1L|21|7501013122145|1|18.9||1°producto||1|
 639|jumex arandano 1L|22|7501013138184|10|0|jumex|1°producto||1|
-640|capri sun ponche frutas 200ml|8|7501013144550|1|7.2||1°producto||1|
+640|capri ponche/frutas 200ml|6.5|7501013144550|16|4.8|jumex|1°producto||20|
 641|capri sun frutas mixts 200 ml|8|7501013144932|7|7.2||1°producto||1|
-642|paupau manzana 250ml|5|7501013154023|4|4.5||1°producto||1|
+642|paupau manzana 250ml|5|7501013154023|2|4.5||1°producto||1|
 643|jumex mango paupau 250ml|5|7501013154030|5|4.5|jumex|1°producto||1|
-644|paupau naranja 250ml|5|7501013154139|2|4.5|jumex|1°producto||1|
+644|paupau naranja 250ml|5|7501013154139|0|4.5|jumex|1°producto||1|
 645|paupau uva 250ml|5|7501013154146|3|4.5||1°producto||1|
-646|paupau cereza 250 ml|5|7501013154184|1|4.5||1°producto||1|
+646|paupau cereza 250 ml|5|7501013154184|-5|4.5||1°producto||1|
 647|jumex nectar/manzana 450ml|14|7501013174021|3|12.6||1°producto||1|
-648|jumex jugosa mango450ml|14|7501013174038|3|12.6|jumex|1°producto||1|
-649|jumex jugosa durazno 450ml|14|7501013174052|5|12.6|jumex|1°producto||1|
-650|jumex jugosa guayaba 450ml|14|7501013174069|4|12.6|jumex|1°producto||1|
-651|jumex jugosa uva 450ml|14|7501013174144|1000|12.6|jumex|1°producto||1|
-652|jumex  jugoza manzana 450ml|14|7501013174199|3|12.6|jumex|1°producto||1|
-653|bida manzana 1L|17|7501013196023|10|0|jumex|1°producto||1|
-654|bida mango 1L|17|7501013196030|10|0|jumex|1°producto||1|
+648|jumex jugosa mango450ml|14|7501013174038|1|12.6|jumex|1°producto||1|
+649|jumex jugosa durazno 450ml|14|7501013174052|1|12.6|jumex|1°producto||1|
+650|jumex jugosa guayaba 450ml|14|7501013174069|0|12.6|jumex|1°producto||1|
+651|jumex jugosa uva 450ml|14|7501013174144|998|12.6|jumex|1°producto||1|
+652|jumex  jugoza manzana 450ml|14|7501013174199|-7|12.6|jumex|1°producto||1|
+653|bida manzana 1L|17|7501013196023|8|0|jumex|1°producto||1|
+654|bida mango 1L|17|7501013196030|7|0|jumex|1°producto||1|
 655|vinagre blanco 1.05lt|14|7501017003068|3|12.6|costeña|1°producto||1|
 656|mango/almibar costeña 800g|36|7501017003341|3|32.4||1°producto||1|
 657|frutas en almibar costeña 850g|43|7501017003358|2|38.7||1°producto||1|
 658|frijoles bayos refritos 580g|19|7501017004270|0|17|la costeña|1°producto||1|
-659|frijol entero negro 560g|20|7501017004294|12|15.76|la costeña|1°producto||6|
+659|frijol entero negro 560g|20|7501017004294|11|15.76|la costeña|1°producto||6|
 660|elote dorado la costeña 410gr|20|7501017004515|1|9|la costeña|1°producto||1|
 661|rajas de jalapeño escabe 220gr|11|7501017005024|1000|9.9|la costeña|1°producto||1|
 662|chipotles en adobo 220gr|20|7501017005031|2|18|la costeña|1°producto||1|
@@ -666,7 +666,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 665|jalapeños picados escabe 220gr|11|7501017005765|6|9.9|la costeña|1°producto||1|
 666|salsa de chipotle 220gr|22|7501017005963|3|19.8|la costeña|1°producto||1|
 667|rajas de jalapeño escabe 105gr|8|7501017006014|2|7.2|la costeña|1°producto||1|
-668|chipotles en adobo 105gr|8|7501017006021|15|7.2|la costeña|1°producto||10|
+668|chipotles en adobo 105gr|8|7501017006021|14|7.2|la costeña|1°producto||10|
 669|salsa catsup 960g|29|7501017035021|2|26.1|la costeña|1°producto||1|
 670|frijoles bayos refritos 440gr|13|7501017040988|2|11.7|la costeña|1°producto||1|
 671|frijoles negros refritos 440gr|13|7501017040995|1|11.7|la costeña|1°producto||1|
@@ -677,11 +677,11 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 676|rajas jalapeño en escabeche 240g|15|7501017051335|0|13|la costeña|1°producto||1|
 677|mostaza la costeña 220 g|16|7501017053032|3|14.4||1°producto||1|
 678|kleenex 15 pañuelos|7|7501017362950|0|3|kleenex|1°producto||1|
-679|sopa fideo0 200g|6.5|7501018310011|0|0|moderna|1°producto||1|
+679|sopa fideo0 200g|6.5|7501018310011|3|0|casa vargas|1°producto||1|
 680|sopa la moderna fideo 1 200gr|6|7501018310028|1|5.4|la moderna|1°producto||1|
 681|sopa fideo2 200g|6.5|7501018310035|0|0|moderna|1°producto||1|
 682|sopa tallarin 2 200g|7|7501018310059|0|0|moderna|1°producto||1|
-683|sopa la moderna spaghetti 200gr|6|7501018310103|3|5.4|la moderna|1°producto||1|
+683|spaguetti la moderna 200g|7|7501018310103|-4|5.4|la moderna|1°producto||1|
 684|sopa letra 200g|6.5|7501018310257|0|0|moderna|1°producto||1|
 685|sopa la moderna municion 200gr|6|7501018310264|1|5.4|la moderna|1°producto||1|
 686|sopa la moderna estrella 200gr|6|7501018310318|2|5.4|la moderna|1°producto||1|
@@ -698,28 +698,28 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 697|crema 900ml|55|7501020511468|0|50|lala|1°producto||1|
 698|crema lala 250g|14|7501020513134|3|12|lala|1°producto||1|
 699|leche lala semidescremada 1l|24|7501020515183|1|21.6|lala|1°producto||1|
-700|leche lala entera 1l|24|7501020515343|2|21.6|lala|1°producto||1|
-701|leche lala deslactosada|21|7501020515398|1000|18.9|lala|1°producto||1|
-702|manchego 144g|22|7501020537390|0|19|lala|1°producto||1|
+700|leche lala entera 1l|24|7501020515343|3|21.6|lala|1°producto||1|
+701|leche lala deslactosada|23|7501020515398|1000|18.9|lala|1°producto||1|
+702|manchego 144g|22|7501020537390|8|19|lala|1°producto||8|
 703|lala yoghurt fresa 240g|9|7501020539400|1000|8.1|lala|1°producto||1|
 704|nutri yoghurt nuez 450ml|12.5|7501020539974|1|0|lala|1°producto||1|
-705|nutri yoghurt fresa450ml|12.5|7501020539981|1|0|lala|1°producto||1|
-706|nutrileche 1Lt|16.5|7501020540666|2|14.4||1°producto||1|
+705|nutri yoghurt fresa450ml|12.5|7501020539981|-1|0|lala|1°producto||1|
+706|nutrileche 1Lt|16.5|7501020540666|-2|14.4||1°producto||1|
 707|pepzi 1.75lt|18|7501022009321|0|0|pepzi|1°producto||1|
-708|gatorade blue thunder 350ml|10|7501022009529|4|9||1°producto||1|
-709|gatorade blue thonder 1L|28|7501022009857|10|0|pepsi|1°producto||1|
-710|jumex frutzzo naranjada 600ml|12|7501022010761|6|9.9|jumex|1°producto||1|
-711|jumex frutzo 600ml mandarina|12|7501022010860|10|0|pepsi|1°producto||1|
-712|limonada 600ml|12|7501022011010|10|0|pepsi|1°producto||1|
+708|gatorade blue thunder 350ml|10|7501022009529|1|9||1°producto||1|
+709|gatorade blue thonder 1L|28|7501022009857|11|0|pepsi|1°producto||6|
+710|jumex frutzzo naranjada 600ml|12|7501022010761|0|9.9|jumex|1°producto||1|
+711|jumex frutzo 600ml mandarina|12|7501022010860|7|0|pepsi|1°producto||1|
+712|limonada 600ml|12|7501022011010|21|0|pepsi|1°producto||12|
 713|garci crespo agua mineral 2L|20|7501022012062|10|0|pepsi|1°producto||1|
 714|garci crespo agua mineral 600ml|10|7501022012185|10|0|pepsi|1°producto||1|
 715|be light pepino limon 1.5lt|15|7501022013809|1000|13.5|be-light|1°producto||1|
-716|pepsi black 355ml|5|7501022013861|2|4.5|pepsi|1°producto||1|
-717|7up 355ml|6|7501022014066|0|0|pepsi|1°producto||1|
+716|pepsi black 355ml|5|7501022013861|1|4.5|pepsi|1°producto||1|
+717|7up 355ml|6|7501022014066|-8|0|pepsi|1°producto||1|
 718|mirinda azul 355ml|5|7501022014394|0|0|pepsi|1°producto||1|
-719|7up 600ml|12|7501022014585|10|0|pepsi|1°producto||1|
+719|7up 600ml|13|7501022014585|0|0|pepsi|1°producto||1|
 720|rajas en escabeche 215g|12.5|7501023311041|0|9.2|san marcos|1°producto||1|
-721|chipotles 100g|11|7501023318057|0|0|san marcos|1°producto||1|
+721|chipotles 100g|11|7501023318057|-1|0|san marcos|1°producto||1|
 722|pino 128ml|23.5|7501025403485|0|0|pinol|1°producto||1|
 723|flash pastilla sanitaria|12|7501025411480|2|10.8||1°producto||1|
 724|ensueño color|19|7501025413019|2|17.1||1°producto||1|
@@ -728,137 +728,137 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 727|yackul|9|7501025511036|30|8.1||1°producto||1|
 728|detergente roma 1kg|35|7501026004605|0|0|roma|1°producto||1|
 729|roma jabon 500g|19|7501026004612|1|17.1||1°producto||1|
-730|roma 250g|10|7501026004629|4|9||1°producto||1|
+730|roma 250g|10|7501026004629|2|9||1°producto||1|
 731|suavizante detelas carisma|20|7501026005510|1|18||1°producto||1|
-732|jabon zote 400g|17.5|7501026005671|0|0|zote|1°producto||1|
+732|jabon zote 400g|17.5|7501026005671|-1|0|zote|1°producto||1|
 733|teoellak 400g|17.6|7501026031052|0|0|tepeyak|1°producto||1|
 734|resistol 30g|4|7501028835580|0|3|resistol|1°producto||1|
 735|cafe trujillo 50g|25|7501029032889|2|22.5||1°producto||1|
 736|macarron coronado 20g|4|7501030404637|1|0|coronado|1°producto||1|
-737|kronk 31g|6|7501030417989|0|4|kronk|1°producto||1|
-738|donas espolvoreadas|12|7501030418399|0|0|bimbo|1°producto||1|
+737|kronk 31g|6|7501030417989|-4|4|kronk|1°producto||1|
+738|donas esp 8pz 140g|13|7501030418399|-4|10.66|bimbo|1°producto||1|
 739|leche nito chocolate 236ml|10|7501030418412|6|9|bimbo|1°producto||1|
-740|principe maxitubo 210g|22|7501030418504|0|0|marinela|1°producto||1|
-741|triquitraques 215g|22|7501030418528|0|0|marinela|1°producto||1|
-742|canelitas 224g|22|7501030418542|0|0|marinela|1°producto||1|
-743|polvorones 310g|22|7501030418559|0|0|marinela|1°producto||1|
-744|mini chocorrol 28g|5|7501030419020|1|0|marinela|1°producto||1|
-745|mini gansito 24g|5|7501030419037|1|0|marinela|1°producto||1|
-746|papatinas chiles 25g|8|7501030419464|10|0|barcel|1°producto||1|
+740|principe maxitubo 210g|23|7501030418504|-6|0|marinela|1°producto||1|
+741|triquitraques 215g|23|7501030418528|-2|0|marinela|1°producto||1|
+742|canelitas 224g|23|7501030418542|-1|0|marinela|1°producto||1|
+743|polvorones 310g|23|7501030418559|0|0|marinela|1°producto||1|
+744|mini chocorrol 28g|5|7501030419020|-8|0|marinela|1°producto||1|
+745|mini gansito 24g|5|7501030419037|-7|0|marinela|1°producto||1|
+746|papatinas chiles 25g|8|7501030419464|9|0|barcel|1°producto||1|
 747|doners 120g|15|7501030420262|0|0|bimbo|1°producto||1|
 748|minimantecadas vainilla 70g|10|7501030420286|0|0|bimbo|1°producto||1|
-749|mantecadas con chispas 190g|18|7501030420859|0|0|bimbo|1°producto||1|
+749|mantecadas con chispas 190g|18|7501030420859|-1|0|bimbo|1°producto||1|
 750|favoritas 155g|12|7501030421450|0|0|tia rosa|1°producto||1|
-751|barritas mini 48g|5|7501030423607|0|0|marinela|1°producto||1|
+751|barritas mini 48g|5|7501030423607|-8|0|marinela|1°producto||1|
 752|tostadas de maiz 309g|15|7501030423911|1|0|bimbo|1°producto||1|
 753|multi grano nuez 34g|8|7501030424345|2|7.2||1°producto||1|
-754|takis fuego 56g|10|7501030424536|1000|9|barcel|1°producto||1|
+754|takis fuego 56g|12|7501030424536|991|9|barcel|1°producto||1|
 755|besitos con nues 100g|10|7501030424543|0|0|lara|1°producto||1|
-756|galleta pingûino|5|7501030425953|1|4.5||1°producto||1|
+756|galleta pingûino|5|7501030425953|4|4.5|marinela|1°producto||1|
 757|pikaros|2|7501030426264|0|0||1°producto||1|
-758|mini pay piña 110g|15|7501030426905|1000|13.5|marinela|1°producto||1|
-759|mini pay de nuez 96g|15|7501030426912|0|0|marinela|1°producto||1|
+758|mini pay piña 110g|15|7501030426905|998|13.5|marinela|1°producto||1|
+759|mini pay de nuez 96g|15|7501030426912|-2|0|marinela|1°producto||1|
 760|barritas doble fresa 110g|14|7501030427940|1000|12.6|marinela|1°producto||1|
 761|sponch chocolate 120g|15|7501030429029|2|13.5|marinela|1°producto||1|
 762|panquesito gota cho|15|7501030429272|2|13.5||1°producto||1|
 763|gansito galleta 43g|5|7501030430155|0|0|marinale|1°producto||1|
-764|suavicremas vainilla 102g|10|7501030431183|1000|7.2|marinela|1°producto||1|
-765|suavicremas fresa 102g|10|7501030431190|1000|7.2|marinela|1°producto||1|
-766|suavicremas chocolate 102g|10|7501030431206|1000|7.2|marinela|1°producto||1|
+764|suavicremas vainilla 102g|10|7501030431183|998|7.2|marinela|1°producto||1|
+765|suavicremas fresa 102g|10|7501030431190|996|7.2|marinela|1°producto||1|
+766|suavicremas chocolate 102g|10|7501030431206|998|7.2|marinela|1°producto||1|
 767|tarta fr 8p|15|7501030431282|2|13.5||1°producto||1|
 768|polvorones 166.5g|13|7501030431305|1|11.7|marinela|1°producto||1|
 769|tortillinas del hogar 220g|10|7501030431817|3|9||1°producto||1|
 770|napolitano 150g|17|7501030433453|0|0|marinela|1°producto||1|
 771|salmas horneadas|12|7501030433927|1|10.8||1°producto||1|
-772|trikitrakes litte bites 90g|10|7501030452577|1|9||1°producto||1|
+772|trikitrakes litte bites 90g|10|7501030452577|-2|9||1°producto||1|
 773|polvorones bites 90g|10|7501030452775|0|0|marinela|1°producto||1|
-774|canelitas 120g|13|7501030454656|1000|11.7|marinela|1°producto||1|
-775|mantecada chocolate 142.5g|17|7501030456124|0|0|tia rosa|1°producto||1|
-776|mobi rocko 45g|5|7501030456971|2|4.5||1°producto||1|
+774|canelitas 120g|13|7501030454656|999|11.7|marinela|1°producto||1|
+775|mantecada chocolate 142.5g|17|7501030456124|-1|0|tia rosa|1°producto||1|
+776|mobi rocko 45g|5|7501030456971|-6|4.5||1°producto||1|
 777|doraditas 58g|5|7501030457008|0|0|tia rosa|1°producto||1|
-778|triki-trakes tubo 245g|22|7501030457145|3|19.8|marinela|1°producto||1|
+778|triki-trakes tubo 245g|22|7501030457145|2|19.8|marinela|1°producto||1|
 779|polvorones tubo 345g|22|7501030457152|1000|19.8|marinela|1°producto||1|
 780|canelitas tubo 249g|22|7501030457169|2|19.8|marinela|1°producto||1|
 781|principe tubo 227g|22|7501030457176|1000|19.8|marinela|1°producto||1|
 782|barritas maxitubo piña 222g|22|7501030457183|1000|19.8|marinela|1°producto||1|
-783|barritas maxitubo fresa 222g|22|7501030457190|1|19.8|marinela|1°producto||1|
-784|saladas clasicas 233g|15|7501030458883|0|0|lara|1°producto||1|
+783|barritas maxitubo fresa 222g|23|7501030457190|1|19.8|marinela|1°producto||1|
+784|saladas clasicas 233g|13|7501030458883|0|0|lara|1°producto||1|
 785|galletas principe choco|14|7501030462859|2|11.7||1°producto||1|
-786|hotkis 50g|5|7501030463665|1|4.5||1°producto||1|
-787|deliciosas chocochispas 230g|12|7501030463719|0|0|lara|1°producto||1|
+786|hotkis 50g|5|7501030463665|10|4.1||1°producto||1|
+787|deliciosas chocochispas 230g|12|7501030463719|-1|0|lara|1°producto||1|
 788|deliciosas|12|7501030463726|0|0|lara|1°producto||1|
-789|deliciosas 230g|12|7501030463733|0|0|lara|1°producto||1|
+789|deliciosas 230g|12|7501030463733|-2|0|lara|1°producto||1|
 790|deliciosas 130g|12|7501030463740|0|0|lara|1°producto||1|
 791|rebanadas chocolate|5|7501030469681|3|4.5||1°producto||1|
-792|litte bites 79g|10|7501030469827|10|0|bimbo|1°producto||1|
+792|litte bites 79g|10|7501030469827|10|8.2|bimbo|1°producto||1|
 793|panera oreja|1|7501030470236|22|0.9||1°producto||1|
-794|bimbuñuelos|14|7501030472698|2|12.6||1°producto||1|
+794|bimbuñuelos|16|7501030472698|2|13.12||1°producto||1|
 795|tartinas fresa 78g|10|7501030473817|0|0|tia rosa|1°producto||1|
-796|principe limon 105g|14|7501030473824|4|11.7|marinela|1°producto||1|
-797|donas 6p|14|7501030474227|3|12.6||1°producto||1|
+796|principe limon 105g|14|7501030473824|3|11.7|marinela|1°producto||1|
+797|donas azuc 6pz 158g|16|7501030474227|-2|13.12||1°producto||1|
 798|leche gancito 236ml|10|7501030475132|0|0|marinela|1°producto||1|
 799|mini chocorrol 30g|5|7501030475224|8|4.5||1°producto||1|
-800|mantecadas nuez6p|18|7501030475514|2|16.2||1°producto||1|
-801|mantecadas vain 6p|18|7501030475521|2|16.2||1°producto||1|
+800|mantecadas nuez6p|18|7501030475514|1|16.2||1°producto||1|
+801|mantecadas vain 6p|20|7501030475521|-2|16.41||1°producto||1|
 802|totopos chilaquiles 280g|22|7501030480778|0|0|milpareal|1°producto||1|
 803|valentones 175g|23|7501030482055|1|19.8|marinela|1°producto||1|
 804|chicharrones con twist 25g|10|7501030486077|0|8|barcel|1°producto||1|
-805|canapinas 140g|12|7501030490388|0|0|lara|1°producto||1|
-806|deliciosas 80g|7|7501030490418|0|0|lara|1°producto||1|
+805|canapinas 140g|13|7501030490388|0|0|lara|1°producto||1|
+806|deliciosas 80g|7|7501030490418|-1|0|lara|1°producto||1|
 807|deliciosas 75g|7|7501030490463|0|0|lara|1°producto||1|
-808|polvorones 111g|13|7501030490951|0|0|marinela|1°producto||1|
-809|canelitas 90g|13|7501030491644|0|0|marinela|1°producto||1|
+808|polvorones 111g|14|7501030490951|-3|0|marinela|1°producto||1|
+809|canelitas 90g|14|7501030491644|10|11.76|marinela|1°producto||1|
 810|pan tostado integral|22|7501030491668|1|19.8||1°producto||1|
-811|pepsi 400ml|7|7501031302741|1000|6.3|pepsi|1°producto||1|
-812|manzanita 400ml|6|7501031302802|0|0|manzanita|1°producto||1|
+811|pepsi 400ml|7|7501031302741|999|6.3|pepsi|1°producto||1|
+812|manzanita 355ml|6|7501031302802|1|0|manzanita|1°producto||1|
 813|pepsi kick 500ml|12|7501031304493|1000|10.8|pepsi|1°producto||1|
-814|sangria casera 3Lts|31|7501031305957|3|25.2||1°producto||1|
-815|jumex fresh citricos 600ml|12|7501031307210|10|9.9|jumex|1°producto||1|
-816|jumex fresh uva 600ml|12|7501031307227|1000|9.9|jumex|1°producto||1|
-817|jumex fresh conga 600ml|12|7501031307241|6|9.9|jumex|1°producto||1|
-818|jumex fresh citricos 2lt|22|7501031307258|3|18.9|jumex|1°producto||1|
-819|jumex fresh uva 2lt|22|7501031307265|1000|18.9|jumex|1°producto||1|
-820|jumex fresh conga 2lt|22|7501031307289|4|18.9|jumex|1°producto||1|
-821|jumex fresh citricos 3lt|28|7501031307296|1000|24.3|jumex|1°producto||1|
-822|jumex fresh citricos naranja 400ml|8|7501031307678|0|0|pepsi|1°producto||1|
-823|jumexfresh 400ml uva|8|7501031307685|0|0|pepsi|1°producto||1|
-824|jumex fresh conga 400ml|8|7501031307708|0|0|pepsi|1°producto||1|
-825|pepsi  600ml|12|7501031310012|8|10.8||1°producto||1|
-826|pepsi 3lt|31|7501031310098|5|25.2|pepsi|1°producto||1|
-827|pepzi 355ml|6|7501031310241|0|0|pepsi|1°producto||1|
-828|pepsi lata 355ml|12|7501031311309|16|9|pepsi|1°producto||1|
-829|pepsi clasica 2L|23|7501031311606|10|0|pepsi|1°producto||1|
+814|sangria casera 3Lts|31|7501031305957|1|25.2||1°producto||1|
+815|jumex fresh citricos 600ml|12|7501031307210|8|9.9|jumex|1°producto||1|
+816|jumex fresh uva 600ml|12|7501031307227|1011|9.9|jumex|1°producto||12|
+817|jumex fresh conga 600ml|12|7501031307241|1|9.9|jumex|1°producto||1|
+818|jumex fresh citricos 2lt|23|7501031307258|-1|18.9|jumex|1°producto||1|
+819|jumex fresh uva 2lt|23|7501031307265|995|18.9|jumex|1°producto||1|
+820|jumex fresh conga 2lt|23|7501031307289|1|18.9|jumex|1°producto||1|
+821|jumex fresh citricos 3lt|28|7501031307296|1001|24.3|jumex|1°producto||4|
+822|jumex fresh citricos naranja 400ml|8|7501031307678|-3|0|pepsi|1°producto||1|
+823|jumexfresh 400ml uva|8|7501031307685|4|0|pepsi|1°producto||12|
+824|jumex fresh conga 400ml|8|7501031307708|4|0|pepsi|1°producto||12|
+825|pepsi  600ml|13|7501031310012|0|10.8||1°producto||1|
+826|pepsi 3lt|31|7501031310098|3|25.2|pepsi|1°producto||1|
+827|pepzi 355ml|6|7501031310241|-12|0|pepsi|1°producto||1|
+828|pepsi lata 355ml|13|7501031311309|14|9|pepsi|1°producto||1|
+829|pepsi clasica 2L|24|7501031311606|9|0|pepsi|1°producto||1|
 830|pepsi 1.5lt|16|7501031311682|9|14.4|pepsi|1°producto||1|
 831|7up 600ml|11|7501031322558|7|9.9|pepsi|1°producto||1|
 832|7up 3lt|27|7501031322589|5|24.3|pepsi|1°producto||1|
-833|7up lata 355ml|12|7501031323302|12|9|pepsi|1°producto||1|
-834|7up 2lt|23|7501031323401|0|0|pepsi|1°producto||1|
-835|mirinda 600ml|12|7501031345052|1000|9.9|pepsi|1°producto||1|
-836|mirinda 3lt|31|7501031345083|1000|24.3|pepsi|1°producto||1|
-837|mirinda 355ml|6|7501031345182|0|0|pepsi|1°producto||1|
+833|7up lata 355ml|12|7501031323302|16|9|pepsi|1°producto||6|
+834|7up 2lt|24|7501031323401|-3|0|pepsi|1°producto||1|
+835|mirinda 600ml|13|7501031345052|1002|9.9|pepsi|1°producto||12|
+836|mirinda 3lt|31|7501031345083|997|24.3|pepsi|1°producto||1|
+837|mirinda 355ml|6|7501031345182|-6|0|pepsi|1°producto||1|
 838|mirinda lata 355ml|12|7501031346301|11|9|pepsi|1°producto||1|
-839|mirinda 2lt|23|7501031346608|0|0|pepsi|1°producto||1|
-840|manzanita sol 600ml|12|7501031360024|5|9.9|pepsi|1°producto||1|
-841|manzanita sol 3lt|31|7501031360048|1000|24.3|pepsi|1°producto||1|
-842|manzanita sol lata 355ml|12|7501031360130|11|9|pepsi|1°producto||1|
-843|manzanita 2lt|23|7501031360161|0|0|pepsi|1°producto||1|
-844|manzanita 400ml|6|7501031360307|0|0|pepsi|1°producto||1|
+839|mirinda 2lt|24|7501031346608|-7|0|pepsi|1°producto||1|
+840|manzanita sol 600ml|13|7501031360024|-16|9.9|pepsi|1°producto||1|
+841|manzanita sol 3lt|31|7501031360048|996|24.3|pepsi|1°producto||1|
+842|manzanita sol lata 355ml|13|7501031360130|5|9|pepsi|1°producto||1|
+843|manzanita 2lt|24|7501031360161|-6|0|pepsi|1°producto||1|
+844|manzanita 400ml|6|7501031360307|-6|0|pepsi|1°producto||1|
 845|yogur con cerial(fresa.chococrispis)|10|7501032332013|1|0|danone|1°producto||1|
-846|benegastro 240g|10|7501032397869|1000|9|danone|1°producto||1|
-847|danup fresa 350g|12|7501032397906|1000|10.8|danone|1°producto||1|
+846|benegastro 240g|11|7501032397869|1001|9|danone|1°producto||1|
+847|danup fresa 350g|12|7501032397906|998|10.8|danone|1°producto||1|
 848|danonino|4|7501032397944|0|0|danone|1°producto||1|
-849|danup piña coco 350g|12|7501032397968|1000|10.8|danone|1°producto||1|
+849|danup piña coco 350g|12|7501032397968|999|10.8|danone|1°producto||1|
 850|danup cookies|13.5|7501032397975|0|0|danup|1°producto||1|
-851|activia ciruela pasa 225g|10|7501032398071|1000|9|danone|1°producto||1|
-852|activia ciruela pasa 225g|10|7501032398255|1000|9|danone|1°producto||1|
-853|danone toghurt durazno 220g|9|7501032398484|1000|8.1|danone|1°producto||1|
-854|danone yogurt manzana 220g|9|7501032398491|1000|8.1|danone|1°producto||1|
-855|danone yogurt fresa 220g|9|7501032398576|1000|8.1|danone|1°producto||1|
+851|activia fresa 225g|11|7501032398071|1|9.10|danone|1°producto||1|
+852|activia ciruela pasa 225g|10|7501032398255|1002|9|danone|1°producto||1|
+853|danone yoghurt drzno 220g|10|7501032398484|1002|8.1|danone|1°producto||1|
+854|danone yogurt manzana 220g|9|7501032398491|999|8.1|danone|1°producto||1|
+855|danone yogurt fresa 220g|10|7501032398576|1000|8.1|danone|1°producto||1|
 856|danup fresa 220g|9|7501032398583|1000|8.1|danone|1°producto||1|
-857|danupcookies220g|10.5|7501032398637|0|0|danup|1°producto||1|
+857|danupcookies220g|10.5|7501032398637|4|0|danup|1°producto||1|
 858|caribe durazno 300ml|16|7501032485016|4|14.4|caribe|1°producto||1|
 859|caribe tinto 300ml|16|7501032485023|2|14.4|caribe|1°producto||1|
-860|caribe mango/piña  300ml|18|7501032485030|6|16.2||1°producto||1|
+860|caribe mango/piña  300ml|18|7501032485030|5|16.2||1°producto||1|
 861|caribe fresa 300ml|18|7501032485047|5|16.2|caribe|1°producto||1|
 862|caribe manzana kiwi 300ml|18|7501032485054|4|16.2|caribe|1°producto||1|
 863|caribe maracuya 300ml|18|7501032485061|1000|16.2|caribe|1°producto||1|
@@ -866,7 +866,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 865|caribe limon  300ml|18|7501032485382|3|16.2||1°producto||1|
 866|mateqilla iberia 90g|10|7501032600686|0|8|iberia|1°producto||1|
 867|crema vagetal kg|25|7501032602482|0|20|gina|1°producto||1|
-868|raid max|62|7501032903596|2|55.8||1°producto||1|
+868|raid max|62|7501032903596|1|55.8||1°producto||1|
 869|glade odisea azul 70g|17|7501032913038|1|15.3||1°producto||1|
 870|glade frutos rojos 70g|17|7501032913243|2|15.3||1°producto||1|
 871|raid 400ml|50|7501032925956|1|45||1°producto||1|
@@ -875,31 +875,31 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 874|fabuloso 500ml|16|7501035906464|3|14.4||1°producto||1|
 875|fabuloso lavanda 1L|27.5|7501035910034|2|23.9|dicorsa|1°producto||1|
 876|fabuloso mar fresco 1L|27.5|7501035910041|2|23.9|dicorsa|1°producto||1|
-877|fabuloso 1Lt|25|7501035910096|1|22.5||1°producto||1|
+877|fabuloso 1Lt|27.5|7501035910096|-1|22.5||1°producto||1|
 878|papel higienico regio 4pz|27|7501036619233|0|0|regio|1°producto||1|
 879|buscapina 250mg|2|7501037908534|0|1.3|buscapina|1°producto||1|
-880|aceite nutrioli 850ml|32|7501039121610|1000|28.8|caribe|1°producto||1|
-881|aceite ave 850ml|26.5|7501039122105|0|0|ave|1°producto||1|
+880|aceite nutrioli 850ml|32|7501039121610|1000|28.8|casa vargas|1°producto||1|
+881|aceite ave 850ml|26.5|7501039122105|-2|0|ave|1°producto||1|
 882|atun aceite 140g|14.5|7501045401195|0|0|dorado|1°producto||1|
 883|sardina dolores 425g|33|7501045403281|0|0|dolores|1°producto||1|
 884|atun dolores 133g|14|7501045403908|3|12.6||1°producto||1|
-885|xx 1.2L|38|7501049912215|0|0|XX|1°producto||1|
-886|XX laton 473ml|20|7501049912284|1|0|indio|1°producto||1|
-887|sol michelkada 473ml|20|7501049917272|0|0|sol|1°producto||1|
-888|sol clamato 473ml|20|7501049967062|0|0|sol|1°producto||1|
-889|heineken 473ml|22|7501049999360|25|0|heineken|1°producto||24|
+885|xx 1.2L|38|7501049912215|-1|0|XX|1°producto||1|
+886|XX laton 473ml|20|7501049912284|15|0|indio|1°producto||24|
+887|sol michelada 473ml|20|7501049917272|-10|0|sol|1°producto||1|
+888|sol clamato 473ml|20|7501049967062|-24|0|sol|1°producto||1|
+889|heineken 473ml|22|7501049999360|18|0|heineken|1°producto||24|
 890|heiniken 1L|38|7501049999469|0|0|heiniken|1°producto||1|
-891|cafe legal 30g|7|7501052410111|0|3||1°producto||1|
+891|cafe legal 30g|7|7501052410111|-6|3||1°producto||1|
 892|cafe legal 100g|36|7501052411118|0|0|legal|1°producto||1|
-893|cafe legal 50g|15|7501052411804|2|13.5||1°producto||1|
+893|cafe legal 50g|15|7501052411804|1|13.5||1°producto||1|
 894|la sierra frijoles b/ negros 430gr|12|7501052420165|7|10.8|la sierra|1°producto||1|
-895|la sierra frijoles refritos 430gr|12|7501052420172|1000|10.8|la sierra|1°producto||1|
+895|la sierra frijoles refritos 430gr|16|7501052420172|2|10.8|la sierra|1°producto||1|
 896|frijo/bayos sierra refritos/chip 440g|14|7501052420240|1|12.6||1°producto||1|
-897|la sierra frijoles refritos lata 580gr|14|7501052420431|3|12.6|la sierra|1°producto||1|
+897|la sierra frijoles refritos lata 580gr|14|7501052420431|2|12.6|la sierra|1°producto||1|
 898|frijoles/bayos refritos color 400g|12|7501052421186|3|10.8||1°producto||1|
 899|la sierra frijoles peruanos 430gr|12|7501052421254|2|10.8|la sierra|1°producto||1|
 900|frijoles la sierra bayos lata 440gr|12|7501052424033|2|10.8|la sierra|1°producto||1|
-901|frijoles/enteros bayos 560g|16|7501052424613|2|14.4||1°producto||1|
+901|frijoles/enteros bayos 560g|16|7501052424613|-2|14.4||1°producto||1|
 902|la sierra frijoles charros lata310gr|17|7501052424620|1000|15.3|la sierra|1°producto||1|
 903|ensalada de verduras 410gr|11|7501052471075|3|9.9|clemente|1°producto||1|
 904|catsup|16|7501052472102|0|13|clemente|1°producto||1|
@@ -909,7 +909,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 908|mermelada zarzamora 270gr|26|7501052474236|3|23.4|clemente|1°producto||1|
 909|mermelada frambuesa 270gr|26|7501052474335|3|23.4|clemente|1°producto||1|
 910|vinagre|14|7501052475011|0|10|clememte|1°producto||1|
-911|chipotles clemente 220g|19|7501052476308|1|16|sabormex|1°producto||1|
+911|chipotles clemente 220g|19|7501052476308|0|16|sabormex|1°producto||1|
 912|mitades de durazno 820gr|37|7501052477107|3|33.3|clemente|1°producto||1|
 913|trozitos de durazno 425gr|24|7501052477121|1000|21.6|clemente|1°producto||1|
 914|rebanadas de piña almibar 800gr|32|7501052477206|2|28.8|clemente|1°producto||1|
@@ -917,65 +917,65 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 916|viña real kiwi|18|7501053670545|1000|16.2|viña|1°producto||1|
 917|viña real fresa sandia|18|7501053670569|1000|16.2|viña|1°producto||1|
 918|coca-cola menos azucar lata 355ml|13|7501055300075|1000|11.7|coca|1°producto||1|
-919|coca retornable 1.25Lts|19|7501055300952|9|15.3|coca|1°producto||8|
-920|coca vidrio 500ml desechable|10|7501055302086|1|0|coca|1°producto||1|
+919|coca retornable 1.25Lts|20|7501055300952|-21|15.3|coca|1°producto||8|
+920|coca vidrio 500ml desechable|10|7501055302086|-5|0|coca|1°producto||12|
 921|fanta piña 2lt|23|7501055302277|0|0|coca|1°producto||1|
-922|coca-cola 1lt|20|7501055302451|1000|17.1|coca|1°producto||1|
-923|coca-cola 2lt|28|7501055302925|1000|27|coca|1°producto||1|
+922|coca-cola 1lt|21|7501055302451|-5|17.1|coca|1°producto||12|
+923|coca-cola 2lt|29|7501055302925|-1|27|coca|1°producto||1|
 924|fanta naranja 600ml|11|7501055303779|1000|9.9|coca|1°producto||1|
-925|fresca 600ml|12|7501055303786|0|0|coca|1°producto||1|
-926|fresca 2lt|23|7501055303885|0|0|coca|1°producto||1|
-927|coca-cola 3lt|41|7501055304745|8|34.2|coca|1°producto||8|
+925|fresca 600ml|12|7501055303786|-2|0|coca|1°producto||1|
+926|fresca 2lt|23|7501055303885|-3|0|coca|1°producto||1|
+927|coca-cola 3lt|42|7501055304745|-24|34.2|coca|1°producto||8|
 928|fresca 3lt|30|7501055304813|0|0|coca|1°producto||1|
 929|ciel mineralizada 600ml|11|7501055308248|1000|9.9|coca|1°producto||1|
-930|coca-cola retornable 2.5lt|26|7501055310227|2|21.6|coca|1°producto||8|
+930|coca-cola retornable 2.5lt|27|7501055310227|-23|21.6|coca|1°producto||8|
 931|fanta uva 3lt|27|7501055317462|1000|24.3|coca|1°producto||1|
 932|fanta tuti-fruti 2lt|23|7501055318513|1000|18.9|coca|1°producto||1|
 933|coca 400ml|8|7501055328345|1|0|coca|1°producto||1|
 934|del vallefrut 3lt|31|7501055330812|0|0|coca|1°producto||1|
-935|del valle mango 1lt|20|7501055333844|1000|18.9|del valle|1°producto||1|
-936|del valle durazno 1lt|20|7501055333851|1000|18.9|del valle|1°producto||1|
-937|del valle manzana 1lt|21|7501055333868|1000|18.9|del valle|1°producto||1|
-938|munded 600|12|7501055339983|0|0|coca|1°producto||1|
-939|sidral mundet 2lt|24|7501055340002|1|21.6|coca|1°producto||1|
+935|del valle mango 1lt|20|7501055333844|998|18.9|del valle|1°producto||1|
+936|del valle durazno 1lt|20|7501055333851|996|18.9|del valle|1°producto||1|
+937|del valle manzana 1lt|21|7501055333868|999|18.9|del valle|1°producto||1|
+938|munded 600|12|7501055339983|-7|0|coca|1°producto||1|
+939|sidral mundet 2lt|24|7501055340002|-2|21.6|coca|1°producto||1|
 940|sidral mundet 3lt|27|7501055340422|1000|24.3|coca|1°producto||1|
-941|coca 250ml|7|7501055355310|12|0|coca|1°producto||12|
+941|coca 250ml|8|7501055355310|-25|0|coca|1°producto||12|
 942|fuzetea te verde 600ml|13|7501055358892|1000|11.7|coca|1°producto||1|
-943|coca lata 355mll|14|7501055361540|1000|11.7|coca|1°producto||1|
-944|leche alpura clasica|22|7501055900039|8|19.8||1°producto||1|
+943|coca lata 355mll|14|7501055361540|995|11.7|coca|1°producto||1|
+944|leche alpura clasica|22|7501055900039|6|19.8||1°producto||1|
 945|alpura semi 1lt|24|7501055900046|14|21.6||1°producto||1|
 946|leche alpura vaqui choco 1l|24|7501055900060|3|21.6|alpura|1°producto||1|
 947|leche alpura vaqui fresa 1l|24|7501055900077|3|21.6|alpura|1°producto||1|
-948|leche alpura vaqui vainilla 1l|24|7501055900084|3|21.6|alpura|1°producto||1|
+948|leche alpura vaqui vainilla 1l|24|7501055900084|1|21.6|alpura|1°producto||1|
 949|alpura yogur de fresa 1L|30|7501055900206|0|0|alpura|1°producto||1|
 950|ALPURA YOGUOR NATURAL 900ML|30|7501055900237|0|0|alpura|1°producto||1|
-951|alpura deslactosada 1lt|23|7501055901425|3|20.7||1°producto||1|
+951|alpura deslactosada 1lt|23|7501055901425|1|20.7||1°producto||1|
 952|frutal durazno 1lt|24|7501055903795|0|0|alpura|1°producto||1|
 953|frutal fresa 225ml|10|7501055905836|0|0|alpura|1°producto||1|
-954|crema|14|7501055909520|0|0|alpura|1°producto||1|
-955|crema 450g|28|7501055909537|0|25|alpura|1°producto||1|
-956|leche vaquita chocolate 250ml|9|7501055909575|1000|8.1|alpura|1°producto||1|
-957|leche vaquita fresa 250ml|9|7501055909582|2|8.1|alpura|1°producto||1|
-958|leche vaquita vainilla 250ml|9|7501055909599|1000|8.1|alpura|1°producto||1|
-959|yougurt 125g|6.5|7501055912414|0|4|alpura|1°producto||1|
+954|crema|14|7501055909520|-2|0|alpura|1°producto||1|
+955|crema 450g|28|7501055909537|-3|25|alpura|1°producto||1|
+956|leche vaquita chocolate 250ml|9|7501055909575|998|8.1|alpura|1°producto||1|
+957|leche vaquita fresa 250ml|9|7501055909582|0|8.1|alpura|1°producto||1|
+958|leche vaquita vainilla 250ml|9|7501055909599|999|8.1|alpura|1°producto||1|
+959|yougurt 125g|6.5|7501055912414|-1|4|alpura|1°producto||1|
 960|yogurt mango 125g|6.5|7501055912452|0|4|alpura|1°producto||1|
 961|yogur alpura piñacoco 125g|6|7501055912513|1000|5|alpura|1°producto||1|
 962|cremas ponds 50g|40|7501056325442|2|36||1°producto||1|
-963|paleta bubaloo fresa|5|7501056900151|6|4.5||1°producto||1|
-964|leche carnation nestle 360gr|16|7501058611062|8|14.4|nestle|1°producto||1|
+963|paleta bubaloo fresa|5|7501056900151|-3|4.5||1°producto||1|
+964|leche carnation nestle 360gr|16|7501058611062|6|14.4|nestle|1°producto||1|
 965|gerber junior manzana 110gr|11|7501058614322|1000|9.9|nestle|1°producto||1|
-966|lechera bote 387g|20|7501058617873|3|18||1°producto||1|
+966|lechera bote 387g|26|7501058617873|0|18||1°producto||1|
 967|la lechera nestle bolsa 90gr|13|7501058620750|13|11.7|nestle|1°producto||1|
 968|nan 1 360g|144|7501058625182|0|0|nestle|1°producto||1|
 969|nan 2|127|7501058625199|0|0|nestle|1°producto||1|
 970|nesquik 80gr|13|7501058625908|1|11.7|nestle|1°producto||1|
 971|trix 80gr|12|7501058626721|1|10.8|nestle|1°producto||1|
 972|crunch cookis cream|11|7501058626899|2|9.9||1°producto||1|
-973|nescafe capuchino20g|11|7501058629128|0|0|nescafe|1°producto||1|
-974|nidal bebe 120g|23.5|7501058629708|0|0|nestle|1°producto||1|
+973|nescafe capuchino20g|11|7501058629128|-2|0|nescafe|1°producto||1|
+974|nidal bebe 120g|23.5|7501058629708|-1|0|nestle|1°producto||1|
 975|fitnes chocolate|8|7501058630179|2|7.2||1°producto||1|
-976|carlos v normal|8|7501058638083|15|7.2||1°producto||1|
-977|carlos V 34g|10|7501058638113|0|8|carlos v|1°producto||1|
+976|carlos v normal|8|7501058638083|10|7.2||1°producto||1|
+977|carlos V 34g|10|7501058638113|-6|8|carlos v|1°producto||1|
 978|kitkat snax 32g|14|7501058644121|0|0|kitkac|1°producto||1|
 979|crunch snax 35g|14|7501058644169|0|0|cruch|1°producto||1|
 980|pureza vital nestle 1.5l|8|7501059200777|5|7.2|nestle|1°producto||1|
@@ -985,116 +985,116 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 984|la lechera nestle botella 335gr|22|7501059278868|1000|19.8|nestle|1°producto||1|
 985|chocolate morelia 155gr|18|7501059289239|1000|16.2|morelia|1°producto||1|
 986|chocolate crunch 9g|2.5|7501059289253|0|0|cruch|1°producto||1|
-987|chocolata abue barra|3|7501059292147|30|2.7||1°producto||1|
+987|chocolata abue barra|3|7501059292147|25|2.7||1°producto||1|
 988|agüitas nestle manzana 300ml|5|7501059295254|22|4.5|nestle|1°producto||1|
 989|agüitas nestle uva 300ml|5|7501059295315|2|4.5|nestle|1°producto||1|
 990|pureza vital nestle 300ml|5|7501059295551|1000|4.5|nestle|1°producto||1|
-991|agüitas nestle fresa 300ml|5|7501059295612|2|4.5|nestle|1°producto||1|
-992|larin avellana|10|7501059299429|4|9||1°producto||1|
-993|larin almen|10|7501059299436|4|9||1°producto||1|
-994|larin nuez|10|7501059299443|4|9||1°producto||1|
-995|tecate titanium 473ml|20|7501061600749|0|0|indio|1°producto||1|
-996|tecate original 1.2l|35|7501061668930|0|0|indio|1°producto||1|
-997|tecate ligth 1.2L|35|7501061679202|0|1|indio|1°producto||1|
-998|indio 473ml|18|7501061696988|1000|0|indio|1°producto||1|
+991|agüitas nestle fresa 300ml|5|7501059295612|1|4.5|nestle|1°producto||1|
+992|larin avellana|15|7501059299429|4|10||1°producto||1|
+993|larin almen|15|7501059299436|4|10||1°producto||1|
+994|larin nuez|15|7501059299443|3|10||1°producto||1|
+995|tecate titanium 473ml|20|7501061600749|-1|0|indio|1°producto||1|
+996|tecate original 1.2l|35|7501061668930|-1|0|indio|1°producto||1|
+997|tecate ligth 1.2L|35|7501061679202|-1|1|indio|1°producto||1|
+998|indio 473ml|18|7501061696988|1019|0|indio|1°producto||24|
 999|chipotles 210g|19|7501062700622|0|0|la morena|1°producto||1|
-1000|corona mega 1.2L|35|7501064101205|1|28.8||1°producto||1|
+1000|corona mega 1.2L|35|7501064101205|16|28.8|corona|1°producto||24|
 1001|corona light lata 355ml|16|7501064107153|1000|14.4|corona|1°producto||1|
-1002|modelo especial lata 355ml|16|7501064112546|1000|14.4|corona|1°producto||1|
-1003|leon 1.2Lt|35|7501064173202|1|0|corona|1°producto||1|
+1002|modelo especial lata 355ml|18|7501064112546|985|14.4|corona|1°producto||1|
+1003|leon 1.2Lt|35|7501064173202|4|0|corona|1°producto||12|
 1004|corona  355ml|16|7501064190711|5|14.4||1°producto||1|
-1005|modelo especial laton 473ml|19|7501064191886|10|0|corona|1°producto||1|
-1006|victoria botella 1.2L|32|7501064191909|2|28.8||1°producto||1|
-1007|corona extra laton 473ml|19|7501064193859|3|15.3|corona|1°producto||1|
-1008|victoria laton 473ml|19|7501064194139|29|15.3||1°producto||1|
-1009|modelo negra lata 355ml|17|7501064196935|1000|15.3|corona|1°producto||1|
-1010|cerveza michelob ultra 355ml|18|7501064198168|29|16.2|corona|1°producto||1|
-1011|victoria chamoy lata|21|7501064199769|1|0|corona|1°producto||1|
+1005|modelo especial laton 473ml|19|7501064191886|-13|0|corona|1°producto||1|
+1006|victoria botella 1.2L|35|7501064191909|-26|28.8||1°producto||1|
+1007|corona extra laton 473ml|19|7501064193859|-7|15.3|corona|1°producto||1|
+1008|victoria laton 473ml|19|7501064194139|4|15.3||1°producto||1|
+1009|modelo negra lata 355ml|18|7501064196935|992|15.3|corona|1°producto||1|
+1010|cerveza michelob ultra 355ml|18|7501064198168|9|16.2|corona|1°producto||1|
+1011|victoria chamoy lata|21|7501064199769|-8|0|corona|1°producto||1|
 1012|mejoralito 30 tabletas|3|7501064560194|0|0|mejoralito|1°producto||1|
 1013|detergente ariel 250g|11.5|7501065908841|0|0|ariel|1°producto||1|
 1014|harina de arroz 250g|10.5|7501069210766|0|0|tres estrellaz|1°producto||1|
 1015|squirt 2lt|21|7501071120077|1000|18.9|pepsi|1°producto||1|
-1016|squirt 600ml|11|7501071120183|1000|9.9|pepsi|1°producto||1|
+1016|squirt 600ml|11|7501071120183|998|9.9|pepsi|1°producto||1|
 1017|squirt 3lt|30|7501071120305|0|0|squirt|1°producto||1|
-1018|squirt 2.5L|26|7501071120411|10|0|peñafiel|1°producto||1|
+1018|squirt 2.5L|26|7501071120411|8|0|peñafiel|1°producto||1|
 1019|clorox 500ml|9|7501071900112|4|8.1||1°producto||1|
 1020|clorox 1lt|15|7501071900129|5|13.5||1°producto||1|
 1021|poett bosque de bambù|15|7501071903137|1|13.5||1°producto||1|
 1022|clorox color|26|7501071903878|2|23.4||1°producto||1|
 1023|peñafiel  2Lts|21|7501073800908|5|18.9||1°producto||1|
-1024|peñafiel natural 600ml|12|7501073830509|15|9.9|coca|1°producto||1|
+1024|peñafiel natural 600ml|12|7501073830509|8|9.9|coca|1°producto||1|
 1025|peñafiel twist|12|7501073831469|1012|9.9|peñafiel|1°producto||12|
 1026|ginger ale schweppers 600ml|12|7501073833722|14|10.8|coca|1°producto||1|
 1027|schweppes ginger 1L|15|7501073833739|3|13.5||1°producto||1|
-1028|peña fiel naranjada 600ml|11|7501073839854|5|9.9||1°producto||1|
-1029|peñafiel limonada 600ml|12|7501073839885|1000|9.9|coca|1°producto||1|
+1028|peña fiel naranjada 600ml|11|7501073839854|4|9.9||1°producto||1|
+1029|peñafiel limonada 600ml|12|7501073839885|996|9.9|coca|1°producto||1|
 1030|peñafiel limon 2lt|23|7501073839892|0|0|peñafiel|1°producto||1|
-1031|peñafiel sifon 1.75lt|22|7501073840843|0|0|peñafiel|1°producto||1|
+1031|peñafiel sifon 1.75lt|22|7501073840843|-2|0|peñafiel|1°producto||1|
 1032|peñafiel fresada 600ml|12|7501073841253|0|0|peñafiel|1°producto||1|
-1033|peñafiel piñada 600ml|12|7501073841925|11|9.9|coca|1°producto||1|
+1033|peñafiel piñada 600ml|12|7501073841925|9|9.9|coca|1°producto||1|
 1034|peña fiel mangada 600ml|12|7501073842670|1000|9.9|coca|1°producto||1|
 1035|peñafiel manzana 2lt|23|7501073843189|0|0|peñafiel|1°producto||1|
 1036|sopa fideo italpasta 200g|6.5|7501079011117|0|0|moderna|1°producto||1|
 1037|del fuerte pure de tomate 210gr|7|7501079702817|17|6.3|del fuerte|1°producto||1|
 1038|vinagre blanco 1.05lt|14|7501083100029|5|12.6|la costeña|1°producto||1|
 1039|vinagre de manzana barrilito 750ml|16|7501083100036|6|14.4|barrilito|1°producto||1|
-1040|encendedor tokai|12|7501086106929|0|10|tokai|1°producto||1|
+1040|encendedor tokai|12|7501086106929|-5|10|tokai|1°producto||1|
 1041|epura 2lt|15|7501086800636|2|13.5|epura|1°producto||1|
-1042|agua epura 1.5lt|13|7501086801015|0|0|epura|1°producto||1|
-1043|agua e pura 1l|11|7501086801046|4|9|epura|1°producto||1|
-1044|agua epura 10.1lt|35|7501086801077|0|0|epura|1°producto||1|
-1045|e-pura  600ml|8|7501086801121|4|7.2||1°producto||1|
-1046|agua epura 5lt|25|7501086801138|0|0|epura|1°producto||1|
+1042|agua epura 1.5lt|13|7501086801015|-4|0|epura|1°producto||1|
+1043|agua e pura 1l|11|7501086801046|-15|9|epura|1°producto||1|
+1044|agua epura 10.1lt|35|7501086801077|-1|0|epura|1°producto||1|
+1045|e-pura  600ml|8|7501086801121|-3|7.2||1°producto||1|
+1046|agua epura 5lt|25|7501086801138|-1|0|epura|1°producto||1|
 1047|sopa vesta fideo mediano 160gr|5|7501092604518|1|4.5|vesta|1°producto||1|
-1048|sal de uvas picot 2.485g|5|7501095467264|0|3|picot|1°producto||1|
-1049|kola loka2g|22|7501102610003|0|0|kola loka|1°producto||1|
-1050|kola loka brocha 5g|26|7501102614322|0|0|kola loka|1°producto||1|
+1048|sal de uvas picot 2.485g|5|7501095467264|-1|3|picot|1°producto||1|
+1049|kola loka2g|22|7501102610003|-2|0|kola loka|1°producto||1|
+1050|kola loka brocha 5g|27|7501102614322|8|20|kola loka|1°producto||1|
 1051|sal 1kg|12.5|7501118342103|0|0|salsol|1°producto||1|
 1052|guantes latex|16|7501123300020|9|14.4||1°producto||1|
 1053|cactus uva verde 500ml|8|7501124500184|10|0|bonafont|1°producto||1|
 1054|cactus manzana 500ml|8|7501124500351|10|0|bonafont|1°producto||1|
 1055|cactus piña 500ml|8|7501124500375|10|0|bonafont|1°producto||1|
-1056|electrolito fresa 525ml|20|7501125104268|10|0|bonafont|1°producto||1|
-1057|electrolito suero naranja mandarina 625ml|20|7501125104688|10|0|bonafont|1°producto||1|
+1056|electrolito fresa 525ml|20|7501125104268|8|0|bonafont|1°producto||1|
+1057|electrolito suero naranja mandarina 625ml|20|7501125104688|8|0|bonafont|1°producto||1|
 1058|mucoangin 20g|10|7501165011434|0|0|mucoangil|1°producto||1|
 1059|canada dry 1L|15|7501198350104|3|13.5||1°producto||1|
 1060|mascolor|20|7501199413006|2|18||1°producto||1|
 1061|flan vainilla pronto 136g|12|7501200480515|0|0|pronto|1°producto||1|
 1062|gelatina pronto fresa 84gr|11|7501200482120|3|9.9|pronto|1°producto||1|
-1063|gelatina pronto limon 84gr|11|7501200482137|3|9.9|pronto|1°producto||1|
+1063|gelatina pronto limon 84gr|11|7501200482137|2|9.9|pronto|1°producto||1|
 1064|gelatina pronto naranja 84gr|11|7501200482144|3|9.9|pronto|1°producto||1|
 1065|gelatina pronto piña 84gr|11|7501200482151|3|9.9|pronto|1°producto||1|
-1066|gelatina pronto uva 84gr|11|7501200482168|3|9.9|pronto|1°producto||1|
+1066|gelatina pronto uva 84gr|11|7501200482168|2|9.9|pronto|1°producto||1|
 1067|harina hotcakes 350g|16|7501200483127|6|14.4||1°producto||1|
-1068|jarabe maple 250ml|18|7501200484087|3|16.2||1°producto||1|
-1069|vaso traslucido 50 pzs|20|7501219111929|10|16|primo|1°producto||50|
-1070|platos desechables 20p|12|7501219112551|2|10.8||1°producto||1|
+1068|jarabe maple 250ml|18|7501200484087|5|16.2|la sierra|1°producto||1|
+1069|vaso traslucido 50 pzs|20|7501219111929|0|16|primo|1°producto||50|
+1070|platos desechables 20p|12|7501219112551|40|10.8|la sierra|1°producto||20|
 1071|rizador 90pzs|20|7501229301020|0|0|rizador|1°producto||1|
-1072|blanqueador patitos|12|7501268200025|3|10.8||1°producto||1|
-1073|patitos 500ml|7|7501268200032|4|6.3||1°producto||1|
-1074|leche entera santa clara 1l|22|7501295600126|6|19.8|santa clara|1°producto||1|
-1075|santa clara light 1L|24|7501295600140|7|0|coca|1°producto||6|
+1072|los patitos 1lt|12|7501268200025|3|10.8||1°producto||1|
+1073|los patitos 500ml|7|7501268200032|4|6.3||1°producto||1|
+1074|leche entera santa clara 1l|24|7501295600126|-3|19.8|santa clara|1°producto||1|
+1075|santa clara light 1L|24|7501295600140|2|0|coca|1°producto||6|
 1076|santaclara deslactosada 1lt|23|7501295600157|8|20.7||1°producto||1|
 1077|santa clara chocolate 200ml|10|7501295600614|10|0|coca|1°producto||1|
-1078|santa clara capuccino 200ml|10|7501295600638|10|0|coca|1°producto||1|
+1078|santa clara capuccino 200ml|10|7501295600638|9|0|coca|1°producto||1|
 1079|santa clara vainilla 200ml|10|7501295600713|10|0|coca|1°producto||1|
-1080|vaso de unicel 25 pzs|10.5|7501431261105|0|8|convermex|1°producto||1|
+1080|vaso de unicel 25 pzs|10.5|7501431261105|4|8|casa vargas|1°producto||1|
 1081|plato pozolero 20pzs|9|7501431263215|0|5.5|convermex|1°producto||1|
-1082|jarrito naranja 2lt|19|7501441604114|0|0|pepsi|1°producto||1|
-1083|jarritos/piña  2Lts|19|7501441604121|2|19.8||1°producto||1|
-1084|jarrito tamarindo 2lt|19|7501441604213|1000|19.8|pepsi|1°producto||1|
-1085|jarrito durazno 2L|19|7501441604220|10|0|pepsi|1°producto||1|
-1086|jarrito grosella 2L|19|7501441604251|10|0|pepsi|1°producto||1|
-1087|jarrito rojo 2lt|22|7501441604411|4|19.8|pepsi|1°producto||1|
+1082|jarrito naranja 2lt|20|7501441604114|-4|0|pepsi|1°producto||1|
+1083|jarritos/piña  2Lts|20|7501441604121|-2|19.8||1°producto||1|
+1084|jarrito tamarindo 2lt|20|7501441604213|995|19.8|pepsi|1°producto||1|
+1085|jarrito durazno 2L|20|7501441604220|9|0|pepsi|1°producto||1|
+1086|jarrito grosella 2L|20|7501441604251|7|0|pepsi|1°producto||1|
+1087|jarrito rojo 2lt|20|7501441604411|4|19.8|pepsi|1°producto||1|
 1088|jarrito mandarina 600ml|11|7501441610115|1000|9.9|pepsi|1°producto||1|
 1089|jarrito rojo 600ml|11|7501441610412|1000|9.9|pepsi|1°producto||1|
-1090|jarrito toronjita 2lt|19|7501441611112|2|19.8|pepsi|1°producto||1|
+1090|jarrito toronjita 2lt|20|7501441611112|-7|19.8|pepsi|1°producto||1|
 1091|jarrito mandarina 3lt|28|7501441615110|1000|24.3|pepsi|1°producto||1|
-1092|jarrito tamarindo 3lt|28|7501441615219|5|25.2|pepsi|1°producto||1|
-1093|jarrito rojo 3lt|28|7501441615417|3|25.2|pepsi|1°producto||1|
-1094|sangria 2lt|23|7501505630028|0|0|pepsi|1°producto||1|
-1095|sangria casera lata355ml|12|7501505630035|0|0|pepsi|1°producto||1|
-1096|sangria casera 600ml|12|7501505630073|1000|9.9|pepsi|1°producto||1|
+1092|jarrito tamarindo 3lt|28|7501441615219|4|25.2|pepsi|1°producto||1|
+1093|jarrito rojo 3lt|28|7501441615417|0|25.2|pepsi|1°producto||1|
+1094|sangria 2lt|24|7501505630028|-5|0|pepsi|1°producto||1|
+1095|sangria casera lata355ml|12|7501505630035|-7|0|pepsi|1°producto||1|
+1096|sangria casera 600ml|13|7501505630073|989|9.9|pepsi|1°producto||1|
 1097|aluplus 7.5mts|35|7501590612398|4|31.5|aluplus|1°producto||1|
 1098|frijol negro abeto 900gr|25|7501668800177|2|22.5|abeto|1°producto||1|
 1099|frijol flor de mayo abeto 900gr|23|7501668801501|1000|20.7|abeto|1°producto||1|
@@ -1104,20 +1104,20 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1103|petalo 400 hojas|31|7501943412200|3|27.9||1°producto||1|
 1104|petalo 300 hojas|27|7501943412217|1|24.3||1°producto||1|
 1105|kotex naturals 10p|33|7501943424609|4|29.7||1°producto||1|
-1106|cuchara sopera 25g|9|7502010794687|0|0||1°producto||1|
+1106|cuchara sopera 25g|9|7502010794687|3|0|casa vargas|1°producto||1|
 1107|fibra esponja 2pz|8|7502221420139|0|0|iber|1°producto||1|
 1108|chicle orbit yerbabuena|2.5|7502226813844|80|0|orbit|1°producto||40|
-1109|lucas muecas chamoy 24g|7|7502226815022|0|3|orbit|1°producto||1|
-1110|lucas panzon 38g|7|7502226815145|0|3|orbit|1°producto||1|
-1111|lucas chamoy picante 24g|7|7502226815770|0|3|orbit|1°producto||1|
+1109|lucas muecas chamoy 24g|7|7502226815022|6|3|orbit|1°producto||10|
+1110|lucas panzon 38g|7|7502226815145|-1|3|orbit|1°producto||1|
+1111|lucas chamoy picante 24g|7|7502226815770|-1|3|orbit|1°producto||1|
 1112|aceite mixto 40ml|8|7502228120001|0|5|aceite|1°producto||1|
 1113|autenticas jalapeño 60g|10|7502237931155|1|0|autenticas|1°producto||1|
 1114|papas autenticas|10|7502237931162|1|0|autenticas|1°producto||1|
 1115|soberano 20c/cfiltro|26|7502252632112|0|22|soberano|1°producto||1|
-1116|soberano verde 20|28|7502252632518|10|105|link|1°producto||5|
-1117|cigarro link rojo 20'|26|7502252634116|15|20|link|1°producto||5|
-1118|cigarro link blanco 20'|26|7502252634314|0|20|link|1°producto||1|
-1119|cigarro link negro 20o'|26|7502252634413|0|20|link|1°producto||1|
+1116|soberano verde 20|28|7502252632518|7|105|link|1°producto||5|
+1117|cigarro link rojo 20'|26|7502252634116|-8|20|link|1°producto||10|
+1118|cigarro link blanco 20'|26|7502252634314|-3|20|link|1°producto||1|
+1119|cigarro link negro 20o'|26|7502252634413|0|20|link|1°producto||6|
 1120|aloe "Natural" durazno 500ml|17|7502254753921|1|15.3||1°producto||1|
 1121|aloe "Natural" lichi 500ml|17|7502254753969|2|15.3||1°producto||1|
 1122|aloe "Natural" mora azul 500ml|17|7502254754041|1000|15.3||1°producto||1|
@@ -1127,105 +1127,105 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1126|buenatole fresa 50gr|4|7502261260801|2|3.6||1°producto||1|
 1127|buenatole vainilla 50gr|4|7502261260818|1|3.6||1°producto||1|
 1128|buenatole nuez 50gr|4|7502261260825|3|3.6||1°producto||1|
-1129|mms cacahuate 43g|15|7502271911472|10|0|snikers|1°producto||1|
-1130|snikers almendra 48g|15|7502271912059|10|0|snikers|1°producto||1|
+1129|mms cacahuate 43g|15|7502271911472|9|0|snikers|1°producto||1|
+1130|snikers almendra 48g|15|7502271912059|9|0|snikers|1°producto||1|
 1131|encendedor cliper|16|7502273850465|0|14|cliper|1°producto||1|
 1132|gel xtreme 250g|12|7503002163023|8|10.8||1°producto||1|
 1133|agua vie 600ml|8|7503002541678|0|0|vie|1°producto||1|
 1134|agua vie 1.5lt|12|7503002541753|0|0|vie|1°producto||1|
 1135|agua vie 1lt|11|7503002541821|0|0|vie|1°producto||1|
-1136|veladora farolito|16|7503004599042|10|0|san francisco de asis|1°producto||1|
-1137|veladora virgen|13|7503004599240|10|0|lux|1°producto||1|
-1138|red cola 600ml|9|7503006897016|53|8.1||1°producto||1|
-1139|red cola 2lt|18|7503006897030|0|0|red cola|1°producto||1|
+1136|veladora farolito|16|7503004599042|5|0|san francisco de asis|1°producto||1|
+1137|veladora virgen|13|7503004599240|5|0|lux|1°producto||1|
+1138|red cola 600ml|9|7503006897016|49|8.1||1°producto||1|
+1139|red cola 2lt|18|7503006897030|-1|0|red cola|1°producto||1|
 1140|elte te negro 600ml|9|7503006897313|9|8.1||1°producto||1|
 1141|elte te verde limon 600 ml|9|7503006897344|9|8.1||1°producto||1|
-1142|vainilla garrafoncito125ml|12|7503009023085|1|0|san salvador|1°producto||1|
+1142|vainilla garrafoncito125ml|12|7503009023085|-1|0|san salvador|1°producto||1|
 1143|saborizante vainilla LS 125ml|10|7503009023092|12|9||1°producto||1|
-1144|aceite de oliva 225ml|35|7503009023535|0|0|san salvador|1°producto||1|
+1144|aceite de oliva 225ml|35|7503009023535|-2|0|san salvador|1°producto||1|
 1145|alcohol|9|7503013208133|0|0|alcohol|1°producto||1|
-1146|wapas salsa negra 42gr|10|7503018544595|10|0|barcel|1°producto||1|
+1146|wapas salsa negra 42gr|10|7503018544595|9|0|barcel|1°producto||1|
 1147|bonafina naranja 1.87L|25|7503018985909|2|22.5||1°producto||1|
 1148|gel antibacterial|45|7503023615068|0|0|pdoder max|1°producto||1|
 1149|diem 250ml|13|7503023615624|0|0|diem|1°producto||1|
-1150|vuala vainilla|12|7503023836135|0|0|vuala|1°producto||1|
-1151|vuala chocolate 60g|12|7503023836142|0|0|vuala|1°producto||1|
+1150|vuala vainilla|14|7503023836135|0|0|vuala|1°producto||1|
+1151|vuala chocolate 60g|14|7503023836142|-7|0|vuala|1°producto||1|
 1152|bonafina/naranja  450ml|10|7503023907002|3|9||1°producto||1|
-1153|cigarro camel 20'|63|7503023959001|0|56|camel|1°producto||1|
+1153|cigarro camel 20'|63|7503023959001|-2|56|camel|1°producto||1|
 1154|cigarro camel capsula 20'|63|7503023959131|0|58|camel|1°producto||1|
 1155|cigarro activa max double caps/20'|63|7503023959254|0|58|camel|1°producto||1|
-1156|heineken 0|18|7503024416510|24|0|heiniken|1°producto||24|
-1157|strouborw rose apple 330ml|18|7503024416589|0|0|stroubow|1°producto||1|
-1158|tecate ambar473|20|7503024416817|1000|17|indio|1°producto||1|
-1159|victoria chingones 1.2L|35|7503024460216|0|0|corona|1°producto||1|
-1160|cifrut max 400ml mango|10|7503027753315|10|0|cifrut|1°producto||1|
-1161|volt blue energy 473ml|20|7503027753650|10|0|quala|1°producto||1|
-1162|carta blanca 473ml|16|7503028412587|0|0|carta blanca|1°producto||1|
+1156|heineken 0|18|7503024416510|11|0|heiniken|1°producto||24|
+1157|strouborw rose apple 330ml|18|7503024416589|-2|0|stroubow|1°producto||1|
+1158|tecate ambar473|20|7503024416817|995|17|indio|1°producto||1|
+1159|victoria chingones 1.2L|35|7503024460216|-1|0|corona|1°producto||1|
+1160|cifrut max 400ml mango|10|7503027753315|9|0|cifrut|1°producto||1|
+1161|volt blue energy 473ml|20|7503027753650|9|0|quala|1°producto||1|
+1162|carta blanca 473ml|17|7503028412587|7|0|carta blanca|1°producto||1|
 1163|suavicremas bites 50g|10|7503028643448|10|0|marinela|1°producto||1|
-1164|takis volcano 68g|11|7503028965465|0|10|barcel|1°producto||1|
+1164|takis volcano 68g|11|7503028965465|-2|10|barcel|1°producto||1|
 1165|totopos sanissimo 200g|25|7503028965571|10|0|bimbo|1°producto||1|
-1166|cuernitos|12|7503029151416|1|0|tia rosa|1°producto||1|
+1166|cuernitos|12|7503029151416|0|0|tia rosa|1°producto||1|
 1167|plativolos 90gr|10|7503029151829|10|0|marinela|1°producto||1|
 1168|tortilla de harina de trigo 272g|12|7503029445805|10|0|tortillinas|1°producto||1|
-1169|wapas queso 42g|10|7503030043243|1|0|barcel|1°producto||1|
-1170|runners 68g|10|7503030199612|10|0|barcel|1°producto||1|
-1171|chipotle 62g|10|7503030199636|10|0|barcel|1°producto||1|
-1172|roles de canela|15|7503030199995|0|0|bimbo|1°producto||1|
-1173|crossantines choco32g|5|7503030374019|1|0|bimbo dulce|1°producto||1|
+1169|wapas queso 42g|10|7503030043243|-3|0|barcel|1°producto||1|
+1170|runners 68g|10|7503030199612|3|0|barcel|1°producto||1|
+1171|chipotle 62g|10|7503030199636|6|0|barcel|1°producto||1|
+1172|roles de canela|15|7503030199995|-3|0|bimbo|1°producto||1|
+1173|crossantines choco32g|5|7503030374019|1|4.10|bimbo dulce|1°producto||1|
 1174|panque chocolate|30|7503030374309|0|0|bimbo|1°producto||1|
-1175|sponch 180g|22|7503030374842|10|0|marinela|1°producto||1|
-1176|foco alefco100watss|11|7504502380606|0|0|alefco|1°producto||1|
-1177|trident menta|10|7506105606053|1|9||1°producto||1|
-1178|trident freshmint cart.30.6g|15|7506105606077|1|0|mondelez|1°producto||1|
+1175|sponch 180g|23|7503030374842|9|0|marinela|1°producto||1|
+1176|foco alefco100watss|18|7504502380606|-4|0|alefco|1°producto||1|
+1177|trident menta|15|7506105606053|0|9||1°producto||1|
+1178|trident freshmint cart.30.6g|15|7506105606077|0|0|mondelez|1°producto||1|
 1179|chicle trident 30.6g|15|7506105606084|0|12|trident|1°producto||1|
 1180|snikers 52.7g|15|7506174500207|6|13.5||1°producto||1|
 1181|milkyway 52.3g|15|7506174500214|6|13.5||1°producto||1|
 1182|m&m`s 47.8g|15|7506174500467|5|13.5||1°producto||1|
-1183|Snickers 21.5|9.5|7506174502645|0|8|snikers|1°producto||1|
-1184|chocolate milky way 22g|9|7506174502652|0|8|milky way|1°producto||1|
+1183|Snickers 21.5|9.5|7506174502645|12|8|snikers|1°producto||15|
+1184|chocolate milky way 22g|9|7506174502652|12|8|milky way|1°producto||15|
 1185|chocolate milkyway red berries 48.5|15|7506174505318|0|12|milky way|1°producto||1|
 1186|chocolate m&ms caramelo40g|15|7506174511135|0|12|m&ms|1°producto||1|
-1187|Chocolate milkyway48g|15|7506174512200|24|12|milkyway|1°producto||24|
-1188|snikers 48g|15|7506174512248|10|0|snikers|1°producto||1|
-1189|chocolate dove 33.4|15|7506174513856|0|12|dove|1°producto||1|
+1187|Chocolate milkyway48g|15|7506174512200|21|12|milkyway|1°producto||24|
+1188|snikers 48g|15|7506174512248|4|0|snikers|1°producto||1|
+1189|chocolate dove 33.4|15|7506174513856|-5|12|dove|1°producto||1|
 1190|lucas muecas tamarindo 24g|7|7506174513894|0|3|orbit|1°producto||1|
 1191|savile keratina 750ml|39|7506192501040|2|35.1||1°producto||1|
 1192|fruti max jamaica 7g|4|7506192503846|1000|3.6||1°producto||1|
 1193|fruti max mango 7g|4|7506192503860|1000|3.6||1°producto||1|
 1194|savile biotina 750ml|39|7506192505499|2|35.1||1°producto||1|
-1195|rico pollo 33g|5|7506192505802|0|2|rico pollo|1°producto||1|
-1196|vive 100 500ml|13|7506192505918|1000|11.7||1°producto||1|
+1195|rico pollo 33g|5|7506192505802|-4|2|rico pollo|1°producto||1|
+1196|vive 100 500ml|13|7506192505918|999|11.7||1°producto||1|
 1197|savile colageno 750ml|39|7506192506106|1|35.1||1°producto||1|
 1198|shampoo savile sobre 24ml|2.5|7506192506137|0|1.5|savile|1°producto||1|
-1199|savile anti esponjado 100ml|10|7506192506175|3|9||1°producto||1|
+1199|savile anti esponjado 100ml|10|7506192506175|2|9||1°producto||1|
 1200|ego attraction 200ml|12|7506192506601|7|10.8||1°producto||1|
-1201|vitaloe 320ml|13|7506192506816|1000|11.7||1°producto||1|
+1201|vitaloe 320ml|12|7506192506816|987|11.7||1°producto||1|
 1202|vive 100 verde 300ml|10|7506192506854|0|9||1°producto||1|
-1203|vive 100 morado 500ml|13|7506192506953|3|11.7||1°producto||1|
+1203|vive 100 morado 500ml|13|7506192506953|2|11.7||1°producto||1|
 1204|vive 100 morado 500ml|13|7506192507271|10|0|quala|1°producto||1|
-1205|amper  473ml|15|7506192507349|11|13.5||1°producto||1|
-1206|vive 100ginseng 500ml|13|7506192507417|12|11.7||1°producto||1|
+1205|amper  473ml|15|7506192507349|7|13.5||1°producto||1|
+1206|vive 100ginseng 500ml|13|7506192507417|9|11.7||1°producto||1|
 1207|aloe ya 500ml|13|7506192507455|4|11.7||1°producto||1|
-1208|sabifrut sabia 15g|5|7506192507462|0|3|sabrifruit|1°producto||1|
-1209|sabifrut sabor naranja 15g|5|7506192507493|1000|4.5||1°producto||1|
+1208|sabifrut sabia 15g|5|7506192507462|8|3|quala|1°producto||8|
+1209|sabifrut sabor naranja 15g|5|7506192507493|999|4.5||1°producto||1|
 1210|sabifrut sabor jamaica 15g|5|7506192507516|1000|4.5||1°producto||1|
 1211|sabifrut sabor limon 15g|5|7506192507530|1000|4.5||1°producto||1|
-1212|amper blueberry 473ml|15|7506192507714|0|0|coca|1°producto||1|
-1213|amper reactor 473ml|15|7506192508216|10|0|quala|1°producto||1|
+1212|amper blueberry 473ml|15|7506192507714|-9|0|coca|1°producto||1|
+1213|amper reactor 473ml|15|7506192508216|4|0|quala|1°producto||1|
 1214|rastrillo gillette prestobarba 3 hojas|23|7506195108734|0|20|gillette|1°producto||1|
 1215|head shoulders 180ml|17|7506195148686|1|15.3||1°producto||1|
 1216|pantene restauracion 100ml|17|7506195160435|2|15.3||1°producto||1|
 1217|pantene cuidado clasico 100ml|17|7506195160466|1|15.3||1°producto||1|
 1218|always|10|7506195178133|0|0|always|1°producto||1|
 1219|salvo 300ml|16|7506195196984|4|14.4||1°producto||1|
-1220|choco milk 22g|5|7506205802355|0|3|choco milk|1°producto||1|
-1221|volt 473ml|20|7506241202119|10|0|quala|1°producto||1|
-1222|aje aqua 1.5L|12|7506241202478|10|0|big cola|1°producto||1|
-1223|c frut kids naranja 360m|5|7506241203505|1|0|big cola|1°producto||1|
-1224|vive 100 verde 500ml|13|7506291505918|10|0|quala|1°producto||1|
+1220|choco milk 22g|5|7506205802355|-1|3|choco milk|1°producto||1|
+1221|volt 473ml|20|7506241202119|3|0|quala|1°producto||1|
+1222|aje aqua 1.5L|12|7506241202478|9|0|big cola|1°producto||1|
+1223|c frut kids naranja 360m|5|7506241203505|-4|0|big cola|1°producto||1|
+1224|vive 100 verde 500ml|13|7506291505918|6|0|quala|1°producto||1|
 1225|shampoo pantene sobre 10ml|4|7506295326564|0|2|pantene|1°producto||1|
 1226|shampoo sedal rizos definidos|40|7506306237421|3|36||1°producto||1|
-1227|jabon zest aqua vitamina/glicerina|14|7506306238336|5|12.6||1°producto||1|
+1227|jabon zest aqua vitamina/glicerina|14|7506306238336|4|12.6||1°producto||1|
 1228|zest for men|14|7506306238350|2|12.6||1°producto||1|
 1229|jabon zest sabila/pepino|12|7506306238398|4|10.8||1°producto||1|
 1230|jabon zest neutro|14|7506306238428|3|12.6||1°producto||1|
@@ -1235,11 +1235,11 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1234|caldo de pollo knork 370g|38|7506306313057|6|34.2||1°producto||1|
 1235|atole maizena galleta 47gr|8|7506306313231|1|7.2||1°producto||1|
 1236|pantene rizos definidos 100ml|17|7506309873701|1|15.3||1°producto||1|
-1237|naturela con msanzaanilla|17.5|7506309895208|0|0|naturela|1°producto||1|
+1237|naturela con msanzaanilla|17.5|7506309895208|4|0|naturela|1°producto||1|
 1238|salvo 750ml|28|7506339304824|3|25.2||1°producto||1|
 1239|salvo liquido 900ml|36|7506339343595|0|0|salvo|1°producto||1|
-1240|downy libre en juague brisa fresca|25|7506339394917|4|22.5||1°producto||1|
-1241|servilleta petalo 420|42|7506425600397|0|39|petalo|1°producto||1|
+1240|downy libre en juague brisa fresca|25|7506339394917|3|22.5||1°producto||1|
+1241|servilleta petalo 420|42|7506425600397|-1|39|petalo|1°producto||1|
 1242|danup cereza 220g|9|7506443100527|1000|8.1||1°producto||1|
 1243|agua skarch frutale jamaica 1lt|9|7508304495667|9|8.1||1°producto||1|
 1244|agua skarch frutale manzana 1lt|9|7508304495674|10|8.1||1°producto||1|
@@ -1256,32 +1256,201 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1255|shampoo caprice control caspa 750ml|35|7509546072326|3|31.5||1°producto||1|
 1256|caprice actiseramidas 200ml|15|7509546073033|3|13.5||1°producto||1|
 1257|caprice biotina 200ml|15|7509546073040|2|13.5||1°producto||1|
-1258|palmolive natural 150g|16|7509546074627|6|14.4||1°producto||1|
+1258|palmolive natural 150g|16|7509546074627|5|14.4||1°producto||1|
 1259|jabon palmolibe neutro balance|13|7509546074979|5|11.7||1°producto||1|
-1260|shampoo hed shoulder 10ml sobre rosa|4|7590002008904|0|2|head shoulder|1°producto||1|
+1260|shampoo hed shoulder 10ml sobre rosa|4|7590002008904|4|2|head shoulder|1°producto||4|
 1261|pyrerna|5|7590002036457|0|0|vick|1°producto||1|
 1262|downy libre enjuague pureza silvestre|27|7590002040003|2|24.3||1°producto||1|
 1263|halls yerbabuena 25.2g|8.5|7622210267832|0|6|halls|1°producto||1|
-1264|halls mora azul 25.2g|8.5|7622210267856|0|6|halls|1°producto||1|
-1265|halls miel/limón 25'2g|8.5|7622210267863|0|6||1°producto||1|
-1266|halls colors frutales 25.2g|8.5|7622210267870|0|6|halls|1°producto||1|
+1264|halls mora azul 25.2g|8.5|7622210267856|-1|6|halls|1°producto||1|
+1265|halls miel/limón 25'2g|8.5|7622210267863|-3|6||1°producto||1|
+1266|halls colors frutales 25.2g|8.5|7622210267870|-3|6|halls|1°producto||1|
 1267|trident extra strong cart.30.6g|15|7622210551368|1|0|mondelez|1°producto||1|
 1268|cloretsplus 6 pastillas|5|7622210604798|10|4.5||1°producto||1|
 1269|chicle clores plus13.5g|10|7622210624482|0|7|clores|1°producto||1|
 1270|crack-ups 24g|5|7622210690074|1|0|bubalo|1°producto||1|
-1271|oreo 114g|12|7622210833662|1|10|oreo|1°producto||1|
+1271|oreo 114g|12|7622210833662|17|10|mondelez|1°producto||21|
 1272|chicle trident30.6g|15|7622210938282|0|12|trident|1°producto||1|
-1273|trident sweetmint|10|7622210938367|1|9||1°producto||1|
+1273|trident sweetmint|10|7622210938367|0|9||1°producto||1|
 1274|trident fresa/frutilla/limon|10|7622210938619|0|9||1°producto||1|
-1275|trident twist|10|7622210938664|2|9||1°producto||1|
+1275|trident twist|10|7622210938664|1|9||1°producto||1|
 1276|trident uva/naranja|10|7622210938732|3|9||1°producto||1|
 1277|curitas 100pzs|1.5|7702003476594|0|0.5|curitas|1°producto||1|
 1278|stevia 25 sobres|1.5|7792129003187|0|0|stevia|1°producto||1|
 1279|kinder chocolate 50g|15|8000500134702|1|0|kinder|1°producto||1|
-1280|kinder delice 39g|10|8000500267035|28|9|kinder|1°producto||10|
+1280|kinder delice 39g|10|8000500267035|31|9|kinder|1°producto||10|
 1281|jugoso al sarten maggi 23.4gr|15|8585002432315|1|13.5||1°producto||1|
 1282|fabuloso complit 500ml|23|8718951167513|0|0|fabuloso|1°producto||1|
-1283|iberia|10|8719200450615|10|0|lacteos|1°producto||1|
+1283|iberia|10|8719200450615|8|0|lacteos|1°producto||1|
 1284|navaja de afeitar|5|8801038200026|0|3|dorco|1°producto||1|
 1285|pila AAA eveready|9|8999002604755|0|5|eveready|1°producto||1|
 1286|jarrito mandarina 3L|28|67501441615110|10|0|pepsi|1°producto||1|
+1287|0|0||-5|0|0|3||1|
+1288|always nocturna 8 pzs|24|7506195178188|1|0|salma|||1|
+1289|muecas mango|7|7502226814995|0|0|orbit|||1|
+1290|milky way mini 8.5g|3.5|706460200157|52|0|orbit|||52|
+1291|skwinkle relleno sandia 26g|7|7502226812960|8|0|orbit|||12|
+1292|tecate original 473ml|18|089826001415|9|0|indio|||24|
+1293|peñafiel naranjada 2L|22|7501073839861|-4|0|peñafiel|||1|
+1294|caguamita carta bnc 300ml|10|7503024416442|-11|0|indio|||1|
+1295|activia chia 225gr|11|7506443102316|1|0|danone|||1|
+1296|volt energy 473ml|20|7503027753629|14|0|bonafont gatorade|||15|
+1297|muffin 130g|12|7501030418689|1|0|tia rosa|||1|
+1298|hojitas 150g|20|7501030419242|1|0|tia rosa|||1|
+1299|tiras doraditas 127g|12|7501030464242|-1|0|tia rosa|||1|
+1300|bombitos 150g|10|7500478005833|3|7.84|gamesa|||1|
+1301|rufles queso bolsaza 68g|16|7500478008032|-1|0|sabritas |||1|
+1302|emperador piruetas 312g|12|7500478022502|1|10.20|gamesa|||1|
+1303|rastrillo comfort bic|22|070330717534|7502252634114|0|medicamento|||1|
+1304|trident fresa 5,2g|2.5|75045654|-1|0|mondelez|||1|
+1305|lucas panzon acidito 38g|7|7502226819167|1|0|orbit|||1|
+1306|paleta bubaloo mora 16.6g|5|7501056900168|-3|0|mondelez|||1|
+1307|gatorade lima limon |10|036731103536|1|0|pepsi|||1|
+1308|sabritones 60g|11|7501011149205|6|7.93|sabritas |||1|
+1309|cacahuate incognita 72g|11|7500478022878|15|8.74|sabritas|||1|
+1310|cacahuate enchilado 66g|11|7500478022755|14|8.74|sabritas |||1|
+1311|lucas muecas cereza 24g|7|7502226815053|20|0|orbit|||10|
+1312|chicle orbit polar |2.5|7502226812687|41|0|orbit|||40|
+1313|chicle orbit menta|2.5|7502226812700|41|0|orbit|||40|
+1314|danup piña/coco 220g|11|7501032398606|3|8.55|danone |||1|
+1315|gelatina dany limon 125g|5.5|75009090|2|4.56|danone|||1|
+1316|nerds 51g|15|07933624|3|11.26|ferrero/kinder|||1|
+1317|gummy bears 25g|8|041420041013|2|6.01|ferrero/kinder|||1|
+1318|trolli crawlers 25g|8|041420040993|4|6.01|ferrero/kinder|||1|
+1319|frijol pinto 1kg|35|7501052420479|2|33.5|la sierra|||1|
+1320|frijol negro 1kg|33|7501052420318|2|31|la sierra|||1|
+1321|foco 100 wats|11|3068620202126|-5|0|medicamento|||1|
+1322|head shoulder10ml|4|7590002008898|40|21|salma|||20|
+1323|pila AA|19|041333666426|10|14|salma|||6|
+1324|pila AAA|19|041333428482|12|14|salma|||6|
+1325|maruchan camaron/chile piquin|12.5|041789001987|1|0|casa vargas|||1|
+1326|encendedor tokai |10|7501086106899|12|0||||1|
+1327|cosecha pura durazno 200ml|5|024474393536|28|24|pepsi|||12|
+1328|cosecha manzana 200ml|5|024474393475|7|24|pepsi|||6|
+1329|cosecha mango 200ml|5|024474393444|34|48|pepsi|||12|
+1330|mega vitaloe 500ml|13|7506192507561|21|150|quala|||12|
+1331|trident cool bubble 30.6g|15|7506105606091|1|11.3|mondelez|||1|
+1332|trident yerbabuena 30.6g|15|7506105606060|1|11.37|mondelez|||1|
+1333|chicles trident cartera|15|7506105616069|24|135|trident|||12|
+1334|palmolive natural 150g|14|7509546074634|0|0|dicorsa|||1|
+1335|bran frut fresa/piña 96g|12|7501030454007|0|0|bimbo dulce|||1|
+1336|paleta tarrito |2|75038441|13|0|ricolino|||1|
+1337|paleta elote|2|759686661684|15|0|ricolino|||1|
+1338|huevo kinder20g|20|80741251|7|0|ferrero kinder|||1|
+1339|media crema 250ml|14|7501020515299|-1|0|lala|||1|
+1340|cajeta coronado |38|074323083651|0|0|ricolino|||1|
+1341|gatorade naranja 355ml|10|036731103512|13|0|pepsi|||12|
+1342|ponche frutas|22|036731106063|-1|0||||1|
+1343|vive 100 mora azul|13|7506192508001|2|0||||1|
+1344|orbit yerbabuena 5.6g|2|02261003|36|0.75|orbit|||1|
+1345|orbit fresa 5.6|2|02201302|38|0.75|orbit|||1|
+1346|panque tia rosa235g|22|7503029151638|0|0||||1|
+1347|mantecadas tia rosa 157.5g|16|7501030456322|0|0||||1|
+1348|leche deslactosada 1.5L|33|7501020550672|2|30|lala|||1|
+1349|leche entera 1.5L|32|7501020550733|2|29|lala|||1|
+1350|mostaza mccormick 210g|15|7501003335029|2|0|mackormick|||1|
+1351|boing guayaba 250ml|7|019836102628|-1|0|boing|||1|
+1352|boing durazno 250ml|7|019836100211|0|0|boing|||1|
+1353|cereal avena 200g|19|7501761873740|1|15.90|casa vargas|||1|
+1354|salsa valentina amarilla |12|097339000214|0|0|casa vargas|||1|
+1355|guacamole clemente 205g|13|7501052486406|2|10|la sierra|||1|
+1356|guacamole sabor limon 205g|13|7501052486413|2|10|la sierra|||1|
+1357|guacamole serrano 205g|13|7501052486420|2|10|la sierra|||1|
+1358|danonino maxi fresa 336g|7|7501032397951|2|25.90|danone|||4|
+1359|danette flan 200g|7|75012533|6|24.40|danone|||2|
+1360|kinder barbie sor.20g|20|80050117|6|16.01|ferrero/kinder |||1|
+1361|cajmobi450|5|7501030456964|11|38.89|marinela|||10|
+1362|no se|12.5|041789001864|-3|0|casa vargas|||1|
+1363|salvo multiusos polvo 250g|10|7500435161008|1|7.60|salma|||1|
+1364|shampoo&acondicion|57|7500435134705|3|52|salma|||2|
+1365|crackets 139g|13|7500478015870|7|11.87|gameza|||1|
+1366|gamesa clasica barra coco|14|7500478021086|1|11.87|gamesa|||1|
+1367|bombitos 150g|10|7500478005833|1|7.84|gamesa|||1|
+1368|gatorade blue thunder 600ml|22|036731136916|-1|0|pepsi|||1|
+1369|tamaris 1Lt|13|604498134522|3|11|tamaris|||1|
+1370|nutret fresa 40g|8|020899087531|-1|0||||1|
+1371|veladora chica|12|7503003924487|1|0|vendedor x|||1|
+1372|encendedor tokai G |15|7501086106912|15|0|medicamento|||1|
+1373|clamato 946ml|32|014800515336|7|0|peñafiel|||1|
+1374|clamato 473|19|014800515329|0|0|peñafiel|||1|
+1375|yoghurt de manzana 125g|6.5|7501055912438|1|0|alpura|||1|
+1376|gatorade lima limon 1lt|26|036731323002|1|0|pepsi|||1|
+1377|gatorade naranja 1lt|26|036731321008|1|0|pepsi|||1|
+1378|sky blue tamarindo 275|20|664804000439|1|0||||1|
+1379|jumex piña coco 1Lt|21|7501013122992|1|0|jumex|||1|
+1380|chicle hubba bubba 40g|14|7502226816340|31|217|orbit|||18|
+1381|lucas gusano chamoy 36g|7|725181035015|20|55|orbit|||10|
+1382|agua e pura 330ml|6|7501086801107|46|135|pepsi|||24|
+1383|jumex durazno 1L|21|7501013122053|1|111|jumex|||6|
+1384|atun de agua 140g|13|7501045401201|5|10|casa vargas|||1|
+1385|salsa botanera 354ml|10.5|738545010481|5|8.5|casa vargas|||1|
+1386|charola termica 50 piezas|20|7502208800558|51|16.90|casa vargas|||50|
+1387|veladora san judas |13|7503004599929|2|10.50|casa vargas|||1|
+1388|cuchara pastelera 50 pzs|7|9750435006917|5|5.50|casa vargas|||1|
+1389|sopa moderna codo 4 200g|7|7501018310547|3|5.50|casa vargas|||1|
+1390|sopa la moderna moñito 200g|7|7501018310752|3|5.50|casa vargas|||1|
+1391|sal la fina 1kg|14|034587030013|2|11.50|casa vargas|||1|
+1392|gelatina de grosella 120g|10.50|735257002544|3|8.60|casa vargas|||1|
+1393|gelatina fresa leche 120g|10.5|735257002643|3|8.60|casa vargas|||1|
+1394|maruchan carne de res 64g|12.5|041789001925|5|9.20|casa vargas|||1|
+1395|maruchan pollo 64|12.5|041789001918|5|9.60|casa vargas|||1|
+1396|papel vogue 460 hojas|28.5|7506425618392|19|22.80|casa vargas|||1|
+1397|queso americano 144g|24|7501020537383|9|20|lala|||8|
+1398|leche chocolate 250ml|10|7501020553079|10|9|lala|||1|
+1399|queso manchego 144g|18|7503018985947|1|0|chipilo|||1|
+1400|trident 5.2g|2.5|75045494|39|0|mondelez|||1|
+1401|duo nito 124g|15|7501030409854|1|11.39|bimbo dulce |||2|
+1402|alka seltzer |7|75062576|19|0|medicamento|||1|
+1403|pepsi laton |12|7501022008171|6|0|pepsi|||1|
+1404|carlos v stick|2|7501058623324|2|1|casa vargas|||1|
+1405|7501030452577|10| 7501011159242|1|0|marinela|||1|
+1406|jalapeños en escabeche 380g|15|7501052476216|7|11|la sierra|||4|
+1407|yoghurt m&m´s 110g|16|7506443101968|2|14|danone|||1|
+1408|danonino lucnh 70g|10|7501032397845|1|9.20|danone|||1|
+1409|rajas en escabeche 380g|15|7501052476018|1|11|la sierra|||1|
+1410|karate 30g|15|7500478019694|-1|0||||1|
+1411|gatorade uva 500ml|21|036731106049|1|0||||1|
+1412|big mix party 100g|15|757528020231|0|0||||1|
+1413|bensont|63|75016777|1|0|malboro|||1|
+1414|lala yomi fresa 1Lt|24|7501020553154|0|0|vendedor x|||1|
+1415|hubba chicle metro 56.7g|21|022110079806|4|17.5|turin|||1|
+1416|hubba chicle metro 56.7g|21|7502226814506|4|17.5|turin|||1|
+1417|hubba chicle metro tres sabores 56.7g|21|7502226814476|4|17.5|turin|||1|
+1418|valentina negra |15|097339000061|1|0|vendedor x|||1|
+1419|poet azul 900ml|16|7501071906947|0|0|vendedor x|||1|
+1420|papel aluminio alu rey|12|7501067283007|9|7|ghs|||1|
+1421|bacterin p/alimentos 20ml|19|7501021166308|3|16|ghd|||1|
+1422|zucaritas 125g|15|7501008006788|10|0|vendedor x|||1|
+1423|delawer ponch 600ml|12|7501055304653|1|0|coca-cola|||1|
+1424|tabi charro150g|10|7503022458437|4|8|dulce tarry |||1|
+1425|sabritas flamin hot 170g|33|7501011159266|0|0|sabritas|||1|
+1426|agüita uva 300ml|8|7506475100274|8|5.80|nestle|||1|
+1427|agüita manzana 300ml|8|7506475100298|6|5.80|nestle|||1|
+1428|vickychelada 473ml|20|7501064195334|-2|0|corona|||1|
+1429|tartaletas fresa 116.6g|15|7503031028638|2|0|marinela pastel|||1|
+1430|carlos v semiamargo 20g|8.5|7501059299252|9|0|turin|||1|
+1431|bolsaza chetos |23|7501011130937|0|0|sabritas |||1|
+1432|canelitas tubo chico 180g|17|7501030490937|5|14|marinela galleta|||1|
+1433|bolzasa sabritas|16|7500478007622|1|0|sabritas|||1|
+1434|fruttzo naranja 1.5L|18|7501022010778|-2|0|pepsi|||1|
+1435|fruttzo mandarina 1.5L|18|7501022010877|1|0|pepsi|||1|
+1436|papel fioret 300H|27|7500463156519|0|22.5|salma|||1|
+1437|servilleta fioret 125H|11|7500463156526|10|9|salma|||1|
+1438|always seca 8 toallas |22|056100024798|2|18.|salma|||1|
+1439|encendedor cue|10|855553008580|-1|8|quala|miscelaneos||50|
+1440||0|633148211139|1|0|quala|||1|
+1441|chips fuego|15|757528042585|0|0|barcel|botana||6|
+1442|activia ciruela pasa 900g|42.5|7501032398330|2|26.41|danone|||1|
+1443|papel fioret J 400H|29|7500463156502|5|23|salma|||1|
+1444|jumex mango 200ml|9|75010911|11|0|jumex|||1|
+1445|jumex durazno 200ml|9|75010935|1|0|jumex|||1|
+1446|jumex manzana 200ml|9|75010928|0|0|jumex|||1|
+1447|sky blue mango/durzn 275ml|20|664804001092|0|0|bona/gato|||1|
+1448|jarrito piña 3L|28|7501441615127|0|0|pepsi|||1|
+1449|tostachos 77g|10|7503030199186|8|0|barcel|||1|
+1450|canada ginger 600ml |10|7501198350432|9|7.5|pepsi|||1|
+1451|head shoulder men |15|7506339326468|0|0|dicorsa|||1|
+1452|mundet mnzn/drzn 2L|23|7501055364077|1|0|coca|||1|
+1453|pingúinos 3pzs|18|7501030475743|-1|0|marinela pastel|||1|
+1454|aceite patrona 1L|34|7501060500019|0|0|casa vargas|||1|
+1455|m&ms 43.8g choco|15|7502271911427|0|0|orbit|||1|

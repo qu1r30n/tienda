@@ -255,7 +255,7 @@ namespace tienda2.desinger
                     else if (grupo[0] == "2")//litros
                     {
                         bool esta_libre_la_lista_de_repeticiones_de_producto = true;
-                        a = 6;
+                        //a = 6;
                         string[] enviar = { "2°producto°"+ temp[3],"1°cantidad en litros(se puede decimal)" };
                         string mensage = vent_emergent.Proceso_ventana_emergente(enviar);
                         string[] informacion_vent_eme = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
@@ -343,7 +343,7 @@ namespace tienda2.desinger
                     enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0", "2°codigo de barras°" + espliteado[0], "1°cantidad°1", "1°costo de compra°0", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1" };
                 }
 
-                a = 7;
+                //a = 7;
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
                 string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
 

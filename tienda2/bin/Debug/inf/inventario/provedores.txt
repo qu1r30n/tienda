@@ -1,2 +1,26 @@
-marinela
-bic
+provedor|id|
+marinela|0|
+vendedor x|
+quala|
+coca-cola|
+dulce tarry| 
+sabritas|
+nestle|
+corona|
+marinela pastel|
+turin|
+sabritas|
+marinela galleta|
+sabritas|
+pepsi|
+salma|
+quala|
+barcel|
+jumex|
+bona-gato|
+dicorsa|
+coca|
+marinela pastel|
+casa vargas|
+orbit|
+danone|

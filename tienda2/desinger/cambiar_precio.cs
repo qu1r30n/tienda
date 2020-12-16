@@ -160,7 +160,7 @@ namespace tienda2.desinger
                 //------------------------------------------------------------
                 Ventana_emergente vent_emergent = new Ventana_emergente();
                 //-------------------------------------------------------------
-                a = 1;
+                //a = 1;
                 string[] enviar = { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0", "2°codigo de barras°" + espliteado[0], "1°cantidad°1", "1°costo de compra°0", "3°provedor°" + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1" };
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
                 MessageBox.Show("ya se agrego el producto: " + mensage);

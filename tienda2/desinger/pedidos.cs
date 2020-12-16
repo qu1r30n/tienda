@@ -23,7 +23,7 @@ namespace tienda2.desinger
         {
             
             Ventana_emergente ven_emer = new Ventana_emergente();
-            a = 2;
+            //a = 2;
             string[] enviar = {"3°es_paquete°1", "3°es_por_pieza°2" };//el 3 del inicio es para saver que es boton y el final es su valor
             string datos_ventana_emerg = ven_emer.Proceso_ventana_emergente(enviar);//mandamos a llamar a ventana emergente
             string temp;
@@ -36,7 +36,7 @@ namespace tienda2.desinger
                 string cantidad_por_pakete=bas.Seleccionar("inf\\inventario\\invent.txt",3,Txt_buscar_producto.Text,"9");
 
                 Ventana_emergente ven_emer2 = new Ventana_emergente();
-                a = 3;
+                //a = 3;
                 string[] enviar2 = { "1°costo°"+Txt_costo_compra.Text, "1°numero paketes°" + Txt_cantidad.Text, "1°cantidad_por_paquete°"+cantidad_por_pakete};
                 string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2);
                 string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
@@ -196,7 +196,7 @@ namespace tienda2.desinger
                     enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0", "2°codigo de barras°" + espliteado[0], "1°cantidad°1", "1°costo de compra°0", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1" };
                 }
 
-                a = 4;
+                //a = 4;
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
                 string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
 
@@ -258,7 +258,7 @@ namespace tienda2.desinger
         private void Btn_procesar_venta_Click(object sender, EventArgs e)
         {
             Ventana_emergente ventana_emerg = new Ventana_emergente();
-            a = 5;
+            //a = 5;
             string[] enviar = { "3°venta_directa°1", "3°preVenta°2" };
             string valor_devuelto=ventana_emerg.Proceso_ventana_emergente(enviar,0);
             bool compra_directa;
