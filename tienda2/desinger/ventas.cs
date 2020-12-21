@@ -300,13 +300,41 @@ namespace tienda2.desinger
                     else//error
                     {
                         //cambiarlo por otra cosa despues es el mismo que que el 1---------------------------------------------------
-                        Lst_ventas.Items.Add(G_productos[i]);
-                        Txt_buscar_producto.Text = "";
-                        Txt_nom_producto.Text = "";
+                        //Lst_ventas.Items.Add(G_productos[i]);
+                        //Txt_buscar_producto.Text = "";
+                        //Txt_nom_producto.Text = "";
 
-                        Lbl_costo_product_list.Text = temp[2];
-                        Lbl_nom_product_list.Text = temp[3];
+                        //Lbl_costo_product_list.Text = temp[2];
+                        //Lbl_nom_product_list.Text = temp[3];
                         //------------------------------------------------------
+
+
+
+                        {
+                            bool esta_libre_la_lista_de_repeticiones_de_producto = true;
+
+                            Txt_buscar_producto.Text = "";
+                            Txt_nom_producto.Text = "";
+                            Lbl_costo_product_list.Text = temp[8] + " COSTO: " + temp[2];
+                            Lbl_nom_product_list.Text = temp[3] + "    PRECIO UNITARIO: " + temp[2];
+
+                            for (int j = 0; j < Lst_ventas.Items.Count; j++)
+                            {
+                                string[] item_espliteado = Lst_ventas.Items[j].ToString().Split(G_parametros[0]);
+                                if (codigo == item_espliteado[0])
+                                {
+                                    item_espliteado[8] = "" + (Convert.ToDecimal(item_espliteado[8]) + Convert.ToDecimal(temp[8]));
+                                    Lbl_costo_product_list.Text = item_espliteado[8] + " COSTO: " + (Convert.ToDecimal(item_espliteado[2]) * Convert.ToDecimal(item_espliteado[8]));
+                                    Lst_ventas.Items[j] = string.Join("" + G_parametros[0], item_espliteado);
+                                    esta_libre_la_lista_de_repeticiones_de_producto = false;
+                                }
+                            }
+                            if (esta_libre_la_lista_de_repeticiones_de_producto)
+                            {
+                                Lst_ventas.Items.Add(string.Join("" + G_parametros[0], temp));
+                            }
+
+                        }
                     }
                     
                     bandera = true;

@@ -32,7 +32,7 @@ namespace tienda2.desinger
 
             string[] info= { "" };
 
-            string hola = "";
+            string nuevo_boton = "";
             string union = "";
 
             string bandera1 = "0", bandera2 = "0", bandera3 = "0";
@@ -207,12 +207,12 @@ namespace tienda2.desinger
                         //Btn_nuevoboton.Click += new EventHandler(nuevoBoton_Click); 
                         if (info[0] == "solo_botones")
                         {
-                            Btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola = NuevoBoton_Click(sender1, e1, parametros, info));
+                            Btn_nuevoboton.Click += new EventHandler((sender1, e1) => nuevo_boton = NuevoBoton_Click(sender1, e1, parametros, info));
 
                         }
                         else
                         {
-                            Btn_nuevoboton.Click += new EventHandler((sender1, e1) => hola = NuevoBoton_Click(sender1, e1, parametros));
+                            Btn_nuevoboton.Click += new EventHandler((sender1, e1) => nuevo_boton = NuevoBoton_Click(sender1, e1, parametros));
                         }
                     }
 
@@ -313,7 +313,7 @@ namespace tienda2.desinger
                 else if (bandera2=="1" || bandera3 == "1" && bandera1 != "1")
                 {
                     this.ShowDialog();
-                    union = hola;
+                    union = nuevo_boton;
                 }
 
             }

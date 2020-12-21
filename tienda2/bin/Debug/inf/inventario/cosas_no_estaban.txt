@@ -411,3 +411,4 @@ movimiento origen: 1|1454|aceite patrona 1L|34|7501060500019|1|0|casa vargas|||1
 movimiento origen: 1|1455|m&ms 43.8g choco|15|7502271911427|1|0|orbit|||1|
 movimiento origen: 1|1456|activia ciruela pasa 900g|42.5|7501032398330|2|26.41|danone|||1|
 movimiento origen: 1|1457|papel fioret J 400H|29|7500463156502|5|23|salma|||1|
+movimiento origen: 0|pomada ceresa|1.5|
