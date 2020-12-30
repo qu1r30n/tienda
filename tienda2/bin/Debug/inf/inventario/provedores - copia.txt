@@ -1,3 +1,4 @@
+provedor|id|
 marinela|0|
 vendedor x|
 quala|

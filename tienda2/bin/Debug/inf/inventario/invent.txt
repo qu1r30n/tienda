@@ -1,4 +1,4 @@
-﻿id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|cantidad_productos_por_paquete|
+id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|cantidad_productos_por_paquete|
 1|pomada ceresa|5|1|9|1|pomada labiual|2°producto||1|
 2|ariel jabon 250g|11.5|11.5|0|10.35||1°producto||1|
 3|chicle orbit 5.6g|2.5|2201302|0|1|orbit|1°producto||1|
@@ -1292,7 +1292,7 @@
 1291|skwinkle relleno sandia 26g|7|7502226812960|8|0|orbit|||12|
 1292|tecate original 473ml|18|089826001415|9|0|indio|||24|
 1293|peñafiel naranjada 2L|22|7501073839861|-4|0|peñafiel|||1|
-1294|caguamita carta bnc 300ml|10|7503024416442|-11|0|indio|||1|
+1294|caguamita carta bnc 300ml|10|7503024416442|-12|0|indio|||1|
 1295|activia chia 225gr|11|7506443102316|1|0|danone|||1|
 1296|volt energy 473ml|20|7503027753629|14|0|bonafont gatorade|||15|
 1297|muffin 130g|12|7501030418689|1|0|tia rosa|||1|

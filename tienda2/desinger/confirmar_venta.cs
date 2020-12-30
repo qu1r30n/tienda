@@ -66,5 +66,24 @@ namespace tienda2.desinger
                 SendKeys.Send("{TAB}");
             }
         }
+
+        private void Txt_dinero_keypress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || '.' == e.KeyChar || '\b' == e.KeyChar)
+            {
+
+            }
+            /*
+            else if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
+            {
+                e.KeyChar = '\0';
+            }
+            */
+            else
+            {
+                e.KeyChar = '\0';
+            }
+        }
+
     }
 }

@@ -71,7 +71,8 @@ namespace tienda2.desinger
                 {
                     string[] espliteado = nom_datos_recolectados[i].Split(caracter_spliteo);
 
-                    if (espliteado[0] == "1")//labels y textbox
+                    //labels y textbox
+                    if (espliteado[0] == "1")
                     {
                         Label lb = new Label();
                         TextBox Txt = new TextBox();
@@ -98,11 +99,31 @@ namespace tienda2.desinger
 
                         contador_en_horisontal_Txtbox = contador_en_horisontal_Txtbox + 1;
 
-
-                        if (espliteado.Length == 3)
+                        
+                        if (espliteado.Length >= 3)
                         {
                             Txt.Text = espliteado[2];
                         }
+
+                        if (espliteado.Length >= 4) 
+                        {
+                            string parametros="";
+                            switch (espliteado[3])
+                            {
+                                case "1":
+                                    parametros = "solo_letras";
+                                    break;
+                                case "2":
+                                    parametros = "solo_numeros";
+                                    break;
+                                default:
+                                    break;
+                            }
+                            //Txt.KeyPress += new KeyPressEventHandler(restriccion_caracteres_forma_1);//llamar forma normal al precionar un carcter
+                            Txt.KeyPress += new KeyPressEventHandler((sender1, e1) => restriccion_caracteres(sender1, e1, parametros));////llama funcion al precionar un carcter envia imformacion extra y parametros 
+
+                        }
+
 
                         nom_datos_recolectados[i] = espliteado[1];
 
@@ -110,8 +131,10 @@ namespace tienda2.desinger
 
                         Txt.Width = ancho;
                         Txt.Height = alto;
-
+                        
                         lb.AutoSize = true;
+                        
+
                         this.Controls.Add(lb);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
                         this.Controls.Add(Txt);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
                         acumleft = acumleft + x;
@@ -120,7 +143,8 @@ namespace tienda2.desinger
 
                     }
 
-                    else if (espliteado[0] == "2")//labels
+                    //labels
+                    else if (espliteado[0] == "2")
                     {
                         Label lb = new Label();
                         Label Lbl2 = new Label();
@@ -171,7 +195,8 @@ namespace tienda2.desinger
 
                     }
 
-                    else if (espliteado[0] == "3")//botones
+                    //botones
+                    else if (espliteado[0] == "3")
                     {
                         Button Btn_nuevoboton = new Button();
                         Btn_nuevoboton.Name = espliteado[2];
@@ -216,6 +241,7 @@ namespace tienda2.desinger
                         }
                     }
 
+                    //combobox
                     else if (espliteado[0] == "4")
                     {
 
@@ -247,11 +273,14 @@ namespace tienda2.desinger
                         if (espliteado.Length >= 3)
                         {
                             cmb.Text = espliteado[2];
+                            cmb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                            cmb.AutoCompleteSource = AutoCompleteSource.CustomSource;
                             for (int j = 2; j < espliteado.Length; j++)
                             {
                                 if (espliteado[2]!= espliteado[j])
                                 {
                                     cmb.Items.Add(espliteado[j]);
+                                    cmb.AutoCompleteCustomSource.Add(espliteado[j]);
                                     
                                 }
                                 else
@@ -489,6 +518,42 @@ namespace tienda2.desinger
             value = textBox.Text;
             return value;
         }
+
+        public void restriccion_caracteres(Object sender, KeyPressEventArgs e, string parametros)
+        {
+            //a = 1;
+            if(char.IsNumber(e.KeyChar) || '.' == e.KeyChar || '\b' == e.KeyChar && parametros== "solo_numeros")
+            {
+                
+            }
+            /*
+            else if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
+            {
+                e.KeyChar = '\0';
+            }
+            */
+            else
+            {
+                e.KeyChar = '\0';
+            }
+        }
+
+        public void restriccion_caracteres_forma_1(Object o, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
+            {
+                MessageBox.Show("" + e.KeyChar);
+            }
+            else if (char.IsNumber(e.KeyChar))
+            {
+                MessageBox.Show("" + e.KeyChar);
+            }
+            else
+            {
+
+            }
+        }
+
 
     }
 }
