@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clases\info_entrada_salida.cs" />
+    <Compile Include="clases\si_como_se_usaba_info_entrada_salida.cs" />
+    <Compile Include="clases\sincrono2_info_entrada_salida.cs" />
     <Compile Include="clases\Modelo_compra_venta.cs" />
     <Compile Include="clases\Operaciones_textos.cs" />
     <Compile Include="clases\glob_var_direcciones.cs" />
@@ -128,7 +131,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="clases\info_entrada_salida.cs" />
+    <Compile Include="clases\sincrona_info_entrada_salida.cs" />
     <Compile Include="clases\Operaciones_archivos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
