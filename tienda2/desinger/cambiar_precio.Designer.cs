@@ -50,6 +50,7 @@
             this.Rdb_provedor = new System.Windows.Forms.RadioButton();
             this.chb_no_vacio = new System.Windows.Forms.CheckBox();
             this.btn_limpiar = new System.Windows.Forms.Button();
+            this.chb_suma_si_ya_paso_producto = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Lbl_codigo
@@ -180,6 +181,7 @@
             this.Rdb_compra.TabStop = true;
             this.Rdb_compra.Text = "compra";
             this.Rdb_compra.UseVisualStyleBackColor = true;
+            this.Rdb_compra.CheckedChanged += new System.EventHandler(this.Rdb_compra_CheckedChanged);
             // 
             // Rdb_venta
             // 
@@ -191,6 +193,7 @@
             this.Rdb_venta.TabStop = true;
             this.Rdb_venta.Text = "venta";
             this.Rdb_venta.UseVisualStyleBackColor = true;
+            this.Rdb_venta.CheckedChanged += new System.EventHandler(this.Rdb_venta_CheckedChanged);
             // 
             // Rdb_inventario
             // 
@@ -202,6 +205,7 @@
             this.Rdb_inventario.TabStop = true;
             this.Rdb_inventario.Text = "inventario";
             this.Rdb_inventario.UseVisualStyleBackColor = true;
+            this.Rdb_inventario.CheckedChanged += new System.EventHandler(this.Rdb_inventario_CheckedChanged);
             // 
             // Rdb_producto
             // 
@@ -213,6 +217,7 @@
             this.Rdb_producto.TabStop = true;
             this.Rdb_producto.Text = "producto";
             this.Rdb_producto.UseVisualStyleBackColor = true;
+            this.Rdb_producto.CheckedChanged += new System.EventHandler(this.Rdb_producto_CheckedChanged);
             // 
             // Lbl_provedor_camb
             // 
@@ -242,6 +247,7 @@
             this.Rdb_provedor.TabStop = true;
             this.Rdb_provedor.Text = "provedor";
             this.Rdb_provedor.UseVisualStyleBackColor = true;
+            this.Rdb_provedor.CheckedChanged += new System.EventHandler(this.Rdb_provedor_CheckedChanged);
             // 
             // chb_no_vacio
             // 
@@ -263,11 +269,23 @@
             this.btn_limpiar.UseVisualStyleBackColor = true;
             this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
+            // chb_suma_si_ya_paso_producto
+            // 
+            this.chb_suma_si_ya_paso_producto.AutoSize = true;
+            this.chb_suma_si_ya_paso_producto.Location = new System.Drawing.Point(668, 110);
+            this.chb_suma_si_ya_paso_producto.Name = "chb_suma_si_ya_paso_producto";
+            this.chb_suma_si_ya_paso_producto.Size = new System.Drawing.Size(158, 17);
+            this.chb_suma_si_ya_paso_producto.TabIndex = 17;
+            this.chb_suma_si_ya_paso_producto.Text = "suma_si_ya_paso_producto";
+            this.chb_suma_si_ya_paso_producto.UseVisualStyleBackColor = true;
+            this.chb_suma_si_ya_paso_producto.Visible = false;
+            // 
             // Cambiar_precio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 139);
+            this.Controls.Add(this.chb_suma_si_ya_paso_producto);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.chb_no_vacio);
             this.Controls.Add(this.Rdb_producto);
@@ -320,5 +338,6 @@
         private System.Windows.Forms.RadioButton Rdb_provedor;
         private System.Windows.Forms.CheckBox chb_no_vacio;
         private System.Windows.Forms.Button btn_limpiar;
+        private System.Windows.Forms.CheckBox chb_suma_si_ya_paso_producto;
     }
 }

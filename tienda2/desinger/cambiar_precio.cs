@@ -29,12 +29,15 @@ namespace tienda2.desinger
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
+            DateTime fecha_hora = DateTime.Now; //se usara la variable fecha y hora para sacar el dia de hoy y la hora
+
             if (chb_no_vacio.Checked)
             {
                 if (Txt_remplazo.Text!="")
                 {
                     if (Lbl_precio_compra_canb.Text != "$")
                     {
+                        
                         if (Rdb_producto.Checked == true)
                         {
                             bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "1", Txt_remplazo.Text);
@@ -80,6 +83,32 @@ namespace tienda2.desinger
 
                         else if (Rdb_inventario.Checked == true)
                         {
+
+                            if (chb_suma_si_ya_paso_producto.Checked==true)
+                            {
+                                string direccion = "inf\\inventario\\temp_para_sumas_en_inventario\\temporal_codigos_suma_info_para_invetario_" + fecha_hora.ToString("yyyy - MM - dd") + ".txt";
+                                bas.Crear_archivo_y_directorio(direccion);
+                                string[] codigos_ya_leidos = bas.Leer(direccion);
+                                bool bandera = false;
+                                for (int i = 0; i < codigos_ya_leidos.Length; i++)
+                                {
+                                    codigos_ya_leidos[i] = bas.Trimend_paresido(codigos_ya_leidos[i]);
+                                    if (codigos_ya_leidos[i] == Txt_buscar_producto.Text)
+                                    {
+                                        decimal cantidad_anterionr = Convert.ToDecimal(Lbl_cantidad_canb.Text);
+                                        decimal cantidad_a_sumar = Convert.ToDecimal(Txt_remplazo.Text);
+                                        Txt_remplazo.Text = "" + (cantidad_anterionr + cantidad_a_sumar);
+                                        bandera = true;
+                                    }
+                                }
+
+                                if (bandera == false)
+                                {
+                                    bas.si_no_existe_agega_comparacion(direccion, Txt_buscar_producto.Text);
+                                }
+
+                            }
+
                             bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
                             Actualisar_Txt(0, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
                             Lbl_nombre_producto_camb.Text = "";
@@ -120,6 +149,7 @@ namespace tienda2.desinger
                         MessageBox.Show("no se encontro producto dentro del inventario");
                     }
                 }
+
                 else
                 {
                     MessageBox.Show("falta llenar informacion");
@@ -175,6 +205,33 @@ namespace tienda2.desinger
 
                     else if (Rdb_inventario.Checked == true)
                     {
+
+                        if (chb_suma_si_ya_paso_producto.Checked == true)
+                        {
+                            string direccion = "inf\\inventario\\temp_para_sumas_en_inventario\\temporal_codigos_suma_info_para_invetario_" + fecha_hora.ToString("yyyy - MM - dd") + ".txt";
+                            bas.Crear_archivo_y_directorio(direccion);
+                            string[] codigos_ya_leidos = bas.Leer(direccion);
+                            bool bandera = false;
+                            for (int i = 0; i < codigos_ya_leidos.Length; i++)
+                            {
+                                codigos_ya_leidos[i] = bas.Trimend_paresido(codigos_ya_leidos[i]);
+                                if (codigos_ya_leidos[i] == Txt_buscar_producto.Text)
+                                {
+                                    decimal cantidad_anterionr = Convert.ToDecimal(Lbl_cantidad_canb.Text);
+                                    decimal cantidad_a_sumar = Convert.ToDecimal(Txt_remplazo.Text);
+                                    Txt_remplazo.Text = "" + (cantidad_anterionr + cantidad_a_sumar);
+                                    bandera = true;
+                                }
+                            }
+
+                            if (bandera == false)
+                            {
+                                bas.si_no_existe_agega_comparacion(direccion, Txt_buscar_producto.Text);
+                            }
+
+                        }
+
+
                         bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
                         Actualisar_Txt(0, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
                         Lbl_nombre_producto_camb.Text = "";
@@ -370,6 +427,35 @@ namespace tienda2.desinger
             Lbl_provedor_camb.Text = "nombre del provedor";
             Txt_remplazo.Text = "";
             Txt_buscar_producto.Focus();
+        }
+
+        private void Rdb_producto_CheckedChanged(object sender, EventArgs e)
+        {
+            //chb_suma_si_ya_paso_producto.Checked = false;
+            chb_suma_si_ya_paso_producto.Visible = false;
+        }
+
+        private void Rdb_compra_CheckedChanged(object sender, EventArgs e)
+        {
+            //chb_suma_si_ya_paso_producto.Checked = false;
+            chb_suma_si_ya_paso_producto.Visible = false;
+        }
+
+        private void Rdb_venta_CheckedChanged(object sender, EventArgs e)
+        {
+            //chb_suma_si_ya_paso_producto.Checked = false;
+            chb_suma_si_ya_paso_producto.Visible = false;
+        }
+
+        private void Rdb_inventario_CheckedChanged(object sender, EventArgs e)
+        {
+            chb_suma_si_ya_paso_producto.Visible = true;
+        }
+
+        private void Rdb_provedor_CheckedChanged(object sender, EventArgs e)
+        {
+            //chb_suma_si_ya_paso_producto.Checked = false;
+            chb_suma_si_ya_paso_producto.Visible = false;
         }
     }
 }

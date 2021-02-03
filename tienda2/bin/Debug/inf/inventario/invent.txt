@@ -146,7 +146,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 145|maruchan res|10|41789001925|3|9|maruchan|1°producto||1|
 146|maruchan camaron|10|41789001956|1|9|maruchan|1°producto||1|
 147|maruchan cama/chilepiqui|10|41789001987|4|9|maruchan|1°producto||1|
-148|rastrillo bic confort 3 hojas|12|70330724341|100|10|bic|1°producto||10|
+148|rastrillo bic confort 3 hojas|12|70330724341|25|10|bic|1°producto||10|
 149|cajeta quemada coronado 370gr|36|74323083651|6|32.4|coronado|1°producto||1|
 150|frijoles con choriso 430g|15|78883240547|0|0|la sierra|1°producto||1|
 151|jack daniels aple|30|82184000984|1000|27|jack daniels|1°producto||1|
