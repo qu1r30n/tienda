@@ -155,12 +155,15 @@ namespace tienda2.desinger
 
                 cv.codigo_barras_list.Add("" + temporal_s[0]);
                 cv.nombre_productos.Add("" + temporal_s[3]);
+                decimal total_precio_productos = Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
                 if (temporal_s[0] != "")
                 {
-                    total = total + Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
+                    //total = total + Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
+                    total = total + total_precio_productos;
                     total_cost_com = total_cost_com + (Convert.ToDecimal(temporal_s[5]) * Convert.ToDecimal(temporal_s[8]));
                 }
                 cv.cantidad.Add("" + temporal_s[8]);
+                cv.precio_venta.Add("" + total_precio_productos);
 
             }
 
@@ -252,11 +255,11 @@ namespace tienda2.desinger
 
                     }
 
-                    else if (grupo[0] == "2")//litros
+                    else if (grupo[0] == "2")//litros o kilos
                     {
                         bool esta_libre_la_lista_de_repeticiones_de_producto = true;
                         //a = 6;
-                        string[] enviar = { "2°producto°"+ temp[3], "1°cantidad en litros(se puede decimal)°°2" };
+                        string[] enviar = { "2°producto°"+ temp[3], "1°cantidad en litros o kilos(se puede decimal)°°2" };
                         string mensage = vent_emergent.Proceso_ventana_emergente(enviar);
                         string[] informacion_vent_eme = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
                         temp[8] = informacion_vent_eme[1];
@@ -289,14 +292,16 @@ namespace tienda2.desinger
                         
                     }
 
-                    else if (grupo[0] == "3")//kilos
+                    else if (grupo[0] == "3")//
                     {
 
                     }
+
                     else if (grupo[0] == "4")//tiempo
                     {
 
                     }
+                    
                     else//error o default
                     {
                         //cambiarlo por otra cosa despues es el mismo que que el 1---------------------------------------------------
@@ -363,12 +368,12 @@ namespace tienda2.desinger
                     {
                         G_prov_anterior = provedores[0];
                     }
-                    
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
                 else
                 {
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
 
                 //a = 7;

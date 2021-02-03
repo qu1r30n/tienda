@@ -412,3 +412,29 @@ movimiento origen: 1|1455|m&ms 43.8g choco|15|7502271911427|1|0|orbit|||1|
 movimiento origen: 1|1456|activia ciruela pasa 900g|42.5|7501032398330|2|26.41|danone|||1|
 movimiento origen: 1|1457|papel fioret J 400H|29|7500463156502|5|23|salma|||1|
 movimiento origen: 0|pomada ceresa|1.5|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 0|1|
+movimiento origen: 1|1456|afd|0|afd|1|0|coca|1||1||
+movimiento origen: 1|1457|dfa|0|asfd|1|0|sabritas|1||1||
+movimiento origen: 1|1458|rr22|0|rrr|1|0|salma|1||1||
+movimiento origen: 1|1459|rr44|0|rr33|1|0|turin|1||1||
+movimiento origen: 1|1460|kk2|0|kk|1|0|turin|1||1||
+movimiento origen: 1|1461|faff|0|dafsa|1|0|turin|1||1||

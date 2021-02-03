@@ -9,8 +9,11 @@ namespace tienda2.desinger
     {
 
         char[] G_parametros = { '|' };
-        string G_datos_de_boton="";
-        
+        string G_datos_de_boton = "";
+        int G_contador = 0;
+        int G_control_a_ocultar;
+        int G_bandera=0;
+
 
 
         public Ventana_emergente()
@@ -30,7 +33,7 @@ namespace tienda2.desinger
             int separacion_y = 15;
             int contador_en_horisontal_Txtbox = 0;
 
-            string[] info= { "" };
+            string[] info = { "" };
 
             string nuevo_boton = "";
             string union = "";
@@ -39,9 +42,9 @@ namespace tienda2.desinger
 
             for (int i = 0; i < nom_datos_recolectados.Length; i++)
             {
-                string [] tipo_de_datos=nom_datos_recolectados[i].Split(caracter_spliteo);
+                string[] tipo_de_datos = nom_datos_recolectados[i].Split(caracter_spliteo);
 
-                if (tipo_de_datos[0]=="1")
+                if (tipo_de_datos[0] == "1")
                 {
                     bandera1 = "1";
                 }
@@ -57,13 +60,11 @@ namespace tienda2.desinger
 
             if (bandera3 == "1" && bandera1 == "0" && bandera2 == "0")
             {
-                info [0]="solo_botones" ;
+                info[0] = "solo_botones";
             }
 
             string[] arraytextbox = new string[nom_datos_recolectados.Length];
-            
-
-            
+            //xc = 1;
 
             if (nom_datos_recolectados.Length != 0)
             {
@@ -99,28 +100,49 @@ namespace tienda2.desinger
 
                         contador_en_horisontal_Txtbox = contador_en_horisontal_Txtbox + 1;
 
-                        
+
                         if (espliteado.Length >= 3)
                         {
                             Txt.Text = espliteado[2];
                         }
 
-                        if (espliteado.Length >= 4) 
+
+
+                        if (espliteado.Length >= 4)
                         {
-                            string parametros="";
-                            switch (espliteado[3])
+                            string[] restriccion_de_caracteres_a_usar = espliteado[3].Split('¬');
+                            for (int j = 0; j < restriccion_de_caracteres_a_usar.Length; j++)
                             {
-                                case "1":
-                                    parametros = "solo_letras";
-                                    break;
-                                case "2":
-                                    parametros = "solo_numeros";
-                                    break;
-                                default:
-                                    break;
+                                string parametros = "";
+                                switch (restriccion_de_caracteres_a_usar[j])
+                                {
+                                    case "1":
+                                        parametros = "solo_letras";
+                                        break;
+                                    case "2":
+                                        parametros = "solo_numeros";
+                                        break;
+                                    case "3":
+                                        parametros = "ingredientes_primarios";
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                //Txt.KeyPress += new KeyPressEventHandler(restriccion_caracteres_forma_1);//llamar forma normal al precionar un carcter
+                                Txt.KeyPress += new KeyPressEventHandler((sender1, e1) => restriccion_caracteres(sender1, e1, parametros));////llama funcion al precionar un carcter envia imformacion extra y parametros 
                             }
-                            //Txt.KeyPress += new KeyPressEventHandler(restriccion_caracteres_forma_1);//llamar forma normal al precionar un carcter
-                            Txt.KeyPress += new KeyPressEventHandler((sender1, e1) => restriccion_caracteres(sender1, e1, parametros));////llama funcion al precionar un carcter envia imformacion extra y parametros 
+                        }
+
+                        if (espliteado.Length >= 4)
+                        {
+                            Txt.Text = espliteado[2];
+                            Txt.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                            Txt.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                            for (int j = 5; j < espliteado.Length; j++)
+                            {
+                                Txt.AutoCompleteCustomSource.Add(espliteado[j]);
+
+                            }
 
                         }
 
@@ -131,9 +153,9 @@ namespace tienda2.desinger
 
                         Txt.Width = ancho;
                         Txt.Height = alto;
-                        
+
                         lb.AutoSize = true;
-                        
+
 
                         this.Controls.Add(lb);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
                         this.Controls.Add(Txt);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
@@ -270,27 +292,55 @@ namespace tienda2.desinger
 
                         contador_en_horisontal_Txtbox = contador_en_horisontal_Txtbox + 1;
 
+
                         if (espliteado.Length >= 3)
+                        {
+                            string[] restriccion_de_caracteres_a_usar = espliteado[3].Split('¬');
+                            for (int j = 0; j < restriccion_de_caracteres_a_usar.Length; j++)
+                            {
+                                string parametros = "";
+                                switch (restriccion_de_caracteres_a_usar[j])
+                                {
+                                    case "1":
+                                        parametros = "solo_letras";
+                                        break;
+                                    case "2":
+                                        parametros = "solo_numeros";
+                                        break;
+                                    case "3":
+                                        parametros = "ingredientes_primarios";
+                                        break;
+                                    case "4":
+                                        parametros = "proyecto";
+                                        break;
+
+                                    default:
+                                        break;
+                                }
+                                //Txt.KeyPress += new KeyPressEventHandler(restriccion_caracteres_forma_1);//llamar forma normal al precionar un carcter
+                                //cmb.KeyPress += new KeyPressEventHandler((sender1, e1) => restriccion_caracteres(sender1, e1, parametros));////llama funcion al precionar un carcter envia imformacion extra y parametros 
+
+                                cmb.TextChanged += new EventHandler((sender2, e2) => tex_change_y_oculta_control_21(sender2, e2, parametros));
+                                //xa = 1;//eliminar cuando convines el textchange con creo el keypress algo por el estilo hay que checar
+                            }
+                        }
+
+                        if (espliteado.Length >= 4)
                         {
                             cmb.Text = espliteado[2];
                             cmb.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                             cmb.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                            for (int j = 2; j < espliteado.Length; j++)
+                            for (int j = 5; j < espliteado.Length; j++)
                             {
-                                if (espliteado[2]!= espliteado[j])
-                                {
-                                    cmb.Items.Add(espliteado[j]);
-                                    cmb.AutoCompleteCustomSource.Add(espliteado[j]);
-                                    
-                                }
-                                else
-                                {
-                                    espliteado[2] = "";//este sirve para que solo elimine una repeticion por que son 2 las que crea
-                                }
-                                
+
+                                cmb.Items.Add(espliteado[j]);
+                                cmb.AutoCompleteCustomSource.Add(espliteado[j]);
+
                             }
 
                         }
+
+
 
                         nom_datos_recolectados[i] = espliteado[1];
 
@@ -306,6 +356,14 @@ namespace tienda2.desinger
 
                     }
 
+                }
+
+                //recuerda que el for que esta aqui arriba crea todos los controles
+                G_control_a_ocultar = 21;//se usa para ocultar el textbox que es el de productos_elaborados que es el control 21 y se pone aqui por que es cuando termina de poner todos los controles
+                
+                if (G_bandera==1)
+                {
+                    this.Controls[15].Text = "1";// se pone 1 para que cambie el combobox de grupo que es el control 21 y luego la funcion  oculte el contro que usa G_control_a_ocultar
                 }
                 
 
@@ -327,28 +385,29 @@ namespace tienda2.desinger
                     //----------------------------------------------------------------------------------------------------------------------------
                     if (Btn_aceptar.DialogResult == DialogResult)
                     {
-                        arraytextbox = Boton_aceptar(arraytextbox,modificara,infoextra,caracter_spliteo);
-                        
+                        arraytextbox = Boton_aceptar(arraytextbox, modificara, infoextra, caracter_spliteo);
+
                     }
                     else
                     {
                         arraytextbox = new[] { "" };
                     }
-                    
+
                     //------------------------------------------------------------------------------------------------------------------
 
                 }
 
-                else if (bandera2=="1" || bandera3 == "1" && bandera1 != "1")
+                else if (bandera2 == "1" || bandera3 == "1" && bandera1 != "1")
                 {
                     this.ShowDialog();
                     union = nuevo_boton;
                 }
 
             }
+
             else { MessageBox.Show("no has puesto ningun dato"); }
 
-            
+
             if (arraytextbox[0] != null)
             {
                 for (int i = 0; i < arraytextbox.Length; i++)
@@ -356,7 +415,7 @@ namespace tienda2.desinger
                     union = union + arraytextbox[i] + G_parametros[0];
                 }
             }
-
+            
             return union;
         }
 
@@ -366,12 +425,12 @@ namespace tienda2.desinger
             Operaciones_archivos op = new Operaciones_archivos();
             string temp2 = "";
 
-            string [] info_detro_celda = G_datos_de_boton.Split(G_parametros[0]);
+            string[] info_detro_celda = G_datos_de_boton.Split(G_parametros[0]);
 
             for (int i = 0; i < info_detro_celda.Length; i++)
             {
                 string[] posicion_y_datos = info_detro_celda[i].Split(caracter_spliteo);
-                if (posicion_y_datos.Length>=2)
+                if (posicion_y_datos.Length >= 2)
                 {
                     arraytextbox[Convert.ToInt32(posicion_y_datos[0])] = posicion_y_datos[1];
                 }
@@ -381,11 +440,11 @@ namespace tienda2.desinger
             for (int j = 0; j < this.Controls.Count; j++) //aqui agrega al arreglo global "arraytextbox" la informacion
             {
                 object obj = this.Controls[j];
-                
+
                 for (int i = k; i < arraytextbox.Length; i++)
                 {
-                    
-                    if (obj is TextBox && arraytextbox[i]==null)
+
+                    if (obj is TextBox && arraytextbox[i] == null)
                     {
                         TextBox temp = (TextBox)obj;
                         arraytextbox[i] = temp.Text;
@@ -393,7 +452,6 @@ namespace tienda2.desinger
                         break;
                     }
                     else if (obj is ComboBox && arraytextbox[i] == null)
-                    
                     {
                         ComboBox temp = (ComboBox)obj;
                         arraytextbox[i] = temp.Text;
@@ -401,13 +459,13 @@ namespace tienda2.desinger
                         break;
                     }
                 }
-                
+
             }
 
 
-            
 
-            for (int i = 0; i < arraytextbox.Length ; i++)
+
+            for (int i = 0; i < arraytextbox.Length; i++)
             {
                 temp2 = temp2 + arraytextbox[i] + G_parametros[0];
             }
@@ -416,7 +474,7 @@ namespace tienda2.desinger
 
 
             bas.Crear_archivo_y_directorio("inf\\inventario\\cosas_no_estaban.txt");
-            
+
             switch (modificara)
             {
                 case 0:
@@ -438,26 +496,26 @@ namespace tienda2.desinger
                     bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
                     break;
             }
-            
+
             this.Close();
             return arraytextbox;
 
         }
 
-        public string NuevoBoton_Click(object sender, EventArgs e, string seccion,string[] info_extra=null)
+        public string NuevoBoton_Click(object sender, EventArgs e, string seccion, string[] info_extra = null)
         {
             //comprobamos en que boton se a clicado
             Button Btn = sender as Button;
 
             //G_datos_de_boton = G_datos_de_boton + seccion + G_parametros[0];
 
-            if (info_extra!=null)
+            if (info_extra != null)
             {
                 if (info_extra[0] == "solo_botones")
                 {
                     string[] seccion_espliteado = seccion.Split('°');
                     seccion = seccion_espliteado[1];
-                    G_datos_de_boton =seccion;
+                    G_datos_de_boton = seccion;
                     this.Close();
                 }
                 else
@@ -470,10 +528,10 @@ namespace tienda2.desinger
             {
                 G_datos_de_boton = G_datos_de_boton + seccion + G_parametros[0];
             }
-            
+
             //y vemos el resutado
             //MessageBox.Show("pulsado el boton: " + Btn.Text + "\nsu valor es: " + seccion);
-            
+
             return G_datos_de_boton;
         }
 
@@ -519,23 +577,88 @@ namespace tienda2.desinger
             return value;
         }
 
+
+        public void tex_change_y_oculta_control_21(Object sender, EventArgs e, string parametros)
+        {
+            
+            //xb = 1;
+            ComboBox contenido_contol = sender as ComboBox;
+            
+            if (parametros== "proyecto")
+            {
+                G_bandera = 1;
+                if (G_control_a_ocultar == 21)
+                {
+                    if (contenido_contol.Text == "2")
+                    {
+                        this.Controls[G_control_a_ocultar].Visible = true;
+                    }
+                    else
+                    {
+                        this.Controls[G_control_a_ocultar].Visible = false;
+                    }
+                }
+            }
+            
+
+        }
         public void restriccion_caracteres(Object sender, KeyPressEventArgs e, string parametros)
         {
-            //a = 1;
-            if(char.IsNumber(e.KeyChar) || '.' == e.KeyChar || '\b' == e.KeyChar && parametros== "solo_numeros")
+            if (parametros == "solo_letras")
             {
-                
+
+                if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
+                {
+
+                }
+                else
+                {
+                    e.KeyChar = '\0';
+                }
+
             }
-            /*
-            else if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
+
+            else if (parametros == "solo_numeros")
             {
-                e.KeyChar = '\0';
+                //a = 1;
+                if (char.IsNumber(e.KeyChar) || '.' == e.KeyChar || '\b' == e.KeyChar)
+                {
+
+                }
+
+                else
+                {
+                    e.KeyChar = '\0';
+                }
             }
-            */
-            else
+
+            else if (parametros == "ingredientes_primarios")
             {
-                e.KeyChar = '\0';
+                G_contador++;
+                if (e.KeyChar == (char)(Keys.Enter))
+                {
+                    if (G_contador != 1)
+                    {
+                        string[] enviar = new string[] { "1°cantidad_ingrediente°1°2" };
+                        Ventana_emergente cantidad_ingrediente = new Ventana_emergente();
+                        string mensaje = cantidad_ingrediente.Proceso_ventana_emergente(enviar);
+                        string[] mensaje_espliteado = mensaje.Split('|');
+
+                        string temp = this.ActiveControl.Text;
+                        this.ActiveControl.Text = temp + "¬" + mensaje_espliteado[0] + "°";
+
+                        //e.KeyChar = '°';
+                        G_contador = 0;
+                    }
+                    else
+                    {
+                        G_contador = 0;
+                    }
+                }
+
+
             }
+
         }
 
         public void restriccion_caracteres_forma_1(Object o, KeyPressEventArgs e)
@@ -553,7 +676,5 @@ namespace tienda2.desinger
 
             }
         }
-
-
     }
 }

@@ -103,7 +103,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 102|tueni pop paleta caramelo suave sabores 13.93|2|18804051890|0|1|canels|1°producto||1|
 103|palenetas fresa/cereza 13.9|2|18804053764|0|1|canel´s|1°producto||1|
 104|chiclosos la viquita|2|18804054945|0|0|la vaquita|1°producto||1|
-105|orbit americano 16.2g|8|22000279033|1|0|orbit|1°producto||1|
+105|orbit americano 16.2g|8|22000279033|-1|0|orbit|1°producto||1|
 106|cosecha pura mango 200ml|5|24474393444|10|0|pepsi|1°producto||1|
 107|cosecha pura durazno 200ml|5|24474393536|10|0|pepsi|1°producto||1|
 108|del valle mango 413ml|14|32239052000|1000|10.5|coca|1°producto||1|
@@ -127,7 +127,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 126|gatorade fresandia 1lt|28|36731328007|10|23.4|pepsi|1°producto||1|
 127|gatorade limonada 500ml|18|36731502001|0|0|pepsi|1°producto||1|
 128|gatorade ponche frutas 500ml|18|36731506009|-1|0|pepsi|1°producto||1|
-129|agua skarch 1Lt|6|40232838699|8|5.4|skarch|1°producto||1|
+129|agua skarch 1Lt|6|40232838699|1|5.4|skarch|1°producto||1|
 130|titan mandarina 3lts|25|40232886652|2|22.5|red cola|1°producto||1|
 131|titan piña 3 lts|25|40232886669|1000|22.5|red cola|1°producto||1|
 132|titan manzana 3lts|25|40232886676|1000|22.5|red cola|1°producto||1|
@@ -146,7 +146,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 145|maruchan res|10|41789001925|3|9|maruchan|1°producto||1|
 146|maruchan camaron|10|41789001956|1|9|maruchan|1°producto||1|
 147|maruchan cama/chilepiqui|10|41789001987|4|9|maruchan|1°producto||1|
-148|rastrillo bic confort 3 hojas|12|70330724341|10|10|bic|1°producto||10|
+148|rastrillo bic confort 3 hojas|12|70330724341|100|10|bic|1°producto||10|
 149|cajeta quemada coronado 370gr|36|74323083651|6|32.4|coronado|1°producto||1|
 150|frijoles con choriso 430g|15|78883240547|0|0|la sierra|1°producto||1|
 151|jack daniels aple|30|82184000984|1000|27|jack daniels|1°producto||1|
@@ -156,7 +156,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 155|valentina amarilla 370ml|15|97339000054|1000|9|valentina|1°producto||1|
 156|valentina negra 370ml|10|97339000061|1000|9|valentina|1°producto||1|
 157|papel higienico premier 4pz|26.5|99072000674|0|0|premier|1°producto||1|
-158|choco huevo sorpresa12g|15|603554102017|10|12|las delicias|1°producto||1|
+158|choco huevo sorpresa12g|15|603554102017|5|12|las delicias|1°producto||1|
 159|skarch 10L|26|606110023924|6|23.4|skarch|1°producto||1|
 160|red-cola 355ml|6|606110024006|24|5.4|red-cola|1°producto||1|
 161|arizona mucho mango 680ml|13|613008738808|996|11.7|arizona|1°producto||1|
@@ -342,11 +342,11 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 341|four loko gold 473ml|35|849806001756|1000|31.5|four loko|1°producto||1|
 342|four loko black 473ml|35|849806002005|3|31.5|four loko|1°producto||1|
 343|encendedor|8|852812005106|0|0|enmcendedor|1°producto||1|
-344|cepillodental|20|3014260846725|2|18||1°producto||1|
+344|cepillodental|20|3014260846725|-2|18||1°producto||1|
 345|encendedor bic|15|3086123397835|-1|0|bic|1°producto||1|
 346|encendedor big|15|3086126788722|-1|0|encendedor|1°producto||1|
 347|cigarro winston capsula menta 20'|54|4033100076428|0|49|camel|1°producto||1|
-348|stella artois lager 250ml|16|5410228240945|1|14.4||1°producto||1|
+348|stella artois lager 250ml|16|5410228240945|-8|14.4||1°producto||1|
 349|skyblue manzana verde|20|6648040012900|1000|18|sky|1°producto||1|
 350|cepillo colgate|12|6910021007206|5|10.8||1°producto||1|
 351|foco chiyoda plus 100w|10|7404005961329|1000|9|chiyoda|1°producto||1|
@@ -1454,3 +1454,9 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1453|pingúinos 3pzs|18|7501030475743|-1|0|marinela pastel|||1|
 1454|aceite patrona 1L|34|7501060500019|0|0|casa vargas|||1|
 1455|m&ms 43.8g choco|15|7502271911427|0|0|orbit|||1|
+1456|afd|0|afd|1|0|coca|1||1||
+1457|dfa|0|asfd|1|0|sabritas|1||1||
+1458|rr22|0|rrr|1|0|salma|1||1||
+1459|rr44|0|rr33|1|0|turin|1||1||
+1460|kk2|0|kk|1|0|turin|1||1||
+1461|faff|0|dafsa|1|0|turin|1||1||

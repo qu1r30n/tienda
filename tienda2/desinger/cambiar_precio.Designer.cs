@@ -48,6 +48,8 @@
             this.Lbl_provedor_camb = new System.Windows.Forms.Label();
             this.Lbl_provedor = new System.Windows.Forms.Label();
             this.Rdb_provedor = new System.Windows.Forms.RadioButton();
+            this.chb_no_vacio = new System.Windows.Forms.CheckBox();
+            this.btn_limpiar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_codigo
@@ -96,9 +98,9 @@
             // 
             // Btn_editar
             // 
-            this.Btn_editar.Location = new System.Drawing.Point(789, 58);
+            this.Btn_editar.Location = new System.Drawing.Point(789, 31);
             this.Btn_editar.Name = "Btn_editar";
-            this.Btn_editar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_editar.Size = new System.Drawing.Size(75, 50);
             this.Btn_editar.TabIndex = 4;
             this.Btn_editar.Text = "cambiar precio";
             this.Btn_editar.UseVisualStyleBackColor = true;
@@ -241,11 +243,33 @@
             this.Rdb_provedor.Text = "provedor";
             this.Rdb_provedor.UseVisualStyleBackColor = true;
             // 
+            // chb_no_vacio
+            // 
+            this.chb_no_vacio.AutoSize = true;
+            this.chb_no_vacio.Location = new System.Drawing.Point(668, 87);
+            this.chb_no_vacio.Name = "chb_no_vacio";
+            this.chb_no_vacio.Size = new System.Drawing.Size(90, 17);
+            this.chb_no_vacio.TabIndex = 16;
+            this.chb_no_vacio.Text = "no este vacio";
+            this.chb_no_vacio.UseVisualStyleBackColor = true;
+            // 
+            // btn_limpiar
+            // 
+            this.btn_limpiar.Location = new System.Drawing.Point(789, 88);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.btn_limpiar.TabIndex = 17;
+            this.btn_limpiar.Text = "limpiar";
+            this.btn_limpiar.UseVisualStyleBackColor = true;
+            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
+            // 
             // Cambiar_precio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 139);
+            this.Controls.Add(this.btn_limpiar);
+            this.Controls.Add(this.chb_no_vacio);
             this.Controls.Add(this.Rdb_producto);
             this.Controls.Add(this.Rdb_provedor);
             this.Controls.Add(this.Rdb_inventario);
@@ -294,5 +318,7 @@
         private System.Windows.Forms.Label Lbl_provedor_camb;
         private System.Windows.Forms.Label Lbl_provedor;
         private System.Windows.Forms.RadioButton Rdb_provedor;
+        private System.Windows.Forms.CheckBox chb_no_vacio;
+        private System.Windows.Forms.Button btn_limpiar;
     }
 }

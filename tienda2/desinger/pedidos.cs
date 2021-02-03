@@ -192,11 +192,11 @@ namespace tienda2.desinger
                 if (G_prov_anterior == null)
                 {
                     G_prov_anterior = provedores[0];
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
                 }
                 else
                 {
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
                 }
 
                 //a = 4;

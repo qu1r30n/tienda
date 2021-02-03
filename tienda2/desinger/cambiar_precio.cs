@@ -18,6 +18,8 @@ namespace tienda2.desinger
         Tex_base bas = new Tex_base();
         Operaciones_textos op_text = new Operaciones_textos();
 
+        string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
+
         public Cambiar_precio()
         {
             InitializeComponent();
@@ -27,92 +29,193 @@ namespace tienda2.desinger
 
         private void Btn_editar_Click(object sender, EventArgs e)
         {
-            if (Lbl_precio_compra_canb.Text != "$")
+            if (chb_no_vacio.Checked)
             {
-                if (Rdb_producto.Checked == true)
+                if (Txt_remplazo.Text!="")
                 {
-                    bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "1", Txt_remplazo.Text);
-                    Actualisar_Txt(0, Txt_buscar_producto.Text, "3", Txt_remplazo.Text);
-                    Lbl_nombre_producto_camb.Text = "";
-                    Lbl_precio_compra_canb.Text = "$";
-                    Lbl_precio_venta_camb.Text = "$";
-                    Lbl_cantidad_canb.Text = "$";
-                    Txt_buscar_producto.Text = "";
-                    Txt_remplazo.Text = "";
-                    Lbl_provedor_camb.Text = "nombre del provedor";
-                    Txt_buscar_producto.Focus();
+                    if (Lbl_precio_compra_canb.Text != "$")
+                    {
+                        if (Rdb_producto.Checked == true)
+                        {
+                            bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "1", Txt_remplazo.Text);
+                            Actualisar_Txt(0, Txt_buscar_producto.Text, "3", Txt_remplazo.Text);
+                            Lbl_nombre_producto_camb.Text = "";
+                            Lbl_precio_compra_canb.Text = "$";
+                            Lbl_precio_venta_camb.Text = "$";
+                            Lbl_cantidad_canb.Text = "$";
+                            Txt_buscar_producto.Text = "";
+                            Txt_remplazo.Text = "";
+                            Lbl_provedor_camb.Text = "nombre del provedor";
+                            Txt_buscar_producto.Focus();
+                        }
+
+                        else if (Rdb_compra.Checked == true)
+                        {
+                            bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "5", Txt_remplazo.Text);
+                            Actualisar_Txt(0, Txt_buscar_producto.Text, "5", Txt_remplazo.Text);
+                            Lbl_nombre_producto_camb.Text = "";
+                            Lbl_precio_compra_canb.Text = "$";
+                            Lbl_precio_venta_camb.Text = "$";
+                            Lbl_cantidad_canb.Text = "$";
+                            Txt_buscar_producto.Text = "";
+                            Txt_remplazo.Text = "";
+                            Lbl_provedor_camb.Text = "nombre del provedor";
+                            Txt_buscar_producto.Focus();
+
+                        }
+
+                        else if (Rdb_venta.Checked == true)
+                        {
+                            bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "2", Txt_remplazo.Text);
+                            Actualisar_Txt(0, Txt_buscar_producto.Text, "2", Txt_remplazo.Text);
+                            Lbl_nombre_producto_camb.Text = "";
+                            Lbl_precio_compra_canb.Text = "$";
+                            Lbl_precio_venta_camb.Text = "$";
+                            Lbl_cantidad_canb.Text = "$";
+                            Txt_buscar_producto.Text = "";
+                            Txt_remplazo.Text = "";
+                            Lbl_provedor_camb.Text = "nombre del provedor";
+                            Txt_buscar_producto.Focus();
+                        }
+
+                        else if (Rdb_inventario.Checked == true)
+                        {
+                            bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
+                            Actualisar_Txt(0, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
+                            Lbl_nombre_producto_camb.Text = "";
+                            Lbl_precio_compra_canb.Text = "$";
+                            Lbl_precio_venta_camb.Text = "$";
+                            Lbl_cantidad_canb.Text = "$";
+                            Txt_buscar_producto.Text = "";
+                            Txt_remplazo.Text = "";
+                            Lbl_provedor_camb.Text = "nombre del provedor";
+                            Txt_buscar_producto.Focus();
+                        }
+
+                        else if (Rdb_provedor.Checked == true)
+                        {
+                            bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "6", Txt_remplazo.Text);
+                            Actualisar_Txt(0, Txt_buscar_producto.Text, "6", Txt_remplazo.Text);
+
+                            bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", Txt_remplazo.Text);
+
+                            Lbl_nombre_producto_camb.Text = "";
+                            Lbl_precio_compra_canb.Text = "$";
+                            Lbl_precio_venta_camb.Text = "$";
+                            Lbl_cantidad_canb.Text = "$";
+                            Txt_buscar_producto.Text = "";
+                            Txt_remplazo.Text = "";
+                            Lbl_provedor_camb.Text = "nombre del provedor";
+                            Txt_buscar_producto.Focus();
+                        }
+
+
+                        else
+                        {
+                            MessageBox.Show("elige el dato que quieres cambiar");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("no se encontro producto dentro del inventario");
+                    }
                 }
-
-                else if (Rdb_compra.Checked == true)
-                {
-                    bas.Editar_espesifico("inf\\inventario\\invent.txt",3,Txt_buscar_producto.Text,"5",Txt_remplazo.Text);
-                    Actualisar_Txt(0, Txt_buscar_producto.Text, "5", Txt_remplazo.Text);
-                    Lbl_nombre_producto_camb.Text = "";
-                    Lbl_precio_compra_canb.Text = "$";
-                    Lbl_precio_venta_camb.Text = "$";
-                    Lbl_cantidad_canb.Text = "$";
-                    Txt_buscar_producto.Text = "";
-                    Txt_remplazo.Text = "";
-                    Lbl_provedor_camb.Text = "nombre del provedor";
-                    Txt_buscar_producto.Focus();
-
-                }
-
-                else if (Rdb_venta.Checked == true)
-                {
-                    bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "2", Txt_remplazo.Text);
-                    Actualisar_Txt(0, Txt_buscar_producto.Text, "2", Txt_remplazo.Text);
-                    Lbl_nombre_producto_camb.Text = "";
-                    Lbl_precio_compra_canb.Text = "$";
-                    Lbl_precio_venta_camb.Text = "$";
-                    Lbl_cantidad_canb.Text = "$";
-                    Txt_buscar_producto.Text = "";
-                    Txt_remplazo.Text = "";
-                    Lbl_provedor_camb.Text = "nombre del provedor";
-                    Txt_buscar_producto.Focus();
-                }
-
-                else if (Rdb_inventario.Checked == true)
-                {
-                    bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
-                    Actualisar_Txt(0, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
-                    Lbl_nombre_producto_camb.Text = "";
-                    Lbl_precio_compra_canb.Text = "$";
-                    Lbl_precio_venta_camb.Text = "$";
-                    Lbl_cantidad_canb.Text = "$";
-                    Txt_buscar_producto.Text = "";
-                    Txt_remplazo.Text = "";
-                    Lbl_provedor_camb.Text = "nombre del provedor";
-                    Txt_buscar_producto.Focus();
-                }
-
-                else if (Rdb_provedor.Checked == true)
-                {
-                    bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "6", Txt_remplazo.Text);
-                    Actualisar_Txt(0, Txt_buscar_producto.Text, "6", Txt_remplazo.Text);
-                    
-                    bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", Txt_remplazo.Text);
-
-                    Lbl_nombre_producto_camb.Text = "";
-                    Lbl_precio_compra_canb.Text = "$";
-                    Lbl_precio_venta_camb.Text = "$";
-                    Lbl_cantidad_canb.Text = "$";
-                    Txt_buscar_producto.Text = "";
-                    Txt_remplazo.Text = "";
-                    Lbl_provedor_camb.Text = "nombre del provedor";
-                    Txt_buscar_producto.Focus();
-                }
-
-
                 else
                 {
-                    MessageBox.Show("elige el dato que quieres cambiar");
+                    MessageBox.Show("falta llenar informacion");
                 }
             }
+            
             else
             {
-                MessageBox.Show("no se encontro producto dentro del inventario");
+                if (Lbl_precio_compra_canb.Text != "$")
+                {
+                    if (Rdb_producto.Checked == true)
+                    {
+                        bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "1", Txt_remplazo.Text);
+                        Actualisar_Txt(0, Txt_buscar_producto.Text, "3", Txt_remplazo.Text);
+                        Lbl_nombre_producto_camb.Text = "";
+                        Lbl_precio_compra_canb.Text = "$";
+                        Lbl_precio_venta_camb.Text = "$";
+                        Lbl_cantidad_canb.Text = "$";
+                        Txt_buscar_producto.Text = "";
+                        Txt_remplazo.Text = "";
+                        Lbl_provedor_camb.Text = "nombre del provedor";
+                        Txt_buscar_producto.Focus();
+                    }
+
+                    else if (Rdb_compra.Checked == true)
+                    {
+                        bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "5", Txt_remplazo.Text);
+                        Actualisar_Txt(0, Txt_buscar_producto.Text, "5", Txt_remplazo.Text);
+                        Lbl_nombre_producto_camb.Text = "";
+                        Lbl_precio_compra_canb.Text = "$";
+                        Lbl_precio_venta_camb.Text = "$";
+                        Lbl_cantidad_canb.Text = "$";
+                        Txt_buscar_producto.Text = "";
+                        Txt_remplazo.Text = "";
+                        Lbl_provedor_camb.Text = "nombre del provedor";
+                        Txt_buscar_producto.Focus();
+
+                    }
+
+                    else if (Rdb_venta.Checked == true)
+                    {
+                        bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "2", Txt_remplazo.Text);
+                        Actualisar_Txt(0, Txt_buscar_producto.Text, "2", Txt_remplazo.Text);
+                        Lbl_nombre_producto_camb.Text = "";
+                        Lbl_precio_compra_canb.Text = "$";
+                        Lbl_precio_venta_camb.Text = "$";
+                        Lbl_cantidad_canb.Text = "$";
+                        Txt_buscar_producto.Text = "";
+                        Txt_remplazo.Text = "";
+                        Lbl_provedor_camb.Text = "nombre del provedor";
+                        Txt_buscar_producto.Focus();
+                    }
+
+                    else if (Rdb_inventario.Checked == true)
+                    {
+                        bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
+                        Actualisar_Txt(0, Txt_buscar_producto.Text, "4", Txt_remplazo.Text);
+                        Lbl_nombre_producto_camb.Text = "";
+                        Lbl_precio_compra_canb.Text = "$";
+                        Lbl_precio_venta_camb.Text = "$";
+                        Lbl_cantidad_canb.Text = "$";
+                        Txt_buscar_producto.Text = "";
+                        Txt_remplazo.Text = "";
+                        Lbl_provedor_camb.Text = "nombre del provedor";
+                        Txt_buscar_producto.Focus();
+                    }
+
+                    else if (Rdb_provedor.Checked == true)
+                    {
+                        bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "6", Txt_remplazo.Text);
+                        Actualisar_Txt(0, Txt_buscar_producto.Text, "6", Txt_remplazo.Text);
+
+                        bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", Txt_remplazo.Text);
+
+                        Lbl_nombre_producto_camb.Text = "";
+                        Lbl_precio_compra_canb.Text = "$";
+                        Lbl_precio_venta_camb.Text = "$";
+                        Lbl_cantidad_canb.Text = "$";
+                        Txt_buscar_producto.Text = "";
+                        Txt_remplazo.Text = "";
+                        Lbl_provedor_camb.Text = "nombre del provedor";
+                        Txt_buscar_producto.Focus();
+                    }
+
+
+                    else
+                    {
+                        MessageBox.Show("elige el dato que quieres cambiar");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("no se encontro producto dentro del inventario");
+                }
             }
+            
         }
         private void Recargar_texbox()
         {
@@ -127,7 +230,7 @@ namespace tienda2.desinger
 
         private void Procesar_codigo(string codigo)
         {
-            
+
             bool bandera = false;
             for (int i = 0; i < G_productos.Count; i++)
             {
@@ -155,15 +258,48 @@ namespace tienda2.desinger
                 string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);
                 Operaciones_textos op_text = new Operaciones_textos();
                 string provedores_txt = op_text.join_paresido('°', provedores);
-                   
+
 
                 //------------------------------------------------------------
                 Ventana_emergente vent_emergent = new Ventana_emergente();
                 //-------------------------------------------------------------
                 //a = 1;
-                string[] enviar = { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "3°provedor°" + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+
+
+                string[] enviar;
+
+                if (G_prov_anterior == null)
+                {
+                    if (provedores.Length < 0)
+                    {
+                        G_prov_anterior = provedores[0];
+                    }
+
+                    enviar = new string[] { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
+                }
+                else
+                {
+                    enviar = new string[] { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
+                }
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
-                MessageBox.Show("ya se agrego el producto: " + mensage);
+                string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
+                
+                string[] temp2;
+                string temp3 = "";
+
+                if (temp.Length >= 3)//por si cierra la ventana no agregue a los text box
+                {
+                    MessageBox.Show("ya se agrego el producto: " + mensage);
+                    
+                    G_prov_anterior = temp[6];
+                    temp2 = new[] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6], temp[7]};//aqui lo pongo en el orden que deve llevar
+                    temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
+                    G_productos.Add(temp3);//agrego en lista de productos
+                    Txt_buscar_producto.AutoCompleteCustomSource.Add(temp3);//agrego en el autocompletar
+
+                    bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", temp[6]);
+
+                }
                 Txt_buscar_producto.Text = "";
             }
 
@@ -184,6 +320,17 @@ namespace tienda2.desinger
             if (e.KeyValue == (char)(Keys.Enter))
             {
                 SendKeys.Send("{TAB}");
+            }
+            else if (e.KeyValue == (char)(Keys.Escape))
+            {
+                Txt_buscar_producto.Text = "";
+                Lbl_nombre_producto_camb.Text = "nombre producto";
+                Lbl_precio_compra_canb.Text = "$";
+                Lbl_precio_venta_camb.Text = "$";
+                Lbl_cantidad_canb.Text = "$";
+                Lbl_provedor_camb.Text = "nombre del provedor";
+                Txt_remplazo.Text = "";
+                Txt_buscar_producto.Focus();
             }
         }
 
@@ -206,12 +353,23 @@ namespace tienda2.desinger
                     {
                         linea_editada = linea_editada + palabra[k] + caracter_separacion;
                     }
-                    linea_editada= op_text.Trimend_paresido(linea_editada, caracter_separacion);
+                    linea_editada = op_text.Trimend_paresido(linea_editada, caracter_separacion);
                     Txt_buscar_producto.AutoCompleteCustomSource[i] = linea_editada;
                     G_productos[i] = linea_editada;
                 }
             }
         }
 
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            Txt_buscar_producto.Text = "";
+            Lbl_nombre_producto_camb.Text = "nombre producto";
+            Lbl_precio_compra_canb.Text = "$";
+            Lbl_precio_venta_camb.Text = "$";
+            Lbl_cantidad_canb.Text = "$";
+            Lbl_provedor_camb.Text = "nombre del provedor";
+            Txt_remplazo.Text = "";
+            Txt_buscar_producto.Focus();
+        }
     }
 }
