@@ -258,7 +258,7 @@
             this.btn_limpiar.Location = new System.Drawing.Point(789, 88);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
-            this.btn_limpiar.TabIndex = 17;
+            this.btn_limpiar.TabIndex = 5;
             this.btn_limpiar.Text = "limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = true;
             this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
