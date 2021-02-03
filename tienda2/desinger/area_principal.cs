@@ -43,6 +43,7 @@ namespace tienda2.desinger
         }
 
         #region botones y combobox
+        
 
         private void Btn_nueva_venta_Click(object sender, EventArgs e)
         {

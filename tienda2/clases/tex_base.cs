@@ -609,7 +609,7 @@ namespace tienda2
 
                                 for (int i = 0; i < columnas_editar.Length; i++)
                                 {
-                                    palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToInt32(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToInt32(cantidad_a_sumar));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
+                                    palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToDecimal(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToDecimal(cantidades_sumara[i]));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
                                 }
                             }
 
@@ -622,6 +622,7 @@ namespace tienda2
                             sw.WriteLine(linea_editada);
 
                         }
+
                         else
                         {
                             sw.WriteLine(linea);
@@ -633,10 +634,11 @@ namespace tienda2
                 exito_o_fallo = "1)exito";
                 File.Delete(direccion_archivo);//borramos el archivo original
                 File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+                
                 if (bandera == false)
                 {
 
-                    string temp = Seleccionar("inf\\inventario\\invent.txt", 3, comparar, "1|3|0|6|8");
+                    string temp = Seleccionar("inf\\inventario\\invent.txt", 3, comparar, "1|3|0|6|8|2");
                     string[] texto = temp.Split('°');
 
                     DateTime fecha_y_hora = DateTime.Now;

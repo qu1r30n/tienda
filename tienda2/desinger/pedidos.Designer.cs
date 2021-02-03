@@ -168,6 +168,7 @@
             this.Txt_costo_compra.Name = "Txt_costo_compra";
             this.Txt_costo_compra.Size = new System.Drawing.Size(100, 20);
             this.Txt_costo_compra.TabIndex = 3;
+            this.Txt_costo_compra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_costo_compra_keypress);
             // 
             // Lbl_codigo
             // 
@@ -281,6 +282,7 @@
             this.Txt_cantidad.Name = "Txt_cantidad";
             this.Txt_cantidad.Size = new System.Drawing.Size(100, 20);
             this.Txt_cantidad.TabIndex = 2;
+            this.Txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_cantidad_keypress);
             // 
             // label_cant
             // 

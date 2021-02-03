@@ -23,7 +23,7 @@ namespace tienda2.desinger
         {
             
             Ventana_emergente ven_emer = new Ventana_emergente();
-            
+            //a = 2;
             string[] enviar = {"3°es_paquete°1", "3°es_por_pieza°2" };//el 3 del inicio es para saver que es boton y el final es su valor
             string datos_ventana_emerg = ven_emer.Proceso_ventana_emergente(enviar);//mandamos a llamar a ventana emergente
             string temp;
@@ -36,8 +36,8 @@ namespace tienda2.desinger
                 string cantidad_por_pakete=bas.Seleccionar("inf\\inventario\\invent.txt",3,Txt_buscar_producto.Text,"9");
 
                 Ventana_emergente ven_emer2 = new Ventana_emergente();
-                
-                string[] enviar2 = { "1°costo°"+Txt_costo_compra.Text, "1°numero paketes°" + Txt_cantidad.Text, "1°cantidad_por_paquete°"+cantidad_por_pakete};
+                //a = 3;
+                string[] enviar2 = { "1°costo°" + Txt_costo_compra.Text + "°2", "1°numero paketes°" + Txt_cantidad.Text + "°2", "1°cantidad_por_paquete°" + cantidad_por_pakete + "°2" };
                 string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2);
                 string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
                 bas.Editar_espesifico("inf\\inventario\\invent.txt",3,Txt_buscar_producto.Text,"9",mensaje2_espli[2]);
@@ -131,9 +131,12 @@ namespace tienda2.desinger
 
             string[] imprimir3 = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);
             cmb_provedor.Items.Clear();
+            cmb_provedor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmb_provedor.AutoCompleteSource = AutoCompleteSource.CustomSource;
             for (int k = 0; k < imprimir3.Length; k++)
             {
                 cmb_provedor.Items.Add("" + imprimir3[k]);
+                cmb_provedor.AutoCompleteCustomSource.Add("" + imprimir3[k]);
             }
 
 
@@ -189,14 +192,14 @@ namespace tienda2.desinger
                 if (G_prov_anterior == null)
                 {
                     G_prov_anterior = provedores[0];
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0", "2°codigo de barras°" + espliteado[0], "1°cantidad°1", "1°costo de compra°0", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1" };
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
                 }
                 else
                 {
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0", "2°codigo de barras°" + espliteado[0], "1°cantidad°1", "1°costo de compra°0", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "1°grupo", "2°no poner nada°", "1°cantidad_productos_por_paquete°1" };
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
                 }
 
-                
+                //a = 4;
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
                 string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
 
@@ -258,7 +261,7 @@ namespace tienda2.desinger
         private void Btn_procesar_venta_Click(object sender, EventArgs e)
         {
             Ventana_emergente ventana_emerg = new Ventana_emergente();
-            
+            //a = 5;
             string[] enviar = { "3°venta_directa°1", "3°preVenta°2" };
             string valor_devuelto=ventana_emerg.Proceso_ventana_emergente(enviar,0);
             bool compra_directa;
@@ -407,6 +410,42 @@ namespace tienda2.desinger
             {
                 string[] info_producto_lista = Lst_compras.SelectedItem.ToString().Split(G_parametros[0]);
                 Lbl_nom_product_list.Text = info_producto_lista[1]+" $"+ (Convert.ToInt32(info_producto_lista[2])*Convert.ToDecimal(info_producto_lista[3]) );
+            }
+        }
+
+        private void Txt_cantidad_keypress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || '.' == e.KeyChar || '\b' == e.KeyChar)
+            {
+
+            }
+            /*
+            else if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
+            {
+                e.KeyChar = '\0';
+            }
+            */
+            else
+            {
+                e.KeyChar = '\0';
+            }
+        }
+
+        private void Txt_costo_compra_keypress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || '.' == e.KeyChar || '\b' == e.KeyChar)
+            {
+
+            }
+            /*
+            else if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
+            {
+                e.KeyChar = '\0';
+            }
+            */
+            else
+            {
+                e.KeyChar = '\0';
             }
         }
     }

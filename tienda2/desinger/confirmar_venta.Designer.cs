@@ -51,6 +51,7 @@
             this.Txt_dinero.Name = "Txt_dinero";
             this.Txt_dinero.Size = new System.Drawing.Size(100, 20);
             this.Txt_dinero.TabIndex = 8;
+            this.Txt_dinero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_dinero_keypress);
             // 
             // Lbl_dinero
             // 
@@ -79,7 +80,7 @@
             this.Lbl_titulo_total.TabIndex = 5;
             this.Lbl_titulo_total.Text = "total a pagar";
             // 
-            // confirmar_venta
+            // Confirmar_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,7 +90,7 @@
             this.Controls.Add(this.Lbl_dinero);
             this.Controls.Add(this.Lbl_total);
             this.Controls.Add(this.Lbl_titulo_total);
-            this.Name = "confirmar_venta";
+            this.Name = "Confirmar_venta";
             this.Text = "confirmar_venta";
             this.ResumeLayout(false);
             this.PerformLayout();
