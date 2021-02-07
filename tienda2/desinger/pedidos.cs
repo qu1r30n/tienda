@@ -27,7 +27,8 @@ namespace tienda2.desinger
             string[] enviar = {"3°es_paquete°1", "3°es_por_pieza°2" };//el 3 del inicio es para saver que es boton y el final es su valor
             string datos_ventana_emerg = ven_emer.Proceso_ventana_emergente(enviar);//mandamos a llamar a ventana emergente
             string temp;
-
+            //zb = 0;
+            
             if (datos_ventana_emerg=="1")//si el valor del boton que apreto es 1 es que va a ser un paquete
             {
                 DateTime fecha_hora = DateTime.Now;
@@ -48,6 +49,7 @@ namespace tienda2.desinger
                 Txt_costo_compra.Text = costo_por_producto;
                 temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|" + mensaje2_espli[1]+"°paketes_de°"+mensaje2_espli[2];
             }
+            
             else
             {
                 temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
@@ -85,30 +87,8 @@ namespace tienda2.desinger
                 throw;
             }
 
-            Txt_buscar_producto.Focus();
-            Lbl_id.Text = "";
-            Lbl_nombre_producto.Text = "";
-            Lbl_precio_compra_cant.Text = "";
-            Lbl_precio_venta.Text = "";
-            Lbl_cantidad_cant.Text = "";
-
-            Txt_buscar_producto.Text = "";
-            Txt_cantidad.Text = "";
-            Txt_costo_compra.Text = "";
-            Txt_nom_producto.Text = "";
-            cmb_provedor.Text = "";
-            if (Rdb_codigo_barras.Checked)
-            {
-                Txt_buscar_producto.Focus();
-            }
-            else if (Rdb_producto.Checked)
-            {
-                Txt_nom_producto.Focus();
-            }
-            else
-            {
-                Txt_nom_producto.Focus();
-            }
+            limpiar();
+            
 
         }
 
@@ -295,15 +275,48 @@ namespace tienda2.desinger
             opfd.InitialDirectory= Directory.GetCurrentDirectory() +"\\pedidos";
             if (opfd.ShowDialog()== DialogResult.OK)
             {
-                string[] info_compra = bas.Leer(opfd.FileName, "2|0|6");
+                string[] info_compra = bas.Leer(opfd.FileName, "2|0|8");
                 for (int i = 0; i < info_compra.Length; i++)
                 {
                     string[] info_producto_comp_spliteada = info_compra[i].Split(G_parametros);
                     Procesar_codigo(info_producto_comp_spliteada[0]);
-                    Txt_cantidad.Text = info_producto_comp_spliteada[1];
-                    Txt_costo_compra.Text= info_producto_comp_spliteada[2];
+                    //za = 1;
                     string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
+
+
+                    bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", cmb_provedor.Text);
+
+                    Lbl_nom_product_list.Text = Lbl_nombre_producto.Text + "costo por pieza:" + Txt_costo_compra.Text + " costo por paquetes:  $" + (Convert.ToDecimal(info_producto_comp_spliteada[2]) * Convert.ToDecimal(info_producto_comp_spliteada[1]));
                     Lst_compras.Items.Add(temp);
+
+
+                    string temporal;
+                    string[] temporal_s;
+                    decimal total = 0;
+                    decimal total_cost_com = 0;
+                    try
+                    {
+                        for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
+                        {
+                            temporal = "" + Lst_compras.Items[coll];
+                            temporal_s = temporal.Split(G_parametros);
+
+                            if (temporal_s[0] != "")
+                            {
+                                total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
+                                total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
+                            }
+
+                        }
+                        Lbl_cuenta.Text = "" + total;
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+
+                    limpiar();
                 }
             }
             
@@ -450,6 +463,34 @@ namespace tienda2.desinger
             else
             {
                 e.KeyChar = '\0';
+            }
+        }
+        
+        private void limpiar()
+        {
+            Txt_buscar_producto.Focus();
+            Lbl_id.Text = "";
+            Lbl_nombre_producto.Text = "";
+            Lbl_precio_compra_cant.Text = "";
+            Lbl_precio_venta.Text = "";
+            Lbl_cantidad_cant.Text = "";
+
+            Txt_buscar_producto.Text = "";
+            Txt_cantidad.Text = "";
+            Txt_costo_compra.Text = "";
+            Txt_nom_producto.Text = "";
+            cmb_provedor.Text = "";
+            if (Rdb_codigo_barras.Checked)
+            {
+                Txt_buscar_producto.Focus();
+            }
+            else if (Rdb_producto.Checked)
+            {
+                Txt_nom_producto.Focus();
+            }
+            else
+            {
+                Txt_nom_producto.Focus();
             }
         }
     }
