@@ -438,3 +438,4 @@ movimiento origen: 1|1458|rr22|0|rrr|1|0|salma|1||1||
 movimiento origen: 1|1459|rr44|0|rr33|1|0|turin|1||1||
 movimiento origen: 1|1460|kk2|0|kk|1|0|turin|1||1||
 movimiento origen: 1|1461|faff|0|dafsa|1|0|turin|1||1||
+movimiento origen: 0|100|1|10|

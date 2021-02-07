@@ -191,12 +191,16 @@ namespace tienda2.desinger
                 string[] enviar;
                 if (G_prov_anterior == null)
                 {
-                    G_prov_anterior = provedores[0];
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+                    if (provedores.Length < 0)
+                    {
+                        G_prov_anterior = provedores[0];
+                    }
+
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
                 else
                 {
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
 
                 //a = 4;
@@ -298,7 +302,7 @@ namespace tienda2.desinger
                     Procesar_codigo(info_producto_comp_spliteada[0]);
                     Txt_cantidad.Text = info_producto_comp_spliteada[1];
                     Txt_costo_compra.Text= info_producto_comp_spliteada[2];
-                    string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text;
+                    string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
                     Lst_compras.Items.Add(temp);
                 }
             }

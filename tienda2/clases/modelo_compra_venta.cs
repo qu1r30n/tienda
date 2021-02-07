@@ -28,10 +28,10 @@ namespace tienda2.clases
             {
                 string dir_arch = "inf\\inventario\\invent.txt";
                 bas.Editar_espesifico(dir_arch, 3, codigo, "6", provedor);
-                op.Actualisar_inventario(dir_arch, "" + codigo, Convert.ToInt32(cantidad));
+                op.Actualisar_inventario(dir_arch, "" + codigo, Convert.ToDecimal(cantidad));
 
                 dir_arch = "ventas\\" + año + "\\" + mes + "\\dias\\g_" + dia_mes_año + ".txt";
-                //no se para que es el ultimo 0 bas.agregar(dir_arch, hora + "|" + codigo + "|" + cantidad + "|" + nom_producto + "|"+ provedor + "|" + "0");
+                //se me olvido para que es el ultimo 0 bas.agregar(dir_arch, hora + "|" + codigo + "|" + cantidad + "|" + nom_producto + "|"+ provedor + "|" + "0");
                 bas.Agregar(dir_arch, hora_min + "|" + codigo + "|" + cantidad + "|" + nom_producto + "|" + provedor + "|" + costo_compra + "|" + (Convert.ToDecimal(costo_compra) * Convert.ToInt32(cantidad)) + "|" + info_extra);//muestra total cada horas
 
                 dir_arch = "ventas\\" + año + "\\" + mes + "\\g_" + mes + ".txt";

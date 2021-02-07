@@ -103,7 +103,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 102|tueni pop paleta caramelo suave sabores 13.93|2|18804051890|0|1|canels|1°producto||1|
 103|palenetas fresa/cereza 13.9|2|18804053764|0|1|canel´s|1°producto||1|
 104|chiclosos la viquita|2|18804054945|0|0|la vaquita|1°producto||1|
-105|orbit americano 16.2g|8|22000279033|-1|0|orbit|1°producto||1|
+105|orbit americano 16.2g|8|22000279033|999|0|orbit|1°producto||1|
 106|cosecha pura mango 200ml|5|24474393444|10|0|pepsi|1°producto||1|
 107|cosecha pura durazno 200ml|5|24474393536|10|0|pepsi|1°producto||1|
 108|del valle mango 413ml|14|32239052000|1000|10.5|coca|1°producto||1|
@@ -146,7 +146,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 145|maruchan res|10|41789001925|3|9|maruchan|1°producto||1|
 146|maruchan camaron|10|41789001956|1|9|maruchan|1°producto||1|
 147|maruchan cama/chilepiqui|10|41789001987|4|9|maruchan|1°producto||1|
-148|rastrillo bic confort 3 hojas|12|70330724341|25|10|bic|1°producto||10|
+148|rastrillo bic confort 3 hojas|12|70330724341|45|10|bic|1°producto||10|
 149|cajeta quemada coronado 370gr|36|74323083651|6|32.4|coronado|1°producto||1|
 150|frijoles con choriso 430g|15|78883240547|0|0|la sierra|1°producto||1|
 151|jack daniels aple|30|82184000984|1000|27|jack daniels|1°producto||1|
@@ -1269,7 +1269,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1268|cloretsplus 6 pastillas|5|7622210604798|10|4.5||1°producto||1|
 1269|chicle clores plus13.5g|10|7622210624482|0|7|clores|1°producto||1|
 1270|crack-ups 24g|5|7622210690074|1|0|bubalo|1°producto||1|
-1271|oreo 114g|12|7622210833662|17|10|mondelez|1°producto||21|
+1271|oreo 114g|12|7622210833662|20|10|mondelez|1°producto||21|
 1272|chicle trident30.6g|15|7622210938282|0|12|trident|1°producto||1|
 1273|trident sweetmint|10|7622210938367|0|9||1°producto||1|
 1274|trident fresa/frutilla/limon|10|7622210938619|0|9||1°producto||1|
