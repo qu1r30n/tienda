@@ -25,3 +25,5 @@ orbit|
 danone|
 bic|
 mondelez|
+valentina|
+ferrero/kinder|

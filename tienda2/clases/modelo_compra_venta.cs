@@ -73,7 +73,7 @@ namespace tienda2.clases
                 bas.Editar_espesifico(dir_arch, 0, id_producto, "6", provedor);
 
                 dir_arch = "pedidos/" + dia_mes_año + "_" + provedor + ".txt";
-                bas.Si_existe_suma_sino_desde_el_inventario_agrega(dir_arch, 2, codigo, "0", cantidad, "1|" + costo_compra + "|" + (Convert.ToDecimal(costo_compra) * Convert.ToInt32(cantidad)) + "|" + info_extra);
+                bas.Si_existe_suma_sino_desde_el_inventario_agrega(dir_arch, 2, codigo, "0", cantidad, "1|" + costo_compra + "|" + (Convert.ToDecimal(costo_compra) * Convert.ToDecimal(cantidad)) + "|" + info_extra);
 
 
 

@@ -9,6 +9,7 @@ namespace tienda2.desinger
 {
     public partial class Pedidos : Form
     {
+
         char[] G_parametros = { '|' };
         List<string> G_productos = new List<string>();
         Tex_base bas = new Tex_base();
@@ -281,7 +282,7 @@ namespace tienda2.desinger
                     string[] info_producto_comp_spliteada = info_compra[i].Split(G_parametros);
                     Procesar_codigo(info_producto_comp_spliteada[0]);
                     //za = 1;
-                    string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
+                    string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + info_producto_comp_spliteada[1] + "|" + info_producto_comp_spliteada[2] + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
 
 
                     bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", cmb_provedor.Text);
@@ -493,5 +494,6 @@ namespace tienda2.desinger
                 Txt_nom_producto.Focus();
             }
         }
+
     }
 }

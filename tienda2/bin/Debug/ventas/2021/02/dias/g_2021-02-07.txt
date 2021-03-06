@@ -4,3 +4,5 @@
 12:00|7622210833662|1|oreo 114g|mondelez|10|10|
 12:15|70330724341|10|rastrillo bic confort 3 hojas|bic|10|100|
 12:15|7622210833662|1|oreo 114g|mondelez|10|10|
+15:22|97339000030|2|salsa valentina 1L amarilla|valentina|23|46|
+15:23|80050094|1|kinder maxi 21g|ferrero/kinder|7.2|7.2|

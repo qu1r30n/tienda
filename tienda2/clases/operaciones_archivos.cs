@@ -705,10 +705,11 @@ namespace tienda2
                 string temporal_apoyo;
                 for (int i = 0; i < lineas.Length; i++)
                 {
-                    string[] num1 = lineas[i].Split(caracter_separacion);
-                    decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
                     for (int j = i + 1; j < lineas.Length; j++)
                     {
+                        string[] num1 = lineas[i].Split(caracter_separacion);
+                        decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
+
                         string[] num2 = lineas[j].Split(caracter_separacion);
                         decimal num2_decimal = Convert.ToDecimal(num2[columna_comparar]);
                         if (num1_decimal < num2_decimal)

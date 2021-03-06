@@ -1,7 +1,7 @@
-70330724341|10|rastrillo bic confort 3 hojas
-22000279033|6|orbit americano 16.2g
+70330724341|16|rastrillo bic confort 3 hojas
+22000279033|8|orbit americano 16.2g
 5410228240945|15|stella artois lager 250ml
-3014260846725|5|cepillodental
+3014260846725|6|cepillodental
 7501000669509|1|galleta c/coco clasica 117g
 1|4.5|pomada ceresa
 40232838699|9|agua skarch 1Lt
