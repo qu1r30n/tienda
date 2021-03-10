@@ -707,9 +707,9 @@ namespace tienda2
                 {
                     for (int j = i + 1; j < lineas.Length; j++)
                     {
+
                         string[] num1 = lineas[i].Split(caracter_separacion);
                         decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
-
                         string[] num2 = lineas[j].Split(caracter_separacion);
                         decimal num2_decimal = Convert.ToDecimal(num2[columna_comparar]);
                         if (num1_decimal < num2_decimal)
@@ -726,6 +726,11 @@ namespace tienda2
                         {
                             //error
                         }
+
+
+
+
+
                     }//for linea_de_abajo
                 }//for linea_de_arriba
             }//if tipo

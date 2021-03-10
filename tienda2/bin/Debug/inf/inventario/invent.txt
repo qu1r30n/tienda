@@ -1460,3 +1460,4 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1459|rr44|0|rr33|1|0|turin|1||1||
 1460|kk2|0|kk|1|0|turin|1||1||
 1461|faff|0|dafsa|1|0|turin|1||1||
+1462|jamon|88|jamon|998|0|lacteos|2||1||

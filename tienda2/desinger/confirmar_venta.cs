@@ -48,9 +48,8 @@ namespace tienda2.desinger
 
                 bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);
                 bas.Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(direccion2 + provedor[i] + ".txt", 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i], "1|3|0|6|8|2");
-                
-
             }
+
             temp = op_text.Trimend_paresido(temp, G_parametros[0]);
             cantidades_de_productos = op_text.Trimend_paresido(cantidades_de_productos, G_parametros[0]);
 

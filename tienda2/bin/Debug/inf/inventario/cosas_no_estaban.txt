@@ -441,3 +441,6 @@ movimiento origen: 1|1461|faff|0|dafsa|1|0|turin|1||1||
 movimiento origen: 0|100|1|10|
 movimiento origen: 0|100|1|10|
 movimiento origen: 0|100|1|10|
+movimiento origen: 1|1462|jamon|88|jamon|1000|0|lacteos|2||1||
+movimiento origen: 0|jamon|2|hola|
+movimiento origen: 0|jamon|0|

@@ -1,6 +1,7 @@
 5410228240945|9|stella artois lager 250ml
-3014260846725|5|cepillodental
-603554102017|5|choco huevo sorpresa12g
 70330724341|8|rastrillo bic confort 3 hojas
 40232838699|7|agua skarch 1Lt
+3014260846725|5|cepillodental
+603554102017|5|choco huevo sorpresa12g
 22000279033|4|orbit americano 16.2g
+jamon|2|jamon
