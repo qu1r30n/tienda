@@ -12,7 +12,7 @@ namespace tienda2.desinger
 {
     public partial class Comparar : Form
     {
-        char[] G_parametros = { '|' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
 
         //string direc_tem = "";
 
@@ -111,7 +111,7 @@ namespace tienda2.desinger
             for (int i = 0; i < archivos.Length; i++)
             {
                 temp = archivos[i];
-                espliteado = temp.Split(G_parametros);
+                espliteado = temp.Split(G_parametros[0]);
                 cmb_año.Items.Add(espliteado[0]);
             }
         }
@@ -137,7 +137,7 @@ namespace tienda2.desinger
             for (int i = 0; i < archivos.Length; i++)
             {
                 temp = archivos[i];
-                espliteado = temp.Split(G_parametros);
+                espliteado = temp.Split(G_parametros[0]);
                 cmb_mes.Items.Add(espliteado[0]);
             }
 
@@ -154,7 +154,7 @@ namespace tienda2.desinger
             for (int i = 0; i < archivos.Length; i++)
             {
                 temp = archivos[i];
-                espliteado = temp.Split(G_parametros);
+                espliteado = temp.Split(G_parametros[0]);
                 cmb_dia.Items.Add(espliteado[0]);
             }
         }
@@ -175,11 +175,11 @@ namespace tienda2.desinger
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt", Palabra_reconocimiento, c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt", Palabra_reconocimiento, c_año + "" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_dia + "-" + c_mes + "-" + c_año + ".txt", Palabra_reconocimiento, c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_dia + "" + c_mes + "" + c_año + ".txt", Palabra_reconocimiento, c_año + "" + c_mes + "" + c_dia, 0, comparacion);
             }
             else
             {
@@ -201,11 +201,11 @@ namespace tienda2.desinger
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".txt", Palabra_reconocimiento, "p_" + c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".txt", Palabra_reconocimiento, "p_" + c_año + "" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_dia + "-" + c_mes + "-" + c_año + ".txt", Palabra_reconocimiento, "p_" + c_año + "-" + c_mes + "-" + c_dia, 0, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_dia + "" + c_mes + "" + c_año + ".txt", Palabra_reconocimiento, "p_" + c_año + "" + c_mes + "" + c_dia, 0, comparacion);
             }
             else
             {
@@ -227,11 +227,11 @@ namespace tienda2.desinger
             }
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
-                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt", Palabra_reconocimiento, "g_" + c_año + "-" + c_mes, comparacion);
+                _parent.Grafica_para_comparacion(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt", Palabra_reconocimiento, "g_" + c_año + "" + c_mes, comparacion);
             }
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_dia + "-" + c_mes + "-" + c_año + ".txt", Palabra_reconocimiento, "g_" + c_año + "-" + c_mes + "-" + c_dia, 1, comparacion);
+                _parent.Grafica_horas_para_comparar(Direccion_grafica, "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_dia + "" + c_mes + "" + c_año + ".txt", Palabra_reconocimiento, "g_" + c_año + "" + c_mes + "" + c_dia, 1, comparacion);
             }
             else
             {

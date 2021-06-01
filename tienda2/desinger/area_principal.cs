@@ -15,6 +15,9 @@ namespace tienda2.desinger
         public Area_principal()
         {
             InitializeComponent();
+            Bitmap fondo = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
+            this.BackgroundImage = fondo;
+
             try
             {
 
@@ -221,11 +224,11 @@ namespace tienda2.desinger
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
                 comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt";
-                comp.Palabra_reconocimiento = c_año + "-" + c_mes;
+                comp.Palabra_reconocimiento = c_año + "" + c_mes;
 
                 if (comparacion == false)
                 {
-                    Grafica(comp.Direccion_grafica, c_año + "-" + c_mes, comparacion);
+                    Grafica(comp.Direccion_grafica, c_año + "" + c_mes, comparacion);
                 }
                 else
                 {
@@ -235,12 +238,12 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                comp.Palabra_reconocimiento = c_año + "-" + c_mes + "-" + c_dia;
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                comp.Palabra_reconocimiento = c_año + "" + c_mes + "" + c_dia;
 
                 if (comparacion == false)
                 {
-                    Grafica_horas(comp.Direccion_grafica, c_año + "-" + c_mes + "-" + c_dia, comparacion);
+                    Grafica_horas(comp.Direccion_grafica, c_año + "" + c_mes + "" + c_dia, comparacion);
                 }
                 else
                 {
@@ -292,11 +295,11 @@ namespace tienda2.desinger
             {
 
                 comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".txt";
-                comp.Palabra_reconocimiento = "p_" + c_año + "-" + c_mes;
+                comp.Palabra_reconocimiento = "p_" + c_año + "" + c_mes;
 
                 if (comparacion == false)
                 {
-                    Grafica_productos(comp.Direccion_grafica, "p_" + c_año + "-" + c_mes, comparacion);
+                    Grafica_productos(comp.Direccion_grafica, "p_" + c_año + "" + c_mes, comparacion);
                 }
                 else
                 {
@@ -306,12 +309,12 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                comp.Palabra_reconocimiento = "p_" + c_año + "-" + c_mes + "-" + c_dia;
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                comp.Palabra_reconocimiento = "p_" + c_año + "" + c_mes + "" + c_dia;
 
                 if (comparacion == false)
                 {
-                    Grafica_productos(comp.Direccion_grafica, "p_" + c_año + "-" + c_mes + "-" + c_dia, comparacion);
+                    Grafica_productos(comp.Direccion_grafica, "p_" + c_año + "" + c_mes + "" + c_dia, comparacion);
                 }
                 else
                 {
@@ -368,10 +371,10 @@ namespace tienda2.desinger
             {
 
                 comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt";
-                comp.Palabra_reconocimiento = "g_" + c_año + "-" + c_mes;
+                comp.Palabra_reconocimiento = "g_" + c_año + "" + c_mes;
                 if (comparacion == false)
                 {
-                    Grafica_compras(comp.Direccion_grafica, "g_" + c_año + "-" + c_mes, comparacion);
+                    Grafica_compras(comp.Direccion_grafica, "g_" + c_año + "" + c_mes, comparacion);
                 }
                 else
                 {
@@ -383,11 +386,11 @@ namespace tienda2.desinger
             {
 
 
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                comp.Palabra_reconocimiento = "g_" + c_año + "-" + c_mes + "-" + c_dia;
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                comp.Palabra_reconocimiento = "g_" + c_año + "" + c_mes + "" + c_dia;
                 if (comparacion == false)
                 {
-                    Grafica_compras_horas(comp.Direccion_grafica, "g_" + c_año + "-" + c_mes + "-" + c_dia, comparacion);
+                    Grafica_compras_horas(comp.Direccion_grafica, "g_" + c_año + "" + c_mes + "" + c_dia, comparacion);
                 }
                 else
                 {
@@ -501,17 +504,17 @@ namespace tienda2.desinger
             {
                 direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt";
                 direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt";
-                nom_serie = c_año + "-" + c_mes;
-                nom_serie2 = "g_" + c_año + "-" + c_mes;
+                nom_serie = c_año + "" + c_mes;
+                nom_serie2 = "g_" + c_año + "" + c_mes;
                 Grafica_ganancias(direc, direc2, nom_serie, nom_serie2, comparacion);
             }
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                nom_serie = c_año + "-" + c_mes + "-" + c_dia;
-                nom_serie2 = "g_" + c_año + "-" + c_mes + "-" + c_dia;
+                direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                nom_serie = c_año + "" + c_mes + "" + c_dia;
+                nom_serie2 = "g_" + c_año + "" + c_mes + "" + c_dia;
                 Grafica_horas_ganancias(direc, direc2, nom_serie, nom_serie2, 0, comparacion);
             }
 

@@ -1,0 +1,3 @@
+10:20|8000500134702|10|kinder chocolate 50g|kinder|10|100|
+10:38|8000500134702|10|kinder chocolate 50g|kinder|10|100|
+10:42|8000500134702|7|kinder chocolate 50g|kinder|10|70|

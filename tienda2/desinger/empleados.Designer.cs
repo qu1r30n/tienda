@@ -51,13 +51,19 @@
             this.txt_conf_contr = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
+            this.txt_imag = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_comentarios = new System.Windows.Forms.TextBox();
+            this.btn_img_fondo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btn_buscar
             // 
-            this.Btn_buscar.Location = new System.Drawing.Point(8, 231);
+            this.Btn_buscar.Location = new System.Drawing.Point(8, 362);
             this.Btn_buscar.Name = "Btn_buscar";
-            this.Btn_buscar.Size = new System.Drawing.Size(86, 62);
+            this.Btn_buscar.Size = new System.Drawing.Size(85, 23);
             this.Btn_buscar.TabIndex = 61;
             this.Btn_buscar.Text = "buscar";
             this.Btn_buscar.UseVisualStyleBackColor = true;
@@ -65,7 +71,7 @@
             // 
             // Btn_eliminar
             // 
-            this.Btn_eliminar.Location = new System.Drawing.Point(155, 290);
+            this.Btn_eliminar.Location = new System.Drawing.Point(361, 362);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(75, 23);
             this.Btn_eliminar.TabIndex = 60;
@@ -75,7 +81,7 @@
             // 
             // Btn_editar
             // 
-            this.Btn_editar.Location = new System.Drawing.Point(155, 255);
+            this.Btn_editar.Location = new System.Drawing.Point(280, 362);
             this.Btn_editar.Name = "Btn_editar";
             this.Btn_editar.Size = new System.Drawing.Size(75, 23);
             this.Btn_editar.TabIndex = 59;
@@ -85,7 +91,7 @@
             // 
             // Btn_agregar
             // 
-            this.Btn_agregar.Location = new System.Drawing.Point(155, 226);
+            this.Btn_agregar.Location = new System.Drawing.Point(199, 362);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(75, 23);
             this.Btn_agregar.TabIndex = 58;
@@ -98,7 +104,8 @@
             this.Lst_empleados.FormattingEnabled = true;
             this.Lst_empleados.Location = new System.Drawing.Point(236, -3);
             this.Lst_empleados.Name = "Lst_empleados";
-            this.Lst_empleados.Size = new System.Drawing.Size(178, 316);
+            this.Lst_empleados.ScrollAlwaysVisible = true;
+            this.Lst_empleados.Size = new System.Drawing.Size(178, 212);
             this.Lst_empleados.TabIndex = 57;
             this.Lst_empleados.SelectedIndexChanged += new System.EventHandler(this.Lst_empleados_SelectedIndexChanged);
             // 
@@ -205,12 +212,14 @@
             this.cmb_cargo.FormattingEnabled = true;
             this.cmb_cargo.Items.AddRange(new object[] {
             "admin",
+            "encargado",
             "usuario",
             "invitado"});
             this.cmb_cargo.Location = new System.Drawing.Point(112, 148);
             this.cmb_cargo.Name = "cmb_cargo";
             this.cmb_cargo.Size = new System.Drawing.Size(121, 21);
             this.cmb_cargo.TabIndex = 63;
+            this.cmb_cargo.SelectedIndexChanged += new System.EventHandler(this.cmb_cargo_SelectedIndexChanged);
             // 
             // lbl_id
             // 
@@ -223,7 +232,7 @@
             // 
             // txt_contrasenia
             // 
-            this.txt_contrasenia.Location = new System.Drawing.Point(130, 175);
+            this.txt_contrasenia.Location = new System.Drawing.Point(130, 246);
             this.txt_contrasenia.Name = "txt_contrasenia";
             this.txt_contrasenia.Size = new System.Drawing.Size(100, 20);
             this.txt_contrasenia.TabIndex = 65;
@@ -231,7 +240,7 @@
             // 
             // txt_conf_contr
             // 
-            this.txt_conf_contr.Location = new System.Drawing.Point(130, 201);
+            this.txt_conf_contr.Location = new System.Drawing.Point(130, 272);
             this.txt_conf_contr.Name = "txt_conf_contr";
             this.txt_conf_contr.Size = new System.Drawing.Size(100, 20);
             this.txt_conf_contr.TabIndex = 65;
@@ -240,7 +249,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 178);
+            this.label2.Location = new System.Drawing.Point(64, 249);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 66;
@@ -249,17 +258,69 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 204);
+            this.label3.Location = new System.Drawing.Point(12, 275);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 13);
             this.label3.TabIndex = 67;
             this.label3.Text = "confirmar contraseña";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(82, 227);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "usuario";
+            // 
+            // txt_usuario
+            // 
+            this.txt_usuario.Location = new System.Drawing.Point(130, 220);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(100, 20);
+            this.txt_usuario.TabIndex = 52;
+            // 
+            // txt_imag
+            // 
+            this.txt_imag.Location = new System.Drawing.Point(114, 184);
+            this.txt_imag.Name = "txt_imag";
+            this.txt_imag.Size = new System.Drawing.Size(116, 20);
+            this.txt_imag.TabIndex = 52;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(236, 227);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "comentarios";
+            // 
+            // txt_comentarios
+            // 
+            this.txt_comentarios.Location = new System.Drawing.Point(239, 246);
+            this.txt_comentarios.Multiline = true;
+            this.txt_comentarios.Name = "txt_comentarios";
+            this.txt_comentarios.Size = new System.Drawing.Size(175, 90);
+            this.txt_comentarios.TabIndex = 52;
+            // 
+            // btn_img_fondo
+            // 
+            this.btn_img_fondo.Location = new System.Drawing.Point(33, 175);
+            this.btn_img_fondo.Name = "btn_img_fondo";
+            this.btn_img_fondo.Size = new System.Drawing.Size(75, 37);
+            this.btn_img_fondo.TabIndex = 68;
+            this.btn_img_fondo.Text = "imagen fondo";
+            this.btn_img_fondo.UseVisualStyleBackColor = true;
+            this.btn_img_fondo.Click += new System.EventHandler(this.btn_img_fondo_Click);
+            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 325);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(448, 397);
+            this.Controls.Add(this.btn_img_fondo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_conf_contr);
@@ -276,11 +337,16 @@
             this.Controls.Add(this.txt_fecha_ingreso);
             this.Controls.Add(this.txt_apllido_materno);
             this.Controls.Add(this.txt_apllido_pat);
+            this.Controls.Add(this.txt_imag);
+            this.Controls.Add(this.txt_comentarios);
+            this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.txt_nom);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.Lbl_sueldo);
             this.Controls.Add(this.Lbl_fecha_ingreso);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.Lbl_am);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Lbl_ap);
             this.Controls.Add(this.Lbl_nombre);
             this.Name = "Empleados";
@@ -315,5 +381,11 @@
         private System.Windows.Forms.TextBox txt_conf_contr;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_usuario;
+        private System.Windows.Forms.TextBox txt_imag;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_comentarios;
+        private System.Windows.Forms.Button btn_img_fondo;
     }
 }

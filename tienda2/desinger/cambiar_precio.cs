@@ -13,7 +13,7 @@ namespace tienda2.desinger
 {
     public partial class Cambiar_precio : Form
     {
-        char[] G_parametros = { '|' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
         List<string> G_productos = new List<string>();
         Tex_base bas = new Tex_base();
         Operaciones_textos op_text = new Operaciones_textos();
@@ -291,7 +291,7 @@ namespace tienda2.desinger
             bool bandera = false;
             for (int i = 0; i < G_productos.Count; i++)
             {
-                String[] temp = G_productos[i].Split(G_parametros);
+                String[] temp = G_productos[i].Split(G_parametros[0]);
                 if (codigo == temp[0])
                 {
                     Txt_buscar_producto.Text = temp[0];
@@ -311,7 +311,7 @@ namespace tienda2.desinger
 
                 Tex_base bas = new Tex_base();
                 string[] cantidad_produc = bas.Leer("inf\\inventario\\invent.txt", "0", "" + G_parametros[0]);//el 0 solo regresa la primera columna que creo es el id
-                string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros);
+                string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros[0]);
                 string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);
                 Operaciones_textos op_text = new Operaciones_textos();
                 string provedores_txt = op_text.join_paresido('°', provedores);
@@ -332,14 +332,14 @@ namespace tienda2.desinger
                         G_prov_anterior = provedores[0];
                     }
 
-                    enviar = new string[] { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
+                    enviar = new string[] { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
                 else
                 {
-                    enviar = new string[] { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
+                    enviar = new string[] { "2°id°" + (cantidad_produc.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
-                string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
+                string[] temp = mensage.Split(G_parametros[0]);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
                 
                 string[] temp2;
                 string temp3 = "";
@@ -366,7 +366,7 @@ namespace tienda2.desinger
         {
             if (e.KeyValue == (char)(Keys.Enter))
             {
-                string[] info = Txt_buscar_producto.Text.Split(G_parametros);
+                string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
                 Procesar_codigo(info[0]);
                 Txt_remplazo.Focus();
             }

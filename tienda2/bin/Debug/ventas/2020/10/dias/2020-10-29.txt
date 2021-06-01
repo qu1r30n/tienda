@@ -1,5 +1,0 @@
-10:23:37 |70330724341°22000279033 |20 |orbit americano 16.2g°rastrillo bic confort 3 hojas |10
-10:26:07 |70330724341°22000279033 |20 |orbit americano 16.2g°rastrillo bic confort 3 hojas |10
-11:41:03 |70330724341°22000279033 |20 |rastrillo bic confort 3 hojas°orbit americano 16.2g |10
-11:43:13 |70330724341°5410228240945°3014260846725 |48 |rastrillo bic confort 3 hojas°stella artois lager 250ml°cepillodental |42.4
-11:44:08 |5410228240945 |16 |stella artois lager 250ml |14.4

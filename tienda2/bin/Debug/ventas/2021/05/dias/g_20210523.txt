@@ -1,0 +1,7 @@
+14:10|5410228240945|10|stella artois lager 250ml||14.4|144.0|
+14:12|40232838699|10|agua skarch 1Lt|skarch|5.4|54.0|
+16:20|3014260846725|10|cepillodental||18|180|
+16:28|40232838699|10|agua skarch 1Lt|skarch|5.4|54.0|
+16:30|3014260846725|10|cepillodental||18|180|
+16:32|40232838699|10|agua skarch 1Lt|skarch|5.4|54.0|
+16:35|5410228240945|10|stella artois lager 250ml||14.4|144.0|

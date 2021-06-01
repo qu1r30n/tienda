@@ -8,6 +8,6 @@ namespace tienda2.clases
 {
     class var_glob_direcciones
     {
-
+        public string G_datos_usu = "";
     }
 }

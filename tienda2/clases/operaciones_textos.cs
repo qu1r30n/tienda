@@ -4,6 +4,13 @@ namespace tienda2.clases
 {
     class Operaciones_textos
     {
+        public string cambiar_caracter(string texto,char caracter_a_buscar,char caracter_a_cambiar)
+        {
+            string[] texto_espliteado = texto.Split(caracter_a_buscar);
+            string texto_joineado = string.Join("" + caracter_a_cambiar, texto_espliteado);
+            return texto_joineado;
+        }
+
         public string Trimend_paresido(string texto, char caracter_separacion = '|')
         {
             

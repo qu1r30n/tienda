@@ -10,7 +10,7 @@ namespace tienda2.desinger
     public partial class Pedidos : Form
     {
 
-        char[] G_parametros = { '|' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
         List<string> G_productos = new List<string>();
         Tex_base bas = new Tex_base();
         string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
@@ -25,7 +25,7 @@ namespace tienda2.desinger
             
             Ventana_emergente ven_emer = new Ventana_emergente();
             //a = 2;
-            string[] enviar = {"3°es_paquete°1", "3°es_por_pieza°2" };//el 3 del inicio es para saver que es boton y el final es su valor
+            string[] enviar = {"3°es_paquete°1°0", "3°es_por_pieza°2°0" };//el 3 del inicio es para saver que es boton y el final es su valor
             string datos_ventana_emerg = ven_emer.Proceso_ventana_emergente(enviar);//mandamos a llamar a ventana emergente
             string temp;
             //zb = 0;
@@ -71,7 +71,7 @@ namespace tienda2.desinger
                 for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
                 {
                     temporal = "" + Lst_compras.Items[coll];
-                    temporal_s = temporal.Split(G_parametros);
+                    temporal_s = temporal.Split(G_parametros[0]);
 
                     if (temporal_s[0] != "")
                     {
@@ -89,7 +89,6 @@ namespace tienda2.desinger
             }
 
             limpiar();
-            
 
         }
 
@@ -127,7 +126,7 @@ namespace tienda2.desinger
         {
             if (e.KeyValue == (char)(Keys.Enter))
             {
-                string[] info = Txt_buscar_producto.Text.Split(G_parametros);
+                string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
                 Procesar_codigo(info[0]);
                 Txt_cantidad.Focus();
             }
@@ -139,7 +138,7 @@ namespace tienda2.desinger
             bool bandera = false;
             for (int i = 0; i < G_productos.Count; i++)
             {
-                String[] temp = G_productos[i].Split(G_parametros);
+                String[] temp = G_productos[i].Split(G_parametros[0]);
                 if (codigo == temp[0])
                 {
                     Txt_buscar_producto.Text = temp[0];
@@ -161,7 +160,7 @@ namespace tienda2.desinger
 
                 Tex_base bas = new Tex_base();
                 string[] info_invent = bas.Leer("inf\\inventario\\invent.txt");
-                string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros);
+                string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros[0]);
                 string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);//este regresa los provedores
                 Operaciones_textos op_text = new Operaciones_textos();
                 string provedores_txt = op_text.join_paresido('°', provedores);
@@ -177,16 +176,16 @@ namespace tienda2.desinger
                         G_prov_anterior = provedores[0];
                     }
 
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
                 else
                 {
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
+                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
 
                 //a = 4;
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
-                string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
+                string[] temp = mensage.Split(G_parametros[0]);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
 
                 string[] temp2;
                 string temp3 = "";
@@ -215,7 +214,7 @@ namespace tienda2.desinger
         {
             if (e.KeyValue == (char)(Keys.Enter))
             {
-                string[] info = Txt_nom_producto.Text.Split(G_parametros);
+                string[] info = Txt_nom_producto.Text.Split(G_parametros[0]);
                 Procesar_codigo2(info[0]);
                 Txt_cantidad.Focus();
             }
@@ -224,7 +223,7 @@ namespace tienda2.desinger
         {
             for (int i = 0; i < G_productos.Count; i++)
             {
-                String[] temp = G_productos[i].Split(G_parametros);
+                String[] temp = G_productos[i].Split(G_parametros[0]);
                 if (codigo == temp[3])
                 {
                     Txt_buscar_producto.Text = temp[0];
@@ -247,26 +246,98 @@ namespace tienda2.desinger
         {
             Ventana_emergente ventana_emerg = new Ventana_emergente();
             //a = 5;
-            string[] enviar = { "3°venta_directa°1", "3°preVenta°2" };
-            string valor_devuelto=ventana_emerg.Proceso_ventana_emergente(enviar,0);
+            string[] enviar = { "3°venta_directa°1°0", "3°preVenta°2°0" };
+            string valor_devuelto=ventana_emerg.Proceso_ventana_emergente(enviar);
             bool compra_directa;
-            if (valor_devuelto=="1")
+            
+            DateTime fecha_hora = DateTime.Now;
+            string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+            if (valor_devuelto != "")
             {
-                compra_directa = true;
+
+
+                if (valor_devuelto == "1")
+                {
+                    compra_directa = true;
+
+                    
+                    string[] provedores = bas.Leer("inf\\inventario\\pru\\provedores_pru_cmb.txt", null);//este regresa los provedores
+                    string provedores_en_una_linea = "";
+                    for (int i = 0; i < provedores.Length; i++)
+                    {
+                        string[] linea_prov_espliteado = provedores[i].Split(G_parametros[0]);
+                        provedores_en_una_linea = provedores_en_una_linea + linea_prov_espliteado[0] + G_parametros[1];
+                    }
+                    provedores_en_una_linea = bas.Trimend_paresido(provedores_en_una_linea, G_parametros[1]);
+
+                    Ventana_emergente ventana_emerg2 = new Ventana_emergente();
+                    string[] enviar2 = { "2°cantidad_a_pagar°" + Lbl_cuenta.Text, "1°se_paga_de_caja°0°2", "2°°", "4°provedor°°°°" + provedores_en_una_linea };
+                    
+                    string se_paga_de_caja = ventana_emerg2.Proceso_ventana_emergente(enviar2);
+                    Operaciones_textos op_text = new Operaciones_textos();
+                    se_paga_de_caja = op_text.cambiar_caracter(se_paga_de_caja, '|', '°');
+
+                    string[] se_paga_de_caja_spliteado = se_paga_de_caja.Split(G_parametros[1]);
+                    double pago_de_caja_a_deuda = Convert.ToDouble(se_paga_de_caja_spliteado[0]) - Convert.ToDouble(se_paga_de_caja_spliteado[1]);
+                    if (pago_de_caja_a_deuda<0)
+                    {
+                        DialogResult dialogResult = MessageBox.Show("no puede ser mayor lo que se paga se igualara","error", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            se_paga_de_caja_spliteado[1] = se_paga_de_caja_spliteado[0];
+                            se_paga_de_caja_spliteado[2] = "0";
+                        }
+                        else 
+                        {
+                            return;
+                        }
+                        se_paga_de_caja_spliteado[2] = "0";
+                    }
+                    else
+                    {
+                        se_paga_de_caja_spliteado[2] = "" + pago_de_caja_a_deuda;
+                    }
+                    
+                    string compra_joineada = string.Join("°", se_paga_de_caja_spliteado);
+                    if (se_paga_de_caja_spliteado.Length > 2)
+                    {
+                        string direccion_pru = "inf\\inventario\\pru\\";
+                        bas.si_no_existe_agega_comparacion(direccion_pru+"provedores_pru_cmb.txt", se_paga_de_caja_spliteado[3]);
+                        bas.si_existe_suma_sino_agega_extra(direccion_pru + año_mes_dia + "_provedores_pru.txt", 3, se_paga_de_caja_spliteado[3],"0°1°2", se_paga_de_caja_spliteado[0] + "°"+ se_paga_de_caja_spliteado[1] + "°" + se_paga_de_caja_spliteado[2], compra_joineada,'°');
+                        bas.si_existe_suma_sino_agega_extra("inf\\inventario\\ven\\vent.txt", 0, año_mes_dia, "2", "" + se_paga_de_caja_spliteado[1], año_mes_dia + "|0|" + se_paga_de_caja_spliteado[1]);
+                        Modelo_compra_venta mod_com_ven = new Modelo_compra_venta();
+
+                        for (int i = 0; i < Lst_compras.Items.Count; i++)
+                        {
+                            string[] item_spliteado = Lst_compras.Items[i].ToString().Split(G_parametros[0]);
+                            mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1], item_spliteado[5], item_spliteado[6], compra_directa);
+                            bas.si_no_existe_agega_extra(direccion_pru + "para_cambiar_de_provedor\\" + se_paga_de_caja_spliteado[3] + ".txt", 0, item_spliteado[0], item_spliteado[0] + "|" + item_spliteado[1]);
+                            Lbl_nom_product_list.Text = "";
+                            Lst_compras.Items.Clear();
+                            Lbl_cuenta.Text = "0";
+                        }
+                    }
+
+                }
+
+                else
+                {
+                    compra_directa = false;
+                    Modelo_compra_venta mod_com_ven = new Modelo_compra_venta();
+                    for (int i = 0; i < Lst_compras.Items.Count; i++)
+                    {
+                        string[] item_spliteado = Lst_compras.Items[i].ToString().Split(G_parametros[0]);
+                        mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1], item_spliteado[5], item_spliteado[6], compra_directa);
+                        Lbl_nom_product_list.Text = "";
+                        Lst_compras.Items.Clear();
+                        Lbl_cuenta.Text = "0";
+                    }
+                }
+                
+                
+
+                
             }
-            else
-            {
-                compra_directa = false;
-            }
-            Modelo_compra_venta mod_com_ven = new Modelo_compra_venta();
-            for (int i = 0; i < Lst_compras.Items.Count; i++)
-            {
-                string[] item_spliteado = Lst_compras.Items[i].ToString().Split(G_parametros);
-                mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1],item_spliteado[5],item_spliteado[6],compra_directa);
-            }
-            Lbl_nom_product_list.Text = "";
-            Lst_compras.Items.Clear();
-            Lbl_cuenta.Text = "0";
 
         }
 
@@ -279,7 +350,7 @@ namespace tienda2.desinger
                 string[] info_compra = bas.Leer(opfd.FileName, "2|0|8");
                 for (int i = 0; i < info_compra.Length; i++)
                 {
-                    string[] info_producto_comp_spliteada = info_compra[i].Split(G_parametros);
+                    string[] info_producto_comp_spliteada = info_compra[i].Split(G_parametros[0]);
                     Procesar_codigo(info_producto_comp_spliteada[0]);
                     //za = 1;
                     string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + info_producto_comp_spliteada[1] + "|" + info_producto_comp_spliteada[2] + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
@@ -300,7 +371,7 @@ namespace tienda2.desinger
                         for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
                         {
                             temporal = "" + Lst_compras.Items[coll];
-                            temporal_s = temporal.Split(G_parametros);
+                            temporal_s = temporal.Split(G_parametros[0]);
 
                             if (temporal_s[0] != "")
                             {
@@ -336,7 +407,7 @@ namespace tienda2.desinger
                 for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
                 {
                     temporal = "" + Lst_compras.Items[coll];
-                    temporal_s = temporal.Split(G_parametros);
+                    temporal_s = temporal.Split(G_parametros[0]);
 
                     if (temporal_s[0] != "")
                     {
@@ -369,7 +440,7 @@ namespace tienda2.desinger
                 for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
                 {
                     temporal = "" + Lst_compras.Items[coll];
-                    temporal_s = temporal.Split(G_parametros);
+                    temporal_s = temporal.Split(G_parametros[0]);
 
                     if (temporal_s[0] != "")
                     {
@@ -402,7 +473,7 @@ namespace tienda2.desinger
                 for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
                 {
                     temporal = "" + Lst_compras.Items[coll];
-                    temporal_s = temporal.Split(G_parametros);
+                    temporal_s = temporal.Split(G_parametros[0]);
 
                     if (temporal_s[0] != "")
                     {

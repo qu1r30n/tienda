@@ -61,7 +61,7 @@ namespace tienda2.clases
 
        Socket s_servidor;
        Socket s_cliente;
-
+        
        public void servidor(string ip, int port)
        {
            //host = Dns.GetHostByName(ip);

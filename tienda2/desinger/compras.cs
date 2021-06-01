@@ -12,7 +12,7 @@ namespace tienda2.desinger
 {
     public partial class Compras : Form
     {
-        char[] G_parametros = { '|' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
 
 
         public Compras()
@@ -27,7 +27,7 @@ namespace tienda2.desinger
             DateTime fecha_hora = DateTime.Now;
             Decimal cantidad = Convert.ToDecimal(Txt_cantidad_gastada.Text);
             string poductos_ya_unidos = Txt_razon.Text + G_parametros[0] + Txt_quien_facturo.Text;
-            string direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyy-MM-dd") + ".txt",
+            string direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyyMMdd") + ".txt",
                    direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".txt",
                    direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".txt",
                    direccion4 = "ventas\\g_total_años.txt",
@@ -39,7 +39,7 @@ namespace tienda2.desinger
                 string[] cantidades_en_juego = bas.Leer(direccion5), cantidades_en_juego_espliteada;
                 Decimal dinero_ganado, dinero_gastado = 0;
 
-                cantidades_en_juego_espliteada = cantidades_en_juego[0].Split(G_parametros);
+                cantidades_en_juego_espliteada = cantidades_en_juego[0].Split(G_parametros[0]);
                 dinero_ganado = Convert.ToInt32(cantidades_en_juego_espliteada[1]);
 
                 if (dinero_ganado >= dinero_gastado + cantidad)

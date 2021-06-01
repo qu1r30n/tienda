@@ -27,7 +27,7 @@ namespace tienda2.desinger
         public decimal Cost_comp { get; set; }
 
         DateTime fecha_hora = DateTime.Now;
-        char[] G_parametros = { '|' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
 
         public Confirmar_venta()
         {
@@ -35,32 +35,44 @@ namespace tienda2.desinger
         }
         private void Btn_pagar_Click(object sender, EventArgs e)
         {
-            Tex_base bas = new Tex_base();
-            string temp="";
-            string cantidades_de_productos="";
+            decimal total_a_pagar = Convert.ToDecimal(Lbl_total.Text), dinero_pagado = Convert.ToDecimal(Txt_dinero.Text);
 
-            string direccion = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyy-MM-dd") + "_vendidos.txt";
-            string direccion2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\provedores\\"; 
-            for (int i = 0; i < codigo_barras_list.Count; i++)
+            if (total_a_pagar <= dinero_pagado)
             {
-                temp = temp + codigo_barras_list[i] + G_parametros[0];
-                cantidades_de_productos = cantidades_de_productos + cantidad[i] + G_parametros[0];
+                if (total_a_pagar < dinero_pagado)
+                {
+                    MessageBox.Show("cambio: "+(dinero_pagado-total_a_pagar));
+                }
+                Tex_base bas = new Tex_base();
+                string temp = "";
+                string cantidades_de_productos = "";
 
-                bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);
-                bas.Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(direccion2 + provedor[i] + ".txt", 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i], "1|3|0|6|8|2");
+                string direccion = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyyMMdd") + "_vendidos.txt";
+                string direccion2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\provedores\\";
+                for (int i = 0; i < codigo_barras_list.Count; i++)
+                {
+                    temp = temp + codigo_barras_list[i] + G_parametros[0];
+                    cantidades_de_productos = cantidades_de_productos + cantidad[i] + G_parametros[0];
+
+                    bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);
+                    bas.Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(direccion2 + provedor[i] + ".txt", 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i], "1|3|0|6|8|2");
+                }
+
+                temp = op_text.Trimend_paresido(temp, G_parametros[0]);
+                cantidades_de_productos = op_text.Trimend_paresido(cantidades_de_productos, G_parametros[0]);
+
+
+                string[] codigos_Barras = temp.Split(G_parametros[0]);
+                string[] cant_productos = cantidades_de_productos.Split(G_parametros[0]);
+
+                Modelo_compra_venta mod_com_vent = new Modelo_compra_venta();
+                mod_com_vent.Modelo_venta(codigos_Barras, cant_productos);
+                this.Close();
             }
-
-            temp = op_text.Trimend_paresido(temp, G_parametros[0]);
-            cantidades_de_productos = op_text.Trimend_paresido(cantidades_de_productos, G_parametros[0]);
-
-            string[] codigos_Barras = temp.Split(G_parametros);
-            string[] cant_productos = cantidades_de_productos.Split(G_parametros);
-
-            Modelo_compra_venta mod_com_vent = new Modelo_compra_venta();
-            mod_com_vent.Modelo_venta(codigos_Barras, cant_productos);
-            
-            
-            this.Close();
+            else
+            {
+                MessageBox.Show("falta de dinero: " + (total_a_pagar - dinero_pagado));
+            }
         }
 
 

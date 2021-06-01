@@ -94,7 +94,7 @@
             this.Btn_agregar.Location = new System.Drawing.Point(783, 62);
             this.Btn_agregar.Name = "Btn_agregar";
             this.Btn_agregar.Size = new System.Drawing.Size(100, 46);
-            this.Btn_agregar.TabIndex = 5;
+            this.Btn_agregar.TabIndex = 6;
             this.Btn_agregar.Text = "agregar";
             this.Btn_agregar.UseVisualStyleBackColor = true;
             this.Btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
@@ -204,7 +204,7 @@
             this.Txt_nom_producto.Location = new System.Drawing.Point(26, 76);
             this.Txt_nom_producto.Name = "Txt_nom_producto";
             this.Txt_nom_producto.Size = new System.Drawing.Size(119, 20);
-            this.Txt_nom_producto.TabIndex = 10;
+            this.Txt_nom_producto.TabIndex = 12;
             this.Txt_nom_producto.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Txt_nom_producto_PreviewKeyDown);
             // 
             // Rdb_codigo_barras
@@ -213,7 +213,7 @@
             this.Rdb_codigo_barras.Location = new System.Drawing.Point(6, 25);
             this.Rdb_codigo_barras.Name = "Rdb_codigo_barras";
             this.Rdb_codigo_barras.Size = new System.Drawing.Size(14, 13);
-            this.Rdb_codigo_barras.TabIndex = 21;
+            this.Rdb_codigo_barras.TabIndex = 13;
             this.Rdb_codigo_barras.TabStop = true;
             this.Rdb_codigo_barras.UseVisualStyleBackColor = true;
             // 
@@ -223,7 +223,7 @@
             this.Rdb_producto.Location = new System.Drawing.Point(6, 76);
             this.Rdb_producto.Name = "Rdb_producto";
             this.Rdb_producto.Size = new System.Drawing.Size(14, 13);
-            this.Rdb_producto.TabIndex = 22;
+            this.Rdb_producto.TabIndex = 14;
             this.Rdb_producto.TabStop = true;
             this.Rdb_producto.UseVisualStyleBackColor = true;
             // 
@@ -233,7 +233,7 @@
             this.Lst_compras.Location = new System.Drawing.Point(198, 76);
             this.Lst_compras.Name = "Lst_compras";
             this.Lst_compras.Size = new System.Drawing.Size(579, 186);
-            this.Lst_compras.TabIndex = 9;
+            this.Lst_compras.TabIndex = 15;
             this.Lst_compras.SelectedIndexChanged += new System.EventHandler(this.Lst_compras_SelectedIndexChanged);
             // 
             // Btn_elim_ultimo
@@ -241,7 +241,7 @@
             this.Btn_elim_ultimo.Location = new System.Drawing.Point(783, 227);
             this.Btn_elim_ultimo.Name = "Btn_elim_ultimo";
             this.Btn_elim_ultimo.Size = new System.Drawing.Size(75, 40);
-            this.Btn_elim_ultimo.TabIndex = 7;
+            this.Btn_elim_ultimo.TabIndex = 9;
             this.Btn_elim_ultimo.Text = "eliminar ultimo";
             this.Btn_elim_ultimo.UseVisualStyleBackColor = true;
             this.Btn_elim_ultimo.Click += new System.EventHandler(this.Btn_elim_ultimo_Click);
@@ -251,7 +251,7 @@
             this.Btn_procesar_venta.Location = new System.Drawing.Point(783, 272);
             this.Btn_procesar_venta.Name = "Btn_procesar_venta";
             this.Btn_procesar_venta.Size = new System.Drawing.Size(75, 23);
-            this.Btn_procesar_venta.TabIndex = 6;
+            this.Btn_procesar_venta.TabIndex = 10;
             this.Btn_procesar_venta.Text = "procesar venta";
             this.Btn_procesar_venta.UseVisualStyleBackColor = true;
             this.Btn_procesar_venta.Click += new System.EventHandler(this.Btn_procesar_venta_Click);
@@ -271,7 +271,7 @@
             this.Btn_eliminar_seleccionado.Location = new System.Drawing.Point(783, 146);
             this.Btn_eliminar_seleccionado.Name = "Btn_eliminar_seleccionado";
             this.Btn_eliminar_seleccionado.Size = new System.Drawing.Size(86, 42);
-            this.Btn_eliminar_seleccionado.TabIndex = 9;
+            this.Btn_eliminar_seleccionado.TabIndex = 7;
             this.Btn_eliminar_seleccionado.Text = "eliminar seleccionado";
             this.Btn_eliminar_seleccionado.UseVisualStyleBackColor = true;
             this.Btn_eliminar_seleccionado.Click += new System.EventHandler(this.Btn_eliminar_seleccionado_Click);
@@ -316,7 +316,7 @@
             this.Btn_cargar_pedido.Location = new System.Drawing.Point(12, 254);
             this.Btn_cargar_pedido.Name = "Btn_cargar_pedido";
             this.Btn_cargar_pedido.Size = new System.Drawing.Size(98, 39);
-            this.Btn_cargar_pedido.TabIndex = 40;
+            this.Btn_cargar_pedido.TabIndex = 11;
             this.Btn_cargar_pedido.Text = "cargar pedido";
             this.Btn_cargar_pedido.UseVisualStyleBackColor = true;
             this.Btn_cargar_pedido.Click += new System.EventHandler(this.Btn_cargar_pedido_Click);
@@ -343,10 +343,11 @@
             // cmb_provedor
             // 
             this.cmb_provedor.FormattingEnabled = true;
+            this.cmb_provedor.ItemHeight = 13;
             this.cmb_provedor.Location = new System.Drawing.Point(810, 18);
             this.cmb_provedor.Name = "cmb_provedor";
             this.cmb_provedor.Size = new System.Drawing.Size(117, 21);
-            this.cmb_provedor.TabIndex = 43;
+            this.cmb_provedor.TabIndex = 4;
             // 
             // Pedidos
             // 

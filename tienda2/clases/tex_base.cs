@@ -13,7 +13,7 @@ namespace tienda2
 
         string G_palabra = "", G_entrando = "", G_temp = "";
 
-        char[] G_parametros = { '|' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
         string[] G_linea, G_buscar, G_remplasar;
 
         public void Crear_archivo_y_directorio(string direccion_archivo, string valor_inicial = null, string[] columnas = null)//columnas: es para crearlas y se separan la columnas por un '|' valor_inicial: no se utilisa en este programa era para poner un tipo eslogan o un titulo  pero en este programa no lo nesesite
@@ -64,7 +64,7 @@ namespace tienda2
         }
 
 
-        public string Seleccionar(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_extraer, char caracter_separacion = '|')
+        public string Seleccionar(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_extraer=null, char caracter_separacion = '|')
         {
             StreamReader sr = new StreamReader(direccion_archivo);
             string columna = "";
@@ -77,19 +77,78 @@ namespace tienda2
 
                     if (palabra[num_column_comp] == comparar)
                     {
-                        string[] columnas_extraer = numero_columnas_extraer.Split(caracter_separacion);
-                        for (int i = 0; i < columnas_extraer.Length; i++)
+                        if (numero_columnas_extraer!=null)
                         {
-                            if (i < columnas_extraer.Length - 1)
+                            string[] columnas_extraer = numero_columnas_extraer.Split(caracter_separacion);
+                            for (int i = 0; i < columnas_extraer.Length; i++)
                             {
-                                columna = columna + palabra[Convert.ToInt32(columnas_extraer[i])] + caracter_separacion;
+                                int columna_extraer_numerico = Convert.ToInt32(columnas_extraer[i]);
+                                if (i < columnas_extraer.Length - 1)
+                                {
+                                    columna = columna + palabra[columna_extraer_numerico] + caracter_separacion;
+                                }
+                                else
+                                {
+                                    columna = columna + palabra[columna_extraer_numerico];
+                                }
+
                             }
-                            else
+                        }
+                        else
+                        {
+                            columna = columna + linea;
+                        }
+                        
+
+                        columna = columna + "°";
+
+                    }
+                }
+            }
+            columna = Trimend_paresido(columna, '°');
+            columna = Trimend_paresido(columna, '|');
+
+            sr.Close();
+            return columna;
+        }
+
+        public string Seleccionar_invertida_extraccion_columnas(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_saltar = null, char caracter_separacion = '|')
+        {
+            StreamReader sr = new StreamReader(direccion_archivo);
+            string columna = "";
+            while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+            {
+                string linea = sr.ReadLine();//leemos linea y lo guardamos en palabra
+                if (linea != null)
+                {
+                    string[] palabra = linea.Split(caracter_separacion);
+
+                    if (palabra[num_column_comp] == comparar)
+                    {
+                        if (numero_columnas_saltar != null)
+                        {
+                            string[] columnas_saltar = numero_columnas_saltar.Split(caracter_separacion);
+                            for (int j = 0; j < palabra.Length; j++)
                             {
-                                columna = columna + palabra[Convert.ToInt32(columnas_extraer[i])];
+                                for (int i = 0; i < columnas_saltar.Length; i++)
+                                {
+                                    int columna_saltar_entero = Convert.ToInt32(columnas_saltar[i]);
+                                    if (j != columna_saltar_entero)
+                                    {
+                                        columna = columna + palabra[j] + caracter_separacion;
+
+                                    }
+                                }
                             }
 
+                            
+                            
                         }
+                        else
+                        {
+                            columna = columna + linea;
+                        }
+
 
                         columna = columna + "°";
 
@@ -104,6 +163,8 @@ namespace tienda2
         }
 
 
+
+
         public string Editar(string direccion_archivo, string buscar0, string remplasar0, string posiciones = null)
         {
 
@@ -113,15 +174,15 @@ namespace tienda2
             {
                 posiciones = Convierte_nom_col_a_numeros(posiciones, direccion_archivo);
             }
-            string[] pos_str = posiciones.Split(G_parametros);
+            string[] pos_str = posiciones.Split(G_parametros[0]);
             int[] pos_in = new int[pos_str.Length];
 
             for (int kl = 0; kl < pos_in.Length; kl++)
             {
                 pos_in[kl] = Convert.ToInt32(pos_str[kl]);
             }
-            G_buscar = buscar0.Split(G_parametros);//espliteamos la busqueda
-            G_remplasar = remplasar0.Split(G_parametros);//esplitemos remplasar
+            G_buscar = buscar0.Split(G_parametros[0]);//espliteamos la busqueda
+            G_remplasar = remplasar0.Split(G_parametros[0]);//esplitemos remplasar
             G_linea = direccion_archivo.Split('\\');//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
             for (int i = 1; i < G_linea.Length; i++)//checa si es el ultimo directorio 
@@ -143,7 +204,7 @@ namespace tienda2
                 {
 
                     G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
-                    G_linea = G_palabra.Split(G_parametros);//palabra la spliteamos y la guardamos en linea
+                    G_linea = G_palabra.Split(G_parametros[0]);//palabra la spliteamos y la guardamos en linea
                     if (G_palabra != "")//si palabra es "" se salta todo el proceso por que no se por que aparecen varios con ""
                     {
                         if (posiciones != null)
@@ -367,7 +428,7 @@ namespace tienda2
                 G_palabra = sr.ReadLine();
                 if (G_palabra != "")
                 {
-                    G_linea = G_palabra.Split(G_parametros);
+                    G_linea = G_palabra.Split(G_parametros[0]);
 
                     for (int i = 0; i < G_linea.Length; i++)
                     {
@@ -407,7 +468,7 @@ namespace tienda2
             G_palabra = sr.ReadLine();
             try
             {
-                linea = G_palabra.Split(G_parametros);
+                linea = G_palabra.Split(G_parametros[0]);
             }
             catch (Exception)
             {
@@ -444,7 +505,7 @@ namespace tienda2
 
             else
             {
-                pos_split = pos_string.Split(G_parametros);
+                pos_split = pos_string.Split(G_parametros[0]);
                 posiciones = new int[pos_split.Length];
                 for (int i = 0; i < posiciones.Length; i++)
                 {
@@ -454,7 +515,7 @@ namespace tienda2
 
                 for (int i = 0; (G_palabra = sr.ReadLine()) != null; i++)
                 {
-                    string[] spl_linea = G_palabra.Split(G_parametros);
+                    string[] spl_linea = G_palabra.Split(G_parametros[0]);
 
                     G_palabra = "";
                     for (int j = 0; j < posiciones.Length; j++)
@@ -493,7 +554,7 @@ namespace tienda2
         {
             bool decicion = false;
             string result = "";
-            string[] col_spli = nom_columnas.Split(G_parametros);
+            string[] col_spli = nom_columnas.Split(G_parametros[0]);
             string[] cantidad = Leer_columnas(direccion_archivo);
 
             for (int z = 0; z < col_spli.Length; z++)
@@ -832,7 +893,7 @@ namespace tienda2
                     if (linea != null)
                     {
 
-                        string[] linea_espliteada = linea.Split(G_parametros);
+                        string[] linea_espliteada = linea.Split(G_parametros[0]);
                         if (linea_espliteada[0] == comparar)
                         {
                             bandera = true;
@@ -865,6 +926,125 @@ namespace tienda2
                 sr.Close();
                 sw.Close();
                 exito_o_fallo = "2)error:" + error;
+                File.Delete(dir_tem);//borramos el archivo temporal
+            }
+            return exito_o_fallo;
+        }
+
+        public string si_no_existe_agega_extra(string direccion_archivo, int columna_a_comparar, string comparar, string texto_a_agregar, char caracter_separacion = '|')
+        {
+            Crear_archivo_y_directorio(direccion_archivo);
+            bool bandera = false;
+            StreamReader sr = new StreamReader(direccion_archivo);
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+            string exito_o_fallo;
+            int num_column_comp = 0;
+
+            try
+            {
+
+                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+                {
+                    string linea = sr.ReadLine();//leemos linea y lo guardamos en linea
+                    if (linea != null)
+                    {
+
+                        string[] linea_espliteada = linea.Split(G_parametros[0]);
+                        if (linea_espliteada[columna_a_comparar] == comparar)
+                        {
+                            bandera = true;
+                            sw.WriteLine(linea);
+                        }
+                        else
+                        {
+                            sw.WriteLine(linea);
+                        }
+                    }
+                    num_column_comp++;
+                }
+                num_column_comp = 0;
+
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = bandera + "|1)exito";
+                File.Delete(direccion_archivo);//borramos el archivo original
+                File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+
+                if (bandera == false)
+                {
+                    Agregar(direccion_archivo, texto_a_agregar);
+                }
+
+
+            }
+            catch (Exception error)
+            {
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = bandera + "|2)error:" + error;
+                File.Delete(dir_tem);//borramos el archivo temporal
+            }
+            return exito_o_fallo;
+        }
+
+        public string si_existe_suma_sino_agega_extra(string direccion_archivo, int columna_a_comparar, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string texto_a_agregar, char caracter_separacion = '|')
+        {
+            Crear_archivo_y_directorio(direccion_archivo);
+            bool bandera = false;
+            StreamReader sr = new StreamReader(direccion_archivo);
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+            string exito_o_fallo;
+            int num_column_comp = 0;
+
+            try
+            {
+
+                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+                {
+                    string linea = sr.ReadLine();//leemos linea y lo guardamos en linea
+                    if (linea != null)
+                    {
+
+                        string[] linea_espliteada = linea.Split(caracter_separacion);
+                        if (linea_espliteada[columna_a_comparar] == comparar)
+                        {
+                            string[] num_col_spliteadas = numero_columnas_editar.Split(caracter_separacion);
+                            string[] cantidad_spliteada = cantidad_a_sumar.Split(caracter_separacion);
+                            for (int i = 0; i <  num_col_spliteadas.Length; i++)
+                            {
+                                linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])] = ""+(Convert.ToDecimal(linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])]) + Convert.ToDecimal(cantidad_spliteada[i]));
+                            }
+                            linea=string.Join("|", linea_espliteada);
+                            bandera = true;
+                        }
+                        
+                        sw.WriteLine(linea);
+                    }
+                    num_column_comp++;
+                }
+                num_column_comp = 0;
+
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = bandera + "|1)exito";
+                File.Delete(direccion_archivo);//borramos el archivo original
+                File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+
+                if (bandera == false)
+                {
+                    bandera = false;
+                    Agregar(direccion_archivo, texto_a_agregar);
+                }
+
+
+            }
+            catch (Exception error)
+            {
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = bandera + "|2)error:" + error;
                 File.Delete(dir_tem);//borramos el archivo temporal
             }
             return exito_o_fallo;

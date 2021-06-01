@@ -444,3 +444,18 @@ movimiento origen: 0|100|1|10|
 movimiento origen: 1|1462|jamon|88|jamon|1000|0|lacteos|2||1||
 movimiento origen: 0|jamon|2|hola|
 movimiento origen: 0|jamon|0|
+movimiento origen: 0|100|1|10|
+movimiento origen: 0|14.4|1|10|
+movimiento origen: 0|14.4|1|10|
+movimiento origen: 0|144|1|10|
+movimiento origen: 0|144|1|10|
+movimiento origen: 0|144|1|10|
+movimiento origen: 0|100|1|10|
+movimiento origen: 0|100|1|10|
+movimiento origen: 0|100|1|10|
+movimiento origen: 0|100|1|10|
+movimiento origen: 0|100|1|10|
+movimiento origen: 0|144|1|10|
+movimiento origen: 0|pomada ceresa|10|
+movimiento origen: 0|100|51|
+movimiento origen: 0|1200|1000|

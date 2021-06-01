@@ -15,7 +15,7 @@ namespace tienda2
         static public string direccion_programa = System.Windows.Forms.Application.ExecutablePath.ToString();
         Tex_base bas = new Tex_base();//bas es la clase tex_base
         string G_palabra = "",G_temp = "";
-        char[] G_parametros = { '|' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
         bool bandera = false;
 
         
@@ -79,7 +79,7 @@ namespace tienda2
                     //por aqui empesamos para poderlo comparar
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != fecha)
                         {
@@ -147,7 +147,7 @@ namespace tienda2
                     //por aqui empesamos para poderlo comparar
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != codigo_barras)
                         {
@@ -215,7 +215,7 @@ namespace tienda2
                     //por aqui empesamos para poderlo comparar
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != fecha)
                         {
@@ -283,7 +283,7 @@ namespace tienda2
                     //por aqui empesamos para poderlo comparar
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != fecha)
                         {
@@ -345,7 +345,7 @@ namespace tienda2
                     G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[3] != codigo_barras)
                         {
@@ -440,7 +440,7 @@ namespace tienda2
 
             bandera = false;
             Tex_base bas = new Tex_base();
-            string[] G_linea, linea,dat_esplit=DATOS.Split(G_parametros);
+            string[] G_linea, linea,dat_esplit=DATOS.Split(G_parametros[0]);
             G_linea = direccion_archivo.Split('\\');//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
             bas.Crear_archivo_y_directorio(direccion_archivo);
@@ -464,11 +464,11 @@ namespace tienda2
                     
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[1] != dat_esplit[1])
                         {
-                            sw.WriteLine(linea[0] + G_parametros + linea[1] + G_parametros + linea[2]);
+                            sw.WriteLine(linea[0] + G_parametros[0] + linea[1] + G_parametros[0] + linea[2]);
                         }
                         else
                         {
@@ -481,7 +481,7 @@ namespace tienda2
                             }
                             else
                             {
-                                sw.WriteLine(linea[0] + G_parametros + linea[1] + G_parametros + linea[2]);
+                                sw.WriteLine(linea[0] + G_parametros[0] + linea[1] + G_parametros[0] + linea[2]);
                                 System.Windows.Forms.MessageBox.Show("ya se acabo o falta poco para acabarse el producto: " + linea[0]+ G_parametros[0] + linea[1]);
                             }
 
@@ -551,30 +551,19 @@ namespace tienda2
             }
         }
 
-        public void Respaldo_inventario(string direccion_a_copiar, string direccion_a_pegar)
+        public string Respaldo_inventario(string direccion_a_copiar, string directorio_a_pegar, string nom_archivo_con_extencion = "temp.txt")
         {
-            //Now Create all of the directories
+              
+            bas.Crear_archivo_y_directorio(directorio_a_pegar);
+            string temp = nom_archivo_con_extencion;
+            for (int i = 0; File.Exists(directorio_a_pegar + temp); i++)
 
-            string [] direccion_carpeta = Directory.GetDirectories(direccion_a_copiar, "*", SearchOption.AllDirectories);
-
-            if (0!=direccion_carpeta.Length)
             {
-                for (int i = 0; i < direccion_carpeta.Length; i++)               
-                {
-                    Directory.CreateDirectory(direccion_carpeta[i].Replace(direccion_a_copiar, direccion_a_pegar));
-                }
+                temp = i + nom_archivo_con_extencion;
             }
-            else
-            {
-                Directory.CreateDirectory(direccion_a_pegar + "\\respaldo\\inf\\inventario");
-            }
-            //Copy all the files & Replaces any files with the same name
-            string []newPath = Directory.GetFiles(direccion_a_copiar, "*.*", SearchOption.AllDirectories);
-
-            for (int i = 0; i < newPath.Length; i++)
-            {
-                File.Copy(newPath[i], newPath[i].Replace(direccion_a_copiar, direccion_a_pegar), true);
-            }
+            File.Copy(direccion_a_copiar, directorio_a_pegar + temp);
+            
+            return temp;
         }
 
         public void Eliminar_carpeta(string direccion)
@@ -635,7 +624,7 @@ namespace tienda2
                     G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != id_produc_act)
                         {

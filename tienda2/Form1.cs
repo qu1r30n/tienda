@@ -15,18 +15,20 @@ namespace tienda2
 {
     public partial class Form1 : Form
     {
+        var_glob_direcciones arch_var_glob = new var_glob_direcciones();
         static public string direccion_programa = Application.ExecutablePath.ToString();
+
         public Form1()
         {
             
-
             InitializeComponent();
-            
+
             Operaciones_archivos op = new Operaciones_archivos();
             //en esta seccion crearemos los archivos que nesesitaremos para la base
             #region crea los archivos 
             //crea los archivos de compras por si se hace una busqueda y no estan
             DateTime fecha_hora = DateTime.Now; //se usara la variable fecha y hora para sacar el dia de hoy y la hora
+            string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
             Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
 
             
@@ -37,8 +39,11 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(direccion1, "id|producto|precio_de_venta|0|cantidad|costo_compra|marca|grupo|multiusos|cantidad_productos_por_paquete");
             bas.Crear_archivo_y_directorio(direccion2, "provedor|id|");
 
+            direccion2 = "inf\\inventario\\pru\\provedores_pru_cmb.txt";
+            bas.Crear_archivo_y_directorio(direccion2);
 
-            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\" + fecha_hora.ToString("yyyy-MM-dd") + ".txt"; // direccion1= ventas/2016/11/dias/28-11-2016.Txt
+
+            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\" + fecha_hora.ToString("yyyyMMdd") + ".txt"; // direccion1= ventas/2016/11/dias/28-11-2016.Txt
             direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".txt"; // direccion2= ventas/2016/11/11.Txt
             direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("yyyy") + ".txt"; // direccion3 = ventas/2016/2016.Txt
             direccion4 = "ventas\\total_años.txt"; // no hace falta explicacion
@@ -49,7 +54,7 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(direccion4);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion5);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
 
-            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyy-MM-dd") + ".txt"; //aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/11/dias/g_28-11-2016.Txt
+            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\g_" + fecha_hora.ToString("yyyyMMdd") + ".txt"; //aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/11/dias/g_28-11-2016.Txt
             direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".txt";//aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/11/g_11.Txt
             direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".txt";//aqui lo que cambia es la g_ antes del archivo direccion1= ventas/2016/g_2016.Txt
             direccion4 = "ventas\\g_total_años.txt";//no hace falta explicacion o si?
@@ -58,7 +63,7 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(direccion3);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
             bas.Crear_archivo_y_directorio(direccion4);//aqui si no existe los directorios  los crea y si existen entra  lo mismo con el archivo
 
-            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\p_" + fecha_hora.ToString("yyyy-MM-dd") + ".txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/11/dias/p_28-11-2016.Txt
+            direccion1 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\dias\\p_" + fecha_hora.ToString("yyyyMMdd") + ".txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/11/dias/p_28-11-2016.Txt
             direccion2 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\p_" + fecha_hora.ToString("MM") + ".txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/11/p_11.Txt
             direccion3 = "ventas\\" + fecha_hora.ToString("yyyy") + "\\p_" + fecha_hora.ToString("yyyy") + ".txt";//aqui lo que cambia es la p_ antes del archivo direccion1= ventas/2016/p_2016.Txt
             direccion4 = "ventas\\p_total_años.txt";
@@ -69,10 +74,23 @@ namespace tienda2
 
             direccion1 = "inf\\inventario\\img\\";
             bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
-            
+
+            direccion1 = "inf\\us\\ad.txt";
+            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+
+            direccion1 = "inf\\us\\encargado.txt";
+            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+
+            direccion1 = "inf\\us\\usuario.txt";
+            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+
+            direccion1 = "inf\\us\\invitado.txt";
+            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+
             //
             #endregion
             //ordenar informacion de mayor a menor
+            #region ordenar datos
             //meses dentro de años
             op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("yyyy") + ".txt", 0, "numero");
             op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\g_" + fecha_hora.ToString("yyyy") + ".txt", 0, "numero");
@@ -82,7 +100,7 @@ namespace tienda2
             op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\" + fecha_hora.ToString("MM") + ".txt", 0, "numero");
             op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\g_" + fecha_hora.ToString("MM") + ".txt", 0, "numero");
             op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\p_" + fecha_hora.ToString("MM") + ".txt", 1, "numero");
-            
+            #endregion
 
         }
 
@@ -97,9 +115,11 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
+                arch_var_glob.G_datos_usu = adm.Seleccionar_invertida_extraccion_columnas("inf\\us\\ad.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 area.Show();//muestra el form Area_principal
+                
             }
             else
             {
@@ -118,13 +138,14 @@ namespace tienda2
 
             Tex_base user = new Tex_base();//llamamos a la clase tex_base
             Ventas vent = new Ventas();//este es el form ventas y es al que entrara si pone el usuario y contraseña bien
-            string temp = user.Seleccionar("inf\\us\\user.txt", 0, Txt_usuario.Text, "1");
+            string temp = user.Seleccionar("inf\\us\\usuario.txt", 0, Txt_usuario.Text, "1");
             if (temp == "")
             {
                 temp = null;
             }
             if (temp == Txt_pass.Text)
             {
+                arch_var_glob.G_datos_usu = user.Seleccionar_invertida_extraccion_columnas("inf\\us\\usuario.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 vent.Show();//muestra el form ventas
@@ -150,6 +171,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
+                arch_var_glob.G_datos_usu = invitado.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 vent.Show();//muestra el form ventas

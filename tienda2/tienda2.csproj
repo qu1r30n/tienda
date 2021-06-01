@@ -57,6 +57,7 @@
     <Compile Include="clases\Modelo_compra_venta.cs" />
     <Compile Include="clases\Operaciones_textos.cs" />
     <Compile Include="clases\glob_var_direcciones.cs" />
+    <Compile Include="clases\sismul.cs" />
     <Compile Include="desinger\Area_principal.cs">
       <SubType>Form</SubType>
     </Compile>
