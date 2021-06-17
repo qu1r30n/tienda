@@ -190,14 +190,14 @@ namespace tienda2.desinger
             
             Tex_base bas = new Tex_base();
             
-            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7|8", "" + G_parametros[0]);
+            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7|8", G_parametros[0]);
             Txt_nom_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir.Length; k++)
             {
                 Txt_nom_producto.AutoCompleteCustomSource.Add("" + imprimir[k]);
             }
 
-            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7|8", "" + G_parametros[0]);
+            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7|8", G_parametros[0]);
 
             for (int k = 1; k < imprimir2.Length; k++)
             {
@@ -355,7 +355,7 @@ namespace tienda2.desinger
                 Tex_base bas = new Tex_base();
                 string[] info_invent = bas.Leer("inf\\inventario\\invent.txt");
                 string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros[0]);
-                string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);//este regresa los provedores
+                string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", G_parametros[0]);//este regresa los provedores
                 Operaciones_textos op_text = new Operaciones_textos();
                 string provedores_txt = op_text.join_paresido('°', provedores);
                 

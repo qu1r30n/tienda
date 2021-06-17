@@ -146,7 +146,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 145|maruchan res|10|41789001925|3|9|maruchan|1°producto||1|
 146|maruchan camaron|10|41789001956|1|9|maruchan|1°producto||1|
 147|maruchan cama/chilepiqui|10|41789001987|4|9|maruchan|1°producto||1|
-148|rastrillo bic confort 3 hojas|12|70330724341|98|10|bic|1°producto||10|
+148|rastrillo bic confort 3 hojas|12|70330724341|98|1|bic|1°producto||1|
 149|cajeta quemada coronado 370gr|36|74323083651|6|32.4|coronado|1°producto||1|
 150|frijoles con choriso 430g|15|78883240547|0|0|la sierra|1°producto||1|
 151|jack daniels aple|30|82184000984|1000|27|jack daniels|1°producto||1|
@@ -1277,7 +1277,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1276|trident uva/naranja|10|7622210938732|3|9||1°producto||1|
 1277|curitas 100pzs|1.5|7702003476594|0|0.5|curitas|1°producto||1|
 1278|stevia 25 sobres|1.5|7792129003187|0|0|stevia|1°producto||1|
-1279|kinder chocolate 50g|15|8000500134702|28|0|kinder|1°producto||1|
+1279|kinder chocolate 50g|15|8000500134702|28|0|kinder|1°producto||8|
 1280|kinder delice 39g|10|8000500267035|31|9|kinder|1°producto||10|
 1281|jugoso al sarten maggi 23.4gr|15|8585002432315|1|13.5||1°producto||1|
 1282|fabuloso complit 500ml|23|8718951167513|0|0|fabuloso|1°producto||1|

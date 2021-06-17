@@ -482,7 +482,7 @@ namespace tienda2
         }
 
 
-        public string[] Leer(string direccion_archivo, string pos_string = null, string separador = "|")
+        public string[] Leer(string direccion_archivo, string pos_string = null, char caracter_separacion = '|')
         {
             ArrayList linea = new ArrayList();
             ArrayList resultado = new ArrayList();
@@ -505,7 +505,7 @@ namespace tienda2
 
             else
             {
-                pos_split = pos_string.Split(G_parametros[0]);
+                pos_split = pos_string.Split(caracter_separacion);
                 posiciones = new int[pos_split.Length];
                 for (int i = 0; i < posiciones.Length; i++)
                 {
@@ -515,14 +515,14 @@ namespace tienda2
 
                 for (int i = 0; (G_palabra = sr.ReadLine()) != null; i++)
                 {
-                    string[] spl_linea = G_palabra.Split(G_parametros[0]);
+                    string[] spl_linea = G_palabra.Split(caracter_separacion);
 
                     G_palabra = "";
                     for (int j = 0; j < posiciones.Length; j++)
                     {
                         if (j < posiciones.Length - 1)
                         {
-                            G_palabra = G_palabra + spl_linea[posiciones[j]] + separador;
+                            G_palabra = G_palabra + spl_linea[posiciones[j]] + caracter_separacion;
                         }
                         else
                         {

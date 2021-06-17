@@ -276,7 +276,7 @@ namespace tienda2.desinger
         }
         private void Recargar_texbox()
         {
-            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7", "" + G_parametros[0]);
+            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7", G_parametros[0]);
             Txt_buscar_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir.Length; k++)
             {
@@ -310,9 +310,9 @@ namespace tienda2.desinger
             {
 
                 Tex_base bas = new Tex_base();
-                string[] cantidad_produc = bas.Leer("inf\\inventario\\invent.txt", "0", "" + G_parametros[0]);//el 0 solo regresa la primera columna que creo es el id
+                string[] cantidad_produc = bas.Leer("inf\\inventario\\invent.txt", "0", G_parametros[0]);//el 0 solo regresa la primera columna que creo es el id
                 string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros[0]);
-                string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);
+                string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", G_parametros[0]);
                 Operaciones_textos op_text = new Operaciones_textos();
                 string provedores_txt = op_text.join_paresido('°', provedores);
 

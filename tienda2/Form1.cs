@@ -22,6 +22,15 @@ namespace tienda2
         {
             
             InitializeComponent();
+            Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
+            
+            bas.Crear_archivo_y_directorio("sismul\\pru_pat_inf.txt", "0|0|0|3|17|nom|ap|am|num_cu|ban|curp|num_tel|direccion|barrio|municipio|estado|correo|pru_pat|pru_otro|0|0|0|0|0|");
+            bas.Crear_archivo_y_directorio("sismul\\pru_inf.txt", "0|0|0|3|17|nom|ap|am|num_cu|ban|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|0|0|0|0|");
+            sismul simu = new sismul();
+            string[] datos_personales = { "nom", "ap", "am", "num_cu", "banc", "curp", "num_tel", "direccion", "barrio", "municipio", "estado", "correo" };
+            //simu.registro_compuesto("0", "pru_pat", "pru", "3", datos_personales,0,5);
+            simu.ingreso_de_din_simple("pru", "6", 100);
+            
 
             Operaciones_archivos op = new Operaciones_archivos();
             //en esta seccion crearemos los archivos que nesesitaremos para la base
@@ -29,7 +38,7 @@ namespace tienda2
             //crea los archivos de compras por si se hace una busqueda y no estan
             DateTime fecha_hora = DateTime.Now; //se usara la variable fecha y hora para sacar el dia de hoy y la hora
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
-            Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
+           
 
             
             string direccion1, direccion2, direccion3, direccion4, direccion5; //variables de direcciones

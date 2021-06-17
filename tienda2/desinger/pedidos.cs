@@ -42,11 +42,12 @@ namespace tienda2.desinger
                 string[] enviar2 = { "1°costo°" + Txt_costo_compra.Text + "°2", "1°numero paketes°" + Txt_cantidad.Text + "°2", "1°cantidad_por_paquete°" + cantidad_por_pakete + "°2" };
                 string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2);
                 string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
-                bas.Editar_espesifico("inf\\inventario\\invent.txt",3,Txt_buscar_producto.Text,"9",mensaje2_espli[2]);
-                string total_de_productos_por_paquetes = ""+(Convert.ToDouble(mensaje2_espli[1])* Convert.ToDouble(mensaje2_espli[2]));
-                string costo_por_producto = "" + Math.Round((Convert.ToDouble(mensaje2_espli[0])/Convert.ToDouble(total_de_productos_por_paquetes)),2);
+                
+                string total_de_productos = ""+(Convert.ToDouble(mensaje2_espli[1])* Convert.ToDouble(mensaje2_espli[2]));
+                string costo_por_producto = "" + Math.Round((Convert.ToDouble(mensaje2_espli[0])/Convert.ToDouble(total_de_productos)),2);
+                bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "5", costo_por_producto);
 
-                Txt_cantidad.Text = total_de_productos_por_paquetes;
+                Txt_cantidad.Text = total_de_productos;
                 Txt_costo_compra.Text = costo_por_producto;
                 temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|" + mensaje2_espli[1]+"°paketes_de°"+mensaje2_espli[2];
             }
@@ -54,6 +55,7 @@ namespace tienda2.desinger
             else
             {
                 temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
+                bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "5", Txt_costo_compra.Text);
             }
 
             bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt",cmb_provedor.Text);
@@ -94,7 +96,7 @@ namespace tienda2.desinger
 
         private void Recargar_texbox()
         {
-            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7", "" + G_parametros[0]);
+            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7", G_parametros[0]);
             Txt_buscar_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir.Length; k++)
             {
@@ -102,14 +104,14 @@ namespace tienda2.desinger
                 Txt_buscar_producto.AutoCompleteCustomSource.Add(imprimir[k]);
             }
 
-            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7", "" + G_parametros[0]);
+            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7", G_parametros[0]);
             Txt_nom_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir2.Length; k++)
             {
                 Txt_nom_producto.AutoCompleteCustomSource.Add("" + imprimir2[k]);
             }
 
-            string[] imprimir3 = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);
+            string[] imprimir3 = bas.Leer("inf\\inventario\\provedores.txt", "0",G_parametros[0]);
             cmb_provedor.Items.Clear();
             cmb_provedor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cmb_provedor.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -161,7 +163,7 @@ namespace tienda2.desinger
                 Tex_base bas = new Tex_base();
                 string[] info_invent = bas.Leer("inf\\inventario\\invent.txt");
                 string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros[0]);
-                string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);//este regresa los provedores
+                string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", G_parametros[0]);//este regresa los provedores
                 Operaciones_textos op_text = new Operaciones_textos();
                 string provedores_txt = op_text.join_paresido('°', provedores);
 
