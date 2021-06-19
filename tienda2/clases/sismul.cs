@@ -40,7 +40,7 @@ namespace tienda2.clases
             string espacios_niveles = "";
             for (int i = 0; i < num_niv_encargados-1; i++)
             {
-                if (cant_niv_tiene_n1>=i)
+                if (cant_niv_tiene_n1>i)
                 {
                     espacios_niveles = espacios_niveles+dat_n1_spliteado[numero_empiesa_niveles + i]+""+caracter_separacion;
                 }
@@ -116,13 +116,37 @@ namespace tienda2.clases
 
             int empiesan_niveles = Convert.ToInt32(dat_usu_split[4])+4;
             double pagar = din * (porcentage_reparticion / 100);
-            
-            for (int i = 0; i < cant_niv_a_pagar; i++)
+
+            if ((empiesan_niveles-dat_usu_split.Length)<=cant_niv_a_pagar)
             {
-                bas.Incrementa_celda(direccion_tab_us, 0, dat_usu_split[empiesan_niveles + i], "2", pagar + "", caracter_de_separacion);
+                for (int i = 0; i < cant_niv_a_pagar; i++)
+                {
+                    bas.Incrementa_celda(direccion_tab_us, 0, dat_usu_split[empiesan_niveles + i], "2", pagar + "", caracter_de_separacion);
+                }
+
             }
             
+
+
+
+        }
+
+        public void ingreso_de_din_comp(string tab_usuario, string id_usuario, Double din, int cant_niv_a_pagar = 3, Double porcentage_reparticion = 10, char caracter_de_separacion = '|')
+        {
+            Tex_base bas = new Tex_base();
+            ingreso_de_din_simple(tab_usuario, id_usuario, din, cant_niv_a_pagar, porcentage_reparticion, caracter_de_separacion);
+
             
+            string direccion_tab_us = "sismul\\"+ G_sucursal + G_compu + tab_usuario + "_inf.txt";
+            string dat_usuario = bas.Seleccionar(direccion_tab_us, 0, id_usuario);
+            string[] dat_us_split = dat_usuario.Split(caracter_de_separacion);
+            int posision_tab_pat = Convert.ToInt32(dat_us_split[4]) + 1;
+            double din_para_pat = din * (porcentage_reparticion / 100);
+            
+            ingreso_de_din_simple(dat_us_split[posision_tab_pat], dat_us_split[posision_tab_pat+1], din_para_pat, cant_niv_a_pagar, porcentage_reparticion, caracter_de_separacion);
+            
+            
+
         }
         public void sis_nor()
         {

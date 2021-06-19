@@ -1,9 +1,6 @@
-0|0|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|0|0|0|0|
-1|0|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|1|0|0|0|
-2|0|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|2|1|0|0|
-3|0|10|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|3|2|1|0|
-4|0|10|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|4|3|2|1|
-5|0|10|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|5|4|3|2|
-6|300|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|6|5|4|3|
-7|0|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|6|5|4|3|
-8|0|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|5|4|3|2|
+0|0|0|3|17|nom|ap|am|num_cu|ban|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|0|0|0|0|
+1|0|10|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|5|1|0|0|0|
+2|0|10|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|5|2|1|0|0|
+3|0|10|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|5|3|2|1|0|
+4|100|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|5|4|3|2|1|
+5|0|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|5|5|4|3|2|

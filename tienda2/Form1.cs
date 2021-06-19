@@ -23,13 +23,16 @@ namespace tienda2
             
             InitializeComponent();
             Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
-            
+
+             
             bas.Crear_archivo_y_directorio("sismul\\pru_pat_inf.txt", "0|0|0|3|17|nom|ap|am|num_cu|ban|curp|num_tel|direccion|barrio|municipio|estado|correo|pru_pat|pru_otro|0|0|0|0|0|");
             bas.Crear_archivo_y_directorio("sismul\\pru_inf.txt", "0|0|0|3|17|nom|ap|am|num_cu|ban|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|0|0|0|0|");
             sismul simu = new sismul();
             string[] datos_personales = { "nom", "ap", "am", "num_cu", "banc", "curp", "num_tel", "direccion", "barrio", "municipio", "estado", "correo" };
-            //simu.registro_compuesto("0", "pru_pat", "pru", "3", datos_personales,0,5);
-            simu.ingreso_de_din_simple("pru", "6", 100);
+            //simu.registro_simple("pru_pat", "3", datos_personales, 0);
+            //simu.registro_compuesto("5", "pru_pat", "pru", "4", datos_personales);
+            //simu.ingreso_de_din_simple("pru", "6", 100);
+            simu.ingreso_de_din_comp("pru", "4", 100);
             
 
             Operaciones_archivos op = new Operaciones_archivos();
