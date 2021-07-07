@@ -144,7 +144,7 @@
             // 
             // Btn_respaldo
             // 
-            this.Btn_respaldo.Location = new System.Drawing.Point(7, 296);
+            this.Btn_respaldo.Location = new System.Drawing.Point(3, 279);
             this.Btn_respaldo.Name = "Btn_respaldo";
             this.Btn_respaldo.Size = new System.Drawing.Size(75, 23);
             this.Btn_respaldo.TabIndex = 7;

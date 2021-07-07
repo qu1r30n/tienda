@@ -35,6 +35,7 @@
             this.Btn_invitado = new System.Windows.Forms.Button();
             this.Btn_usuario = new System.Windows.Forms.Button();
             this.Btn_admin = new System.Windows.Forms.Button();
+            this.btn_proy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_pass
@@ -100,11 +101,22 @@
             this.Btn_admin.UseVisualStyleBackColor = true;
             this.Btn_admin.Click += new System.EventHandler(this.Btn_admin_Click);
             // 
+            // btn_proy
+            // 
+            this.btn_proy.Location = new System.Drawing.Point(15, 142);
+            this.btn_proy.Name = "btn_proy";
+            this.btn_proy.Size = new System.Drawing.Size(75, 23);
+            this.btn_proy.TabIndex = 8;
+            this.btn_proy.Text = "proy";
+            this.btn_proy.UseVisualStyleBackColor = true;
+            this.btn_proy.Click += new System.EventHandler(this.btn_proy_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 155);
+            this.ClientSize = new System.Drawing.Size(297, 198);
+            this.Controls.Add(this.btn_proy);
             this.Controls.Add(this.Lbl_pass);
             this.Controls.Add(this.Lbl_usuario);
             this.Controls.Add(this.Txt_pass);
@@ -128,6 +140,7 @@
         private System.Windows.Forms.Button Btn_invitado;
         private System.Windows.Forms.Button Btn_usuario;
         private System.Windows.Forms.Button Btn_admin;
+        private System.Windows.Forms.Button btn_proy;
     }
 }
 

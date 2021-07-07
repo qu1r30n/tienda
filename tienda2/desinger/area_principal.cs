@@ -970,5 +970,7 @@ namespace tienda2.desinger
                 Txt_total.Text = Lst_ventas.SelectedItem.ToString(); 
             }
         }
+
+        
     }
 }

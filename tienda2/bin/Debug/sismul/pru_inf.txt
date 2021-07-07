@@ -4,3 +4,4 @@
 3|0|10|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|5|3|2|1|0|
 4|100|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|5|4|3|2|1|
 5|0|0|3|17|nom|ap|am|num_cu|banc|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|5|5|4|3|2|
+6|0|0|3|17|nombre|ap|am|0|banco|curp|0|direccion|colonia|municipio|estado|correo|pru|pru_pat|5|5|4|3|2|

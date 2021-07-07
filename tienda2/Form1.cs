@@ -25,14 +25,6 @@ namespace tienda2
             Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
 
              
-            bas.Crear_archivo_y_directorio("sismul\\pru_pat_inf.txt", "0|0|0|3|17|nom|ap|am|num_cu|ban|curp|num_tel|direccion|barrio|municipio|estado|correo|pru_pat|pru_otro|0|0|0|0|0|");
-            bas.Crear_archivo_y_directorio("sismul\\pru_inf.txt", "0|0|0|3|17|nom|ap|am|num_cu|ban|curp|num_tel|direccion|barrio|municipio|estado|correo|pru|pru_pat|0|0|0|0|0|");
-            sismul simu = new sismul();
-            string[] datos_personales = { "nom", "ap", "am", "num_cu", "banc", "curp", "num_tel", "direccion", "barrio", "municipio", "estado", "correo" };
-            //simu.registro_simple("pru_pat", "3", datos_personales, 0);
-            //simu.registro_compuesto("5", "pru_pat", "pru", "4", datos_personales);
-            //simu.ingreso_de_din_simple("pru", "6", 100);
-            simu.ingreso_de_din_comp("pru", "4", 100);
             
 
             Operaciones_archivos op = new Operaciones_archivos();
@@ -88,16 +80,19 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
 
             direccion1 = "inf\\us\\ad.txt";
-            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+            bas.Crear_archivo_y_directorio(direccion1);
 
             direccion1 = "inf\\us\\encargado.txt";
-            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+            bas.Crear_archivo_y_directorio(direccion1);
 
             direccion1 = "inf\\us\\usuario.txt";
-            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+            bas.Crear_archivo_y_directorio(direccion1);
 
             direccion1 = "inf\\us\\invitado.txt";
-            bas.Crear_archivo_y_directorio(direccion1);//crear la carpeta que contendra las imagenes de codigos de barras
+            bas.Crear_archivo_y_directorio(direccion1);
+
+            direccion1 = "inf\\us\\simul.txt";
+            bas.Crear_archivo_y_directorio(direccion1);
 
             //
             #endregion
@@ -187,6 +182,31 @@ namespace tienda2
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 vent.Show();//muestra el form ventas
+            }
+            else
+            {
+                Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
+                Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
+                Txt_usuario.Focus();
+                MessageBox.Show("incorrecto");//muestra el form ventas
+            }
+        }
+
+        private void btn_proy_Click(object sender, EventArgs e)
+        {
+            Tex_base bas_simul = new Tex_base();//llamamos a la clase tex_base
+            simul simul_ventana = new simul();//este es el form ventas y es al que entrara si pone el usuario y contraseña bien
+            string temp = bas_simul.Seleccionar("inf\\us\\simul.txt", 0, Txt_usuario.Text, "1");
+            if (temp == "")
+            {
+                temp = null;
+            }
+            if (temp == Txt_pass.Text)
+            {
+                arch_var_glob.G_datos_usu = bas_simul.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
+                Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
+                Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
+                simul_ventana.Show();//muestra el form ventas
             }
             else
             {
