@@ -31,15 +31,12 @@
             this.Txt_buscar_producto = new System.Windows.Forms.TextBox();
             this.Lbl_nombre_producto = new System.Windows.Forms.Label();
             this.Lbl_producto = new System.Windows.Forms.Label();
-            this.Btn_agregar = new System.Windows.Forms.Button();
             this.Lbl_cantidad = new System.Windows.Forms.Label();
             this.Lbl_cantidad_cant = new System.Windows.Forms.Label();
             this.Lbl_precio_compra = new System.Windows.Forms.Label();
             this.Lbl_precio_compra_cant = new System.Windows.Forms.Label();
             this.Lbl_prcio_vnt = new System.Windows.Forms.Label();
             this.Lbl_precio_venta = new System.Windows.Forms.Label();
-            this.Lbl_nuevo_cantidad = new System.Windows.Forms.Label();
-            this.Txt_costo_compra = new System.Windows.Forms.TextBox();
             this.Lbl_codigo = new System.Windows.Forms.Label();
             this.Lbl_provedor = new System.Windows.Forms.Label();
             this.Lbl_nom_producto_buscar = new System.Windows.Forms.Label();
@@ -51,14 +48,14 @@
             this.Btn_procesar_venta = new System.Windows.Forms.Button();
             this.Btn_eliminar_todo = new System.Windows.Forms.Button();
             this.Btn_eliminar_seleccionado = new System.Windows.Forms.Button();
-            this.Txt_cantidad = new System.Windows.Forms.TextBox();
-            this.label_cant = new System.Windows.Forms.Label();
             this.Lbl_id_titulo = new System.Windows.Forms.Label();
             this.Lbl_id = new System.Windows.Forms.Label();
             this.Btn_cargar_pedido = new System.Windows.Forms.Button();
             this.Lbl_cuenta = new System.Windows.Forms.Label();
             this.Lbl_nom_product_list = new System.Windows.Forms.Label();
             this.cmb_provedor = new System.Windows.Forms.ComboBox();
+            this.btn_paquete = new System.Windows.Forms.Button();
+            this.btn_individual = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Txt_buscar_producto
@@ -88,16 +85,6 @@
             this.Lbl_producto.Size = new System.Drawing.Size(49, 13);
             this.Lbl_producto.TabIndex = 11;
             this.Lbl_producto.Text = "producto";
-            // 
-            // Btn_agregar
-            // 
-            this.Btn_agregar.Location = new System.Drawing.Point(783, 62);
-            this.Btn_agregar.Name = "Btn_agregar";
-            this.Btn_agregar.Size = new System.Drawing.Size(100, 46);
-            this.Btn_agregar.TabIndex = 6;
-            this.Btn_agregar.Text = "agregar";
-            this.Btn_agregar.UseVisualStyleBackColor = true;
-            this.Btn_agregar.Click += new System.EventHandler(this.Btn_agregar_Click);
             // 
             // Lbl_cantidad
             // 
@@ -153,23 +140,6 @@
             this.Lbl_precio_venta.TabIndex = 16;
             this.Lbl_precio_venta.Text = "$";
             // 
-            // Lbl_nuevo_cantidad
-            // 
-            this.Lbl_nuevo_cantidad.AutoSize = true;
-            this.Lbl_nuevo_cantidad.Location = new System.Drawing.Point(701, 3);
-            this.Lbl_nuevo_cantidad.Name = "Lbl_nuevo_cantidad";
-            this.Lbl_nuevo_cantidad.Size = new System.Drawing.Size(42, 13);
-            this.Lbl_nuevo_cantidad.TabIndex = 19;
-            this.Lbl_nuevo_cantidad.Text = "costo   ";
-            // 
-            // Txt_costo_compra
-            // 
-            this.Txt_costo_compra.Location = new System.Drawing.Point(704, 19);
-            this.Txt_costo_compra.Name = "Txt_costo_compra";
-            this.Txt_costo_compra.Size = new System.Drawing.Size(100, 20);
-            this.Txt_costo_compra.TabIndex = 3;
-            this.Txt_costo_compra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_costo_compra_keypress);
-            // 
             // Lbl_codigo
             // 
             this.Lbl_codigo.AutoSize = true;
@@ -182,7 +152,7 @@
             // Lbl_provedor
             // 
             this.Lbl_provedor.AutoSize = true;
-            this.Lbl_provedor.Location = new System.Drawing.Point(807, 2);
+            this.Lbl_provedor.Location = new System.Drawing.Point(635, 6);
             this.Lbl_provedor.Name = "Lbl_provedor";
             this.Lbl_provedor.Size = new System.Drawing.Size(49, 13);
             this.Lbl_provedor.TabIndex = 20;
@@ -230,9 +200,9 @@
             // Lst_compras
             // 
             this.Lst_compras.FormattingEnabled = true;
-            this.Lst_compras.Location = new System.Drawing.Point(198, 76);
+            this.Lst_compras.Location = new System.Drawing.Point(198, 85);
             this.Lst_compras.Name = "Lst_compras";
-            this.Lst_compras.Size = new System.Drawing.Size(579, 186);
+            this.Lst_compras.Size = new System.Drawing.Size(579, 173);
             this.Lst_compras.TabIndex = 15;
             this.Lst_compras.SelectedIndexChanged += new System.EventHandler(this.Lst_compras_SelectedIndexChanged);
             // 
@@ -275,23 +245,6 @@
             this.Btn_eliminar_seleccionado.Text = "eliminar seleccionado";
             this.Btn_eliminar_seleccionado.UseVisualStyleBackColor = true;
             this.Btn_eliminar_seleccionado.Click += new System.EventHandler(this.Btn_eliminar_seleccionado_Click);
-            // 
-            // Txt_cantidad
-            // 
-            this.Txt_cantidad.Location = new System.Drawing.Point(598, 18);
-            this.Txt_cantidad.Name = "Txt_cantidad";
-            this.Txt_cantidad.Size = new System.Drawing.Size(100, 20);
-            this.Txt_cantidad.TabIndex = 2;
-            this.Txt_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_cantidad_keypress);
-            // 
-            // label_cant
-            // 
-            this.label_cant.AutoSize = true;
-            this.label_cant.Location = new System.Drawing.Point(595, 2);
-            this.label_cant.Name = "label_cant";
-            this.label_cant.Size = new System.Drawing.Size(89, 13);
-            this.label_cant.TabIndex = 37;
-            this.label_cant.Text = "cantidad comprar";
             // 
             // Lbl_id_titulo
             // 
@@ -344,24 +297,44 @@
             // 
             this.cmb_provedor.FormattingEnabled = true;
             this.cmb_provedor.ItemHeight = 13;
-            this.cmb_provedor.Location = new System.Drawing.Point(810, 18);
+            this.cmb_provedor.Location = new System.Drawing.Point(638, 22);
             this.cmb_provedor.Name = "cmb_provedor";
             this.cmb_provedor.Size = new System.Drawing.Size(117, 21);
             this.cmb_provedor.TabIndex = 4;
+            // 
+            // btn_paquete
+            // 
+            this.btn_paquete.Location = new System.Drawing.Point(761, 0);
+            this.btn_paquete.Name = "btn_paquete";
+            this.btn_paquete.Size = new System.Drawing.Size(75, 39);
+            this.btn_paquete.TabIndex = 43;
+            this.btn_paquete.Text = "paquete";
+            this.btn_paquete.UseVisualStyleBackColor = true;
+            this.btn_paquete.Click += new System.EventHandler(this.btn_paquete_Click);
+            // 
+            // btn_individual
+            // 
+            this.btn_individual.Location = new System.Drawing.Point(761, 45);
+            this.btn_individual.Name = "btn_individual";
+            this.btn_individual.Size = new System.Drawing.Size(75, 39);
+            this.btn_individual.TabIndex = 43;
+            this.btn_individual.Text = "individual";
+            this.btn_individual.UseVisualStyleBackColor = true;
+            this.btn_individual.Click += new System.EventHandler(this.btn_individual_Click);
             // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 305);
+            this.Controls.Add(this.btn_individual);
+            this.Controls.Add(this.btn_paquete);
             this.Controls.Add(this.cmb_provedor);
             this.Controls.Add(this.Lbl_nom_product_list);
             this.Controls.Add(this.Lbl_cuenta);
             this.Controls.Add(this.Btn_cargar_pedido);
             this.Controls.Add(this.Lbl_id);
             this.Controls.Add(this.Lbl_id_titulo);
-            this.Controls.Add(this.label_cant);
-            this.Controls.Add(this.Txt_cantidad);
             this.Controls.Add(this.Btn_elim_ultimo);
             this.Controls.Add(this.Btn_procesar_venta);
             this.Controls.Add(this.Btn_eliminar_todo);
@@ -375,15 +348,12 @@
             this.Controls.Add(this.Txt_buscar_producto);
             this.Controls.Add(this.Lbl_nombre_producto);
             this.Controls.Add(this.Lbl_producto);
-            this.Controls.Add(this.Btn_agregar);
             this.Controls.Add(this.Lbl_cantidad);
             this.Controls.Add(this.Lbl_cantidad_cant);
             this.Controls.Add(this.Lbl_precio_compra);
             this.Controls.Add(this.Lbl_precio_compra_cant);
             this.Controls.Add(this.Lbl_prcio_vnt);
             this.Controls.Add(this.Lbl_precio_venta);
-            this.Controls.Add(this.Lbl_nuevo_cantidad);
-            this.Controls.Add(this.Txt_costo_compra);
             this.Controls.Add(this.Lbl_codigo);
             this.Name = "Pedidos";
             this.Text = "pedidos";
@@ -396,15 +366,12 @@
         private System.Windows.Forms.TextBox Txt_buscar_producto;
         private System.Windows.Forms.Label Lbl_nombre_producto;
         private System.Windows.Forms.Label Lbl_producto;
-        private System.Windows.Forms.Button Btn_agregar;
         private System.Windows.Forms.Label Lbl_cantidad;
         private System.Windows.Forms.Label Lbl_cantidad_cant;
         private System.Windows.Forms.Label Lbl_precio_compra;
         private System.Windows.Forms.Label Lbl_precio_compra_cant;
         private System.Windows.Forms.Label Lbl_prcio_vnt;
         private System.Windows.Forms.Label Lbl_precio_venta;
-        private System.Windows.Forms.Label Lbl_nuevo_cantidad;
-        private System.Windows.Forms.TextBox Txt_costo_compra;
         private System.Windows.Forms.Label Lbl_codigo;
         private System.Windows.Forms.Label Lbl_provedor;
         private System.Windows.Forms.Label Lbl_nom_producto_buscar;
@@ -416,13 +383,13 @@
         private System.Windows.Forms.Button Btn_procesar_venta;
         private System.Windows.Forms.Button Btn_eliminar_todo;
         private System.Windows.Forms.Button Btn_eliminar_seleccionado;
-        private System.Windows.Forms.TextBox Txt_cantidad;
-        private System.Windows.Forms.Label label_cant;
         private System.Windows.Forms.Label Lbl_id_titulo;
         private System.Windows.Forms.Label Lbl_id;
         private System.Windows.Forms.Button Btn_cargar_pedido;
         private System.Windows.Forms.Label Lbl_cuenta;
         private System.Windows.Forms.Label Lbl_nom_product_list;
         private System.Windows.Forms.ComboBox cmb_provedor;
+        private System.Windows.Forms.Button btn_paquete;
+        private System.Windows.Forms.Button btn_individual;
     }
 }

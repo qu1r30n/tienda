@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Lbl_ganancia = new System.Windows.Forms.Label();
             this.Txt_ganancia = new System.Windows.Forms.TextBox();
             this.Btn_ganancias = new System.Windows.Forms.Button();
@@ -52,9 +52,10 @@
             this.Lst_ventas = new System.Windows.Forms.ListBox();
             this.Btn_empleados = new System.Windows.Forms.Button();
             this.Btn_nueva_venta = new System.Windows.Forms.Button();
-            this.Btn_inventario = new System.Windows.Forms.Button();
+            this.Btn_crear_cod_bar = new System.Windows.Forms.Button();
             this.Btn_canbio_precios = new System.Windows.Forms.Button();
             this.chrt_ventas = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btn_inventario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -260,15 +261,15 @@
             this.Btn_nueva_venta.UseVisualStyleBackColor = true;
             this.Btn_nueva_venta.Click += new System.EventHandler(this.Btn_nueva_venta_Click);
             // 
-            // Btn_inventario
+            // Btn_crear_cod_bar
             // 
-            this.Btn_inventario.Location = new System.Drawing.Point(3, 28);
-            this.Btn_inventario.Name = "Btn_inventario";
-            this.Btn_inventario.Size = new System.Drawing.Size(79, 36);
-            this.Btn_inventario.TabIndex = 1;
-            this.Btn_inventario.Text = "crear codigo barras";
-            this.Btn_inventario.UseVisualStyleBackColor = true;
-            this.Btn_inventario.Click += new System.EventHandler(this.Btn_inventario_Click);
+            this.Btn_crear_cod_bar.Location = new System.Drawing.Point(3, 28);
+            this.Btn_crear_cod_bar.Name = "Btn_crear_cod_bar";
+            this.Btn_crear_cod_bar.Size = new System.Drawing.Size(79, 36);
+            this.Btn_crear_cod_bar.TabIndex = 1;
+            this.Btn_crear_cod_bar.Text = "crear codigo barras";
+            this.Btn_crear_cod_bar.UseVisualStyleBackColor = true;
+            this.Btn_crear_cod_bar.Click += new System.EventHandler(this.Btn_crear_cod_bar_Click);
             // 
             // Btn_canbio_precios
             // 
@@ -282,26 +283,37 @@
             // 
             // chrt_ventas
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chrt_ventas.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chrt_ventas.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chrt_ventas.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chrt_ventas.Legends.Add(legend2);
             this.chrt_ventas.Location = new System.Drawing.Point(88, 11);
             this.chrt_ventas.Name = "chrt_ventas";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chrt_ventas.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chrt_ventas.Series.Add(series2);
             this.chrt_ventas.Size = new System.Drawing.Size(403, 300);
             this.chrt_ventas.TabIndex = 19;
             this.chrt_ventas.Text = "ventas";
+            // 
+            // btn_inventario
+            // 
+            this.btn_inventario.Location = new System.Drawing.Point(3, 314);
+            this.btn_inventario.Name = "btn_inventario";
+            this.btn_inventario.Size = new System.Drawing.Size(75, 23);
+            this.btn_inventario.TabIndex = 54;
+            this.btn_inventario.Text = "inventario";
+            this.btn_inventario.UseVisualStyleBackColor = true;
+            this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
             // 
             // Area_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 357);
+            this.Controls.Add(this.btn_inventario);
             this.Controls.Add(this.Btn_canbio_precios);
             this.Controls.Add(this.chrt_ventas);
             this.Controls.Add(this.Lbl_ganancia);
@@ -325,7 +337,7 @@
             this.Controls.Add(this.Lst_ventas);
             this.Controls.Add(this.Btn_empleados);
             this.Controls.Add(this.Btn_nueva_venta);
-            this.Controls.Add(this.Btn_inventario);
+            this.Controls.Add(this.Btn_crear_cod_bar);
             this.Name = "Area_principal";
             this.Text = "Area_principal";
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).EndInit();
@@ -357,8 +369,9 @@
         public System.Windows.Forms.ListBox Lst_ventas;
         private System.Windows.Forms.Button Btn_empleados;
         private System.Windows.Forms.Button Btn_nueva_venta;
-        private System.Windows.Forms.Button Btn_inventario;
+        private System.Windows.Forms.Button Btn_crear_cod_bar;
         private System.Windows.Forms.Button Btn_canbio_precios;
         private System.Windows.Forms.DataVisualization.Charting.Chart chrt_ventas;
+        private System.Windows.Forms.Button btn_inventario;
     }
 }

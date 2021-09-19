@@ -107,7 +107,7 @@ namespace tienda2.clases
         public void ingreso_de_din_simple(string tab_usuario, string id_usuario, Double din, int cant_niv_a_pagar = 3, Double porcentage_reparticion = 10, char caracter_de_separacion = '|')
         {
             Tex_base bas = new Tex_base();
-            int num_enc = 3;//la cantidad ser igual o menor la cantidad de encargados osea lo de los niveles que estan arriba
+            // int num_enc = 3;//la cantidad ser igual o menor la cantidad de encargados osea lo de los niveles que estan arriba
             string direccion_tab_us = "sismul\\"+ G_sucursal + G_compu + tab_usuario + "_inf.txt";
             string dat_usuarios = bas.Seleccionar(direccion_tab_us, 0, id_usuario,null,caracter_de_separacion);
             

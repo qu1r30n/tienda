@@ -49,6 +49,8 @@ namespace tienda2.desinger
 
                 string direccion = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyyMMdd") + "_vendidos.txt";
                 string direccion2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\provedores\\";
+                string direccion3 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\provedores\\ventas_en_dinero.txt";
+
                 for (int i = 0; i < codigo_barras_list.Count; i++)
                 {
                     temp = temp + codigo_barras_list[i] + G_parametros[0];
@@ -56,6 +58,8 @@ namespace tienda2.desinger
 
                     bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);
                     bas.Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(direccion2 + provedor[i] + ".txt", 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i], "1|3|0|6|8|2");
+                    bas.si_existe_suma_sino_agega_extra(direccion3,0,""+provedor[i], "1", "" +precio_venta[i],provedor[i]+"|"+precio_venta[i]);
+
                 }
 
                 temp = op_text.Trimend_paresido(temp, G_parametros[0]);
