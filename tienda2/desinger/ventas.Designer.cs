@@ -48,6 +48,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.configuracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajustesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.provedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -219,7 +221,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configuracionToolStripMenuItem});
+            this.configuracionToolStripMenuItem,
+            this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(382, 24);
@@ -240,6 +243,21 @@
             this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajustesToolStripMenuItem.Text = "ajustes";
             this.ajustesToolStripMenuItem.Click += new System.EventHandler(this.ajustesToolStripMenuItem_Click);
+            // 
+            // opcionesToolStripMenuItem
+            // 
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.provedorToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.opcionesToolStripMenuItem.Text = "opciones";
+            // 
+            // provedorToolStripMenuItem
+            // 
+            this.provedorToolStripMenuItem.Name = "provedorToolStripMenuItem";
+            this.provedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.provedorToolStripMenuItem.Text = "provedor";
+            this.provedorToolStripMenuItem.Click += new System.EventHandler(this.provedorToolStripMenuItem_Click);
             // 
             // Ventas
             // 
@@ -298,5 +316,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem configuracionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem provedorToolStripMenuItem;
     }
 }

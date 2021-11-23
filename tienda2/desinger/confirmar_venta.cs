@@ -49,7 +49,7 @@ namespace tienda2.desinger
 
                 string direccion = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyyMMdd") + "_vendidos.txt";
                 string direccion2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\provedores\\";
-                string direccion3 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\provedores\\ventas_en_dinero.txt";
+                string direccion3 = "provedores\\ventas_en_dinero.txt";
 
                 for (int i = 0; i < codigo_barras_list.Count; i++)
                 {

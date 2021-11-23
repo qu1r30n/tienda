@@ -582,6 +582,10 @@ namespace tienda2.desinger
             //a = 3;
             string[] enviar2 = { "1°costo°" + Lbl_precio_compra_cant.Text + "°2", "1°numero paketes°0°2", "1°cantidad_por_paquete°" + cantidad_por_pakete + "°2" };
             string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2);
+            if (datos_ventana_emergente2=="|")
+            {
+                return;
+            }
             string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
 
             string total_de_productos = "" + (Convert.ToDouble(mensaje2_espli[1]) * Convert.ToDouble(mensaje2_espli[2]));
@@ -637,6 +641,10 @@ namespace tienda2.desinger
             //a = 3;
             string[] enviar2 = { "1°costo°" + Lbl_precio_compra_cant.Text + "°2", "1°cantidad°1°2" };
             string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2);
+            if (datos_ventana_emergente2 == "|")
+            {
+                return;
+            }
             string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
 
 

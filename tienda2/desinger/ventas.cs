@@ -505,6 +505,12 @@ namespace tienda2.desinger
         {
             
         }
+
+        private void provedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            control_provedores cont_prov = new control_provedores();
+            cont_prov.Show();
+        }
     }
 }
 

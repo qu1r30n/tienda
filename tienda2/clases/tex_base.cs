@@ -1115,7 +1115,7 @@ namespace tienda2
 
                             for (int i = 0; i < columnas_editar.Length; i++)
                             {
-                                palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToInt32(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToInt32(cantidades_sumara[i]));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
+                                palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToDouble(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToDouble(cantidades_sumara[i]));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
                             }
                             for (int i = 0; i < palabra.Length; i++)
                             {
