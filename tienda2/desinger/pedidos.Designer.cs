@@ -31,15 +31,15 @@
             this.Txt_buscar_producto = new System.Windows.Forms.TextBox();
             this.Lbl_nombre_producto = new System.Windows.Forms.Label();
             this.Lbl_producto = new System.Windows.Forms.Label();
-            this.Lbl_cantidad = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Lbl_cantidad_cant = new System.Windows.Forms.Label();
-            this.Lbl_precio_compra = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Lbl_precio_compra_cant = new System.Windows.Forms.Label();
-            this.Lbl_prcio_vnt = new System.Windows.Forms.Label();
+            this.label0 = new System.Windows.Forms.Label();
             this.Lbl_precio_venta = new System.Windows.Forms.Label();
-            this.Lbl_codigo = new System.Windows.Forms.Label();
-            this.Lbl_provedor = new System.Windows.Forms.Label();
-            this.Lbl_nom_producto_buscar = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.Txt_nom_producto = new System.Windows.Forms.TextBox();
             this.Rdb_codigo_barras = new System.Windows.Forms.RadioButton();
             this.Rdb_producto = new System.Windows.Forms.RadioButton();
@@ -86,14 +86,14 @@
             this.Lbl_producto.TabIndex = 11;
             this.Lbl_producto.Text = "producto";
             // 
-            // Lbl_cantidad
+            // label2
             // 
-            this.Lbl_cantidad.AutoSize = true;
-            this.Lbl_cantidad.Location = new System.Drawing.Point(495, 6);
-            this.Lbl_cantidad.Name = "Lbl_cantidad";
-            this.Lbl_cantidad.Size = new System.Drawing.Size(97, 13);
-            this.Lbl_cantidad.TabIndex = 17;
-            this.Lbl_cantidad.Text = "cantidad inventario";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(495, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "cantidad inventario";
             // 
             // Lbl_cantidad_cant
             // 
@@ -104,14 +104,14 @@
             this.Lbl_cantidad_cant.TabIndex = 18;
             this.Lbl_cantidad_cant.Text = "$";
             // 
-            // Lbl_precio_compra
+            // label1
             // 
-            this.Lbl_precio_compra.AutoSize = true;
-            this.Lbl_precio_compra.Location = new System.Drawing.Point(326, 6);
-            this.Lbl_precio_compra.Name = "Lbl_precio_compra";
-            this.Lbl_precio_compra.Size = new System.Drawing.Size(74, 13);
-            this.Lbl_precio_compra.TabIndex = 13;
-            this.Lbl_precio_compra.Text = "precio compra";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(326, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "precio compra";
             // 
             // Lbl_precio_compra_cant
             // 
@@ -122,14 +122,14 @@
             this.Lbl_precio_compra_cant.TabIndex = 14;
             this.Lbl_precio_compra_cant.Text = "$";
             // 
-            // Lbl_prcio_vnt
+            // label0
             // 
-            this.Lbl_prcio_vnt.AutoSize = true;
-            this.Lbl_prcio_vnt.Location = new System.Drawing.Point(410, 6);
-            this.Lbl_prcio_vnt.Name = "Lbl_prcio_vnt";
-            this.Lbl_prcio_vnt.Size = new System.Drawing.Size(66, 13);
-            this.Lbl_prcio_vnt.TabIndex = 15;
-            this.Lbl_prcio_vnt.Text = "precio venta";
+            this.label0.AutoSize = true;
+            this.label0.Location = new System.Drawing.Point(410, 6);
+            this.label0.Name = "label0";
+            this.label0.Size = new System.Drawing.Size(66, 13);
+            this.label0.TabIndex = 15;
+            this.label0.Text = "precio venta";
             // 
             // Lbl_precio_venta
             // 
@@ -140,32 +140,32 @@
             this.Lbl_precio_venta.TabIndex = 16;
             this.Lbl_precio_venta.Text = "$";
             // 
-            // Lbl_codigo
+            // label4
             // 
-            this.Lbl_codigo.AutoSize = true;
-            this.Lbl_codigo.Location = new System.Drawing.Point(26, 6);
-            this.Lbl_codigo.Name = "Lbl_codigo";
-            this.Lbl_codigo.Size = new System.Drawing.Size(86, 13);
-            this.Lbl_codigo.TabIndex = 10;
-            this.Lbl_codigo.Text = "codigo de barras";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "codigo de barras";
             // 
-            // Lbl_provedor
+            // label3
             // 
-            this.Lbl_provedor.AutoSize = true;
-            this.Lbl_provedor.Location = new System.Drawing.Point(635, 6);
-            this.Lbl_provedor.Name = "Lbl_provedor";
-            this.Lbl_provedor.Size = new System.Drawing.Size(49, 13);
-            this.Lbl_provedor.TabIndex = 20;
-            this.Lbl_provedor.Text = "provedor";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(635, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "provedor";
             // 
-            // Lbl_nom_producto_buscar
+            // label5
             // 
-            this.Lbl_nom_producto_buscar.AutoSize = true;
-            this.Lbl_nom_producto_buscar.Location = new System.Drawing.Point(23, 60);
-            this.Lbl_nom_producto_buscar.Name = "Lbl_nom_producto_buscar";
-            this.Lbl_nom_producto_buscar.Size = new System.Drawing.Size(87, 13);
-            this.Lbl_nom_producto_buscar.TabIndex = 35;
-            this.Lbl_nom_producto_buscar.Text = "nombre producto";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "nombre producto";
             // 
             // Txt_nom_producto
             // 
@@ -343,20 +343,21 @@
             this.Controls.Add(this.Rdb_producto);
             this.Controls.Add(this.Rdb_codigo_barras);
             this.Controls.Add(this.Txt_nom_producto);
-            this.Controls.Add(this.Lbl_nom_producto_buscar);
-            this.Controls.Add(this.Lbl_provedor);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Txt_buscar_producto);
             this.Controls.Add(this.Lbl_nombre_producto);
             this.Controls.Add(this.Lbl_producto);
-            this.Controls.Add(this.Lbl_cantidad);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Lbl_cantidad_cant);
-            this.Controls.Add(this.Lbl_precio_compra);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Lbl_precio_compra_cant);
-            this.Controls.Add(this.Lbl_prcio_vnt);
+            this.Controls.Add(this.label0);
             this.Controls.Add(this.Lbl_precio_venta);
-            this.Controls.Add(this.Lbl_codigo);
+            this.Controls.Add(this.label4);
             this.Name = "Pedidos";
             this.Text = "pedidos";
+            this.Load += new System.EventHandler(this.Pedidos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,15 +367,15 @@
         private System.Windows.Forms.TextBox Txt_buscar_producto;
         private System.Windows.Forms.Label Lbl_nombre_producto;
         private System.Windows.Forms.Label Lbl_producto;
-        private System.Windows.Forms.Label Lbl_cantidad;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Lbl_cantidad_cant;
-        private System.Windows.Forms.Label Lbl_precio_compra;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lbl_precio_compra_cant;
-        private System.Windows.Forms.Label Lbl_prcio_vnt;
+        private System.Windows.Forms.Label label0;
         private System.Windows.Forms.Label Lbl_precio_venta;
-        private System.Windows.Forms.Label Lbl_codigo;
-        private System.Windows.Forms.Label Lbl_provedor;
-        private System.Windows.Forms.Label Lbl_nom_producto_buscar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Txt_nom_producto;
         private System.Windows.Forms.RadioButton Rdb_codigo_barras;
         private System.Windows.Forms.RadioButton Rdb_producto;

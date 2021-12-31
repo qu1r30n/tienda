@@ -1,4 +1,4 @@
-id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|cantidad_productos_por_paquete|
+id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
 1|pomada ceresa|5|1|9|1|pomada labiual|2°producto||1|
 2|ariel jabon 250g|11.5|11.5|0|10.35||1°producto||1|
 3|chicle orbit 5.6g|2.5|2201302|0|1|orbit|1°producto||1|
@@ -1277,7 +1277,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1276|trident uva/naranja|10|7622210938732|3|9||1°producto||1|
 1277|curitas 100pzs|1.5|7702003476594|0|0.5|curitas|1°producto||1|
 1278|stevia 25 sobres|1.5|7792129003187|0|0|stevia|1°producto||1|
-1279|kinder chocolate 50g|15|8000500134702|24|0|kinder|1°producto||8|
+1279|kinder chocolate 50g|22|8000500134702|18|20|kinder|1°producto||8|
 1280|kinder delice 39g|10|8000500267035|31|9|kinder|1°producto||10|
 1281|jugoso al sarten maggi 23.4gr|15|8585002432315|1|13.5||1°producto||1|
 1282|fabuloso complit 500ml|23|8718951167513|0|0|fabuloso|1°producto||1|

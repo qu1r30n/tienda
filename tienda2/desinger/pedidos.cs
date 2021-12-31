@@ -9,14 +9,15 @@ namespace tienda2.desinger
 {
     public partial class Pedidos : Form
     {
-
+        
         char[] G_parametros = { '|', '°', '¬', '^' };
         List<string> G_productos = new List<string>();
         Tex_base bas = new Tex_base();
         string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
-        public Pedidos()
+        public Pedidos(string constructor=null)
         {
             InitializeComponent();
+            G_prov_anterior = constructor;
             Recargar_texbox();
             
         }
@@ -258,7 +259,7 @@ namespace tienda2.desinger
             
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
-            if (valor_devuelto != "")
+            if (valor_devuelto != "")   
             {
 
 
@@ -339,10 +340,6 @@ namespace tienda2.desinger
                         Lbl_cuenta.Text = "0";
                     }
                 }
-                
-                
-
-                
             }
 
         }
@@ -572,11 +569,12 @@ namespace tienda2.desinger
 
         private void btn_paquete_Click(object sender, EventArgs e)
         {
-            string temp;
+            
             DateTime fecha_hora = DateTime.Now;
             string hora_min = fecha_hora.ToString("HH:mm");
 
             string cantidad_por_pakete = bas.Seleccionar("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "9");
+            double costo_compra_invent = Convert.ToDouble(Lbl_precio_compra_cant.Text);
 
             Ventana_emergente ven_emer2 = new Ventana_emergente();
             //a = 3;
@@ -589,12 +587,24 @@ namespace tienda2.desinger
             string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
 
             string total_de_productos = "" + (Convert.ToDouble(mensaje2_espli[1]) * Convert.ToDouble(mensaje2_espli[2]));
-            string costo_por_producto = "" + Math.Round((Convert.ToDouble(mensaje2_espli[0]) / Convert.ToDouble(total_de_productos)), 2);
-            bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "5", costo_por_producto);
+            double costo_por_producto =  Math.Round((Convert.ToDouble(mensaje2_espli[0]) / Convert.ToDouble(total_de_productos)), 2);
+            
+            if (costo_por_producto > costo_compra_invent)
+            {
+                MessageBox.Show("subio:" + (costo_por_producto - costo_compra_invent));
+                double costo_venta = Convert.ToDouble(Lbl_precio_venta.Text);
+                if (costo_por_producto > costo_venta)
+                {
+                    MessageBox.Show("nuevo_precio_de_venta: " + (costo_por_producto + (costo_por_producto * 0.1)));
+                    bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "2", "" + (costo_por_producto + (costo_por_producto * 0.1)));
+                }
+            }
+
+            bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "5", "" + costo_por_producto);
 
             Lbl_cantidad_cant.Text = total_de_productos;
-            Lbl_precio_venta.Text = costo_por_producto;
-            temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Lbl_cantidad_cant.Text + "|" + Lbl_precio_compra_cant.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|" + mensaje2_espli[1] + "°paketes_de°" + mensaje2_espli[2];
+            Lbl_precio_venta.Text = ""+costo_por_producto;
+            string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Lbl_cantidad_cant.Text + "|" + Lbl_precio_compra_cant.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|" + mensaje2_espli[1] + "°paketes_de°" + mensaje2_espli[2];
 
 
 
@@ -631,13 +641,12 @@ namespace tienda2.desinger
             }
 
             limpiar();
-
-
-
         }
+
         private void btn_individual_Click(object sender, EventArgs e)
         {
             Ventana_emergente ven_emer2 = new Ventana_emergente();
+            double costo_compra_invent = Convert.ToDouble(Lbl_precio_compra_cant.Text);
             //a = 3;
             string[] enviar2 = { "1°costo°" + Lbl_precio_compra_cant.Text + "°2", "1°cantidad°1°2" };
             string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2);
@@ -647,18 +656,31 @@ namespace tienda2.desinger
             }
             string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
 
+            double costo_por_producto = Convert.ToDouble(mensaje2_espli[0]);
 
-            string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + mensaje2_espli[1] + "|" + mensaje2_espli[0] + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
+            string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + mensaje2_espli[1] + "|" + costo_por_producto + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
+
+            if (costo_por_producto> costo_compra_invent)
+            {
+                MessageBox.Show("subio:" + (costo_por_producto - costo_compra_invent));
+                double costo_venta = Convert.ToDouble(Lbl_precio_venta.Text);
+                if(costo_por_producto>costo_venta)
+                {
+                    MessageBox.Show("nuevo_precio_de_venta: " + (costo_por_producto + (costo_por_producto * 0.1)));
+                    bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "2", ""+(costo_por_producto+(costo_por_producto*0.1)));
+                }
+            }
+
             bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "5", mensaje2_espli[0]);
 
 
 
             bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", cmb_provedor.Text);
 
-            Lbl_nom_product_list.Text = Lbl_nombre_producto.Text + " costo por pieza:" + mensaje2_espli[0] + " total:  $" + (Convert.ToInt32(mensaje2_espli[0]) * Convert.ToDecimal(mensaje2_espli[1]));
+            Lbl_nom_product_list.Text = Lbl_nombre_producto.Text + " costo por pieza:" + mensaje2_espli[0] + " total:  $" + (Convert.ToDecimal(mensaje2_espli[0]) * Convert.ToDecimal(mensaje2_espli[1]));
             Lst_compras.Items.Add(temp);
 
-
+            
             string temporal;
             string[] temporal_s;
             decimal total = 0;
@@ -686,6 +708,11 @@ namespace tienda2.desinger
             }
 
             limpiar();
+        }
+
+        private void Pedidos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

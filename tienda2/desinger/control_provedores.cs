@@ -36,27 +36,58 @@ namespace tienda2.desinger
             {
                 MessageBox.Show("falta que pongas en compra lo que vas a comprar");
             }
+            
             else
             {
+
                 try
                 {
+
+
                     Ventana_emergente vent_emer = new Ventana_emergente();
-                    string[] enviar = new string[] { "3°decrementar°1°0", "3°borrar°2°0" };
+                    string[] enviar = new string[] { "3°reinvertir°1°0", "3°tomar_ganancia°2°0" };
                     string res = vent_emer.Proceso_ventana_emergente(enviar);
                     double cantidad_a_comprar = Convert.ToDouble(txt_sugerencia_compra.Text);
-                    if (res=="1")
+
+                    if (cantidad_a_comprar >= 0)
                     {
-                        bas.Incrementa_celda(direccion, 0, lbl_provedor.Text, "1", "" + (cantidad_a_comprar * -1));
-                    }
-                    else if (res == "2")
-                    {
-                        bas.Editar_espesifico(direccion, 0, lbl_provedor.Text, "1","0");
-                    }
+
+                        if (res == "1")
+                        {
+                            double din_vendido_prov = Convert.ToDouble(lbl_venta_provedor);
+                            if (cantidad_a_comprar<=din_vendido_prov)
+                            {
+                                bas.Incrementa_celda(direccion, 0, lbl_provedor.Text, "1", "" + (cantidad_a_comprar * -1));
+                            }
+                            else
+                            {
+                                DialogResult desision = MessageBox.Show("Seguro quieres pagar mas dinero del que a ganado el provedor?", "invertir?", MessageBoxButtons.YesNo);
+                                if (desision== DialogResult.Yes)
+                                {
+                                    bas.Incrementa_celda(direccion, 0, lbl_provedor.Text, "1", "" + (cantidad_a_comprar * -1));
+                                }
+                                    
+                            }
+                            
+                        }
+                        else if (res == "2")
+                        {
+                            bas.Editar_espesifico(direccion, 0, lbl_provedor.Text, "1", "0");
+                        }
 
 
-                    Pedidos compras = new Pedidos();
-                    compras.Show();
+                        Pedidos compras = new Pedidos(lbl_provedor.Text);
+
+                        compras.Show();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("no puede ser numeros negativos");
+                    }
+
                 }
+
                 catch (Exception)
                 {
                     MessageBox.Show("caracteres invalidos en cantidad a  comprar");
@@ -68,18 +99,17 @@ namespace tienda2.desinger
 
         private void btn_buscar_provedor_Click(object sender, EventArgs e)
         {
-            if (txt_buscar_provedor.Text != "") 
-            {
-                busqueda_de_prov(txt_buscar_provedor.Text);
-            }
-            else
-            {
-                for (int i = 0; i < provedores_info.Length; i++)
-                {
-                    lst_venta_provedor.Items.Add(provedores_info[i]);
-                }
-            }
-            
+            Ventana_emergente vent_emergent = new Ventana_emergente();
+
+            string[] enviar = new string[] { "1°nombre_provedor" };
+
+            string mensage = vent_emergent.Proceso_ventana_emergente(enviar);//el uno significa que modificara el inventario
+
+            mensage = bas.Trimend_paresido(mensage);
+
+            bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt", mensage);
+
+            this.Close();
         }
 
         private void lst_venta_provedor_SelectedIndexChanged(object sender, EventArgs e)

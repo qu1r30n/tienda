@@ -32,7 +32,7 @@ namespace tienda2.desinger
             this.lst_venta_provedor = new System.Windows.Forms.ListBox();
             this.txt_sugerencia_compra = new System.Windows.Forms.TextBox();
             this.txt_buscar_provedor = new System.Windows.Forms.TextBox();
-            this.btn_buscar_provedor = new System.Windows.Forms.Button();
+            this.btn_nuevo_provedor = new System.Windows.Forms.Button();
             this.btn_procesar_provedor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,15 +68,15 @@ namespace tienda2.desinger
             this.txt_buscar_provedor.TabIndex = 4;
             this.txt_buscar_provedor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_buscar_provedor_KeyDown);
             // 
-            // btn_buscar_provedor
+            // btn_nuevo_provedor
             // 
-            this.btn_buscar_provedor.Location = new System.Drawing.Point(561, 66);
-            this.btn_buscar_provedor.Name = "btn_buscar_provedor";
-            this.btn_buscar_provedor.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscar_provedor.TabIndex = 5;
-            this.btn_buscar_provedor.Text = "buscar";
-            this.btn_buscar_provedor.UseVisualStyleBackColor = true;
-            this.btn_buscar_provedor.Click += new System.EventHandler(this.btn_buscar_provedor_Click);
+            this.btn_nuevo_provedor.Location = new System.Drawing.Point(561, 44);
+            this.btn_nuevo_provedor.Name = "btn_nuevo_provedor";
+            this.btn_nuevo_provedor.Size = new System.Drawing.Size(75, 45);
+            this.btn_nuevo_provedor.TabIndex = 5;
+            this.btn_nuevo_provedor.Text = "nuevo provedor";
+            this.btn_nuevo_provedor.UseVisualStyleBackColor = true;
+            this.btn_nuevo_provedor.Click += new System.EventHandler(this.btn_buscar_provedor_Click);
             // 
             // btn_procesar_provedor
             // 
@@ -154,7 +154,7 @@ namespace tienda2.desinger
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_procesar_provedor);
-            this.Controls.Add(this.btn_buscar_provedor);
+            this.Controls.Add(this.btn_nuevo_provedor);
             this.Controls.Add(this.txt_buscar_provedor);
             this.Controls.Add(this.txt_sugerencia_compra);
             this.Controls.Add(this.lst_venta_provedor);
@@ -170,7 +170,7 @@ namespace tienda2.desinger
         private System.Windows.Forms.ListBox lst_venta_provedor;
         private System.Windows.Forms.TextBox txt_sugerencia_compra;
         private System.Windows.Forms.TextBox txt_buscar_provedor;
-        private System.Windows.Forms.Button btn_buscar_provedor;
+        private System.Windows.Forms.Button btn_nuevo_provedor;
         private System.Windows.Forms.Button btn_procesar_provedor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

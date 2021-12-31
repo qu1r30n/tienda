@@ -98,8 +98,8 @@ namespace tienda2.desinger
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
-            Pedidos pedi = new Pedidos();
-            pedi.Show();
+            control_provedores cont_p = new control_provedores();
+            cont_p.Show();
         }
 
         private void Btn_comparar_Click(object sender, EventArgs e)
