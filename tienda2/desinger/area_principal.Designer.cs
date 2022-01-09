@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Lbl_ganancia = new System.Windows.Forms.Label();
             this.Txt_ganancia = new System.Windows.Forms.TextBox();
             this.Btn_ganancias = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.Btn_canbio_precios = new System.Windows.Forms.Button();
             this.chrt_ventas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btn_inventario = new System.Windows.Forms.Button();
+            this.btn_igualar_provedores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -283,17 +284,17 @@
             // 
             // chrt_ventas
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chrt_ventas.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chrt_ventas.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chrt_ventas.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chrt_ventas.Legends.Add(legend1);
             this.chrt_ventas.Location = new System.Drawing.Point(88, 11);
             this.chrt_ventas.Name = "chrt_ventas";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chrt_ventas.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chrt_ventas.Series.Add(series1);
             this.chrt_ventas.Size = new System.Drawing.Size(403, 300);
             this.chrt_ventas.TabIndex = 19;
             this.chrt_ventas.Text = "ventas";
@@ -308,11 +309,22 @@
             this.btn_inventario.UseVisualStyleBackColor = true;
             this.btn_inventario.Click += new System.EventHandler(this.btn_inventario_Click);
             // 
+            // btn_igualar_provedores
+            // 
+            this.btn_igualar_provedores.Location = new System.Drawing.Point(3, 343);
+            this.btn_igualar_provedores.Name = "btn_igualar_provedores";
+            this.btn_igualar_provedores.Size = new System.Drawing.Size(75, 35);
+            this.btn_igualar_provedores.TabIndex = 55;
+            this.btn_igualar_provedores.Text = "igualar provedores";
+            this.btn_igualar_provedores.UseVisualStyleBackColor = true;
+            this.btn_igualar_provedores.Click += new System.EventHandler(this.btn_igualar_provedores_Click);
+            // 
             // Area_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 357);
+            this.ClientSize = new System.Drawing.Size(1074, 378);
+            this.Controls.Add(this.btn_igualar_provedores);
             this.Controls.Add(this.btn_inventario);
             this.Controls.Add(this.Btn_canbio_precios);
             this.Controls.Add(this.chrt_ventas);
@@ -373,5 +385,6 @@
         private System.Windows.Forms.Button Btn_canbio_precios;
         private System.Windows.Forms.DataVisualization.Charting.Chart chrt_ventas;
         private System.Windows.Forms.Button btn_inventario;
+        private System.Windows.Forms.Button btn_igualar_provedores;
     }
 }

@@ -106,6 +106,12 @@
     <Compile Include="desinger\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="desinger\igualar_provedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\igualar_provedores.Designer.cs">
+      <DependentUpon>igualar_provedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="desinger\Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="desinger\igualar_provedores.resx">
+      <DependentUpon>igualar_provedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>

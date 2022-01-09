@@ -327,6 +327,11 @@ namespace tienda2.desinger
 
                 }
 
+                if (valor_devuelto == "2")
+                {
+
+                }
+
                 else
                 {
                     compra_directa = false;
@@ -713,6 +718,13 @@ namespace tienda2.desinger
         private void Pedidos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void igualarProvedpresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            igualar_provedores igp = new igualar_provedores();
+            igp.Show();
+            
         }
     }
 }

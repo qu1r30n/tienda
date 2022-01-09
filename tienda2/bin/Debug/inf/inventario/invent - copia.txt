@@ -1427,10 +1427,10 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1426|agüita uva 300ml|8|7506475100274|8|5.80|nestle|||1|
 1427|agüita manzana 300ml|8|7506475100298|6|5.80|nestle|||1|
 1428|vickychelada 473ml|20|7501064195334|-2|0|corona|||1|
-1429|tartaletas fresa 116.6g|15|7503031028638|2|0|marinela|||1|
+1429|tartaletas fresa 116.6g|15|7503031028638|2|0|marinela pastel|||1|
 1430|carlos v semiamargo 20g|8.5|7501059299252|9|0|turin|||1|
 1431|bolsaza chetos |23|7501011130937|0|0|sabritas |||1|
-1432|canelitas tubo chico 180g|17|7501030490937|5|14|marinela|||1|
+1432|canelitas tubo chico 180g|17|7501030490937|5|14|marinela galleta|||1|
 1433|bolzasa sabritas|16|7500478007622|1|0|sabritas|||1|
 1434|fruttzo naranja 1.5L|18|7501022010778|-2|0|pepsi|||1|
 1435|fruttzo mandarina 1.5L|18|7501022010877|1|0|pepsi|||1|
@@ -1451,6 +1451,6 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1450|canada ginger 600ml |10|7501198350432|9|7.5|pepsi|||1|
 1451|head shoulder men |15|7506339326468|0|0|dicorsa|||1|
 1452|mundet mnzn/drzn 2L|23|7501055364077|1|0|coca|||1|
-1453|pingúinos 3pzs|18|7501030475743|-1|0|marinela|||1|
+1453|pingúinos 3pzs|18|7501030475743|-1|0|marinela pastel|||1|
 1454|aceite patrona 1L|34|7501060500019|0|0|casa vargas|||1|
 1455|m&ms 43.8g choco|15|7502271911427|0|0|orbit|||1|

@@ -56,13 +56,18 @@
             this.cmb_provedor = new System.Windows.Forms.ComboBox();
             this.btn_paquete = new System.Windows.Forms.Button();
             this.btn_individual = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ajustesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.igualarProvedpresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Txt_buscar_producto
             // 
             this.Txt_buscar_producto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Txt_buscar_producto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.Txt_buscar_producto.Location = new System.Drawing.Point(26, 22);
+            this.Txt_buscar_producto.Location = new System.Drawing.Point(22, 46);
             this.Txt_buscar_producto.Name = "Txt_buscar_producto";
             this.Txt_buscar_producto.Size = new System.Drawing.Size(119, 20);
             this.Txt_buscar_producto.TabIndex = 1;
@@ -71,7 +76,7 @@
             // Lbl_nombre_producto
             // 
             this.Lbl_nombre_producto.AutoSize = true;
-            this.Lbl_nombre_producto.Location = new System.Drawing.Point(195, 26);
+            this.Lbl_nombre_producto.Location = new System.Drawing.Point(191, 50);
             this.Lbl_nombre_producto.Name = "Lbl_nombre_producto";
             this.Lbl_nombre_producto.Size = new System.Drawing.Size(87, 13);
             this.Lbl_nombre_producto.TabIndex = 12;
@@ -80,7 +85,7 @@
             // Lbl_producto
             // 
             this.Lbl_producto.AutoSize = true;
-            this.Lbl_producto.Location = new System.Drawing.Point(195, 6);
+            this.Lbl_producto.Location = new System.Drawing.Point(191, 30);
             this.Lbl_producto.Name = "Lbl_producto";
             this.Lbl_producto.Size = new System.Drawing.Size(49, 13);
             this.Lbl_producto.TabIndex = 11;
@@ -89,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(495, 6);
+            this.label2.Location = new System.Drawing.Point(491, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 17;
@@ -98,7 +103,7 @@
             // Lbl_cantidad_cant
             // 
             this.Lbl_cantidad_cant.AutoSize = true;
-            this.Lbl_cantidad_cant.Location = new System.Drawing.Point(495, 29);
+            this.Lbl_cantidad_cant.Location = new System.Drawing.Point(491, 53);
             this.Lbl_cantidad_cant.Name = "Lbl_cantidad_cant";
             this.Lbl_cantidad_cant.Size = new System.Drawing.Size(13, 13);
             this.Lbl_cantidad_cant.TabIndex = 18;
@@ -107,7 +112,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(326, 6);
+            this.label1.Location = new System.Drawing.Point(322, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 13;
@@ -116,7 +121,7 @@
             // Lbl_precio_compra_cant
             // 
             this.Lbl_precio_compra_cant.AutoSize = true;
-            this.Lbl_precio_compra_cant.Location = new System.Drawing.Point(326, 29);
+            this.Lbl_precio_compra_cant.Location = new System.Drawing.Point(322, 53);
             this.Lbl_precio_compra_cant.Name = "Lbl_precio_compra_cant";
             this.Lbl_precio_compra_cant.Size = new System.Drawing.Size(13, 13);
             this.Lbl_precio_compra_cant.TabIndex = 14;
@@ -125,7 +130,7 @@
             // label0
             // 
             this.label0.AutoSize = true;
-            this.label0.Location = new System.Drawing.Point(410, 6);
+            this.label0.Location = new System.Drawing.Point(406, 30);
             this.label0.Name = "label0";
             this.label0.Size = new System.Drawing.Size(66, 13);
             this.label0.TabIndex = 15;
@@ -134,7 +139,7 @@
             // Lbl_precio_venta
             // 
             this.Lbl_precio_venta.AutoSize = true;
-            this.Lbl_precio_venta.Location = new System.Drawing.Point(410, 29);
+            this.Lbl_precio_venta.Location = new System.Drawing.Point(406, 53);
             this.Lbl_precio_venta.Name = "Lbl_precio_venta";
             this.Lbl_precio_venta.Size = new System.Drawing.Size(13, 13);
             this.Lbl_precio_venta.TabIndex = 16;
@@ -143,7 +148,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 6);
+            this.label4.Location = new System.Drawing.Point(22, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 10;
@@ -152,7 +157,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(635, 6);
+            this.label3.Location = new System.Drawing.Point(631, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 20;
@@ -161,7 +166,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 60);
+            this.label5.Location = new System.Drawing.Point(19, 84);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 13);
             this.label5.TabIndex = 35;
@@ -171,7 +176,7 @@
             // 
             this.Txt_nom_producto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Txt_nom_producto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.Txt_nom_producto.Location = new System.Drawing.Point(26, 76);
+            this.Txt_nom_producto.Location = new System.Drawing.Point(22, 100);
             this.Txt_nom_producto.Name = "Txt_nom_producto";
             this.Txt_nom_producto.Size = new System.Drawing.Size(119, 20);
             this.Txt_nom_producto.TabIndex = 12;
@@ -180,7 +185,7 @@
             // Rdb_codigo_barras
             // 
             this.Rdb_codigo_barras.AutoSize = true;
-            this.Rdb_codigo_barras.Location = new System.Drawing.Point(6, 25);
+            this.Rdb_codigo_barras.Location = new System.Drawing.Point(2, 49);
             this.Rdb_codigo_barras.Name = "Rdb_codigo_barras";
             this.Rdb_codigo_barras.Size = new System.Drawing.Size(14, 13);
             this.Rdb_codigo_barras.TabIndex = 13;
@@ -190,7 +195,7 @@
             // Rdb_producto
             // 
             this.Rdb_producto.AutoSize = true;
-            this.Rdb_producto.Location = new System.Drawing.Point(6, 76);
+            this.Rdb_producto.Location = new System.Drawing.Point(2, 100);
             this.Rdb_producto.Name = "Rdb_producto";
             this.Rdb_producto.Size = new System.Drawing.Size(14, 13);
             this.Rdb_producto.TabIndex = 14;
@@ -200,7 +205,7 @@
             // Lst_compras
             // 
             this.Lst_compras.FormattingEnabled = true;
-            this.Lst_compras.Location = new System.Drawing.Point(198, 85);
+            this.Lst_compras.Location = new System.Drawing.Point(194, 109);
             this.Lst_compras.Name = "Lst_compras";
             this.Lst_compras.Size = new System.Drawing.Size(579, 173);
             this.Lst_compras.TabIndex = 15;
@@ -208,7 +213,7 @@
             // 
             // Btn_elim_ultimo
             // 
-            this.Btn_elim_ultimo.Location = new System.Drawing.Point(783, 227);
+            this.Btn_elim_ultimo.Location = new System.Drawing.Point(779, 251);
             this.Btn_elim_ultimo.Name = "Btn_elim_ultimo";
             this.Btn_elim_ultimo.Size = new System.Drawing.Size(75, 40);
             this.Btn_elim_ultimo.TabIndex = 9;
@@ -218,7 +223,7 @@
             // 
             // Btn_procesar_venta
             // 
-            this.Btn_procesar_venta.Location = new System.Drawing.Point(783, 272);
+            this.Btn_procesar_venta.Location = new System.Drawing.Point(779, 296);
             this.Btn_procesar_venta.Name = "Btn_procesar_venta";
             this.Btn_procesar_venta.Size = new System.Drawing.Size(75, 23);
             this.Btn_procesar_venta.TabIndex = 10;
@@ -228,7 +233,7 @@
             // 
             // Btn_eliminar_todo
             // 
-            this.Btn_eliminar_todo.Location = new System.Drawing.Point(783, 194);
+            this.Btn_eliminar_todo.Location = new System.Drawing.Point(779, 218);
             this.Btn_eliminar_todo.Name = "Btn_eliminar_todo";
             this.Btn_eliminar_todo.Size = new System.Drawing.Size(75, 23);
             this.Btn_eliminar_todo.TabIndex = 8;
@@ -238,7 +243,7 @@
             // 
             // Btn_eliminar_seleccionado
             // 
-            this.Btn_eliminar_seleccionado.Location = new System.Drawing.Point(783, 146);
+            this.Btn_eliminar_seleccionado.Location = new System.Drawing.Point(779, 170);
             this.Btn_eliminar_seleccionado.Name = "Btn_eliminar_seleccionado";
             this.Btn_eliminar_seleccionado.Size = new System.Drawing.Size(86, 42);
             this.Btn_eliminar_seleccionado.TabIndex = 7;
@@ -249,7 +254,7 @@
             // Lbl_id_titulo
             // 
             this.Lbl_id_titulo.AutoSize = true;
-            this.Lbl_id_titulo.Location = new System.Drawing.Point(154, 6);
+            this.Lbl_id_titulo.Location = new System.Drawing.Point(150, 30);
             this.Lbl_id_titulo.Name = "Lbl_id_titulo";
             this.Lbl_id_titulo.Size = new System.Drawing.Size(18, 13);
             this.Lbl_id_titulo.TabIndex = 38;
@@ -258,7 +263,7 @@
             // Lbl_id
             // 
             this.Lbl_id.AutoSize = true;
-            this.Lbl_id.Location = new System.Drawing.Point(154, 29);
+            this.Lbl_id.Location = new System.Drawing.Point(150, 53);
             this.Lbl_id.Name = "Lbl_id";
             this.Lbl_id.Size = new System.Drawing.Size(13, 13);
             this.Lbl_id.TabIndex = 39;
@@ -266,7 +271,7 @@
             // 
             // Btn_cargar_pedido
             // 
-            this.Btn_cargar_pedido.Location = new System.Drawing.Point(12, 254);
+            this.Btn_cargar_pedido.Location = new System.Drawing.Point(8, 278);
             this.Btn_cargar_pedido.Name = "Btn_cargar_pedido";
             this.Btn_cargar_pedido.Size = new System.Drawing.Size(98, 39);
             this.Btn_cargar_pedido.TabIndex = 11;
@@ -278,7 +283,7 @@
             // 
             this.Lbl_cuenta.AutoSize = true;
             this.Lbl_cuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_cuenta.Location = new System.Drawing.Point(665, 285);
+            this.Lbl_cuenta.Location = new System.Drawing.Point(661, 309);
             this.Lbl_cuenta.Name = "Lbl_cuenta";
             this.Lbl_cuenta.Size = new System.Drawing.Size(19, 20);
             this.Lbl_cuenta.TabIndex = 41;
@@ -287,7 +292,7 @@
             // Lbl_nom_product_list
             // 
             this.Lbl_nom_product_list.AutoSize = true;
-            this.Lbl_nom_product_list.Location = new System.Drawing.Point(195, 267);
+            this.Lbl_nom_product_list.Location = new System.Drawing.Point(191, 291);
             this.Lbl_nom_product_list.Name = "Lbl_nom_product_list";
             this.Lbl_nom_product_list.Size = new System.Drawing.Size(185, 13);
             this.Lbl_nom_product_list.TabIndex = 42;
@@ -297,14 +302,14 @@
             // 
             this.cmb_provedor.FormattingEnabled = true;
             this.cmb_provedor.ItemHeight = 13;
-            this.cmb_provedor.Location = new System.Drawing.Point(638, 22);
+            this.cmb_provedor.Location = new System.Drawing.Point(634, 46);
             this.cmb_provedor.Name = "cmb_provedor";
             this.cmb_provedor.Size = new System.Drawing.Size(117, 21);
             this.cmb_provedor.TabIndex = 4;
             // 
             // btn_paquete
             // 
-            this.btn_paquete.Location = new System.Drawing.Point(761, 0);
+            this.btn_paquete.Location = new System.Drawing.Point(757, 24);
             this.btn_paquete.Name = "btn_paquete";
             this.btn_paquete.Size = new System.Drawing.Size(75, 39);
             this.btn_paquete.TabIndex = 43;
@@ -314,7 +319,7 @@
             // 
             // btn_individual
             // 
-            this.btn_individual.Location = new System.Drawing.Point(761, 45);
+            this.btn_individual.Location = new System.Drawing.Point(757, 69);
             this.btn_individual.Name = "btn_individual";
             this.btn_individual.Size = new System.Drawing.Size(75, 39);
             this.btn_individual.TabIndex = 43;
@@ -322,11 +327,43 @@
             this.btn_individual.UseVisualStyleBackColor = true;
             this.btn_individual.Click += new System.EventHandler(this.btn_individual_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajustesToolStripMenuItem,
+            this.opcionesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(939, 24);
+            this.menuStrip1.TabIndex = 44;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ajustesToolStripMenuItem
+            // 
+            this.ajustesToolStripMenuItem.Name = "ajustesToolStripMenuItem";
+            this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.ajustesToolStripMenuItem.Text = "ajustes";
+            // 
+            // opcionesToolStripMenuItem
+            // 
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.igualarProvedpresToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.opcionesToolStripMenuItem.Text = "opciones";
+            // 
+            // igualarProvedpresToolStripMenuItem
+            // 
+            this.igualarProvedpresToolStripMenuItem.Name = "igualarProvedpresToolStripMenuItem";
+            this.igualarProvedpresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.igualarProvedpresToolStripMenuItem.Text = "igualar provedpres";
+            this.igualarProvedpresToolStripMenuItem.Click += new System.EventHandler(this.igualarProvedpresToolStripMenuItem_Click);
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 305);
+            this.ClientSize = new System.Drawing.Size(939, 333);
             this.Controls.Add(this.btn_individual);
             this.Controls.Add(this.btn_paquete);
             this.Controls.Add(this.cmb_provedor);
@@ -355,9 +392,13 @@
             this.Controls.Add(this.label0);
             this.Controls.Add(this.Lbl_precio_venta);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Pedidos";
             this.Text = "pedidos";
             this.Load += new System.EventHandler(this.Pedidos_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,5 +433,9 @@
         private System.Windows.Forms.ComboBox cmb_provedor;
         private System.Windows.Forms.Button btn_paquete;
         private System.Windows.Forms.Button btn_individual;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem igualarProvedpresToolStripMenuItem;
     }
 }

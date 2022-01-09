@@ -991,5 +991,11 @@ namespace tienda2.desinger
             }
             MessageBox.Show("listo se encuentran en el escritorio en la carpeta inventarios");
         }
+
+        private void btn_igualar_provedores_Click(object sender, EventArgs e)
+        {
+            igualar_provedores iguprov = new igualar_provedores();
+            iguprov.Show();
+        }
     }
 }

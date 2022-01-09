@@ -6,10 +6,10 @@ dulce tarry|
 sabritas|
 nestle|
 corona|
-marinela|
+marinela pastel|
 turin|
 sabritas|
-marinela|
+marinela galleta|
 sabritas|
 pepsi|
 salma|
@@ -19,7 +19,7 @@ jumex|
 bona-gato|
 dicorsa|
 coca|
-marinela|
+marinela pastel|
 casa vargas|
 orbit|
 danone|
