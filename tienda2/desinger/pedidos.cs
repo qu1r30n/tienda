@@ -608,7 +608,7 @@ namespace tienda2.desinger
             bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "5", "" + costo_por_producto);
 
             Lbl_cantidad_cant.Text = total_de_productos;
-            Lbl_precio_venta.Text = ""+costo_por_producto;
+            Lbl_precio_compra_cant.Text = ""+costo_por_producto;
             string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Lbl_cantidad_cant.Text + "|" + Lbl_precio_compra_cant.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|" + mensaje2_espli[1] + "°paketes_de°" + mensaje2_espli[2];
 
 

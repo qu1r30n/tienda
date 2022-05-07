@@ -588,7 +588,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 587|doritos incognita 62g|11|7501011123878|4|9.9|sabritas|1°producto||1|
 588|doritos flamin hot 62g|11|7501011130272|1|9.9|sabritas|1°producto||1|
 589|doritos 146g|24|7501011131064|9|0|sabritas|1°producto||1|
-590|pake taxo mezclado 170ml|24|7501011135024|9|0|sabritas|1°producto||1|
+590|pake taxo mezclado 170ml|24|7501011135024|9|23|sabritas|1°producto||1|
 591|sabritas habanero 45g|12|7501011137431|0|10|sabritas|1°producto||1|
 592|construy|15|7501011138865|-3|0|inspireca|1°producto||1|
 593|armables|15|7501011140776|0|0|inspireca|1°producto||1|
@@ -823,7 +823,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 822|jumex fresh citricos naranja 400ml|8|7501031307678|-3|0|pepsi|1°producto||1|
 823|jumexfresh 400ml uva|8|7501031307685|4|0|pepsi|1°producto||12|
 824|jumex fresh conga 400ml|8|7501031307708|4|0|pepsi|1°producto||12|
-825|pepsi  600ml|13|7501031310012|0|10.8||1°producto||1|
+825|pepsi  600ml|13|7501031310012|0|11||1°producto||1|
 826|pepsi 3lt|31|7501031310098|3|25.2|pepsi|1°producto||1|
 827|pepzi 355ml|6|7501031310241|-12|0|pepsi|1°producto||1|
 828|pepsi lata 355ml|13|7501031311309|14|9|pepsi|1°producto||1|
@@ -925,7 +925,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 924|fanta naranja 600ml|11|7501055303779|1000|9.9|coca|1°producto||1|
 925|fresca 600ml|12|7501055303786|-2|0|coca|1°producto||1|
 926|fresca 2lt|23|7501055303885|-3|0|coca|1°producto||1|
-927|coca-cola 3lt|42|7501055304745|-24|34.2|coca|1°producto||8|
+927|coca-cola 3lt|110|7501055304745|-16|50|coca|1°producto||8|
 928|fresca 3lt|30|7501055304813|0|0|coca|1°producto||1|
 929|ciel mineralizada 600ml|11|7501055308248|1000|9.9|coca|1°producto||1|
 930|coca-cola retornable 2.5lt|27|7501055310227|-23|21.6|coca|1°producto||8|
