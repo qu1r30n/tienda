@@ -156,7 +156,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 155|valentina amarilla 370ml|15|97339000054|1000|9|valentina|1°producto||1|
 156|valentina negra 370ml|10|97339000061|1000|9|valentina|1°producto||1|
 157|papel higienico premier 4pz|26.5|99072000674|0|0|premier|1°producto||1|
-158|choco huevo sorpresa12g|15|603554102017|23|12|las delicias|1°producto||1|
+158|choco huevo sorpresa12g|15|603554102017|22|12|las delicias|1°producto||1|
 159|skarch 10L|26|606110023924|6|23.4|skarch|1°producto||1|
 160|red-cola 355ml|6|606110024006|24|5.4|red-cola|1°producto||1|
 161|arizona mucho mango 680ml|13|613008738808|996|11.7|arizona|1°producto||1|
@@ -1454,3 +1454,6 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1453|pingúinos 3pzs|18|7501030475743|-1|0|marinela|||1|
 1454|aceite patrona 1L|34|7501060500019|0|0|casa vargas|||1|
 1455|m&ms 43.8g choco|15|7502271911427|0|0|orbit|||1|
+1456|elim|0|fsdajkdfsal|0|0|bic|1||0||
+1457|elim1|1.1|elim1|1|1|bic|1||1||
+1458|elim2|3.3|elim2|1|3|bic|1||1||

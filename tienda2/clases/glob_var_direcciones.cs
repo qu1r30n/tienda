@@ -8,6 +8,7 @@ namespace tienda2.clases
 {
     class var_glob_direcciones
     {
-        public string G_datos_usu = "";
+        public string GG_string_transferir = "";
+        public List<string> GG_list_transferir;
     }
 }

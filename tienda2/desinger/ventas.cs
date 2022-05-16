@@ -228,11 +228,11 @@ namespace tienda2.desinger
                     string[] grupo = temp[7].Split('°');
 
                     Ventana_emergente vent_emergent = new Ventana_emergente();
-                    
-                    if (grupo[0]=="1")
+
+                    if (grupo[0] == "1")
                     {
                         bool esta_libre_la_lista_de_repeticiones_de_producto = true;
-                        
+
                         Txt_buscar_producto.Text = "";
                         Txt_nom_producto.Text = "";
                         Lbl_costo_product_list.Text = temp[8] + " COSTO: " + temp[2];
@@ -245,7 +245,7 @@ namespace tienda2.desinger
                             {
                                 item_espliteado[8] = "" + (Convert.ToDecimal(item_espliteado[8]) + Convert.ToDecimal(temp[8]));
                                 Lbl_costo_product_list.Text = item_espliteado[8] + " COSTO: " + (Convert.ToDecimal(item_espliteado[2]) * Convert.ToDecimal(item_espliteado[8]));
-                                Lst_ventas.Items[j] = string.Join(""+G_parametros[0], item_espliteado);
+                                Lst_ventas.Items[j] = string.Join("" + G_parametros[0], item_espliteado);
                                 esta_libre_la_lista_de_repeticiones_de_producto = false;
                             }
                         }
@@ -260,12 +260,12 @@ namespace tienda2.desinger
                     {
                         bool esta_libre_la_lista_de_repeticiones_de_producto = true;
                         //a = 6;
-                        string[] enviar = { "2°producto°"+ temp[3], "1°cantidad en litros o kilos(se puede decimal)°°2" };
+                        string[] enviar = { "2°producto°" + temp[3], "1°cantidad en litros o kilos(se puede decimal)°°2" };
                         string mensage = vent_emergent.Proceso_ventana_emergente(enviar);
                         string[] informacion_vent_eme = mensage.Split(G_parametros[0]);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
                         temp[8] = informacion_vent_eme[1];
 
-                        if (informacion_vent_eme[1]!="")
+                        if (informacion_vent_eme[1] != "")
                         {
                             for (int j = 0; j < Lst_ventas.Items.Count; j++)
                             {
@@ -290,7 +290,7 @@ namespace tienda2.desinger
                         }
                         Txt_buscar_producto.Text = "";
                         Txt_buscar_producto.Focus();
-                        
+
                     }
 
                     else if (grupo[0] == "3")//
@@ -302,7 +302,7 @@ namespace tienda2.desinger
                     {
 
                     }
-                    
+
                     else//error o default
                     {
                         //cambiarlo por otra cosa despues es el mismo que que el 1---------------------------------------------------
@@ -316,31 +316,31 @@ namespace tienda2.desinger
 
 
 
+
+                        bool esta_libre_la_lista_de_repeticiones_de_producto = true;
+
+                        Txt_buscar_producto.Text = "";
+                        Txt_nom_producto.Text = "";
+                        Lbl_costo_product_list.Text = temp[8] + " COSTO: " + temp[2];
+                        Lbl_nom_product_list.Text = temp[3] + "    PRECIO UNITARIO: " + temp[2];
+
+                        for (int j = 0; j < Lst_ventas.Items.Count; j++)
                         {
-                            bool esta_libre_la_lista_de_repeticiones_de_producto = true;
-
-                            Txt_buscar_producto.Text = "";
-                            Txt_nom_producto.Text = "";
-                            Lbl_costo_product_list.Text = temp[8] + " COSTO: " + temp[2];
-                            Lbl_nom_product_list.Text = temp[3] + "    PRECIO UNITARIO: " + temp[2];
-
-                            for (int j = 0; j < Lst_ventas.Items.Count; j++)
+                            string[] item_espliteado = Lst_ventas.Items[j].ToString().Split(G_parametros[0]);
+                            if (codigo == item_espliteado[0])
                             {
-                                string[] item_espliteado = Lst_ventas.Items[j].ToString().Split(G_parametros[0]);
-                                if (codigo == item_espliteado[0])
-                                {
-                                    item_espliteado[8] = "" + (Convert.ToDecimal(item_espliteado[8]) + Convert.ToDecimal(temp[8]));
-                                    Lbl_costo_product_list.Text = item_espliteado[8] + " COSTO: " + (Convert.ToDecimal(item_espliteado[2]) * Convert.ToDecimal(item_espliteado[8]));
-                                    Lst_ventas.Items[j] = string.Join("" + G_parametros[0], item_espliteado);
-                                    esta_libre_la_lista_de_repeticiones_de_producto = false;
-                                }
+                                item_espliteado[8] = "" + (Convert.ToDecimal(item_espliteado[8]) + Convert.ToDecimal(temp[8]));
+                                Lbl_costo_product_list.Text = item_espliteado[8] + " COSTO: " + (Convert.ToDecimal(item_espliteado[2]) * Convert.ToDecimal(item_espliteado[8]));
+                                Lst_ventas.Items[j] = string.Join("" + G_parametros[0], item_espliteado);
+                                esta_libre_la_lista_de_repeticiones_de_producto = false;
                             }
-                            if (esta_libre_la_lista_de_repeticiones_de_producto)
-                            {
-                                Lst_ventas.Items.Add(string.Join("" + G_parametros[0], temp));
-                            }
-
                         }
+                        if (esta_libre_la_lista_de_repeticiones_de_producto)
+                        {
+                            Lst_ventas.Items.Add(string.Join("" + G_parametros[0], temp));
+                        }
+
+
                     }
                     
                     bandera = true;

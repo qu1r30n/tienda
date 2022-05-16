@@ -25,7 +25,7 @@ namespace tienda2.desinger
 
         }
 
-        public string Proceso_ventana_emergente(string[] nom_datos_recolectados, int modificara = 0, string[] infoextra = null, char caracter_spliteo = '°')
+        public string Proceso_ventana_emergente(string[] nom_datos_recolectados, int modificara = 0,string titulo_ventana= "ventana_emergente", string[] infoextra = null, char caracter_spliteo = '°')
         {
             //1=textbox  1°titulo_texbox°contenido_text_box°restriccion_de_dato      ejemplo "1°precio venta°0°2" //el 2 es la restriccion que solo resivira numeros y punto decimal         
             //2=labels   2°titulo_label°abajo_pondra_otro_label_con_el_contenido    ejemplo "2°id°9999"
@@ -39,6 +39,7 @@ namespace tienda2.desinger
             //
             //            ejemplo "4°grupo°2°4°1°1°2°3°4"
 
+            this.Text=titulo_ventana;
 
             int x = 120;
             int y = 0;

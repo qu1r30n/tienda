@@ -459,3 +459,6 @@ movimiento origen: 0|144|1|10|
 movimiento origen: 0|pomada ceresa|10|
 movimiento origen: 0|100|51|
 movimiento origen: 0|1200|1000|
+movimiento origen: 1|1456|elim|0|fsdajkdfsal|0|0|bic|1||0||
+movimiento origen: 1|1457|elim1|0|elim1|1|0|bic|1||1||
+movimiento origen: 1|1458|elim2|0|elim2|1|0|bic|1||1||

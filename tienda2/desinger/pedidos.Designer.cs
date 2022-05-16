@@ -60,7 +60,12 @@
             this.ajustesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.igualarProvedpresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarRapidoCodigosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.lst_carga = new System.Windows.Forms.ListBox();
+            this.btn_cargar_lst_comprar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // Txt_buscar_producto
@@ -179,7 +184,7 @@
             this.Txt_nom_producto.Location = new System.Drawing.Point(22, 100);
             this.Txt_nom_producto.Name = "Txt_nom_producto";
             this.Txt_nom_producto.Size = new System.Drawing.Size(119, 20);
-            this.Txt_nom_producto.TabIndex = 12;
+            this.Txt_nom_producto.TabIndex = 10;
             this.Txt_nom_producto.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Txt_nom_producto_PreviewKeyDown);
             // 
             // Rdb_codigo_barras
@@ -188,7 +193,7 @@
             this.Rdb_codigo_barras.Location = new System.Drawing.Point(2, 49);
             this.Rdb_codigo_barras.Name = "Rdb_codigo_barras";
             this.Rdb_codigo_barras.Size = new System.Drawing.Size(14, 13);
-            this.Rdb_codigo_barras.TabIndex = 13;
+            this.Rdb_codigo_barras.TabIndex = 11;
             this.Rdb_codigo_barras.TabStop = true;
             this.Rdb_codigo_barras.UseVisualStyleBackColor = true;
             // 
@@ -198,16 +203,16 @@
             this.Rdb_producto.Location = new System.Drawing.Point(2, 100);
             this.Rdb_producto.Name = "Rdb_producto";
             this.Rdb_producto.Size = new System.Drawing.Size(14, 13);
-            this.Rdb_producto.TabIndex = 14;
+            this.Rdb_producto.TabIndex = 12;
             this.Rdb_producto.TabStop = true;
             this.Rdb_producto.UseVisualStyleBackColor = true;
             // 
             // Lst_compras
             // 
             this.Lst_compras.FormattingEnabled = true;
-            this.Lst_compras.Location = new System.Drawing.Point(194, 109);
+            this.Lst_compras.Location = new System.Drawing.Point(494, 109);
             this.Lst_compras.Name = "Lst_compras";
-            this.Lst_compras.Size = new System.Drawing.Size(579, 173);
+            this.Lst_compras.Size = new System.Drawing.Size(279, 173);
             this.Lst_compras.TabIndex = 15;
             this.Lst_compras.SelectedIndexChanged += new System.EventHandler(this.Lst_compras_SelectedIndexChanged);
             // 
@@ -216,7 +221,7 @@
             this.Btn_elim_ultimo.Location = new System.Drawing.Point(779, 251);
             this.Btn_elim_ultimo.Name = "Btn_elim_ultimo";
             this.Btn_elim_ultimo.Size = new System.Drawing.Size(75, 40);
-            this.Btn_elim_ultimo.TabIndex = 9;
+            this.Btn_elim_ultimo.TabIndex = 7;
             this.Btn_elim_ultimo.Text = "eliminar ultimo";
             this.Btn_elim_ultimo.UseVisualStyleBackColor = true;
             this.Btn_elim_ultimo.Click += new System.EventHandler(this.Btn_elim_ultimo_Click);
@@ -226,7 +231,7 @@
             this.Btn_procesar_venta.Location = new System.Drawing.Point(779, 296);
             this.Btn_procesar_venta.Name = "Btn_procesar_venta";
             this.Btn_procesar_venta.Size = new System.Drawing.Size(75, 23);
-            this.Btn_procesar_venta.TabIndex = 10;
+            this.Btn_procesar_venta.TabIndex = 8;
             this.Btn_procesar_venta.Text = "procesar venta";
             this.Btn_procesar_venta.UseVisualStyleBackColor = true;
             this.Btn_procesar_venta.Click += new System.EventHandler(this.Btn_procesar_venta_Click);
@@ -236,7 +241,7 @@
             this.Btn_eliminar_todo.Location = new System.Drawing.Point(779, 218);
             this.Btn_eliminar_todo.Name = "Btn_eliminar_todo";
             this.Btn_eliminar_todo.Size = new System.Drawing.Size(75, 23);
-            this.Btn_eliminar_todo.TabIndex = 8;
+            this.Btn_eliminar_todo.TabIndex = 6;
             this.Btn_eliminar_todo.Text = "eliminar todo";
             this.Btn_eliminar_todo.UseVisualStyleBackColor = true;
             this.Btn_eliminar_todo.Click += new System.EventHandler(this.Btn_eliminar_todo_Click);
@@ -246,7 +251,7 @@
             this.Btn_eliminar_seleccionado.Location = new System.Drawing.Point(779, 170);
             this.Btn_eliminar_seleccionado.Name = "Btn_eliminar_seleccionado";
             this.Btn_eliminar_seleccionado.Size = new System.Drawing.Size(86, 42);
-            this.Btn_eliminar_seleccionado.TabIndex = 7;
+            this.Btn_eliminar_seleccionado.TabIndex = 5;
             this.Btn_eliminar_seleccionado.Text = "eliminar seleccionado";
             this.Btn_eliminar_seleccionado.UseVisualStyleBackColor = true;
             this.Btn_eliminar_seleccionado.Click += new System.EventHandler(this.Btn_eliminar_seleccionado_Click);
@@ -271,10 +276,10 @@
             // 
             // Btn_cargar_pedido
             // 
-            this.Btn_cargar_pedido.Location = new System.Drawing.Point(8, 278);
+            this.Btn_cargar_pedido.Location = new System.Drawing.Point(490, 332);
             this.Btn_cargar_pedido.Name = "Btn_cargar_pedido";
             this.Btn_cargar_pedido.Size = new System.Drawing.Size(98, 39);
-            this.Btn_cargar_pedido.TabIndex = 11;
+            this.Btn_cargar_pedido.TabIndex = 9;
             this.Btn_cargar_pedido.Text = "cargar pedido";
             this.Btn_cargar_pedido.UseVisualStyleBackColor = true;
             this.Btn_cargar_pedido.Click += new System.EventHandler(this.Btn_cargar_pedido_Click);
@@ -283,7 +288,7 @@
             // 
             this.Lbl_cuenta.AutoSize = true;
             this.Lbl_cuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_cuenta.Location = new System.Drawing.Point(661, 309);
+            this.Lbl_cuenta.Location = new System.Drawing.Point(661, 332);
             this.Lbl_cuenta.Name = "Lbl_cuenta";
             this.Lbl_cuenta.Size = new System.Drawing.Size(19, 20);
             this.Lbl_cuenta.TabIndex = 41;
@@ -292,7 +297,7 @@
             // Lbl_nom_product_list
             // 
             this.Lbl_nom_product_list.AutoSize = true;
-            this.Lbl_nom_product_list.Location = new System.Drawing.Point(191, 291);
+            this.Lbl_nom_product_list.Location = new System.Drawing.Point(150, 296);
             this.Lbl_nom_product_list.Name = "Lbl_nom_product_list";
             this.Lbl_nom_product_list.Size = new System.Drawing.Size(185, 13);
             this.Lbl_nom_product_list.TabIndex = 42;
@@ -305,14 +310,14 @@
             this.cmb_provedor.Location = new System.Drawing.Point(634, 46);
             this.cmb_provedor.Name = "cmb_provedor";
             this.cmb_provedor.Size = new System.Drawing.Size(117, 21);
-            this.cmb_provedor.TabIndex = 4;
+            this.cmb_provedor.TabIndex = 2;
             // 
             // btn_paquete
             // 
             this.btn_paquete.Location = new System.Drawing.Point(757, 24);
             this.btn_paquete.Name = "btn_paquete";
             this.btn_paquete.Size = new System.Drawing.Size(75, 39);
-            this.btn_paquete.TabIndex = 43;
+            this.btn_paquete.TabIndex = 3;
             this.btn_paquete.Text = "paquete";
             this.btn_paquete.UseVisualStyleBackColor = true;
             this.btn_paquete.Click += new System.EventHandler(this.btn_paquete_Click);
@@ -322,7 +327,7 @@
             this.btn_individual.Location = new System.Drawing.Point(757, 69);
             this.btn_individual.Name = "btn_individual";
             this.btn_individual.Size = new System.Drawing.Size(75, 39);
-            this.btn_individual.TabIndex = 43;
+            this.btn_individual.TabIndex = 4;
             this.btn_individual.Text = "individual";
             this.btn_individual.UseVisualStyleBackColor = true;
             this.btn_individual.Click += new System.EventHandler(this.btn_individual_Click);
@@ -334,7 +339,7 @@
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(939, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(872, 24);
             this.menuStrip1.TabIndex = 44;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -347,7 +352,8 @@
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.igualarProvedpresToolStripMenuItem});
+            this.igualarProvedpresToolStripMenuItem,
+            this.cargarRapidoCodigosToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.opcionesToolStripMenuItem.Text = "opciones";
@@ -355,15 +361,47 @@
             // igualarProvedpresToolStripMenuItem
             // 
             this.igualarProvedpresToolStripMenuItem.Name = "igualarProvedpresToolStripMenuItem";
-            this.igualarProvedpresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.igualarProvedpresToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.igualarProvedpresToolStripMenuItem.Text = "igualar provedpres";
             this.igualarProvedpresToolStripMenuItem.Click += new System.EventHandler(this.igualarProvedpresToolStripMenuItem_Click);
+            // 
+            // cargarRapidoCodigosToolStripMenuItem
+            // 
+            this.cargarRapidoCodigosToolStripMenuItem.Name = "cargarRapidoCodigosToolStripMenuItem";
+            this.cargarRapidoCodigosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.cargarRapidoCodigosToolStripMenuItem.Text = "cargar rapido codigos";
+            this.cargarRapidoCodigosToolStripMenuItem.Click += new System.EventHandler(this.cargarRapidoCodigosToolStripMenuItem_Click);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // lst_carga
+            // 
+            this.lst_carga.FormattingEnabled = true;
+            this.lst_carga.Location = new System.Drawing.Point(153, 109);
+            this.lst_carga.Name = "lst_carga";
+            this.lst_carga.Size = new System.Drawing.Size(319, 173);
+            this.lst_carga.TabIndex = 45;
+            // 
+            // btn_cargar_lst_comprar
+            // 
+            this.btn_cargar_lst_comprar.Location = new System.Drawing.Point(66, 260);
+            this.btn_cargar_lst_comprar.Name = "btn_cargar_lst_comprar";
+            this.btn_cargar_lst_comprar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cargar_lst_comprar.TabIndex = 46;
+            this.btn_cargar_lst_comprar.Text = "cargar compra";
+            this.btn_cargar_lst_comprar.UseVisualStyleBackColor = true;
+            this.btn_cargar_lst_comprar.Click += new System.EventHandler(this.btn_cargar_lst_comprar_Click);
             // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 333);
+            this.ClientSize = new System.Drawing.Size(872, 383);
+            this.Controls.Add(this.btn_cargar_lst_comprar);
+            this.Controls.Add(this.lst_carga);
             this.Controls.Add(this.btn_individual);
             this.Controls.Add(this.btn_paquete);
             this.Controls.Add(this.cmb_provedor);
@@ -399,6 +437,7 @@
             this.Load += new System.EventHandler(this.Pedidos_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,5 +476,9 @@
         private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem igualarProvedpresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cargarRapidoCodigosToolStripMenuItem;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Button btn_cargar_lst_comprar;
+        public System.Windows.Forms.ListBox lst_carga;
     }
 }

@@ -122,7 +122,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                arch_var_glob.G_datos_usu = adm.Seleccionar_invertida_extraccion_columnas("inf\\us\\ad.txt", 0, Txt_usuario.Text, "1");
+                arch_var_glob.GG_string_transferir = adm.Seleccionar_invertida_extraccion_columnas("inf\\us\\ad.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 area.Show();//muestra el form Area_principal
@@ -152,7 +152,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                arch_var_glob.G_datos_usu = user.Seleccionar_invertida_extraccion_columnas("inf\\us\\usuario.txt", 0, Txt_usuario.Text, "1");
+                arch_var_glob.GG_string_transferir = user.Seleccionar_invertida_extraccion_columnas("inf\\us\\usuario.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 vent.Show();//muestra el form ventas
@@ -178,7 +178,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                arch_var_glob.G_datos_usu = invitado.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
+                arch_var_glob.GG_string_transferir = invitado.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 vent.Show();//muestra el form ventas
@@ -203,7 +203,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                arch_var_glob.G_datos_usu = bas_simul.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
+                arch_var_glob.GG_string_transferir = bas_simul.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 simul_ventana.Show();//muestra el form ventas

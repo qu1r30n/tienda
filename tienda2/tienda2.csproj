@@ -70,6 +70,12 @@
     <Compile Include="desinger\Cambiar_precio.Designer.cs">
       <DependentUpon>Cambiar_precio.cs</DependentUpon>
     </Compile>
+    <Compile Include="desinger\cargar_rapido_cod_bar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\cargar_rapido_cod_bar.Designer.cs">
+      <DependentUpon>cargar_rapido_cod_bar.cs</DependentUpon>
+    </Compile>
     <Compile Include="desinger\Comparar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Cambiar_precio.resx">
       <DependentUpon>Cambiar_precio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="desinger\cargar_rapido_cod_bar.resx">
+      <DependentUpon>cargar_rapido_cod_bar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Comparar.resx">
       <DependentUpon>Comparar.cs</DependentUpon>
