@@ -146,7 +146,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 145|maruchan res|10|41789001925|3|9|maruchan|1°producto||1|
 146|maruchan camaron|10|41789001956|1|9|maruchan|1°producto||1|
 147|maruchan cama/chilepiqui|10|41789001987|4|9|maruchan|1°producto||1|
-148|rastrillo bic confort 3 hojas|12|70330724341|82|6|bic|1°producto||1|
+148|rastrillo bic confort 3 hojas|12|70330724341|82|1|bic|1°producto||1|
 149|cajeta quemada coronado 370gr|36|74323083651|6|32.4|coronado|1°producto||1|
 150|frijoles con choriso 430g|15|78883240547|0|0|la sierra|1°producto||1|
 151|jack daniels aple|30|82184000984|1000|27|jack daniels|1°producto||1|
@@ -1277,7 +1277,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1276|trident uva/naranja|10|7622210938732|3|9||1°producto||1|
 1277|curitas 100pzs|1.5|7702003476594|0|0.5|curitas|1°producto||1|
 1278|stevia 25 sobres|1.5|7792129003187|0|0|stevia|1°producto||1|
-1279|kinder chocolate 50g|22|8000500134702|18|20|kinder|1°producto||8|
+1279|kinder chocolate 50g|22|8000500134702|18|1|kinder|1°producto||8|
 1280|kinder delice 39g|10|8000500267035|31|9|kinder|1°producto||10|
 1281|jugoso al sarten maggi 23.4gr|15|8585002432315|1|13.5||1°producto||1|
 1282|fabuloso complit 500ml|23|8718951167513|0|0|fabuloso|1°producto||1|
@@ -1285,7 +1285,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1284|navaja de afeitar|5|8801038200026|0|3|dorco|1°producto||1|
 1285|pila AAA eveready|9|8999002604755|0|5|eveready|1°producto||1|
 1286|jarrito mandarina 3L|28|67501441615110|10|0|pepsi|1°producto||1|
-1287|0|0||-5|0|0|3||1|
+1287|0|0||-5|3|0|3||1|
 1288|always nocturna 8 pzs|24|7506195178188|1|0|salma|||1|
 1289|muecas mango|7|7502226814995|0|0|orbit|||1|
 1290|milky way mini 8.5g|3.5|706460200157|52|0|orbit|||52|

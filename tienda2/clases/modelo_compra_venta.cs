@@ -67,15 +67,12 @@ namespace tienda2.clases
 
             else
             {
-                string dir_arch = "inf\\inventario\\invent.txt";
-                bas.Editar_espesifico(dir_arch, 0, id_producto, "6", provedor);
+                
+                string dir_arch = "pedidos/" + año_mes_dia + "_" + provedor + ".txt";
+                
 
-                dir_arch = "pedidos/" + año_mes_dia + "_" + provedor + ".txt";
-                bas.Si_existe_suma_sino_desde_el_inventario_agrega(dir_arch, 2, codigo, "0", cantidad, "1|" + costo_compra + "|" + (Convert.ToDecimal(costo_compra) * Convert.ToDecimal(cantidad)) + "|" + info_extra);
-
-
-
-
+                bas.si_existe_suma_sino_agega_extra(dir_arch, 0, codigo, "1", cantidad, codigo + "|" + cantidad + "|" + costo_compra);
+                
             }
 
 

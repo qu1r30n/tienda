@@ -64,6 +64,9 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.lst_carga = new System.Windows.Forms.ListBox();
             this.btn_cargar_lst_comprar = new System.Windows.Forms.Button();
+            this.btn_elim_selec_carga = new System.Windows.Forms.Button();
+            this.btn_elim_todos_carga = new System.Windows.Forms.Button();
+            this.btn_elim_ultimo_carga = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
@@ -395,11 +398,44 @@
             this.btn_cargar_lst_comprar.UseVisualStyleBackColor = true;
             this.btn_cargar_lst_comprar.Click += new System.EventHandler(this.btn_cargar_lst_comprar_Click);
             // 
+            // btn_elim_selec_carga
+            // 
+            this.btn_elim_selec_carga.Location = new System.Drawing.Point(57, 126);
+            this.btn_elim_selec_carga.Name = "btn_elim_selec_carga";
+            this.btn_elim_selec_carga.Size = new System.Drawing.Size(84, 48);
+            this.btn_elim_selec_carga.TabIndex = 47;
+            this.btn_elim_selec_carga.Text = "eliminar seleccionado";
+            this.btn_elim_selec_carga.UseVisualStyleBackColor = true;
+            this.btn_elim_selec_carga.Click += new System.EventHandler(this.btn_elim_selec_carga_Click);
+            // 
+            // btn_elim_todos_carga
+            // 
+            this.btn_elim_todos_carga.Location = new System.Drawing.Point(57, 180);
+            this.btn_elim_todos_carga.Name = "btn_elim_todos_carga";
+            this.btn_elim_todos_carga.Size = new System.Drawing.Size(84, 23);
+            this.btn_elim_todos_carga.TabIndex = 48;
+            this.btn_elim_todos_carga.Text = "eliminar todos";
+            this.btn_elim_todos_carga.UseVisualStyleBackColor = true;
+            this.btn_elim_todos_carga.Click += new System.EventHandler(this.btn_elim_todos_carga_Click);
+            // 
+            // btn_elim_ultimo_carga
+            // 
+            this.btn_elim_ultimo_carga.Location = new System.Drawing.Point(57, 218);
+            this.btn_elim_ultimo_carga.Name = "btn_elim_ultimo_carga";
+            this.btn_elim_ultimo_carga.Size = new System.Drawing.Size(84, 23);
+            this.btn_elim_ultimo_carga.TabIndex = 49;
+            this.btn_elim_ultimo_carga.Text = "eliminar ultimo";
+            this.btn_elim_ultimo_carga.UseVisualStyleBackColor = true;
+            this.btn_elim_ultimo_carga.Click += new System.EventHandler(this.btn_elim_ultimo_carga_Click);
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 383);
+            this.Controls.Add(this.btn_elim_ultimo_carga);
+            this.Controls.Add(this.btn_elim_todos_carga);
+            this.Controls.Add(this.btn_elim_selec_carga);
             this.Controls.Add(this.btn_cargar_lst_comprar);
             this.Controls.Add(this.lst_carga);
             this.Controls.Add(this.btn_individual);
@@ -480,5 +516,8 @@
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Button btn_cargar_lst_comprar;
         public System.Windows.Forms.ListBox lst_carga;
+        private System.Windows.Forms.Button btn_elim_ultimo_carga;
+        private System.Windows.Forms.Button btn_elim_todos_carga;
+        private System.Windows.Forms.Button btn_elim_selec_carga;
     }
 }
