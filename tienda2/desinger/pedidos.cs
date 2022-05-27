@@ -265,7 +265,7 @@ namespace tienda2.desinger
 
                     Ventana_emergente vent_emergent = new Ventana_emergente();
                     string [] enviar2 = new string[] { "1°nombre_provedor" };
-                    string mensage = vent_emergent.Proceso_ventana_emergente(enviar2);//el uno significa que modificara el inventario
+                    string mensage = vent_emergent.Proceso_ventana_emergente(enviar2);
                     mensage = bas.Trimend_paresido(mensage);
                     for (int i = 0; i < Lst_compras.Items.Count; i++)
                     {

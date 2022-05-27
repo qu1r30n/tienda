@@ -741,6 +741,113 @@ namespace tienda2
             return exito_o_fallo;
         }
 
+        public string Si_existe_suma_sino_agrega_extra(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string text_agregar, string info_extra = "", char caracter_separacion = '|')
+        {
+            Crear_archivo_y_directorio(direccion_archivo);
+            bool bandera = false;
+            StreamReader sr = new StreamReader(direccion_archivo);
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+            string exito_o_fallo;
+
+            try
+            {
+
+                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+                {
+                    string linea = sr.ReadLine();//leemos linea y lo guardamos en linea
+                    if (linea != null)
+                    {
+                        string[] palabra = linea.Split(caracter_separacion);
+
+                        if (palabra[num_column_comp] == comparar)
+                        {
+                            bandera = true;
+                            string linea_editada = "";
+
+
+                            if (info_extra != "")
+                            {
+
+                                string[] info_extra_spliteada = info_extra.Split(caracter_separacion);
+
+                                if (info_extra_spliteada[0] == "1")
+                                {
+                                    numero_columnas_editar = numero_columnas_editar + "|7";
+                                    cantidad_a_sumar = cantidad_a_sumar + "|" + (Convert.ToDecimal(info_extra_spliteada[1]) * Convert.ToDecimal(cantidad_a_sumar));
+                                    string[] columnas_editar = numero_columnas_editar.Split(caracter_separacion);
+                                    string[] cantidades_sumara = cantidad_a_sumar.Split(caracter_separacion);
+
+                                    for (int i = 0; i < columnas_editar.Length; i++)
+                                    {
+                                        palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToInt32(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToInt32(cantidades_sumara[i]));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
+                                    }
+                                }
+                                else
+                                {
+                                    string[] columnas_editar = numero_columnas_editar.Split(caracter_separacion);
+                                    string[] cantidades_sumara = cantidad_a_sumar.Split(caracter_separacion);
+
+                                    for (int i = 0; i < columnas_editar.Length; i++)
+                                    {
+                                        palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToInt32(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToInt32(cantidad_a_sumar));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
+                                    }
+                                }
+
+                            }
+
+                            else
+                            {
+                                string[] columnas_editar = numero_columnas_editar.Split(caracter_separacion);
+                                string[] cantidades_sumara = cantidad_a_sumar.Split(caracter_separacion);
+
+                                for (int i = 0; i < columnas_editar.Length; i++)
+                                {
+                                    palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToDecimal(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToDecimal(cantidades_sumara[i]));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
+                                }
+                            }
+
+
+                            for (int i = 0; i < palabra.Length; i++)
+                            {
+                                linea_editada = linea_editada + palabra[i] + caracter_separacion;
+                            }
+                            linea_editada = Trimend_paresido(linea_editada, caracter_separacion);
+                            sw.WriteLine(linea_editada);
+
+                        }
+
+                        else
+                        {
+                            sw.WriteLine(linea);
+                        }
+                    }
+                }
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = "1)exito";
+                File.Delete(direccion_archivo);//borramos el archivo original
+                File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+
+                if (bandera == false)
+                {
+                    
+                    Agregar(direccion_archivo,text_agregar);
+
+                }
+
+
+            }
+            catch (Exception error)
+            {
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = "2)error:" + error;
+                File.Delete(dir_tem);//borramos el archivo temporal
+            }
+            return exito_o_fallo;
+        }
+
         public string Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_editar, string cantidad_a_sumar,string columnas_a_extraer_inventario ,string info_extra = "", char caracter_separacion = '|')
         {
             Crear_archivo_y_directorio(direccion_archivo);

@@ -47,3 +47,4 @@ D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.control_provedores.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.igualar_provedores.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.csproj.CopyComplete
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.cargar_rapido_cod_bar.resources
+D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.inventario.resources

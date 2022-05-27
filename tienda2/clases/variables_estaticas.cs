@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace tienda2.clases
 {
-    class var_glob_direcciones
+    static class variables_estaticas
     {
-        public string GG_string_transferir = "";
-        public List<string> GG_list_transferir;
-        
+        static public bool GG_modo_inventario = false;//esta la usaremos para modo inventario en ventas
     }
 }

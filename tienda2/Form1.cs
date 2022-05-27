@@ -15,7 +15,7 @@ namespace tienda2
 {
     public partial class Form1 : Form
     {
-        var_glob_direcciones arch_var_glob = new var_glob_direcciones();
+        string g_global = "";
         static public string direccion_programa = Application.ExecutablePath.ToString();
 
         public Form1()
@@ -122,7 +122,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                arch_var_glob.GG_string_transferir = adm.Seleccionar_invertida_extraccion_columnas("inf\\us\\ad.txt", 0, Txt_usuario.Text, "1");
+                g_global = adm.Seleccionar_invertida_extraccion_columnas("inf\\us\\ad.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 area.Show();//muestra el form Area_principal
@@ -152,7 +152,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                arch_var_glob.GG_string_transferir = user.Seleccionar_invertida_extraccion_columnas("inf\\us\\usuario.txt", 0, Txt_usuario.Text, "1");
+                g_global = user.Seleccionar_invertida_extraccion_columnas("inf\\us\\usuario.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 vent.Show();//muestra el form ventas
@@ -178,7 +178,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                arch_var_glob.GG_string_transferir = invitado.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
+                g_global = invitado.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 vent.Show();//muestra el form ventas
@@ -203,7 +203,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                arch_var_glob.GG_string_transferir = bas_simul.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
+                g_global= bas_simul.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 simul_ventana.Show();//muestra el form ventas
@@ -215,6 +215,11 @@ namespace tienda2
                 Txt_usuario.Focus();
                 MessageBox.Show("incorrecto");//muestra el form ventas
             }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //si se cierra formulario hacer esta accion
         }
     }
 }

@@ -56,6 +56,18 @@ namespace tienda2.desinger
                     temp = temp + codigo_barras_list[i] + G_parametros[0];
                     cantidades_de_productos = cantidades_de_productos + cantidad[i] + G_parametros[0];
 
+                    if (variables_estaticas.GG_modo_inventario==true)
+                    {
+                        DateTime fecha_hora = DateTime.Now;
+                        string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+                        string hora_min_seg = fecha_hora.ToString("HHmmss");
+                        string dir_venta_rest_invent = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\" + año_mes_dia + "_compras_durante_invet.txt";
+                        bas.Crear_archivo_y_directorio(dir_venta_rest_invent);
+                        //bas.Agregar(dir_venta_rest_invent, codigo_barras_list[i] + "|" + cantidad[i] + "|" + hora_min_seg);
+                        bas.si_existe_suma_sino_agega_extra(dir_venta_rest_invent, 0, ""+codigo_barras_list[i], "2", ""+cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + hora_min_seg);
+                    }
+
+
                     bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);
                     bas.Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(direccion2 + provedor[i] + ".txt", 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i], "1|3|0|6|8|2");
                     bas.si_existe_suma_sino_agega_extra(direccion3,0,""+provedor[i], "1", "" +precio_venta[i],provedor[i]+"|"+precio_venta[i]);

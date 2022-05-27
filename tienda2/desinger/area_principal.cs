@@ -973,23 +973,9 @@ namespace tienda2.desinger
 
         private void btn_inventario_Click(object sender, EventArgs e)
         {
-            DateTime fecha_hora = DateTime.Now;
-            string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
-            Tex_base bas = new Tex_base();
+            inventario invent = new inventario();
+            invent.Show();
 
-            string[] datos_para_admin = bas.Leer("inf\\inventario\\invent.txt", "1|3|4");
-            for (int i = 0; i < datos_para_admin.Length; i++)
-            {
-                bas.Agregar(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\inventarios\\" + año_mes_dia + "_admin.txt", datos_para_admin[i]);
-            }
-
-
-            string[] datos_para_empleado = bas.Leer("inf\\inventario\\invent.txt", "1|3");
-            for (int i = 0; i < datos_para_empleado.Length; i++)
-            {
-                bas.Agregar(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\inventarios\\" + año_mes_dia + "_empleado.txt", datos_para_empleado[i]);
-            }
-            MessageBox.Show("listo se encuentran en el escritorio en la carpeta inventarios");
         }
 
         private void btn_igualar_provedores_Click(object sender, EventArgs e)
