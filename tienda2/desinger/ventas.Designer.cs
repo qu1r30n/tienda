@@ -121,6 +121,7 @@
             this.Lst_ventas.Size = new System.Drawing.Size(239, 251);
             this.Lst_ventas.TabIndex = 16;
             this.Lst_ventas.SelectedIndexChanged += new System.EventHandler(this.Lst_ventas_SelectedIndexChanged);
+            this.Lst_ventas.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Lst_ventas_PreviewKeyDown);
             // 
             // Txt_buscar_producto
             // 
@@ -240,7 +241,7 @@
             // ajustesToolStripMenuItem
             // 
             this.ajustesToolStripMenuItem.Name = "ajustesToolStripMenuItem";
-            this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.ajustesToolStripMenuItem.Text = "ajustes";
             this.ajustesToolStripMenuItem.Click += new System.EventHandler(this.ajustesToolStripMenuItem_Click);
             // 
@@ -255,7 +256,7 @@
             // provedorToolStripMenuItem
             // 
             this.provedorToolStripMenuItem.Name = "provedorToolStripMenuItem";
-            this.provedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.provedorToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.provedorToolStripMenuItem.Text = "provedor";
             this.provedorToolStripMenuItem.Click += new System.EventHandler(this.provedorToolStripMenuItem_Click);
             // 

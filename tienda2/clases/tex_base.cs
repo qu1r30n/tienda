@@ -162,9 +162,6 @@ namespace tienda2
             return columna;
         }
 
-
-
-
         public string Editar(string direccion_archivo, string buscar0, string remplasar0, string posiciones = null)
         {
 
@@ -404,7 +401,7 @@ namespace tienda2
 
         }
 
-        public string Eliminar(string direccion_archivo, string buscar)
+        public string Eliminar(string direccion_archivo, string comparar,int columna_comp)
         {
             bool bandera = true;
             G_linea = direccion_archivo.Split('\\');
@@ -433,7 +430,7 @@ namespace tienda2
                     for (int i = 0; i < G_linea.Length; i++)
                     {
 
-                        if (G_linea[i] == buscar)
+                        if (G_linea[columna_comp] == comparar)
                         {
                             bandera = false;
                         }
@@ -457,7 +454,7 @@ namespace tienda2
                 File.Move(G_temp, direccion_archivo);
             }
             catch { }
-            return buscar;
+            return comparar;
         }
 
         public string[] Leer_columnas(string direccion_archivo)
@@ -1254,6 +1251,64 @@ namespace tienda2
             return exito_o_fallo;
         }
 
+        public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo, char caracter_separacion = '|')
+        {
+            Tex_base bas = new Tex_base();
+            string[] lineas = bas.Leer(direccion_archivo);
+
+            if (tipo == "numero")
+            {
+                string temporal_apoyo;
+                for (int i = 0; i < lineas.Length; i++)
+                {
+                    for (int j = i + 1; j < lineas.Length; j++)
+                    {
+
+                        string[] num1 = lineas[i].Split(caracter_separacion);
+                        decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
+                        string[] num2 = lineas[j].Split(caracter_separacion);
+                        decimal num2_decimal = Convert.ToDecimal(num2[columna_comparar]);
+                        if (num1_decimal < num2_decimal)
+                        {
+                            temporal_apoyo = lineas[j];
+                            lineas[j] = lineas[i];
+                            lineas[i] = temporal_apoyo;
+                        }
+                        else if (num1_decimal >= num2_decimal)
+                        {
+                            //no_hacer_nada
+                        }
+                        else
+                        {
+                            //error
+                        }
+
+
+
+
+
+                    }//for linea_de_abajo
+                }//for linea_de_arriba
+            }//if tipo
+
+
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+            for (int k = 0; k < lineas.Length; k++)
+            {
+                sw.WriteLine(lineas[k]);
+
+            }
+            sw.Close();
+            File.Delete(direccion_archivo);//borramos el archivo original
+            File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+            return lineas;
+        }
+
+        public bool existe_archivo(string direccion)
+        {
+            return File.Exists(direccion);
+        }
     }
 
 }

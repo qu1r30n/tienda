@@ -55,17 +55,23 @@ namespace tienda2.desinger
                 {
                     temp = temp + codigo_barras_list[i] + G_parametros[0];
                     cantidades_de_productos = cantidades_de_productos + cantidad[i] + G_parametros[0];
+                    
+                    string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+                    string direccion_inventario_hacer = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\" + año_mes_dia + "_todo_tienda.txt";
 
-                    if (variables_estaticas.GG_modo_inventario==true)
+                    string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
+                    if (bas.existe_archivo(mod_inv))
                     {
                         DateTime fecha_hora = DateTime.Now;
-                        string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+
                         string hora_min_seg = fecha_hora.ToString("HHmmss");
-                        string dir_venta_rest_invent = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\" + año_mes_dia + "_compras_durante_invet.txt";
+                        string dir_venta_rest_invent = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\" + año_mes_dia + "_compras_durante_invet_e_inventario.txt";
                         bas.Crear_archivo_y_directorio(dir_venta_rest_invent);
-                        //bas.Agregar(dir_venta_rest_invent, codigo_barras_list[i] + "|" + cantidad[i] + "|" + hora_min_seg);
-                        bas.si_existe_suma_sino_agega_extra(dir_venta_rest_invent, 0, ""+codigo_barras_list[i], "2", ""+cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + hora_min_seg);
+                        bas.Agregar(dir_venta_rest_invent, codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg);
+                        //bas.si_existe_suma_sino_agega_extra(dir_venta_rest_invent, 0, ""+codigo_barras_list[i], "2", ""+(Convert.ToDouble(cantidad[i])*-1), codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg);
                     }
+
+
 
 
                     bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);

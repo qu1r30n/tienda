@@ -1,11 +1,11 @@
 603554102017|12|choco huevo sorpresa12g
-70330724341|42|rastrillo bic confort 3 hojas
+70330724341|44|rastrillo bic confort 3 hojas
 5410228240945|10|stella artois lager 250ml
 3014260846725|9|cepillodental
 22000279033|6|orbit americano 16.2g
 40232838699|8|agua skarch 1Lt
-8000500134702|13|kinder chocolate 50g
-97339000030|3|salsa valentina 1L amarilla
+8000500134702|14|kinder chocolate 50g
+97339000030|4|salsa valentina 1L amarilla
 014800515329|1|clamato 473
 2261003|1|orbit hierbabuena 5.6g
 703307243418000500134702|11|
@@ -15,3 +15,9 @@
 781159053849|2|sabro leche 1L
 8801038200026|1|navaja de afeitar
 7501006705942|1|ace jabon 250g
+75002275|2|chocorroles piña 100g
+75003371|2|gerber durazno 113gr
+75001322|2|marlboro rojo 20
+75009809|15|coca-cola 500ml
+75003722|15|aceite maravilla 500ml
+75003463|15|gerber frutas mixtas 113gr

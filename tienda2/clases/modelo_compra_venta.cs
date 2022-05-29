@@ -142,7 +142,7 @@ namespace tienda2.clases
             {
                 direccion = "inf\\inventario\\invent.txt";
                 op.Actualisar_inventario(direccion, "" + codigo[i], Convert.ToDecimal(cantidades_vendidas[i]) * -1);
-
+                
                 direccion = "ventas\\" + año + "\\" + mes + "\\dias\\p_" + año_mes_dia + ".txt";
                 op.Actualisar_resumen_venta_productos(direccion, "" + codigo[i], Convert.ToDecimal(cantidades_vendidas[i]), nom_productos[i]);
 

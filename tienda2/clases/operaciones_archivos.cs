@@ -579,6 +579,19 @@ namespace tienda2
             
         }
 
+        public void Eliminar_archivo(string direccion)
+        {
+            try
+            {
+                File.Delete(direccion);
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
+
         public void Pedido (string direccion_archivo,string[]agregar)
         {
             Tex_base bas = new Tex_base();

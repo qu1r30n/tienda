@@ -171,7 +171,7 @@ namespace tienda2.desinger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 350);
             this.Controls.Add(this.chb_cambiar_invent);
             this.Controls.Add(this.Btn_elim_ultimo2);
             this.Controls.Add(this.Btn_eliminar_todo2);

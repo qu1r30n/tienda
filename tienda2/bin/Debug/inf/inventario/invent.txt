@@ -7,27 +7,27 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 6|leche nesquik chocolate 240ml|9|75000011|-10000|7.2|nesquik|1°producto||7|
 7|cloralex 950ml|14|75000615|-10000|12.6||1°producto||1|
 8|fabuloso  500ml|16|75001186|-10000|14.4||1°producto||1|
-9|marlboro rojo 20|63|75001322|-10000|54|marlboro|1°producto||20|
+9|marlboro rojo 20|63|75001322|-10002|54|marlboro|1°producto||20|
 10|malboro 14 rojos|47|75001339|-10000|0|malboro|1°producto||5|
 11|boing mango 250ml|7|75001759|-10000|5.4|del valle|1°producto||1|
 12|jugo boing fresa chico 250ml|6|75001766|-10000|5.4|del valle|1°producto||1|
 13|jugo boing guayaba chico 250ml|7|75001773|-10000|5.4|del valle|1°producto||1|
 14|boing manzana 250ml|7|75001797|-10000|0|boing|1°producto||1|
 15|boing uva 250ml|7|75001834|-10000|4.3|nestle|1°producto||1|
-16|chocorroles piña 100g|16|75002275|-10000|13.5|marinela|1°producto||1|
+16|chocorroles piña 100g|16|75002275|-10002|13.5|marinela|1°producto||1|
 17|aceite 123 1lt|32|75002343|-10000|0|123|1°producto||1|
 18|aceite maravilla 1lt|25.5|75002756|-10000|0|maravilla|1°producto||1|
-19|gerber durazno 113gr|11|75003371|-10000|9.9|nestle|1°producto||1|
+19|gerber durazno 113gr|11|75003371|-10002|9.9|nestle|1°producto||1|
 20|sabritas adobadas 45g|12|75003388|-10000|10.8||1°producto||1|
 21|gerber manzana 113g|11|75003401|-10000|9.9||1°producto||1|
 22|gerber ciruela pasa 113gr|11|75003425|-10000|9.9|nestle|1°producto||1|
 23|gerber frutas tropicales 113gr|11|75003456|-10000|9.9|nestle|1°producto||1|
-24|gerber frutas mixtas 113gr|11|75003463|-10000|9.9|nestle|1°producto||1|
+24|gerber frutas mixtas 113gr|11|75003463|-10015|9.9|nestle|1°producto||1|
 25|gerber mango 113gr|11|75003487|-10000|9.9|nestle|1°producto||1|
-26|aceite maravilla 500ml|16.5|75003722|-10000|0|maravilla|1°producto||1|
+26|aceite maravilla 500ml|16.5|75003722|-10015|0|maravilla|1°producto||1|
 27|coca vidrio 500ml|10|75004699|-10000|0|coca|1°producto||1|
 28|coca-cola 600ml|14|75007614|-10000|11.7|coca|1°producto||24|
-29|coca-cola 500ml|12|75009809|-10000|9|coca|1°producto||24|
+29|coca-cola 500ml|12|75009809|-10015|9|coca|1°producto||24|
 30|nesquik fresa 240ml|9|75009861|-10000|0|jumex|1°producto||54|
 31|indioi 1.2L|35|75019303|-10000|0|indio|1°producto||1|
 32|m&m mini4.5|4|75019426|-10000|0|m&m|1°producto||1|
@@ -146,13 +146,13 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 145|maruchan res|10|41789001925|-10000|9|maruchan|1°producto||1|
 146|maruchan camaron|10|41789001956|-10000|9|maruchan|1°producto||1|
 147|maruchan cama/chilepiqui|10|41789001987|-10000|9|maruchan|1°producto||1|
-148|rastrillo bic confort 3 hojas|12|70330724341|-10000|1|bic|1°producto||1|
+148|rastrillo bic confort 3 hojas|12|70330724341|-10002|1|bic|1°producto||1|
 149|cajeta quemada coronado 370gr|36|74323083651|-10000|32.4|coronado|1°producto||1|
 150|frijoles con choriso 430g|15|78883240547|-10000|0|la sierra|1°producto||1|
 151|jack daniels aple|30|82184000984|-10000|27|jack daniels|1°producto||1|
 152|jack daniel ginger|30|82184038338|-10000|27|jack daniels|1°producto||1|
 153|tecate original laton 473ml|18|89826001415|-10000|15.3|indio|1°producto||24|
-154|salsa valentina 1L amarilla|25|97339000030|-10000|23|valentina|1°producto||1|
+154|salsa valentina 1L amarilla|25|97339000030|-10001|23|valentina|1°producto||1|
 155|valentina amarilla 370ml|15|97339000054|-10000|9|valentina|1°producto||1|
 156|valentina negra 370ml|10|97339000061|-10000|9|valentina|1°producto||1|
 157|papel higienico premier 4pz|26.5|99072000674|-10000|0|premier|1°producto||1|
@@ -1277,7 +1277,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1276|trident uva/naranja|10|7622210938732|-10000|9||1°producto||1|
 1277|curitas 100pzs|1.5|7702003476594|-10000|0.5|curitas|1°producto||1|
 1278|stevia 25 sobres|1.5|7792129003187|-10000|0|stevia|1°producto||1|
-1279|kinder chocolate 50g|22|8000500134702|-10000|1|kinder|1°producto||8|
+1279|kinder chocolate 50g|22|8000500134702|-10001|1|kinder|1°producto||8|
 1280|kinder delice 39g|10|8000500267035|-10000|9|kinder|1°producto||10|
 1281|jugoso al sarten maggi 23.4gr|15|8585002432315|-10000|13.5||1°producto||1|
 1282|fabuloso complit 500ml|23|8718951167513|-10000|0|fabuloso|1°producto||1|

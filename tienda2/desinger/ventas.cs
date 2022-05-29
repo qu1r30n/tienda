@@ -23,7 +23,7 @@ namespace tienda2.desinger
             InitializeComponent();
             Recargar_texbox();
         }
-        
+
         private void Btn_eliminar_todo_Click(object sender, EventArgs e)
         {
             string temporal;
@@ -56,8 +56,13 @@ namespace tienda2.desinger
             }
             Txt_buscar_producto.Focus();
         }
-        
+        //funcion btn_eliminar_seleccionado
         private void Btn_eliminar_seleccionado_Click(object sender, EventArgs e)
+        {
+            funcion_eliminar_seleccionado();
+        }
+
+        private void funcion_eliminar_seleccionado()
         {
             string temporal;
             string[] temporal_s;
@@ -91,7 +96,11 @@ namespace tienda2.desinger
 
             Txt_buscar_producto.Focus();
         }
-        
+
+
+        //----------------------------------------------------------------------------
+
+
         private void Txt_buscar_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyValue == (char)(Keys.Enter))
@@ -100,7 +109,7 @@ namespace tienda2.desinger
                 Procesar_codigo(info[0]);
             }
         }
-        
+
         private void Btn_elim_ultimo_Click(object sender, EventArgs e)
         {
             string temporal;
@@ -133,7 +142,7 @@ namespace tienda2.desinger
             }
             Txt_buscar_producto.Focus();
         }
-        
+
         private void Btn_procesar_venta_Click(object sender, EventArgs e)
         {
             string temporal;
@@ -145,7 +154,7 @@ namespace tienda2.desinger
 
             cv.codigo_barras_list.Clear();
             cv.nombre_productos.Clear();
-            
+
             for (int coll = 0; coll < Lst_ventas.Items.Count; coll++)
             {
                 temporal = "" + Lst_ventas.Items[coll];
@@ -168,7 +177,7 @@ namespace tienda2.desinger
 
             }
 
-            
+
             cv.Total_costo_venta = total;
             cv.Cost_comp = total_cost_com;
             cv.Lbl_total.Text = "" + total;
@@ -182,14 +191,14 @@ namespace tienda2.desinger
 
             Txt_buscar_producto.Focus();
             cv.Show();
-            
+
         }
-        
+
         private void Recargar_texbox()
         {
-            
+
             Tex_base bas = new Tex_base();
-            
+
             string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7|8", G_parametros[0]);
             Txt_nom_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir.Length; k++)
@@ -205,9 +214,10 @@ namespace tienda2.desinger
                 Txt_buscar_producto.AutoCompleteCustomSource.Add("" + imprimir2[k]);
             }
         }
-        
-        private void Procesar_codigo(string codigo)
+
+        private void Procesar_codigo(string codigo,string cantidad_a_sumar_o_restar="1")
         {
+            double cant_sum_res = Convert.ToDouble(cantidad_a_sumar_o_restar);
             string temporal;
             string[] temporal_s;
             decimal total = 0;
@@ -216,15 +226,18 @@ namespace tienda2.desinger
 
             for (int i = 0; i < G_productos.Count; i++)
             {
-                String[]temp=G_productos[i].Split(G_parametros[0]);
-                
-                if (codigo==temp[0])//productos
+                String[] temp = G_productos[i].Split(G_parametros[0]);
+
+                if (codigo == temp[0])//productos
                 {
-                    if (temp[8]=="")
+                    /*
+                    if (temp[8] == "")
                     {
                         temp[8] = "1";
                     }
+                    */
 
+                    temp[8] = cantidad_a_sumar_o_restar;
                     string[] grupo = temp[7].Split('°');
 
                     Ventana_emergente vent_emergent = new Ventana_emergente();
@@ -263,7 +276,7 @@ namespace tienda2.desinger
                         string[] enviar = { "2°producto°" + temp[3], "1°cantidad en litros o kilos(se puede decimal)°°2" };
                         string mensage = vent_emergent.Proceso_ventana_emergente(enviar);
                         string[] informacion_vent_eme = mensage.Split(G_parametros[0]);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
-                        temp[8] = informacion_vent_eme[1];
+                        temp[8] = ""+(Convert.ToDouble(informacion_vent_eme[1])*Convert.ToDouble(cantidad_a_sumar_o_restar));
 
                         if (informacion_vent_eme[1] != "")
                         {
@@ -342,7 +355,7 @@ namespace tienda2.desinger
 
 
                     }
-                    
+
                     bandera = true;
                     break;
                 }
@@ -358,25 +371,25 @@ namespace tienda2.desinger
                 string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", G_parametros[0]);//este regresa los provedores
                 Operaciones_textos op_text = new Operaciones_textos();
                 string provedores_txt = op_text.join_paresido('°', provedores);
-                
+
                 //------------------------------------------------------------
                 Ventana_emergente vent_emergent = new Ventana_emergente();
                 //-------------------------------------------------------------
                 string[] enviar;
-                if (G_prov_anterior==null)
+                if (G_prov_anterior == null)
                 {
-                    if (provedores.Length<0)
+                    if (provedores.Length < 0)
                     {
                         G_prov_anterior = provedores[0];
                     }
 
-                    
+
 
                     enviar = new string[] { "2°id°" + info_invent.Length, "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
                 else
                 {
-                    
+
                     enviar = new string[] { "2°id°" + info_invent.Length, "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
                 }
 
@@ -424,7 +437,7 @@ namespace tienda2.desinger
 
             Lbl_cuenta.Text = "" + total;
         }
-        
+
         private void Txt_nom_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyValue == (char)(Keys.Enter))
@@ -435,7 +448,7 @@ namespace tienda2.desinger
 
             }
         }
-        
+
         private void Procesar_codigo2(string codigo)
         {
 
@@ -450,16 +463,16 @@ namespace tienda2.desinger
                 }
             }
         }
-        
+
         private void Lst_ventas_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (Lst_ventas.SelectedItem != null)
             {
                 string[] info_producto_lista = Lst_ventas.SelectedItem.ToString().Split(G_parametros[0]);
-                Lbl_costo_product_list.Text = info_producto_lista[8] + " COSTO: " + (Convert.ToDecimal(info_producto_lista[2])* Convert.ToDecimal(info_producto_lista[8]));
+                Lbl_costo_product_list.Text = info_producto_lista[8] + " COSTO: " + (Convert.ToDecimal(info_producto_lista[2]) * Convert.ToDecimal(info_producto_lista[8]));
                 Lbl_nom_product_list.Text = info_producto_lista[3] + "    PRECIO UNITARIO: " + info_producto_lista[2];
             }
-            
+
         }
 
         private void chb_ventas_compras_CheckedChanged(object sender, EventArgs e)
@@ -474,7 +487,7 @@ namespace tienda2.desinger
             }
         }
 
-        
+
         private void Ventas_Activated(object sender, EventArgs e)
         {
             DateTime fecha_hora = DateTime.Now;
@@ -486,10 +499,10 @@ namespace tienda2.desinger
             string año = fecha_hora.ToString("yyyy");
 
             Tex_base bas = new Tex_base();
-            string vent_comp= bas.Seleccionar("inf\\inventario\\ven\\vent.txt", 0, año_mes_dia, "1|2");
+            string vent_comp = bas.Seleccionar("inf\\inventario\\ven\\vent.txt", 0, año_mes_dia, "1|2");
             if (vent_comp == "")
             {
-                bas.Agregar("inf\\inventario\\ven\\vent.txt",año_mes_dia+ "|0|0");
+                bas.Agregar("inf\\inventario\\ven\\vent.txt", año_mes_dia + "|0|0");
                 vent_comp = bas.Seleccionar("inf\\inventario\\ven\\vent.txt", 0, año_mes_dia, "1|2");
             }
 
@@ -503,13 +516,35 @@ namespace tienda2.desinger
 
         private void ajustesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void provedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             control_provedores cont_prov = new control_provedores();
             cont_prov.Show();
+        }
+
+        private void Lst_ventas_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyValue == (char)(Keys.Add))
+            {
+                string []item_spliteado=Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros);
+                    Procesar_codigo(item_spliteado[0], "1");
+            }
+            else if (e.KeyValue == (char)(Keys.Subtract))
+            {
+                string[] item_spliteado = Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros);
+                
+                Procesar_codigo(item_spliteado[0], "-1");
+                item_spliteado = null;
+                item_spliteado = Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros);
+                if (Convert.ToDouble(item_spliteado[9])<=0)
+                {
+                    funcion_eliminar_seleccionado();
+                }
+
+            }
         }
     }
 }
