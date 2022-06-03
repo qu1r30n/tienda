@@ -697,6 +697,13 @@ namespace tienda2
             File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
+        public void remplasar_archivo(string archivo_a_cambiar, string archivo_remplaso)
+        {
+            File.Delete(archivo_a_cambiar);//borramos el archivo original
+            Thread.Sleep(1);
+            File.Move(archivo_remplaso, archivo_a_cambiar);//renombramos el archivo temporal por el que tenia el original
+        }
+
         public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo, char caracter_separacion = '|')
         {
             Tex_base bas = new Tex_base();

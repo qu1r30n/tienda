@@ -82,8 +82,8 @@ namespace tienda2.clases
         {
             string codigos_unidos = string.Join("°", codigo);
             DateTime fecha_hora = DateTime.Now;
-            string hora_min_seg = fecha_hora.ToString("HH:mm:ss");
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+            string hora_min_seg = fecha_hora.ToString("HH:mm:ss");
             string dia = fecha_hora.ToString("dd");
             string mes = fecha_hora.ToString("MM");
             string año = fecha_hora.ToString("yyyy");

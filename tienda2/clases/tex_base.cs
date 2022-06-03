@@ -738,7 +738,9 @@ namespace tienda2
             return exito_o_fallo;
         }
 
-        public string Si_existe_suma_sino_agrega_extra(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string text_agregar, string info_extra = "", char caracter_separacion = '|')
+        
+        
+        public string si_existe_suma_sino_agega_extra(string direccion_archivo, int columna_a_comparar, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string texto_a_agregar, char caracter_separacion = '|')
         {
             Crear_archivo_y_directorio(direccion_archivo);
             bool bandera = false;
@@ -746,6 +748,7 @@ namespace tienda2
             string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
             StreamWriter sw = new StreamWriter(dir_tem, true);
             string exito_o_fallo;
+            int num_column_comp = 0;
 
             try
             {
@@ -755,82 +758,36 @@ namespace tienda2
                     string linea = sr.ReadLine();//leemos linea y lo guardamos en linea
                     if (linea != null)
                     {
-                        string[] palabra = linea.Split(caracter_separacion);
 
-                        if (palabra[num_column_comp] == comparar)
+                        string[] linea_espliteada = linea.Split(caracter_separacion);
+                        if (linea_espliteada[columna_a_comparar] == comparar)
                         {
+                            string[] num_col_spliteadas = numero_columnas_editar.Split(caracter_separacion);
+                            string[] cantidad_spliteada = cantidad_a_sumar.Split(caracter_separacion);
+                            for (int i = 0; i < num_col_spliteadas.Length; i++)
+                            {
+                                linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])] = "" + (Convert.ToDecimal(linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])]) + Convert.ToDecimal(cantidad_spliteada[i]));
+                            }
+                            linea = string.Join("|", linea_espliteada);
                             bandera = true;
-                            string linea_editada = "";
-
-
-                            if (info_extra != "")
-                            {
-
-                                string[] info_extra_spliteada = info_extra.Split(caracter_separacion);
-
-                                if (info_extra_spliteada[0] == "1")
-                                {
-                                    numero_columnas_editar = numero_columnas_editar + "|7";
-                                    cantidad_a_sumar = cantidad_a_sumar + "|" + (Convert.ToDecimal(info_extra_spliteada[1]) * Convert.ToDecimal(cantidad_a_sumar));
-                                    string[] columnas_editar = numero_columnas_editar.Split(caracter_separacion);
-                                    string[] cantidades_sumara = cantidad_a_sumar.Split(caracter_separacion);
-
-                                    for (int i = 0; i < columnas_editar.Length; i++)
-                                    {
-                                        palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToInt32(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToInt32(cantidades_sumara[i]));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
-                                    }
-                                }
-                                else
-                                {
-                                    string[] columnas_editar = numero_columnas_editar.Split(caracter_separacion);
-                                    string[] cantidades_sumara = cantidad_a_sumar.Split(caracter_separacion);
-
-                                    for (int i = 0; i < columnas_editar.Length; i++)
-                                    {
-                                        palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToInt32(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToInt32(cantidad_a_sumar));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
-                                    }
-                                }
-
-                            }
-
-                            else
-                            {
-                                string[] columnas_editar = numero_columnas_editar.Split(caracter_separacion);
-                                string[] cantidades_sumara = cantidad_a_sumar.Split(caracter_separacion);
-
-                                for (int i = 0; i < columnas_editar.Length; i++)
-                                {
-                                    palabra[Convert.ToInt32(columnas_editar[i])] = "" + (Convert.ToDecimal(palabra[Convert.ToInt32(columnas_editar[i])]) + Convert.ToDecimal(cantidades_sumara[i]));//esta largo lo se. pero significa que a la columna a editar le va a sumar la cantidad señalada
-                                }
-                            }
-
-
-                            for (int i = 0; i < palabra.Length; i++)
-                            {
-                                linea_editada = linea_editada + palabra[i] + caracter_separacion;
-                            }
-                            linea_editada = Trimend_paresido(linea_editada, caracter_separacion);
-                            sw.WriteLine(linea_editada);
-
                         }
 
-                        else
-                        {
-                            sw.WriteLine(linea);
-                        }
+                        sw.WriteLine(linea);
                     }
+                    num_column_comp++;
                 }
+                num_column_comp = 0;
+
                 sr.Close();
                 sw.Close();
-                exito_o_fallo = "1)exito";
+                exito_o_fallo = bandera + "|1)exito";
                 File.Delete(direccion_archivo);//borramos el archivo original
                 File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
 
                 if (bandera == false)
                 {
-                    
-                    Agregar(direccion_archivo,text_agregar);
-
+                    bandera = false;
+                    Agregar(direccion_archivo, texto_a_agregar);
                 }
 
 
@@ -839,11 +796,12 @@ namespace tienda2
             {
                 sr.Close();
                 sw.Close();
-                exito_o_fallo = "2)error:" + error;
+                exito_o_fallo = bandera + "|2)error:" + error;
                 File.Delete(dir_tem);//borramos el archivo temporal
             }
             return exito_o_fallo;
         }
+
 
         public string Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_editar, string cantidad_a_sumar,string columnas_a_extraer_inventario ,string info_extra = "", char caracter_separacion = '|')
         {
@@ -978,6 +936,8 @@ namespace tienda2
             return exito_o_fallo;
         }
 
+
+
         public string si_no_existe_agega_comparacion(string direccion_archivo, string comparar, char caracter_separacion = '|')
             {
             Crear_archivo_y_directorio(direccion_archivo);
@@ -1092,67 +1052,7 @@ namespace tienda2
             return exito_o_fallo;
         }
 
-        public string si_existe_suma_sino_agega_extra(string direccion_archivo, int columna_a_comparar, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string texto_a_agregar, char caracter_separacion = '|')
-        {
-            Crear_archivo_y_directorio(direccion_archivo);
-            bool bandera = false;
-            StreamReader sr = new StreamReader(direccion_archivo);
-            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
-            StreamWriter sw = new StreamWriter(dir_tem, true);
-            string exito_o_fallo;
-            int num_column_comp = 0;
-
-            try
-            {
-
-                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
-                {
-                    string linea = sr.ReadLine();//leemos linea y lo guardamos en linea
-                    if (linea != null)
-                    {
-
-                        string[] linea_espliteada = linea.Split(caracter_separacion);
-                        if (linea_espliteada[columna_a_comparar] == comparar)
-                        {
-                            string[] num_col_spliteadas = numero_columnas_editar.Split(caracter_separacion);
-                            string[] cantidad_spliteada = cantidad_a_sumar.Split(caracter_separacion);
-                            for (int i = 0; i <  num_col_spliteadas.Length; i++)
-                            {
-                                linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])] = ""+(Convert.ToDecimal(linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])]) + Convert.ToDecimal(cantidad_spliteada[i]));
-                            }
-                            linea=string.Join("|", linea_espliteada);
-                            bandera = true;
-                        }
-                        
-                        sw.WriteLine(linea);
-                    }
-                    num_column_comp++;
-                }
-                num_column_comp = 0;
-
-                sr.Close();
-                sw.Close();
-                exito_o_fallo = bandera + "|1)exito";
-                File.Delete(direccion_archivo);//borramos el archivo original
-                File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
-
-                if (bandera == false)
-                {
-                    bandera = false;
-                    Agregar(direccion_archivo, texto_a_agregar);
-                }
-
-
-            }
-            catch (Exception error)
-            {
-                sr.Close();
-                sw.Close();
-                exito_o_fallo = bandera + "|2)error:" + error;
-                File.Delete(dir_tem);//borramos el archivo temporal
-            }
-            return exito_o_fallo;
-        }
+        
 
         public string Trimend_paresido(string texto, char caracter_separacion = '|')
         {

@@ -983,5 +983,14 @@ namespace tienda2.desinger
             igualar_provedores iguprov = new igualar_provedores();
             iguprov.Show();
         }
+
+        private void btn_inv_merc_Click(object sender, EventArgs e)
+        {
+            Lbl_ganancia.Visible = false;//pone invisible el label de ganancia
+            Txt_ganancia.Visible = false;//pone invisible el textbox de ganancia
+
+            investigacion_mercado inv_merc = new investigacion_mercado();//nuev_vent sera el form empleados
+            inv_merc.Show();// muestra el form empleados
+        }
     }
 }

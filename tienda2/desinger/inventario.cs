@@ -81,16 +81,19 @@ namespace tienda2.desinger
         private void Btn_elim_ultimo_Click(object sender, EventArgs e)
         {
             lst_cod_bar.Items.Remove(lst_cod_bar.Items[lst_cod_bar.Items.Count - 1]);
+            txt_cod_bar.Focus();
         }
 
         private void Btn_eliminar_todo_Click(object sender, EventArgs e)
         {
             lst_cod_bar.Items.Clear();
+            txt_cod_bar.Focus();
         }
 
         private void Btn_eliminar_seleccionado_Click(object sender, EventArgs e)
         {
             lst_cod_bar.Items.RemoveAt(lst_cod_bar.SelectedIndex);
+            txt_cod_bar.Focus();
         }
 
         private string mod_ventana_si_no_existe_en_el_inventario(string codigo_barras)
@@ -276,6 +279,7 @@ namespace tienda2.desinger
             
             string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
             op.Eliminar_archivo(mod_inv);
+            op.Eliminar_archivo(G_dir_inv_hacer);
 
             MessageBox.Show("fin");
         }

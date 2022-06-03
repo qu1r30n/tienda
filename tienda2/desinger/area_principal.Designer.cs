@@ -57,13 +57,14 @@
             this.chrt_ventas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.btn_igualar_provedores = new System.Windows.Forms.Button();
+            this.btn_inv_merc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_ganancia
             // 
             this.Lbl_ganancia.AutoSize = true;
-            this.Lbl_ganancia.Location = new System.Drawing.Point(405, 314);
+            this.Lbl_ganancia.Location = new System.Drawing.Point(473, 314);
             this.Lbl_ganancia.Name = "Lbl_ganancia";
             this.Lbl_ganancia.Size = new System.Drawing.Size(56, 13);
             this.Lbl_ganancia.TabIndex = 53;
@@ -72,7 +73,7 @@
             // 
             // Txt_ganancia
             // 
-            this.Txt_ganancia.Location = new System.Drawing.Point(408, 330);
+            this.Txt_ganancia.Location = new System.Drawing.Point(476, 330);
             this.Txt_ganancia.Name = "Txt_ganancia";
             this.Txt_ganancia.Size = new System.Drawing.Size(183, 20);
             this.Txt_ganancia.TabIndex = 17;
@@ -80,7 +81,7 @@
             // 
             // Btn_ganancias
             // 
-            this.Btn_ganancias.Location = new System.Drawing.Point(516, 240);
+            this.Btn_ganancias.Location = new System.Drawing.Point(584, 240);
             this.Btn_ganancias.Name = "Btn_ganancias";
             this.Btn_ganancias.Size = new System.Drawing.Size(75, 23);
             this.Btn_ganancias.TabIndex = 15;
@@ -91,7 +92,7 @@
             // Rdb_gastos
             // 
             this.Rdb_gastos.AutoSize = true;
-            this.Rdb_gastos.Location = new System.Drawing.Point(516, 188);
+            this.Rdb_gastos.Location = new System.Drawing.Point(584, 188);
             this.Rdb_gastos.Name = "Rdb_gastos";
             this.Rdb_gastos.Size = new System.Drawing.Size(56, 17);
             this.Rdb_gastos.TabIndex = 13;
@@ -103,7 +104,7 @@
             // Rdb_productos
             // 
             this.Rdb_productos.AutoSize = true;
-            this.Rdb_productos.Location = new System.Drawing.Point(516, 165);
+            this.Rdb_productos.Location = new System.Drawing.Point(584, 165);
             this.Rdb_productos.Name = "Rdb_productos";
             this.Rdb_productos.Size = new System.Drawing.Size(72, 17);
             this.Rdb_productos.TabIndex = 12;
@@ -115,7 +116,7 @@
             // Rdb_ventas
             // 
             this.Rdb_ventas.AutoSize = true;
-            this.Rdb_ventas.Location = new System.Drawing.Point(516, 142);
+            this.Rdb_ventas.Location = new System.Drawing.Point(584, 142);
             this.Rdb_ventas.Name = "Rdb_ventas";
             this.Rdb_ventas.Size = new System.Drawing.Size(57, 17);
             this.Rdb_ventas.TabIndex = 11;
@@ -126,7 +127,7 @@
             // 
             // Btn_comparar
             // 
-            this.Btn_comparar.Location = new System.Drawing.Point(512, 211);
+            this.Btn_comparar.Location = new System.Drawing.Point(580, 211);
             this.Btn_comparar.Name = "Btn_comparar";
             this.Btn_comparar.Size = new System.Drawing.Size(75, 23);
             this.Btn_comparar.TabIndex = 14;
@@ -136,9 +137,9 @@
             // 
             // Btn_pedidos
             // 
-            this.Btn_pedidos.Location = new System.Drawing.Point(7, 203);
+            this.Btn_pedidos.Location = new System.Drawing.Point(3, 123);
             this.Btn_pedidos.Name = "Btn_pedidos";
-            this.Btn_pedidos.Size = new System.Drawing.Size(75, 23);
+            this.Btn_pedidos.Size = new System.Drawing.Size(143, 23);
             this.Btn_pedidos.TabIndex = 5;
             this.Btn_pedidos.Text = "pedidos";
             this.Btn_pedidos.UseVisualStyleBackColor = true;
@@ -146,9 +147,9 @@
             // 
             // Btn_respaldo
             // 
-            this.Btn_respaldo.Location = new System.Drawing.Point(3, 279);
+            this.Btn_respaldo.Location = new System.Drawing.Point(3, 182);
             this.Btn_respaldo.Name = "Btn_respaldo";
-            this.Btn_respaldo.Size = new System.Drawing.Size(75, 23);
+            this.Btn_respaldo.Size = new System.Drawing.Size(143, 23);
             this.Btn_respaldo.TabIndex = 7;
             this.Btn_respaldo.Text = "Respaldo";
             this.Btn_respaldo.UseVisualStyleBackColor = true;
@@ -156,9 +157,9 @@
             // 
             // Btn_compras
             // 
-            this.Btn_compras.Location = new System.Drawing.Point(7, 115);
+            this.Btn_compras.Location = new System.Drawing.Point(3, 65);
             this.Btn_compras.Name = "Btn_compras";
-            this.Btn_compras.Size = new System.Drawing.Size(75, 42);
+            this.Btn_compras.Size = new System.Drawing.Size(143, 23);
             this.Btn_compras.TabIndex = 3;
             this.Btn_compras.Text = "NUEVA COMPRA";
             this.Btn_compras.UseVisualStyleBackColor = true;
@@ -167,7 +168,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(108, 314);
+            this.label4.Location = new System.Drawing.Point(172, 314);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 43;
@@ -175,7 +176,7 @@
             // 
             // Txt_total
             // 
-            this.Txt_total.Location = new System.Drawing.Point(107, 330);
+            this.Txt_total.Location = new System.Drawing.Point(175, 330);
             this.Txt_total.Name = "Txt_total";
             this.Txt_total.Size = new System.Drawing.Size(283, 20);
             this.Txt_total.TabIndex = 16;
@@ -183,7 +184,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(513, 99);
+            this.label3.Location = new System.Drawing.Point(581, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 41;
@@ -192,7 +193,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(513, 59);
+            this.label2.Location = new System.Drawing.Point(581, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 40;
@@ -201,7 +202,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(513, 12);
+            this.label1.Location = new System.Drawing.Point(581, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 39;
@@ -210,7 +211,7 @@
             // cmb_dia
             // 
             this.cmb_dia.FormattingEnabled = true;
-            this.cmb_dia.Location = new System.Drawing.Point(512, 115);
+            this.cmb_dia.Location = new System.Drawing.Point(580, 115);
             this.cmb_dia.Name = "cmb_dia";
             this.cmb_dia.Size = new System.Drawing.Size(121, 21);
             this.cmb_dia.TabIndex = 10;
@@ -218,7 +219,7 @@
             // cmb_año
             // 
             this.cmb_año.FormattingEnabled = true;
-            this.cmb_año.Location = new System.Drawing.Point(513, 28);
+            this.cmb_año.Location = new System.Drawing.Point(581, 28);
             this.cmb_año.Name = "cmb_año";
             this.cmb_año.Size = new System.Drawing.Size(121, 21);
             this.cmb_año.TabIndex = 8;
@@ -227,7 +228,7 @@
             // cmb_mes
             // 
             this.cmb_mes.FormattingEnabled = true;
-            this.cmb_mes.Location = new System.Drawing.Point(512, 75);
+            this.cmb_mes.Location = new System.Drawing.Point(580, 75);
             this.cmb_mes.Name = "cmb_mes";
             this.cmb_mes.Size = new System.Drawing.Size(121, 21);
             this.cmb_mes.TabIndex = 9;
@@ -236,7 +237,7 @@
             // Lst_ventas
             // 
             this.Lst_ventas.FormattingEnabled = true;
-            this.Lst_ventas.Location = new System.Drawing.Point(640, 12);
+            this.Lst_ventas.Location = new System.Drawing.Point(708, 12);
             this.Lst_ventas.Name = "Lst_ventas";
             this.Lst_ventas.Size = new System.Drawing.Size(420, 303);
             this.Lst_ventas.TabIndex = 35;
@@ -244,9 +245,9 @@
             // 
             // Btn_empleados
             // 
-            this.Btn_empleados.Location = new System.Drawing.Point(7, 175);
+            this.Btn_empleados.Location = new System.Drawing.Point(3, 94);
             this.Btn_empleados.Name = "Btn_empleados";
-            this.Btn_empleados.Size = new System.Drawing.Size(75, 23);
+            this.Btn_empleados.Size = new System.Drawing.Size(143, 23);
             this.Btn_empleados.TabIndex = 4;
             this.Btn_empleados.Text = "empleados";
             this.Btn_empleados.UseVisualStyleBackColor = true;
@@ -254,9 +255,9 @@
             // 
             // Btn_nueva_venta
             // 
-            this.Btn_nueva_venta.Location = new System.Drawing.Point(7, 70);
+            this.Btn_nueva_venta.Location = new System.Drawing.Point(3, 40);
             this.Btn_nueva_venta.Name = "Btn_nueva_venta";
-            this.Btn_nueva_venta.Size = new System.Drawing.Size(75, 37);
+            this.Btn_nueva_venta.Size = new System.Drawing.Size(143, 19);
             this.Btn_nueva_venta.TabIndex = 2;
             this.Btn_nueva_venta.Text = "NUEVA VENTA";
             this.Btn_nueva_venta.UseVisualStyleBackColor = true;
@@ -264,9 +265,9 @@
             // 
             // Btn_crear_cod_bar
             // 
-            this.Btn_crear_cod_bar.Location = new System.Drawing.Point(3, 28);
+            this.Btn_crear_cod_bar.Location = new System.Drawing.Point(3, 11);
             this.Btn_crear_cod_bar.Name = "Btn_crear_cod_bar";
-            this.Btn_crear_cod_bar.Size = new System.Drawing.Size(79, 36);
+            this.Btn_crear_cod_bar.Size = new System.Drawing.Size(143, 23);
             this.Btn_crear_cod_bar.TabIndex = 1;
             this.Btn_crear_cod_bar.Text = "crear codigo barras";
             this.Btn_crear_cod_bar.UseVisualStyleBackColor = true;
@@ -274,9 +275,9 @@
             // 
             // Btn_canbio_precios
             // 
-            this.Btn_canbio_precios.Location = new System.Drawing.Point(7, 232);
+            this.Btn_canbio_precios.Location = new System.Drawing.Point(3, 152);
             this.Btn_canbio_precios.Name = "Btn_canbio_precios";
-            this.Btn_canbio_precios.Size = new System.Drawing.Size(75, 41);
+            this.Btn_canbio_precios.Size = new System.Drawing.Size(143, 21);
             this.Btn_canbio_precios.TabIndex = 6;
             this.Btn_canbio_precios.Text = " cambio de precios";
             this.Btn_canbio_precios.UseVisualStyleBackColor = true;
@@ -288,7 +289,7 @@
             this.chrt_ventas.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chrt_ventas.Legends.Add(legend1);
-            this.chrt_ventas.Location = new System.Drawing.Point(88, 11);
+            this.chrt_ventas.Location = new System.Drawing.Point(156, 11);
             this.chrt_ventas.Name = "chrt_ventas";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -301,9 +302,9 @@
             // 
             // btn_inventario
             // 
-            this.btn_inventario.Location = new System.Drawing.Point(3, 314);
+            this.btn_inventario.Location = new System.Drawing.Point(3, 211);
             this.btn_inventario.Name = "btn_inventario";
-            this.btn_inventario.Size = new System.Drawing.Size(75, 23);
+            this.btn_inventario.Size = new System.Drawing.Size(143, 23);
             this.btn_inventario.TabIndex = 54;
             this.btn_inventario.Text = "inventario";
             this.btn_inventario.UseVisualStyleBackColor = true;
@@ -319,11 +320,22 @@
             this.btn_igualar_provedores.UseVisualStyleBackColor = true;
             this.btn_igualar_provedores.Click += new System.EventHandler(this.btn_igualar_provedores_Click);
             // 
+            // btn_inv_merc
+            // 
+            this.btn_inv_merc.Location = new System.Drawing.Point(3, 239);
+            this.btn_inv_merc.Name = "btn_inv_merc";
+            this.btn_inv_merc.Size = new System.Drawing.Size(143, 23);
+            this.btn_inv_merc.TabIndex = 56;
+            this.btn_inv_merc.Text = "investigacion de mercado";
+            this.btn_inv_merc.UseVisualStyleBackColor = true;
+            this.btn_inv_merc.Click += new System.EventHandler(this.btn_inv_merc_Click);
+            // 
             // Area_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 378);
+            this.ClientSize = new System.Drawing.Size(1140, 378);
+            this.Controls.Add(this.btn_inv_merc);
             this.Controls.Add(this.btn_igualar_provedores);
             this.Controls.Add(this.btn_inventario);
             this.Controls.Add(this.Btn_canbio_precios);
@@ -386,5 +398,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chrt_ventas;
         private System.Windows.Forms.Button btn_inventario;
         private System.Windows.Forms.Button btn_igualar_provedores;
+        private System.Windows.Forms.Button btn_inv_merc;
     }
 }
