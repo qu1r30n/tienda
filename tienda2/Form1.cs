@@ -20,12 +20,12 @@ namespace tienda2
 
         public Form1()
         {
-            
+
             InitializeComponent();
             Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
 
-             
-            
+
+
 
             Operaciones_archivos op = new Operaciones_archivos();
             //en esta seccion crearemos los archivos que nesesitaremos para la base
@@ -33,15 +33,17 @@ namespace tienda2
             //crea los archivos de compras por si se hace una busqueda y no estan
             DateTime fecha_hora = DateTime.Now; //se usara la variable fecha y hora para sacar el dia de hoy y la hora
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
-           
 
-            
+
+
             string direccion1, direccion2, direccion3, direccion4, direccion5; //variables de direcciones
 
             direccion1 = "inf\\inventario\\invent.txt";
             direccion2 = "inf\\inventario\\provedores.txt";
+
             bas.Crear_archivo_y_directorio(direccion1, "id|producto|precio_de_venta|0|cantidad|costo_compra|marca|grupo|multiusos|cantidad_productos_por_paquete");
             bas.Crear_archivo_y_directorio(direccion2, "provedor|id|");
+
 
             direccion2 = "inf\\inventario\\pru\\provedores_pru_cmb.txt";
             bas.Crear_archivo_y_directorio(direccion2);
@@ -109,6 +111,49 @@ namespace tienda2
             op.Ordenar("ventas\\" + fecha_hora.ToString("yyyy") + "\\" + fecha_hora.ToString("MM") + "\\p_" + fecha_hora.ToString("MM") + ".txt", 1, "numero");
             #endregion
 
+            //crear archivo_banderas_contadores y agregar dia
+
+
+            direccion3 = "inf\\banderas_cont\\band_cont.txt";
+            bas.Crear_archivo_y_directorio(direccion3, "con_dia_sem|1");
+            string dir_ranking_dia = "inf\\ranking\\dia\\" + fecha_hora.ToString("yyyyMMdd") + "_ranking.txt";
+
+            if (bas.existe_archivo(dir_ranking_dia))
+            {
+                bas.Crear_archivo_y_directorio(dir_ranking_dia);
+                bas.si_existe_suma_sino_agega_extra(direccion3, 0, "con_dia_sem", "1", "1", "con_dia_sem|1");
+            }
+
+            string dir_ranking_año = "inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
+            bas.Crear_archivo_y_directorio(dir_ranking_año);
+            string info_con_dia = bas.Seleccionar(direccion3, 0, "con_dia_sem", "1");
+            int num_dia = Convert.ToInt32(info_con_dia);
+            if (num_dia >= 7)
+            {
+
+                bas.Editar_espesifico(direccion3, 0, "con_dia_sem", "1", "1");
+                bas.Editar_una_columna(dir_ranking_año, 2, "0");
+               string [] info_ranking = bas.Leer(dir_ranking_año);
+                
+                for (int i = 0; i < info_ranking.Length; i++)
+                {
+                    string[] info_producto= info_ranking[i].Split('|');
+                    string[] historial_ranking=info_producto[4].Split('°');
+                    for (int j = historial_ranking.Length-2; j >=0 ; j--)
+                    {
+                        historial_ranking[j + 1] = historial_ranking[j];
+                    }
+                    historial_ranking[0] = "0";
+                    info_producto[4] = string.Join("°", historial_ranking);
+                    bas.Editar_fila(dir_ranking_año, 0, info_producto[0], string.Join("|", info_producto));
+
+                }
+                bas.Editar_espesifico(direccion3, 0, "con_dia_sem", "1", "0");
+
+            }
+            
+
+            //---------------------------------
         }
 
         private void Btn_admin_Click(object sender, EventArgs e)

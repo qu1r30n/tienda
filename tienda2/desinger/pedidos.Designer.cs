@@ -387,6 +387,7 @@
             this.lst_carga.Name = "lst_carga";
             this.lst_carga.Size = new System.Drawing.Size(319, 173);
             this.lst_carga.TabIndex = 45;
+            this.lst_carga.DoubleClick += new System.EventHandler(this.lst_carga_DoubleClick);
             // 
             // btn_cargar_lst_comprar
             // 

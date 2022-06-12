@@ -351,6 +351,53 @@ namespace tienda2
             return exito_o_fallo;
         }
 
+        public string Editar_fila(string direccion_archivo, int num_column_comp, string comparar, string texto_editar_fila, char caracter_separacion = '|')
+        {
+
+            StreamReader sr = new StreamReader(direccion_archivo);
+            string dir_tem = direccion_archivo.Replace(".txt", "_tem.txt");
+            StreamWriter sw = new StreamWriter(dir_tem, true);
+            string exito_o_fallo;
+
+            try
+            {
+                while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+                {
+                    string linea = sr.ReadLine();//leemos linea y lo guardamos en palabra
+                    if (linea != null)
+                    {
+                        string[] palabra = linea.Split(caracter_separacion);
+
+                        if (palabra[num_column_comp] == comparar)
+                        {
+
+
+                            sw.WriteLine(texto_editar_fila);
+
+                        }
+                        else
+                        {
+                            sw.WriteLine(linea);
+                        }
+                    }
+                }
+                exito_o_fallo = "1)exito";
+                sr.Close();
+                sw.Close();
+                File.Delete(direccion_archivo);//borramos el archivo original
+                File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
+
+            }
+            catch (Exception error)
+            {
+                sr.Close();
+                sw.Close();
+                exito_o_fallo = "2)error:" + error;
+                File.Delete(dir_tem);//borramos el archivo original
+            }
+            return exito_o_fallo;
+        }
+
         public string Editar_una_columna(string direccion_archivo, int columna, string info_editar, char caracter_separacion = '|')
         {
             StreamReader sr = new StreamReader(direccion_archivo);
@@ -1151,44 +1198,84 @@ namespace tienda2
             return exito_o_fallo;
         }
 
-        public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo, char caracter_separacion = '|')
+        public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo="numero",string orden="mayor_menor", char caracter_separacion = '|')
         {
             Tex_base bas = new Tex_base();
             string[] lineas = bas.Leer(direccion_archivo);
 
             if (tipo == "numero")
             {
-                string temporal_apoyo;
-                for (int i = 0; i < lineas.Length; i++)
+                if (orden == "mayor_menor")
                 {
-                    for (int j = i + 1; j < lineas.Length; j++)
+
+
+                    string temporal_apoyo;
+                    for (int i = 0; i < lineas.Length; i++)
                     {
-
-                        string[] num1 = lineas[i].Split(caracter_separacion);
-                        decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
-                        string[] num2 = lineas[j].Split(caracter_separacion);
-                        decimal num2_decimal = Convert.ToDecimal(num2[columna_comparar]);
-                        if (num1_decimal < num2_decimal)
+                        for (int j = i + 1; j < lineas.Length; j++)
                         {
-                            temporal_apoyo = lineas[j];
-                            lineas[j] = lineas[i];
-                            lineas[i] = temporal_apoyo;
-                        }
-                        else if (num1_decimal >= num2_decimal)
+
+                            string[] num1 = lineas[i].Split(caracter_separacion);
+                            decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
+                            string[] num2 = lineas[j].Split(caracter_separacion);
+                            decimal num2_decimal = Convert.ToDecimal(num2[columna_comparar]);
+                            if (num1_decimal < num2_decimal)
+                            {
+                                temporal_apoyo = lineas[j];
+                                lineas[j] = lineas[i];
+                                lineas[i] = temporal_apoyo;
+                            }
+                            else if (num1_decimal >= num2_decimal)
+                            {
+                                //no_hacer_nada
+                            }
+                            else
+                            {
+                                //error
+                            }
+
+
+
+
+
+                        }//for linea_de_abajo
+                    }//for linea_de_arriba
+                }//if orden
+
+                else if(orden== "menor_mayor")
+                {
+                    string temporal_apoyo;
+                    for (int i = 0; i < lineas.Length; i++)
+                    {
+                        for (int j = i + 1; j < lineas.Length; j++)
                         {
-                            //no_hacer_nada
-                        }
-                        else
-                        {
-                            //error
-                        }
+
+                            string[] num1 = lineas[i].Split(caracter_separacion);
+                            decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
+                            string[] num2 = lineas[j].Split(caracter_separacion);
+                            decimal num2_decimal = Convert.ToDecimal(num2[columna_comparar]);
+                            if (num1_decimal > num2_decimal)
+                            {
+                                temporal_apoyo = lineas[j];
+                                lineas[j] = lineas[i];
+                                lineas[i] = temporal_apoyo;
+                            }
+                            else if (num1_decimal <= num2_decimal)
+                            {
+                                //no_hacer_nada
+                            }
+                            else
+                            {
+                                //error
+                            }
 
 
 
 
 
-                    }//for linea_de_abajo
-                }//for linea_de_arriba
+                        }//for linea_de_abajo
+                    }//for linea_de_arriba
+                }//if orden alrreves
             }//if tipo
 
 
@@ -1208,6 +1295,15 @@ namespace tienda2
         public bool existe_archivo(string direccion)
         {
             return File.Exists(direccion);
+        }
+
+        public void copiar(string direccion1, string direccion2)
+        {
+            File.Copy(direccion1, direccion2);//renombramos el archivo temporal por el que tenia el original
+        }
+        public void mover(string direccion1,string direccion2)
+        {
+            File.Move(direccion1, direccion2);//renombramos el archivo temporal por el que tenia el original
         }
     }
 

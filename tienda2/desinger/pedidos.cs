@@ -17,11 +17,12 @@ namespace tienda2.desinger
 
 
 
-        public Pedidos(string constructor = null)
+        public Pedidos(string provedor_elegido = null)
         {
             InitializeComponent();
-            G_prov_anterior = constructor;
+            G_prov_anterior = provedor_elegido;
             Recargar_texbox();
+            recarga_ranking(G_prov_anterior);
 
         }
         private void Recargar_texbox()
@@ -235,16 +236,25 @@ namespace tienda2.desinger
                     string compra_joineada = string.Join("°", se_paga_de_caja_spliteado);
                     if (se_paga_de_caja_spliteado.Length > 2)
                     {
+                        
                         string direccion_pru = "inf\\inventario\\pru\\";
                         bas.si_no_existe_agega_comparacion(direccion_pru + "provedores_pru_cmb.txt", se_paga_de_caja_spliteado[3]);
                         bas.si_existe_suma_sino_agega_extra(direccion_pru + año_mes_dia + "_provedores_pru.txt", 3, se_paga_de_caja_spliteado[3], "0°1°2", se_paga_de_caja_spliteado[0] + "°" + se_paga_de_caja_spliteado[1] + "°" + se_paga_de_caja_spliteado[2], compra_joineada, '°');
                         bas.si_existe_suma_sino_agega_extra("inf\\inventario\\ven\\vent.txt", 0, año_mes_dia, "2", "" + se_paga_de_caja_spliteado[1], año_mes_dia + "|0|" + se_paga_de_caja_spliteado[1]);
+
                         Modelo_compra_venta mod_com_ven = new Modelo_compra_venta();
 
                         for (int i = 0; i < Lst_compras.Items.Count; i++)
                         {
+                            
+
                             string[] item_spliteado = Lst_compras.Items[i].ToString().Split(G_parametros[0]);
                             mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1], item_spliteado[5], item_spliteado[6], compra_directa);
+
+                            string dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\" + fecha_hora.ToString("yyyy")+ "_ranking.txt";
+                            bas.si_existe_suma_sino_agega_extra(dir_ranking, 0, item_spliteado[0], "2", "" + (Convert.ToDouble(item_spliteado[2]) * -1), "");
+
+
                             bas.si_no_existe_agega_extra(direccion_pru + "para_cambiar_de_provedor\\" + se_paga_de_caja_spliteado[3] + ".txt", 0, item_spliteado[0], item_spliteado[0] + "|" + item_spliteado[1]);
                             Lbl_nom_product_list.Text = "";
                             Lst_compras.Items.Clear();
@@ -486,8 +496,9 @@ namespace tienda2.desinger
             funcion_click_paquete();
         }
 
-        public void funcion_click_paquete()
+        public void funcion_click_paquete(string cantidad_productos_unidad = "1")
         {
+            double cant_prod_uni_double = Convert.ToDouble(cantidad_productos_unidad);
 
             DateTime fecha_hora = DateTime.Now;
             string hora_min = fecha_hora.ToString("HH:mm");
@@ -495,9 +506,20 @@ namespace tienda2.desinger
             string cantidad_por_pakete = bas.Seleccionar(direccion_inventario, 3, Txt_buscar_producto.Text, "9");
             double costo_compra_invent = Convert.ToDouble(Lbl_precio_compra_cant.Text);
 
+            double paquetes_a_comprar=1;
+            if (cantidad_por_pakete != "")
+            {
+                double cantidad_por_pakete_double = Convert.ToDouble(cantidad_por_pakete);
+                paquetes_a_comprar = Math.Floor(cant_prod_uni_double / cantidad_por_pakete_double);
+                
+            }
+            else
+            {
+                cantidad_por_pakete = "1";
+            }
             Ventana_emergente ven_emer2 = new Ventana_emergente();
             //a = 3;
-            string[] enviar2 = { "1°costo°" + Lbl_precio_compra_cant.Text + "°2", "1°numero paketes°0°2", "1°cantidad_por_paquete°" + cantidad_por_pakete + "°2" };
+            string[] enviar2 = { "1°costo°" + Lbl_precio_compra_cant.Text + "°2", "1°numero paketes°"+paquetes_a_comprar+"°2", "1°cantidad_por_paquete°" + cantidad_por_pakete + "°2" };
             string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2, 0, Lbl_nombre_producto.Text);
             if (datos_ventana_emergente2 == "|")
             {
@@ -521,11 +543,11 @@ namespace tienda2.desinger
         }
 
 
-        public void funcion_click_individual()
+        public void funcion_click_individual(string cantidad_productos_unidad = "1")
         {
             Ventana_emergente ven_emer2 = new Ventana_emergente();
             //a = 3;
-            string[] enviar2 = { "1°costo°" + Lbl_precio_compra_cant.Text + "°2", "1°cantidad°1°2" };
+            string[] enviar2 = { "1°costo°" + Lbl_precio_compra_cant.Text + "°2", "1°cantidad°"+cantidad_productos_unidad+"°2" };
             string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2, 0, Lbl_nombre_producto.Text);
             if (datos_ventana_emergente2 == "|")
             {
@@ -646,18 +668,20 @@ namespace tienda2.desinger
 
                 Txt_buscar_producto.Text= "" + lst_carga.Items[i];
 
-
-                Procesar_codigo(""+lst_carga.Items[i]);
+                string[] item_carga=lst_carga.Items[i].ToString().Split('|');
+                Procesar_codigo(item_carga[0]);
                 Ventana_emergente vent_emerg = new Ventana_emergente();
                 string[] enviar = { "3°paquete°1°0", "3°individual°2°0" };
                 string respuesta=vent_emerg.Proceso_ventana_emergente(enviar);
+                string[] producto_esplit_a_cargar = lst_carga.Items[i].ToString().Split('|');
+
                 if (respuesta=="1")
                 {
-                    funcion_click_paquete();
+                    funcion_click_paquete(producto_esplit_a_cargar[2]);
                 }
                 else if (respuesta=="2")
                 {
-                    funcion_click_individual();
+                    funcion_click_individual(producto_esplit_a_cargar[2]);
                 }
             }
         }
@@ -677,7 +701,123 @@ namespace tienda2.desinger
             lst_carga.Items.RemoveAt(lst_carga.SelectedIndex);
         }
 
+        private void lst_carga_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void recarga_ranking(string provedor)
+        {
+            string[] inventario=bas.Leer(direccion_inventario);
+            
+            List<string> produc_prov_invent=new List<string>();
+            //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
+            for (int i = 0; i < inventario.Length; i++)
+            {
+                string[] invent_esplit = inventario[i].Split('|');
+                if (provedor==invent_esplit[6])
+                {
+                    produc_prov_invent.Add(invent_esplit[3]+G_parametros[0]+ invent_esplit[1] + G_parametros[0] + invent_esplit[4]);
+                }
+            }
+
+           string [] arreglo_ordenado_invent_prov= ordenar_arreglo(produc_prov_invent.ToArray(), 2);
+
+            DateTime fecha_hora = DateTime.Now;
+            string dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\"+fecha_hora.ToString("yyyy")+ "_ranking.txt";
+                string[] info_compra = bas.Leer(dir_ranking);
+                List<string> arreglo_ranking = new List<string>();
+                for (int i = 0; i < info_compra.Length; i++)
+                {
+                    string[] info_comp_esplit = info_compra[i].Split('|');
+                    if (info_comp_esplit[3]==provedor)
+                    {
+                        arreglo_ranking.Add(info_compra[i]);
+                    }
+                }
+                string[] arreglo_ordenado=ordenar_arreglo(arreglo_ranking.ToArray(), 2,"mayor_menor");
+
+                for (int i = 0; i < arreglo_ordenado.Length; i++)
+                {
+                    //prediccion compra global  rango y cantidad en inventario para sacar y dependiendo del promedio  se vera si es urgente o no pero luego se checa
+                    /*
+                    double acum = 0;
+                    int cantidades_historial = 0;
+                    string[] historial_produc=arreglo_ordenado[4].Split('°');
+                    for (int j = 0; j < historial_produc.Length; j++)
+                    {
+                        if (historial_produc[j]==null)
+                        {
+                            break;
+                        }
+                        acum = acum + Convert.ToDouble(historial_produc[i]);
+                        cantidades_historial = j;
+                    }
+
+                    for (int k = 0; k < produc_prov_invent.Count; k++)
+                    {
+                    }
+                    */
+                    //-------------------------------------------------------------------------------------------------------
+                    string[] prod_esplit=arreglo_ordenado[i].Split('|');
+                    lst_carga.Items.Add(prod_esplit[0]+"|"+ prod_esplit[1] + "|" + prod_esplit[2] + "|");
+                    
+                }
+
+            
+            
+
+        }
+        private string [] ordenar_arreglo(string[] arreglo,int columna,string orden="menor_mayor",char caracter_separacion='|')
+        {
+            if (orden == "menor_mayor")
+            {
+                for (int i = 0; i < arreglo.Length; i++)
+                {
+                    for (int j = i + 1; j < arreglo.Length; j++)
+                    {
+
+                        string[] arreglo_espliteado = arreglo[i].Split(caracter_separacion);
+                        double arriba = Convert.ToDouble(arreglo_espliteado[columna]);
+                        string[] arreglo_espliteado2 = arreglo[j].Split(caracter_separacion);
+                        double abajo = Convert.ToDouble(arreglo_espliteado2[columna]);
+                        string temp;
+                        if (arriba > abajo)
+                        {
+                            temp = arreglo[i];
+                            arreglo[i] = arreglo[j];
+                            arreglo[j] = temp;
+                        }
+                    }
+                }
+            }
 
 
+            else if (orden == "mayor_menor") 
+            {
+                for (int i = 0; i < arreglo.Length; i++)
+                {
+                    for (int j = i + 1; j < arreglo.Length; j++)
+                    {
+
+                        string[] arreglo_espliteado = arreglo[i].Split(caracter_separacion);
+                        double arriba = Convert.ToDouble(arreglo_espliteado[columna]);
+                        string[] arreglo_espliteado2 = arreglo[j].Split(caracter_separacion);
+                        double abajo = Convert.ToDouble(arreglo_espliteado2[columna]);
+                        string temp;
+                        if (arriba < abajo)
+                        {
+                            temp = arreglo[i];
+                            arreglo[i] = arreglo[j];
+                            arreglo[j] = temp;
+                        }
+                    }
+                }
+            }
+            
+
+
+            return arreglo;
+        }
     }
 }

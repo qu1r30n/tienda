@@ -45,7 +45,7 @@ namespace tienda2.desinger
                         esta = true;
                         hubo_repetidos = true;
                     }
-                    
+                     
                 }
                 if (esta == false)
                 {

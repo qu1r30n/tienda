@@ -4,16 +4,33 @@
 75009809|15|coca-cola 500ml
 75003722|15|aceite maravilla 500ml
 75003463|15|gerber frutas mixtas 113gr
+8000500134702|15|kinder chocolate 50g
+70330717534|14|rastrillo bic
 703307243418000500134702|11|
 70330724341|10|rastrillo bic confort 3 hojas
-8000500134702|4|kinder chocolate 50g
+9002490100070|7|red bull 250ml
+3014260846725|7|cepillodental
+603554043051|6|trueno pop
+5000267014203|6|red label 700ml
+40232838699|4|skarch 1lt
+1|4|pomada ceresa
+7501030475514|4|mantecadas nuez6p
+20899087531|3|nutret fresa 40g
+0.7501031307|3|jumex fresh naranja 600ml
 75001322|2|marlboro rojo 20
 781159053849|2|sabro leche 1L
 75002275|2|chocorroles piña 100g
+7501030456124|2|mantecada chocolate 142.5g
 75003371|2|gerber durazno 113gr
-40232838699|1|agua skarch 1Lt
-97339000030|1|salsa valentina 1L amarilla
-3014260846725|1|cepillodental
-8801038200026|1|navaja de afeitar
-7501006705942|1|ace jabon 250g
+67501441615110|1|jarrito mandarina 3L
 603554102017|1|choco huevo sorpresa12g
+8801038200026|1|navaja de afeitar
+7501000111206|1|bimbo blanco 680gr
+7501000111602|1|bimbollos 8p
+7501030472698|1|bimbuñuelos
+7501000113095|1|Bimbuñuelos
+7501000112425|1|donitas espolvoreadas 105g
+7501006705942|1|ace jabon 250g
+97339000030|1|salsa valentina 1L amarilla
+7501030475521|1|mantecadas vain 6p
+7501000142408|1|mantecada vainilla 105g

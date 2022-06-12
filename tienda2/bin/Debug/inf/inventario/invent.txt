@@ -1,5 +1,5 @@
-id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|cantidad_productos_por_paquete|
-1|pomada ceresa|6|1|999|1|pomada labiual|1°producto||1|
+id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
+1|pomada ceresa|6|1|995|1|pomada labiual|1°producto||1|
 2|ariel jabon 250g|12.5|12|1000|10.35|no se sabe|1°producto||1|
 3|orbit fresa 5.6|3|2201302|997|0.75|orbit|1°producto||1|
 4|orbit yerbabuena 5.6g|3|2261003|999|0.75|orbit|1°producto||1|
@@ -146,7 +146,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 145|boing durazno 250ml|8|19836100211|1000|5.4|casa vargas|1°producto||1|
 146|boing guayaba 250ml|8|19836102628|999|0|boing|1°producto||1|
 147|boing durazno 500ml|11|19836200218|999|0|boing|1°producto||1|
-148|nutret fresa 40g|9|20899087531|1000|0|no se sabe|1°producto||1|
+148|nutret fresa 40g|9|20899087531|997|0|no se sabe|1°producto||1|
 149|orbit americano 16.2g|9|22000279033|1000|0|orbit|1°producto||1|
 150|hubba chicle metro 56.7g|22|22110079806|1000|17.5|turin|1°producto||1|
 151|cosecha mango 200ml|8|24474393444|1000|4|pepsi|1°producto||12|
@@ -174,7 +174,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 173|gatorade fresandia 1lt|29|36731328007|996|23.4|pepsi|1°producto||1|
 174|gatorade limonada 500ml|19|36731502001|1000|0|pepsi|1°producto||1|
 175|gatorade ponche frutas 500ml|20|36731506009|996|0|pepsi|1°producto||1|
-176|agua skarch 1Lt|10|40232838699|1000|7.5|red cola|1°producto||12|
+176|agua skarch 1Lt|10|40232838699|997|7.5|red cola|1°producto||12|
 177|titan mandarina 3lts|26|40232886652|1000|22.5|red cola|1°producto||1|
 178|titan piña 3 lts|26|40232886669|1000|22.5|red cola|1°producto||1|
 179|titan manzana 3lts|26|40232886676|1000|22.5|red cola|1°producto||1|
@@ -199,7 +199,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 198|maruchan camaron 64gr|13.5|41789001956|999|9.17|casa vargas|1°producto||1|
 199|maruchan camaron piquin 64gr|13.5|41789001987|1000|9.17|casa vargas|1°producto||1|
 200|always seca 8 toallas|23|56100024798|1000|18|salma|1°producto||1|
-201|rastrillo comfort bic|23|70330717534|1030|1|medicamento|1°producto||10|
+201|rastrillo comfort bic|23|70330717534|1016|1|medicamento|1°producto||10|
 202|rastrillo bic confort 3 hojas|13|70330724341|1000|10|bic|1°producto||10|
 203|cajeta quemada 370 g|35|74323083651|1000|30.12|ricolino|1°producto||1|
 204|frijoles con choriso 430g|16|78883240547|999|0|la sierra|1°producto||1|
@@ -447,12 +447,12 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 446|encendedor|11|852812005106|792|0|enmcendedor|1°producto||1|
 447|encendedor cue|11|855553008580|1000|8|quala|1°producto||50|
 448|fruta cristalisada 300gr|31|2526890023342|992|0|vendedor x|1°producto||1|
-449|cepillodental|21|3014260846725|999|18|salma|1°producto||1|
+449|cepillodental|21|3014260846725|993|18|salma|1°producto||1|
 450|foco 100 wats|13|3068620202126|968|0|medicamento|1°producto||1|
 451|encendedor bic|16|3086123397835|1000|0|bic|1°producto||1|
 452|encendedor big|16|3086126788722|954|0|encendedor|1°producto||1|
 453|cigarro winston capsula menta 20'|55|4033100076428|1000|49|camel|1°producto||1|
-454|red label 700ml|301|5000267014203|3|260.7|magadan|1°producto||1|
+454|red label 700ml|301|5000267014203|-4|260.7|magadan|1°producto||1|
 455|don julio 750ml|701|5000281043449|1000|553|magadan|1°producto||1|
 456|capitan morgan 700ml|241|5000281055374|1000|209|magadan|1°producto||1|
 457|stella artois lager 250ml|17|5410228240945|1000|14.4|indio|1°producto||1|
@@ -586,7 +586,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 585|tortillinas tia rosa 20pzs|28|7501000111299|980|20.7|tia rosa|1°producto||1|
 586|pan integral 675gG|45|7501000111466|1|31.5|bimbo|1°producto||1|
 587|medias noches|36|7501000111503|2|22.5|bimbo|1°producto||1|
-588|bimbollos 8p|42|7501000111602|1|34.86|bimbo|1°producto||1|
+588|bimbollos 8p|42|7501000111602|0|34.86|bimbo|1°producto||1|
 589|pan tostado clasico|31|7501000111800|4|25.73|bimbo|1°producto||3|
 590|pan molido clasico|25|7501000111855|3|20.50|bimbo|1°producto||1|
 591|roles de canela|15|7501000112128|1000|12.6|bimbo|1°producto||1|
@@ -596,7 +596,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 595|penque nuez|34|7501000112326|2|25.81|bimbo dulce|1°producto||1|
 596|pan tostado doble fibra|31|7501000112333|2|25.73|bimbo|1°producto||1|
 597|panquesitos chispas-chocolate140g|16|7501000112388|997|13.5|bimbo dulce|1°producto||2|
-598|donitas espolvoreadas 105g|14|7501000112425|999|10.8|bimbo|1°producto||1|
+598|donitas espolvoreadas 105g|14|7501000112425|998|10.8|bimbo|1°producto||1|
 599|nito 62g|14|7501000112784|5|10.63|bimbo dulce|1°producto||8|
 600|rebanadas|6|7501000112845|5|4.56|bimbo dulce|1°producto||1|
 601|bran frutpiña 58g|9|7501000116430|1000|7.2|bimbo|1°producto||1|
@@ -614,7 +614,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 613|pop karameladas 50g|11|7501000140473|4|7|barcel|1°producto||1|
 614|triki-trakes 85g|14|7501000140855|4|9|marinela galleta|1°producto||1|
 615|bigotes 60g|13|7501000142200|1|0|tia rosa|1°producto||6|
-616|mantecada vainilla 105g|16|7501000142408|999|12.3|tia rosa|1°producto||1|
+616|mantecada vainilla 105g|16|7501000142408|998|12.3|tia rosa|1°producto||1|
 617|curnitos 100g|13|7501000142705|979|0|tia rosa|1°producto||1|
 618|doraditas|11|7501000142804|999|0|tia rosa|1°producto||1|
 619|takis huakamoladas 56g|12|7501000148288|1000|9.9|barcel|1°producto||1|
@@ -1007,7 +1007,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1006|polvorones bites 90g|11|7501030452775|1000|0|marinela|1°producto||1|
 1007|bran frut fresa-piña 96g|13|7501030454007|999|0|bimbo dulce|1°producto||1|
 1008|canelitas 120g|14|7501030454656|1000|11.7|marinela|1°producto||1|
-1009|mantecada chocolate 142.5g|19|7501030456124|2|0|tia rosa|1°producto||1|
+1009|mantecada chocolate 142.5g|19|7501030456124|0|0|tia rosa|1°producto||1|
 1010|mantecadas tia rosa 157.5g|19|7501030456322|1|0|tia rosa|1°producto||1|
 1011|cajmobi450|6|7501030456964|1010|38.89|marinela|1°producto||10|
 1012|mobi rocko 45g|8|7501030456971|962|4.5|marinela|1°producto||1|
@@ -1029,14 +1029,14 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1028|rebanadas chocolate|6|7501030469681|1000|4.5|no se sabe|1°producto||1|
 1029|litte bites 79g|11|7501030469827|1|8.2|bimbo|1°producto||1|
 1030|panera oreja|2|7501030470236|1000|0.9|bimbo|1°producto||1|
-1031|bimbuñuelos|18|7501030472698|948|13.12|bimbo dulce|1°producto||2|
+1031|bimbuñuelos|18|7501030472698|947|13.12|bimbo dulce|1°producto||2|
 1032|tartinas fresa 78g|11|7501030473817|1000|0|tia rosa|1°producto||1|
 1033|principe limon 105g|16|7501030473824|1|11.7|marinela galleta|1°producto||1|
 1034|donas azuc 6pz 158g|18|7501030474227|3|13.67|bimbo dulce|1°producto||3|
 1035|leche gancito 236ml|11|7501030475132|1000|0|marinela|1°producto||1|
 1036|mini chocorrol 30g|6|7501030475224|1000|4.5|marinela|1°producto||1|
 1037|mantecadas nuez6p|24|7501030475514|3|16.2|bimbo dulce|1°producto||1|
-1038|mantecadas vain 6p|24|7501030475521|2|18.22|bimbo dulce|1°producto||2|
+1038|mantecadas vain 6p|24|7501030475521|1|18.22|bimbo dulce|1°producto||2|
 1039|pingúinos 3pzs|23|7501030475743|1|0|marinela|1°producto||1|
 1040|totopos chilaquiles 280g|23|7501030480778|999|0|bimbo|1°producto||1|
 1041|valentones 175g|27|7501030482055|986|19.8|marinela|1°producto||1|
@@ -1720,7 +1720,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1719|curitas 100pzs|2.5|7702003476594|986|0.5|curitas|1°producto||1|
 1720|stevia 25 sobres|2.5|7792129003187|1000|0|stevia|1°producto||1|
 1721|kit kat 29g|13|7891000288634|998|0|Nestle|1°producto||1|
-1722|kinder chocolate 50g|16|8000500134702|1000|0|kinder|1°producto||1|
+1722|kinder chocolate 50g|16|8000500134702|989|0|kinder|1°producto||1|
 1723|kinder delice 39g|11|8000500267035|17|9.59|kinder|1°producto||10|
 1724|foco rubi 100w|12|8001001646688|998|0|medicamento|1°producto||1|
 1725|torres 5 700ml|206|8410113000019|2|162|magadan|1°producto||1|
@@ -1731,7 +1731,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1730|navaja de afeitar|5|8801038200026|1000|3|dorco|1°producto||1|
 1731|pila AAA eveready|10|8999002604755|1000|5|eveready|1°producto||1|
 1732|cuchara pastelera 50 pzs|8|9750435006917|995|5.5|casa vargas|1°producto||1|
-1733|jarrito mandarina 3L|29|67501441615110|1000|0|pepsi|1°producto||1|
+1733|jarrito mandarina 3L|29|67501441615110|999|0|pepsi|1°producto||1|
 1734|principe tubo 147gr|18|7501030491071|1|0|marinela galleta|1||1|
 1735|principe avellana 210gr|24|7503031287370|2|0|marinela galleta|1||1|
 1736|tostachos 77gr|11|7503030199643|-11|0|sabritas|1||1|
@@ -1744,7 +1744,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1743|harina de maiz minsa 1k|19|7501586300018|2|14.5|casa vargas|1||1|
 1744|salchicha fud 266g|25|7501040009754|-7|20|casa vargas|1||1|
 1745|chocolate plus dark|10|8693029321816|-1|7|vendedor x|1||1|
-1746|skarch 1lt|7|40232838699|1|0|red cola|1||1|
+1746|skarch 1lt|7|40232838699|-2|0|red cola|1||1|
 1747|florentinas cajeta 83gr|15|7501000601745|-12|0|gamesa|1||1|
 1748|tecate roja laton 473ml|21|89826001415|-173|0|indio|1||1|
 1749|gatorade limonada 600ml|23|36731106025|-14|0|pepsi|1||6|
@@ -1808,7 +1808,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1809|salsa de soya 140ml|21|7501058628503|1|13.36|nestle|1||1|
 1810|gerber ciruela pasa 100g|13.5|7506475102483|4|8.15|nestle|1||1|
 1811|carlos v blanco stick 8gr|3.5|7501058654281|40|1.53|nestle|1||30|
-1812|rastrillo bic|23|70330717534|0|19.3|bic|1||1|
+1812|rastrillo bic|23|70330717534|-14|19.3|bic|1||1|
 1813|vaso desechable #8|29|7501219114272|9|24|sabormex|1||5|
 1814|poett 900ml|17|7501071900280|1|12.5|salma|1||1|
 1815|valentina negra|15|97339000061|1|0|casa vargas|1||1|
@@ -1892,7 +1892,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1893|amper negro 473ml|16|7506192508520|841|0|bonafont gatorade|1||6|
 1894|benegastro350ml|15.5|7506443102378|1|12|danone|1||1|
 1895|coca 2l|31|7501055304004|1|27.75|coca cola|1||8|
-1896|jumex fresh naranja 600ml|13|0.7501031307|0|9|pepsi|1||1|
+1896|jumex fresh naranja 600ml|13|07501031307|-3|9|pepsi|1||1|
 1897|mirinda 1.5lt|20|7501031346646|-7|16.41|pepsi|1||4|
 1898|7up 1.5lt|20|7501022014080|-3|16.41|pepsi|1||4|
 1899|manzanita 1.5lt|20|7501031360154|-6|16.41|pepsi|1||4|
@@ -1910,7 +1910,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1911|bolzaza doritos nacho 100gr|18|7500478008025|2|12.66|sabritas|1||1|
 1912|chips jalapeño|16|7501000264773|-11|13|barcel|1||6|
 1913|mirinda 500ml vidrio|10|7501031343423|7|7.67|pepsi|1||1|
-1913|ninguno|1||9548|0|provedor|1||0|
+1913|ninguno|1||9548|1|provedor|1||0|
 1914|galleta gansito tubo 215g|21|7501030486367|-1|0|marinela|1||1|
 1915|sprite 3L|34|7501055304806|2|0|coca cola|1||8|
 1916|licor de agave azul 960ml|71|7503000918441|-1|0|casa vargas|1||1|
@@ -1992,7 +1992,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 1991|clamato 473ml|22|14800515329|-13|0|casa vargas|1||1|
 1992|alpura fresa 190ml|8|7501055911318|-4|5|bodega aurrera|1||1|
 1993|alpura vainilla 473ml|8|7501055911325|0|5|bodega aurrera|1||1|
-1994|bimbo blanco 680gr|40|7501000111206|-4|39|bodega aurrera|1||1|
+1994|bimbo blanco 680gr|40|7501000111206|-5|39|bodega aurrera|1||1|
 1995|vaso ecounicel|13|41594231173|0|9.3|casa vargas|1||1|
 1996|plato unicel eco|19|7501431202955|2|14.2|casa vargas|1||1|
 1997|presidente clasico 200ml|49|7503023578301|2|35.5|casa vargas|1||1|
@@ -2044,7 +2044,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 2043|atun herdez aceite 130g|18.5|7501003105479|-1|15|casa vargas|1||2|
 2044|tartinas moras|13|7503028643431|4|10|tia rosa|1||3|
 2045|decanelas|16|7503032991801|2|0|marinela|1||1|
-2046|red bull 250ml|41|9002490100070|4|33.5|guna|1||1|
+2046|red bull 250ml|41|9002490100070|-3|33.5|guna|1||1|
 2047|gerber manzana|11|7506475102421|-7|0|casa vargas|1||1|
 2048|ciel sifon 1.75|24|7501055321919|-17|0|coca cola|1||1|
 2049|Nestle crunch cookies cream 38g|16|7501058655080|-2|8|nestle|1||8|
@@ -2238,7 +2238,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 2237|presidente clasic 940ml|201|7503023578219|0|0|casa vargas|1||1|
 2238|te mckormik surtido|23|7501003308450|1|18|casa vargas|1||1|
 2239|sobre pedigri|13|706460249484|5|9|victor|1||9|
-2240|Bimbuñuelos|14|7501000113095|-3|11|casa vargas|1||4|
+2240|Bimbuñuelos|14|7501000113095|-4|11|casa vargas|1||4|
 2241|malboro 20 ed independencia|67|75072612|13|62|malboro|1||20|
 2242|paleta payaso armable 72gr|25|7503031287240|-15|19.5|ricolino|1||1|
 2243|totopo horneado las autenticas|20|7502237930592|0|14|las autenticas|1||1|
@@ -2433,7 +2433,7 @@ id|producto|precio_de_venta|0|cantidad|costo_compra|provedor|grupo|multiusos|can
 2432|jumex mango 450ml|17|7501013103656|-1|13|jumex|1||1|
 2433|jumex manzana 450ml|17|501013103342|1|0|jumex|1||1|
 2434|piña en trozos clemente jacks|49.5|7501052477213|2|40.5|casa vargas|1||1|
-2435|trueno pop|4|603554043051|-12|0|dulceria|1||1|
+2435|trueno pop|4|603554043051|-18|0|dulceria|1||1|
 2436|sobre pedigri|13|706460249316|3|10|casa vargas|1||8|
 2437|smirnoff 750ml|217|5410316950527|4|0|marinela|1||1|
 2438|senator|38|7503030419147|-11|32|cigarro_suelto|1||1|

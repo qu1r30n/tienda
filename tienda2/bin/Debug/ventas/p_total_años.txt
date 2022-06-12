@@ -1,10 +1,10 @@
 603554102017|12|choco huevo sorpresa12g
 70330724341|44|rastrillo bic confort 3 hojas
 5410228240945|10|stella artois lager 250ml
-3014260846725|9|cepillodental
+3014260846725|15|cepillodental
 22000279033|6|orbit americano 16.2g
-40232838699|8|agua skarch 1Lt
-8000500134702|14|kinder chocolate 50g
+40232838699|11|skarch 1lt
+8000500134702|25|kinder chocolate 50g
 97339000030|4|salsa valentina 1L amarilla
 014800515329|1|clamato 473
 2261003|1|orbit hierbabuena 5.6g
@@ -21,3 +21,20 @@
 75009809|15|coca-cola 500ml
 75003722|15|aceite maravilla 500ml
 75003463|15|gerber frutas mixtas 113gr
+70330717534|14|rastrillo bic
+0.7501031307|3|jumex fresh naranja 600ml
+603554043051|6|trueno pop
+5000267014203|6|red label 700ml
+9002490100070|7|red bull 250ml
+67501441615110|1|jarrito mandarina 3L
+1|4|pomada ceresa
+20899087531|3|nutret fresa 40g
+7501000111206|1|bimbo blanco 680gr
+7501000111602|1|bimbollos 8p
+7501030472698|1|bimbuñuelos
+7501000113095|1|Bimbuñuelos
+7501000112425|1|donitas espolvoreadas 105g
+7501030456124|2|mantecada chocolate 142.5g
+7501030475514|4|mantecadas nuez6p
+7501030475521|1|mantecadas vain 6p
+7501000142408|1|mantecada vainilla 105g

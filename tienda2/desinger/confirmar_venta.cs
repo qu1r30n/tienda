@@ -70,9 +70,30 @@ namespace tienda2.desinger
                         bas.Agregar(dir_venta_rest_invent, codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg);
                         //bas.si_existe_suma_sino_agega_extra(dir_venta_rest_invent, 0, ""+codigo_barras_list[i], "2", ""+(Convert.ToDouble(cantidad[i])*-1), codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg);
                     }
+                    //ranking---------------------------------------------------------------------------------------------------------
+                    
+                    string dir_ranking_año = "inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
+                    string dir_ranking_dia = "inf\\ranking\\dia\\" + fecha_hora.ToString("yyyyMMdd")+"_ranking.txt";
+                    int solo_dia = Convert.ToInt32(fecha_hora.ToString("dd"));
 
 
+                    
+                    bas.Crear_archivo_y_directorio(dir_ranking_dia);
+                    bas.Crear_archivo_y_directorio(dir_ranking_año);
 
+                    bas.si_existe_suma_sino_agega_extra(dir_ranking_dia, 0, "" + codigo_barras_list[i], "2|5", cantidad[i]+ "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "||" + cantidad[i] + "|");
+                    bas.si_existe_suma_sino_agega_extra(dir_ranking_año, 0, "" + codigo_barras_list[i], "2|5", cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "|" + cantidad[i] + "°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|" + cantidad[i] + "|");
+                    string info_producto=bas.Seleccionar(dir_ranking_año,0,""+codigo_barras_list[i]);
+                    string[] inf_pro_split = info_producto.Split('|');
+                    string[] historial_ranking = inf_pro_split[4].Split('°');
+                    historial_ranking[0] = ""+(Convert.ToDouble(historial_ranking[0]) + Convert.ToDouble(cantidad[i]));
+                    inf_pro_split[4] = string.Join("°", historial_ranking);
+                    bas.Editar_espesifico(dir_ranking_año, 0, "" + codigo_barras_list[i], "4", "" + inf_pro_split[4]);
+
+                    bas.Ordenar(dir_ranking_dia, 5);
+                        
+                    
+                    //ranking_fin------------------------------------------------------------------------------------------------
 
                     bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);
                     bas.Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(direccion2 + provedor[i] + ".txt", 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i], "1|3|0|6|8|2");
@@ -124,6 +145,8 @@ namespace tienda2.desinger
                 e.KeyChar = '\0';
             }
         }
+
+
 
     }
 }
