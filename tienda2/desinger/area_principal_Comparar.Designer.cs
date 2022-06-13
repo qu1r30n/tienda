@@ -1,6 +1,6 @@
 ﻿namespace tienda2.desinger
 {
-    partial class Comparar
+    partial class area_principal_Comparar
     {
         /// <summary>
         /// Required designer variable.

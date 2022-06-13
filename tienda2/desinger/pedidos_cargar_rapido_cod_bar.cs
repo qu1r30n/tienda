@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 using tienda2.clases;
 
 namespace tienda2.desinger
 {
-    public partial class cargar_rapido_cod_bar : Form
+    public partial class pedidos_cargar_rapido_cod_bar : Form
     {
         Tex_base bas = new Tex_base();
         char[] G_parametros = { '|', '°', '¬', '^' };
@@ -20,7 +22,7 @@ namespace tienda2.desinger
         string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
 
         private Pedidos _parent;
-        public cargar_rapido_cod_bar(Pedidos parent)
+        public pedidos_cargar_rapido_cod_bar(Pedidos parent)
         {
             _parent = parent;
             InitializeComponent();
@@ -30,7 +32,8 @@ namespace tienda2.desinger
 
         private void Btn_procesar_venta_Click(object sender, EventArgs e)
         {
-            string[] productos = bas.Leer("inf\\inventario\\invent.txt","3|0");
+            
+            string[] productos = bas.Leer("inf\\inventario\\invent.txt");
 
             bool hubo_repetidos = false;
             for (int i = 0; i < lst_cod_bar.Items.Count; i++)
@@ -49,7 +52,16 @@ namespace tienda2.desinger
                 }
                 if (esta == false)
                 {
-                    _parent.lst_carga.Items.Add(""+lst_cod_bar.Items[i]);
+                    for (int k = 0; k < productos.Length; k++)
+                    {
+                        string[] produc_esplit = productos[k].Split('|');
+                        if (produc_esplit[3]== "" + lst_cod_bar.Items[i])
+                        {
+                            _parent.lst_carga.Items.Add(produc_esplit[3]+"|"+ produc_esplit[1] + "|1");
+                        }
+                        
+                    }
+                    
                 }
             }
             if (hubo_repetidos==true)

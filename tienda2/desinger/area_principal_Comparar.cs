@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace tienda2.desinger
 {
-    public partial class Comparar : Form
+    public partial class area_principal_Comparar : Form
     {
         char[] G_parametros = { '|', '°', '¬', '^' };
 
@@ -24,7 +24,7 @@ namespace tienda2.desinger
 
         //----------------------------------------------
         private Area_principal _parent;
-        public Comparar(Area_principal parent)
+        public area_principal_Comparar(Area_principal parent)
         {
 
             _parent = parent;

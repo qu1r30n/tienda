@@ -1,7 +1,7 @@
 ﻿
 namespace tienda2.desinger
 {
-    partial class control_provedores
+    partial class pedidos_control_provedores
     {
         /// <summary>
         /// Required designer variable.

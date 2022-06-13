@@ -71,17 +71,17 @@
     <Compile Include="desinger\Cambiar_precio.Designer.cs">
       <DependentUpon>Cambiar_precio.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\cargar_rapido_cod_bar.cs">
+    <Compile Include="desinger\pedidos_cargar_rapido_cod_bar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\cargar_rapido_cod_bar.Designer.cs">
-      <DependentUpon>cargar_rapido_cod_bar.cs</DependentUpon>
+    <Compile Include="desinger\pedidos_cargar_rapido_cod_bar.Designer.cs">
+      <DependentUpon>pedidos_cargar_rapido_cod_bar.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\Comparar.cs">
+    <Compile Include="desinger\area_principal_Comparar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\Comparar.Designer.cs">
-      <DependentUpon>Comparar.cs</DependentUpon>
+    <Compile Include="desinger\area_principal_Comparar.Designer.cs">
+      <DependentUpon>area_principal_Comparar.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\Compras.cs">
       <SubType>Form</SubType>
@@ -89,17 +89,23 @@
     <Compile Include="desinger\Compras.Designer.cs">
       <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\Confirmar_venta.cs">
+    <Compile Include="desinger\ventas_cargar_venta_temporal_guardada.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\Confirmar_venta.Designer.cs">
-      <DependentUpon>Confirmar_venta.cs</DependentUpon>
+    <Compile Include="desinger\ventas_cargar_venta_temporal_guardada.Designer.cs">
+      <DependentUpon>ventas_cargar_venta_temporal_guardada.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\control_provedores.cs">
+    <Compile Include="desinger\Ventas_confirmar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\control_provedores.Designer.cs">
-      <DependentUpon>control_provedores.cs</DependentUpon>
+    <Compile Include="desinger\Ventas_confirmar.Designer.cs">
+      <DependentUpon>Ventas_confirmar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="desinger\pedidos_control_provedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\pedidos_control_provedores.Designer.cs">
+      <DependentUpon>pedidos_control_provedores.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\crear_codigo_barras.cs">
       <SubType>Form</SubType>
@@ -177,20 +183,23 @@
     <EmbeddedResource Include="desinger\Cambiar_precio.resx">
       <DependentUpon>Cambiar_precio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\cargar_rapido_cod_bar.resx">
-      <DependentUpon>cargar_rapido_cod_bar.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\pedidos_cargar_rapido_cod_bar.resx">
+      <DependentUpon>pedidos_cargar_rapido_cod_bar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Comparar.resx">
-      <DependentUpon>Comparar.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\area_principal_Comparar.resx">
+      <DependentUpon>area_principal_Comparar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Compras.resx">
       <DependentUpon>Compras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Confirmar_venta.resx">
-      <DependentUpon>Confirmar_venta.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\ventas_cargar_venta_temporal_guardada.resx">
+      <DependentUpon>ventas_cargar_venta_temporal_guardada.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\control_provedores.resx">
-      <DependentUpon>control_provedores.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Ventas_confirmar.resx">
+      <DependentUpon>Ventas_confirmar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="desinger\pedidos_control_provedores.resx">
+      <DependentUpon>pedidos_control_provedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\crear_codigo_barras.resx">
       <DependentUpon>crear_codigo_barras.cs</DependentUpon>

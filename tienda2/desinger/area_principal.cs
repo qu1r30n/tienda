@@ -98,7 +98,7 @@ namespace tienda2.desinger
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
-            control_provedores cont_p = new control_provedores();
+            pedidos_control_provedores cont_p = new pedidos_control_provedores();
             cont_p.Show();
         }
 
@@ -111,18 +111,18 @@ namespace tienda2.desinger
 
             if (Rdb_ventas.Checked)
             {
-                Comparar.Checkbox_en_uso = "0";
+                area_principal_Comparar.Checkbox_en_uso = "0";
                 Modelo_grafica(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
             }
             else if (Rdb_productos.Checked)
             {
-                Comparar.Checkbox_en_uso = "1";
+                area_principal_Comparar.Checkbox_en_uso = "1";
                 Modelo_grafica_productos(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
             }
 
             else if (Rdb_gastos.Checked)
             {
-                Comparar.Checkbox_en_uso = "2";
+                area_principal_Comparar.Checkbox_en_uso = "2";
                 Modelo_grafica_gastos(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
             }
         }
@@ -186,7 +186,7 @@ namespace tienda2.desinger
         public void Modelo_grafica(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
         {
 
-            Comparar comp = new Comparar(this);
+            area_principal_Comparar comp = new area_principal_Comparar(this);
             Lst_ventas.Items.Clear();
 
 
@@ -259,7 +259,7 @@ namespace tienda2.desinger
 
         public void Modelo_grafica_productos(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
         {
-            Comparar comp = new Comparar(this);
+            area_principal_Comparar comp = new area_principal_Comparar(this);
             Lst_ventas.Items.Clear();
 
             if (c_año == "" && c_mes == "" && c_dia == "")
@@ -330,7 +330,7 @@ namespace tienda2.desinger
 
         public void Modelo_grafica_gastos(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
         {
-            Comparar comp = new Comparar(this);
+            area_principal_Comparar comp = new area_principal_Comparar(this);
             Lst_ventas.Items.Clear();
 
             if (c_año == "" && c_mes == "" && c_dia == "")

@@ -12,7 +12,7 @@ using tienda2.clases;
 
 namespace tienda2.desinger
 {
-    public partial class Confirmar_venta : Form
+    public partial class Ventas_confirmar : Form
     {
         Operaciones_textos op_text = new Operaciones_textos();
         public ArrayList nombre_productos = new ArrayList();
@@ -29,7 +29,7 @@ namespace tienda2.desinger
         DateTime fecha_hora = DateTime.Now;
         char[] G_parametros = { '|', '°', '¬', '^' };
 
-        public Confirmar_venta()
+        public Ventas_confirmar()
         {
             InitializeComponent();
         }

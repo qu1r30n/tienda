@@ -11,14 +11,14 @@ using tienda2.clases;
 
 namespace tienda2.desinger
 {
-    public partial class control_provedores : Form
+    public partial class pedidos_control_provedores : Form
     {
         Tex_base bas = new Tex_base();
         string direccion = "provedores\\ventas_en_dinero.txt";
         string[] provedores_info;
         char[] G_parametros = { '|', '°', '¬', '^' };
 
-        public control_provedores()
+        public pedidos_control_provedores()
         {
             InitializeComponent();
             provedores_info=bas.Leer(direccion);

@@ -504,6 +504,46 @@ namespace tienda2
             return comparar;
         }
 
+        public void Eliminar_fila_porn_numero_de_fila(string direccion_archivo, int numero_de_fila)
+        {
+            
+            G_linea = direccion_archivo.Split('\\');
+            G_temp = G_linea[0];
+            for (int i = 1; i < G_linea.Length; i++)
+            {
+                if (i == G_linea.Length - 1)
+                {
+                    G_linea[i] = "temp_" + G_linea[i];
+                }
+                G_temp = G_temp + "\\" + G_linea[i];
+            }
+            Crear_archivo_y_directorio(G_temp);
+
+            StreamReader sr = new StreamReader(direccion_archivo);
+            StreamWriter sw = new StreamWriter(G_temp, true);
+            int cont = 0;
+            
+            while (sr.Peek() >= 0)
+            {
+                
+                G_palabra = sr.ReadLine();
+                if (cont!=numero_de_fila)
+                {
+                    sw.WriteLine(G_palabra);
+                }
+                cont++;
+            }
+            sw.Close();
+            sr.Close();
+            try
+            {
+                File.Delete(direccion_archivo);
+                File.Move(G_temp, direccion_archivo);
+            }
+            catch { }
+            
+        }
+
         public string[] Leer_columnas(string direccion_archivo)
         {
             string[] linea, tem = { "" };

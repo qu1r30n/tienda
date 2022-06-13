@@ -50,6 +50,8 @@
             this.ajustesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.provedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restaurarGuardadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_guardar_venta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +69,7 @@
             // 
             // pb_product
             // 
-            this.pb_product.Location = new System.Drawing.Point(254, 50);
+            this.pb_product.Location = new System.Drawing.Point(257, 27);
             this.pb_product.Name = "pb_product";
             this.pb_product.Size = new System.Drawing.Size(103, 95);
             this.pb_product.TabIndex = 15;
@@ -248,7 +250,8 @@
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.provedorToolStripMenuItem});
+            this.provedorToolStripMenuItem,
+            this.restaurarGuardadoToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.opcionesToolStripMenuItem.Text = "opciones";
@@ -256,15 +259,33 @@
             // provedorToolStripMenuItem
             // 
             this.provedorToolStripMenuItem.Name = "provedorToolStripMenuItem";
-            this.provedorToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.provedorToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.provedorToolStripMenuItem.Text = "provedor";
             this.provedorToolStripMenuItem.Click += new System.EventHandler(this.provedorToolStripMenuItem_Click);
+            // 
+            // restaurarGuardadoToolStripMenuItem
+            // 
+            this.restaurarGuardadoToolStripMenuItem.Name = "restaurarGuardadoToolStripMenuItem";
+            this.restaurarGuardadoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.restaurarGuardadoToolStripMenuItem.Text = "restaurar guardado";
+            this.restaurarGuardadoToolStripMenuItem.Click += new System.EventHandler(this.restaurarGuardadoToolStripMenuItem_Click);
+            // 
+            // btn_guardar_venta
+            // 
+            this.btn_guardar_venta.Location = new System.Drawing.Point(257, 122);
+            this.btn_guardar_venta.Name = "btn_guardar_venta";
+            this.btn_guardar_venta.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar_venta.TabIndex = 23;
+            this.btn_guardar_venta.Text = "guardar";
+            this.btn_guardar_venta.UseVisualStyleBackColor = true;
+            this.btn_guardar_venta.Click += new System.EventHandler(this.btn_guardar_venta_Click);
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 399);
+            this.Controls.Add(this.btn_guardar_venta);
             this.Controls.Add(this.lbl_ventas_compras_resultado);
             this.Controls.Add(this.chb_ventas_compras);
             this.Controls.Add(this.label5);
@@ -319,5 +340,7 @@
         private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem provedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restaurarGuardadoToolStripMenuItem;
+        private System.Windows.Forms.Button btn_guardar_venta;
     }
 }

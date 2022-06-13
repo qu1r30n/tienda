@@ -654,7 +654,7 @@ namespace tienda2.desinger
 
         private void cargarRapidoCodigosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cargar_rapido_cod_bar ventana_carg_rap = new cargar_rapido_cod_bar(this);
+            pedidos_cargar_rapido_cod_bar ventana_carg_rap = new pedidos_cargar_rapido_cod_bar(this);
             ventana_carg_rap.Show();
         }
 

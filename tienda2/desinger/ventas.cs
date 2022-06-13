@@ -150,7 +150,7 @@ namespace tienda2.desinger
             decimal total = 0;
             decimal total_cost_com = 0;
 
-            Confirmar_venta cv = new Confirmar_venta();
+            Ventas_confirmar cv = new Ventas_confirmar();
 
             cv.codigo_barras_list.Clear();
             cv.nombre_productos.Clear();
@@ -215,7 +215,7 @@ namespace tienda2.desinger
             }
         }
 
-        private void Procesar_codigo(string codigo,string cantidad_a_sumar_o_restar="1")
+        public void Procesar_codigo(string codigo, string cantidad_a_sumar_o_restar = "1")
         {
             double cant_sum_res = Convert.ToDouble(cantidad_a_sumar_o_restar);
             string temporal;
@@ -276,7 +276,7 @@ namespace tienda2.desinger
                         string[] enviar = { "2°producto°" + temp[3], "1°cantidad en litros o kilos(se puede decimal)°°2" };
                         string mensage = vent_emergent.Proceso_ventana_emergente(enviar);
                         string[] informacion_vent_eme = mensage.Split(G_parametros[0]);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
-                        temp[8] = ""+(Convert.ToDouble(informacion_vent_eme[1])*Convert.ToDouble(cantidad_a_sumar_o_restar));
+                        temp[8] = "" + (Convert.ToDouble(informacion_vent_eme[1]) * Convert.ToDouble(cantidad_a_sumar_o_restar));
 
                         if (informacion_vent_eme[1] != "")
                         {
@@ -521,7 +521,7 @@ namespace tienda2.desinger
 
         private void provedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            control_provedores cont_prov = new control_provedores();
+            pedidos_control_provedores cont_prov = new pedidos_control_provedores();
             cont_prov.Show();
         }
 
@@ -529,22 +529,75 @@ namespace tienda2.desinger
         {
             if (e.KeyValue == (char)(Keys.Add))
             {
-                string []item_spliteado=Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros);
-                    Procesar_codigo(item_spliteado[0], "1");
+                string[] item_spliteado = Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros);
+                Procesar_codigo(item_spliteado[0], "1");
             }
             else if (e.KeyValue == (char)(Keys.Subtract))
             {
                 string[] item_spliteado = Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros);
-                
+
                 Procesar_codigo(item_spliteado[0], "-1");
                 item_spliteado = null;
                 item_spliteado = Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros);
-                if (Convert.ToDouble(item_spliteado[9])<=0)
+                if (Convert.ToDouble(item_spliteado[9]) <= 0)
                 {
                     funcion_eliminar_seleccionado();
                 }
 
             }
+        }
+
+        private void restaurarGuardadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ventas_cargar_venta_temporal_guardada cargador_ventas_guardadas = new ventas_cargar_venta_temporal_guardada(this);
+            cargador_ventas_guardadas.Show();
+        }
+
+        private void btn_guardar_venta_Click(object sender, EventArgs e)
+        {
+            Tex_base bas = new Tex_base();
+            string dir_guardado = "inf\\guardada_vent_temporal.txt";
+            bas.Crear_archivo_y_directorio(dir_guardado);
+            string juntado_items = "";
+            for (int i = 0; i < Lst_ventas.Items.Count; i++)
+            {
+                string[] item_espliteado = Lst_ventas.Items[i].ToString().Split('|');
+                juntado_items = juntado_items + item_espliteado[0] + "°" + item_espliteado[8] + "|";
+
+            }
+            bas.Agregar(dir_guardado, juntado_items);
+
+            //eliminar lo del listbox---------------------------------------------------------------------
+            string temporal;
+            string[] temporal_s;
+            decimal total = 0;
+            decimal total_cost_com = 0;
+
+            try
+            {
+                Lst_ventas.Items.Clear();
+                for (int coll = 0; coll < Lst_ventas.Items.Count; coll++)
+                {
+                    temporal = "" + Lst_ventas.Items[coll];
+                    temporal_s = temporal.Split(G_parametros[0]);
+
+                    if (temporal_s[0] != "")
+                    {
+                        total = total + Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
+                        total_cost_com = total_cost_com + (Convert.ToDecimal(temporal_s[5]) * Convert.ToDecimal(temporal_s[8]));
+                    }
+
+                }
+                Lbl_cuenta.Text = "" + total;
+                Lbl_nom_product_list.Text = "nombre del producto";
+                Lbl_costo_product_list.Text = "$";
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            Txt_buscar_producto.Focus();
+            //----------------------------------------------------------------------------------------
         }
     }
 }

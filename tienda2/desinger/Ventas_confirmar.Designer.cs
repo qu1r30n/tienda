@@ -1,6 +1,6 @@
 ﻿namespace tienda2.desinger
 {
-    partial class Confirmar_venta
+    partial class Ventas_confirmar
     {
         /// <summary>
         /// Required designer variable.
