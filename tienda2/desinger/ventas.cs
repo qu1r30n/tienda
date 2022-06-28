@@ -97,20 +97,7 @@ namespace tienda2.desinger
             Txt_buscar_producto.Focus();
         }
 
-
-        //----------------------------------------------------------------------------
-
-
-        private void Txt_buscar_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyValue == (char)(Keys.Enter))
-            {
-                string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
-                Procesar_codigo(info[0]);
-            }
-        }
-
-        private void Btn_elim_ultimo_Click(object sender, EventArgs e)
+        private void funcion_eliminar_ulitimo()
         {
             string temporal;
             string[] temporal_s;
@@ -141,6 +128,16 @@ namespace tienda2.desinger
                 throw;
             }
             Txt_buscar_producto.Focus();
+        }
+
+        //----------------------------------------------------------------------------
+
+
+        
+
+        private void Btn_elim_ultimo_Click(object sender, EventArgs e)
+        {
+            funcion_eliminar_ulitimo();
         }
 
         private void Btn_procesar_venta_Click(object sender, EventArgs e)
@@ -521,7 +518,7 @@ namespace tienda2.desinger
 
         private void provedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pedidos_control_provedores cont_prov = new pedidos_control_provedores();
+            Compras_control_provedores cont_prov = new Compras_control_provedores();
             cont_prov.Show();
         }
 
@@ -539,7 +536,7 @@ namespace tienda2.desinger
                 Procesar_codigo(item_spliteado[0], "-1");
                 item_spliteado = null;
                 item_spliteado = Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros);
-                if (Convert.ToDouble(item_spliteado[9]) <= 0)
+                if (Convert.ToDouble(item_spliteado[item_spliteado.Length - 1]) <= 0)//posible error futuro esto lo ago porque nose porque aveses son 9 elementos y aveses 8  luego vemos o el punto talves sea no modificar el ultimo 
                 {
                     funcion_eliminar_seleccionado();
                 }
@@ -599,6 +596,43 @@ namespace tienda2.desinger
             Txt_buscar_producto.Focus();
             //----------------------------------------------------------------------------------------
         }
+
+        private void Txt_buscar_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyValue == (char)(Keys.Enter))
+            {
+                string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
+                Procesar_codigo(info[0]);
+            }
+        }
+
+        private void Txt_buscar_producto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '+')
+            {
+                string[] item_spliteado = Lst_ventas.Items[Lst_ventas.Items.Count-1].ToString().Split(G_parametros);
+                Procesar_codigo(item_spliteado[0], "1");
+
+                e.KeyChar = '\0';
+            }
+
+            else if (e.KeyChar == '-')
+            {
+                string[] item_spliteado = Lst_ventas.Items[Lst_ventas.Items.Count - 1].ToString().Split(G_parametros);
+
+                Procesar_codigo(item_spliteado[0], "-1");
+                item_spliteado = null;
+                item_spliteado = Lst_ventas.Items[Lst_ventas.Items.Count-1].ToString().Split(G_parametros);
+                if (Convert.ToDouble(item_spliteado[item_spliteado.Length-1]) <= 0)//posible error futuro el .length lo tengo que usar por que nose porque aveses tiene 9 elementos y aveses 8
+                {
+                    funcion_eliminar_ulitimo();
+                }
+
+
+                e.KeyChar = '\0';
+            }            
+        }
+
     }
 }
 

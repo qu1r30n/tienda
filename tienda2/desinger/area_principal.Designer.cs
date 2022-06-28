@@ -38,9 +38,9 @@
             this.Rdb_productos = new System.Windows.Forms.RadioButton();
             this.Rdb_ventas = new System.Windows.Forms.RadioButton();
             this.Btn_comparar = new System.Windows.Forms.Button();
-            this.Btn_pedidos = new System.Windows.Forms.Button();
-            this.Btn_respaldo = new System.Windows.Forms.Button();
             this.Btn_compras = new System.Windows.Forms.Button();
+            this.Btn_respaldo = new System.Windows.Forms.Button();
+            this.Btn_gastos = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Txt_total = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.btn_inventario = new System.Windows.Forms.Button();
             this.btn_igualar_provedores = new System.Windows.Forms.Button();
             this.btn_inv_merc = new System.Windows.Forms.Button();
+            this.btn_pedidos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,15 +136,15 @@
             this.Btn_comparar.UseVisualStyleBackColor = true;
             this.Btn_comparar.Click += new System.EventHandler(this.Btn_comparar_Click);
             // 
-            // Btn_pedidos
+            // Btn_compras
             // 
-            this.Btn_pedidos.Location = new System.Drawing.Point(3, 123);
-            this.Btn_pedidos.Name = "Btn_pedidos";
-            this.Btn_pedidos.Size = new System.Drawing.Size(143, 23);
-            this.Btn_pedidos.TabIndex = 5;
-            this.Btn_pedidos.Text = "pedidos";
-            this.Btn_pedidos.UseVisualStyleBackColor = true;
-            this.Btn_pedidos.Click += new System.EventHandler(this.Btn_pedidos_Click);
+            this.Btn_compras.Location = new System.Drawing.Point(3, 123);
+            this.Btn_compras.Name = "Btn_compras";
+            this.Btn_compras.Size = new System.Drawing.Size(143, 23);
+            this.Btn_compras.TabIndex = 5;
+            this.Btn_compras.Text = "Compras";
+            this.Btn_compras.UseVisualStyleBackColor = true;
+            this.Btn_compras.Click += new System.EventHandler(this.Btn_pedidos_Click);
             // 
             // Btn_respaldo
             // 
@@ -155,15 +156,15 @@
             this.Btn_respaldo.UseVisualStyleBackColor = true;
             this.Btn_respaldo.Click += new System.EventHandler(this.Btn_respaldo_Click);
             // 
-            // Btn_compras
+            // Btn_gastos
             // 
-            this.Btn_compras.Location = new System.Drawing.Point(3, 65);
-            this.Btn_compras.Name = "Btn_compras";
-            this.Btn_compras.Size = new System.Drawing.Size(143, 23);
-            this.Btn_compras.TabIndex = 3;
-            this.Btn_compras.Text = "NUEVA COMPRA";
-            this.Btn_compras.UseVisualStyleBackColor = true;
-            this.Btn_compras.Click += new System.EventHandler(this.Btn_compras_Click);
+            this.Btn_gastos.Location = new System.Drawing.Point(3, 65);
+            this.Btn_gastos.Name = "Btn_gastos";
+            this.Btn_gastos.Size = new System.Drawing.Size(143, 23);
+            this.Btn_gastos.TabIndex = 3;
+            this.Btn_gastos.Text = "Gastos";
+            this.Btn_gastos.UseVisualStyleBackColor = true;
+            this.Btn_gastos.Click += new System.EventHandler(this.Btn_compras_Click);
             // 
             // label4
             // 
@@ -279,7 +280,7 @@
             this.Btn_canbio_precios.Name = "Btn_canbio_precios";
             this.Btn_canbio_precios.Size = new System.Drawing.Size(143, 21);
             this.Btn_canbio_precios.TabIndex = 6;
-            this.Btn_canbio_precios.Text = " cambio de precios";
+            this.Btn_canbio_precios.Text = " cambio de informacion";
             this.Btn_canbio_precios.UseVisualStyleBackColor = true;
             this.Btn_canbio_precios.Click += new System.EventHandler(this.Btn_canbio_precios_Click);
             // 
@@ -330,11 +331,22 @@
             this.btn_inv_merc.UseVisualStyleBackColor = true;
             this.btn_inv_merc.Click += new System.EventHandler(this.btn_inv_merc_Click);
             // 
+            // btn_pedidos
+            // 
+            this.btn_pedidos.Location = new System.Drawing.Point(3, 268);
+            this.btn_pedidos.Name = "btn_pedidos";
+            this.btn_pedidos.Size = new System.Drawing.Size(143, 23);
+            this.btn_pedidos.TabIndex = 57;
+            this.btn_pedidos.Text = "pedidos";
+            this.btn_pedidos.UseVisualStyleBackColor = true;
+            this.btn_pedidos.Click += new System.EventHandler(this.btn_pedidos_Click_1);
+            // 
             // Area_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1140, 378);
+            this.Controls.Add(this.btn_pedidos);
             this.Controls.Add(this.btn_inv_merc);
             this.Controls.Add(this.btn_igualar_provedores);
             this.Controls.Add(this.btn_inventario);
@@ -347,9 +359,9 @@
             this.Controls.Add(this.Rdb_productos);
             this.Controls.Add(this.Rdb_ventas);
             this.Controls.Add(this.Btn_comparar);
-            this.Controls.Add(this.Btn_pedidos);
-            this.Controls.Add(this.Btn_respaldo);
             this.Controls.Add(this.Btn_compras);
+            this.Controls.Add(this.Btn_respaldo);
+            this.Controls.Add(this.Btn_gastos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Txt_total);
             this.Controls.Add(this.label3);
@@ -379,9 +391,9 @@
         private System.Windows.Forms.RadioButton Rdb_productos;
         private System.Windows.Forms.RadioButton Rdb_ventas;
         private System.Windows.Forms.Button Btn_comparar;
-        private System.Windows.Forms.Button Btn_pedidos;
-        private System.Windows.Forms.Button Btn_respaldo;
         private System.Windows.Forms.Button Btn_compras;
+        private System.Windows.Forms.Button Btn_respaldo;
+        private System.Windows.Forms.Button Btn_gastos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Txt_total;
         private System.Windows.Forms.Label label3;
@@ -399,5 +411,6 @@
         private System.Windows.Forms.Button btn_inventario;
         private System.Windows.Forms.Button btn_igualar_provedores;
         private System.Windows.Forms.Button btn_inv_merc;
+        private System.Windows.Forms.Button btn_pedidos;
     }
 }

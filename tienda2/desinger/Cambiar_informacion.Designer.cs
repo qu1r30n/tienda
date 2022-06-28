@@ -1,6 +1,6 @@
 ﻿namespace tienda2.desinger
 {
-    partial class Cambiar_precio
+    partial class Cambiar_informacion
     {
         /// <summary>
         /// Required designer variable.

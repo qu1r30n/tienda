@@ -1,7 +1,7 @@
 ﻿
 namespace tienda2.desinger
 {
-    partial class pedidos_cargar_rapido_cod_bar
+    partial class Compras_cargar_rapido_cod_bar
     {
         /// <summary>
         /// Required designer variable.

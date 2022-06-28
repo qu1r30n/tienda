@@ -14,15 +14,15 @@ using tienda2.clases;
 
 namespace tienda2.desinger
 {
-    public partial class pedidos_cargar_rapido_cod_bar : Form
+    public partial class Compras_cargar_rapido_cod_bar : Form
     {
         Tex_base bas = new Tex_base();
         char[] G_parametros = { '|', '°', '¬', '^' };
         List<string> G_productos = new List<string>();
         string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
 
-        private Pedidos _parent;
-        public pedidos_cargar_rapido_cod_bar(Pedidos parent)
+        private Compras _parent;
+        public Compras_cargar_rapido_cod_bar(Compras parent)
         {
             _parent = parent;
             InitializeComponent();

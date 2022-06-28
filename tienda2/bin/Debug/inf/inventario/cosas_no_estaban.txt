@@ -462,3 +462,21 @@ movimiento origen: 0|1200|1000|
 movimiento origen: 1|1456|elim|0|fsdajkdfsal|0|0|bic|1||0||
 movimiento origen: 1|1457|elim1|0|elim1|1|0|bic|1||1||
 movimiento origen: 1|1458|elim2|0|elim2|1|0|bic|1||1||
+movimiento origen: 1|2774|nutririnde 240gr|0|7501059282117|1|0|casa vargas|1||1||
+movimiento origen: 1|2775|catchow adul 85g|0|7501072212665|1|0|nestle|1||1||
+movimiento origen: 1|2776|rajas jalapeño costeña 380mg|0|7501017004027|1|0|casa vargas|1||1||
+movimiento origen: 1|2777|hedan sholder men 180mg|0|7500435019521|1|0|casa vargas|1||1||
+movimiento origen: 1|2778|victoria 355ml|0|7501064115400|1|0|corona|1||1||
+movimiento origen: 1|2779|panditas enchilados 60gr|0|7500810004401|1|0|ricolino|1||1||
+movimiento origen: 1|2780|panditas acidos 60gr|0|7500810004388|1|0|ricolino|1||1||
+movimiento origen: 1|2781|gomiloc ambruguesas|0|7500810004456|1|0|ricolino|1||1||
+movimiento origen: 1|2782|panditas rellenos 60gr|0|7500810004418|1|0|ricolino|1||1||
+movimiento origen: 1|2783|mantecadas chispas chocolate 165 grs|0|7503032991429|1|0|bimbo dulce|1||1||
+movimiento origen: 1|2784|maravilla chocolates 116gr|0|7500478028078|1|0|tia rosa|1||1||
+movimiento origen: 1|2785|big mix fuego 80gr|0|7500810005408|1|0|barcel|1||1||
+movimiento origen: 1|2786|bigmix clasico 75gr|0|7500810005453|1|0|barcel|1||1||
+movimiento origen: 1|2787|chips jalapeño 50gr|0|757528028985|1|0|barcel|1||1||
+movimiento origen: 1|2788|lipton limon 600ml|0|7501031302352|1|0|pepsi|1||1||
+movimiento origen: 1|2789|gatorlyte fr-kiwi 591 ml|0|7501022015049|1|0|pepsi|1||1||
+movimiento origen: 1|2790|mexicana 1.5Lt|0|7506192508940|1|0|quala|1||1||
+movimiento origen: 1|2791|suerox aloe-lich 630ml|0|650240057946|1|0|comercializadora america|1||1||

@@ -133,6 +133,7 @@
             this.Txt_buscar_producto.Name = "Txt_buscar_producto";
             this.Txt_buscar_producto.Size = new System.Drawing.Size(150, 20);
             this.Txt_buscar_producto.TabIndex = 8;
+            this.Txt_buscar_producto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_buscar_producto_KeyPress);
             this.Txt_buscar_producto.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Txt_buscar_producto_PreviewKeyDown);
             // 
             // Txt_nom_producto

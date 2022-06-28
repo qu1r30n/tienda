@@ -79,7 +79,7 @@ namespace tienda2.desinger
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
-            Compras comp = new Compras();
+            gastos comp = new gastos();
             comp.Show();
         }
 
@@ -98,7 +98,7 @@ namespace tienda2.desinger
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
-            pedidos_control_provedores cont_p = new pedidos_control_provedores();
+            Compras_control_provedores cont_p = new Compras_control_provedores();
             cont_p.Show();
         }
 
@@ -958,7 +958,7 @@ namespace tienda2.desinger
 
         private void Btn_canbio_precios_Click(object sender, EventArgs e)
         {
-            Cambiar_precio cam_precio = new Cambiar_precio();
+            Cambiar_informacion cam_precio = new Cambiar_informacion();
             cam_precio.Show();
         }
 
@@ -991,6 +991,11 @@ namespace tienda2.desinger
 
             investigacion_mercado inv_merc = new investigacion_mercado();//nuev_vent sera el form empleados
             inv_merc.Show();// muestra el form empleados
+        }
+
+        private void btn_pedidos_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

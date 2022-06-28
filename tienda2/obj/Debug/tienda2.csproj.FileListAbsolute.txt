@@ -22,7 +22,6 @@ C:\Users\qu1r30n\source\repos\tienda2\tienda2\obj\Debug\tienda2.pdb
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.area_principal.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.compras.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.empleados.resources
-D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.pedidos.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.respaldo.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.ventana_emergente.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.ventas.resources
@@ -35,7 +34,6 @@ D:\pr\tienda2\tienda2\obj\Debug\tienda2.pdb
 D:\pr\tienda2\tienda2\bin\Debug\tienda2.exe.config
 D:\pr\tienda2\tienda2\bin\Debug\tienda2.exe
 D:\pr\tienda2\tienda2\bin\Debug\tienda2.pdb
-D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.cambiar_precio.resources
 D:\pr\tienda2\tienda2\bin\Debug\BarcodeStandard.dll
 D:\pr\tienda2\tienda2\bin\Debug\System.Drawing.Common.dll
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.crear_codigo_barras.resources
@@ -45,8 +43,10 @@ D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.igualar_provedores.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.csproj.CopyComplete
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.inventario.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.investigacion_mercado.resources
-D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.pedidos_cargar_rapido_cod_bar.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.area_principal_Comparar.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.ventas_cargar_venta_temporal_guardada.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.Ventas_confirmar.resources
-D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.pedidos_control_provedores.resources
+D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.Cambiar_informacion.resources
+D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.Compras_cargar_rapido_cod_bar.resources
+D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.gastos.resources
+D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.Compras_control_provedores.resources

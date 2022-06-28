@@ -96,6 +96,7 @@ namespace tienda2.desinger
             txt_cod_bar.Focus();
         }
 
+        
         private string mod_ventana_si_no_existe_en_el_inventario(string codigo_barras)
         {
             Operaciones_textos op_text = new Operaciones_textos();
@@ -125,7 +126,13 @@ namespace tienda2.desinger
             }
 
             string mensage = vent_emergent.Proceso_ventana_emergente(enviar);//el uno significa que modificara el inventario
-
+            bas.Agregar("inf\\inventario\\invent.txt", mensage);
+            string[] mensage_esplit = mensage.Split('|');
+            if (mensage!="|")
+            {
+                G_prov_anterior = mensage_esplit[6];
+            }
+            
             return mensage;
         }
 
@@ -150,7 +157,6 @@ namespace tienda2.desinger
             string hora_min_seg = fecha_hora.ToString("HHmmss");
             
             
-
             Ventana_emergente vent_emer = new Ventana_emergente();
             string[] enviar = { "1°" + nom_producto + "°0°2" };
             string resultado = vent_emer.Proceso_ventana_emergente(enviar);

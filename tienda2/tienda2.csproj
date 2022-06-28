@@ -65,17 +65,17 @@
     <Compile Include="desinger\Area_principal.Designer.cs">
       <DependentUpon>Area_principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\Cambiar_precio.cs">
+    <Compile Include="desinger\Cambiar_informacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\Cambiar_precio.Designer.cs">
-      <DependentUpon>Cambiar_precio.cs</DependentUpon>
+    <Compile Include="desinger\Cambiar_informacion.Designer.cs">
+      <DependentUpon>Cambiar_informacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\pedidos_cargar_rapido_cod_bar.cs">
+    <Compile Include="desinger\Compras_cargar_rapido_cod_bar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\pedidos_cargar_rapido_cod_bar.Designer.cs">
-      <DependentUpon>pedidos_cargar_rapido_cod_bar.cs</DependentUpon>
+    <Compile Include="desinger\Compras_cargar_rapido_cod_bar.Designer.cs">
+      <DependentUpon>Compras_cargar_rapido_cod_bar.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\area_principal_Comparar.cs">
       <SubType>Form</SubType>
@@ -83,11 +83,11 @@
     <Compile Include="desinger\area_principal_Comparar.Designer.cs">
       <DependentUpon>area_principal_Comparar.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\Compras.cs">
+    <Compile Include="desinger\gastos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\Compras.Designer.cs">
-      <DependentUpon>Compras.cs</DependentUpon>
+    <Compile Include="desinger\gastos.Designer.cs">
+      <DependentUpon>gastos.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\ventas_cargar_venta_temporal_guardada.cs">
       <SubType>Form</SubType>
@@ -101,11 +101,11 @@
     <Compile Include="desinger\Ventas_confirmar.Designer.cs">
       <DependentUpon>Ventas_confirmar.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\pedidos_control_provedores.cs">
+    <Compile Include="desinger\Compras_control_provedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\pedidos_control_provedores.Designer.cs">
-      <DependentUpon>pedidos_control_provedores.cs</DependentUpon>
+    <Compile Include="desinger\Compras_control_provedores.Designer.cs">
+      <DependentUpon>Compras_control_provedores.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\crear_codigo_barras.cs">
       <SubType>Form</SubType>
@@ -137,11 +137,11 @@
     <Compile Include="desinger\investigacion_mercado.Designer.cs">
       <DependentUpon>investigacion_mercado.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\Pedidos.cs">
+    <Compile Include="desinger\Compras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\Pedidos.Designer.cs">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <Compile Include="desinger\Compras.Designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\Respaldo.cs">
       <SubType>Form</SubType>
@@ -180,17 +180,17 @@
     <EmbeddedResource Include="desinger\Area_principal.resx">
       <DependentUpon>Area_principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Cambiar_precio.resx">
-      <DependentUpon>Cambiar_precio.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Cambiar_informacion.resx">
+      <DependentUpon>Cambiar_informacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\pedidos_cargar_rapido_cod_bar.resx">
-      <DependentUpon>pedidos_cargar_rapido_cod_bar.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Compras_cargar_rapido_cod_bar.resx">
+      <DependentUpon>Compras_cargar_rapido_cod_bar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\area_principal_Comparar.resx">
       <DependentUpon>area_principal_Comparar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Compras.resx">
-      <DependentUpon>Compras.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\gastos.resx">
+      <DependentUpon>gastos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\ventas_cargar_venta_temporal_guardada.resx">
       <DependentUpon>ventas_cargar_venta_temporal_guardada.cs</DependentUpon>
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="desinger\Ventas_confirmar.resx">
       <DependentUpon>Ventas_confirmar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\pedidos_control_provedores.resx">
-      <DependentUpon>pedidos_control_provedores.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Compras_control_provedores.resx">
+      <DependentUpon>Compras_control_provedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\crear_codigo_barras.resx">
       <DependentUpon>crear_codigo_barras.cs</DependentUpon>
@@ -216,8 +216,8 @@
     <EmbeddedResource Include="desinger\investigacion_mercado.resx">
       <DependentUpon>investigacion_mercado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Pedidos.resx">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Respaldo.resx">
       <DependentUpon>Respaldo.cs</DependentUpon>

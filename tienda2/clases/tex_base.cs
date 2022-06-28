@@ -1332,6 +1332,135 @@ namespace tienda2
             return lineas;
         }
 
+        public void comp_2_archivos_info_no_esta(string direccion_archivo_1, int columna_1, string direccion_archivo_2, int columna_2, char caracter_separacion = '|')
+        {
+            //el que va a apareser la info del archivo 1
+            
+            Tex_base bas = new Tex_base();
+            string[]archivo1=bas.Leer(direccion_archivo_1);
+            string[] archivo2 = bas.Leer(direccion_archivo_2);
+
+            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_comparacion_no_se_encontro.txt";
+            bas.Crear_archivo_y_directorio(dir_res_comp);
+
+            for (int i = 0; i < archivo1.Length; i++)
+            {
+                string[]info_1=archivo1[i].Split(caracter_separacion);
+                bool bandera = false;
+                for (int j = 0; j < archivo2.Length; j++)
+                {
+                    string[] info_2 = archivo2[j].Split(caracter_separacion);
+                    if (info_1[columna_1] == info_2[columna_2]) 
+                    {
+                        bandera = true;
+                    }
+                }
+                if (bandera==false)
+                {
+                    string temp = archivo1[i];
+                    bas.Agregar(dir_res_comp,temp );
+                }
+
+            }
+
+        }
+
+        public void comp_2_archivos_info_no_esta_vuelve_a_cero(string direccion_archivo_1, int columna_1, string direccion_archivo_2, int columna_2, char caracter_separacion = '|')
+        {
+            //el que va editar la info del archivo 1
+
+            Tex_base bas = new Tex_base();
+            string[] archivo1 = bas.Leer(direccion_archivo_1);
+            string[] archivo2 = bas.Leer(direccion_archivo_2);
+
+            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_comparacion_no_se_encontro.txt";
+            bas.Crear_archivo_y_directorio(dir_res_comp);
+
+            for (int i = 1; i < archivo1.Length; i++)
+            {
+                string[] info_1 = archivo1[i].Split(caracter_separacion);
+                bool bandera = false;
+                for (int j = 0; j < archivo2.Length; j++)
+                {
+                    string[] info_2 = archivo2[j].Split(caracter_separacion);
+                    if (info_1[columna_1] == info_2[columna_2])
+                    {
+                        bandera = true;
+                    }
+                }
+                if (bandera == false)
+                {
+                    //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
+                   bas.Editar_espesifico(direccion_archivo_1,columna_1, info_1[columna_1],"4","0");
+                }
+
+            }
+
+        }
+
+
+        public void si_son_menores_a_0_o_mayores_a_1000_los_vuelve_a_cero(string direccion_archivo_1, int columna_1, char caracter_separacion = '|')
+        {
+            //el que va a apareser la info del archivo 1
+
+            Tex_base bas = new Tex_base();
+            string[] archivo1 = bas.Leer(direccion_archivo_1);
+
+
+            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_comparacion_no_se_encontro.txt";
+            bas.Crear_archivo_y_directorio(dir_res_comp);
+
+            for (int i = 1; i < archivo1.Length; i++)
+            {
+                string[] info_1 = archivo1[i].Split(caracter_separacion);
+
+
+
+                if (Convert.ToDouble(info_1[columna_1]) < 0 || Convert.ToDouble(info_1[columna_1]) > 200)
+                {
+                    info_1[4] = "0";
+                    string temp = string.Join("|", info_1);
+                    bas.Agregar(dir_res_comp, temp);
+                }
+                else
+                {
+                    string temp = archivo1[i];
+                    bas.Agregar(dir_res_comp, temp);
+                }
+
+            }
+
+        }
+
+        public void quitar_repetidos(string direccion_archivo_1, int columna_1, char caracter_separacion = '|')
+        {
+            //el que va a apareser la info del archivo 1
+
+            Tex_base bas = new Tex_base();
+            string[] archivo1 = bas.Leer(direccion_archivo_1);
+            
+
+            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_comparacion_no_se_encontro.txt";
+            bas.Crear_archivo_y_directorio(dir_res_comp);
+
+            for (int i = 0; i < archivo1.Length; i++)
+            {
+                string[] info_1 = archivo1[i].Split(caracter_separacion);
+                
+                for (int j = i+1; j < archivo1.Length; j++)
+                {
+                    string[] info_2 = archivo1[j].Split(caracter_separacion);
+                    if (info_1[columna_1] == info_2[columna_1])
+                    {
+                        string temp = archivo1[i];
+                        bas.Agregar(dir_res_comp, temp);
+                    }
+                }
+
+            }
+
+        }
+
         public bool existe_archivo(string direccion)
         {
             return File.Exists(direccion);

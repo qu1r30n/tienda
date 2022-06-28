@@ -91,8 +91,9 @@ namespace tienda2.desinger
                     bas.Editar_espesifico(dir_ranking_año, 0, "" + codigo_barras_list[i], "4", "" + inf_pro_split[4]);
 
                     bas.Ordenar(dir_ranking_dia, 5);
-                        
-                    
+                    bas.Ordenar(dir_ranking_año, 5);
+
+
                     //ranking_fin------------------------------------------------------------------------------------------------
 
                     bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);

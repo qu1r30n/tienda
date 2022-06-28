@@ -11,7 +11,7 @@ using tienda2.clases;
 
 namespace tienda2.desinger
 {
-    public partial class Cambiar_precio : Form
+    public partial class Cambiar_informacion : Form
     {
         char[] G_parametros = { '|', '°', '¬', '^' };
         List<string> G_productos = new List<string>();
@@ -20,7 +20,7 @@ namespace tienda2.desinger
 
         string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
 
-        public Cambiar_precio()
+        public Cambiar_informacion()
         {
             InitializeComponent();
             Recargar_texbox();
