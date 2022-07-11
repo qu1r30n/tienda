@@ -63,6 +63,58 @@ namespace tienda2
             
         }
 
+        public string Seleccionar_todos_los_de_un_array(string direccion_archivo, int num_column_comp, string[] comparar,int arreglo_colum_comp ,string numero_columnas_extraer = null, char caracter_separacion = '|')
+        {
+            StreamReader sr = new StreamReader(direccion_archivo);
+            string columna = "";
+            while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
+            {
+                string linea = sr.ReadLine();//leemos linea y lo guardamos en palabra
+                if (linea != null)
+                {
+                    string[] palabra = linea.Split(caracter_separacion);
+                    
+                    for (int i = 0; i < comparar.Length; i++)
+                    {
+                        string[] comparar_espliteado = comparar[i].Split(caracter_separacion);
+                        if (palabra[num_column_comp] == comparar_espliteado[arreglo_colum_comp])
+                        {
+                            if (numero_columnas_extraer != null)
+                            {
+                                string[] columnas_extraer = numero_columnas_extraer.Split(caracter_separacion);
+                                for (int j = 0; j < columnas_extraer.Length; j++)
+                                {
+                                    int columna_extraer_numerico = Convert.ToInt32(columnas_extraer[j]);
+                                    if (j < columnas_extraer.Length - 1)
+                                    {
+                                        columna = columna + palabra[columna_extraer_numerico] + caracter_separacion;
+                                    }
+                                    else
+                                    {
+                                        columna = columna + palabra[columna_extraer_numerico];
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                columna = columna + linea;
+                            }
+
+                            columna = columna + "¬";
+
+                        }
+
+                    }
+                    
+                }
+            }
+            columna = Trimend_paresido(columna, '¬');
+            columna = Trimend_paresido(columna, '|');
+
+            sr.Close();
+            return columna;
+        }
+
 
         public string Seleccionar(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_extraer=null, char caracter_separacion = '|')
         {
@@ -1340,7 +1392,7 @@ namespace tienda2
             string[]archivo1=bas.Leer(direccion_archivo_1);
             string[] archivo2 = bas.Leer(direccion_archivo_2);
 
-            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_comparacion_no_se_encontro.txt";
+            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\info_comparacion_no_se_encontro.txt";
             bas.Crear_archivo_y_directorio(dir_res_comp);
 
             for (int i = 0; i < archivo1.Length; i++)
@@ -1373,7 +1425,7 @@ namespace tienda2
             string[] archivo1 = bas.Leer(direccion_archivo_1);
             string[] archivo2 = bas.Leer(direccion_archivo_2);
 
-            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_comparacion_no_se_encontro.txt";
+            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\info_comparacion_no_se_encontro.txt";
             bas.Crear_archivo_y_directorio(dir_res_comp);
 
             for (int i = 1; i < archivo1.Length; i++)
@@ -1407,7 +1459,7 @@ namespace tienda2
             string[] archivo1 = bas.Leer(direccion_archivo_1);
 
 
-            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_comparacion_no_se_encontro.txt";
+            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\info_comparacion_no_se_encontro.txt";
             bas.Crear_archivo_y_directorio(dir_res_comp);
 
             for (int i = 1; i < archivo1.Length; i++)
@@ -1440,7 +1492,7 @@ namespace tienda2
             string[] archivo1 = bas.Leer(direccion_archivo_1);
             
 
-            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_comparacion_no_se_encontro.txt";
+            string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\info_comparacion_no_se_encontro.txt";
             bas.Crear_archivo_y_directorio(dir_res_comp);
 
             for (int i = 0; i < archivo1.Length; i++)

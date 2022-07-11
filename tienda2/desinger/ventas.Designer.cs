@@ -52,6 +52,7 @@
             this.provedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurarGuardadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_guardar_venta = new System.Windows.Forms.Button();
+            this.lbl_modo_inventario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,9 +70,9 @@
             // 
             // pb_product
             // 
-            this.pb_product.Location = new System.Drawing.Point(257, 27);
+            this.pb_product.Location = new System.Drawing.Point(257, 28);
             this.pb_product.Name = "pb_product";
-            this.pb_product.Size = new System.Drawing.Size(103, 95);
+            this.pb_product.Size = new System.Drawing.Size(103, 94);
             this.pb_product.TabIndex = 15;
             this.pb_product.TabStop = false;
             // 
@@ -118,9 +119,9 @@
             // Lst_ventas
             // 
             this.Lst_ventas.FormattingEnabled = true;
-            this.Lst_ventas.Location = new System.Drawing.Point(12, 47);
+            this.Lst_ventas.Location = new System.Drawing.Point(12, 60);
             this.Lst_ventas.Name = "Lst_ventas";
-            this.Lst_ventas.Size = new System.Drawing.Size(239, 251);
+            this.Lst_ventas.Size = new System.Drawing.Size(239, 238);
             this.Lst_ventas.TabIndex = 16;
             this.Lst_ventas.SelectedIndexChanged += new System.EventHandler(this.Lst_ventas_SelectedIndexChanged);
             this.Lst_ventas.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Lst_ventas_PreviewKeyDown);
@@ -281,11 +282,21 @@
             this.btn_guardar_venta.UseVisualStyleBackColor = true;
             this.btn_guardar_venta.Click += new System.EventHandler(this.btn_guardar_venta_Click);
             // 
+            // lbl_modo_inventario
+            // 
+            this.lbl_modo_inventario.AutoSize = true;
+            this.lbl_modo_inventario.Location = new System.Drawing.Point(14, 44);
+            this.lbl_modo_inventario.Name = "lbl_modo_inventario";
+            this.lbl_modo_inventario.Size = new System.Drawing.Size(10, 13);
+            this.lbl_modo_inventario.TabIndex = 24;
+            this.lbl_modo_inventario.Text = ".";
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 399);
+            this.Controls.Add(this.lbl_modo_inventario);
             this.Controls.Add(this.btn_guardar_venta);
             this.Controls.Add(this.lbl_ventas_compras_resultado);
             this.Controls.Add(this.chb_ventas_compras);
@@ -343,5 +354,6 @@
         private System.Windows.Forms.ToolStripMenuItem provedorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restaurarGuardadoToolStripMenuItem;
         private System.Windows.Forms.Button btn_guardar_venta;
+        private System.Windows.Forms.Label lbl_modo_inventario;
     }
 }

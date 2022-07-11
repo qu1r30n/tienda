@@ -47,8 +47,8 @@ namespace tienda2.desinger
                 string temp = "";
                 string cantidades_de_productos = "";
 
-                string direccion = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\" + fecha_hora.ToString("yyyyMMdd") + "_vendidos.txt";
-                string direccion2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\ventas\\provedores\\";
+                string direccion = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\ventas\\" + fecha_hora.ToString("yyyyMMdd") + "_vendidos.txt";
+                string direccion2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\ventas\\provedores\\";
                 string direccion3 = "provedores\\ventas_en_dinero.txt";
 
                 for (int i = 0; i < codigo_barras_list.Count; i++)
@@ -57,23 +57,25 @@ namespace tienda2.desinger
                     cantidades_de_productos = cantidades_de_productos + cantidad[i] + G_parametros[0];
                     
                     string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
-                    string direccion_inventario_hacer = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\" + año_mes_dia + "_todo_tienda.txt";
+                    string direccion_inventario_hacer = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\" + año_mes_dia + "_todo_tienda.txt";
 
-                    string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
+                    string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
                     if (bas.existe_archivo(mod_inv))
                     {
                         DateTime fecha_hora = DateTime.Now;
 
                         string hora_min_seg = fecha_hora.ToString("HHmmss");
-                        string dir_venta_rest_invent = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\" + año_mes_dia + "_compras_durante_invet_e_inventario.txt";
+                        string dir_venta_rest_invent = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\" + año_mes_dia + "_compras_durante_invet_e_inventario.txt";
                         bas.Crear_archivo_y_directorio(dir_venta_rest_invent);
                         bas.Agregar(dir_venta_rest_invent, codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg);
                         //bas.si_existe_suma_sino_agega_extra(dir_venta_rest_invent, 0, ""+codigo_barras_list[i], "2", ""+(Convert.ToDouble(cantidad[i])*-1), codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg);
                     }
                     //ranking---------------------------------------------------------------------------------------------------------
-                    
+
+                    //0_codigo|1_nombre_producto|2_cantidad_vendida_estos_7_dias|3_provedores|4_historial_por_semana°|5_ranking|6_promedio_normal|7_cantidad_veses|8_uso_multiple|9_usomulti_tipo_de_producto|10_multi_costo_compra|
                     string dir_ranking_año = "inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
                     string dir_ranking_dia = "inf\\ranking\\dia\\" + fecha_hora.ToString("yyyyMMdd")+"_ranking.txt";
+                    
                     int solo_dia = Convert.ToInt32(fecha_hora.ToString("dd"));
 
 
@@ -81,8 +83,8 @@ namespace tienda2.desinger
                     bas.Crear_archivo_y_directorio(dir_ranking_dia);
                     bas.Crear_archivo_y_directorio(dir_ranking_año);
 
-                    bas.si_existe_suma_sino_agega_extra(dir_ranking_dia, 0, "" + codigo_barras_list[i], "2|5", cantidad[i]+ "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "||" + cantidad[i] + "|");
-                    bas.si_existe_suma_sino_agega_extra(dir_ranking_año, 0, "" + codigo_barras_list[i], "2|5", cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "|" + cantidad[i] + "°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|" + cantidad[i] + "|");
+                    bas.si_existe_suma_sino_agega_extra(dir_ranking_dia, 0, "" + codigo_barras_list[i], "2|5", cantidad[i]+ "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "||" + cantidad[i] + "|0|0|0|0|0|");
+                    bas.si_existe_suma_sino_agega_extra(dir_ranking_año, 0, "" + codigo_barras_list[i], "2|5", cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "|" + cantidad[i] + "°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|" + cantidad[i] + "|0|0|0|0|0|");
                     string info_producto=bas.Seleccionar(dir_ranking_año,0,""+codigo_barras_list[i]);
                     string[] inf_pro_split = info_producto.Split('|');
                     string[] historial_ranking = inf_pro_split[4].Split('°');
@@ -90,8 +92,7 @@ namespace tienda2.desinger
                     inf_pro_split[4] = string.Join("°", historial_ranking);
                     bas.Editar_espesifico(dir_ranking_año, 0, "" + codigo_barras_list[i], "4", "" + inf_pro_split[4]);
 
-                    bas.Ordenar(dir_ranking_dia, 5);
-                    bas.Ordenar(dir_ranking_año, 5);
+                    
 
 
                     //ranking_fin------------------------------------------------------------------------------------------------

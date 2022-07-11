@@ -23,8 +23,10 @@ namespace tienda2
 
             InitializeComponent();
             Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
+            pedidos pedi = new pedidos();
+            pedi.Show();
             //bas.si_son_menores_a_0_o_mayores_a_1000_los_vuelve_a_cero("inf\\inventario\\invent.txt",4);
-            //bas.comp_2_archivos_info_no_esta_vuelve_a_cero("inf\\inventario\\invent.txt", 3, Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\20220626_compras_durante_invet_e_inventario.txt",1);
+            //bas.comp_2_archivos_info_no_esta_vuelve_a_cero("info_tienda\\inf\\inventario\\invent.txt", 3, Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\20220626_compras_durante_invet_e_inventario.txt",1);
 
 
             Operaciones_archivos op = new Operaciones_archivos();
@@ -45,7 +47,7 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(direccion2, "provedor|id|");
 
 
-            direccion2 = "inf\\inventario\\pru\\provedores_pru_cmb.txt";
+            direccion2 = "inf\\inventario\\provedores.txt";
             bas.Crear_archivo_y_directorio(direccion2);
 
 

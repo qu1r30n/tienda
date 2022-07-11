@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 using tienda2.clases;
 
+using System.IO;
+
 namespace tienda2.desinger
 {
     public partial class inventario : Form
@@ -26,11 +28,12 @@ namespace tienda2.desinger
         public inventario()
         {
             InitializeComponent();
-            
+            modo_inventario();
+
             productos = bas.Leer("inf\\inventario\\invent.txt");
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
-            G_dir_inv_hacer = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\" + año_mes_dia + "_compras_durante_invet_e_inventario.txt";
+            G_dir_inv_hacer = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\" + año_mes_dia + "_compras_durante_invet_e_inventario.txt";
 
 
             bas.Crear_archivo_y_directorio(G_dir_inv_hacer);
@@ -45,8 +48,6 @@ namespace tienda2.desinger
         private void Btn_verificar_inv_Click(object sender, EventArgs e)
         {
             
-            modo_inventario();
-
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
             //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_
@@ -150,6 +151,22 @@ namespace tienda2.desinger
             
         }
 
+        private void cargar_archivo_a_listbox(string direccion, char caracter_separacion = '|')
+        {
+            string[] a = bas.Leer("inf\\inventario\\invent.txt", "3|1|4");
+            string[] info_a_agregar = bas.Leer(G_dir_inv_hacer);
+            for (int i = 0; i < info_a_agregar.Length; i++)
+            {
+                string[] info_split = info_a_agregar[i].Split(caracter_separacion);
+                bas.Agregar(direccion, info_a_agregar[i]);
+                lst_todos_los_agregados.Items.Add(info_a_agregar[i]);
+            }
+
+            Operaciones_archivos op = new Operaciones_archivos();
+            op.Eliminar_archivo(G_dir_inv_hacer);
+            File.Move(direccion, G_dir_inv_hacer);
+
+        }
         private void agregar_a_list_todos_agreg(string codigo,string nom_producto)
         {
             
@@ -171,6 +188,7 @@ namespace tienda2.desinger
         private void btn_terminar_Click(object sender, EventArgs e)
         {
             
+
             string[] produc_del_inventario = bas.Leer("inf\\inventario\\invent.txt", "3|4|1");
             
             DateTime fecha_hora = DateTime.Now;
@@ -222,9 +240,9 @@ namespace tienda2.desinger
 
             else
             {
-                string dir_result_inventarios_sobrantes = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\result_invent\\" + año_mes_dia + "_sobrantes_tienda.txt";
-                string dir_result_inventarios_faltantes = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\result_invent\\" + año_mes_dia + "_faltantes_tienda.txt";
-                string dir_result_inventarios_no_estan = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\result_invent\\" + año_mes_dia + "_no_estan_tienda.txt";
+                string dir_result_inventarios_sobrantes = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\result_invent\\" + año_mes_dia + "_sobrantes_tienda.txt";
+                string dir_result_inventarios_faltantes = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\result_invent\\" + año_mes_dia + "_faltantes_tienda.txt";
+                string dir_result_inventarios_no_estan = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\result_invent\\" + año_mes_dia + "_no_estan_tienda.txt";
 
                 for (int i = 0; i < produc_del_inventario.Length; i++)
                 {
@@ -283,7 +301,7 @@ namespace tienda2.desinger
 
             Operaciones_archivos op = new Operaciones_archivos();
             
-            string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
+            string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
             op.Eliminar_archivo(mod_inv);
             op.Eliminar_archivo(G_dir_inv_hacer);
 
@@ -350,11 +368,35 @@ namespace tienda2.desinger
 
         private void modo_inventario()
         {
+            
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
-            string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
+            string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
             bas.Crear_archivo_y_directorio(mod_inv, "true");
             
+
+        }
+
+        private void btn_cargar_archivo_inv_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opfd = new OpenFileDialog();
+            opfd.InitialDirectory = Directory.GetCurrentDirectory() + "\\pedidos";
+            if (opfd.ShowDialog() == DialogResult.OK)
+            {
+                cargar_archivo_a_listbox(opfd.FileName);
+            }
+        }
+
+        private void salirYBorrarInventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DateTime fecha_hora = DateTime.Now;
+            string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+            Operaciones_archivos op = new Operaciones_archivos();
+            
+            string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
+            op.Eliminar_archivo(mod_inv);
+            op.Eliminar_archivo(G_dir_inv_hacer);
+            this.Close();
 
         }
     }

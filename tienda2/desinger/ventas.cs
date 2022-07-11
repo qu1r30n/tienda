@@ -14,6 +14,7 @@ namespace tienda2.desinger
 {
     public partial class Ventas : Form
     {
+
         char[] G_parametros = { '|', '°', '¬', '^' };
         List<string> G_productos = new List<string>();
         string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
@@ -22,6 +23,17 @@ namespace tienda2.desinger
         {
             InitializeComponent();
             Recargar_texbox();
+
+            //ordenar_ranking_-------------------------------------------------------------------------------------
+            DateTime fecha_hora = DateTime.Now;
+            Tex_base bas = new Tex_base();
+            string dir_ranking_año = "inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
+            string dir_ranking_dia = "inf\\ranking\\dia\\" + fecha_hora.ToString("yyyyMMdd") + "_ranking.txt";
+            bas.Ordenar(dir_ranking_dia, 5);
+            bas.Ordenar(dir_ranking_año, 5);
+            //-------------------------------------------------------------------------------------
+
+
         }
 
         private void Btn_eliminar_todo_Click(object sender, EventArgs e)
@@ -509,6 +521,19 @@ namespace tienda2.desinger
             decimal resultado = ventas - compras;
 
             lbl_ventas_compras_resultado.Text = ventas + "-" + compras + "=" + resultado;
+
+            
+            string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
+            if (bas.existe_archivo(mod_inv))
+            {
+                lbl_modo_inventario.Text = "modo_inv";
+            }
+            else
+            {
+                lbl_modo_inventario.Text = ".";
+            }
+            
+            
         }
 
         private void ajustesToolStripMenuItem_Click(object sender, EventArgs e)

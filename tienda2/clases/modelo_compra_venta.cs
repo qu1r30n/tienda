@@ -157,5 +157,29 @@ namespace tienda2.clases
                 
             }
         }
+
+        public void Modelo_carga_info(string informacion, int tipo, char caracter_de_separacion = '|')
+        {
+            if (tipo == 0) 
+            {
+                string[] info_split = informacion.Split(caracter_de_separacion);
+            }
+            else if (tipo == 1)
+            {
+                string[] info_split_1 = informacion.Split(caracter_de_separacion);
+            }
+            else if (tipo == 2)
+            {
+                string[] info_split_2 = informacion.Split(caracter_de_separacion);
+            }
+            else if (tipo == 3)
+            {
+                string[] info_split_3 = informacion.Split(caracter_de_separacion);
+            }
+            else
+            {
+                
+            }
+        }
     }
 }

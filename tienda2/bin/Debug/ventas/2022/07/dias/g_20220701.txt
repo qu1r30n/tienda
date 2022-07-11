@@ -1,0 +1,11 @@
+12:51|70330717534|5|rastrillo comfort bic|medicamento|15|75|
+13:02|9002490100070|5|red bull 250ml|guna|33.5|167.5|
+13:35|75002275|5|chocorroles piña 100g|marinela|13.5|67.5|
+13:41|7501000111466|2|pan integral 675gG|bimbo|31.5|63.0|
+14:01|7501000111466|5|pan integral 675gG|bimbo|40|200|
+14:05|7501000122332|40|pan blanco 640gG|bimbo|39|1560|
+15:00|7501000111466|20|pan integral 675gG|bimbo|40|800|
+15:24|75002275|10|chocorroles piña 100g|marinela|30|300|
+16:05|75002275|10|chocorroles piña 100g|marinela|30|300|
+16:12|75002275|20|chocorroles piña 100g|marinela|20|400|
+16:14|75002275|1|chocorroles piña 100g|marinela|20|20|

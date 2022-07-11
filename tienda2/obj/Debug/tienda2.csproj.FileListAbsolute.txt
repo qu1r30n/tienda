@@ -50,3 +50,4 @@ D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.Cambiar_informacion.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.Compras_cargar_rapido_cod_bar.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.gastos.resources
 D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.Compras_control_provedores.resources
+D:\pr\tienda2\tienda2\obj\Debug\tienda2.desinger.pedidos.resources

@@ -365,8 +365,12 @@ namespace tienda2
                         }
                         else
                         {
-                            if (0 <= cantidad_a_act + Convert.ToDecimal(linea[4]))
+                            if (0>=Convert.ToDecimal(linea[4]))
                             {
+                                linea[4] = "0";
+                            }
+                            
+                            
                                 temp = "";
                                 for (int i = 0; i < linea.Length; i++)
                                 {
@@ -388,34 +392,8 @@ namespace tienda2
                                 }
 
                                 sw.WriteLine(temp);
-                            }
-                            else
-                            {
-
-                                temp = "";
-                                for (int i = 0; i < linea.Length; i++)
-                                {
-                                    if (i < (linea.Length - 1))
-                                    {
-                                        if (i == 4)//la columna de cantidad de producto
-                                        {
-                                            temp = temp + (cantidad_a_act + Convert.ToDecimal(linea[i])) + G_parametros[0];
-                                        }
-                                        else
-                                        {
-                                            temp = temp + linea[i] + G_parametros[0];
-                                        }
-                                    }
-                                    else
-                                    {
-                                        temp = temp + linea[i];
-                                    }
-                                }
-
-                                sw.WriteLine(temp);
-
-                                System.Windows.Forms.MessageBox.Show("ya se acabo o falta poco para acabarse el producto: " + linea[1]);
-                            }
+                            
+                            
 
                         }
                     }

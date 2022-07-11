@@ -190,25 +190,15 @@ namespace tienda2.desinger
             if (valor_devuelto != "")
             {
 
-
                 if (valor_devuelto == "1")
                 {
                     compra_directa = true;
 
 
-                    string[] provedores = bas.Leer("inf\\inventario\\pru\\provedores_pru_cmb.txt", null);//este regresa los provedores
-                    string provedores_en_una_linea = "";
-                    for (int i = 0; i < provedores.Length; i++)
-                    {
-                        string[] linea_prov_espliteado = provedores[i].Split(G_parametros[0]);
-                        provedores_en_una_linea = provedores_en_una_linea + linea_prov_espliteado[0] + G_parametros[1];
-                    }
-                    provedores_en_una_linea = bas.Trimend_paresido(provedores_en_una_linea, G_parametros[1]);
-
                     Ventana_emergente ventana_emerg2 = new Ventana_emergente();
-                    string[] enviar2 = { "2°cantidad_a_pagar°" + Lbl_cuenta.Text, "1°se_paga_de_caja°0°2", "2°°", "4°provedor°°°°" + provedores_en_una_linea };
-
+                    string[] enviar2 = { "2°cantidad_a_pagar°" + Lbl_cuenta.Text, "1°se_paga_de_caja°0°2", "2°°"};
                     string se_paga_de_caja = ventana_emerg2.Proceso_ventana_emergente(enviar2);
+
                     Operaciones_textos op_text = new Operaciones_textos();
                     se_paga_de_caja = op_text.cambiar_caracter(se_paga_de_caja, '|', '°');
 
@@ -236,30 +226,25 @@ namespace tienda2.desinger
                     string compra_joineada = string.Join("°", se_paga_de_caja_spliteado);
                     if (se_paga_de_caja_spliteado.Length > 2)
                     {
-                        
-                        string direccion_pru = "inf\\inventario\\pru\\";
-                        bas.si_no_existe_agega_comparacion(direccion_pru + "provedores_pru_cmb.txt", se_paga_de_caja_spliteado[3]);
-                        bas.si_existe_suma_sino_agega_extra(direccion_pru + año_mes_dia + "_provedores_pru.txt", 3, se_paga_de_caja_spliteado[3], "0°1°2", se_paga_de_caja_spliteado[0] + "°" + se_paga_de_caja_spliteado[1] + "°" + se_paga_de_caja_spliteado[2], compra_joineada, '°');
-                        bas.si_existe_suma_sino_agega_extra("inf\\inventario\\ven\\vent.txt", 0, año_mes_dia, "2", "" + se_paga_de_caja_spliteado[1], año_mes_dia + "|0|" + se_paga_de_caja_spliteado[1]);
+
 
                         Modelo_compra_venta mod_com_ven = new Modelo_compra_venta();
 
                         for (int i = 0; i < Lst_compras.Items.Count; i++)
                         {
-                            
+
 
                             string[] item_spliteado = Lst_compras.Items[i].ToString().Split(G_parametros[0]);
                             mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1], item_spliteado[5], item_spliteado[6], compra_directa);
-
-                            string dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\" + fecha_hora.ToString("yyyy")+ "_ranking.txt";
+                            //decrementa ranking de necesidad-----------------------------------------
+                            string dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
                             bas.si_existe_suma_sino_agega_extra(dir_ranking, 0, item_spliteado[0], "2", "" + (Convert.ToDouble(item_spliteado[2]) * -1), "");
-
-
-                            bas.si_no_existe_agega_extra(direccion_pru + "para_cambiar_de_provedor\\" + se_paga_de_caja_spliteado[3] + ".txt", 0, item_spliteado[0], item_spliteado[0] + "|" + item_spliteado[1]);
-                            Lbl_nom_product_list.Text = "";
-                            Lst_compras.Items.Clear();
-                            Lbl_cuenta.Text = "0";
+                            //fin ranking de necesidad-------------------------------------------
                         }
+                        Lbl_nom_product_list.Text = "";
+                        Lst_compras.Items.Clear();
+                        Lbl_cuenta.Text = "0";
+
                     }
 
                 }
