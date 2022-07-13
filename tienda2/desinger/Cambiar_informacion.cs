@@ -48,8 +48,21 @@ namespace tienda2.desinger
                             Lbl_cantidad_canb.Text = "$";
                             Txt_buscar_producto.Text = "";
                             Txt_remplazo.Text = "";
+                            Txt_nom_producto.Text = "";
                             Lbl_provedor_camb.Text = "nombre del provedor";
-                            Txt_buscar_producto.Focus();
+                            if (chb_nomb.Checked)
+                            {
+                                Txt_nom_producto.Focus();
+                            }
+                            else
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
+                            if (chb_codbar.Checked)
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
+                            
                         }
 
                         else if (Rdb_compra.Checked == true)
@@ -62,8 +75,20 @@ namespace tienda2.desinger
                             Lbl_cantidad_canb.Text = "$";
                             Txt_buscar_producto.Text = "";
                             Txt_remplazo.Text = "";
+                            Txt_nom_producto.Text = "";
                             Lbl_provedor_camb.Text = "nombre del provedor";
-                            Txt_buscar_producto.Focus();
+                            if (chb_nomb.Checked)
+                            {
+                                Txt_nom_producto.Focus();
+                            }
+                            else
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
+                            if (chb_codbar.Checked)
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
 
                         }
 
@@ -77,8 +102,20 @@ namespace tienda2.desinger
                             Lbl_cantidad_canb.Text = "$";
                             Txt_buscar_producto.Text = "";
                             Txt_remplazo.Text = "";
+                            Txt_nom_producto.Text = "";
                             Lbl_provedor_camb.Text = "nombre del provedor";
-                            Txt_buscar_producto.Focus();
+                            if (chb_nomb.Checked)
+                            {
+                                Txt_nom_producto.Focus();
+                            }
+                            else
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
+                            if (chb_codbar.Checked)
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
                         }
 
                         else if (Rdb_inventario.Checked == true)
@@ -117,8 +154,20 @@ namespace tienda2.desinger
                             Lbl_cantidad_canb.Text = "$";
                             Txt_buscar_producto.Text = "";
                             Txt_remplazo.Text = "";
+                            Txt_nom_producto.Text = "";
                             Lbl_provedor_camb.Text = "nombre del provedor";
-                            Txt_buscar_producto.Focus();
+                            if (chb_nomb.Checked)
+                            {
+                                Txt_nom_producto.Focus();
+                            }
+                            else
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
+                            if (chb_codbar.Checked)
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
                         }
 
                         else if (Rdb_provedor.Checked == true)
@@ -134,8 +183,20 @@ namespace tienda2.desinger
                             Lbl_cantidad_canb.Text = "$";
                             Txt_buscar_producto.Text = "";
                             Txt_remplazo.Text = "";
+                            Txt_nom_producto.Text = "";
                             Lbl_provedor_camb.Text = "nombre del provedor";
-                            Txt_buscar_producto.Focus();
+                            if (chb_nomb.Checked)
+                            {
+                                Txt_nom_producto.Focus();
+                            }
+                            else
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
+                            if (chb_codbar.Checked)
+                            {
+                                Txt_buscar_producto.Focus();
+                            }
                         }
 
 
@@ -170,8 +231,20 @@ namespace tienda2.desinger
                         Lbl_cantidad_canb.Text = "$";
                         Txt_buscar_producto.Text = "";
                         Txt_remplazo.Text = "";
+                        Txt_nom_producto.Text = "";
                         Lbl_provedor_camb.Text = "nombre del provedor";
-                        Txt_buscar_producto.Focus();
+                        if (chb_nomb.Checked)
+                        {
+                            Txt_nom_producto.Focus();
+                        }
+                        else
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
+                        if (chb_codbar.Checked)
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
                     }
 
                     else if (Rdb_compra.Checked == true)
@@ -184,8 +257,20 @@ namespace tienda2.desinger
                         Lbl_cantidad_canb.Text = "$";
                         Txt_buscar_producto.Text = "";
                         Txt_remplazo.Text = "";
+                        Txt_nom_producto.Text = "";
                         Lbl_provedor_camb.Text = "nombre del provedor";
-                        Txt_buscar_producto.Focus();
+                        if (chb_nomb.Checked)
+                        {
+                            Txt_nom_producto.Focus();
+                        }
+                        else
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
+                        if (chb_codbar.Checked)
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
 
                     }
 
@@ -199,8 +284,20 @@ namespace tienda2.desinger
                         Lbl_cantidad_canb.Text = "$";
                         Txt_buscar_producto.Text = "";
                         Txt_remplazo.Text = "";
+                        Txt_nom_producto.Text = "";
                         Lbl_provedor_camb.Text = "nombre del provedor";
-                        Txt_buscar_producto.Focus();
+                        if (chb_nomb.Checked)
+                        {
+                            Txt_nom_producto.Focus();
+                        }
+                        else
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
+                        if (chb_codbar.Checked)
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
                     }
 
                     else if (Rdb_inventario.Checked == true)
@@ -240,8 +337,20 @@ namespace tienda2.desinger
                         Lbl_cantidad_canb.Text = "$";
                         Txt_buscar_producto.Text = "";
                         Txt_remplazo.Text = "";
+                        Txt_nom_producto.Text = "";
                         Lbl_provedor_camb.Text = "nombre del provedor";
-                        Txt_buscar_producto.Focus();
+                        if (chb_nomb.Checked)
+                        {
+                            Txt_nom_producto.Focus();
+                        }
+                        else
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
+                        if (chb_codbar.Checked)
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
                     }
 
                     else if (Rdb_provedor.Checked == true)
@@ -257,8 +366,20 @@ namespace tienda2.desinger
                         Lbl_cantidad_canb.Text = "$";
                         Txt_buscar_producto.Text = "";
                         Txt_remplazo.Text = "";
+                        Txt_nom_producto.Text = "";
                         Lbl_provedor_camb.Text = "nombre del provedor";
-                        Txt_buscar_producto.Focus();
+                        if (chb_nomb.Checked)
+                        {
+                            Txt_nom_producto.Focus();
+                        }
+                        else
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
+                        if (chb_codbar.Checked)
+                        {
+                            Txt_buscar_producto.Focus();
+                        }
                     }
 
 
@@ -276,6 +397,13 @@ namespace tienda2.desinger
         }
         private void Recargar_texbox()
         {
+            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7|8", G_parametros[0]);
+            Txt_nom_producto.AutoCompleteCustomSource.Clear();
+            for (int k = 1; k < imprimir2.Length; k++)
+            {
+                Txt_nom_producto.AutoCompleteCustomSource.Add("" + imprimir2[k]);
+            }
+
             string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7", G_parametros[0]);
             Txt_buscar_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir.Length; k++)
@@ -283,6 +411,8 @@ namespace tienda2.desinger
                 G_productos.Add(imprimir[k]);
                 Txt_buscar_producto.AutoCompleteCustomSource.Add(imprimir[k]);
             }
+
+
         }
 
         private void Procesar_codigo(string codigo)
@@ -387,7 +517,19 @@ namespace tienda2.desinger
                 Lbl_cantidad_canb.Text = "$";
                 Lbl_provedor_camb.Text = "nombre del provedor";
                 Txt_remplazo.Text = "";
-                Txt_buscar_producto.Focus();
+                Txt_nom_producto.Text = "";
+                if (chb_nomb.Checked)
+                {
+                    Txt_nom_producto.Focus();
+                }
+                else
+                {
+                    Txt_buscar_producto.Focus();
+                }
+                if (chb_codbar.Checked)
+                {
+                    Txt_buscar_producto.Focus();
+                }
             }
         }
 
@@ -426,7 +568,19 @@ namespace tienda2.desinger
             Lbl_cantidad_canb.Text = "$";
             Lbl_provedor_camb.Text = "nombre del provedor";
             Txt_remplazo.Text = "";
-            Txt_buscar_producto.Focus();
+            Txt_nom_producto.Text = "";
+            if (chb_nomb.Checked)
+            {
+                Txt_nom_producto.Focus();
+            }
+            else
+            {
+                Txt_buscar_producto.Focus();
+            }
+            if (chb_codbar.Checked)
+            {
+                Txt_buscar_producto.Focus();
+            }
         }
 
         private void Rdb_producto_CheckedChanged(object sender, EventArgs e)
@@ -456,6 +610,53 @@ namespace tienda2.desinger
         {
             //chb_suma_si_ya_paso_producto.Checked = false;
             chb_suma_si_ya_paso_producto.Visible = false;
+        }
+
+        private void Txt_nom_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyValue == (char)(Keys.Enter))
+            {
+                string[] info = Txt_nom_producto.Text.Split(G_parametros[0]);
+                Procesar_codigo2(info[0]);
+                Txt_buscar_producto.Focus();
+
+            }
+        }
+        private void Procesar_codigo2(string codigo)
+        {
+
+            for (int i = 0; i < G_productos.Count; i++)
+            {
+                String[] temp = G_productos[i].Split(G_parametros[0]);
+                if (codigo == temp[3])
+                {
+                    Txt_buscar_producto.Text = temp[0];
+                    Txt_nom_producto.Text = temp[3];
+                    break;
+                }
+            }
+        }
+
+        private void chb_codbar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chb_codbar.Checked)
+            {
+                if (chb_nomb.Checked)
+                {
+                    chb_nomb.Checked = false;
+                }
+            }
+        }
+
+        private void chb_nomb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chb_nomb.Checked)
+            {
+                if (chb_codbar.Checked)
+                {
+                    chb_codbar.Checked = false;
+                }
+            }
         }
     }
 }

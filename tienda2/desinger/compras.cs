@@ -705,8 +705,8 @@ namespace tienda2.desinger
                     produc_prov_invent.Add(invent_esplit[3]+G_parametros[0]+ invent_esplit[1] + G_parametros[0] + invent_esplit[4]);
                 }
             }
-
-           string [] arreglo_ordenado_invent_prov= ordenar_arreglo(produc_prov_invent.ToArray(), 2);
+            arreglos_compuestos_y_simples arr_comp_simp = new arreglos_compuestos_y_simples();
+           string [] arreglo_ordenado_invent_prov= arr_comp_simp.ordenar_arreglo_simple(produc_prov_invent.ToArray(), 2);
 
             DateTime fecha_hora = DateTime.Now;
             string dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\"+fecha_hora.ToString("yyyy")+ "_ranking.txt";
@@ -720,7 +720,7 @@ namespace tienda2.desinger
                         arreglo_ranking.Add(info_compra[i]);
                     }
                 }
-                string[] arreglo_ordenado=ordenar_arreglo(arreglo_ranking.ToArray(), 2,"mayor_menor");
+                string[] arreglo_ordenado= arr_comp_simp.ordenar_arreglo_simple(arreglo_ranking.ToArray(), 2,"mayor_menor");
 
                 for (int i = 0; i < arreglo_ordenado.Length; i++)
                 {
@@ -753,56 +753,6 @@ namespace tienda2.desinger
             
 
         }
-        private string [] ordenar_arreglo(string[] arreglo,int columna,string orden="menor_mayor",char caracter_separacion='|')
-        {
-            if (orden == "menor_mayor")
-            {
-                for (int i = 0; i < arreglo.Length; i++)
-                {
-                    for (int j = i + 1; j < arreglo.Length; j++)
-                    {
-
-                        string[] arreglo_espliteado = arreglo[i].Split(caracter_separacion);
-                        double arriba = Convert.ToDouble(arreglo_espliteado[columna]);
-                        string[] arreglo_espliteado2 = arreglo[j].Split(caracter_separacion);
-                        double abajo = Convert.ToDouble(arreglo_espliteado2[columna]);
-                        string temp;
-                        if (arriba > abajo)
-                        {
-                            temp = arreglo[i];
-                            arreglo[i] = arreglo[j];
-                            arreglo[j] = temp;
-                        }
-                    }
-                }
-            }
-
-
-            else if (orden == "mayor_menor") 
-            {
-                for (int i = 0; i < arreglo.Length; i++)
-                {
-                    for (int j = i + 1; j < arreglo.Length; j++)
-                    {
-
-                        string[] arreglo_espliteado = arreglo[i].Split(caracter_separacion);
-                        double arriba = Convert.ToDouble(arreglo_espliteado[columna]);
-                        string[] arreglo_espliteado2 = arreglo[j].Split(caracter_separacion);
-                        double abajo = Convert.ToDouble(arreglo_espliteado2[columna]);
-                        string temp;
-                        if (arriba < abajo)
-                        {
-                            temp = arreglo[i];
-                            arreglo[i] = arreglo[j];
-                            arreglo[j] = temp;
-                        }
-                    }
-                }
-            }
-            
-
-
-            return arreglo;
-        }
+        
     }
 }

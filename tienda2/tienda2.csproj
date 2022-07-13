@@ -53,12 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clases\arreglos_compuestos.cs" />
+    <Compile Include="clases\arreglos_compuestos_y_simples.cs" />
     <Compile Include="clases\info_entrada_salida.cs" />
     <Compile Include="clases\Modelo_compra_venta.cs" />
     <Compile Include="clases\Operaciones_textos.cs" />
     <Compile Include="clases\glob_var_direcciones.cs" />
     <Compile Include="clases\prediccion.cs" />
+    <Compile Include="clases\simul2.cs" />
     <Compile Include="clases\sismul.cs" />
     <Compile Include="clases\variables_estaticas.cs" />
     <Compile Include="desinger\Area_principal.cs">
