@@ -1,51 +1,134 @@
-marinela|0|
-vendedor x|
-quala|
-coca-cola|
-dulce tarry| 
-sabritas|
-nestle|
-corona|
-marinela|
-turin|
-sabritas|
-marinela|
-sabritas|
-pepsi|
-salma|
-quala|
+alpura|
+angel focos pachuca|
+ariel|
+atoto|
+aurrera|
+avicola sanmiguel santana|
 barcel|
-jumex|
-bona-gato|
-dicorsa|
-coca|
-marinela|
-casa vargas|
-orbit|
-danone|
 bic|
-mondelez|
-valentina|
-ferrero/kinder|
-lacteos|
-|
-las delicias|
-skarch|
-kinder|
-vendedor x||
-vendedor x||
-vendedor x||
-vendedor x||
-vendedor x||
-vendedor x||
-vendedor x||
-vendedor x||
-vendedor x||
-vendedor x||
-bimbo dulce|
-ricolino|
-tia rosa|
-comercializadora america|
-medicamento|
-guna|
 bimbo|
+bimbo dulce|
+bodega aurrera|
+boing|
+bonafina|
+bonafont|
+bonafont gatorade|
+camel|
+casa castañeda atoto|
+casa vargas|
+charras|
+chedrahui|
+cigarro_suelto|
+clemente|
+coca cola|
+comercializadora avicola de santa ana ch|
+comp magadan sant|
+competencia de magadan santana|
+corona|
+costeña|
+danone|
+danone|
+del monte|
+dgari|
+dicorsa|
+distribuidora sijara|
+dorado|
+dulceria|
+el goloso|
+el toro|
+epura|
+ferrero kinder|
+fruta|
+gamesa|
+ghd|
+guna|
+indio|
+indio|
+jumex|
+kinder|
+kola loka|
+L&M|
+la costeña|
+la morena|
+la sierra|
+lacteos|
+lacteos tlaxcala|
+lala|
+lara|
+las autenticas|
+link|
+mackormick|
+macma ixcotla|
+magadan|
+malboro|
+mama|
+marinela|
+marinela galleta|
+marinela|
+malboro|
+materias primas|
+medicamento|
+mi magdalena|
+moderna|
+mondelez|
+nesquik|
+nestle|
+no se sabe|
+operadora avicola san miguel santa ana|
+orbit|
+pallman|
+patitos|
+pedigree|
+peñafiel|
+pepsi|
+producto_extra|
+pue castellanos|
+pue comisionistas abarrotes|
+quala|
+queseria yesy nana|
+quesos santa ana|
+recargas|
+red cola|
+ricolino|
+rikoza pue|
+sabormex|
+sabritas|
+sahuayo pue|
+saldaña|
+salma|
+salvo|
+santa clara|
+snikers|
+tia rosa|
+tortillas|
+trident|
+turin|
+vendedor x|
+vicente castañeda atoto|
+victor|
+yakul|
+yakult|
+comercializadora america(ex qala)|
+indio|
+desconocido|
+|
+extra|
+comercializadora america|
+tulancingo|
+coca cola|
+pomada labiual|
+kinder-|
+viña|
+el cubanito|
+cubanito|
+be-light|
+skarch|
+pall mall|
+del valle|
+milkyway|
+la moderna|
+caribe|
+dulceria tita apizaco|
+dulceria tita|
+ dulceria tita|
+knorr|

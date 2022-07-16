@@ -29,6 +29,8 @@ namespace tienda2.desinger
             Tex_base bas = new Tex_base();
             string dir_ranking_año = "inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
             string dir_ranking_dia = "inf\\ranking\\dia\\" + fecha_hora.ToString("yyyyMMdd") + "_ranking.txt";
+            bas.Crear_archivo_y_directorio(dir_ranking_año);
+            bas.Crear_archivo_y_directorio(dir_ranking_dia);
             bas.Ordenar(dir_ranking_dia, 5);
             bas.Ordenar(dir_ranking_año, 5);
             //-------------------------------------------------------------------------------------

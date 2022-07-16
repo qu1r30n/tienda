@@ -1,0 +1,111 @@
+extra_producto|extra_producto|368.5|producto_extra||368.5|
+malboro suelto|malboro suelto|48|malboro||48|
+dulceria|dulceria|15.5|dulceria||15.5|
+camel suelto|camel suelto|12|camel||12|
+7501055328345|coca 400ml|7|coca cola||7|
+75007614|coca-cola 600ml|6|coca cola||6|
+7501055305629|sprite 600ml|3|coca cola||3|
+|ninguno|3|provedor||3|
+7502252634116|cigarro link rojo 20'|3|link||3|
+7501011143586|cheetos torciditos 52g|3|sabritas||3|
+7501055310227|coca-cola retornable 2.5lt|2|coca cola||2|
+7501055305230|fanta fresa 600ml|2|coca cola||2|
+7501011112254|fritos 62g|2|sabritas||2|
+7501011111028|rancheritos 60g|2|sabritas||2|
+7501056900151|paleta bubaloo fresa|2|mondelez||2|
+756774011727|chocolate turin18g|2|turin||2|
+7501011123588|doritos nacho 62g|2|sabritas||2|
+603554054033|pulseras|2|salma||2|
+041789001918|maruchan pollo|2|casa vargas||2|
+757528035877|hot nuts original 75g|2|barcel||2|
+8000500267035|kinder delice 39g|2|kinder||2|
+7501030419037|mini gansito 24g|2|marinela||2|
+7501011114623|paketaxo quexo 73g|2|sabritas||2|
+041789001864|maruchan habanero 64g|2|casa vargas||2|
+7501032397951|danonino maxi fresa 336g|2|danone||2|
+7503034672050|runers|2|barcel||2|
+7501055355310|coca 250ml|2|coca cola||2|
+7501295600126|leche entera santa clara 1l|2|santa clara||2|
+7501049967062|sol clamato 473ml|2|indio||2|
+75001322|marlboro rojo 20|2|malboro||2|
+7500478014606|chetos poffs 38g|2|sabritas||2|
+75021597|cigarro capsula mentolada 100 rojo - 20'|2|malboro||2|
+7500478028382|churrumais fuego|2|sabritas||2|
+7501053670545|viña real kiwi|2|viña||2|
+7501055304806|sprite 3L|1|coca cola||1|
+vasos|vasos cuberos|1|casa vargas||1|
+7502252634314|cigarro link blanco 20'|1|link||1|
+758104100422|agua bonafont 1L|1|bonafont||1|
+7501011110335|fritos limon y sal 62g|1|sabritas||1|
+7501055339983|munded 600|1|coca cola||1|
+7501011101678|sabritas limon 45g|1|no se sabe||1|
+7500478025169|doritos mix|1|sabritas||1|
+7501032398255|activia ciruela pasa 225g|1|danone||1|
+78909434|ferrero rocher 37.5g|1|kinder-ferrero||1|
+7501073830509|peñafiel natural 600ml|1|coca cola||1|
+7501000128167|principe 105g|1|marinela galleta||1|
+7501031343423|mirinda 500ml vidrio|1|pepsi||1|
+7501011101463|sabritas adobadas 42g|1|sabritas||1|
+7501055303779|fanta naranja 600ml|1|coca cola||1|
+7501000112326|penque nuez|1|bimbo dulce||1|
+7501000601776|emperador senzo 93g|1|gamesa||1|
+7506192505918|vive 100 500ml|1|quala||1|
+7506443104471|danup 450ml|1|danone||1|
+7501011131064|doritos 146g|1|sabritas||1|
+7501030456322|mantecadas tia rosa 157.5g|1|tia rosa||1|
+7501441610214|jarrito tamarindo 600ml|1|pepsi||1|
+7501000911783|nescafe clasico 14g|1|nestle||1|
+036731106063|gatorade 600ml|1|pepsi||1|
+7501000111091|pan blanco 360gCh|1|bimbo||1|
+7501055900077|leche alpura vaqui fresa 1l|1|alpura||1|
+7501030426912|mini pay de nuez 96g|1|marinela||1|
+032239052024|delvalle nectar manzana 413ml|1|coca cola||1|
+7503023959117|camel doble capsula|1|camel||1|
+7622210267870|halls colors frutales 25.2g|1|halls||1|
+7891000248362|kit kat 41.5g|1|nestle||1|
+7506192508001|vive 100 mora azul|1|quala||1|
+7501058638113|carlos V 34g|1|nestle||1|
+756774011567|conejo chocolate  20g|1|turin||1|
+7500478015740|crakets|1|gamesa||1|
+758104003549|levite 600ml piña coco|1|bonafont||1|
+7501032398842|danone fresa 120gr|1|danone||1|
+7506443101968|yoghurt m&m´s 110g|1|danone||1|
+7502237930271|las autenticas sal 70g|1|las autenticas||1|
+7501011101456|sabritas sal  42g|1|sabritas||1|
+7503031287080|runners fuego 68g.|1|barcel||1|
+7501055900084|leche alpura vaqui vainilla 1l|1|alpura||1|
+80052760|kinder bueno 43g|1|kinder||1|
+7501013103205|jumex manzana 1l|1|jumex||1|
+7500810004432|gomilocas dientes 60gr|1|ricolino||1|
+7500478025183|chetos mix 70gr|1|sabritas||1|
+7501055915682||1|marinela||1|
+7501030463719|deliciosas chocochispas 230g|1|lara||1|
+7501295600157|santaclara deslactosada 1lt|1|coca cola||1|
+758104007912|levite 1.5l jamaica|1|bonafont||1|
+7501086106929|encendedor tokai|1|tokai||1|
+7501055330812|del vallefrut 3lt|1|coca cola||1|
+7503032991801|decanelas|1|marinela||1|
+7501055304745|coca-cola 3lt|1|coca cola||1|
+7503032991917|chips sal|1|barcel||1|
+7501000111800|pan tostado clasico|1|bimbo||1|
+7502226815145|lucas panzon 38g|1|orbit||1|
+7622210267863|halls miel-limón 25'2g|1|mondelez||1|
+7501505630073|sangria casera 600ml|1|pepsi||1|
+7500464333834|vuala swich|1|marinela||1|
+7506192508698|mexicana400ml|1|pepsi||1|
+7500478015047|chetos bolita 42g|1|sabritas||1|
+7501011148963|paketaxo mezcladito 73g|1|sabritas||1|
+7501055304721|ciel 1.5l|1|coca cola||1|
+7501059299252|carlos v semiamargo 20g|1|turin||1|
+7501071120077|squirt 2lt|1|peñafiel||1|
+7501055304691|delawr|1|marinela||1|
+7500810005026|chipotles 55gr|1|barcel||1|
+7501011143739|sabritasflamin hot 45g|1|sabritas||1|
+032239052147|del valle manzana vidrio|1|coca cola||1|
+7503030374392|barritas moras 67g|1|marinela||1|
+7500478010592|galletas marias 177g|1|gamesa||1|
+7501000112845|rebanadas|1|bimbo dulce||1|
+7503032991894|chips fuego|1|barcel||1|
+7501011104099|rufles queso 52g|1|sabritas||1|
+7501049917296|sol chelada|1|corona||1|
+7501011143753|cheetos flamin hot|1|sabritas||1|

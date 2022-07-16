@@ -1,0 +1,106 @@
+extra_producto|extra_producto|845.5|producto_extra||845.5|
+recargas|recargas|100|recargas||100|
+7503024416510|heineken 0|14|indio||14|
+cigarro|cigarro_suelto|12|cigarro_suelto||12|
+camel suelto|camel suelto|10|camel||10|
+link suelto|link suelto|8|link||8|
+7501064191886|modelo especial laton 473ml|7|corona||7|
+7501064112546|modelo especial lata 355ml|6|corona||6|
+7503028412587|carta blanca 473ml|6|indio||6|
+75007614|coca-cola 600ml|5|coca cola||5|
+7501055304745|coca-cola 3lt|4|coca cola||4|
+75067854|chesterfield 25´|4|malboro||4|
+7501058638083|carlos v normal|4|nestle||4|
+758104100422|agua bonafont 1L|4|bonafont||4|
+7503006897016|red cola 600ml|4|red cola||4|
+7506192507714|amper blueberry 473ml|3|bonafont gatorade||3|
+7501055340422|sidral mundet 3lt|2|coca cola||2|
+7501055333851|del valle durazno 1lt|2|coca cola||2|
+7501055304691|delawr|2|marinela||2|
+7501000651375|mamut 44g|2|gamesa||2|
+7501073411173|abuelita|2|marinela||2|
+7503032991740|chocotorro 24g|2|marinela||2|
+7501011104099|rufles queso 52g|2|sabritas||2|
+758104001712|bonafont agua 600ml|2|bonafont||2|
+7500478005833|bombitos 150g|2|gamesa||2|
+7501030427209|barritas piña 67g|2|marinela galleta||2|
+032239052017|del valle|1|coca cola||1|
+7501091708545|vasos cups|1|casa vargas||1|
+7501031345083|mirinda 3lt|1|pepsi||1|
+758104000159|agua bonafont 1.5Lts|1|bonafont||1|
+7501022010877|fruttzo mandarina 1.5L|1|pepsi||1|
+7501022013700|pepsi vidrio 500ml|1|pepsi||1|
+7622210267825|halls cereza 25.2g|1|mondelez||1|
+7500478028375|churrumais|1|sabritas||1|
+7501032332013|yogur con cerial(fresa.chococrispis)|1|danone||1|
+7502252634116|cigarro link rojo 20'|1|link||1|
+7501032332020|danone cereal|1|danone||1|
+7506443101968|yoghurt m&m´s 110g|1|danone||1|
+7501000122332|pan blanco 640gG|1|bimbo||1|
+7501055305629|sprite 600ml|1|coca cola||1|
+75021597|cigarro capsula mentolada 100 rojo - 20'|1|malboro||1|
+7501055310227|coca-cola retornable 2.5lt|1|coca cola||1|
+7506105606091|trident cool bubble 30.6g|1|mondelez||1|
+032239052000|del valle vidrio|1|coca cola||1|
+75001322|marlboro rojo 20|1|malboro||1|
+75043025|jumex 125ml mango|1|jumex||1|
+80941361|tictac naranja|1|ferrero kinder||1|
+7501058620101|nescafe clasico 120g|1|Nestle||1|
+7501125149221|electrolit fresa-kiwi 625ml|1|bonafont gatorade||1|
+7501030418504|principe maxitubo 210g|1|marinela||1|
+7622210973436|trident 30.6g fresa|1|mondelez||1|
+756774011567|conejo chocolate  20g|1|turin||1|
+7500478006175|chetos flamin hot 106g|1|sabritas||1|
+7501441604114|jarrito naranja 2lt|1|pepsi||1|
+032239052024|delvalle nectar manzana 413ml|1|coca cola||1|
+7500478005512|crakets 135g|1|gamesa||1|
+7501049999360|heineken 473ml|1|indio||1|
+75917265|old spice 50ml|1|mondelez||1|
+7501011101456|sabritas sal  42g|1|sabritas||1|
+7501055355310|coca 250ml|1|coca cola||1|
+7501011123588|doritos nacho 62g|1|sabritas||1|
+75074937|pall mall fuji|1|pall mall||1|
+7501030490951|polvorones 111g|1|marinela galleta||1|
+80050094|kinder maxi 21g|1|ferrero-kinder||1|
+7501055302451|coca-cola 1lt|1|coca cola||1|
+8000500186930|ferrero 2|1|ferrero kinder||1|
+7501071120077|squirt 2lt|1|peñafiel||1|
+7501011147942|moldeable|1|sabritas||1|
+7503030374002|roles canelab glas 205g|1|bimbo||1|
+7501025511036|yackul|1|yakul||1|
+75036553|serillos clasico|1|clasicos||1|
+7506443106567|danone fres 450ml|1|danone||1|
+7501030474227|donas azuc 6pz 158g|1|bimbo dulce||1|
+7501011101463|sabritas adobadas 42g|1|sabritas||1|
+7501011143739|sabritasflamin hot 45g|1|sabritas||1|
+7501017362950|kleenex 15 pañuelos|1|kleenex||1|
+7500478029365|doritos dinamita 70g|1|sabritas||1|
+7501505630028|sangria 2lt|1|pepsi||1|
+75002275|chocorroles piña 100g|1|marinela||1|
+7501052424026|frijol ref.negro 440g|1|marinela||1|
+7501030474357|panchositos nata 140g|1|tia rosa||1|
+758104006625|bonafont limon-pep 1lt|1|bonafont||1|
+8719200450615|iberia|1|lacteos||1|
+7501011143753|cheetos flamin hot|1|sabritas||1|
+7501006584035|hunts bbq|1|el toro||1|
+7501013103366|jumex 450ml uva|1|jumex||1|
+7501011143586|cheetos torciditos 52g|1|sabritas||1|
+7501013101270|jumex durazno 500ml|1|casa vargas||1|
+7501011131064|doritos 146g|1|sabritas||1|
+7501052420165|la sierra frijoles b- negros 430gr|1|la sierra||1|
+7506306238336|jabon zest aqua vitamina-glicerina|1|dicorsa||1|
+7506195148679|shampoo head shoulder 2 en 1 90ml|1|salma||1|
+7500435129329|secret 150ml|1|salma||1|
+75064648|cigarro pepino 20'|1|pall mall||1|
+75045654|trident fresas 5.2gr|1|mondelez||1|
+7501000153459|royo fresa 95g|1|marinela||1|
+7500478014569|chokis clasica 76g|1|gamesa||1|
+7501086801046|agua e pura 1l|1|epura||1|
+7501000135301|marias 170g|1|tia rosa||1|
+75068783|malboro ruby|1|malboro||1|
+7501022009857|gatorade blue thonder 1L|1|pepsi||1|
+097339000054|valentina|1|casa vargas||1|
+7501031360161|manzanita 2lt|1|pepsi||1|
+7506443103351|danone licuado|1|danone||1|
+75012533|danette flan 200g|1|danone||1|
+7506443105713|benegastro 240gr|1|danone||1|

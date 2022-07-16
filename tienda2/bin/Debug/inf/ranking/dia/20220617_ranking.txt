@@ -1,0 +1,94 @@
+extra_producto|extra_producto|94.0|producto_extra||94.0|
+dulceria|dulceria|24|dulceria||24|
+7501055328345|coca 400ml|9|coca cola||9|
+75007614|coca-cola 600ml|5|coca cola||5|
+7503027878896|craizi dipz|3|dulceria||3|
+7501055310227|coca-cola retornable 2.5lt|3|coca cola||3|
+7501022009857|gatorade blue thonder 1L|3|pepsi||3|
+781159053849|sabro leche 1L|3|red cola||3|
+7500478022144|cacahuates kakan|3|sabritas||3|
+7503024416510|heineken 0|2|indio||2|
+7501055300952|coca retornable 1.25Lts|2|coca cola||2|
+7501032397951|danonino maxi fresa 336g|2|danone||2|
+758104003549|levite 600ml piña coco|2|bonafont||2|
+041789001956|maruchan camaron|2|casa vargas||2|
+7500810000465|takis fuego 70g|2|barcel||2|
+725181249016|skwinkles salsagheti 24g|2|orbit||2|
+75067854|chesterfield 25´|2|malboro||2|
+7502252634116|cigarro link rojo 20'|2|link||2|
+7501073830509|peñafiel natural 600ml|2|coca cola||2|
+tortillas|tortillas|2|tortillas||2|
+7501011143586|cheetos torciditos 52g|2|sabritas||2|
+7501000112784|nito 62g|2|bimbo dulce||2|
+7503006897016|red cola 600ml|2|red cola||2|
+7501011101456|sabritas sal  42g|2|sabritas||2|
+7501056900151|paleta bubaloo fresa|2|mondelez||2|
+7501030463719|deliciosas chocochispas 230g|2|lara||2|
+7501055304721|ciel 1.5l|2|coca cola||2|
+7501011143753|cheetos flamin hot|2|sabritas||2|
+huevo|huevo|1.63|comercializadora avicola de santa ana ch||1.63|
+7500810004319|kranky|1|ricolino||1|
+7501064191886|modelo especial laton 473ml|1|corona||1|
+7501772802777|kosako 600ml|1|peñafiel||1|
+7501049967062|sol clamato 473ml|1|indio||1|
+8000500186930|ferrero 2|1|ferrero kinder||1|
+7501030419037|mini gansito 24g|1|marinela||1|
+815154022705|predador enegy 473ml|1|coca cola||1|
+7501031303540|sangria 400ml|1|pepsi||1|
+7503034672050|runers|1|barcel||1|
+7501031310012|pepsi  600ml|1|pepsi||1|
+75068011|CLORETS 4S|1|mondelez||1|
+7500478003457|arena magica|1|inspireca||1|
+7501055399758|yoli 355ml|1|marinela||1|
+75001322|marlboro rojo 20|1|malboro||1|
+7501086801121|e-pura  600ml|1|pepsi||1|
+7622210427106|halls extra strong|1|mondelez||1|
+75044916|cigarro kreket mint-clavo 20'|1|malboro||1|
+7503032991740|chocotorro 24g|1|marinela||1|
+7501086801046|agua e pura 1l|1|epura||1|
+75064648|cigarro pepino 20'|1|pall mall||1|
+7501018310608|sopa la moderna pluma 200gr|1|la moderna||1|
+7501441611112|jarrito toronjita 2lt|1|pepsi||1|
+7502271911472|mms cacahuate 43g|1|orbit||1|
+8000500267035|kinder delice 39g|1|kinder||1|
+7501058628664|salsa inglesa 50ml|1|nestle||1|
+7501064101205|corona mega 1.2L|1|corona||1|
+7500478015931|fruts 130g|1|gamesa||1|
+75061685|kids jugo de uva 300ml|1|bonafont||1|
+7500478018512|doritos dinamita 75g|1|sabritas||1|
+7500478007967|ruffles salsa roja 53g|1|sabritas||1|
+730399012109|mazapan azteca chico|1|dulceria||1|
+7506443102699|oikos fresa 125gr|1|danone||1|
+032239052017|del valle|1|coca cola||1|
+7506192507714|amper blueberry 473ml|1|bonafont gatorade||1|
+7501441604121|jarritos-piña  2Lts|1|pepsi||1|
+7500478007639|bolzaza receta crujiente|1|sabritas||1|
+7506192505802|rico pollo 33g|1|medicamento||1|
+040232838699|skarch 1l |1|red cola||1|
+744293160354|tonayan 440ml|1|casa vargas||1|
+7503023959117|camel doble capsula|1|camel||1|
+75067823|chesterfield 15|1|malboro||1|
+7500478026760|doritos dinamita70g|1|marinela||1|
+7502252634314|cigarro link blanco 20'|1|link||1|
+036731106032|gatorade lima 600ml|1|pepsi||1|
+7501022013700|pepsi vidrio 500ml|1|pepsi||1|
+7501022014578|7up vidrio 500ml|1|pepsi||1|
+7501011112254|fritos 62g|1|sabritas||1|
+7622210562906|tang mango 14gr|1|mondelez||1|
+7501055333851|del valle durazno 1lt|1|coca cola||1|
+7500435019392|crest anticaries 75ml|1|salma||1|
+7501055330812|del vallefrut 3lt|1|coca cola||1|
+7501031346608|mirinda 2lt|1|pepsi||1|
+7501013100846|bida 250ml uva|1|jumex||1|
+7501031305629|pepsi retornable 2.5 lt|1|||1|
+7501031345052|mirinda 600ml|1|pepsi||1|
+7501055355310|coca 250ml|1|coca cola||1|
+75000011|leche nesquik chocolate 240ml|1|nesquik||1|
+7501295600126|leche entera santa clara 1l|1|santa clara||1|
+757528001889|chips fuego 170g|1|barcel||1|
+7501030482055|valentones 175g|1|marinela||1|
+7501055304745|coca-cola 3lt|1|coca cola||1|
+758104000159|agua bonafont 1.5Lts|1|bonafont||1|
+032239052000|del valle vidrio|1|coca cola||1|
+7500478028382|churrumais fuego|1|sabritas||1|
+jamon|jamon|0.27|lacteos||0.27|

@@ -1,0 +1,174 @@
+extra_producto|extra_producto|171|producto_extra||171|
+malboro suelto|malboro suelto|144|malboro||144|
+dulceria|dulceria|30.5|dulceria||30.5|
+cigarro|cigarro_suelto|30|cigarro_suelto||30|
+758104001712|bonafont agua 600ml|10|bonafont||10|
+7503024416510|heineken 0|8|indio||8|
+75007614|coca-cola 600ml|8|coca cola||8|
+041789001864|maruchan habanero 64g|6|casa vargas||6|
+7501055328345|coca 400ml|6|coca cola||6|
+032239052000|del valle vidrio|6|coca cola||6|
+758104100422|agua bonafont 1L|5|bonafont||5|
+7501772802777|kosako 600ml|4|peñafiel||4|
+vasos|vasos cuberos|4|casa vargas||4|
+7501441610412|jarrito rojo 600ml|3|pepsi||3|
+7501055355310|coca 250ml|3|coca cola||3|
+tortillas|tortillas|3|tortillas||3|
+7501064194139|victoria laton 473ml|3|corona||3|
+6843481905006|encendedor econ,|3|charras||3|
+7500810000465|takis fuego 70g|3|barcel||3|
+75001322|marlboro rojo 20|3|malboro||3|
+7501055300952|coca retornable 1.25Lts|3|coca cola||3|
+7501011143753|cheetos flamin hot|3|sabritas||3|
+758104000159|agua bonafont 1.5Lts|3|bonafont||3|
+7501073830509|peñafiel natural 600ml|2|coca cola||2|
+75067854|chesterfield 25´|2|malboro||2|
+7503023836142|vuala chocolate 60g|2|vuala||2|
+7501295600614|santa clara chocolate 200ml|2|coca cola||2|
+7501011142299|crujitos queso y chile 40g|2|sabritas||2|
+75067823|chesterfield 15|2|malboro||2|
+758104006656|agua fresa 1L|2|bonafont||2|
+7501031311606|pepsi clasica 2L|2|pepsi||2|
+7501000601776|emperador senzo 93g|2|gamesa||2|
+7501000122332|pan blanco 640gG|2|bimbo||2|
+7500478021598|giros|2|gamesa||2|
+7506192505918|vive 100 500ml|2|quala||2|
+7501022013717|sangria vidrio 500ml|2|pepsi||2|
+7501055305629|sprite 600ml|2|coca cola||2|
+7501055376681|munded fresa 2Lt|2|coca cola||2|
+75002275|chocorroles piña 100g|2|marinela||2|
+793573950079|red cola 3lts|2|red cola||2|
+7501055303779|fanta naranja 600ml|2|coca cola||2|
+041789001987|maruchan piquin64g|2|casa vargas||2|
+7501055304745|coca-cola 3lt|2|coca cola||2|
+7501031307241|jumex fresh conga 600ml|2|pepsi||2|
+7501032398583|danup fresa 220g|2|danone||2|
+7501064191886|modelo especial laton 473ml|2|corona||2|
+7501022013700|pepsi vidrio 500ml|2|pepsi||2|
+041789001918|maruchan pollo|2|casa vargas||2|
+7501055310227|coca-cola retornable 2.5lt|2|coca cola||2|
+036731326003|gatorade rojo 1Lt|2|marinela||2|
+036731136916|gatorade moras 600 ml|2|pepsi||2|
+7501011144460|paketaxo xtra flamin hot 73g|2|sabritas||2|
+7501055304721|ciel 1.5l|2|coca cola||2|
+7501031302352|lipton limon 600ml|2|pepsi||2|
+7501031307227|jumex fresh uva 600ml|2|pepsi||2|
+7501055361540|coca lata 355mll|2|coca cola||2|
+7501049912284|XX laton 473ml|2|indio||2|
+036731106018|gatorade 500ml|2|pepsi||2|
+7501295600126|leche entera santa clara 1l|2|santa clara||2|
+75019303|indioi 1.2L|2|indio||2|
+7501055305230|fanta fresa 600ml|2|coca cola||2|
+7500810000489|takis guacamole|2|barcel||2|
+036731106032|gatorade lima 600ml|2|pepsi||2|
+7500478007974|ruffles jalapeño 50g|2|sabritas||2|
+7503027753629|volt energy 473ml|1|bonafont gatorade||1|
+7501053673065|viña durazno400ml|1|casa vargas||1|
+7501772801305|kosako 2l|1|peñafiel||1|
+7506192507349|amper  473ml|1|bonafont gatorade||1|
+7501064101205|corona mega 1.2L|1|corona||1|
+7501031360307|manzanita 400ml|1|pepsi||1|
+7501011138865|construy|1|inspireca||1|
+7622210546296|trident wtwist mango hot 13.3g|1|mondelez||1|
+7501013122992|jumex piña coco 1Lt|1|jumex||1|
+7500478022540|emperador nuez 109g|1|gamesa||1|
+7622210267863|halls miel-limón 25'2g|1|mondelez||1|
+7501030418528|triquitraques 215g|1|marinela||1|
+7501000153107|gansito 50g|1|marinela||1|
+7622210624482|chicle clores plus13.5g|1|clores||1|
+7501000153763|rocko grande 44g|1|marinela||1|
+7501031310241|pepzi 355ml|1|pepsi||1|
+7503034672050|runers|1|barcel||1|
+7503032991900|chips jalapeño|1|barcel||1|
+7501031343423|mirinda 500ml vidrio|1|pepsi||1|
+7506105606091|trident cool bubble 30.6g|1|mondelez||1|
+75074937|pall mall fuji|1|pall mall||1|
+7622210267825|halls cereza 25.2g|1|mondelez||1|
+7501061668930|tecate original 1.2l|1|indio||1|
+756774011734|chocolate turin amargo 18g|1|turin||1|
+7501441604411|jarrito rojo 2lt|1|pepsi||1|
+7501011135024|pake taxo mezclado 170ml|1|sabritas||1|
+757528001889|chips fuego 170g|1|barcel||1|
+7500810004371|panditas clas 60gr|1|ricolino||1|
+7501031345083|mirinda 3lt|1|pepsi||1|
+7501031345052|mirinda 600ml|1|pepsi||1|
+7503004599899|veladora de vaso|1|casa vargas||1|
+7501055340422|sidral mundet 3lt|1|coca cola||1|
+7501055330812|del vallefrut 3lt|1|coca cola||1|
+7501055915668|vaquita chocolate|1|alpura||1|
+7500478014569|chokis clasica 76g|1|gamesa||1|
+7501058638113|carlos V 34g|1|nestle||1|
+7500478022502|emperador piruetas 312g|1|gamesa||1|
+7501031360048|manzanita sol 3lt|1|pepsi||1|
+7501011114623|paketaxo quexo 73g|1|sabritas||1|
+7501011112438|paketaxo botanero 73g|1|sabritas||1|
+7501000153800|pingüinos 80g|1|marinela||1|
+7501013100822|bida 250ml guallava|1|jumex||1|
+7501058654854|carlos v chocoleche|1|casa vargas||1|
+7501030426905|mini pay piña 110g|1|marinela||1|
+7501031307210|jumex fresh citricos 600ml|1|jumex||1|
+7501030474227|donas azuc 6pz 158g|1|bimbo dulce||1|
+7503032991740|chocotorro 24g|1|marinela||1|
+75061685|kids jugo de uva 300ml|1|bonafont||1|
+7501011101456|sabritas sal  42g|1|sabritas||1|
+azucar|azucar|1|casa vargas||1|
+7501022010860|jumex frutzo 600ml mandarina|1|pepsi||1|
+7503006897016|red cola 600ml|1|red cola||1|
+7501091708545|vasos cups|1|casa vargas||1|
+032239052017|del valle|1|coca cola||1|
+7501032398255|activia ciruela pasa 225g|1|danone||1|
+7502252634116|cigarro link rojo 20'|1|link||1|
+75074920|pall mall iceberg|1|pallman||1|
+7501011143999|cheetos nacho 52g|1|sabritas||1|
+7501011112254|fritos 62g|1|sabritas||1|
+7501055339983|munded 600|1|coca cola||1|
+7503023836135|vuala vainilla|1|vuala||1|
+7500478015047|chetos bolita 42g|1|sabritas||1|
+75064648|cigarro pepino 20'|1|pall mall||1|
+7501049999360|heineken 473ml|1|indio||1|
+7501000635726|arcoiris 75g|1|marinela||1|
+7622210563125|tang uva 14gr|1|casa vargas||1|
+75043025|jumex 125ml mango|1|jumex||1|
+7501000112326|penque nuez|1|bimbo dulce||1|
+7501059299252|carlos v semiamargo 20g|1|turin||1|
+7500810004418|panditas rellenos 60gr|1|ricolino||1|
+huevo|huevo|1|comercializadora avicola de santa ana ch||1|
+7501000111602|bimbollos 8p|1|bimbo||1|
+7503030374002|roles canelab glas 205g|1|bimbo||1|
+7501030418399|donas esp 8pz 140g|1|bimbo dulce||1|
+7501036622127|regio60 hojas|1|casa vargas||1|
+7501013103342|jumex vidrio 450ml manzana|1|jumex||1|
+7506174512248|snikers 48g|1|snikers||1|
+7501043706100|anis mico 250ml|1|pue castellanos||1|
+7500810004456|gomiloc ambruguesas|1|ricolino||1|
+80741244|huevo kinder niño 20g|1|kinder-ferrero||1|
+613008738846|arizona sandia 680ml|1|jumex||1|
+7500810005408|big mix fuego 80gr|1|barcel||1|
+7501073831933|peñafiel sangria 600ml|1|peñafiel||1|
+7501441604114|jarrito naranja 2lt|1|pepsi||1|
+75062576|alka seltzer|1|medicamento||1|
+036731106025|gatorade limonada 600ml|1|pepsi||1|
+070847035916|monster|1|coca cola||1|
+7503028412587|carta blanca 473ml|1|indio||1|
+7501031360024|manzanita sol 600ml|1|pepsi||1|
+7506105606077|trident freshmint cart.30.6g|1|mondelez||1|
+7501056900151|paleta bubaloo fresa|1|mondelez||1|
+7501056900168|paleta bubaloo mora 16.6g|1|mondelez||1|
+7501030427193|barritas fresa 67g|1|marinela galleta||1|
+7501013174021|jumex nectar-manzana 450ml|1|jumex||1|
+80052760|kinder bueno 43g|1|kinder||1|
+7501052424613|frijol bayo entero 616g|1|casa vargas||1|
+7501031360161|manzanita 2lt|1|pepsi||1|
+7500478025183|chetos mix 70gr|1|sabritas||1|
+7501073800908|peñafiel  2Lts|1|peñafiel||1|
+7501071120411|squirt 2.5L|1|peñafiel||1|
+7501011143739|sabritasflamin hot 45g|1|sabritas||1|
+7501031360130|manzanita sol lata 355ml|1|pepsi||1|
+781159053849|sabro leche 1L|1|red cola||1|
+7501011137431|sabritas habanero 45g|1|sabritas||1|
+815154022156|predator verde 473ml|1|coca cola||1|
+7501030427209|barritas piña 67g|1|marinela galleta||1|
+7500810005491|chip fuego 50gr|1|sabritas||1|
+7501022010778|fruttzo naranja 1.5L|1|pepsi||1|
+7501000153459|royo fresa 95g|1|marinela||1|
+jamon|jamon|0.26|lacteos||0.26|
