@@ -537,11 +537,7 @@ namespace tienda2.desinger
 
         }
 
-        private void ajustesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void provedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Compras_control_provedores cont_prov = new Compras_control_provedores();
@@ -663,5 +659,7 @@ namespace tienda2.desinger
                 Procesar_codigo(info[0]);
             }
         }
+
+        
     }
 }

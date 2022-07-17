@@ -51,7 +51,6 @@ namespace tienda2.desinger
             this.Rdb_gastos.TabStop = true;
             this.Rdb_gastos.Text = "gastos";
             this.Rdb_gastos.UseVisualStyleBackColor = true;
-            this.Rdb_gastos.CheckedChanged += new System.EventHandler(this.Rdb_gastos_CheckedChanged);
             // 
             // Rdb_productos
             // 
@@ -63,7 +62,6 @@ namespace tienda2.desinger
             this.Rdb_productos.TabStop = true;
             this.Rdb_productos.Text = "productos";
             this.Rdb_productos.UseVisualStyleBackColor = true;
-            this.Rdb_productos.CheckedChanged += new System.EventHandler(this.Rdb_productos_CheckedChanged);
             // 
             // Rdb_ventas
             // 
@@ -75,7 +73,6 @@ namespace tienda2.desinger
             this.Rdb_ventas.TabStop = true;
             this.Rdb_ventas.Text = "ventas";
             this.Rdb_ventas.UseVisualStyleBackColor = true;
-            this.Rdb_ventas.CheckedChanged += new System.EventHandler(this.Rdb_ventas_CheckedChanged);
             // 
             // Btn_comparar
             // 
@@ -121,7 +118,6 @@ namespace tienda2.desinger
             this.cmb_dia.Name = "cmb_dia";
             this.cmb_dia.Size = new System.Drawing.Size(121, 21);
             this.cmb_dia.TabIndex = 46;
-            this.cmb_dia.SelectedIndexChanged += new System.EventHandler(this.cmb_dia_SelectedIndexChanged);
             // 
             // cmb_año
             // 

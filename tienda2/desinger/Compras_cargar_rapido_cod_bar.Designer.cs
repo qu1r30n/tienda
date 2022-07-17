@@ -94,7 +94,6 @@ namespace tienda2.desinger
             this.lst_cod_bar.Name = "lst_cod_bar";
             this.lst_cod_bar.Size = new System.Drawing.Size(155, 251);
             this.lst_cod_bar.TabIndex = 20;
-            this.lst_cod_bar.SelectedIndexChanged += new System.EventHandler(this.lst_cod_bar_SelectedIndexChanged);
             // 
             // txt_cod_bar
             // 
@@ -102,7 +101,7 @@ namespace tienda2.desinger
             this.txt_cod_bar.Name = "txt_cod_bar";
             this.txt_cod_bar.Size = new System.Drawing.Size(155, 20);
             this.txt_cod_bar.TabIndex = 19;
-            this.txt_cod_bar.TextChanged += new System.EventHandler(this.txt_cod_bar_TextChanged);
+            this.txt_cod_bar.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_cod_bar_PreviewKeyDown);
             // 
             // Compras_cargar_rapido_cod_bar
             // 

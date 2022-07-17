@@ -81,7 +81,6 @@ namespace tienda2.desinger
             this.ajustesToolStripMenuItem.Name = "ajustesToolStripMenuItem";
             this.ajustesToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.ajustesToolStripMenuItem.Text = "ajustes";
-            this.ajustesToolStripMenuItem.Click += new System.EventHandler(this.ajustesToolStripMenuItem_Click);
             // 
             // opcionesToolStripMenuItem
             // 
@@ -258,6 +257,7 @@ namespace tienda2.desinger
             this.Lst_ventas.Size = new System.Drawing.Size(239, 238);
             this.Lst_ventas.TabIndex = 34;
             this.Lst_ventas.SelectedIndexChanged += new System.EventHandler(this.Lst_ventas_SelectedIndexChanged);
+            this.Lst_ventas.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Lst_ventas_PreviewKeyDown);
             // 
             // Txt_nom_producto
             // 
@@ -306,6 +306,7 @@ namespace tienda2.desinger
             this.Controls.Add(this.menuStrip1);
             this.Name = "Ventas";
             this.Text = "Ventas";
+            this.Activated += new System.EventHandler(this.Ventas_Activated);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).EndInit();

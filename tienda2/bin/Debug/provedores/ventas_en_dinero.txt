@@ -3,7 +3,7 @@ bic|0
 orbit|0
 las delicias|15
 kinder|286
-casa vargas|152
+casa vargas|195
 skarch|0
 red cola|52
 dorco|5
@@ -11,12 +11,12 @@ marinela|45.5
 nestle|187
 valentina|25
 marlboro|126
-coca|180
+coca|0
 maravilla|247.5
 medicamento|506
 pepsi|68
 dulceria|36
-magadan|903
+magadan|1204
 salma|143
 guna|328
 pomada labiual|24

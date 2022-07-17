@@ -330,7 +330,7 @@ namespace tienda2.desinger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 450);
+            this.ClientSize = new System.Drawing.Size(896, 133);
             this.Controls.Add(this.chb_nomb);
             this.Controls.Add(this.chb_codbar);
             this.Controls.Add(this.label1);

@@ -399,16 +399,6 @@ namespace tienda2.desinger
 
         }
 
-
-        private void lst_cod_bar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lst_todos_los_agregados_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
     }
 }

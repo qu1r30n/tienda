@@ -55,7 +55,6 @@ namespace tienda2.desinger
             this.cmb_curso.Name = "cmb_curso";
             this.cmb_curso.Size = new System.Drawing.Size(121, 21);
             this.cmb_curso.TabIndex = 9;
-            this.cmb_curso.SelectedIndexChanged += new System.EventHandler(this.cmb_curso_SelectedIndexChanged);
             this.cmb_curso.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_curso_KeyDown);
             // 
             // btn_registrar
@@ -93,7 +92,6 @@ namespace tienda2.desinger
             this.txt_dinero.Name = "txt_dinero";
             this.txt_dinero.Size = new System.Drawing.Size(100, 20);
             this.txt_dinero.TabIndex = 10;
-            this.txt_dinero.TextChanged += new System.EventHandler(this.txt_dinero_TextChanged);
             this.txt_dinero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_dinero_KeyDown);
             // 
             // lbl_id
@@ -111,7 +109,6 @@ namespace tienda2.desinger
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(100, 20);
             this.txt_id.TabIndex = 8;
-            this.txt_id.TextChanged += new System.EventHandler(this.txt_id_TextChanged);
             this.txt_id.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_id_KeyDown);
             // 
             // simul

@@ -76,20 +76,7 @@ namespace tienda2.desinger
             }
         }
 
-        private void txt_id_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmb_curso_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_dinero_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         
     }

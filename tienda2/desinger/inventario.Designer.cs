@@ -190,7 +190,6 @@ namespace tienda2.desinger
             this.lst_todos_los_agregados.Name = "lst_todos_los_agregados";
             this.lst_todos_los_agregados.Size = new System.Drawing.Size(374, 251);
             this.lst_todos_los_agregados.TabIndex = 35;
-            this.lst_todos_los_agregados.SelectedIndexChanged += new System.EventHandler(this.lst_todos_los_agregados_SelectedIndexChanged);
             // 
             // lst_cod_bar
             // 
@@ -199,7 +198,6 @@ namespace tienda2.desinger
             this.lst_cod_bar.Name = "lst_cod_bar";
             this.lst_cod_bar.Size = new System.Drawing.Size(155, 251);
             this.lst_cod_bar.TabIndex = 36;
-            this.lst_cod_bar.SelectedIndexChanged += new System.EventHandler(this.lst_cod_bar_SelectedIndexChanged);
             // 
             // txt_cod_bar
             // 
@@ -207,6 +205,7 @@ namespace tienda2.desinger
             this.txt_cod_bar.Name = "txt_cod_bar";
             this.txt_cod_bar.Size = new System.Drawing.Size(155, 20);
             this.txt_cod_bar.TabIndex = 34;
+            this.txt_cod_bar.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_cod_bar_PreviewKeyDown);
             // 
             // inventario
             // 

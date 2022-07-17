@@ -128,10 +128,7 @@ namespace tienda2.desinger
             Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
         }
 
-        private void cmb_dia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         
 
@@ -249,18 +246,6 @@ namespace tienda2.desinger
         }
 
 
-        private void Rdb_productos_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void Rdb_ventas_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void Rdb_gastos_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
        
     }
 }

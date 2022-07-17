@@ -15,17 +15,20 @@ namespace tienda2.desinger
 {
     public partial class Compras : Form
     {
-        string direccion_inventario = "inf\\inventario\\invent.txt";
+        string G_direccion_inventario = "inf\\inventario\\invent.txt";
         char[] G_parametros = { '|', '°', '¬', '^' };
         List<string> G_productos = new List<string>();
         Tex_base bas = new Tex_base();
         string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
 
-
+        string G_dir_ranking;
 
         public Compras(string provedor_elegido = null)
         {
             InitializeComponent();
+
+            DateTime fecha_hora = DateTime.Now;
+            G_dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
             G_prov_anterior = provedor_elegido;
             Recargar_texbox();
             recarga_ranking(G_prov_anterior);
@@ -34,7 +37,7 @@ namespace tienda2.desinger
         private void Recargar_texbox()
         {
 
-            string[] codigo_productos = bas.Leer(direccion_inventario, "3|0|2|1|4|5|6|7", G_parametros[0]);
+            string[] codigo_productos = bas.Leer(G_direccion_inventario, "3|0|2|1|4|5|6|7", G_parametros[0]);
             Txt_buscar_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < codigo_productos.Length; k++)
             {
@@ -42,7 +45,7 @@ namespace tienda2.desinger
                 Txt_buscar_producto.AutoCompleteCustomSource.Add(codigo_productos[k]);
             }
 
-            string[] imprimir2 = bas.Leer(direccion_inventario, "1|0|2|3|4|5|6|7", G_parametros[0]);
+            string[] imprimir2 = bas.Leer(G_direccion_inventario, "1|0|2|3|4|5|6|7", G_parametros[0]);
             Txt_nom_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir2.Length; k++)
             {
@@ -99,7 +102,7 @@ namespace tienda2.desinger
             {
 
                 Tex_base bas = new Tex_base();
-                string[] info_invent = bas.Leer(direccion_inventario);
+                string[] info_invent = bas.Leer(G_direccion_inventario);
                 string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros[0]);
                 string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", G_parametros[0]);//este regresa los provedores
                 Operaciones_textos op_text = new Operaciones_textos();
@@ -243,8 +246,8 @@ namespace tienda2.desinger
                             string[] item_spliteado = Lst_compras.Items[i].ToString().Split(G_parametros[0]);
                             mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1], item_spliteado[5], item_spliteado[6], compra_directa);
                             //decrementa ranking de necesidad-----------------------------------------
-                            string dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
-                            bas.si_existe_suma_sino_agega_extra(dir_ranking, 0, item_spliteado[0], "2", "" + (Convert.ToDouble(item_spliteado[2]) * -1), "");
+                            
+                            bas.si_existe_suma_sino_agega_extra(G_dir_ranking, 0, item_spliteado[0], "2", "" + (Convert.ToDouble(item_spliteado[2]) * -1), "");
                             //fin ranking de necesidad-------------------------------------------
                         }
                         Lbl_nom_product_list.Text = "";
@@ -494,7 +497,7 @@ namespace tienda2.desinger
             DateTime fecha_hora = DateTime.Now;
             string hora_min = fecha_hora.ToString("HH:mm");
 
-            string cantidad_por_pakete = bas.Seleccionar(direccion_inventario, 3, Txt_buscar_producto.Text, "9");
+            string cantidad_por_pakete = bas.Seleccionar(G_direccion_inventario, 3, Txt_buscar_producto.Text, "9");
             double costo_compra_invent = Convert.ToDouble(Lbl_precio_compra_cant.Text);
 
             double paquetes_a_comprar = 1;
@@ -552,7 +555,7 @@ namespace tienda2.desinger
         private void procesar_codigo_para_listbox(string codigo_bar, string costo_compra, string cantidad_individualmente, string cantidad_de_paquetes = "0")
         {
             //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
-            string[] produc_inf = bas.Leer(direccion_inventario);
+            string[] produc_inf = bas.Leer(G_direccion_inventario);
             string[] produc_inf_esplit = { };
             for (int i = 0; i < produc_inf.Length; i++)
             {
@@ -584,11 +587,11 @@ namespace tienda2.desinger
                 if (costo_por_producto > costo_venta)
                 {
                     MessageBox.Show("nuevo_precio_de_venta: " + (costo_por_producto + (costo_por_producto * 0.1)));
-                    bas.Editar_espesifico(direccion_inventario, 3, Txt_buscar_producto.Text, "2", "" + (costo_por_producto + (costo_por_producto * 0.1)));
+                    bas.Editar_espesifico(G_direccion_inventario, 3, Txt_buscar_producto.Text, "2", "" + (costo_por_producto + (costo_por_producto * 0.1)));
                 }
             }
 
-            bas.Editar_espesifico(direccion_inventario, 3, Txt_buscar_producto.Text, "5", "" + costo_por_producto);
+            bas.Editar_espesifico(G_direccion_inventario, 3, Txt_buscar_producto.Text, "5", "" + costo_por_producto);
 
 
 
@@ -628,12 +631,6 @@ namespace tienda2.desinger
         }
 
         //-----------------------------------------------------------------------------
-        private void Pedidos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
 
 
         private void igualarProvedpresToolStripMenuItem_Click(object sender, EventArgs e)
@@ -697,67 +694,22 @@ namespace tienda2.desinger
 
         }
 
-        private void recarga_ranking(string provedor)
+        private void recarga_ranking(string provedor,char caracter_separacion='|')
         {
-            string[] inventario = bas.Leer(direccion_inventario);
-
-            List<string> produc_prov_invent = new List<string>();
-            //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
-            for (int i = 0; i < inventario.Length; i++)
+            //falta filtrarlo por provedor
+            
+            prediccion pred = new prediccion();
+            string[] arreglo_ranking = pred.compra(G_dir_ranking, 4, 5, 6, 7);
+            for (int i = 0; i < arreglo_ranking.Length; i++)
             {
-                string[] invent_esplit = inventario[i].Split('|');
-                if (provedor == invent_esplit[6])
+                string[] ranking_espliteado=arreglo_ranking[i].Split('|');
+
+                if (provedor==ranking_espliteado[2])
                 {
-                    produc_prov_invent.Add(invent_esplit[3] + G_parametros[0] + invent_esplit[1] + G_parametros[0] + invent_esplit[4]);
+                    lst_carga.Items.Add(ranking_espliteado[2] + caracter_separacion + ranking_espliteado[1] + caracter_separacion + ranking_espliteado[3] + caracter_separacion + ranking_espliteado[4]);
                 }
             }
-            arreglos_compuestos_y_simples arr_comp_simp = new arreglos_compuestos_y_simples();
-            string[] arreglo_ordenado_invent_prov = arr_comp_simp.ordenar_arreglo_simple(produc_prov_invent.ToArray(), 2);
-
-            DateTime fecha_hora = DateTime.Now;
-            string dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
-            string[] info_compra = bas.Leer(dir_ranking);
-            List<string> arreglo_ranking = new List<string>();
-            for (int i = 0; i < info_compra.Length; i++)
-            {
-                string[] info_comp_esplit = info_compra[i].Split('|');
-                if (info_comp_esplit[3] == provedor)
-                {
-                    arreglo_ranking.Add(info_compra[i]);
-                }
-            }
-            string[] arreglo_ordenado = arr_comp_simp.ordenar_arreglo_simple(arreglo_ranking.ToArray(), 2, "mayor_menor");
-
-            for (int i = 0; i < arreglo_ordenado.Length; i++)
-            {
-                //prediccion compra global  rango y cantidad en inventario para sacar y dependiendo del promedio  se vera si es urgente o no pero luego se checa
-                /*
-                double acum = 0;
-                int cantidades_historial = 0;
-                string[] historial_produc=arreglo_ordenado[4].Split('°');
-                for (int j = 0; j < historial_produc.Length; j++)
-                {
-                    if (historial_produc[j]==null)
-                    {
-                        break;
-                    }
-                    acum = acum + Convert.ToDouble(historial_produc[i]);
-                    cantidades_historial = j;
-                }
-
-                for (int k = 0; k < produc_prov_invent.Count; k++)
-                {
-                }
-                */
-                //-------------------------------------------------------------------------------------------------------
-                string[] prod_esplit = arreglo_ordenado[i].Split('|');
-                lst_carga.Items.Add(prod_esplit[0] + "|" + prod_esplit[1] + "|" + prod_esplit[2] + "|");
-
-            }
-
-
-
-
+            
         }
 
 

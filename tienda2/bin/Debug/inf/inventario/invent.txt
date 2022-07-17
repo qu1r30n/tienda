@@ -452,7 +452,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 451|encendedor bic|16|3086123397835|-1|0|bic|1°producto||1|
 452|encendedor big|16|3086126788722|0|0|encendedor|1°producto||1|
 453|cigarro winston capsula menta 20'|55|4033100076428|0|49|camel|1°producto||1|
-454|red label 700ml|301|5000267014203|2|260.7|magadan|1°producto||1|
+454|red label 700ml|301|5000267014203|1|260.7|magadan|1°producto||1|
 455|don julio 750ml|701|5000281043449|0|553|magadan|1°producto||1|
 456|capitan morgan 700ml|241|5000281055374|0|209|magadan|1°producto||1|
 457|stella artois lager 250ml|17|5410228240945|0|14.4|indio|1°producto||1|

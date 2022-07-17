@@ -51,14 +51,20 @@ namespace tienda2.desinger
                 }
                 if (esta == false)
                 {
+                    bool bandera = false;
                     for (int k = 0; k < productos.Length; k++)
                     {
                         string[] produc_esplit = productos[k].Split('|');
                         if (produc_esplit[3] == "" + lst_cod_bar.Items[i])
                         {
                             _parent.lst_carga.Items.Add(produc_esplit[3] + "|" + produc_esplit[1] + "|1");
+                            bandera = true;
                         }
 
+                    }
+                    if (bandera==false)
+                    {
+                        _parent.lst_carga.Items.Add(lst_cod_bar.Items[i]);
                     }
 
                 }
@@ -98,14 +104,8 @@ namespace tienda2.desinger
             }
         }
 
-        private void lst_cod_bar_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void txt_cod_bar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
