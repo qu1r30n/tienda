@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{276F6F09-590C-49FC-87A1-7FD48E834010}</ProjectGuid>
+    <ProjectGuid>{15D25107-344C-46E3-8F86-248FC77F7F78}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>tienda2</RootNamespace>
     <AssemblyName>tienda2</AssemblyName>
@@ -33,14 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BarcodeStandard, Version=2.2.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\BarcodeLib.2.2.6\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
-    </Reference>
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,13 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clases\arreglos_compuestos_y_simples.cs" />
+    <Compile Include="clases\glob_var_direcciones.cs" />
     <Compile Include="clases\info_entrada_salida.cs" />
     <Compile Include="clases\Modelo_compra_venta.cs" />
+    <Compile Include="clases\Operaciones_archivos.cs" />
     <Compile Include="clases\Operaciones_textos.cs" />
-    <Compile Include="clases\glob_var_direcciones.cs" />
     <Compile Include="clases\prediccion.cs" />
     <Compile Include="clases\simul2.cs" />
     <Compile Include="clases\sismul.cs" />
+    <Compile Include="clases\Tex_base.cs" />
     <Compile Include="clases\variables_estaticas.cs" />
     <Compile Include="desinger\Area_principal.cs">
       <SubType>Form</SubType>
@@ -68,47 +64,29 @@
     <Compile Include="desinger\Area_principal.Designer.cs">
       <DependentUpon>Area_principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\Cambiar_informacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="desinger\Cambiar_informacion.Designer.cs">
-      <DependentUpon>Cambiar_informacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="desinger\Compras_cargar_rapido_cod_bar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="desinger\Compras_cargar_rapido_cod_bar.Designer.cs">
-      <DependentUpon>Compras_cargar_rapido_cod_bar.cs</DependentUpon>
-    </Compile>
     <Compile Include="desinger\area_principal_Comparar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="desinger\area_principal_Comparar.Designer.cs">
       <DependentUpon>area_principal_Comparar.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\gastos.cs">
+    <Compile Include="desinger\Cambiar_informacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\gastos.Designer.cs">
-      <DependentUpon>gastos.cs</DependentUpon>
+    <Compile Include="desinger\Cambiar_informacion.Designer.cs">
+      <DependentUpon>Cambiar_informacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\pedidos.cs">
+    <Compile Include="desinger\Compras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\pedidos.Designer.cs">
-      <DependentUpon>pedidos.cs</DependentUpon>
+    <Compile Include="desinger\Compras.Designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\ventas_cargar_venta_temporal_guardada.cs">
+    <Compile Include="desinger\Compras_cargar_rapido_cod_bar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\ventas_cargar_venta_temporal_guardada.Designer.cs">
-      <DependentUpon>ventas_cargar_venta_temporal_guardada.cs</DependentUpon>
-    </Compile>
-    <Compile Include="desinger\Ventas_confirmar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="desinger\Ventas_confirmar.Designer.cs">
-      <DependentUpon>Ventas_confirmar.cs</DependentUpon>
+    <Compile Include="desinger\Compras_cargar_rapido_cod_bar.Designer.cs">
+      <DependentUpon>Compras_cargar_rapido_cod_bar.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\Compras_control_provedores.cs">
       <SubType>Form</SubType>
@@ -128,6 +106,12 @@
     <Compile Include="desinger\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="desinger\gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\gastos.Designer.cs">
+      <DependentUpon>gastos.cs</DependentUpon>
+    </Compile>
     <Compile Include="desinger\igualar_provedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +130,11 @@
     <Compile Include="desinger\investigacion_mercado.Designer.cs">
       <DependentUpon>investigacion_mercado.cs</DependentUpon>
     </Compile>
-    <Compile Include="desinger\Compras.cs">
+    <Compile Include="desinger\pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="desinger\Compras.Designer.cs">
-      <DependentUpon>Compras.cs</DependentUpon>
+    <Compile Include="desinger\pedidos.Designer.cs">
+      <DependentUpon>pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="desinger\Respaldo.cs">
       <SubType>Form</SubType>
@@ -176,39 +160,40 @@
     <Compile Include="desinger\Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <Compile Include="desinger\ventas_cargar_venta_temporal_guardada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\ventas_cargar_venta_temporal_guardada.Designer.cs">
+      <DependentUpon>ventas_cargar_venta_temporal_guardada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="desinger\Ventas_confirmar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\Ventas_confirmar.Designer.cs">
+      <DependentUpon>Ventas_confirmar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="clases\Operaciones_archivos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="clases\Tex_base.cs" />
     <EmbeddedResource Include="desinger\Area_principal.resx">
       <DependentUpon>Area_principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Cambiar_informacion.resx">
-      <DependentUpon>Cambiar_informacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Compras_cargar_rapido_cod_bar.resx">
-      <DependentUpon>Compras_cargar_rapido_cod_bar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\area_principal_Comparar.resx">
       <DependentUpon>area_principal_Comparar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\gastos.resx">
-      <DependentUpon>gastos.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Cambiar_informacion.resx">
+      <DependentUpon>Cambiar_informacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\pedidos.resx">
-      <DependentUpon>pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\ventas_cargar_venta_temporal_guardada.resx">
-      <DependentUpon>ventas_cargar_venta_temporal_guardada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Ventas_confirmar.resx">
-      <DependentUpon>Ventas_confirmar.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\Compras_cargar_rapido_cod_bar.resx">
+      <DependentUpon>Compras_cargar_rapido_cod_bar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Compras_control_provedores.resx">
       <DependentUpon>Compras_control_provedores.cs</DependentUpon>
@@ -219,6 +204,9 @@
     <EmbeddedResource Include="desinger\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="desinger\gastos.resx">
+      <DependentUpon>gastos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="desinger\igualar_provedores.resx">
       <DependentUpon>igualar_provedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,8 +216,8 @@
     <EmbeddedResource Include="desinger\investigacion_mercado.resx">
       <DependentUpon>investigacion_mercado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Compras.resx">
-      <DependentUpon>Compras.cs</DependentUpon>
+    <EmbeddedResource Include="desinger\pedidos.resx">
+      <DependentUpon>pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\Respaldo.resx">
       <DependentUpon>Respaldo.cs</DependentUpon>
@@ -237,11 +225,14 @@
     <EmbeddedResource Include="desinger\simul.resx">
       <DependentUpon>simul.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="desinger\Ventana_emergente.resx">
-      <DependentUpon>Ventana_emergente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="desinger\Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="desinger\ventas_cargar_venta_temporal_guardada.resx">
+      <DependentUpon>ventas_cargar_venta_temporal_guardada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="desinger\Ventas_confirmar.resx">
+      <DependentUpon>Ventas_confirmar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -255,7 +246,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

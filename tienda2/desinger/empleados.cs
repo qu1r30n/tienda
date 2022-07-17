@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using tienda2.clases;
 using System.IO;
 
 namespace tienda2.desinger
@@ -22,7 +23,7 @@ namespace tienda2.desinger
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -33,7 +34,7 @@ namespace tienda2.desinger
 
         private void Btn_agregar_Click(object sender, EventArgs e)
         {
-            if (txt_nom.Text != "" && txt_apllido_pat.Text != "" && txt_apllido_materno.Text != "" && txt_fecha_ingreso.Text != "" && txt_sueldo.Text != "" && cmb_cargo.Text != "" && txt_imag.Text != "" && txt_comentarios.Text != "" && lbl_id.Text != "#") 
+            if (txt_nom.Text != "" && txt_apllido_pat.Text != "" && txt_apllido_materno.Text != "" && txt_fecha_ingreso.Text != "" && txt_sueldo.Text != "" && cmb_cargo.Text != "" && txt_imag.Text != "" && txt_comentarios.Text != "" && lbl_id.Text != "#")
             {
                 if (txt_contrasenia.Text == txt_conf_contr.Text)
                 {
@@ -69,7 +70,7 @@ namespace tienda2.desinger
                 MessageBox.Show("falta informacion");
             }
 
-            
+
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
@@ -84,7 +85,7 @@ namespace tienda2.desinger
 
         private void cmb_cargo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] tot= { };
+            string[] tot = { };
             switch (cmb_cargo.SelectedItem)
             {
                 case "admin":

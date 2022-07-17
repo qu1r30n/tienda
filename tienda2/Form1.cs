@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using tienda2.desinger;
 using tienda2.clases;
 
@@ -23,8 +23,8 @@ namespace tienda2
 
             InitializeComponent();
             Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
-            //pedidos pedi = new pedidos();
-            //pedi.Show();
+            pedidos pedi = new pedidos();
+            pedi.Show();
             //bas.si_son_menores_a_0_o_mayores_a_1000_los_vuelve_a_cero("inf\\inventario\\invent.txt",4);
             //bas.comp_2_archivos_info_no_esta_vuelve_a_cero("info_tienda\\inf\\inventario\\invent.txt", 3, Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\tienda_inventarios\\20220626_compras_durante_invet_e_inventario.txt",1);
 
@@ -135,13 +135,13 @@ namespace tienda2
 
                 bas.Editar_espesifico(direccion3, 0, "con_dia_sem", "1", "1");
                 bas.Editar_una_columna(dir_ranking_año, 2, "0");
-               string [] info_ranking = bas.Leer(dir_ranking_año);
-                
+                string[] info_ranking = bas.Leer(dir_ranking_año);
+
                 for (int i = 0; i < info_ranking.Length; i++)
                 {
-                    string[] info_producto= info_ranking[i].Split('|');
-                    string[] historial_ranking=info_producto[4].Split('°');
-                    for (int j = historial_ranking.Length-2; j >=0 ; j--)
+                    string[] info_producto = info_ranking[i].Split('|');
+                    string[] historial_ranking = info_producto[4].Split('°');
+                    for (int j = historial_ranking.Length - 2; j >= 0; j--)
                     {
                         historial_ranking[j + 1] = historial_ranking[j];
                     }
@@ -153,7 +153,7 @@ namespace tienda2
                 bas.Editar_espesifico(direccion3, 0, "con_dia_sem", "1", "0");
 
             }
-            
+
 
             //---------------------------------
         }
@@ -162,10 +162,10 @@ namespace tienda2
         {
             Tex_base adm = new Tex_base();//llamamos a la clase tex_base
             Area_principal area = new Area_principal();//este es el form Area_principal y es al que entrara si pone el usuario y contraseña bien
-            string temp = adm.Seleccionar("inf\\us\\ad.txt",0,Txt_usuario.Text,"1");//guarda el id del usuario pas y datos en texto
-            if (temp=="")
+            string temp = adm.Seleccionar("inf\\us\\ad.txt", 0, Txt_usuario.Text, "1");//guarda el id del usuario pas y datos en texto
+            if (temp == "")
             {
-                temp=null;
+                temp = null;
             }
             if (temp == Txt_pass.Text)
             {
@@ -173,7 +173,7 @@ namespace tienda2
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 area.Show();//muestra el form Area_principal
-                
+
             }
             else
             {
@@ -188,7 +188,7 @@ namespace tienda2
 
         private void Btn_usuario_Click(object sender, EventArgs e)
         {
-           
+
 
             Tex_base user = new Tex_base();//llamamos a la clase tex_base
             Ventas vent = new Ventas();//este es el form ventas y es al que entrara si pone el usuario y contraseña bien
@@ -250,7 +250,7 @@ namespace tienda2
             }
             if (temp == Txt_pass.Text)
             {
-                g_global= bas_simul.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
+                g_global = bas_simul.Seleccionar_invertida_extraccion_columnas("inf\\us\\invitado.txt", 0, Txt_usuario.Text, "1");
                 Txt_usuario.Text = "";//bora lo que tiene el textbox usuario
                 Txt_pass.Text = "";//bora lo que tiene el textbox contraseña
                 simul_ventana.Show();//muestra el form ventas

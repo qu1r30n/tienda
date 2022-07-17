@@ -1,6 +1,0 @@
-01:10:26 |75002275 |16 |chocorroles piña 100g |13.5
-07:56:01 |75003371°97339000030°8000500134702°75002275 |85 |gerber durazno 113gr°salsa valentina 1L amarilla°kinder chocolate 50g°chocorroles piña 100g |57.3
-11:00:13 |70330724341°75001322 |75 |rastrillo bic confort 3 hojas°marlboro rojo 20 |55
-11:01:40 |70330724341°75001322 |75 |rastrillo bic confort 3 hojas°marlboro rojo 20 |55
-15:05:54 |75009809°75003722°75003463 |197.5 |coca-cola 500ml°aceite maravilla 500ml°gerber frutas mixtas 113gr |94.5
-15:08:22 |75009809°75003722°75003463 |395.0 |coca-cola 500ml°aceite maravilla 500ml°gerber frutas mixtas 113gr |189.0

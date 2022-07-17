@@ -7,10 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-
 
 using tienda2.clases;
+using System.IO;
 
 namespace tienda2.desinger
 {
@@ -26,13 +25,13 @@ namespace tienda2.desinger
         {
             _parent = parent;
             InitializeComponent();
-            
-            
+
+
         }
 
         private void Btn_procesar_venta_Click(object sender, EventArgs e)
         {
-            
+
             string[] productos = bas.Leer("inf\\inventario\\invent.txt");
 
             bool hubo_repetidos = false;
@@ -41,35 +40,35 @@ namespace tienda2.desinger
 
                 bool esta = false;
 
-                for (int j = 0; j < i; j++) 
+                for (int j = 0; j < i; j++)
                 {
-                    if (""+lst_cod_bar.Items[i]== ""+lst_cod_bar.Items[j])
+                    if ("" + lst_cod_bar.Items[i] == "" + lst_cod_bar.Items[j])
                     {
                         esta = true;
                         hubo_repetidos = true;
                     }
-                     
+
                 }
                 if (esta == false)
                 {
                     for (int k = 0; k < productos.Length; k++)
                     {
                         string[] produc_esplit = productos[k].Split('|');
-                        if (produc_esplit[3]== "" + lst_cod_bar.Items[i])
+                        if (produc_esplit[3] == "" + lst_cod_bar.Items[i])
                         {
-                            _parent.lst_carga.Items.Add(produc_esplit[3]+"|"+ produc_esplit[1] + "|1");
+                            _parent.lst_carga.Items.Add(produc_esplit[3] + "|" + produc_esplit[1] + "|1");
                         }
-                        
+
                     }
-                    
+
                 }
             }
-            if (hubo_repetidos==true)
+            if (hubo_repetidos == true)
             {
                 MessageBox.Show("hubo codigos de barra repetidos se eliminaron los repetidos");
             }
             this.Close();
-            
+
         }
 
         private void Btn_elim_ultimo_Click(object sender, EventArgs e)
@@ -99,9 +98,14 @@ namespace tienda2.desinger
             }
         }
 
-        
+        private void lst_cod_bar_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        
+        }
 
+        private void txt_cod_bar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

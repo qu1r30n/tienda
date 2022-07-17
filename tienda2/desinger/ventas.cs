@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -147,7 +146,7 @@ namespace tienda2.desinger
         //----------------------------------------------------------------------------
 
 
-        
+
 
         private void Btn_elim_ultimo_Click(object sender, EventArgs e)
         {
@@ -524,7 +523,7 @@ namespace tienda2.desinger
 
             lbl_ventas_compras_resultado.Text = ventas + "-" + compras + "=" + resultado;
 
-            
+
             string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
             if (bas.existe_archivo(mod_inv))
             {
@@ -534,8 +533,8 @@ namespace tienda2.desinger
             {
                 lbl_modo_inventario.Text = ".";
             }
-            
-            
+
+
         }
 
         private void ajustesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -637,7 +636,7 @@ namespace tienda2.desinger
         {
             if (e.KeyChar == '+')
             {
-                string[] item_spliteado = Lst_ventas.Items[Lst_ventas.Items.Count-1].ToString().Split(G_parametros);
+                string[] item_spliteado = Lst_ventas.Items[Lst_ventas.Items.Count - 1].ToString().Split(G_parametros);
                 Procesar_codigo(item_spliteado[0], "1");
 
                 e.KeyChar = '\0';
@@ -649,17 +648,22 @@ namespace tienda2.desinger
 
                 Procesar_codigo(item_spliteado[0], "-1");
                 item_spliteado = null;
-                item_spliteado = Lst_ventas.Items[Lst_ventas.Items.Count-1].ToString().Split(G_parametros);
-                if (Convert.ToDouble(item_spliteado[item_spliteado.Length-1]) <= 0)//posible error futuro el .length lo tengo que usar por que nose porque aveses tiene 9 elementos y aveses 8
+                item_spliteado = Lst_ventas.Items[Lst_ventas.Items.Count - 1].ToString().Split(G_parametros);
+                if (Convert.ToDouble(item_spliteado[item_spliteado.Length - 1]) <= 0)//posible error futuro el .length lo tengo que usar por que nose porque aveses tiene 9 elementos y aveses 8
                 {
                     funcion_eliminar_ulitimo();
                 }
 
 
                 e.KeyChar = '\0';
-            }            
+            }
         }
+
+        private void Txt_buscar_producto_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
 
     }
 }
-

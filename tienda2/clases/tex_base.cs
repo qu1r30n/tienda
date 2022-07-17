@@ -1,16 +1,16 @@
 ﻿using System;
-using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tienda2
+using System.IO;
+
+namespace tienda2.clases
 {
     class Tex_base
     {
-
         string G_palabra = "", G_entrando = "", G_temp = "";
 
         char[] G_parametros = { '|', '°', '¬', '^' };
@@ -60,10 +60,10 @@ namespace tienda2
 
                 }
             }
-            
+
         }
 
-        public string Seleccionar_todos_los_de_un_array(string direccion_archivo, int num_column_comp, string[] comparar,int arreglo_colum_comp ,string numero_columnas_extraer = null, char caracter_separacion = '|')
+        public string Seleccionar_todos_los_de_un_array(string direccion_archivo, int num_column_comp, string[] comparar, int arreglo_colum_comp, string numero_columnas_extraer = null, char caracter_separacion = '|')
         {
             StreamReader sr = new StreamReader(direccion_archivo);
             string columna = "";
@@ -73,7 +73,7 @@ namespace tienda2
                 if (linea != null)
                 {
                     string[] palabra = linea.Split(caracter_separacion);
-                    
+
                     for (int i = 0; i < comparar.Length; i++)
                     {
                         string[] comparar_espliteado = comparar[i].Split(caracter_separacion);
@@ -105,7 +105,7 @@ namespace tienda2
                         }
 
                     }
-                    
+
                 }
             }
             columna = Trimend_paresido(columna, '¬');
@@ -116,7 +116,7 @@ namespace tienda2
         }
 
 
-        public string Seleccionar(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_extraer=null, char caracter_separacion = '|')
+        public string Seleccionar(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_extraer = null, char caracter_separacion = '|')
         {
             StreamReader sr = new StreamReader(direccion_archivo);
             string columna = "";
@@ -129,7 +129,7 @@ namespace tienda2
 
                     if (palabra[num_column_comp] == comparar)
                     {
-                        if (numero_columnas_extraer!=null)
+                        if (numero_columnas_extraer != null)
                         {
                             string[] columnas_extraer = numero_columnas_extraer.Split(caracter_separacion);
                             for (int i = 0; i < columnas_extraer.Length; i++)
@@ -150,7 +150,7 @@ namespace tienda2
                         {
                             columna = columna + linea;
                         }
-                        
+
 
                         columna = columna + "°";
 
@@ -193,8 +193,8 @@ namespace tienda2
                                 }
                             }
 
-                            
-                            
+
+
                         }
                         else
                         {
@@ -480,7 +480,7 @@ namespace tienda2
                 File.Delete(direccion_archivo);//borramos el archivo original
                 File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 sr.Close();
                 sw.Close();
@@ -494,13 +494,13 @@ namespace tienda2
 
         public void Agregar(string direccion_archivos, string agregando)
         {
-            StreamWriter sw = new StreamWriter(direccion_archivos,true);
+            StreamWriter sw = new StreamWriter(direccion_archivos, true);
             sw.WriteLine(agregando);
             sw.Close();
 
         }
 
-        public string Eliminar(string direccion_archivo, string comparar,int columna_comp)
+        public string Eliminar(string direccion_archivo, string comparar, int columna_comp)
         {
             bool bandera = true;
             G_linea = direccion_archivo.Split('\\');
@@ -558,7 +558,7 @@ namespace tienda2
 
         public void Eliminar_fila_porn_numero_de_fila(string direccion_archivo, int numero_de_fila)
         {
-            
+
             G_linea = direccion_archivo.Split('\\');
             G_temp = G_linea[0];
             for (int i = 1; i < G_linea.Length; i++)
@@ -574,12 +574,12 @@ namespace tienda2
             StreamReader sr = new StreamReader(direccion_archivo);
             StreamWriter sw = new StreamWriter(G_temp, true);
             int cont = 0;
-            
+
             while (sr.Peek() >= 0)
             {
-                
+
                 G_palabra = sr.ReadLine();
-                if (cont!=numero_de_fila)
+                if (cont != numero_de_fila)
                 {
                     sw.WriteLine(G_palabra);
                 }
@@ -593,7 +593,7 @@ namespace tienda2
                 File.Move(G_temp, direccion_archivo);
             }
             catch { }
-            
+
         }
 
         public string[] Leer_columnas(string direccion_archivo)
@@ -676,7 +676,7 @@ namespace tienda2
                 }
                 return t;
             }
-            
+
             sr.Close();
             string[] t2 = new string[linea.Count];
             for (int mnm = 0; mnm < linea.Count; mnm++)
@@ -767,8 +767,8 @@ namespace tienda2
                         {
                             bandera = true;
                             string linea_editada = "";
-                            
-                            
+
+
                             if (info_extra != "")
                             {
 
@@ -777,7 +777,7 @@ namespace tienda2
                                 if (info_extra_spliteada[0] == "1")
                                 {
                                     numero_columnas_editar = numero_columnas_editar + "|7";
-                                    cantidad_a_sumar = cantidad_a_sumar + "|"+ (Convert.ToDecimal(info_extra_spliteada[1])*Convert.ToDecimal(cantidad_a_sumar));
+                                    cantidad_a_sumar = cantidad_a_sumar + "|" + (Convert.ToDecimal(info_extra_spliteada[1]) * Convert.ToDecimal(cantidad_a_sumar));
                                     string[] columnas_editar = numero_columnas_editar.Split(caracter_separacion);
                                     string[] cantidades_sumara = cantidad_a_sumar.Split(caracter_separacion);
 
@@ -810,7 +810,7 @@ namespace tienda2
                                 }
                             }
 
-                            
+
                             for (int i = 0; i < palabra.Length; i++)
                             {
                                 linea_editada = linea_editada + palabra[i] + caracter_separacion;
@@ -831,7 +831,7 @@ namespace tienda2
                 exito_o_fallo = "1)exito";
                 File.Delete(direccion_archivo);//borramos el archivo original
                 File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
-                
+
                 if (bandera == false)
                 {
 
@@ -846,7 +846,7 @@ namespace tienda2
                     {
                         string[] info_extra_spliteada = info_extra.Split(caracter_separacion);
 
-                        if (info_extra_spliteada[0]=="1")
+                        if (info_extra_spliteada[0] == "1")
                         {
                             for (int i = 1; i < info_extra_spliteada.Length; i++)
                             {
@@ -854,7 +854,7 @@ namespace tienda2
                             }
                         }
 
-                        
+
                         texto[0] = Trimend_paresido(texto[0], caracter_separacion);
 
                     }
@@ -877,8 +877,8 @@ namespace tienda2
             return exito_o_fallo;
         }
 
-        
-        
+
+
         public string si_existe_suma_sino_agega_extra(string direccion_archivo, int columna_a_comparar, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string texto_a_agregar, char caracter_separacion = '|')
         {
             Crear_archivo_y_directorio(direccion_archivo);
@@ -942,7 +942,7 @@ namespace tienda2
         }
 
 
-        public string Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_editar, string cantidad_a_sumar,string columnas_a_extraer_inventario ,string info_extra = "", char caracter_separacion = '|')
+        public string Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(string direccion_archivo, int num_column_comp, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string columnas_a_extraer_inventario, string info_extra = "", char caracter_separacion = '|')
         {
             Crear_archivo_y_directorio(direccion_archivo);
             bool bandera = false;
@@ -1078,7 +1078,7 @@ namespace tienda2
 
 
         public string si_no_existe_agega_comparacion(string direccion_archivo, string comparar, char caracter_separacion = '|')
-            {
+        {
             Crear_archivo_y_directorio(direccion_archivo);
             bool bandera = false;
             StreamReader sr = new StreamReader(direccion_archivo);
@@ -1110,16 +1110,16 @@ namespace tienda2
                     num_column_comp++;
                 }
                 num_column_comp = 0;
-                
+
                 sr.Close();
                 sw.Close();
                 exito_o_fallo = "1)exito";
                 File.Delete(direccion_archivo);//borramos el archivo original
                 File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
-                
+
                 if (bandera == false)
                 {
-                    Agregar(direccion_archivo, comparar+G_parametros[0]);
+                    Agregar(direccion_archivo, comparar + G_parametros[0]);
                 }
 
 
@@ -1191,7 +1191,7 @@ namespace tienda2
             return exito_o_fallo;
         }
 
-        
+
 
         public string Trimend_paresido(string texto, char caracter_separacion = '|')
         {
@@ -1290,7 +1290,7 @@ namespace tienda2
             return exito_o_fallo;
         }
 
-        public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo="numero",string orden="mayor_menor", char caracter_separacion = '|')
+        public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo = "numero", string orden = "mayor_menor", char caracter_separacion = '|')
         {
             Tex_base bas = new Tex_base();
             string[] lineas = bas.Leer(direccion_archivo);
@@ -1334,7 +1334,7 @@ namespace tienda2
                     }//for linea_de_arriba
                 }//if orden
 
-                else if(orden== "menor_mayor")
+                else if (orden == "menor_mayor")
                 {
                     string temporal_apoyo;
                     for (int i = 0; i < lineas.Length; i++)
@@ -1387,9 +1387,9 @@ namespace tienda2
         public void comp_2_archivos_info_no_esta(string direccion_archivo_1, int columna_1, string direccion_archivo_2, int columna_2, char caracter_separacion = '|')
         {
             //el que va a apareser la info del archivo 1
-            
+
             Tex_base bas = new Tex_base();
-            string[]archivo1=bas.Leer(direccion_archivo_1);
+            string[] archivo1 = bas.Leer(direccion_archivo_1);
             string[] archivo2 = bas.Leer(direccion_archivo_2);
 
             string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\info_comparacion_no_se_encontro.txt";
@@ -1397,20 +1397,20 @@ namespace tienda2
 
             for (int i = 0; i < archivo1.Length; i++)
             {
-                string[]info_1=archivo1[i].Split(caracter_separacion);
+                string[] info_1 = archivo1[i].Split(caracter_separacion);
                 bool bandera = false;
                 for (int j = 0; j < archivo2.Length; j++)
                 {
                     string[] info_2 = archivo2[j].Split(caracter_separacion);
-                    if (info_1[columna_1] == info_2[columna_2]) 
+                    if (info_1[columna_1] == info_2[columna_2])
                     {
                         bandera = true;
                     }
                 }
-                if (bandera==false)
+                if (bandera == false)
                 {
                     string temp = archivo1[i];
-                    bas.Agregar(dir_res_comp,temp );
+                    bas.Agregar(dir_res_comp, temp);
                 }
 
             }
@@ -1443,7 +1443,7 @@ namespace tienda2
                 if (bandera == false)
                 {
                     //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
-                   bas.Editar_espesifico(direccion_archivo_1,columna_1, info_1[columna_1],"4","0");
+                    bas.Editar_espesifico(direccion_archivo_1, columna_1, info_1[columna_1], "4", "0");
                 }
 
             }
@@ -1490,7 +1490,7 @@ namespace tienda2
 
             Tex_base bas = new Tex_base();
             string[] archivo1 = bas.Leer(direccion_archivo_1);
-            
+
 
             string dir_res_comp = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\info_comparacion_no_se_encontro.txt";
             bas.Crear_archivo_y_directorio(dir_res_comp);
@@ -1498,8 +1498,8 @@ namespace tienda2
             for (int i = 0; i < archivo1.Length; i++)
             {
                 string[] info_1 = archivo1[i].Split(caracter_separacion);
-                
-                for (int j = i+1; j < archivo1.Length; j++)
+
+                for (int j = i + 1; j < archivo1.Length; j++)
                 {
                     string[] info_2 = archivo1[j].Split(caracter_separacion);
                     if (info_1[columna_1] == info_2[columna_1])
@@ -1522,10 +1522,9 @@ namespace tienda2
         {
             File.Copy(direccion1, direccion2);//renombramos el archivo temporal por el que tenia el original
         }
-        public void mover(string direccion1,string direccion2)
+        public void mover(string direccion1, string direccion2)
         {
             File.Move(direccion1, direccion2);//renombramos el archivo temporal por el que tenia el original
         }
     }
-
 }

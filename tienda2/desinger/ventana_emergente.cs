@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using tienda2.clases;
-
 using System.IO;
 
 namespace tienda2.desinger
@@ -10,7 +15,7 @@ namespace tienda2.desinger
     public partial class Ventana_emergente : Form
     {
 
-        char[] G_parametros = { '|', '°', '¬','^' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
         string G_datos_de_boton = "";
         int G_contador = 0;
         int G_control_a_ocultar;
@@ -25,7 +30,7 @@ namespace tienda2.desinger
 
         }
 
-        public string Proceso_ventana_emergente(string[] nom_datos_recolectados, int modificara = 0,string titulo_ventana= "ventana_emergente", string[] infoextra = null, char caracter_spliteo = '°')
+        public string Proceso_ventana_emergente(string[] nom_datos_recolectados, int modificara = 0, string titulo_ventana = "ventana_emergente", string[] infoextra = null, char caracter_spliteo = '°')
         {
             //1=textbox  1°titulo_texbox°contenido_text_box°restriccion_de_dato      ejemplo "1°precio venta°0°2" //el 2 es la restriccion que solo resivira numeros y punto decimal         
             //2=labels   2°titulo_label°abajo_pondra_otro_label_con_el_contenido    ejemplo "2°id°9999"
@@ -39,7 +44,7 @@ namespace tienda2.desinger
             //
             //            ejemplo "4°grupo°2°4°1°1°2°3°4"
 
-            this.Text=titulo_ventana;
+            this.Text = titulo_ventana;
 
             int x = 120;
             int y = 0;
@@ -415,7 +420,7 @@ namespace tienda2.desinger
 
                 }
 
-                else if ((bandera2 == "1" || bandera3 == "1") && (bandera1 != "1" && bandera1 != "4")) 
+                else if ((bandera2 == "1" || bandera3 == "1") && (bandera1 != "1" && bandera1 != "4"))
                 {
                     this.ShowDialog();
                     union = nuevo_boton;
@@ -496,7 +501,7 @@ namespace tienda2.desinger
             switch (modificara)
             {
                 case 0:
-                    
+
                     break;
                 case 1:
                     bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
@@ -514,7 +519,7 @@ namespace tienda2.desinger
             return arraytextbox;
 
         }
-        
+
         public string NuevoBoton_Click(object sender, EventArgs e, string seccion, string[] info_extra = null)
         {
             //comprobamos en que boton se a clicado
@@ -526,8 +531,8 @@ namespace tienda2.desinger
             {
                 if (info_extra[0] == "solo_botones")
                 {
-                    
-                    if (seccion_espliteado[2]=="0")
+
+                    if (seccion_espliteado[2] == "0")
                     {
                         seccion = seccion_espliteado[1];
                         G_datos_de_boton = seccion;
@@ -537,8 +542,8 @@ namespace tienda2.desinger
                     {
                         funcion_elegida_por_boton(seccion_espliteado[2]);
                     }
-                    
-                    
+
+
                 }
 
                 else
@@ -616,7 +621,7 @@ namespace tienda2.desinger
             if (parametros == "ocultar_control")
             {
                 G_bandera = 1;
-                if (G_control_a_ocultar==21)
+                if (G_control_a_ocultar == 21)
                 {
 
 
@@ -635,7 +640,7 @@ namespace tienda2.desinger
 
         }
 
-    
+
         public void restriccion_caracteres(Object sender, KeyPressEventArgs e, string parametros)
         {
             if (parametros == "solo_letras")
@@ -724,7 +729,7 @@ namespace tienda2.desinger
                         G_datos_de_boton = opfd.FileName;
                         this.Close();
                     }
-                        break;
+                    break;
                 case "2":
                     break;
                 case "3":

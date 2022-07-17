@@ -8,7 +8,6 @@ namespace tienda2.clases
 {
     class Modelo_compra_venta
     {
-
         char[] G_parametros = { '|', '°', '¬', '^' };
 
         public void Modelo_compra(string codigo, string costo_compra, string cantidad, string provedor, string nom_producto, string id_producto, string info_extra = null, bool compra_directa = true)
@@ -67,12 +66,12 @@ namespace tienda2.clases
 
             else
             {
-                
+
                 string dir_arch = "pedidos/" + año_mes_dia + "_" + provedor + ".txt";
-                
+
 
                 bas.si_existe_suma_sino_agega_extra(dir_arch, 0, codigo, "1", cantidad, codigo + "|" + cantidad + "|" + costo_compra);
-                
+
             }
 
 
@@ -92,7 +91,7 @@ namespace tienda2.clases
 
             string[] productos = bas.Leer("inf\\inventario\\invent.txt");
             decimal acum_costo_venta = 0, acum_costo_compra = 0;
-            string[] nom_productos=new string[codigo.Length]; 
+            string[] nom_productos = new string[codigo.Length];
             for (int j = 0; j < productos.Length; j++)
             {
                 string[] prod_esplit = productos[j].Split(G_parametros[0]);
@@ -109,40 +108,40 @@ namespace tienda2.clases
                         acum_costo_venta = acum_costo_venta + (Convert.ToDecimal(prod_esplit[2]) * Convert.ToDecimal(cantidades_vendidas[i]));
                         acum_costo_compra = acum_costo_compra + (Convert.ToDecimal(prod_esplit[5]) * Convert.ToDecimal(cantidades_vendidas[i]));
                         nom_productos[i] = prod_esplit[1];
-                        
+
                     }
                 }
             }
-            
-            
 
-            string direccion= "ventas\\" + año + "\\" + mes + "\\dias\\" + año_mes_dia + ".txt";
+
+
+            string direccion = "ventas\\" + año + "\\" + mes + "\\dias\\" + año_mes_dia + ".txt";
             string info = hora_min_seg + " |" + codigos_unidos + " |" + acum_costo_venta + " |" + string.Join("°", nom_productos) + " |" + acum_costo_compra;
             bas.Agregar(direccion, info);//la hora de compra lo que compro el costo 
 
             direccion = "ventas\\" + año + "\\" + mes + "\\" + mes + ".txt";
             op.Actualisar_resumen_venta(direccion, dia, acum_costo_venta, acum_costo_compra);//actualisa total de cada dias
-            
+
             direccion = "ventas\\" + año + "\\" + año + ".txt";
             op.Actualisar_resumen_venta(direccion, mes, acum_costo_venta, acum_costo_compra);//actualisa total de cada mes
-            
+
             direccion = "ventas\\total_años.txt";
             op.Actualisar_resumen_venta(direccion, año, acum_costo_venta, acum_costo_compra);//muestra total de cada año
-            
+
             direccion = "ventas\\total_en_juego.txt";
             op.Actualisar_resumen_venta(direccion, "dinero_hay: ", acum_costo_venta, acum_costo_compra);//muestra total de cada año
-            
+
             direccion = "ventas\\ganancia_real.txt";
             op.Actualisar_ganancia_real(direccion, "dinero_hay: ", acum_costo_venta, acum_costo_compra);//muestra ganancia real
 
-            bas.si_existe_suma_sino_agega_extra("inf\\inventario\\ven\\vent.txt",0,año_mes_dia,"1",""+acum_costo_venta,año_mes_dia+"|"+ acum_costo_venta + "|0");
+            bas.si_existe_suma_sino_agega_extra("inf\\inventario\\ven\\vent.txt", 0, año_mes_dia, "1", "" + acum_costo_venta, año_mes_dia + "|" + acum_costo_venta + "|0");
 
 
             for (int i = 0; i < codigo.Length; i++)
             {
                 direccion = "inf\\inventario\\invent.txt";
                 op.Actualisar_inventario(direccion, "" + codigo[i], Convert.ToDecimal(cantidades_vendidas[i]) * -1);
-                
+
                 direccion = "ventas\\" + año + "\\" + mes + "\\dias\\p_" + año_mes_dia + ".txt";
                 op.Actualisar_resumen_venta_productos(direccion, "" + codigo[i], Convert.ToDecimal(cantidades_vendidas[i]), nom_productos[i]);
 
@@ -154,13 +153,13 @@ namespace tienda2.clases
 
                 direccion = "ventas\\p_total_años.txt";
                 op.Actualisar_resumen_venta_productos(direccion, "" + codigo[i], Convert.ToDecimal(cantidades_vendidas[i]), nom_productos[i]);//muestra total de cada año
-                
+
             }
         }
 
         public void Modelo_carga_info(string informacion, int tipo, char caracter_de_separacion = '|')
         {
-            if (tipo == 0) 
+            if (tipo == 0)
             {
                 string[] info_split = informacion.Split(caracter_de_separacion);
             }
@@ -178,7 +177,7 @@ namespace tienda2.clases
             }
             else
             {
-                
+
             }
         }
     }

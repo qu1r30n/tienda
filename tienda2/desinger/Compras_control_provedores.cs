@@ -21,7 +21,7 @@ namespace tienda2.desinger
         public Compras_control_provedores()
         {
             InitializeComponent();
-            provedores_info=bas.Leer(direccion);
+            provedores_info = bas.Leer(direccion);
             for (int i = 0; i < provedores_info.Length; i++)
             {
                 lst_venta_provedor.Items.Add(provedores_info[i]);
@@ -32,11 +32,11 @@ namespace tienda2.desinger
 
         private void btn_procesar_provedor_Click(object sender, EventArgs e)
         {
-            if (txt_sugerencia_compra.Text=="")
+            if (txt_sugerencia_compra.Text == "")
             {
                 MessageBox.Show("falta que pongas en compra lo que vas a comprar");
             }
-            
+
             else
             {
 
@@ -55,20 +55,20 @@ namespace tienda2.desinger
                         if (res == "1")
                         {
                             double din_vendido_prov = Convert.ToDouble(lbl_venta_provedor);
-                            if (cantidad_a_comprar<=din_vendido_prov)
+                            if (cantidad_a_comprar <= din_vendido_prov)
                             {
                                 bas.Incrementa_celda(direccion, 0, lbl_provedor.Text, "1", "" + (cantidad_a_comprar * -1));
                             }
                             else
                             {
                                 DialogResult desision = MessageBox.Show("Seguro quieres pagar mas dinero del que a ganado el provedor?", "invertir?", MessageBoxButtons.YesNo);
-                                if (desision== DialogResult.Yes)
+                                if (desision == DialogResult.Yes)
                                 {
                                     bas.Incrementa_celda(direccion, 0, lbl_provedor.Text, "1", "" + (cantidad_a_comprar * -1));
                                 }
-                                    
+
                             }
-                            
+
                         }
                         else if (res == "2")
                         {
@@ -129,7 +129,7 @@ namespace tienda2.desinger
 
             Tex_base bas = new Tex_base();
 
-            string[] imprimir = bas.Leer(direccion, null,G_parametros[0]);
+            string[] imprimir = bas.Leer(direccion, null, G_parametros[0]);
             txt_buscar_provedor.AutoCompleteCustomSource.Clear();
             for (int k = 0; k < imprimir.Length; k++)
             {
@@ -142,7 +142,7 @@ namespace tienda2.desinger
             if (e.KeyValue == (char)(Keys.Enter))
             {
                 busqueda_de_prov(txt_buscar_provedor.Text);
-                
+
                 if (txt_buscar_provedor.Text != "")
                 {
                     busqueda_de_prov(txt_buscar_provedor.Text);

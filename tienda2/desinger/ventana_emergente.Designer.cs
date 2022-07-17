@@ -1,4 +1,5 @@
-﻿namespace tienda2.desinger
+﻿
+namespace tienda2.desinger
 {
     partial class Ventana_emergente
     {
@@ -28,17 +29,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // ventana_emergente
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 333);
-            this.Name = "ventana_emergente";
-            this.Text = "ventana_emergente";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Ventana_emergente";
         }
 
         #endregion

@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace tienda2.clases
 {
     class Operaciones_textos
     {
-        public string cambiar_caracter(string texto,char caracter_a_buscar,char caracter_a_cambiar)
+        public string cambiar_caracter(string texto, char caracter_a_buscar, char caracter_a_cambiar)
         {
             string[] texto_espliteado = texto.Split(caracter_a_buscar);
             string texto_joineado = string.Join("" + caracter_a_cambiar, texto_espliteado);
@@ -13,7 +17,7 @@ namespace tienda2.clases
 
         public string Trimend_paresido(string texto, char caracter_separacion = '|')
         {
-            
+
             string texto_editado = "";
             string[] texto_spliteado = texto.Split(caracter_separacion);
 
@@ -54,7 +58,7 @@ namespace tienda2.clases
         public string join_paresido(char caracter_union_filas, string[] texto, string columna_extraer = null, string caracter_union_columnas = null)
         {
             string resultado = "";
-            if (columna_extraer!=null)
+            if (columna_extraer != null)
             {
                 char caracter_union_columnas_caracter = Convert.ToChar(caracter_union_columnas);
                 for (int i = 0; i < texto.Length; i++)
@@ -68,23 +72,22 @@ namespace tienda2.clases
 
                     }
                     resultado = Trimend_paresido(resultado, caracter_union_columnas_caracter);
-                    resultado = resultado  + caracter_union_filas;
+                    resultado = resultado + caracter_union_filas;
 
                 }
             }
             else
             {
-                
+
                 for (int i = 0; i < texto.Length; i++)
                 {
                     resultado = resultado + texto[i] + caracter_union_filas;
                 }
             }
-            resultado=Trimend_paresido(resultado,caracter_union_filas);
+            resultado = Trimend_paresido(resultado, caracter_union_filas);
 
             return resultado;
         }
-
 
     }
 }

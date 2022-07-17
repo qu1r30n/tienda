@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using tienda2.clases;
 
 namespace tienda2.desinger
 {
@@ -22,7 +23,7 @@ namespace tienda2.desinger
 
         private void Btn_donde_guardar_Click(object sender, EventArgs e)
         {
-            
+
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
             {
@@ -45,7 +46,7 @@ namespace tienda2.desinger
             {
                 Operaciones_archivos op = new Operaciones_archivos();
                 //op.Respaldos_ventas("ventas", direccion + "\\respaldo_" + fecha_hora.ToString("yyyyMMdd") + "\\ventas");
-                op.Respaldo_inventario("inf\\inventario\\invent.txt",direccion+"\\invent\\","invent.txt");
+                op.Respaldo_inventario("inf\\inventario\\invent.txt", direccion + "\\invent\\", "invent.txt");
                 Lbl_direccion.Text = "oprime boton donde guararlos para buscar donde poner el respaldo";
                 dec = false;
             }

@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using tienda2.clases;
-
 using System.IO;
+
 
 namespace tienda2.desinger
 {
@@ -24,7 +24,7 @@ namespace tienda2.desinger
         {
             InitializeComponent();
             DateTime fecha_hora = DateTime.Now;
-            año_mes_dia= fecha_hora.ToString("yyyyMMdd");
+            año_mes_dia = fecha_hora.ToString("yyyyMMdd");
 
             string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0");//este regresa los provedores
 
@@ -32,9 +32,9 @@ namespace tienda2.desinger
             string provedores_txt = op_text.join_paresido('°', provedores);
 
             Ventana_emergente vent_emergent = new Ventana_emergente();
-            string [] enviar = new string[] { "4°provedor°marinela°°marinela°" + provedores_txt };
-            prov_actual=vent_emergent.Proceso_ventana_emergente(enviar);
-            bas.si_no_existe_agega_extra("inf\\inventario\\provedores.txt", 0, prov_actual,prov_actual + '|');
+            string[] enviar = new string[] { "4°provedor°marinela°°marinela°" + provedores_txt };
+            prov_actual = vent_emergent.Proceso_ventana_emergente(enviar);
+            bas.si_no_existe_agega_extra("inf\\inventario\\provedores.txt", 0, prov_actual, prov_actual + '|');
 
         }
 
@@ -53,7 +53,7 @@ namespace tienda2.desinger
             }
         }
 
-        
+
 
         private void Btn_eliminar_seleccionado_Click(object sender, EventArgs e)
         {
@@ -92,7 +92,7 @@ namespace tienda2.desinger
             string direccion = "inf\\historial_provedores\\" + año_mes_dia + "\\" + cod_bar + ".txt";
             string direccion_temp = "inf\\historial_provedores\\" + año_mes_dia + "\\" + cod_bar + "_temp.txt";
             bas.Crear_archivo_y_directorio(direccion);
-            string[] productos=bas.Leer(direccion);
+            string[] productos = bas.Leer(direccion);
 
             Operaciones_textos op_tex = new Operaciones_textos();
 
@@ -100,14 +100,14 @@ namespace tienda2.desinger
             for (int i = 0; i < productos.Length; i++)
             {
                 string[] producto_espliteados = productos[i].Split(caracter_separacion1);
-                if (producto_espliteados[col_comp_prov]==provedor)
+                if (producto_espliteados[col_comp_prov] == provedor)
                 {
                     bandera = true;
-                    producto_espliteados[colum_editar] = producto_espliteados[colum_editar] +caracter_separacion2 +info_agregar;
-                    productos[i]=op_tex.join_paresido(caracter_separacion1, producto_espliteados);
+                    producto_espliteados[colum_editar] = producto_espliteados[colum_editar] + caracter_separacion2 + info_agregar;
+                    productos[i] = op_tex.join_paresido(caracter_separacion1, producto_espliteados);
                 }
             }
-            if (bandera==false)
+            if (bandera == false)
             {
                 bas.Agregar(direccion, provedor + caracter_separacion1 + info_agregar);
             }
@@ -123,15 +123,15 @@ namespace tienda2.desinger
                 string[] precios = producto_espliteados[colum_editar].Split(caracter_separacion2);
                 double precios_a_ordenar1 = Convert.ToDouble(precios[0]);
 
-                for (int j = i+1; j < productos.Length; j++)
+                for (int j = i + 1; j < productos.Length; j++)
                 {
                     string[] producto_espliteados2 = productos[i].Split(caracter_separacion1);
                     string[] precios2 = producto_espliteados2[colum_editar].Split(caracter_separacion2);
                     double precios_a_ordenar2 = Convert.ToDouble(precios2[precios.Length]);
                     string tem_intercambio;
-                    if (precios_a_ordenar1<precios_a_ordenar2)
+                    if (precios_a_ordenar1 < precios_a_ordenar2)
                     {
-                        tem_intercambio=productos[i];
+                        tem_intercambio = productos[i];
                         productos[i] = productos[j];
                         productos[j] = tem_intercambio;
                     }
@@ -140,7 +140,7 @@ namespace tienda2.desinger
             }
 
             //pasar a archivo-------------------------------------------------------------------------------------------------------------------------
-            
+
             for (int i = 0; i < productos.Length; i++)
             {
                 bas.Agregar(direccion_temp, productos[i]);
@@ -149,7 +149,7 @@ namespace tienda2.desinger
             Operaciones_archivos op = new Operaciones_archivos();
             op.remplasar_archivo(direccion, direccion_temp);
 
-            
+
 
             MessageBox.Show("fin");
         }
@@ -183,8 +183,8 @@ namespace tienda2.desinger
                 Ventana_emergente vent_emergent = new Ventana_emergente();
                 string[] enviar = new string[] { "1°precio°0°2" };
                 string precio = vent_emergent.Proceso_ventana_emergente(enviar);
-                
-                lstb_carga_investigacion.Items.Add(prov_actual+ txt_codigo_de_barras.Text+"|" + precio + año_mes_dia);
+
+                lstb_carga_investigacion.Items.Add(prov_actual + txt_codigo_de_barras.Text + "|" + precio + año_mes_dia);
 
 
             }

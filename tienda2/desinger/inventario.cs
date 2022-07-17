@@ -8,9 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using tienda2.clases;
-
 using System.IO;
+using tienda2.clases;
 
 namespace tienda2.desinger
 {
@@ -47,7 +46,7 @@ namespace tienda2.desinger
 
         private void Btn_verificar_inv_Click(object sender, EventArgs e)
         {
-            
+
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
             //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_
@@ -73,7 +72,7 @@ namespace tienda2.desinger
                     temp.Add(producto_devuelto);
                     productos = temp.ToArray();
                     i = i - 1;
-                    
+
                 }
 
             }
@@ -97,7 +96,7 @@ namespace tienda2.desinger
             txt_cod_bar.Focus();
         }
 
-        
+
         private string mod_ventana_si_no_existe_en_el_inventario(string codigo_barras)
         {
             Operaciones_textos op_text = new Operaciones_textos();
@@ -129,26 +128,26 @@ namespace tienda2.desinger
             string mensage = vent_emergent.Proceso_ventana_emergente(enviar);//el uno significa que modificara el inventario
             bas.Agregar("inf\\inventario\\invent.txt", mensage);
             string[] mensage_esplit = mensage.Split('|');
-            if (mensage!="|")
+            if (mensage != "|")
             {
                 G_prov_anterior = mensage_esplit[6];
             }
-            
+
             return mensage;
         }
 
-        private void si_encuetra_producto_en_la_lista_lo_suma_tod_agreg(string codigo, string nom_producto,int posicion_de_la_lista_a_editar)
+        private void si_encuetra_producto_en_la_lista_lo_suma_tod_agreg(string codigo, string nom_producto, int posicion_de_la_lista_a_editar)
         {
             Ventana_emergente vent_emer = new Ventana_emergente();
             string[] enviar = { "1°" + nom_producto + "°0°2" };
             double cantidad_a_sumar = Convert.ToDouble(vent_emer.Proceso_ventana_emergente(enviar));
-            string temp_a_esplitear=""+lst_todos_los_agregados.Items[posicion_de_la_lista_a_editar];
+            string temp_a_esplitear = "" + lst_todos_los_agregados.Items[posicion_de_la_lista_a_editar];
             String[] registro_de_lista_a_edita = temp_a_esplitear.Split('|');
-            double cantidad_de_la_lista=Convert.ToDouble(registro_de_lista_a_edita[2]);
+            double cantidad_de_la_lista = Convert.ToDouble(registro_de_lista_a_edita[2]);
             double nueva_cantidad = cantidad_de_la_lista + cantidad_a_sumar;
-            registro_de_lista_a_edita[2] = ""+nueva_cantidad;
+            registro_de_lista_a_edita[2] = "" + nueva_cantidad;
 
-            
+
         }
 
         private void cargar_archivo_a_listbox(string direccion, char caracter_separacion = '|')
@@ -167,36 +166,36 @@ namespace tienda2.desinger
             File.Move(direccion, G_dir_inv_hacer);
 
         }
-        private void agregar_a_list_todos_agreg(string codigo,string nom_producto)
+        private void agregar_a_list_todos_agreg(string codigo, string nom_producto)
         {
-            
+
             DateTime fecha_hora = DateTime.Now;
             string hora_min_seg = fecha_hora.ToString("HHmmss");
-            
-            
+
+
             Ventana_emergente vent_emer = new Ventana_emergente();
             string[] enviar = { "1°" + nom_producto + "°0°2" };
             string resultado = vent_emer.Proceso_ventana_emergente(enviar);
-            resultado=bas.Trimend_paresido(resultado);
+            resultado = bas.Trimend_paresido(resultado);
             string texto_a_agregar = codigo + "|" + nom_producto + "|" + resultado + "|" + hora_min_seg;
             bas.Agregar(G_dir_inv_hacer, texto_a_agregar);
             lst_todos_los_agregados.Items.Add(texto_a_agregar);
-            
+
 
         }
 
         private void btn_terminar_Click(object sender, EventArgs e)
         {
-            
+
 
             string[] produc_del_inventario = bas.Leer("inf\\inventario\\invent.txt", "3|4|1");
-            
+
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
             bas.Crear_archivo_y_directorio(G_dir_inv_hacer);
-            string[] compras_echas_durante_invent=bas.Leer(G_dir_inv_hacer);
+            string[] compras_echas_durante_invent = bas.Leer(G_dir_inv_hacer);
 
-            
+
             List<string> lst_codigo = new List<string>();
             List<string> lst_nombre = new List<string>();
             List<string> lst_cantidades = new List<string>();
@@ -208,12 +207,12 @@ namespace tienda2.desinger
                 bool bandera = false;
                 for (int j = 0; j < lst_codigo.Count; j++)
                 {
-                    
+
                     if (lst_codigo[j] == items_atras[0])
                     {
                         bandera = true;
                         lst_cantidades[j] = "" + (Convert.ToDouble(lst_cantidades[j]) + Convert.ToDouble(items_atras[2]));
-                        
+
                     }
                 }
                 if (bandera == false)
@@ -300,7 +299,7 @@ namespace tienda2.desinger
 
 
             Operaciones_archivos op = new Operaciones_archivos();
-            
+
             string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
             op.Eliminar_archivo(mod_inv);
             op.Eliminar_archivo(G_dir_inv_hacer);
@@ -329,7 +328,7 @@ namespace tienda2.desinger
             Operaciones_archivos op = new Operaciones_archivos();
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
-            
+
 
             op.Eliminar_archivo(G_dir_inv_hacer);
             bas.Crear_archivo_y_directorio(G_dir_inv_hacer);
@@ -344,7 +343,7 @@ namespace tienda2.desinger
             lst_todos_los_agregados.Items.Clear();
             Operaciones_archivos op = new Operaciones_archivos();
             DateTime fecha_hora = DateTime.Now;
-            
+
 
             op.Eliminar_archivo(G_dir_inv_hacer);
             bas.Crear_archivo_y_directorio(G_dir_inv_hacer);
@@ -356,7 +355,7 @@ namespace tienda2.desinger
 
             Operaciones_archivos op = new Operaciones_archivos();
             DateTime fecha_hora = DateTime.Now;
-            
+
 
             op.Eliminar_archivo(G_dir_inv_hacer);
             bas.Crear_archivo_y_directorio(G_dir_inv_hacer);
@@ -368,12 +367,12 @@ namespace tienda2.desinger
 
         private void modo_inventario()
         {
-            
+
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
             string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
             bas.Crear_archivo_y_directorio(mod_inv, "true");
-            
+
 
         }
 
@@ -392,13 +391,24 @@ namespace tienda2.desinger
             DateTime fecha_hora = DateTime.Now;
             string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
             Operaciones_archivos op = new Operaciones_archivos();
-            
+
             string mod_inv = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\mod_inv\\" + año_mes_dia + "mod_inv.txt";
             op.Eliminar_archivo(mod_inv);
             op.Eliminar_archivo(G_dir_inv_hacer);
             this.Close();
 
         }
+
+
+        private void lst_cod_bar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lst_todos_los_agregados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
-

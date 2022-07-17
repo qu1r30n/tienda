@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using tienda2.clases;
 
 namespace tienda2.desinger
 {
@@ -47,12 +48,32 @@ namespace tienda2.desinger
 
         private void btn_editar_Click(object sender, EventArgs e)
         {
-            bas.Editar_espesifico("inf\\inventario\\provedores.txt",0,cmb_provedor.Text,"0",cmb_provedor_editar.Text);
+            bas.Editar_espesifico("inf\\inventario\\provedores.txt", 0, cmb_provedor.Text, "0", cmb_provedor_editar.Text);
             bas.Editar_espesifico("inf\\inventario\\invent.txt", 6, cmb_provedor.Text, "6", cmb_provedor_editar.Text);
             bas.Editar_espesifico("provedores\\ventas_en_dinero.txt", 0, cmb_provedor.Text, "0", cmb_provedor_editar.Text);
             MessageBox.Show("LISTO");
             cmb_provedor.Text = "";
             cmb_provedor.Focus();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_provedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmb_provedor_editar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

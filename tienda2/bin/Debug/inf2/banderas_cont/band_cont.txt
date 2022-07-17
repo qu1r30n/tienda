@@ -1,1 +1,0 @@
-con_dia_sem|0

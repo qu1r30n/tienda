@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using tienda2.clases;
+
 namespace tienda2.desinger
 {
     public partial class Area_principal : Form
@@ -15,8 +17,8 @@ namespace tienda2.desinger
         public Area_principal()
         {
             InitializeComponent();
-            Bitmap fondo = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
-            this.BackgroundImage = fondo;
+            //Bitmap fondo = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
+            //this.BackgroundImage = fondo;
 
             try
             {
@@ -74,13 +76,22 @@ namespace tienda2.desinger
             empl.Show();// muestra el form empleados
         }
 
+        private void Btn_gastos_Click(object sender, EventArgs e)
+        {
+            Lbl_ganancia.Visible = false;
+            Txt_ganancia.Visible = false;
+
+            gastos gastos = new gastos();
+            gastos.Show();
+        }
+
         private void Btn_compras_Click(object sender, EventArgs e)
         {
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
-            gastos comp = new gastos();
-            comp.Show();
+            Compras_control_provedores cont_p = new Compras_control_provedores();
+            cont_p.Show();
         }
 
         private void Btn_respaldo_Click(object sender, EventArgs e)
@@ -127,14 +138,19 @@ namespace tienda2.desinger
             }
         }
 
-        private void Cmb_año_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_año_SelectedIndexChanged(object sender, EventArgs e)
         {
             Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".txt");
         }
 
-        private void Cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
+        }
+
+        private void cmb_dia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void Rdb_ventas_CheckedChanged(object sender, EventArgs e)
@@ -548,11 +564,11 @@ namespace tienda2.desinger
 
             //elim0_graficas = 0;
             Tex_base bas = new Tex_base();
-            
+
             string[] esplitedo, historial;
             historial = bas.Leer(direccion_archivo);
 
-            decimal acum_venta=0,acum_compra = 0;
+            decimal acum_venta = 0, acum_compra = 0;
             for (int i = 0; i < historial.Length; i++)
             {
                 esplitedo = historial[i].Split(caracter_de_separacion);
@@ -561,7 +577,7 @@ namespace tienda2.desinger
                 acum_venta = acum_venta + Convert.ToDecimal(esplitedo[1]);
                 acum_compra = acum_compra + Convert.ToDecimal(esplitedo[2]);
             }
-            Txt_total.Text = "total_venta: " + acum_venta + " total_costo_de_compra: " + acum_compra + " ganancia: "+(acum_venta-acum_compra);
+            Txt_total.Text = "total_venta: " + acum_venta + " total_costo_de_compra: " + acum_compra + " ganancia: " + (acum_venta - acum_compra);
         }
 
         public void Grafica_compras(string direccion_archivo, string nombre_serie = "Serie1", bool comparacion = false, char caracter_de_separacion = '|')
@@ -661,7 +677,7 @@ namespace tienda2.desinger
 
 
             chrt_ventas.Series[nombre_serie].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            
+
             string[] esplitedo, historial;
 
             //elim1_graficas_hora = 0;
@@ -784,7 +800,7 @@ namespace tienda2.desinger
 
             chrt_ventas.Series[nombre_serie].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chrt_ventas.Series[nombre_serie2].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            
+
             string[] esplitedo = { "", "" }, esplitedo2 = { "", "" }, historial, historial2;
             int cual_es_mayor;
 
@@ -793,8 +809,8 @@ namespace tienda2.desinger
 
             historial = bas.Leer(direccion_archivo);
             historial2 = bas.Leer(direccion_archivo2);
-            
-            
+
+
 
             if (historial.Length >= historial2.Length)//esta la puse para el listbox saber cuantos items  va  a contener
             {
@@ -871,7 +887,7 @@ namespace tienda2.desinger
             Tex_base bas = new Tex_base();
             historial = bas.Leer(direccion_archivo);
 
-        
+
             for (int i = 0; i < historial.Length; i++)
             {
                 esplitedo = historial[i].Split(caracter_de_separacion);
@@ -936,7 +952,7 @@ namespace tienda2.desinger
 
         public void Combo_d(string direccion_archivo, char caracter_de_separacion = '|')
         {
-            
+
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
@@ -967,7 +983,7 @@ namespace tienda2.desinger
             if (Lst_ventas.SelectedItem != null)
             {
 
-                Txt_total.Text = Lst_ventas.SelectedItem.ToString(); 
+                Txt_total.Text = Lst_ventas.SelectedItem.ToString();
             }
         }
 
@@ -993,9 +1009,10 @@ namespace tienda2.desinger
             inv_merc.Show();// muestra el form empleados
         }
 
-        private void btn_pedidos_Click_1(object sender, EventArgs e)
+        private void btn_pedidos_Click(object sender, EventArgs e)
         {
-
+            pedidos pe = new pedidos();
+            pe.Show();
         }
     }
 }

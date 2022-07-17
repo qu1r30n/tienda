@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using tienda2.clases;
+
 namespace tienda2.desinger
 {
     public partial class area_principal_Comparar : Form
@@ -103,7 +105,7 @@ namespace tienda2.desinger
         {
             string temp;
             cmb_año.Items.Clear();
-            
+
             //elim9_combo_a = 0;
             Tex_base bas = new Tex_base();
             string[] archivos = bas.Leer(direccion_archivo);
@@ -116,15 +118,22 @@ namespace tienda2.desinger
             }
         }
 
-        private void Cmb_año_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_año_SelectedIndexChanged(object sender, EventArgs e)
         {
             Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".txt");
         }
 
-        private void Cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
         }
+
+        private void cmb_dia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
         public void Combo_m(string direccion_archivo)
         {
@@ -239,6 +248,19 @@ namespace tienda2.desinger
             }
         }
 
+
+        private void Rdb_productos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void Rdb_ventas_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void Rdb_gastos_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+       
     }
 }
-

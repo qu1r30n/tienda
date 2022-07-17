@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using tienda2.clases;
 
+
 namespace tienda2.desinger
 {
     public partial class Cambiar_informacion : Form
@@ -24,7 +25,7 @@ namespace tienda2.desinger
         {
             InitializeComponent();
             Recargar_texbox();
-            
+
         }
 
         private void Btn_editar_Click(object sender, EventArgs e)
@@ -33,11 +34,11 @@ namespace tienda2.desinger
 
             if (chb_no_vacio.Checked)
             {
-                if (Txt_remplazo.Text!="")
+                if (Txt_remplazo.Text != "")
                 {
                     if (Lbl_precio_compra_canb.Text != "$")
                     {
-                        
+
                         if (Rdb_producto.Checked == true)
                         {
                             bas.Editar_espesifico("inf\\inventario\\invent.txt", 3, Txt_buscar_producto.Text, "1", Txt_remplazo.Text);
@@ -62,7 +63,7 @@ namespace tienda2.desinger
                             {
                                 Txt_buscar_producto.Focus();
                             }
-                            
+
                         }
 
                         else if (Rdb_compra.Checked == true)
@@ -121,7 +122,7 @@ namespace tienda2.desinger
                         else if (Rdb_inventario.Checked == true)
                         {
 
-                            if (chb_suma_si_ya_paso_producto.Checked==true)
+                            if (chb_suma_si_ya_paso_producto.Checked == true)
                             {
                                 string direccion = "inf\\inventario\\temp_para_sumas_en_inventario\\temporal_codigos_suma_info_para_invetario_" + fecha_hora.ToString("yyyy - MM - dd") + ".txt";
                                 bas.Crear_archivo_y_directorio(direccion);
@@ -216,7 +217,7 @@ namespace tienda2.desinger
                     MessageBox.Show("falta llenar informacion");
                 }
             }
-            
+
             else
             {
                 if (Lbl_precio_compra_canb.Text != "$")
@@ -393,7 +394,7 @@ namespace tienda2.desinger
                     MessageBox.Show("no se encontro producto dentro del inventario");
                 }
             }
-            
+
         }
         private void Recargar_texbox()
         {
@@ -470,16 +471,16 @@ namespace tienda2.desinger
                 }
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
                 string[] temp = mensage.Split(G_parametros[0]);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
-                
+
                 string[] temp2;
                 string temp3 = "";
 
                 if (temp.Length >= 3)//por si cierra la ventana no agregue a los text box
                 {
                     MessageBox.Show("ya se agrego el producto: " + mensage);
-                    
+
                     G_prov_anterior = temp[6];
-                    temp2 = new[] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6], temp[7]};//aqui lo pongo en el orden que deve llevar
+                    temp2 = new[] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6], temp[7] };//aqui lo pongo en el orden que deve llevar
                     temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
                     G_productos.Add(temp3);//agrego en lista de productos
                     Txt_buscar_producto.AutoCompleteCustomSource.Add(temp3);//agrego en el autocompletar

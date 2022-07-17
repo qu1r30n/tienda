@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using tienda2.clases;
+
 namespace tienda2.desinger
 {
     public partial class gastos : Form

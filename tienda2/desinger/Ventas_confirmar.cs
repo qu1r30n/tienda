@@ -41,7 +41,7 @@ namespace tienda2.desinger
             {
                 if (total_a_pagar < dinero_pagado)
                 {
-                    MessageBox.Show("cambio: "+(dinero_pagado-total_a_pagar));
+                    MessageBox.Show("cambio: " + (dinero_pagado - total_a_pagar));
                 }
                 Tex_base bas = new Tex_base();
                 string temp = "";
@@ -55,7 +55,7 @@ namespace tienda2.desinger
                 {
                     temp = temp + codigo_barras_list[i] + G_parametros[0];
                     cantidades_de_productos = cantidades_de_productos + cantidad[i] + G_parametros[0];
-                    
+
                     string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
                     string direccion_inventario_hacer = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\" + año_mes_dia + "_todo_tienda.txt";
 
@@ -74,32 +74,32 @@ namespace tienda2.desinger
 
                     //0_codigo|1_nombre_producto|2_cantidad_vendida_estos_7_dias|3_provedores|4_historial_por_semana°|5_ranking|6_promedio_normal|7_cantidad_veses|8_uso_multiple|9_usomulti_tipo_de_producto|10_multi_costo_compra|
                     string dir_ranking_año = "inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
-                    string dir_ranking_dia = "inf\\ranking\\dia\\" + fecha_hora.ToString("yyyyMMdd")+"_ranking.txt";
-                    
+                    string dir_ranking_dia = "inf\\ranking\\dia\\" + fecha_hora.ToString("yyyyMMdd") + "_ranking.txt";
+
                     int solo_dia = Convert.ToInt32(fecha_hora.ToString("dd"));
 
 
-                    
+
                     bas.Crear_archivo_y_directorio(dir_ranking_dia);
                     bas.Crear_archivo_y_directorio(dir_ranking_año);
 
-                    bas.si_existe_suma_sino_agega_extra(dir_ranking_dia, 0, "" + codigo_barras_list[i], "2|5", cantidad[i]+ "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "||" + cantidad[i] + "|0|0|0|0|0|");
+                    bas.si_existe_suma_sino_agega_extra(dir_ranking_dia, 0, "" + codigo_barras_list[i], "2|5", cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "||" + cantidad[i] + "|0|0|0|0|0|");
                     bas.si_existe_suma_sino_agega_extra(dir_ranking_año, 0, "" + codigo_barras_list[i], "2|5", cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "|" + cantidad[i] + "°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|" + cantidad[i] + "|0|0|0|0|0|");
-                    string info_producto=bas.Seleccionar(dir_ranking_año,0,""+codigo_barras_list[i]);
+                    string info_producto = bas.Seleccionar(dir_ranking_año, 0, "" + codigo_barras_list[i]);
                     string[] inf_pro_split = info_producto.Split('|');
                     string[] historial_ranking = inf_pro_split[4].Split('°');
-                    historial_ranking[0] = ""+(Convert.ToDouble(historial_ranking[0]) + Convert.ToDouble(cantidad[i]));
+                    historial_ranking[0] = "" + (Convert.ToDouble(historial_ranking[0]) + Convert.ToDouble(cantidad[i]));
                     inf_pro_split[4] = string.Join("°", historial_ranking);
                     bas.Editar_espesifico(dir_ranking_año, 0, "" + codigo_barras_list[i], "4", "" + inf_pro_split[4]);
 
-                    
+
 
 
                     //ranking_fin------------------------------------------------------------------------------------------------
 
                     bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);
                     bas.Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(direccion2 + provedor[i] + ".txt", 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i], "1|3|0|6|8|2");
-                    bas.si_existe_suma_sino_agega_extra(direccion3,0,""+provedor[i], "1", "" +precio_venta[i],provedor[i]+"|"+precio_venta[i]);
+                    bas.si_existe_suma_sino_agega_extra(direccion3, 0, "" + provedor[i], "1", "" + precio_venta[i], provedor[i] + "|" + precio_venta[i]);
 
                 }
 
@@ -121,14 +121,7 @@ namespace tienda2.desinger
         }
 
 
-        private void Txt_dinero_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)(Keys.Enter))
-            {
-                e.Handled = true;
-                SendKeys.Send("{TAB}");
-            }
-        }
+
 
         private void Txt_dinero_keypress(object sender, KeyPressEventArgs e)
         {

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using tienda2.clases;
+
 
 namespace tienda2.desinger
 {
@@ -26,7 +28,7 @@ namespace tienda2.desinger
             }
         }
 
-        
+
 
         private void lstbx_ventas_guardadas_DoubleClick(object sender, EventArgs e)
         {
