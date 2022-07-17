@@ -60,7 +60,7 @@ namespace tienda2.desinger
             // 
             // btn_registrar
             // 
-            this.btn_registrar.Location = new System.Drawing.Point(12, 132);
+            this.btn_registrar.Location = new System.Drawing.Point(12, 84);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(75, 23);
             this.btn_registrar.TabIndex = 12;
@@ -118,7 +118,7 @@ namespace tienda2.desinger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 190);
+            this.ClientSize = new System.Drawing.Size(448, 116);
             this.Controls.Add(this.lbl_curso);
             this.Controls.Add(this.cmb_curso);
             this.Controls.Add(this.btn_registrar);

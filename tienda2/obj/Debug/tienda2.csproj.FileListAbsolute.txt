@@ -17,3 +17,12 @@ C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.desinger.investi
 C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.desinger.pedidos.resources
 C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.desinger.Respaldo.resources
 C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.desinger.simul.resources
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\bin\Debug\tienda2.exe.config
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\bin\Debug\tienda2.exe
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\bin\Debug\tienda2.pdb
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.desinger.Cambiar_informacion.resources
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.desinger.Ventas.resources
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.desinger.ventas_cargar_venta_temporal_guardada.resources
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.desinger.Ventas_confirmar.resources
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.exe
+C:\Users\QU1R30N\source\repos\tienda2\tienda2\obj\Debug\tienda2.pdb

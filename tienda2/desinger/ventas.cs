@@ -623,14 +623,10 @@ namespace tienda2.desinger
             //----------------------------------------------------------------------------------------
         }
 
-        private void Txt_buscar_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyValue == (char)(Keys.Enter))
-            {
-                string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
-                Procesar_codigo(info[0]);
-            }
-        }
+        
+
+        
+        
 
         private void Txt_buscar_producto_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -659,11 +655,13 @@ namespace tienda2.desinger
             }
         }
 
-        private void Txt_buscar_producto_KeyDown(object sender, KeyEventArgs e)
+        private void Txt_buscar_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-
+            if (e.KeyValue == (char)(Keys.Enter))
+            {
+                string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
+                Procesar_codigo(info[0]);
+            }
         }
-
-
     }
 }

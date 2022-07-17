@@ -85,7 +85,7 @@ namespace tienda2.desinger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(377, 68);
             this.Controls.Add(this.Btn_pagar);
             this.Controls.Add(this.Txt_dinero);
             this.Controls.Add(this.Lbl_dinero);

@@ -1,0 +1,27 @@
+bic|0
+|74
+orbit|0
+las delicias|15
+kinder|286
+casa vargas|152
+skarch|0
+red cola|52
+dorco|5
+marinela|45.5
+nestle|187
+valentina|25
+marlboro|126
+coca|180
+maravilla|247.5
+medicamento|506
+pepsi|68
+dulceria|36
+magadan|903
+salma|143
+guna|328
+pomada labiual|24
+no se sabe|27
+bodega aurrera|40
+bimbo|14
+bimbo dulce|0
+tia rosa|54
