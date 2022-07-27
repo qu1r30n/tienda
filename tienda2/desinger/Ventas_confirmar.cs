@@ -67,7 +67,7 @@ namespace tienda2.desinger
                         string hora_min_seg = fecha_hora.ToString("HHmmss");
                         string dir_venta_rest_invent = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\" + año_mes_dia + "_compras_durante_invet_e_inventario.txt";
                         bas.Crear_archivo_y_directorio(dir_venta_rest_invent);
-                        bas.Agregar(dir_venta_rest_invent, codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg);
+                        bas.Agregar(dir_venta_rest_invent, codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg + "|");
                         //bas.si_existe_suma_sino_agega_extra(dir_venta_rest_invent, 0, ""+codigo_barras_list[i], "2", ""+(Convert.ToDouble(cantidad[i])*-1), codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + (Convert.ToDouble(cantidad[i]) * -1) + "|" + hora_min_seg);
                     }
                     //ranking---------------------------------------------------------------------------------------------------------

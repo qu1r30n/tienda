@@ -1344,7 +1344,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1343|squirt 600ml|13|7501071120183|3|9.9|pepsi|1°producto||1|
 1344|squirt 3lt|33|7501071120305|0|0|bonafont gatorade|1°producto||6|
 1345|squirt 2.5L|27|7501071120411|0|0|peñafiel|1°producto||1|
-1346|clorox 500ml|10|7501071900112|3|6.5|salma|1°producto||1|
+1346|clorox 500ml|10|7501071900112|18|6.5|salma|1°producto||1|
 1347|clorox 1lt|15|7501071900129|0|9.5|salma|1°producto||1|
 1348|cloralex quita manchas 500ml|14|7501071902314|0|0|salma|1°producto||1|
 1349|poett bosque de bambù|16|7501071903137|0|13.5|salma|1°producto||1|
@@ -1974,7 +1974,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1975|electrolit lima limon 625ml|23|7501125118562|1|18.1666|bonafont gatorade|1||2|
 1976|doritos mix|15|7500478025169|-1|11.89|sabritas|1||1|
 1977|pringles 40g|17|38000846755|0|12|el toro|1||1|
-1978|h24 casa jardin|51|7501021110141|5|42|ghd|1||1|
+1978|h24 casa jardin|51|7501021110141|10|42|ghd|1||1|
 1979|vaso primo desechable de color|27|7501219113565|1|23|casa vargas|1||1|
 1980|nissin pollo|12.5|70662141236|0|9|casa vargas|1||1|
 1981|jumex durazno 500ml|13.5|7501013101294|1|9.3|casa vargas|1||1|

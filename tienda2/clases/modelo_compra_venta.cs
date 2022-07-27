@@ -92,6 +92,7 @@ namespace tienda2.clases
             string[] productos = bas.Leer("inf\\inventario\\invent.txt");
             decimal acum_costo_venta = 0, acum_costo_compra = 0;
             string[] nom_productos = new string[codigo.Length];
+            string[] provedores = new string[codigo.Length];
             for (int j = 0; j < productos.Length; j++)
             {
                 string[] prod_esplit = productos[j].Split(G_parametros[0]);
@@ -108,6 +109,7 @@ namespace tienda2.clases
                         acum_costo_venta = acum_costo_venta + (Convert.ToDecimal(prod_esplit[2]) * Convert.ToDecimal(cantidades_vendidas[i]));
                         acum_costo_compra = acum_costo_compra + (Convert.ToDecimal(prod_esplit[5]) * Convert.ToDecimal(cantidades_vendidas[i]));
                         nom_productos[i] = prod_esplit[1];
+                        provedores[i] = prod_esplit[6];
 
                     }
                 }
@@ -116,7 +118,7 @@ namespace tienda2.clases
 
 
             string direccion = "ventas\\" + año + "\\" + mes + "\\dias\\" + año_mes_dia + ".txt";
-            string info = hora_min_seg + " |" + codigos_unidos + " |" + acum_costo_venta + " |" + string.Join("°", nom_productos) + " |" + acum_costo_compra;
+            string info = hora_min_seg + " |" + codigos_unidos + " |" + acum_costo_venta + " |" + string.Join("°", nom_productos) + " |" + acum_costo_compra + "|" + string.Join("°", provedores);
             bas.Agregar(direccion, info);//la hora de compra lo que compro el costo 
 
             direccion = "ventas\\" + año + "\\" + mes + "\\" + mes + ".txt";

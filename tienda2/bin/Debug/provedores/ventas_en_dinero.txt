@@ -5,7 +5,7 @@ las delicias|15
 kinder|286
 casa vargas|195
 skarch|0
-red cola|52
+red cola|62
 dorco|5
 marinela|45.5
 nestle|187
@@ -13,15 +13,16 @@ valentina|25
 marlboro|126
 coca|0
 maravilla|247.5
-medicamento|506
+medicamento|529
 pepsi|68
 dulceria|36
 magadan|1204
-salma|143
-guna|328
+salma|183
+guna|410
 pomada labiual|24
 no se sabe|27
 bodega aurrera|40
 bimbo|14
 bimbo dulce|0
 tia rosa|54
+ghd|204

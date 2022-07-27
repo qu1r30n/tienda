@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using System.IO;
 using tienda2.clases;
+using tienda2.herramientas;
 
 namespace tienda2.desinger
 {
@@ -41,7 +42,8 @@ namespace tienda2.desinger
             {
                 lst_todos_los_agregados.Items.Add(temp_para_listbox[i]);
             }
-
+            herramients_forms herr_form = new herramients_forms();
+            herr_form.ordenar_lisbox(lst_todos_los_agregados, 3);
         }
 
         private void Btn_verificar_inv_Click(object sender, EventArgs e)
@@ -187,6 +189,8 @@ namespace tienda2.desinger
         private void btn_terminar_Click(object sender, EventArgs e)
         {
 
+            herramients_forms herr_form = new herramients_forms();
+            herr_form.ordenar_lisbox(lst_todos_los_agregados, 3);
 
             string[] produc_del_inventario = bas.Leer("inf\\inventario\\invent.txt", "3|4|1");
 

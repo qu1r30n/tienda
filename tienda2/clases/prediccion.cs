@@ -94,6 +94,7 @@ namespace tienda2.clases
                 string[] a_cambiar = lista_final[i].Split(caracter_separacion);
 
                 lista_final[i] = a_cambiar[2] + caracter_separacion + a_cambiar[1] + caracter_separacion + a_cambiar[0] + caracter_separacion + a_cambiar[3] + caracter_separacion + a_cambiar[8] + caracter_separacion + a_cambiar[10] + caracter_separacion;
+                //lista_final//0_codigo|1_nombre_producto|2_codigo_de_barras|3_provedor|4_uso_multi_cantidad_invent|5_costo_compra|
             }
             return lista_final;
         }
