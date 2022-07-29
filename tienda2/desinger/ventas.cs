@@ -487,13 +487,13 @@ namespace tienda2.desinger
 
         private void chb_ventas_compras_CheckedChanged(object sender, EventArgs e)
         {
-            if (chb_ventas_compras.Checked == true)
+            if (chb_ventas_compras.Checked == false)
             {
-                lbl_ventas_compras_resultado.Visible = false;
+                lbl_ventas_compras_resultado.Visible = true;
             }
             else
             {
-                lbl_ventas_compras_resultado.Visible = true;
+                lbl_ventas_compras_resultado.Visible = false;
             }
         }
 
@@ -568,8 +568,7 @@ namespace tienda2.desinger
 
         private void restaurarGuardadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ventas_cargar_venta_temporal_guardada cargador_ventas_guardadas = new ventas_cargar_venta_temporal_guardada(this);
-            cargador_ventas_guardadas.Show();
+            
         }
 
         private void btn_guardar_venta_Click(object sender, EventArgs e)
@@ -660,6 +659,15 @@ namespace tienda2.desinger
             }
         }
 
-        
+        private void btn_restaurar_Click(object sender, EventArgs e)
+        {
+            ventas_cargar_venta_temporal_guardada cargador_ventas_guardadas = new ventas_cargar_venta_temporal_guardada(this);
+            cargador_ventas_guardadas.Show();
+        }
+
+        private void prestamosdeproddinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

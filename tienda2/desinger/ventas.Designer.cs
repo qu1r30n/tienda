@@ -34,7 +34,6 @@ namespace tienda2.desinger
             this.ajustesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.provedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.restaurarGuardadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbl_modo_inventario = new System.Windows.Forms.Label();
             this.btn_guardar_venta = new System.Windows.Forms.Button();
             this.lbl_ventas_compras_resultado = new System.Windows.Forms.Label();
@@ -53,6 +52,9 @@ namespace tienda2.desinger
             this.Lst_ventas = new System.Windows.Forms.ListBox();
             this.Txt_nom_producto = new System.Windows.Forms.TextBox();
             this.Txt_buscar_producto = new System.Windows.Forms.TextBox();
+            this.btn_restaurar = new System.Windows.Forms.Button();
+            this.prestamosdeproddinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasabajoarribaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +66,7 @@ namespace tienda2.desinger
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(381, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(396, 24);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,7 +88,8 @@ namespace tienda2.desinger
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.provedorToolStripMenuItem,
-            this.restaurarGuardadoToolStripMenuItem});
+            this.prestamosdeproddinToolStripMenuItem,
+            this.comprasabajoarribaToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.opcionesToolStripMenuItem.Text = "opciones";
@@ -94,16 +97,9 @@ namespace tienda2.desinger
             // provedorToolStripMenuItem
             // 
             this.provedorToolStripMenuItem.Name = "provedorToolStripMenuItem";
-            this.provedorToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.provedorToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.provedorToolStripMenuItem.Text = "provedor";
             this.provedorToolStripMenuItem.Click += new System.EventHandler(this.provedorToolStripMenuItem_Click);
-            // 
-            // restaurarGuardadoToolStripMenuItem
-            // 
-            this.restaurarGuardadoToolStripMenuItem.Name = "restaurarGuardadoToolStripMenuItem";
-            this.restaurarGuardadoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.restaurarGuardadoToolStripMenuItem.Text = "restaurar guardado";
-            this.restaurarGuardadoToolStripMenuItem.Click += new System.EventHandler(this.restaurarGuardadoToolStripMenuItem_Click);
             // 
             // lbl_modo_inventario
             // 
@@ -118,8 +114,8 @@ namespace tienda2.desinger
             // 
             this.btn_guardar_venta.Location = new System.Drawing.Point(257, 125);
             this.btn_guardar_venta.Name = "btn_guardar_venta";
-            this.btn_guardar_venta.Size = new System.Drawing.Size(75, 23);
-            this.btn_guardar_venta.TabIndex = 41;
+            this.btn_guardar_venta.Size = new System.Drawing.Size(56, 23);
+            this.btn_guardar_venta.TabIndex = 5;
             this.btn_guardar_venta.Text = "guardar";
             this.btn_guardar_venta.UseVisualStyleBackColor = true;
             this.btn_guardar_venta.Click += new System.EventHandler(this.btn_guardar_venta_Click);
@@ -127,21 +123,24 @@ namespace tienda2.desinger
             // lbl_ventas_compras_resultado
             // 
             this.lbl_ventas_compras_resultado.AutoSize = true;
-            this.lbl_ventas_compras_resultado.Location = new System.Drawing.Point(154, 28);
+            this.lbl_ventas_compras_resultado.Location = new System.Drawing.Point(33, 28);
             this.lbl_ventas_compras_resultado.Name = "lbl_ventas_compras_resultado";
             this.lbl_ventas_compras_resultado.Size = new System.Drawing.Size(81, 13);
             this.lbl_ventas_compras_resultado.TabIndex = 40;
             this.lbl_ventas_compras_resultado.Text = "ventas|compras";
+            this.lbl_ventas_compras_resultado.Visible = false;
             // 
             // chb_ventas_compras
             // 
             this.chb_ventas_compras.AutoSize = true;
+            this.chb_ventas_compras.Checked = true;
+            this.chb_ventas_compras.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chb_ventas_compras.Location = new System.Drawing.Point(12, 27);
             this.chb_ventas_compras.Name = "chb_ventas_compras";
-            this.chb_ventas_compras.Size = new System.Drawing.Size(136, 17);
+            this.chb_ventas_compras.Size = new System.Drawing.Size(15, 14);
             this.chb_ventas_compras.TabIndex = 39;
-            this.chb_ventas_compras.Text = "ocultar ventas compras";
             this.chb_ventas_compras.UseVisualStyleBackColor = true;
+            this.chb_ventas_compras.CheckedChanged += new System.EventHandler(this.chb_ventas_compras_CheckedChanged);
             // 
             // Lbl_nom_product_list
             // 
@@ -214,7 +213,7 @@ namespace tienda2.desinger
             this.Btn_elim_ultimo.Location = new System.Drawing.Point(257, 235);
             this.Btn_elim_ultimo.Name = "Btn_elim_ultimo";
             this.Btn_elim_ultimo.Size = new System.Drawing.Size(75, 40);
-            this.Btn_elim_ultimo.TabIndex = 29;
+            this.Btn_elim_ultimo.TabIndex = 2;
             this.Btn_elim_ultimo.Text = "eliminar ultimo";
             this.Btn_elim_ultimo.UseVisualStyleBackColor = true;
             this.Btn_elim_ultimo.Click += new System.EventHandler(this.Btn_elim_ultimo_Click);
@@ -224,7 +223,7 @@ namespace tienda2.desinger
             this.Btn_procesar_venta.Location = new System.Drawing.Point(257, 281);
             this.Btn_procesar_venta.Name = "Btn_procesar_venta";
             this.Btn_procesar_venta.Size = new System.Drawing.Size(75, 23);
-            this.Btn_procesar_venta.TabIndex = 26;
+            this.Btn_procesar_venta.TabIndex = 1;
             this.Btn_procesar_venta.Text = "procesar venta";
             this.Btn_procesar_venta.UseVisualStyleBackColor = true;
             this.Btn_procesar_venta.Click += new System.EventHandler(this.Btn_procesar_venta_Click);
@@ -234,7 +233,7 @@ namespace tienda2.desinger
             this.Btn_eliminar_todo.Location = new System.Drawing.Point(257, 202);
             this.Btn_eliminar_todo.Name = "Btn_eliminar_todo";
             this.Btn_eliminar_todo.Size = new System.Drawing.Size(75, 23);
-            this.Btn_eliminar_todo.TabIndex = 30;
+            this.Btn_eliminar_todo.TabIndex = 3;
             this.Btn_eliminar_todo.Text = "eliminar todo";
             this.Btn_eliminar_todo.UseVisualStyleBackColor = true;
             this.Btn_eliminar_todo.Click += new System.EventHandler(this.Btn_eliminar_todo_Click);
@@ -244,7 +243,7 @@ namespace tienda2.desinger
             this.Btn_eliminar_seleccionado.Location = new System.Drawing.Point(257, 154);
             this.Btn_eliminar_seleccionado.Name = "Btn_eliminar_seleccionado";
             this.Btn_eliminar_seleccionado.Size = new System.Drawing.Size(86, 42);
-            this.Btn_eliminar_seleccionado.TabIndex = 31;
+            this.Btn_eliminar_seleccionado.TabIndex = 4;
             this.Btn_eliminar_seleccionado.Text = "eliminar seleccionado";
             this.Btn_eliminar_seleccionado.UseVisualStyleBackColor = true;
             this.Btn_eliminar_seleccionado.Click += new System.EventHandler(this.Btn_eliminar_seleccionado_Click);
@@ -266,7 +265,7 @@ namespace tienda2.desinger
             this.Txt_nom_producto.Location = new System.Drawing.Point(54, 371);
             this.Txt_nom_producto.Name = "Txt_nom_producto";
             this.Txt_nom_producto.Size = new System.Drawing.Size(150, 20);
-            this.Txt_nom_producto.TabIndex = 33;
+            this.Txt_nom_producto.TabIndex = 8;
             this.Txt_nom_producto.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Txt_nom_producto_PreviewKeyDown);
             // 
             // Txt_buscar_producto
@@ -276,15 +275,39 @@ namespace tienda2.desinger
             this.Txt_buscar_producto.Location = new System.Drawing.Point(54, 345);
             this.Txt_buscar_producto.Name = "Txt_buscar_producto";
             this.Txt_buscar_producto.Size = new System.Drawing.Size(150, 20);
-            this.Txt_buscar_producto.TabIndex = 25;
+            this.Txt_buscar_producto.TabIndex = 0;
             this.Txt_buscar_producto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_buscar_producto_KeyPress);
             this.Txt_buscar_producto.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Txt_buscar_producto_PreviewKeyDown);
+            // 
+            // btn_restaurar
+            // 
+            this.btn_restaurar.Location = new System.Drawing.Point(319, 125);
+            this.btn_restaurar.Name = "btn_restaurar";
+            this.btn_restaurar.Size = new System.Drawing.Size(65, 23);
+            this.btn_restaurar.TabIndex = 6;
+            this.btn_restaurar.Text = "restaurar";
+            this.btn_restaurar.UseVisualStyleBackColor = true;
+            this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
+            // 
+            // prestamosdeproddinToolStripMenuItem
+            // 
+            this.prestamosdeproddinToolStripMenuItem.Name = "prestamosdeproddinToolStripMenuItem";
+            this.prestamosdeproddinToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.prestamosdeproddinToolStripMenuItem.Text = "prestamos_de_prod_din";
+            this.prestamosdeproddinToolStripMenuItem.Click += new System.EventHandler(this.prestamosdeproddinToolStripMenuItem_Click);
+            // 
+            // comprasabajoarribaToolStripMenuItem
+            // 
+            this.comprasabajoarribaToolStripMenuItem.Name = "comprasabajoarribaToolStripMenuItem";
+            this.comprasabajoarribaToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.comprasabajoarribaToolStripMenuItem.Text = "compras_abajo_arriba";
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 411);
+            this.ClientSize = new System.Drawing.Size(396, 411);
+            this.Controls.Add(this.btn_restaurar);
             this.Controls.Add(this.lbl_modo_inventario);
             this.Controls.Add(this.btn_guardar_venta);
             this.Controls.Add(this.lbl_ventas_compras_resultado);
@@ -322,7 +345,6 @@ namespace tienda2.desinger
         private System.Windows.Forms.ToolStripMenuItem ajustesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem provedorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem restaurarGuardadoToolStripMenuItem;
         private System.Windows.Forms.Label lbl_modo_inventario;
         private System.Windows.Forms.Button btn_guardar_venta;
         private System.Windows.Forms.Label lbl_ventas_compras_resultado;
@@ -341,5 +363,8 @@ namespace tienda2.desinger
         private System.Windows.Forms.ListBox Lst_ventas;
         private System.Windows.Forms.TextBox Txt_nom_producto;
         private System.Windows.Forms.TextBox Txt_buscar_producto;
+        private System.Windows.Forms.Button btn_restaurar;
+        private System.Windows.Forms.ToolStripMenuItem prestamosdeproddinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comprasabajoarribaToolStripMenuItem;
     }
 }

@@ -20,36 +20,14 @@ namespace tienda2.desinger
 
         private void btn_pagar_Click(object sender, EventArgs e)
         {
-            sismul sism = new sismul();
-            sism.ingreso_de_din_comp(cmb_curso.Text, txt_id.Text, Convert.ToDouble(txt_dinero.Text));
+            simul2 sim = new simul2();
+            sim.entrada_dinero_compuesto_metodo_sin_lista_de_patrocinadores(cmb_curso.Text, txt_id.Text, txt_dinero.Text);
         }
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
-            Ventana_emergente vent_emergent = new Ventana_emergente();
-            Tex_base bas = new Tex_base();
-
-            string[] enviar;
-            enviar = new string[] { "1°id_patrocinador", "1°tabla_patrocinador", "1°id_encargado", "1°tabla_encargado", "1°nombre", "1°apellido_paterno", "1°apellido_materno", "1°numero_de_cuenta°0°2", "1°banco", "1°curp", "1°numero_celular°0°2", "1°direccion", "1°colonia", "1°municipio", "1°estado", "1°correo" };
-            string resultado = vent_emergent.Proceso_ventana_emergente(enviar);
-            string[] resultado_spliteado = resultado.Split('|');
-
-            string datos_personales = "";
-            for (int i = 4; i < resultado_spliteado.Length; i++)
-            {
-                datos_personales = datos_personales + resultado_spliteado[i] + "|";
-            }
-            datos_personales = datos_personales.TrimEnd('|');
-            string[] datos_personales_spliteados = datos_personales.Split('|');
-
-            string dat_pat = bas.Seleccionar("sismul\\" + resultado_spliteado[1] + "_inf.txt", 0, resultado_spliteado[0]);
-            string[] dat_pat_split = dat_pat.Split('|');
-            string dat_enc = bas.Seleccionar("sismul\\" + resultado_spliteado[3] + "_inf.txt", 0, resultado_spliteado[2]);
-            string[] dat_enc_split = dat_enc.Split('|');
-            sismul sism = new sismul();
-            sism.registro_compuesto(resultado_spliteado[0], resultado_spliteado[1], resultado_spliteado[3], resultado_spliteado[2], datos_personales_spliteados);
-
-
+            //modelo_registro_simple();
+            modelo_registro_complejo();
         }
 
         private void txt_id_KeyDown(object sender, KeyEventArgs e)
@@ -77,7 +55,45 @@ namespace tienda2.desinger
         }
 
         
+        private void modelo_registro_complejo()
+        {
+            string[] enviar;
+            enviar = new string[] { "1°id_patrocinador", "1°tabla_patrocinador", "1°id_encargado", "1°tabla_encargado", "1°nombre", "1°apellido_paterno", "1°apellido_materno", "1°numero_de_cuenta°0°2", "1°banco", "1°curp", "1°numero_celular°0°2", "1°direccion", "1°colonia", "1°municipio", "1°estado", "1°correo" };
+            Ventana_emergente vent_emergent = new Ventana_emergente();
+            string resultado_string = vent_emergent.Proceso_ventana_emergente(enviar);
+            resultado_string = resultado_string.TrimEnd('|');
+            string[] resultado = resultado_string.Split('|');
 
-        
+            string info_usuario = "";
+            for (int i = 4; i < resultado.Length; i++)
+            {
+                info_usuario = info_usuario + resultado[i] + "°";
+            }
+
+            simul2 sim2 = new simul2();
+
+            sim2.registro_complejo(resultado[0] + "", resultado[1] + "", resultado[2] + "", resultado[3] + "", info_usuario);
+        }
+
+        private void modelo_registro_simple()
+        {
+            string[] enviar;
+            enviar = new string[] {"1°id_encargado", "1°tabla_encargado", "1°nombre", "1°apellido_paterno", "1°apellido_materno", "1°numero_de_cuenta°0°2", "1°banco", "1°curp", "1°numero_celular°0°2", "1°direccion", "1°colonia", "1°municipio", "1°estado", "1°correo" };
+            Ventana_emergente vent_emergent = new Ventana_emergente();
+            string resultado_string = vent_emergent.Proceso_ventana_emergente(enviar);
+            resultado_string = resultado_string.TrimEnd('|');
+            string[] resultado = resultado_string.Split('|');
+
+            string info_usuario = "";
+            for (int i = 4; i < resultado.Length; i++)
+            {
+                info_usuario = info_usuario + resultado[i] + "°";
+            }
+
+            simul2 sim2 = new simul2();
+            
+            sim2.registro_simple(resultado[0] + "", resultado[1] + "", info_usuario);
+        }
+
     }
 }
