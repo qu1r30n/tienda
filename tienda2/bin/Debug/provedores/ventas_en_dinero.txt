@@ -8,12 +8,12 @@ skarch|0
 red cola|62
 dorco|5
 marinela|45.5
-nestle|187
+nestle|0
 valentina|25
 marlboro|126
 coca|0
 maravilla|247.5
-medicamento|529
+medicamento|552
 pepsi|68
 dulceria|36
 magadan|1204
@@ -25,4 +25,4 @@ bodega aurrera|40
 bimbo|14
 bimbo dulce|0
 tia rosa|54
-ghd|204
+ghd|153

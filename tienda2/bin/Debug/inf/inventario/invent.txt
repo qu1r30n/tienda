@@ -1974,7 +1974,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1975|electrolit lima limon 625ml|23|7501125118562|1|18.1666|bonafont gatorade|1||2|
 1976|doritos mix|15|7500478025169|-1|11.89|sabritas|1||1|
 1977|pringles 40g|17|38000846755|0|12|el toro|1||1|
-1978|h24 casa jardin|51|7501021110141|10|42|ghd|1||1|
+1978|h24 casa jardin|51|7501021110141|7|42|ghd|1||1|
 1979|vaso primo desechable de color|27|7501219113565|1|23|casa vargas|1||1|
 1980|nissin pollo|12.5|70662141236|0|9|casa vargas|1||1|
 1981|jumex durazno 500ml|13.5|7501013101294|1|9.3|casa vargas|1||1|

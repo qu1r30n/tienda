@@ -505,11 +505,15 @@ namespace tienda2.desinger
             {
                 double cantidad_por_pakete_double = Convert.ToDouble(cantidad_por_pakete);
                 paquetes_a_comprar = Math.Floor(cant_prod_uni_double / cantidad_por_pakete_double);
+                if (cant_prod_uni_double==1 || cant_prod_uni_double == 0)
+                {
+                    paquetes_a_comprar = 0;
+                }
 
             }
             else
             {
-                cantidad_por_pakete = "1";
+                cantidad_por_pakete = "1";                
             }
             Ventana_emergente ven_emer2 = new Ventana_emergente();
             //a = 3;
@@ -665,11 +669,11 @@ namespace tienda2.desinger
 
                 if (respuesta == "1")
                 {
-                    funcion_click_paquete(producto_esplit_a_cargar[2]);
+                    funcion_click_paquete(producto_esplit_a_cargar[3]);
                 }
                 else if (respuesta == "2")
                 {
-                    funcion_click_individual(producto_esplit_a_cargar[2]);
+                    funcion_click_individual(producto_esplit_a_cargar[3]);
                 }
             }
         }
@@ -704,7 +708,7 @@ namespace tienda2.desinger
             {
                 string[] ranking_espliteado=arreglo_ranking[i].Split('|');
 
-                if (provedor==ranking_espliteado[2])
+                if (provedor==ranking_espliteado[3])
                 {
                     lst_carga.Items.Add(ranking_espliteado[2] + caracter_separacion + ranking_espliteado[1] + caracter_separacion + ranking_espliteado[3] + caracter_separacion + ranking_espliteado[4]);
                 }
