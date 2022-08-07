@@ -247,7 +247,7 @@ namespace tienda2.desinger
                             mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1], item_spliteado[5], item_spliteado[6], compra_directa);
                             //decrementa ranking de necesidad-----------------------------------------
                             
-                            bas.si_existe_suma_sino_agega_extra(G_dir_ranking, 0, item_spliteado[0], "2", "" + (Convert.ToDouble(item_spliteado[2]) * -1), "");
+                            bas.si_existe_suma_sino_agega_extra(G_dir_ranking, 0, item_spliteado[0], "11", "" + (Convert.ToDouble(item_spliteado[2]) * -1), "",los_valores_seam_menores_0:false);//los_valores_seam_menores_0:false esto sirve para poner  el parametro  los_valores_seam_menores_0 a cero
                             //fin ranking de necesidad-------------------------------------------
                         }
                         Lbl_nom_product_list.Text = "";

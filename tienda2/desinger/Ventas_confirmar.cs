@@ -83,8 +83,8 @@ namespace tienda2.desinger
                     bas.Crear_archivo_y_directorio(dir_ranking_dia);
                     bas.Crear_archivo_y_directorio(dir_ranking_año);
 
-                    bas.si_existe_suma_sino_agega_extra(dir_ranking_dia, 0, "" + codigo_barras_list[i], "2|5", cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "||" + cantidad[i] + "|0|0|0|0|0|");
-                    bas.si_existe_suma_sino_agega_extra(dir_ranking_año, 0, "" + codigo_barras_list[i], "2|5", cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "|" + cantidad[i] + "°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|" + cantidad[i] + "|0|0|0|0|0|");
+                    bas.si_existe_suma_sino_agega_extra(dir_ranking_dia, 0, "" + codigo_barras_list[i], "2|5", cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "||" + cantidad[i] + "|0|0|0|0|0|0|");
+                    bas.si_existe_suma_sino_agega_extra(dir_ranking_año, 0, "" + codigo_barras_list[i], "2|5|11", cantidad[i] + "|" + cantidad[i] + "|" + cantidad[i], codigo_barras_list[i] + "|" + nombre_productos[i] + "|" + cantidad[i] + "|" + provedor[i] + "|" + cantidad[i] + "°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|" + cantidad[i] + "|0|0|0|0|0|0|");
                     string info_producto = bas.Seleccionar(dir_ranking_año, 0, "" + codigo_barras_list[i]);
                     string[] inf_pro_split = info_producto.Split('|');
                     string[] historial_ranking = inf_pro_split[4].Split('°');

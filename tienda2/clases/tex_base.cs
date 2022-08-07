@@ -879,7 +879,7 @@ namespace tienda2.clases
 
 
 
-        public string si_existe_suma_sino_agega_extra(string direccion_archivo, int columna_a_comparar, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string texto_a_agregar, char caracter_separacion = '|')
+        public string si_existe_suma_sino_agega_extra(string direccion_archivo, int columna_a_comparar, string comparar, string numero_columnas_editar, string cantidad_a_sumar, string texto_a_agregar, char caracter_separacion = '|',bool los_valores_seam_menores_0=true)
         {
             Crear_archivo_y_directorio(direccion_archivo);
             bool bandera = false;
@@ -905,7 +905,21 @@ namespace tienda2.clases
                             string[] cantidad_spliteada = cantidad_a_sumar.Split(caracter_separacion);
                             for (int i = 0; i < num_col_spliteadas.Length; i++)
                             {
-                                linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])] = "" + (Convert.ToDecimal(linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])]) + Convert.ToDecimal(cantidad_spliteada[i]));
+                                if (los_valores_seam_menores_0)
+                                {
+                                    linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])] = "" + (Convert.ToDecimal(linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])]) + Convert.ToDecimal(cantidad_spliteada[i]));
+                                }
+                                else
+                                {
+                                    linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])] = "" + (Convert.ToDecimal(linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])]) + Convert.ToDecimal(cantidad_spliteada[i]));
+                                    double resultado = Convert.ToDouble(linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])]);
+                                    if (resultado<0)
+                                    {
+                                        linea_espliteada[Convert.ToInt32(num_col_spliteadas[i])] = "0";
+                                    }
+                                    
+                                }
+                                
                             }
                             linea = string.Join("|", linea_espliteada);
                             bandera = true;

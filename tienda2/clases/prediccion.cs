@@ -12,7 +12,7 @@ namespace tienda2.clases
         Tex_base bas = new Tex_base();
         public string[] compra(string direccion_ranking, int columna_historial, int columna_ranking, int columna_promedio_compra, int columna_veses_supera_promedio, char caracter_separacion = '|')
         {
-            //ranikng //0_codigo|1_nombre_producto|2_cantidad_vendida_estos_7_dias|3_provedores|4_historial_por_semana°|5_ranking|6_promedio_normal|7_cantidad_veses|8_usomulti_cant_invent|9_usomulti_tipo_de_producto|10_multi_costo_compra|
+            //ranikng //0_codigo|1_nombre_producto|2_cantidad_vendida_estos_7_dias|3_provedores|4_historial_por_semana°|5_ranking|6_promedio_normal|7_cantidad_veses_supera_el_promedio|8_usomulti_cant_invent|9_usomulti_tipo_de_producto|10_multi_costo_compra|11_
 
             string[] todo_el_ranking = bas.Leer(direccion_ranking);
             string dir_invent = "inf\\inventario\\invent.txt";
@@ -93,7 +93,7 @@ namespace tienda2.clases
                 //ranikng //0_codigo|1_nombre_producto|2_cantidad_vendida_estos_7_dias|3_provedores|4_historial_por_semana°|5_ranking|6_promedio_normal|7_cantidad_veses|8_usomulti_cant_invent|9_usomulti_tipo_de_producto|10_multi_costo_compra|
                 string[] a_cambiar = lista_final[i].Split(caracter_separacion);
 
-                lista_final[i] = a_cambiar[2] + caracter_separacion + a_cambiar[1] + caracter_separacion + a_cambiar[0] + caracter_separacion + a_cambiar[3] + caracter_separacion + a_cambiar[8] + caracter_separacion + a_cambiar[10] + caracter_separacion;
+                lista_final[i] = a_cambiar[11] + caracter_separacion + a_cambiar[1] + caracter_separacion + a_cambiar[0] + caracter_separacion + a_cambiar[3] + caracter_separacion + a_cambiar[8] + caracter_separacion + a_cambiar[10] + caracter_separacion;
                 //lista_final//0_codigo|1_nombre_producto|2_codigo_de_barras|3_provedor|4_uso_multi_cantidad_invent|5_costo_compra|
             }
             return lista_final;
