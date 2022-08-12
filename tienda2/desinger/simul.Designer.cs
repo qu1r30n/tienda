@@ -50,6 +50,8 @@ namespace tienda2.desinger
             // 
             // cmb_curso
             // 
+            this.cmb_curso.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_curso.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmb_curso.FormattingEnabled = true;
             this.cmb_curso.Location = new System.Drawing.Point(118, 33);
             this.cmb_curso.Name = "cmb_curso";

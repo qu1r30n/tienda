@@ -25,8 +25,8 @@ namespace tienda2.clases
 
             int num_dat_p = datos_de_la_persona.Length + 5;
             Tex_base bas = new Tex_base();
-            string direccion_tab_enc = "sismul\\" + G_sucursal + G_compu + tab_encargado + "_inf.txt";
-            //bas.Crear_archivo_y_directorio("sismul\\" + tab_usuario + "_inf.txt");
+            string direccion_tab_enc = "sismul\\" + G_sucursal + G_compu + tab_encargado + ".txt";
+            //bas.Crear_archivo_y_directorio("sismul\\" + tab_usuario + ".txt");
             string datos_joineados_de_persona = string.Join(caracter_separacion + "", datos_de_la_persona);
             string[] leidos = bas.Leer(direccion_tab_enc, null, caracter_separacion);
             string dat_n1 = bas.Seleccionar(direccion_tab_enc, 0, encargado_1, null, caracter_separacion);
@@ -56,7 +56,7 @@ namespace tienda2.clases
                 caracter_separacion + encargado_1 + caracter_separacion + espacios_niveles;
 
 
-            bas.Agregar("sismul\\" + tab_encargado + "_inf.txt", datos_a_agregar);
+            bas.Agregar("sismul\\" + tab_encargado + ".txt", datos_a_agregar);
         }
 
         public void registro_simple(string tab_encargado, string encargado_1, string[] datos_de_la_persona, double dinero_registro = 0, int num_niv_encargados = 3, char caracter_separacion = '|')
@@ -70,8 +70,8 @@ namespace tienda2.clases
 
             int num_dat_p = datos_de_la_persona.Length + 5;
             Tex_base bas = new Tex_base();
-            string direccion_tab_enc = "sismul\\" + G_sucursal + G_compu + tab_encargado + "_inf.txt";
-            //bas.Crear_archivo_y_directorio("sismul\\" + tab_usuario + "_inf.txt");
+            string direccion_tab_enc = "sismul\\" + G_sucursal + G_compu + tab_encargado + ".txt";
+            //bas.Crear_archivo_y_directorio("sismul\\" + tab_usuario + ".txt");
             string datos_joineados_de_persona = string.Join(caracter_separacion + "", datos_de_la_persona);
             string[] leidos = bas.Leer(direccion_tab_enc, null, caracter_separacion);
             string dat_n1 = bas.Seleccionar(direccion_tab_enc, 0, encargado_1, null, caracter_separacion);
@@ -101,14 +101,14 @@ namespace tienda2.clases
                 caracter_separacion + encargado_1 + caracter_separacion + espacios_niveles;
 
 
-            bas.Agregar("sismul\\" + tab_encargado + "_inf.txt", datos_a_agregar);
+            bas.Agregar("sismul\\" + tab_encargado + ".txt", datos_a_agregar);
         }
 
         public void ingreso_de_din_simple(string tab_usuario, string id_usuario, Double din, int cant_niv_a_pagar = 3, Double porcentage_reparticion = 10, char caracter_de_separacion = '|')
         {
             Tex_base bas = new Tex_base();
             // int num_enc = 3;//la cantidad ser igual o menor la cantidad de encargados osea lo de los niveles que estan arriba
-            string direccion_tab_us = "sismul\\" + G_sucursal + G_compu + tab_usuario + "_inf.txt";
+            string direccion_tab_us = "sismul\\" + G_sucursal + G_compu + tab_usuario + ".txt";
             string dat_usuarios = bas.Seleccionar(direccion_tab_us, 0, id_usuario, null, caracter_de_separacion);
 
             string[] dat_usu_split = dat_usuarios.Split(caracter_de_separacion);
@@ -137,7 +137,7 @@ namespace tienda2.clases
             ingreso_de_din_simple(tab_usuario, id_usuario, din, cant_niv_a_pagar, porcentage_reparticion, caracter_de_separacion);
 
 
-            string direccion_tab_us = "sismul\\" + G_sucursal + G_compu + tab_usuario + "_inf.txt";
+            string direccion_tab_us = "sismul\\" + G_sucursal + G_compu + tab_usuario + ".txt";
             string dat_usuario = bas.Seleccionar(direccion_tab_us, 0, id_usuario);
             string[] dat_us_split = dat_usuario.Split(caracter_de_separacion);
             int posision_tab_pat = Convert.ToInt32(dat_us_split[4]) + 1;

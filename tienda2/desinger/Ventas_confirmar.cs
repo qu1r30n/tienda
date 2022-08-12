@@ -96,7 +96,11 @@ namespace tienda2.desinger
 
 
                     //ranking_fin------------------------------------------------------------------------------------------------
-
+                    //resumen----------------------------------------------------------------------------------------------------
+                    string direccion_resumen = "inf\\resumen\resumen_" + año_mes_dia + ".txt";
+                    bas.Crear_archivo_y_directorio(direccion_resumen, "0_res_inverciones|0\n1_res_venta|0\n2_res_compra|0\n3_res_pag_emp|0");
+                    bas.Incrementa_celda(direccion_resumen, 0, "1_res_venta", "1", ""+total_a_pagar);
+                    //resumen----------------------------------------------------------------------------------------------------
                     bas.Si_existe_suma_sino_desde_el_inventario_agrega(direccion, 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i]);
                     bas.Si_existe_suma_sino_desde_el_inventario_las_columnas_agrega(direccion2 + provedor[i] + ".txt", 3, "" + codigo_barras_list[i], "0|1", cantidad[i] + "|" + precio_venta[i], "1|3|0|6|8|2");
                     bas.si_existe_suma_sino_agega_extra(direccion3, 0, "" + provedor[i], "1", "" + precio_venta[i], provedor[i] + "|" + precio_venta[i]);
