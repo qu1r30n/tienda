@@ -97,7 +97,7 @@ namespace tienda2.desinger
 
                     //ranking_fin------------------------------------------------------------------------------------------------
                     //resumen----------------------------------------------------------------------------------------------------
-                    string direccion_resumen = "inf\\resumen\resumen_" + año_mes_dia + ".txt";
+                    string direccion_resumen = "inf\\resumen\\resumen_" + año_mes_dia + ".txt";
                     bas.Crear_archivo_y_directorio(direccion_resumen, "0_res_inverciones|0\n1_res_venta|0\n2_res_compra|0\n3_res_pag_emp|0");
                     bas.Incrementa_celda(direccion_resumen, 0, "1_res_venta", "1", ""+total_a_pagar);
                     //resumen----------------------------------------------------------------------------------------------------
