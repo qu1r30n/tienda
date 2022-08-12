@@ -43,6 +43,7 @@ namespace tienda2.desinger
             cmb_curso.Text = "";
             txt_dinero.Text = "";
             txt_id.Text = "";
+            txt_id.Focus();
         }
 
         private void btn_registrar_Click(object sender, EventArgs e)

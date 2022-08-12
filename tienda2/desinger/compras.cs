@@ -669,11 +669,11 @@ namespace tienda2.desinger
 
                 if (respuesta == "1")
                 {
-                    funcion_click_paquete(producto_esplit_a_cargar[3]);
+                    funcion_click_paquete(producto_esplit_a_cargar[2]);
                 }
                 else if (respuesta == "2")
                 {
-                    funcion_click_individual(producto_esplit_a_cargar[3]);
+                    funcion_click_individual(producto_esplit_a_cargar[2]);
                 }
             }
         }
