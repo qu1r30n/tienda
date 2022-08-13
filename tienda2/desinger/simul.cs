@@ -107,14 +107,20 @@ namespace tienda2.desinger
         private void modelo_registro_simple()
         {
             string[] enviar;
-            enviar = new string[] {"1°id_encargado", "1°tabla_encargado", "1°nombre", "1°apellido_paterno", "1°apellido_materno", "1°numero_de_cuenta°0°2", "1°banco", "1°curp", "1°numero_celular°0°2", "1°direccion", "1°colonia", "1°municipio", "1°estado", "1°correo" };
+            string cursos = "";
+            for (int i = 0; i < g_cursos.Count; i++)
+            {
+                cursos = cursos + g_cursos[i] + "°";
+            }
+            cursos = cursos.TrimEnd('°');
+            enviar = new string[] { "1°id_encargado", "4°tabla_encargado°°°°" + cursos, "1°nombre", "1°apellido_paterno", "1°apellido_materno", "1°numero_de_cuenta°0°2", "1°banco", "1°curp", "1°numero_celular°0°2", "1°direccion", "1°colonia", "1°municipio", "1°estado", "1°correo" };
             Ventana_emergente vent_emergent = new Ventana_emergente();
             string resultado_string = vent_emergent.Proceso_ventana_emergente(enviar);
             resultado_string = resultado_string.TrimEnd('|');
             string[] resultado = resultado_string.Split('|');
 
             string info_usuario = "";
-            for (int i = 4; i < resultado.Length; i++)
+            for (int i = 2; i < resultado.Length; i++)
             {
                 info_usuario = info_usuario + resultado[i] + "°";
             }
@@ -123,6 +129,12 @@ namespace tienda2.desinger
             
             sim2.registro_simple(resultado[0] + "", resultado[1] + "", info_usuario);
         }
+
+        private void registroVendedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modelo_registro_simple();
+        }
+
 
     }
 }

@@ -28,7 +28,7 @@ namespace tienda2.clases
             {
                 string[] info_base_split = info_base[i].Split(caracter_separacion);
                 //en registro simple en la base el id_encargado el el id_patrocinador
-                if (info_base_split[3] == id_patrocinador)
+                if (info_base_split[0] == id_patrocinador)
                 {
                     patrocinadores = info_base_split[8];
 
@@ -36,7 +36,7 @@ namespace tienda2.clases
             }
 
             //0_id_usuario|1_id_patrocinador|2_tabla_patrocinador|3_id_encargado|5_tabla_encargado|5_diner|6_a_pagar|7_datos|8_encargados|
-            string info_a_agregar = info_base.Length + "" + caracter_separacion + caracter_separacion + +caracter_separacion + id_patrocinador + caracter_separacion + tabla + caracter_separacion + "0" + caracter_separacion + "0" + caracter_separacion + datos + caracter_separacion + patrocinadores + caracter_separacion;
+            string info_a_agregar = info_base.Length + "" + caracter_separacion + caracter_separacion + caracter_separacion + ("" +id_patrocinador) + caracter_separacion + tabla + caracter_separacion + "0" + caracter_separacion + "0" + caracter_separacion + datos + caracter_separacion + patrocinadores + caracter_separacion;
             bas.Agregar(direccion_tab_enc, info_a_agregar);
 
         }
@@ -46,11 +46,11 @@ namespace tienda2.clases
             datos=bas.Trimend_paresido(datos,'°');
             //0_id_usuario|1_id_patrocinador|2_tabla_patrocinador|3_id_encargado|4_tabla_encargado|5_diner|6_a_pagar|7_datos|8_encargados|
             string direccion_tab_pat = "sismul2\\" + G_sucursal + G_compu + tabla_patrocinador + ".txt";
-            bas.Crear_archivo_y_directorio(direccion_tab_pat, "0|0|tabla_pat|0|tabla_encargado|0|0|nom°ap°etc|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|");
+            bas.Crear_archivo_y_directorio(direccion_tab_pat, "0|0|ventas|0|tabla_encargado|0|0|nom°ap°etc|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|");
 
             //0_id_usuario|1_id_patrocinador|2_tabla_patrocinador|3_id_encargado|4_tabla_encargado|5_diner|6_a_pagar|7_datos|8_encargados|
             string direccion_tab_enc = "sismul2\\" + G_sucursal + G_compu + tabla_usuario + ".txt";
-            bas.Crear_archivo_y_directorio(direccion_tab_enc, "0|||0|tabla_encargado|0|0|nom°ap°etc|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|");
+            bas.Crear_archivo_y_directorio(direccion_tab_enc, "0|0|ventas|0|tabla_encargado|0|0|nom°ap°etc|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|");
             string[] info_base = bas.Leer(direccion_tab_enc);
 
 

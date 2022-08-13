@@ -710,7 +710,7 @@ namespace tienda2.desinger
 
                 if (provedor==ranking_espliteado[3])
                 {
-                    lst_carga.Items.Add(ranking_espliteado[2] + caracter_separacion + ranking_espliteado[1] + caracter_separacion + ranking_espliteado[3] + caracter_separacion + ranking_espliteado[4]);
+                    lst_carga.Items.Add(ranking_espliteado[2] + caracter_separacion + ranking_espliteado[1] + caracter_separacion + ranking_espliteado[4] + caracter_separacion + ranking_espliteado[3]);
                 }
             }
             
