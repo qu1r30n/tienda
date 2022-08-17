@@ -199,7 +199,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 198|maruchan camaron 64gr|13.5|41789001956|0|9.17|casa vargas|1°producto||1||
 199|maruchan camaron piquin 64gr|13.5|41789001987|2|9.17|casa vargas|1°producto||1||
 200|always seca 8 toallas|23|56100024798|0|18|salma|1°producto||1||
-201|rastrillo comfort bic|23|70330717534|0|15|medicamento|1°producto||10||
+201|rastrillo comfort bic|23|70330717534|20|15|medicamento|1°producto||10||
 202|rastrillo bic confort 3 hojas|13|70330724341|0|10|bic|1°producto||10||
 203|cajeta quemada 370 g|35|74323083651|0|30.12|ricolino|1°producto||1||
 204|frijoles con choriso 430g|16|78883240547|0|0|la sierra|1°producto||1||
@@ -1808,7 +1808,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 1809|salsa de soya 140ml|21|7501058628503|1|13.36|nestle|1||1||
 1810|gerber ciruela pasa 100g|13.5|7506475102483|3|8.15|nestle|1||1||
 1811|carlos v blanco stick 8gr|3.5|7501058654281|0|1.53|nestle|1||30||
-1812|rastrillo bic|23|70330717534|0|15|bic|1||1||
+1812|rastrillo bic|23|70330717534|20|15|medicamento|1||1||
 1813|vaso desechable #8|29|7501219114272|0|24|sabormex|1||5||
 1814|poett 900ml|17|7501071900280|0|12.5|salma|1||1||
 1815|valentina negra|15|97339000061|3|0|casa vargas|1||1||
@@ -2829,6 +2829,12 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 2828|emperador 36g vainilla|5|7500478012404|0|4.5|casa vargas|1||2||
 2829|mini mamut 12g|2.5|7501000630363|0|2|casa vargas|1||1||
 2830|cloralex 1.17L|15|7501025405311|2|12.2|casa vargas|1||1||
-2831|jumex lata 473 ml|15||0|13.25|jumex|1||1||
-2832|jumex manzana lata 473 ml|15||0|13.25|jumex|1||1||
+2831|jumex lata 473 ml|15||0|1|jumex|1||1||
+2832|jumex manzana lata 473 ml|15||0|1|jumex|1||1||
 2833|jumex durazno 473ml|18|7501013103304|3|16.5|casa vargas|1||1||
+2834|elim|0|elimi|22|0|bic|1||1||
+2835|elim2|0|elim2|11|0|bic|1||1||
+2836|elim_nom3|0|elim3|13|0|bic|1||1||
+2837|elim_nom_4|0|elim4|23|0|bic|1||1||
+2838|elim_nom_5|0|elim5|24|0|bic|1||1||
+2839|elim_nom_6|0|elim_6|1|0|bic|1||1||

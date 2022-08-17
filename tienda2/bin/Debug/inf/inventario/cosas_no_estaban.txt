@@ -147,3 +147,9 @@ movimiento origen: 1|2815|pringles cebolla40g|16|038000845529|1|0|marinela|1||1|
 movimiento origen: 1|2816|pringles queso 40g|16|038000846755|1|0|casa vargas|1||1||
 movimiento origen: 1|2817|mum 60g|25|75030131|1|0|marinela|1||1||
 movimiento origen: 1|2818|dan mix hersheys 110g|19|7506443106376|1|0|danone|1||1||
+movimiento origen: 1|2834|elim|0|elimi|22|0|bic|1||1||
+movimiento origen: 1|2835|elim2|0|elim2|11|0|bic|1||1||
+movimiento origen: 1|2836|elim_nom3|0|elim3|13|0|bic|1||1||
+movimiento origen: 1|2837|elim_nom_4|0|elim4|23|0|bic|1||1||
+movimiento origen: 1|2838|elim_nom_5|0|elim5|24|0|bic|1||1||
+movimiento origen: 1|2839|elim_nom_6|0|elim_6|1|0|bic|1||1||

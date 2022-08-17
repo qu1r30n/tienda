@@ -1,1 +1,1 @@
-dinero_hay: |1071.5|
+dinero_hay: |981.5|

@@ -3,7 +3,7 @@ bic|0
 orbit|0
 las delicias|15
 kinder|286
-casa vargas|195
+casa vargas|19.5
 skarch|0
 red cola|0
 dorco|5

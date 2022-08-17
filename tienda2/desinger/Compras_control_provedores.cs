@@ -54,7 +54,7 @@ namespace tienda2.desinger
 
                         if (res == "1")
                         {
-                            double din_vendido_prov = Convert.ToDouble(lbl_venta_provedor);
+                            double din_vendido_prov = Convert.ToDouble(lbl_venta_provedor.Text);
                             if (cantidad_a_comprar <= din_vendido_prov)
                             {
                                 bas.Incrementa_celda(direccion, 0, lbl_provedor.Text, "1", "" + (cantidad_a_comprar * -1));

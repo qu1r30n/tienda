@@ -78,6 +78,7 @@ namespace tienda2.desinger
         public void Procesar_codigo(string codigo)
         {
 
+
             bool bandera = false;
             for (int i = 0; i < G_productos.Count; i++)
             {
@@ -128,6 +129,7 @@ namespace tienda2.desinger
 
                 //a = 4;
                 string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
+                G_productos.Add(mensage);
                 string[] temp = mensage.Split(G_parametros[0]);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
 
                 string[] temp2;
@@ -135,6 +137,7 @@ namespace tienda2.desinger
 
                 if (temp.Length >= 3)//por si cierra la ventana no agregue a los text box
                 {
+
                     G_prov_anterior = temp[6];
                     temp2 = new[] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9] };//aqui lo pongo en el orden que deve llevar
                     temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
@@ -149,9 +152,8 @@ namespace tienda2.desinger
 
                 Txt_buscar_producto.Text = "";
                 Procesar_codigo(codigo);
+
             }
-
-
         }
 
         private void Txt_nom_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -669,11 +671,11 @@ namespace tienda2.desinger
 
                 if (respuesta == "1")
                 {
-                    funcion_click_paquete(producto_esplit_a_cargar[2]);
+                    funcion_click_paquete("0");
                 }
                 else if (respuesta == "2")
                 {
-                    funcion_click_individual(producto_esplit_a_cargar[2]);
+                    funcion_click_individual("0");
                 }
             }
         }
