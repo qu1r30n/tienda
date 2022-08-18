@@ -244,9 +244,8 @@ namespace tienda2.desinger
                         for (int i = 0; i < Lst_compras.Items.Count; i++)
                         {
 
-
                             string[] item_spliteado = Lst_compras.Items[i].ToString().Split(G_parametros[0]);
-                            mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1], item_spliteado[5], item_spliteado[6], compra_directa);
+                            mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1], item_spliteado[5], item_spliteado[6], compra_directa, se_paga_de_caja_spliteado[1]);
                             //decrementa ranking de necesidad-----------------------------------------
                             
                             bas.si_existe_suma_sino_agega_extra(G_dir_ranking, 0, item_spliteado[0], "11", "" + (Convert.ToDouble(item_spliteado[2]) * -1), "",los_valores_seam_menores_0:false);//los_valores_seam_menores_0:false esto sirve para poner  el parametro  los_valores_seam_menores_0 a cero

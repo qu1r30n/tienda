@@ -10,7 +10,7 @@ namespace tienda2.clases
     {
         char[] G_parametros = { '|', '°', '¬', '^' };
 
-        public void Modelo_compra(string codigo, string costo_compra, string cantidad, string provedor, string nom_producto, string id_producto, string info_extra = null, bool compra_directa = true)
+        public void Modelo_compra(string codigo, string costo_compra, string cantidad, string provedor, string nom_producto, string id_producto, string info_extra = null, bool compra_directa = true,string cantidad_pagada_de_caja="0")
         {
             DateTime fecha_hora = DateTime.Now;
             //string hora_min_seg = fecha_hora.ToString("HH:mm:ss");
@@ -28,6 +28,10 @@ namespace tienda2.clases
                 string dir_arch = "inf\\inventario\\invent.txt";
                 bas.Editar_espesifico(dir_arch, 3, codigo, "6", provedor);
                 op.Actualisar_inventario(dir_arch, "" + codigo, Convert.ToDecimal(cantidad));
+
+
+                bas.si_existe_suma_sino_agega_extra("inf\\inventario\\ven\\vent.txt", 0, año_mes_dia, "2", "" + cantidad_pagada_de_caja, año_mes_dia + "|0|" + cantidad);
+
 
                 dir_arch = "ventas\\" + año + "\\" + mes + "\\dias\\g_" + año_mes_dia + ".txt";
                 //se me olvido para que es el ultimo 0 bas.agregar(dir_arch, hora + "|" + codigo + "|" + cantidad + "|" + nom_producto + "|"+ provedor + "|" + "0");
