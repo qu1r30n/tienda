@@ -251,12 +251,12 @@ namespace tienda2.desinger
             this.Rdb_producto.Name = "Rdb_producto";
             this.Rdb_producto.Size = new System.Drawing.Size(14, 13);
             this.Rdb_producto.TabIndex = 63;
-            this.Rdb_producto.TabStop = true;
             this.Rdb_producto.UseVisualStyleBackColor = true;
             // 
             // Rdb_codigo_barras
             // 
             this.Rdb_codigo_barras.AutoSize = true;
+            this.Rdb_codigo_barras.Checked = true;
             this.Rdb_codigo_barras.Location = new System.Drawing.Point(12, 56);
             this.Rdb_codigo_barras.Name = "Rdb_codigo_barras";
             this.Rdb_codigo_barras.Size = new System.Drawing.Size(14, 13);

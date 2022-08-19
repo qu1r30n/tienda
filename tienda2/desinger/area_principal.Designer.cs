@@ -29,9 +29,9 @@ namespace tienda2.desinger
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend21 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btn_pedidos = new System.Windows.Forms.Button();
             this.btn_inv_merc = new System.Windows.Forms.Button();
             this.btn_igualar_provedores = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@ namespace tienda2.desinger
             this.Btn_empleados = new System.Windows.Forms.Button();
             this.Btn_nueva_venta = new System.Windows.Forms.Button();
             this.Btn_crear_cod_bar = new System.Windows.Forms.Button();
+            this.btn_poner_a_cero = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,17 +116,17 @@ namespace tienda2.desinger
             // 
             // chrt_ventas
             // 
-            chartArea21.Name = "ChartArea1";
-            this.chrt_ventas.ChartAreas.Add(chartArea21);
-            legend21.Name = "Legend1";
-            this.chrt_ventas.Legends.Add(legend21);
+            chartArea1.Name = "ChartArea1";
+            this.chrt_ventas.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chrt_ventas.Legends.Add(legend1);
             this.chrt_ventas.Location = new System.Drawing.Point(165, 12);
             this.chrt_ventas.Name = "chrt_ventas";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series21.Legend = "Legend1";
-            series21.Name = "Series1";
-            this.chrt_ventas.Series.Add(series21);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chrt_ventas.Series.Add(series1);
             this.chrt_ventas.Size = new System.Drawing.Size(403, 300);
             this.chrt_ventas.TabIndex = 75;
             this.chrt_ventas.Text = "ventas";
@@ -343,11 +344,22 @@ namespace tienda2.desinger
             this.Btn_crear_cod_bar.UseVisualStyleBackColor = true;
             this.Btn_crear_cod_bar.Click += new System.EventHandler(this.Btn_crear_cod_bar_Click);
             // 
+            // btn_poner_a_cero
+            // 
+            this.btn_poner_a_cero.Location = new System.Drawing.Point(12, 298);
+            this.btn_poner_a_cero.Name = "btn_poner_a_cero";
+            this.btn_poner_a_cero.Size = new System.Drawing.Size(143, 23);
+            this.btn_poner_a_cero.TabIndex = 86;
+            this.btn_poner_a_cero.Text = "poner a cero";
+            this.btn_poner_a_cero.UseVisualStyleBackColor = true;
+            this.btn_poner_a_cero.Click += new System.EventHandler(this.btn_poner_a_cero_Click);
+            // 
             // Area_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 384);
+            this.Controls.Add(this.btn_poner_a_cero);
             this.Controls.Add(this.btn_pedidos);
             this.Controls.Add(this.btn_inv_merc);
             this.Controls.Add(this.btn_igualar_provedores);
@@ -414,5 +426,6 @@ namespace tienda2.desinger
         private System.Windows.Forms.Button Btn_empleados;
         private System.Windows.Forms.Button Btn_nueva_venta;
         private System.Windows.Forms.Button Btn_crear_cod_bar;
+        private System.Windows.Forms.Button btn_poner_a_cero;
     }
 }

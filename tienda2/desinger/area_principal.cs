@@ -1014,5 +1014,11 @@ namespace tienda2.desinger
             pedidos pe = new pedidos();
             pe.Show();
         }
+
+        private void btn_poner_a_cero_Click(object sender, EventArgs e)
+        {
+            poner_a_cero pon_a_0 = new poner_a_cero();
+            pon_a_0.Show();
+        }
     }
 }

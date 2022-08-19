@@ -82,3 +82,4 @@ D:\pr\tienda2\tienda2\tienda2\obj\Debug\tienda2.csproj.GenerateResource.cache
 D:\pr\tienda2\tienda2\tienda2\obj\Debug\tienda2.csproj.CoreCompileInputs.cache
 D:\pr\tienda2\tienda2\tienda2\obj\Debug\tienda2.exe
 D:\pr\tienda2\tienda2\tienda2\obj\Debug\tienda2.pdb
+D:\pr\tienda2\tienda2\tienda2\obj\Debug\tienda2.desinger.poner_a_cero.resources

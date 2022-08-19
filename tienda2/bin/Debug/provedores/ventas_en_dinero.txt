@@ -13,7 +13,7 @@ valentina|25
 marlboro|126
 coca|0
 maravilla|247.5
-medicamento|552
+medicamento|575
 pepsi|68
 dulceria|36
 magadan|1204

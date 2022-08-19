@@ -123,6 +123,8 @@ namespace tienda2.desinger
             // chb_no_vacio
             // 
             this.chb_no_vacio.AutoSize = true;
+            this.chb_no_vacio.Checked = true;
+            this.chb_no_vacio.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chb_no_vacio.Location = new System.Drawing.Point(688, 68);
             this.chb_no_vacio.Name = "chb_no_vacio";
             this.chb_no_vacio.Size = new System.Drawing.Size(90, 17);

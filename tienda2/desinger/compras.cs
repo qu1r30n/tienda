@@ -27,8 +27,8 @@ namespace tienda2.desinger
         {
             InitializeComponent();
 
-            DateTime fecha_hora = DateTime.Now;
-            G_dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\" + fecha_hora.ToString("yyyy") + "_ranking.txt";
+            DateTime fecha = DateTime.Now;
+            G_dir_ranking = Directory.GetCurrentDirectory() + "\\inf\\ranking\\" + fecha.ToString("yyyy") + "_ranking.txt";
             G_prov_anterior = provedor_elegido;
             Recargar_texbox();
             recarga_ranking(G_prov_anterior);

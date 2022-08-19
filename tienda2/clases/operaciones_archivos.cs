@@ -735,5 +735,22 @@ namespace tienda2.clases
             return lineas;
         }
 
+        public void mover_archivo(string direccion_archivo,string direccion_a_mover)
+        {
+            File.Move(direccion_archivo, direccion_a_mover);
+        }
+        public void mover_dir(string direccion_archivo, string direccion_a_mover)
+        {
+            
+            if (Directory.Exists(direccion_a_mover))
+            {
+                Directory.Delete(direccion_a_mover, true);
+            }
+            
+            Directory.Move(direccion_archivo, direccion_a_mover);
+
+        }
+
+
     }
 }
