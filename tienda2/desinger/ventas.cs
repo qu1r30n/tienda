@@ -669,5 +669,20 @@ namespace tienda2.desinger
         {
 
         }
+
+        private void comprasabajoarribaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            string[] enviar = new string[] { "1°motivo_compra", "1°arriba°0°2", "1°abajo°0°2" };
+            Ventana_emergente vent_emergent = new Ventana_emergente();
+            string mensage = vent_emergent.Proceso_ventana_emergente(enviar);//el uno significa que modificara el inventario
+            
+            DateTime fecha_hora = DateTime.Now;
+            string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+            string dir_compras = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\compras\\" + año_mes_dia + "compras.txt";
+            Tex_base bas = new Tex_base();
+            bas.Agregar(dir_compras, mensage);
+
+        }
     }
 }

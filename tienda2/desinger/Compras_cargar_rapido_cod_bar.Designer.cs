@@ -36,6 +36,7 @@ namespace tienda2.desinger
             this.label1 = new System.Windows.Forms.Label();
             this.lst_cod_bar = new System.Windows.Forms.ListBox();
             this.txt_cod_bar = new System.Windows.Forms.TextBox();
+            this.btn_carga_archivo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Btn_elim_ultimo
@@ -103,11 +104,22 @@ namespace tienda2.desinger
             this.txt_cod_bar.TabIndex = 19;
             this.txt_cod_bar.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_cod_bar_PreviewKeyDown);
             // 
+            // btn_carga_archivo
+            // 
+            this.btn_carga_archivo.Location = new System.Drawing.Point(176, 25);
+            this.btn_carga_archivo.Name = "btn_carga_archivo";
+            this.btn_carga_archivo.Size = new System.Drawing.Size(75, 39);
+            this.btn_carga_archivo.TabIndex = 26;
+            this.btn_carga_archivo.Text = "cargar archivo";
+            this.btn_carga_archivo.UseVisualStyleBackColor = true;
+            this.btn_carga_archivo.Click += new System.EventHandler(this.btn_carga_archivo_Click);
+            // 
             // Compras_cargar_rapido_cod_bar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 326);
+            this.Controls.Add(this.btn_carga_archivo);
             this.Controls.Add(this.Btn_elim_ultimo);
             this.Controls.Add(this.Btn_pasar_a_pedidos);
             this.Controls.Add(this.Btn_eliminar_todo);
@@ -131,5 +143,6 @@ namespace tienda2.desinger
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lst_cod_bar;
         private System.Windows.Forms.TextBox txt_cod_bar;
+        private System.Windows.Forms.Button btn_carga_archivo;
     }
 }

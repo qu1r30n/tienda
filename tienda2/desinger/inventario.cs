@@ -162,6 +162,11 @@ namespace tienda2.desinger
                 bas.Agregar(direccion, info_a_agregar[i]);
                 lst_todos_los_agregados.Items.Add(info_a_agregar[i]);
             }
+            
+            bas.Ordenar(G_dir_inv_hacer, 3, orden: "menor_mayor");
+            
+            herramients_forms herr_form = new herramients_forms();
+            herr_form.ordenar_lisbox(lst_todos_los_agregados, 3);
 
             Operaciones_archivos op = new Operaciones_archivos();
             op.Eliminar_archivo(G_dir_inv_hacer);
@@ -189,8 +194,7 @@ namespace tienda2.desinger
         private void btn_terminar_Click(object sender, EventArgs e)
         {
 
-            herramients_forms herr_form = new herramients_forms();
-            herr_form.ordenar_lisbox(lst_todos_los_agregados, 3);
+            
 
             string[] produc_del_inventario = bas.Leer("inf\\inventario\\invent.txt", "3|4|1");
 
@@ -204,9 +208,9 @@ namespace tienda2.desinger
             List<string> lst_nombre = new List<string>();
             List<string> lst_cantidades = new List<string>();
 
-            for (int i = 0; i < lst_todos_los_agregados.Items.Count; i++)
+            for (int i = 0; i < compras_echas_durante_invent.Length; i++)
             {
-                string[] items_atras = lst_todos_los_agregados.Items[i].ToString().Split('|');
+                string[] items_atras = compras_echas_durante_invent[i].Split('|');
 
                 bool bandera = false;
                 for (int j = 0; j < lst_codigo.Count; j++)

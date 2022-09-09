@@ -104,8 +104,19 @@ namespace tienda2.desinger
             }
         }
 
-        
-
-        
+        private void btn_carga_archivo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opfd = new OpenFileDialog();
+            //opfd.InitialDirectory = Directory.GetCurrentDirectory() + "\\pedidos";
+            if (opfd.ShowDialog() == DialogResult.OK)
+            {
+                string[] info_compra = bas.Leer(opfd.FileName);
+                for (int i = 0; i < info_compra.Length; i++)
+                {
+                    lst_cod_bar.Items.Add(info_compra[i]);
+                    
+                }
+            }
+        }
     }
 }
