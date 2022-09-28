@@ -1020,5 +1020,11 @@ namespace tienda2.desinger
             poner_a_cero pon_a_0 = new poner_a_cero();
             pon_a_0.Show();
         }
+
+        private void btn_promociones_Click(object sender, EventArgs e)
+        {
+            promociones promo = new promociones();
+            promo.Show();
+        }
     }
 }

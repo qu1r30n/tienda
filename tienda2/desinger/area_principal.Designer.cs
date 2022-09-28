@@ -61,6 +61,7 @@ namespace tienda2.desinger
             this.Btn_nueva_venta = new System.Windows.Forms.Button();
             this.Btn_crear_cod_bar = new System.Windows.Forms.Button();
             this.btn_poner_a_cero = new System.Windows.Forms.Button();
+            this.btn_promociones = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,9 +87,9 @@ namespace tienda2.desinger
             // 
             // btn_igualar_provedores
             // 
-            this.btn_igualar_provedores.Location = new System.Drawing.Point(12, 344);
+            this.btn_igualar_provedores.Location = new System.Drawing.Point(12, 358);
             this.btn_igualar_provedores.Name = "btn_igualar_provedores";
-            this.btn_igualar_provedores.Size = new System.Drawing.Size(75, 35);
+            this.btn_igualar_provedores.Size = new System.Drawing.Size(143, 21);
             this.btn_igualar_provedores.TabIndex = 83;
             this.btn_igualar_provedores.Text = "igualar provedores";
             this.btn_igualar_provedores.UseVisualStyleBackColor = true;
@@ -354,11 +355,22 @@ namespace tienda2.desinger
             this.btn_poner_a_cero.UseVisualStyleBackColor = true;
             this.btn_poner_a_cero.Click += new System.EventHandler(this.btn_poner_a_cero_Click);
             // 
+            // btn_promociones
+            // 
+            this.btn_promociones.Location = new System.Drawing.Point(12, 327);
+            this.btn_promociones.Name = "btn_promociones";
+            this.btn_promociones.Size = new System.Drawing.Size(143, 23);
+            this.btn_promociones.TabIndex = 87;
+            this.btn_promociones.Text = "promociones";
+            this.btn_promociones.UseVisualStyleBackColor = true;
+            this.btn_promociones.Click += new System.EventHandler(this.btn_promociones_Click);
+            // 
             // Area_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 384);
+            this.Controls.Add(this.btn_promociones);
             this.Controls.Add(this.btn_poner_a_cero);
             this.Controls.Add(this.btn_pedidos);
             this.Controls.Add(this.btn_inv_merc);
@@ -427,5 +439,6 @@ namespace tienda2.desinger
         private System.Windows.Forms.Button Btn_nueva_venta;
         private System.Windows.Forms.Button Btn_crear_cod_bar;
         private System.Windows.Forms.Button btn_poner_a_cero;
+        private System.Windows.Forms.Button btn_promociones;
     }
 }

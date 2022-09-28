@@ -217,8 +217,8 @@ namespace tienda2.desinger
                     double pago_de_caja_a_deuda = Convert.ToDouble(se_paga_de_caja_spliteado[0]) - Convert.ToDouble(se_paga_de_caja_spliteado[1]);
                     if (pago_de_caja_a_deuda < 0)
                     {
-                        DialogResult dialogResult = MessageBox.Show("no puede ser mayor lo que se paga se igualara", "error", MessageBoxButtons.YesNo);
-                        if (dialogResult == DialogResult.Yes)
+                        DialogResult resultado_dialog = MessageBox.Show("no puede ser mayor lo que se paga se igualara", "error", MessageBoxButtons.YesNo);
+                        if (resultado_dialog == DialogResult.Yes)
                         {
                             se_paga_de_caja_spliteado[1] = se_paga_de_caja_spliteado[0];
                             se_paga_de_caja_spliteado[2] = "0";
@@ -589,10 +589,11 @@ namespace tienda2.desinger
             {
                 MessageBox.Show("subio:" + (costo_por_producto - costo_compra_invent));
                 double costo_venta = Convert.ToDouble(produc_inf_esplit[2]);
-                if (costo_por_producto > costo_venta)
+                if ((costo_por_producto * 1.1) > costo_venta)
                 {
-                    MessageBox.Show("nuevo_precio_de_venta: " + (costo_por_producto + (costo_por_producto * 0.1)));
-                    bas.Editar_espesifico(G_direccion_inventario, 3, Txt_buscar_producto.Text, "2", "" + (costo_por_producto + (costo_por_producto * 0.1)));
+                    
+                    MessageBox.Show("nuevo_precio_de_venta: " + (costo_por_producto*1.15));
+                    bas.Editar_espesifico(G_direccion_inventario, 3, Txt_buscar_producto.Text, "2", "" + (costo_por_producto * 1.15));
                 }
             }
 

@@ -556,6 +556,11 @@ namespace tienda2.clases
             return comparar;
         }
 
+        public void Borrar_datos_de_fila_menos_columnas_elegidas(string direccion_archivo, string comparar, int columna_comp, string columnas_no_borrar = "0")
+        {
+
+        }
+
         public void Eliminar_fila_porn_numero_de_fila(string direccion_archivo, int numero_de_fila)
         {
 

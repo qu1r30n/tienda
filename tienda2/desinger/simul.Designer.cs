@@ -32,7 +32,7 @@ namespace tienda2.desinger
             this.lbl_curso = new System.Windows.Forms.Label();
             this.cmb_curso = new System.Windows.Forms.ComboBox();
             this.btn_registrar = new System.Windows.Forms.Button();
-            this.btn_pagar = new System.Windows.Forms.Button();
+            this.btn_ingresar_dinero = new System.Windows.Forms.Button();
             this.lbl_dinero = new System.Windows.Forms.Label();
             this.txt_dinero = new System.Windows.Forms.TextBox();
             this.lbl_id = new System.Windows.Forms.Label();
@@ -40,6 +40,8 @@ namespace tienda2.desinger
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_retirar_dineri = new System.Windows.Forms.Button();
+            this.pruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,15 +75,15 @@ namespace tienda2.desinger
             this.btn_registrar.UseVisualStyleBackColor = true;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
-            // btn_pagar
+            // btn_ingresar_dinero
             // 
-            this.btn_pagar.Location = new System.Drawing.Point(351, 47);
-            this.btn_pagar.Name = "btn_pagar";
-            this.btn_pagar.Size = new System.Drawing.Size(75, 23);
-            this.btn_pagar.TabIndex = 11;
-            this.btn_pagar.Text = "pagar";
-            this.btn_pagar.UseVisualStyleBackColor = true;
-            this.btn_pagar.Click += new System.EventHandler(this.btn_pagar_Click);
+            this.btn_ingresar_dinero.Location = new System.Drawing.Point(351, 47);
+            this.btn_ingresar_dinero.Name = "btn_ingresar_dinero";
+            this.btn_ingresar_dinero.Size = new System.Drawing.Size(85, 23);
+            this.btn_ingresar_dinero.TabIndex = 11;
+            this.btn_ingresar_dinero.Text = "ingresar dinero";
+            this.btn_ingresar_dinero.UseVisualStyleBackColor = true;
+            this.btn_ingresar_dinero.Click += new System.EventHandler(this.btn_ingresar_dinero_Click);
             // 
             // lbl_dinero
             // 
@@ -130,7 +132,8 @@ namespace tienda2.desinger
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroVendedoresToolStripMenuItem});
+            this.registroVendedoresToolStripMenuItem,
+            this.pruToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.opcionesToolStripMenuItem.Text = "opciones";
@@ -138,19 +141,37 @@ namespace tienda2.desinger
             // registroVendedoresToolStripMenuItem
             // 
             this.registroVendedoresToolStripMenuItem.Name = "registroVendedoresToolStripMenuItem";
-            this.registroVendedoresToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.registroVendedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registroVendedoresToolStripMenuItem.Text = "registro vendedores";
             this.registroVendedoresToolStripMenuItem.Click += new System.EventHandler(this.registroVendedoresToolStripMenuItem_Click);
+            // 
+            // btn_retirar_dineri
+            // 
+            this.btn_retirar_dineri.Location = new System.Drawing.Point(351, 76);
+            this.btn_retirar_dineri.Name = "btn_retirar_dineri";
+            this.btn_retirar_dineri.Size = new System.Drawing.Size(85, 23);
+            this.btn_retirar_dineri.TabIndex = 17;
+            this.btn_retirar_dineri.Text = "retirar dinero";
+            this.btn_retirar_dineri.UseVisualStyleBackColor = true;
+            this.btn_retirar_dineri.Click += new System.EventHandler(this.btn_retirar_dineri_Click);
+            // 
+            // pruToolStripMenuItem
+            // 
+            this.pruToolStripMenuItem.Name = "pruToolStripMenuItem";
+            this.pruToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pruToolStripMenuItem.Text = "pru";
+            this.pruToolStripMenuItem.Click += new System.EventHandler(this.pruToolStripMenuItem_Click);
             // 
             // simul
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 116);
+            this.Controls.Add(this.btn_retirar_dineri);
             this.Controls.Add(this.lbl_curso);
             this.Controls.Add(this.cmb_curso);
             this.Controls.Add(this.btn_registrar);
-            this.Controls.Add(this.btn_pagar);
+            this.Controls.Add(this.btn_ingresar_dinero);
             this.Controls.Add(this.lbl_dinero);
             this.Controls.Add(this.txt_dinero);
             this.Controls.Add(this.lbl_id);
@@ -171,7 +192,7 @@ namespace tienda2.desinger
         private System.Windows.Forms.Label lbl_curso;
         private System.Windows.Forms.ComboBox cmb_curso;
         private System.Windows.Forms.Button btn_registrar;
-        private System.Windows.Forms.Button btn_pagar;
+        private System.Windows.Forms.Button btn_ingresar_dinero;
         private System.Windows.Forms.Label lbl_dinero;
         private System.Windows.Forms.TextBox txt_dinero;
         private System.Windows.Forms.Label lbl_id;
@@ -179,5 +200,7 @@ namespace tienda2.desinger
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroVendedoresToolStripMenuItem;
+        private System.Windows.Forms.Button btn_retirar_dineri;
+        private System.Windows.Forms.ToolStripMenuItem pruToolStripMenuItem;
     }
 }

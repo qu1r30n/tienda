@@ -15,8 +15,19 @@ namespace tienda2.clases
         string G_sucursal = "";
         string G_compu = "";
 
-        public void registro_simple(string id_patrocinador, string tabla, string datos, char caracter_separacion = '|', char caracter_separacion2 = '°')
+        public void registro_simple(string id_patrocinador, string tabla, string datos, char caracter_separacion = '|', char caracter_separacion2 = '°',bool viene_reg_comp=false)
         {
+            if (viene_reg_comp==false)
+            {
+                DateTime fecha_hora = DateTime.Now;
+                string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+                string dir = "sismul2\\mov\\mov_diario_det\\" + año_mes_dia + "_mov.txt";
+                bas.Crear_archivo_y_directorio(dir);
+                string info_movimiento = "reg_sim" + caracter_separacion + id_patrocinador + caracter_separacion + tabla + caracter_separacion + datos + caracter_separacion;
+                bas.Agregar(dir,info_movimiento);
+            }
+            
+
             datos = bas.Trimend_paresido(datos, '°');
 
             string direccion_tab_enc = "sismul2\\" + G_sucursal + G_compu + tabla + ".txt";
@@ -43,7 +54,14 @@ namespace tienda2.clases
 
         public string registro_complejo(string id_patrocinador, string tabla_patrocinador, string id_encargado, string tabla_usuario, string datos, char caracter_separacion = '|', char caracter_separacion2 = '°')
         {
-            datos=bas.Trimend_paresido(datos,'°');
+            DateTime fecha_hora = DateTime.Now;
+            string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+            string dir = "sismul2\\mov\\mov_diario_det\\" + año_mes_dia + "_mov.txt";
+            bas.Crear_archivo_y_directorio(dir);
+            string info_movimiento = "reg_comp" + caracter_separacion + id_patrocinador + caracter_separacion + tabla_patrocinador + caracter_separacion + id_encargado + caracter_separacion + tabla_usuario + caracter_separacion + datos + caracter_separacion;
+            bas.Agregar(dir, info_movimiento);
+
+            datos =bas.Trimend_paresido(datos,'°');
             //0_id_usuario|1_id_patrocinador|2_tabla_patrocinador|3_id_encargado|4_tabla_encargado|5_diner|6_a_pagar|7_datos|8_encargados|
             string direccion_tab_pat = "sismul2\\" + G_sucursal + G_compu + tabla_patrocinador + ".txt";
             bas.Crear_archivo_y_directorio(direccion_tab_pat, "0|0|ventas|0|tabla_encargado|0|0|nom°ap°etc|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|");
@@ -75,8 +93,17 @@ namespace tienda2.clases
             return info_base.Length+"";
         }
 
-        public void entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porsentajes_de_comision = "10|10|10", char caracter_separacion = '|')
+        public void entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porsentajes_de_comision = "10|10|10", char caracter_separacion = '|', bool viene_pago_comp = false)
         {
+            if (viene_pago_comp==false)
+            {
+                DateTime fecha_hora = DateTime.Now;
+                string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+                string dir = "sismul2\\mov\\mov_diario_det\\" + año_mes_dia + "_mov.txt";
+                bas.Crear_archivo_y_directorio(dir);
+                string info_movimiento = "ent_simp" + caracter_separacion + tabla_usuario + caracter_separacion + id_usuario + caracter_separacion + cantidad_dinero_string + caracter_separacion + porsentajes_de_comision + caracter_separacion;
+                bas.Agregar(dir, info_movimiento);
+            }
 
             string direccion_tab_enc = "sismul2\\" + G_sucursal + G_compu + tabla_usuario + ".txt";
             double cantidad_dinero = Convert.ToDouble(cantidad_dinero_string);
@@ -98,6 +125,13 @@ namespace tienda2.clases
 
         public void entrada_dinero_compuesto_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porcentaje_pat_directo = "10", string porcentaje_directo_enc_clase = "10", string porsentajes_de_comision_pat = "10|10|10", string porcentajes_de_comision_encargados = "10|10|10", char caracter_separacion = '|')
         {
+            DateTime fecha_hora = DateTime.Now;
+            string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+            string dir = "sismul2\\mov\\mov_diario_det\\" + año_mes_dia + "_mov.txt";
+            bas.Crear_archivo_y_directorio(dir);
+            string info_movimiento = "ent_comp" + caracter_separacion + tabla_usuario + caracter_separacion + id_usuario + caracter_separacion + cantidad_dinero_string + caracter_separacion + porcentaje_pat_directo + caracter_separacion + porcentaje_directo_enc_clase + caracter_separacion+ porsentajes_de_comision_pat+caracter_separacion+ porcentajes_de_comision_encargados+caracter_separacion;
+            bas.Agregar(dir, info_movimiento);
+
             string direccion_tab_enc = "sismul2\\" + G_sucursal + G_compu + tabla_usuario + ".txt";
             //0_id_usuario|1_id_patrocinador|2_tabla_patrocinador|3_id_encargado|4_tabla_encargado|5_diner|6_a_pagar|7_datos|8_encargados|
             string datos_usuario_string = bas.Seleccionar(direccion_tab_enc, 0, id_usuario);
@@ -128,12 +162,19 @@ namespace tienda2.clases
 
         }
 
-        public void retiro_de_dinero(string tabla_usuario, string id_usuario, string cantidad_dinero_string)
+        public void retiro_de_dinero(string tabla_usuario, string id_usuario, string cantidad_dinero_string,char caracter_separacion='|')
         {
+            DateTime fecha_hora = DateTime.Now;
+            string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
+            string dir = "sismul2\\mov\\mov_diario_det\\" + año_mes_dia + "_mov.txt";
+            bas.Crear_archivo_y_directorio(dir);
+            string info_movimiento = "ret" + caracter_separacion + tabla_usuario + caracter_separacion + id_usuario + caracter_separacion + cantidad_dinero_string + caracter_separacion;
+            bas.Agregar(dir, info_movimiento);
+            
+
             string direccion_tab_enc = "sismul2\\" + G_sucursal + G_compu + tabla_usuario + ".txt";
             double cantidad_dinero = Convert.ToDouble(cantidad_dinero_string);
             bas.Incrementa_celda(direccion_tab_enc, 0, id_usuario, "6", "" + (cantidad_dinero * -1));
-
 
         }
 

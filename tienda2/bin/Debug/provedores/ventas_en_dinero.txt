@@ -13,12 +13,12 @@ valentina|25
 marlboro|126
 coca|0
 maravilla|247.5
-medicamento|575
+medicamento|598
 pepsi|68
 dulceria|36
 magadan|1204
 salma|183
-guna|410
+guna|451
 pomada labiual|24
 no se sabe|27
 bodega aurrera|40

@@ -20,7 +20,7 @@ namespace tienda2.clases
             }
 
             //la_estructura_que_puse---------------------------------------------
-            //arreglos_compuestos arr_comp = new arreglos_compuestos();
+            //arreglos_co1mpuestos arr_comp = new arreglos_compuestos();
             //string[] arreglo_de_arreglos = new string[] { "1|2|3°4°5°6°7¬8¬9¬10°11°12|13", "2|2|3°4°5°6°7¬8¬9¬10°11°12|13", "3|2|3°4°5°6°7¬8¬9¬10°11°12|13", "4|2|3°4°5°6°7¬8¬9¬10°11°12|13", "5|2|3°4°5°6°7¬8¬9¬10°11°12|13" };
             //int[] columna_donde_esta_arreglo = new int[] { 2, 4 };
             //char[] caracteres_separacion = new char[] { '|', '°', '¬' };

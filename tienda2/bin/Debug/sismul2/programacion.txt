@@ -3,5 +3,5 @@
 2|3|ventas|1|programacion|0|0|usuario_2°usuario_2°usuario_2°0°usuario_2°usuario_2°0°usuario_2°usuario_2°usuario_2°usuario_2°usuario_2|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|
 3|3|ventas|2|programacion|0|10|usuario_3°usuario_3°usuario_3°0°usuario_3°usuario_3°0°usuario_3°usuario_3°usuario_3°usuario_3°usuario_3|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|
 4|3|ventas|3|programacion|0|10|usuario_4°usuario_4°usuario_4°0°usuario_4°usuario_4°0°usuario_4°usuario_4°usuario_4°usuario_4°usuario_4|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|
-5|3|ventas|4|programacion|0|20|usuario_5°usuario_5°usuario_5°0°usuario_5°usuario_5°0°usuario_5°usuario_5°usuario_5°usuario_5°usuario_5|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|
-6|4|ventas|5|programacion|0|0|nom6°ap_p°ap_m°0°banc°curp°0°dir°col°mun°estado°correo|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|
+5|3|ventas|4|programacion|0|120|usuario_5°usuario_5°usuario_5°0°usuario_5°usuario_5°0°usuario_5°usuario_5°usuario_5°usuario_5°usuario_5|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|
+6|4|ventas|5|programacion|0|100|nom6°ap_p°ap_m°0°banc°curp°0°dir°col°mun°estado°correo|0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0°0|
