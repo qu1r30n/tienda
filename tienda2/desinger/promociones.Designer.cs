@@ -38,9 +38,12 @@ namespace tienda2.desinger
             this.Btn_eliminar_todo = new System.Windows.Forms.Button();
             this.Btn_eliminar_seleccionado = new System.Windows.Forms.Button();
             this.lst_promociones_puestas = new System.Windows.Forms.ListBox();
-            this.lstb_produc_promo = new System.Windows.Forms.ListBox();
             this.btn_agregar_promo = new System.Windows.Forms.Button();
             this.btn_elim_promo = new System.Windows.Forms.Button();
+            this.lbl_precio_promo = new System.Windows.Forms.Label();
+            this.txt_precio_promo = new System.Windows.Forms.TextBox();
+            this.lstb_produc_promo = new System.Windows.Forms.ListBox();
+            this.lbl_nom_promo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -83,7 +86,7 @@ namespace tienda2.desinger
             // 
             // Btn_elim_ultimo
             // 
-            this.Btn_elim_ultimo.Location = new System.Drawing.Point(502, 113);
+            this.Btn_elim_ultimo.Location = new System.Drawing.Point(503, 201);
             this.Btn_elim_ultimo.Name = "Btn_elim_ultimo";
             this.Btn_elim_ultimo.Size = new System.Drawing.Size(75, 40);
             this.Btn_elim_ultimo.TabIndex = 42;
@@ -93,7 +96,7 @@ namespace tienda2.desinger
             // 
             // Btn_procesar_venta
             // 
-            this.Btn_procesar_venta.Location = new System.Drawing.Point(502, 159);
+            this.Btn_procesar_venta.Location = new System.Drawing.Point(503, 247);
             this.Btn_procesar_venta.Name = "Btn_procesar_venta";
             this.Btn_procesar_venta.Size = new System.Drawing.Size(75, 23);
             this.Btn_procesar_venta.TabIndex = 41;
@@ -103,7 +106,7 @@ namespace tienda2.desinger
             // 
             // Btn_eliminar_todo
             // 
-            this.Btn_eliminar_todo.Location = new System.Drawing.Point(502, 80);
+            this.Btn_eliminar_todo.Location = new System.Drawing.Point(503, 168);
             this.Btn_eliminar_todo.Name = "Btn_eliminar_todo";
             this.Btn_eliminar_todo.Size = new System.Drawing.Size(75, 23);
             this.Btn_eliminar_todo.TabIndex = 43;
@@ -113,7 +116,7 @@ namespace tienda2.desinger
             // 
             // Btn_eliminar_seleccionado
             // 
-            this.Btn_eliminar_seleccionado.Location = new System.Drawing.Point(502, 32);
+            this.Btn_eliminar_seleccionado.Location = new System.Drawing.Point(503, 120);
             this.Btn_eliminar_seleccionado.Name = "Btn_eliminar_seleccionado";
             this.Btn_eliminar_seleccionado.Size = new System.Drawing.Size(86, 42);
             this.Btn_eliminar_seleccionado.TabIndex = 44;
@@ -129,15 +132,6 @@ namespace tienda2.desinger
             this.lst_promociones_puestas.Size = new System.Drawing.Size(239, 251);
             this.lst_promociones_puestas.TabIndex = 45;
             this.lst_promociones_puestas.SelectedIndexChanged += new System.EventHandler(this.Lst_ventas_SelectedIndexChanged);
-            // 
-            // lstb_produc_promo
-            // 
-            this.lstb_produc_promo.FormattingEnabled = true;
-            this.lstb_produc_promo.Location = new System.Drawing.Point(257, 19);
-            this.lstb_produc_promo.Name = "lstb_produc_promo";
-            this.lstb_produc_promo.Size = new System.Drawing.Size(239, 251);
-            this.lstb_produc_promo.TabIndex = 45;
-            this.lstb_produc_promo.SelectedIndexChanged += new System.EventHandler(this.Lst_ventas_SelectedIndexChanged);
             // 
             // btn_agregar_promo
             // 
@@ -159,14 +153,53 @@ namespace tienda2.desinger
             this.btn_elim_promo.UseVisualStyleBackColor = true;
             this.btn_elim_promo.Click += new System.EventHandler(this.btn_elim_promo_Click);
             // 
+            // lbl_precio_promo
+            // 
+            this.lbl_precio_promo.AutoSize = true;
+            this.lbl_precio_promo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_precio_promo.Location = new System.Drawing.Point(502, 19);
+            this.lbl_precio_promo.Name = "lbl_precio_promo";
+            this.lbl_precio_promo.Size = new System.Drawing.Size(113, 20);
+            this.lbl_precio_promo.TabIndex = 47;
+            this.lbl_precio_promo.Text = "precio promo";
+            // 
+            // txt_precio_promo
+            // 
+            this.txt_precio_promo.Location = new System.Drawing.Point(506, 42);
+            this.txt_precio_promo.Name = "txt_precio_promo";
+            this.txt_precio_promo.Size = new System.Drawing.Size(100, 20);
+            this.txt_precio_promo.TabIndex = 48;
+            // 
+            // lstb_produc_promo
+            // 
+            this.lstb_produc_promo.FormattingEnabled = true;
+            this.lstb_produc_promo.Location = new System.Drawing.Point(257, 19);
+            this.lstb_produc_promo.Name = "lstb_produc_promo";
+            this.lstb_produc_promo.Size = new System.Drawing.Size(239, 251);
+            this.lstb_produc_promo.TabIndex = 49;
+            this.lstb_produc_promo.DoubleClick += new System.EventHandler(this.lstb_produc_promo_DoubleClick);
+            // 
+            // lbl_nom_promo
+            // 
+            this.lbl_nom_promo.AutoSize = true;
+            this.lbl_nom_promo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nom_promo.Location = new System.Drawing.Point(503, 3);
+            this.lbl_nom_promo.Name = "lbl_nom_promo";
+            this.lbl_nom_promo.Size = new System.Drawing.Size(147, 16);
+            this.lbl_nom_promo.TabIndex = 50;
+            this.lbl_nom_promo.Text = "nombre de la promo";
+            // 
             // promociones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 343);
+            this.ClientSize = new System.Drawing.Size(651, 343);
+            this.Controls.Add(this.lbl_nom_promo);
+            this.Controls.Add(this.lstb_produc_promo);
+            this.Controls.Add(this.txt_precio_promo);
+            this.Controls.Add(this.lbl_precio_promo);
             this.Controls.Add(this.btn_elim_promo);
             this.Controls.Add(this.btn_agregar_promo);
-            this.Controls.Add(this.lstb_produc_promo);
             this.Controls.Add(this.lst_promociones_puestas);
             this.Controls.Add(this.Btn_elim_ultimo);
             this.Controls.Add(this.Btn_procesar_venta);
@@ -178,6 +211,7 @@ namespace tienda2.desinger
             this.Controls.Add(this.Txt_buscar_producto);
             this.Name = "promociones";
             this.Text = "promociones";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.promociones_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,8 +228,11 @@ namespace tienda2.desinger
         private System.Windows.Forms.Button Btn_eliminar_todo;
         private System.Windows.Forms.Button Btn_eliminar_seleccionado;
         private System.Windows.Forms.ListBox lst_promociones_puestas;
-        private System.Windows.Forms.ListBox lstb_produc_promo;
         private System.Windows.Forms.Button btn_agregar_promo;
         private System.Windows.Forms.Button btn_elim_promo;
+        private System.Windows.Forms.Label lbl_precio_promo;
+        private System.Windows.Forms.TextBox txt_precio_promo;
+        private System.Windows.Forms.ListBox lstb_produc_promo;
+        private System.Windows.Forms.Label lbl_nom_promo;
     }
 }
