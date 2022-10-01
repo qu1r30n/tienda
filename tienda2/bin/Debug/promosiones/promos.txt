@@ -1,5 +1,2 @@
 nombre_promocion|codigo_barras_1¬cantidad_del_producto°codigo_barras_2¬cantidad_del_producto|precio||
-pru|70330717534¬1¬rastrillo comfort bic¬101¬115°8000500126936¬1¬ferrero 50g¬0¬43||
-pru2|70330717534¬1¬rastrillo comfort bic¬101¬115°8000500126936¬1¬ferrero 50g¬0¬43°9002490100070¬1¬red bull 250ml¬33.5¬41||
-pru3|70330717534¬1¬rastrillo comfort bic¬101¬115||
-pru5|70330717534¬1¬rastrillo comfort bic¬101¬115°9002490100070¬1¬red bull 250ml¬33.5¬41|100|
+p||100|

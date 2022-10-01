@@ -200,6 +200,7 @@ id_0|producto_1|precio_de_venta_2|0_3|0|costo_compra_5|provedor_6|grupo_7|multiu
 199|maruchan camaron piquin 64gr|13.5|41789001987|0|9.17|casa vargas|1°producto||1||
 200|always seca 8 toallas|23|56100024798|0|18|salma|1°producto||1||
 201|rastrillo comfort bic|115|70330717534|-1|101|medicamento|1°producto||10||
+201|rastrillo comfort bic|115|70330717534|-1|101|medicamento|1°producto||10||
 202|rastrillo bic confort 3 hojas|13|70330724341|0|10|bic|1°producto||10||
 203|cajeta quemada 370 g|35|74323083651|0|30.12|ricolino|1°producto||1||
 204|frijoles con choriso 430g|16|78883240547|0|0|la sierra|1°producto||1||
@@ -1808,7 +1809,6 @@ id_0|producto_1|precio_de_venta_2|0_3|0|costo_compra_5|provedor_6|grupo_7|multiu
 1809|salsa de soya 140ml|21|7501058628503|0|13.36|nestle|1||1||
 1810|gerber ciruela pasa 100g|13.5|7506475102483|0|8.15|nestle|1||1||
 1811|carlos v blanco stick 8gr|3.5|7501058654281|0|1.53|nestle|1||30||
-1812|rastrillo bic|115|70330717534|-1|101|medicamento|1||1||
 1813|vaso desechable #8|29|7501219114272|0|24|sabormex|1||5||
 1814|poett 900ml|17|7501071900280|0|12.5|salma|1||1||
 1815|valentina negra|15|97339000061|0|0|casa vargas|1||1||
@@ -2793,7 +2793,6 @@ id_0|producto_1|precio_de_venta_2|0_3|0|costo_compra_5|provedor_6|grupo_7|multiu
 2797|cerillos maya|3|077910000031|0|0|casa vargas|1||1||
 2798|link rojos 20|30|7538055263468|0|0|link|1||1||
 2799|pallman manzana 20|64|75068363|0|0|pallman|1||1||
-2800|rastrillo bic|30|070330717534|0|0|casa vargas|1||1||
 2801|rastrillo gillet ultra grip|35|7500435154420|0|0|casa vargas|1||1||
 2802|duracel cuadrada|35|041333001043|0|0|casa vargas|1||1||
 2803|duracel AAA|20|041333428482|0|0|casa vargas|1||1||

@@ -13,9 +13,10 @@ namespace tienda2.desinger
 {
     public partial class promociones : Form
     {
-        
+
         Tex_base bas = new Tex_base();
-        string dir_promo = "promosiones\\promos.txt";
+        string G_direccion_inventario = "inf\\inventario\\invent.txt";
+        string G_dir_promo = "promosiones\\promos.txt";
         List<string> lista_promos_var = new List<string>();
         bool se_guardo = false;
 
@@ -25,8 +26,8 @@ namespace tienda2.desinger
         public promociones()
         {
             InitializeComponent();
-            bas.Crear_archivo_y_directorio(dir_promo, "nombre_promocion|codigo_barras_1¬cantidad_del_producto¬nombre_producto_1°codigo_barras_2¬cantidad_del_producto¬nombre_productp_2|precio|");
-            string[] promociones_todas = bas.Leer(dir_promo);
+            bas.Crear_archivo_y_directorio(G_dir_promo, "nombre_promocion|codigo_barras_1¬cantidad_del_producto¬nombre_producto_1°codigo_barras_2¬cantidad_del_producto¬nombre_productp_2|precio|");
+            string[] promociones_todas = bas.Leer(G_dir_promo);
             recargar_lista_izquierda();
             Recargar_texbox();
         }
@@ -37,48 +38,87 @@ namespace tienda2.desinger
             recargar_lista_izquierda();
             lstb_produc_promo.Items.Clear();
             txt_precio_promo.Text = "";
-            lbl_nom_promo.Text="nombre promo";
+            lbl_nom_promo.Text = "nombre promo";
             lbl_precio_promo.Text = "precio promo";
         }
 
         private void Btn_elim_ultimo_Click(object sender, EventArgs e)
         {
-
+            lstb_produc_promo.Items.Remove(lstb_produc_promo.Items[lstb_produc_promo.Items.Count - 1]);
+            modificacion_promo();
+            recargar_lista_izquierda();
+            recargar_lista_derecha();
         }
 
         private void Btn_eliminar_todo_Click(object sender, EventArgs e)
         {
-
+            lstb_produc_promo.Items.Clear();
+            modificacion_promo();
+            recargar_lista_izquierda();
+            recargar_lista_derecha();
         }
 
         private void Btn_eliminar_seleccionado_Click(object sender, EventArgs e)
         {
-
+            lstb_produc_promo.Items.RemoveAt(lstb_produc_promo.SelectedIndex);
+            modificacion_promo();
+            recargar_lista_izquierda();
+            recargar_lista_derecha();
         }
 
+        //-----------------------------------------------------------------
+        string g_ultimo_dato_introducido = "";
         private void Txt_buscar_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
+
             if (e.KeyValue == (char)(Keys.Enter))
             {
-                string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
-                Procesar_codigo_del_textbox_para_promo(info[0], info[3], info[5], info[2]);
+                try
+                {
+                    Ventana_emergente ven_eme = new Ventana_emergente();
+                    string[] enviar = new string[] { "1°cantidad°0°2" };
+                    string cantidad = ven_eme.Proceso_ventana_emergente(enviar);
+                    cantidad = bas.Trimend_paresido(cantidad, '|');
+
+                    string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
+                    Procesar_codigo_del_textbox_para_promo(info[0], cantidad);
+                    g_ultimo_dato_introducido = Txt_buscar_producto.Text;
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("no existe el producto o " + ex);
+                }
+
             }
+            
+
             Txt_buscar_producto.Text = "";
             Txt_nom_producto.Text = "";
             Txt_buscar_producto.Focus();
         }
-
+        //------------------------------------------------------------------
         private void Txt_nom_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
+            if (e.KeyValue == (char)(Keys.Enter))
+            {
+                string[] info = Txt_nom_producto.Text.Split(G_parametros[0]);
+                Procesar_codigo2(info[0]);
+                Txt_buscar_producto.Focus();
 
+            }
         }
 
         private void Lst_ventas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] lista_esplit=lst_promociones_puestas.SelectedItem.ToString().Split('|');
-            lbl_nom_promo.Text = lista_esplit[0];
-            recargar_lista_derecha();
-
+            string temp_comparar = lst_promociones_puestas.SelectedItem+"";
+            txt_seleccionado.Text = temp_comparar;
+            if (temp_comparar!="")
+            {
+                string[] lista_esplit = lst_promociones_puestas.SelectedItem.ToString().Split('|');
+                lbl_nom_promo.Text = lista_esplit[0];
+                recargar_lista_derecha();
+            }
         }
 
         private void btn_agregar_promo_Click(object sender, EventArgs e)
@@ -90,7 +130,7 @@ namespace tienda2.desinger
             nombre_de_la_promo = bas.Trimend_paresido(nombre_de_la_promo);
             //"nombre_promocion|codigo_barras_1¬cantidad_del_producto°codigo_barras_2¬cantidad_del_producto|precio|
             string dat_a_ingresar = nombre_de_la_promo + "|||";
-            bas.Agregar(dir_promo, dat_a_ingresar);
+            bas.Agregar(G_dir_promo, dat_a_ingresar);
             lista_promos_var.Add(dat_a_ingresar);
             lst_promociones_puestas.Items.Add(dat_a_ingresar);
         }
@@ -101,7 +141,7 @@ namespace tienda2.desinger
             if(resultado_dialog == DialogResult.Yes)
             {
                 string[] promo_spliteada = lst_promociones_puestas.SelectedItem.ToString().Split('|');
-                bas.Eliminar(dir_promo, promo_spliteada[0],0);
+                bas.Eliminar(G_dir_promo, promo_spliteada[0],0);
                 
                 recargar_lista_izquierda();
                 
@@ -118,7 +158,7 @@ namespace tienda2.desinger
             lst_promociones_puestas.Items.Clear();
             lista_promos_var.Clear();
 
-            string[] promociones_todas = bas.Leer(dir_promo);
+            string[] promociones_todas = bas.Leer(G_dir_promo);
             for (int i = 1; i < promociones_todas.Length; i++)
             {
 
@@ -131,17 +171,22 @@ namespace tienda2.desinger
 
         private void lstb_produc_promo_DoubleClick(object sender, EventArgs e)
         {
-            string[] produc_esplit = lstb_produc_promo.SelectedItem.ToString().Split('¬');
+            string temp_comp2 = lstb_produc_promo.SelectedItem + "";
+            if (temp_comp2!="")
+            {
+                string[] produc_esplit = lstb_produc_promo.SelectedItem.ToString().Split('¬');
 
-            Ventana_emergente vent_emer = new Ventana_emergente();
-            string[] enviar;
-            enviar = new string[] { "1°cantidad_producto°0°2" };
-            string nueva_cantidad_producto = vent_emer.Proceso_ventana_emergente(enviar);
-            nueva_cantidad_producto = bas.Trimend_paresido(nueva_cantidad_producto);
-            produc_esplit[1] = nueva_cantidad_producto;
+                Ventana_emergente vent_emer = new Ventana_emergente();
+                string[] enviar;
+                enviar = new string[] { "1°cantidad_producto°0°2" };
+                string nueva_cantidad_producto = vent_emer.Proceso_ventana_emergente(enviar);
+                nueva_cantidad_producto = bas.Trimend_paresido(nueva_cantidad_producto);
+                produc_esplit[1] = nueva_cantidad_producto;
 
-            lstb_produc_promo.Items[lstb_produc_promo.SelectedIndex] = string.Join("¬", produc_esplit);
-            
+                lstb_produc_promo.Items[lstb_produc_promo.SelectedIndex] = string.Join("¬", produc_esplit);
+
+            }
+
         }
 
         private void promociones_FormClosing(object sender, FormClosingEventArgs e)
@@ -161,14 +206,14 @@ namespace tienda2.desinger
 
             Tex_base bas = new Tex_base();
 
-            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7|8", G_parametros[0]);
+            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|8", G_parametros[0]);
             Txt_nom_producto.AutoCompleteCustomSource.Clear();
             for (int k = 1; k < imprimir.Length; k++)
             {
                 Txt_nom_producto.AutoCompleteCustomSource.Add("" + imprimir[k]);
             }
 
-            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7|8", G_parametros[0]);
+            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|8", G_parametros[0]);
 
             for (int k = 1; k < imprimir2.Length; k++)
             {
@@ -178,8 +223,17 @@ namespace tienda2.desinger
         }
 
 
-        public void Procesar_codigo_del_textbox_para_promo(string codigo,string nombre_producto,string precio_comp, string precio_vent, string cantidad_a_sumar_o_restar = "1")
+        public void Procesar_codigo_del_textbox_para_promo(string codigo, string cantidad_a_sumar_o_restar = "1")
         {
+            //--------------------------------------------------------------------------------------------------------
+            string datos_codigo = bas.Seleccionar(G_direccion_inventario, 3, codigo, "1|5|2");
+            string[] datos_cod_split = datos_codigo.Split('°');//este se pone por que cuando encuetra dos registros con el mismo codigo le pone un ° para diferenciar ambos
+            string[] datos_cod_split2 = datos_cod_split[0].Split('|');
+            string nombre_producto = datos_cod_split2[0];
+            string precio_comp = datos_cod_split2[1];
+            string precio_vent = datos_cod_split2[2];
+            //--------------------------------------------------------------------------------------------------------
+
             bool bandera = false;
             for (int i = 0; i < lstb_produc_promo.Items.Count; i++)
             {
@@ -189,6 +243,9 @@ namespace tienda2.desinger
                     product_espliteado[1] = "" + (Convert.ToDouble(product_espliteado[1]) + Convert.ToDouble(cantidad_a_sumar_o_restar));
                     lstb_produc_promo.Items[i] = string.Join("¬", product_espliteado);
                     bandera = true;
+                    modificacion_promo();
+                    recargar_lista_izquierda();
+                    //recargar_lista_derecha();
                 }
                 
             }
@@ -202,7 +259,7 @@ namespace tienda2.desinger
                 }
                 resultado = bas.Trimend_paresido(resultado, '°');
 
-                bas.Editar_espesifico(dir_promo, 0, lbl_nom_promo.Text, "1|2", resultado + "|" + txt_precio_promo.Text);
+                bas.Editar_espesifico(G_dir_promo, 0, lbl_nom_promo.Text, "1|2", resultado + "|" + txt_precio_promo.Text);
                 recargar_lista_izquierda();
 
                 recargar_lista_derecha();
@@ -252,13 +309,85 @@ namespace tienda2.desinger
             }
             resultado = bas.Trimend_paresido(resultado, '°');
 
-            bas.Editar_espesifico(dir_promo, 0, lbl_nom_promo.Text, "1|2", resultado + "|" + txt_precio_promo.Text);
+            bas.Editar_espesifico(G_dir_promo, 0, lbl_nom_promo.Text, "1|2", resultado + "|" + txt_precio_promo.Text);
             recargar_lista_izquierda();
             //--------------------------------------------------------
         }
 
+        private void Procesar_codigo2(string codigo)
+        {
+
+            for (int i = 0; i < G_productos.Count; i++)
+            {
+                String[] temp = G_productos[i].Split(G_parametros[0]);
+                if (codigo == temp[3])
+                {
+                    Txt_buscar_producto.Text = temp[0];
+                    Txt_nom_producto.Text = temp[3];
+                    break;
+                }
+            }
+        }
+
+        private void lstb_produc_promo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txt_seleccionado.Text = lstb_produc_promo.SelectedItem + "";
+            g_ultimo_seleccionado_list_izq = lstb_produc_promo.SelectedIndex;
+        }
+
+        int g_ultimo_seleccionado_list_izq = 0;
+        private void lstb_produc_promo_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyValue == (char)(Keys.Add))
+            {
+                string[] item_spliteado = lstb_produc_promo.Items[g_ultimo_seleccionado_list_izq].ToString().Split(G_parametros);
+                Procesar_codigo_del_textbox_para_promo(item_spliteado[0], "1");
+            }
+            else if (e.KeyValue == (char)(Keys.Subtract))
+            {
+                string[] item_spliteado = lstb_produc_promo.Items[g_ultimo_seleccionado_list_izq].ToString().Split(G_parametros);
+
+                Procesar_codigo_del_textbox_para_promo(item_spliteado[0], "-1");
+                item_spliteado = null;
+                item_spliteado = lstb_produc_promo.Items[g_ultimo_seleccionado_list_izq].ToString().Split(G_parametros);
+                if (Convert.ToDouble(item_spliteado[1]) <= 0)//posible error futuro esto lo ago porque nose porque aveses son 9 elementos y aveses 8  luego vemos o el punto talves sea no modificar el ultimo 
+                {
+                    lstb_produc_promo.Items.RemoveAt(g_ultimo_seleccionado_list_izq);
+                    modificacion_promo();
+                    recargar_lista_izquierda();
+                    recargar_lista_derecha();
+                }
+            }
+        }
+
+        private void Txt_buscar_producto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '+')
+            {
+                string[] item_spliteado = lstb_produc_promo.Items[lstb_produc_promo.Items.Count - 1].ToString().Split(G_parametros);
+                Procesar_codigo_del_textbox_para_promo(item_spliteado[0], "1");
+
+                e.KeyChar = '\0';
+            }
+
+            else if (e.KeyChar == '-')
+            {
+                string[] item_spliteado = lstb_produc_promo.Items[lstb_produc_promo.Items.Count - 1].ToString().Split(G_parametros);
+
+                Procesar_codigo_del_textbox_para_promo(item_spliteado[0], "-1");
+                item_spliteado = null;
+                item_spliteado = lstb_produc_promo.Items[lstb_produc_promo.Items.Count - 1].ToString().Split(G_parametros);
+                if (Convert.ToDouble(item_spliteado[1]) <= 0)//posible error futuro el .length lo tengo que usar por que nose porque aveses tiene 9 elementos y aveses 8
+                {
+                    lstb_produc_promo.Items.RemoveAt(lstb_produc_promo.Items.Count - 1);
+                    modificacion_promo();
+                    recargar_lista_izquierda();
+                    recargar_lista_derecha();
+                }
 
 
-
+                e.KeyChar = '\0';
+            }
+        }
     }
 }
