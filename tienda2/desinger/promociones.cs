@@ -26,7 +26,7 @@ namespace tienda2.desinger
         public promociones()
         {
             InitializeComponent();
-            bas.Crear_archivo_y_directorio(G_dir_promo, "nombre_promocion|codigo_barras_1¬cantidad_del_producto¬nombre_producto_1°codigo_barras_2¬cantidad_del_producto¬nombre_productp_2|precio|");
+            bas.Crear_archivo_y_directorio(G_dir_promo, "nombre_promocion|codigo_barras_1¬cantidad_del_producto¬nombre_producto_1¬cost_comp_1¬cost_vent_1°codigo_barras_2¬cantidad_del_producto¬nombre_productp_2¬cost_comp_2¬cost_vent_2|precio|");
             string[] promociones_todas = bas.Leer(G_dir_promo);
             recargar_lista_izquierda();
             Recargar_texbox();
@@ -128,7 +128,7 @@ namespace tienda2.desinger
             enviar = new string[] { "1°nombre_de_la_promocion" };
             string nombre_de_la_promo = vent_emer.Proceso_ventana_emergente(enviar);
             nombre_de_la_promo = bas.Trimend_paresido(nombre_de_la_promo);
-            //"nombre_promocion|codigo_barras_1¬cantidad_del_producto°codigo_barras_2¬cantidad_del_producto|precio|
+            //"nombre_promocion|codigo_barras_1¬cantidad_del_producto¬nombre¬precio_comp¬precio_vent°codigo_barras_2¬cantidad_del_producto¬nombre¬precio_comp¬precio_vent|precio|
             string dat_a_ingresar = nombre_de_la_promo + "|||";
             bas.Agregar(G_dir_promo, dat_a_ingresar);
             lista_promos_var.Add(dat_a_ingresar);

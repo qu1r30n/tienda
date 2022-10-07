@@ -55,6 +55,9 @@ namespace tienda2.desinger
             this.Txt_nom_producto = new System.Windows.Forms.TextBox();
             this.Txt_buscar_producto = new System.Windows.Forms.TextBox();
             this.btn_restaurar = new System.Windows.Forms.Button();
+            this.lstb_promociones = new System.Windows.Forms.ListBox();
+            this.txt_movimiento = new System.Windows.Forms.TextBox();
+            this.lstb_descripcion_promo = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_product)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +69,7 @@ namespace tienda2.desinger
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(396, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(737, 24);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -303,11 +306,40 @@ namespace tienda2.desinger
             this.btn_restaurar.UseVisualStyleBackColor = true;
             this.btn_restaurar.Click += new System.EventHandler(this.btn_restaurar_Click);
             // 
+            // lstb_promociones
+            // 
+            this.lstb_promociones.FormattingEnabled = true;
+            this.lstb_promociones.Location = new System.Drawing.Point(390, 40);
+            this.lstb_promociones.Name = "lstb_promociones";
+            this.lstb_promociones.Size = new System.Drawing.Size(174, 342);
+            this.lstb_promociones.TabIndex = 43;
+            this.lstb_promociones.SelectedIndexChanged += new System.EventHandler(this.lstb_promociones_SelectedIndexChanged);
+            this.lstb_promociones.DoubleClick += new System.EventHandler(this.lstb_promociones_DoubleClick);
+            // 
+            // txt_movimiento
+            // 
+            this.txt_movimiento.Location = new System.Drawing.Point(12, 404);
+            this.txt_movimiento.Name = "txt_movimiento";
+            this.txt_movimiento.Size = new System.Drawing.Size(526, 20);
+            this.txt_movimiento.TabIndex = 44;
+            // 
+            // lstb_descripcion_promo
+            // 
+            this.lstb_descripcion_promo.FormattingEnabled = true;
+            this.lstb_descripcion_promo.Location = new System.Drawing.Point(570, 40);
+            this.lstb_descripcion_promo.Name = "lstb_descripcion_promo";
+            this.lstb_descripcion_promo.Size = new System.Drawing.Size(155, 342);
+            this.lstb_descripcion_promo.TabIndex = 45;
+            this.lstb_descripcion_promo.SelectedIndexChanged += new System.EventHandler(this.lstb_descripcion_promo_SelectedIndexChanged);
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 411);
+            this.ClientSize = new System.Drawing.Size(737, 436);
+            this.Controls.Add(this.lstb_descripcion_promo);
+            this.Controls.Add(this.txt_movimiento);
+            this.Controls.Add(this.lstb_promociones);
             this.Controls.Add(this.btn_restaurar);
             this.Controls.Add(this.lbl_modo_inventario);
             this.Controls.Add(this.btn_guardar_venta);
@@ -367,5 +399,8 @@ namespace tienda2.desinger
         private System.Windows.Forms.Button btn_restaurar;
         private System.Windows.Forms.ToolStripMenuItem prestamosdeproddinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasabajoarribaToolStripMenuItem;
+        private System.Windows.Forms.ListBox lstb_promociones;
+        private System.Windows.Forms.TextBox txt_movimiento;
+        private System.Windows.Forms.ListBox lstb_descripcion_promo;
     }
 }
