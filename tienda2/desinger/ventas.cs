@@ -181,6 +181,7 @@ namespace tienda2.desinger
                 cv.codigo_barras_list.Add("" + temporal_s[0]);
                 cv.nombre_productos.Add("" + temporal_s[3]);
                 cv.provedor.Add("" + temporal_s[6]);
+                cv.promo.Add(temporal_s[9]);
 
                 decimal total_precio_productos = Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[8]);
                 if (temporal_s[0] != "")

@@ -3,7 +3,7 @@ bic|0
 orbit|0
 las delicias|15
 kinder|286
-casa vargas|105.5
+casa vargas|320.5
 skarch|0
 red cola|0
 dorco|5
@@ -13,7 +13,7 @@ valentina|25
 marlboro|126
 coca|0
 maravilla|247.5
-medicamento|943
+medicamento|1633
 pepsi|68
 dulceria|36
 magadan|1204
@@ -26,3 +26,4 @@ bimbo|14
 bimbo dulce|0
 tia rosa|54
 ghd|153
+promocion|1990

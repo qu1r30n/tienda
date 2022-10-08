@@ -49,6 +49,7 @@ namespace tienda2.desinger
                     Tex_base bas = new Tex_base();
                     string temp = "";
                     string cantidades_de_productos = "";
+                    string promos_string = "";
 
                     string direccion = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\ventas\\" + fecha_hora.ToString("yyyyMMdd") + "_vendidos.txt";
                     string direccion2 = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\ventas\\provedores\\";
@@ -58,6 +59,7 @@ namespace tienda2.desinger
                     {
                         temp = temp + codigo_barras_list[i] + G_parametros[0];
                         cantidades_de_productos = cantidades_de_productos + cantidad[i] + G_parametros[0];
+                        promos_string = promos_string + promo[i] + G_parametros[0];
 
                         string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
                         string direccion_inventario_hacer = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\tienda_inventarios\\" + año_mes_dia + "_todo_tienda.txt";
@@ -112,13 +114,19 @@ namespace tienda2.desinger
 
                     temp = op_text.Trimend_paresido(temp, G_parametros[0]);
                     cantidades_de_productos = op_text.Trimend_paresido(cantidades_de_productos, G_parametros[0]);
+                    promos_string = op_text.Trimend_paresido(promos_string, G_parametros[0]);
 
 
                     string[] codigos_Barras = temp.Split(G_parametros[0]);
                     string[] cant_productos = cantidades_de_productos.Split(G_parametros[0]);
+                    string[] promos_son= promos_string.Split(G_parametros[0]);
 
                     Modelo_compra_venta mod_com_vent = new Modelo_compra_venta();
-                    mod_com_vent.Modelo_venta(codigos_Barras, cant_productos);
+
+                    mod_com_vent.Modelo_venta(codigos_Barras, cant_productos,promos_son);
+
+
+
                     this.Close();
                 }
                 else

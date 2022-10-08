@@ -10,7 +10,7 @@ namespace tienda2.clases
     {
         char[] G_parametros = { '|', '°', '¬', '^' };
 
-        public void Modelo_compra(string codigo, string costo_compra, string cantidad, string provedor, string nom_producto, string id_producto, string info_extra = null, bool compra_directa = true,string cantidad_pagada_de_caja="0")
+        public void Modelo_compra(string codigo, string costo_compra, string cantidad, string provedor, string nom_producto, string id_producto, string info_extra = null, bool compra_directa = true, string cantidad_pagada_de_caja = "0")
         {
             DateTime fecha_hora = DateTime.Now;
             //string hora_min_seg = fecha_hora.ToString("HH:mm:ss");
@@ -81,7 +81,7 @@ namespace tienda2.clases
 
 
         }
-        public void Modelo_venta(string[] codigo, string[] cantidades_vendidas)
+        public void Modelo_venta(string[] codigo, string[] cantidades_vendidas, string[] promo)
         {
             string codigos_unidos = string.Join("°", codigo);
             DateTime fecha_hora = DateTime.Now;
@@ -97,26 +97,73 @@ namespace tienda2.clases
             decimal acum_costo_venta = 0, acum_costo_compra = 0;
             string[] nom_productos = new string[codigo.Length];
             string[] provedores = new string[codigo.Length];
-            for (int j = 0; j < productos.Length; j++)
+            for (int l = 0; l < promo.Length; l++)
             {
-                string[] prod_esplit = productos[j].Split(G_parametros[0]);
-                for (int i = 0; i < codigo.Length; i++)
-                {
 
-                    if (prod_esplit[3] == codigo[i])
+                if (promo[l] == "1")
+                {
+                    ndfsnosadfjjndsf
+
+                    for (int i = 0; i < codigo.Length; i++)
                     {
-                        if (cantidades_vendidas[i] == "")//con esto se pone la cantidad que se vendio por cada cosa si no tiene cantidad le pone 1 para que sea un producto 
+
+                        for (int j = 0; j < productos.Length; j++)
                         {
-                            cantidades_vendidas[i] = "1";
+                            string[] prod_esplit = productos[j].Split(G_parametros[0]);
+
+                            if (prod_esplit[3] == codigo[i])
+                            {
+                                if (cantidades_vendidas[i] == "")//con esto se pone la cantidad que se vendio por cada cosa si no tiene cantidad le pone 1 para que sea un producto 
+                                {
+                                    cantidades_vendidas[i] = "1";
+                                }
+
+                                acum_costo_venta = acum_costo_venta + (Convert.ToDecimal(prod_esplit[2]) * Convert.ToDecimal(cantidades_vendidas[i]));
+                                acum_costo_compra = acum_costo_compra + (Convert.ToDecimal(prod_esplit[5]) * Convert.ToDecimal(cantidades_vendidas[i]));
+                                nom_productos[i] = prod_esplit[1];
+                                provedores[i] = prod_esplit[6];
+
+                            }
                         }
 
-                        acum_costo_venta = acum_costo_venta + (Convert.ToDecimal(prod_esplit[2]) * Convert.ToDecimal(cantidades_vendidas[i]));
-                        acum_costo_compra = acum_costo_compra + (Convert.ToDecimal(prod_esplit[5]) * Convert.ToDecimal(cantidades_vendidas[i]));
-                        nom_productos[i] = prod_esplit[1];
-                        provedores[i] = prod_esplit[6];
+                    }
+                
+                
+                }
+
+                else if (promo[l] == "")
+                {
+                    for (int j = 0; j < productos.Length; j++)
+                    {
+
+                        for (int i = 0; i < codigo.Length; i++) 
+                        {
+                            string[] prod_esplit = productos[j].Split(G_parametros[0]);
+
+                            if (prod_esplit[3] == codigo[i])
+                            {
+                                if (cantidades_vendidas[i] == "")//con esto se pone la cantidad que se vendio por cada cosa si no tiene cantidad le pone 1 para que sea un producto 
+                                {
+                                    cantidades_vendidas[i] = "1";
+                                }
+
+                                acum_costo_venta = acum_costo_venta + (Convert.ToDecimal(prod_esplit[2]) * Convert.ToDecimal(cantidades_vendidas[i]));
+                                acum_costo_compra = acum_costo_compra + (Convert.ToDecimal(prod_esplit[5]) * Convert.ToDecimal(cantidades_vendidas[i]));
+                                nom_productos[i] = prod_esplit[1];
+                                provedores[i] = prod_esplit[6];
+
+                            }
+                        }
 
                     }
                 }
+                
+                else
+                {
+
+                }
+
+
             }
 
 
@@ -163,28 +210,6 @@ namespace tienda2.clases
             }
         }
 
-        public void Modelo_carga_info(string informacion, int tipo, char caracter_de_separacion = '|')
-        {
-            if (tipo == 0)
-            {
-                string[] info_split = informacion.Split(caracter_de_separacion);
-            }
-            else if (tipo == 1)
-            {
-                string[] info_split_1 = informacion.Split(caracter_de_separacion);
-            }
-            else if (tipo == 2)
-            {
-                string[] info_split_2 = informacion.Split(caracter_de_separacion);
-            }
-            else if (tipo == 3)
-            {
-                string[] info_split_3 = informacion.Split(caracter_de_separacion);
-            }
-            else
-            {
-
-            }
-        }
+        
     }
 }
