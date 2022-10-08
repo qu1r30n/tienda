@@ -1,5 +1,5 @@
 id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
-268|rastrillo comfort bic|115|70330717534|995|101|medicamento|1°producto||10|
-269|rastrillo comfort bic|115|70330717534|995|101|medicamento|1°producto||10|
+268|rastrillo comfort bic|115|70330717534|990|101|medicamento|1°producto||10|
+269|rastrillo comfort bic|115|70330717534|990|101|medicamento|1°producto||10|
 270|rastrillo bic confort 3 hojas|13|70330724341|0|10|bic|1°producto||10|
-2730|ferrero 50g|43|8000500126936|-1|0|casa vargas|1||1|
+2730|ferrero 50g|43|8000500126936|-2|0|casa vargas|1||1|
