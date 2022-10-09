@@ -62,6 +62,7 @@ namespace tienda2.desinger
             this.Btn_crear_cod_bar = new System.Windows.Forms.Button();
             this.btn_poner_a_cero = new System.Windows.Forms.Button();
             this.btn_promociones = new System.Windows.Forms.Button();
+            this.btn_porcentaje_ganancia_produc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chrt_ventas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -365,11 +366,22 @@ namespace tienda2.desinger
             this.btn_promociones.UseVisualStyleBackColor = true;
             this.btn_promociones.Click += new System.EventHandler(this.btn_promociones_Click);
             // 
+            // btn_porcentaje_ganancia_produc
+            // 
+            this.btn_porcentaje_ganancia_produc.Location = new System.Drawing.Point(12, 385);
+            this.btn_porcentaje_ganancia_produc.Name = "btn_porcentaje_ganancia_produc";
+            this.btn_porcentaje_ganancia_produc.Size = new System.Drawing.Size(143, 38);
+            this.btn_porcentaje_ganancia_produc.TabIndex = 88;
+            this.btn_porcentaje_ganancia_produc.Text = "porcentaje ganancia por produc";
+            this.btn_porcentaje_ganancia_produc.UseVisualStyleBackColor = true;
+            this.btn_porcentaje_ganancia_produc.Click += new System.EventHandler(this.btn_porcentaje_ganancia_produc_Click);
+            // 
             // Area_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1171, 384);
+            this.ClientSize = new System.Drawing.Size(1171, 429);
+            this.Controls.Add(this.btn_porcentaje_ganancia_produc);
             this.Controls.Add(this.btn_promociones);
             this.Controls.Add(this.btn_poner_a_cero);
             this.Controls.Add(this.btn_pedidos);
@@ -440,5 +452,6 @@ namespace tienda2.desinger
         private System.Windows.Forms.Button Btn_crear_cod_bar;
         private System.Windows.Forms.Button btn_poner_a_cero;
         private System.Windows.Forms.Button btn_promociones;
+        private System.Windows.Forms.Button btn_porcentaje_ganancia_produc;
     }
 }

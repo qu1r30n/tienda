@@ -1026,5 +1026,11 @@ namespace tienda2.desinger
             promociones promo = new promociones();
             promo.Show();
         }
+
+        private void btn_porcentaje_ganancia_produc_Click(object sender, EventArgs e)
+        {
+            porcen_ganan_produc pgp = new porcen_ganan_produc();
+            pgp.Show();
+        }
     }
 }

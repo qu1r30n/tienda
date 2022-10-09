@@ -45,6 +45,10 @@ namespace tienda2.desinger
             this.lstb_produc_promo = new System.Windows.Forms.ListBox();
             this.lbl_nom_promo = new System.Windows.Forms.Label();
             this.txt_seleccionado = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_cost_comp = new System.Windows.Forms.Label();
+            this.lbl_cost_vent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -200,11 +204,54 @@ namespace tienda2.desinger
             this.txt_seleccionado.Size = new System.Drawing.Size(643, 20);
             this.txt_seleccionado.TabIndex = 51;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(500, 272);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "costo compra";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(503, 295);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "costo venta";
+            // 
+            // lbl_cost_comp
+            // 
+            this.lbl_cost_comp.AutoSize = true;
+            this.lbl_cost_comp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cost_comp.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_cost_comp.Location = new System.Drawing.Point(577, 272);
+            this.lbl_cost_comp.Name = "lbl_cost_comp";
+            this.lbl_cost_comp.Size = new System.Drawing.Size(16, 16);
+            this.lbl_cost_comp.TabIndex = 54;
+            this.lbl_cost_comp.Text = "0";
+            // 
+            // lbl_cost_vent
+            // 
+            this.lbl_cost_vent.AutoSize = true;
+            this.lbl_cost_vent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cost_vent.Location = new System.Drawing.Point(577, 295);
+            this.lbl_cost_vent.Name = "lbl_cost_vent";
+            this.lbl_cost_vent.Size = new System.Drawing.Size(16, 16);
+            this.lbl_cost_vent.TabIndex = 55;
+            this.lbl_cost_vent.Text = "0";
+            // 
             // promociones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 346);
+            this.Controls.Add(this.lbl_cost_vent);
+            this.Controls.Add(this.lbl_cost_comp);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_seleccionado);
             this.Controls.Add(this.lbl_nom_promo);
             this.Controls.Add(this.lstb_produc_promo);
@@ -247,5 +294,9 @@ namespace tienda2.desinger
         private System.Windows.Forms.ListBox lstb_produc_promo;
         private System.Windows.Forms.Label lbl_nom_promo;
         private System.Windows.Forms.TextBox txt_seleccionado;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_cost_comp;
+        private System.Windows.Forms.Label lbl_cost_vent;
     }
 }

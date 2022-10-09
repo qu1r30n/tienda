@@ -23,6 +23,7 @@ namespace tienda2.desinger
         char[] G_parametros = { '|', '°', '¬', '^' };
         List<string> G_productos = new List<string>();
 
+
         public promociones()
         {
             InitializeComponent();
@@ -165,6 +166,7 @@ namespace tienda2.desinger
                 lst_promociones_puestas.Items.Add(promociones_todas[i]);
                 lista_promos_var.Add(promociones_todas[i]);
             }
+            cost_comp_vent();
         }
 
 
@@ -224,7 +226,7 @@ namespace tienda2.desinger
 
 
         public void Procesar_codigo_del_textbox_para_promo(string codigo, string cantidad_a_sumar_o_restar = "1")
-        {
+        {            
             //--------------------------------------------------------------------------------------------------------
             string datos_codigo = bas.Seleccionar(G_direccion_inventario, 3, codigo, "1|5|2");
             string[] datos_cod_split = datos_codigo.Split('°');//este se pone por que cuando encuetra dos registros con el mismo codigo le pone un ° para diferenciar ambos
@@ -264,6 +266,7 @@ namespace tienda2.desinger
 
                 recargar_lista_derecha();
             }
+
         }
 
 
@@ -297,6 +300,8 @@ namespace tienda2.desinger
             }
             txt_precio_promo.Text = lista_esplit[2];
             lbl_precio_promo.Text = lista_esplit[2];
+
+            cost_comp_vent();
         }
 
         private void modificacion_promo()
@@ -388,6 +393,21 @@ namespace tienda2.desinger
 
                 e.KeyChar = '\0';
             }
+        }
+
+        private void cost_comp_vent()
+        {
+            double cost_compra = 0;
+            double cost_venta = 0;
+            
+            for (int i = 0; i < lstb_produc_promo.Items.Count; i++)
+            {
+                string[] detalle_produc = lstb_produc_promo.Items[i].ToString().Split('¬');
+                cost_compra = cost_compra + (Convert.ToDouble(detalle_produc[1]) * Convert.ToDouble(detalle_produc[3]));
+                cost_venta = cost_venta + (Convert.ToDouble(detalle_produc[1]) * Convert.ToDouble(detalle_produc[4]));
+            }
+            lbl_cost_comp.Text = "" + cost_compra;
+            lbl_cost_vent.Text = "" + cost_venta;
         }
     }
 }

@@ -142,6 +142,12 @@
     <Compile Include="desinger\poner_a_cero.Designer.cs">
       <DependentUpon>poner_a_cero.cs</DependentUpon>
     </Compile>
+    <Compile Include="desinger\porcen_ganan_produc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\porcen_ganan_produc.Designer.cs">
+      <DependentUpon>porcen_ganan_produc.cs</DependentUpon>
+    </Compile>
     <Compile Include="desinger\promociones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\poner_a_cero.resx">
       <DependentUpon>poner_a_cero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="desinger\porcen_ganan_produc.resx">
+      <DependentUpon>porcen_ganan_produc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\promociones.resx">
       <DependentUpon>promociones.cs</DependentUpon>
