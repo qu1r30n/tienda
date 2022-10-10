@@ -163,7 +163,7 @@ namespace tienda2.desinger
                 lst_todos_los_agregados.Items.Add(info_a_agregar[i]);
             }
             
-            bas.Ordenar(G_dir_inv_hacer, 3, orden: "menor_mayor");
+            bas.Ordenar(direccion, 3, orden: "menor_mayor");
             
             herramients_forms herr_form = new herramients_forms();
             herr_form.ordenar_lisbox(lst_todos_los_agregados, 3);

@@ -356,7 +356,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 354|esponja multiusos fibra|11|741120000296|0|9|casa vargas|1°producto||1|
 355|cajeta quemada 370 g|35|74323083651|0|30.12|ricolino|1°producto||1|
 356|cajeta coronado|28|74323083651|0|23|casa vargas|1||1|
-357|bubulubu  35g|10|7432354|0|8.1|ricolino|1°producto||1|
+357|bubulubu  35g|10|7432354|99|8.1|ricolino|1°producto||1|
 358|pila panasonic AA 4pack|41|7441005013375|0|33|casa vargas|1||1|
 359|pila panasonic AAA 4pack|41|7441005014433|0|33|casa vargas|1||1|
 360|tonayan 440ml|23|744293160354|0|15.83|casa vargas|1°producto||1|
