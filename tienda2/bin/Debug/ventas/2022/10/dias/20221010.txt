@@ -1,0 +1,8 @@
+09:35:27 |7432354 |10 |bubulubu  35g |8.1|ricolino
+09:36:07 |7432354 |10 |bubulubu  35g |8.1|ricolino
+09:43:32 |7432354 |20 |bubulubu  35g |16.2|ricolino
+10:07:03 |7432354 |20 |bubulubu  35g |16.2|ricolino
+10:16:53 |7432354 |20 |bubulubu  35g |16.2|ricolino
+10:18:24 |7432354 |20 |bubulubu  35g |16.2|ricolino
+10:26:36 |7432354 |30 |bubulubu  35g |24.3|ricolino
+10:27:32 |7432354 |20 |bubulubu  35g |16.2|ricolino

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using tienda2.clases;
+
 namespace tienda2.desinger
 {
     public partial class Area_principal : Form
@@ -15,6 +17,9 @@ namespace tienda2.desinger
         public Area_principal()
         {
             InitializeComponent();
+            //Bitmap fondo = new Bitmap(Application.StartupPath + @"\img\fondo.jpg");
+            //this.BackgroundImage = fondo;
+
             try
             {
 
@@ -43,7 +48,14 @@ namespace tienda2.desinger
         }
 
         #region botones y combobox
-        
+        private void Btn_crear_cod_bar_Click(object sender, EventArgs e)
+        {
+            Lbl_ganancia.Visible = false;//pone invisible el label de ganancia
+            Txt_ganancia.Visible = false;//pone invisible el textbox de ganancia
+
+            crear_codigo_barras crear_barras = new crear_codigo_barras();//invent sera el form inventario
+            crear_barras.Show();//muestra el form inventario
+        }
 
         private void Btn_nueva_venta_Click(object sender, EventArgs e)
         {
@@ -64,13 +76,22 @@ namespace tienda2.desinger
             empl.Show();// muestra el form empleados
         }
 
+        private void Btn_gastos_Click(object sender, EventArgs e)
+        {
+            Lbl_ganancia.Visible = false;
+            Txt_ganancia.Visible = false;
+
+            gastos gastos = new gastos();
+            gastos.Show();
+        }
+
         private void Btn_compras_Click(object sender, EventArgs e)
         {
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
-            Compras comp = new Compras();
-            comp.Show();
+            Compras_control_provedores cont_p = new Compras_control_provedores();
+            cont_p.Show();
         }
 
         private void Btn_respaldo_Click(object sender, EventArgs e)
@@ -88,8 +109,8 @@ namespace tienda2.desinger
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
-            Pedidos pedi = new Pedidos();
-            pedi.Show();
+            Compras_control_provedores cont_p = new Compras_control_provedores();
+            cont_p.Show();
         }
 
         private void Btn_comparar_Click(object sender, EventArgs e)
@@ -101,30 +122,35 @@ namespace tienda2.desinger
 
             if (Rdb_ventas.Checked)
             {
-                Comparar.Checkbox_en_uso = "0";
+                area_principal_Comparar.Checkbox_en_uso = "0";
                 Modelo_grafica(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
             }
             else if (Rdb_productos.Checked)
             {
-                Comparar.Checkbox_en_uso = "1";
+                area_principal_Comparar.Checkbox_en_uso = "1";
                 Modelo_grafica_productos(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
             }
 
             else if (Rdb_gastos.Checked)
             {
-                Comparar.Checkbox_en_uso = "2";
+                area_principal_Comparar.Checkbox_en_uso = "2";
                 Modelo_grafica_gastos(cmb_año.Text, cmb_mes.Text, cmb_dia.Text, true);
             }
         }
 
-        private void Cmb_año_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_año_SelectedIndexChanged(object sender, EventArgs e)
         {
             Combo_m("ventas\\" + cmb_año.Text + "\\" + cmb_año.Text + ".txt");
         }
 
-        private void Cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_mes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Combo_d("ventas\\" + cmb_año.Text + "\\" + cmb_mes.Text + "\\" + cmb_mes.Text + ".txt");
+        }
+
+        private void cmb_dia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void Rdb_ventas_CheckedChanged(object sender, EventArgs e)
@@ -176,7 +202,7 @@ namespace tienda2.desinger
         public void Modelo_grafica(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
         {
 
-            Comparar comp = new Comparar(this);
+            area_principal_Comparar comp = new area_principal_Comparar(this);
             Lst_ventas.Items.Clear();
 
 
@@ -214,11 +240,11 @@ namespace tienda2.desinger
             else if (c_año != "" && c_mes != "" && c_dia == "")
             {
                 comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt";
-                comp.Palabra_reconocimiento = c_año + "-" + c_mes;
+                comp.Palabra_reconocimiento = c_año + "" + c_mes;
 
                 if (comparacion == false)
                 {
-                    Grafica(comp.Direccion_grafica, c_año + "-" + c_mes, comparacion);
+                    Grafica(comp.Direccion_grafica, c_año + "" + c_mes, comparacion);
                 }
                 else
                 {
@@ -228,12 +254,12 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                comp.Palabra_reconocimiento = c_año + "-" + c_mes + "-" + c_dia;
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                comp.Palabra_reconocimiento = c_año + "" + c_mes + "" + c_dia;
 
                 if (comparacion == false)
                 {
-                    Grafica_horas(comp.Direccion_grafica, c_año + "-" + c_mes + "-" + c_dia, comparacion);
+                    Grafica_horas(comp.Direccion_grafica, c_año + "" + c_mes + "" + c_dia, comparacion);
                 }
                 else
                 {
@@ -249,7 +275,7 @@ namespace tienda2.desinger
 
         public void Modelo_grafica_productos(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
         {
-            Comparar comp = new Comparar(this);
+            area_principal_Comparar comp = new area_principal_Comparar(this);
             Lst_ventas.Items.Clear();
 
             if (c_año == "" && c_mes == "" && c_dia == "")
@@ -285,11 +311,11 @@ namespace tienda2.desinger
             {
 
                 comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\p_" + c_mes + ".txt";
-                comp.Palabra_reconocimiento = "p_" + c_año + "-" + c_mes;
+                comp.Palabra_reconocimiento = "p_" + c_año + "" + c_mes;
 
                 if (comparacion == false)
                 {
-                    Grafica_productos(comp.Direccion_grafica, "p_" + c_año + "-" + c_mes, comparacion);
+                    Grafica_productos(comp.Direccion_grafica, "p_" + c_año + "" + c_mes, comparacion);
                 }
                 else
                 {
@@ -299,12 +325,12 @@ namespace tienda2.desinger
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                comp.Palabra_reconocimiento = "p_" + c_año + "-" + c_mes + "-" + c_dia;
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\p_" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                comp.Palabra_reconocimiento = "p_" + c_año + "" + c_mes + "" + c_dia;
 
                 if (comparacion == false)
                 {
-                    Grafica_productos(comp.Direccion_grafica, "p_" + c_año + "-" + c_mes + "-" + c_dia, comparacion);
+                    Grafica_productos(comp.Direccion_grafica, "p_" + c_año + "" + c_mes + "" + c_dia, comparacion);
                 }
                 else
                 {
@@ -320,7 +346,7 @@ namespace tienda2.desinger
 
         public void Modelo_grafica_gastos(string c_año = "", string c_mes = "", string c_dia = "", bool comparacion = false)
         {
-            Comparar comp = new Comparar(this);
+            area_principal_Comparar comp = new area_principal_Comparar(this);
             Lst_ventas.Items.Clear();
 
             if (c_año == "" && c_mes == "" && c_dia == "")
@@ -361,10 +387,10 @@ namespace tienda2.desinger
             {
 
                 comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt";
-                comp.Palabra_reconocimiento = "g_" + c_año + "-" + c_mes;
+                comp.Palabra_reconocimiento = "g_" + c_año + "" + c_mes;
                 if (comparacion == false)
                 {
-                    Grafica_compras(comp.Direccion_grafica, "g_" + c_año + "-" + c_mes, comparacion);
+                    Grafica_compras(comp.Direccion_grafica, "g_" + c_año + "" + c_mes, comparacion);
                 }
                 else
                 {
@@ -376,11 +402,11 @@ namespace tienda2.desinger
             {
 
 
-                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                comp.Palabra_reconocimiento = "g_" + c_año + "-" + c_mes + "-" + c_dia;
+                comp.Direccion_grafica = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                comp.Palabra_reconocimiento = "g_" + c_año + "" + c_mes + "" + c_dia;
                 if (comparacion == false)
                 {
-                    Grafica_compras_horas(comp.Direccion_grafica, "g_" + c_año + "-" + c_mes + "-" + c_dia, comparacion);
+                    Grafica_compras_horas(comp.Direccion_grafica, "g_" + c_año + "" + c_mes + "" + c_dia, comparacion);
                 }
                 else
                 {
@@ -494,17 +520,17 @@ namespace tienda2.desinger
             {
                 direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + c_mes + ".txt";
                 direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\g_" + c_mes + ".txt";
-                nom_serie = c_año + "-" + c_mes;
-                nom_serie2 = "g_" + c_año + "-" + c_mes;
+                nom_serie = c_año + "" + c_mes;
+                nom_serie2 = "g_" + c_año + "" + c_mes;
                 Grafica_ganancias(direc, direc2, nom_serie, nom_serie2, comparacion);
             }
 
             else if (c_año != "" && c_mes != "" && c_dia != "")
             {
-                direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "-" + c_mes + "-" + c_dia + ".txt";
-                nom_serie = c_año + "-" + c_mes + "-" + c_dia;
-                nom_serie2 = "g_" + c_año + "-" + c_mes + "-" + c_dia;
+                direc = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                direc2 = "ventas\\" + c_año + "\\" + c_mes + "\\" + "dias\\g_" + c_año + "" + c_mes + "" + c_dia + ".txt";
+                nom_serie = c_año + "" + c_mes + "" + c_dia;
+                nom_serie2 = "g_" + c_año + "" + c_mes + "" + c_dia;
                 Grafica_horas_ganancias(direc, direc2, nom_serie, nom_serie2, 0, comparacion);
             }
 
@@ -538,11 +564,11 @@ namespace tienda2.desinger
 
             //elim0_graficas = 0;
             Tex_base bas = new Tex_base();
-            
+
             string[] esplitedo, historial;
             historial = bas.Leer(direccion_archivo);
 
-            decimal acum_venta=0,acum_compra = 0;
+            decimal acum_venta = 0, acum_compra = 0;
             for (int i = 0; i < historial.Length; i++)
             {
                 esplitedo = historial[i].Split(caracter_de_separacion);
@@ -551,7 +577,7 @@ namespace tienda2.desinger
                 acum_venta = acum_venta + Convert.ToDecimal(esplitedo[1]);
                 acum_compra = acum_compra + Convert.ToDecimal(esplitedo[2]);
             }
-            Txt_total.Text = "total_venta: " + acum_venta + " total_costo_de_compra: " + acum_compra + " ganancia: "+(acum_venta-acum_compra);
+            Txt_total.Text = "total_venta: " + acum_venta + " total_costo_de_compra: " + acum_compra + " ganancia: " + (acum_venta - acum_compra);
         }
 
         public void Grafica_compras(string direccion_archivo, string nombre_serie = "Serie1", bool comparacion = false, char caracter_de_separacion = '|')
@@ -651,7 +677,7 @@ namespace tienda2.desinger
 
 
             chrt_ventas.Series[nombre_serie].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            
+
             string[] esplitedo, historial;
 
             //elim1_graficas_hora = 0;
@@ -774,7 +800,7 @@ namespace tienda2.desinger
 
             chrt_ventas.Series[nombre_serie].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             chrt_ventas.Series[nombre_serie2].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            
+
             string[] esplitedo = { "", "" }, esplitedo2 = { "", "" }, historial, historial2;
             int cual_es_mayor;
 
@@ -783,8 +809,8 @@ namespace tienda2.desinger
 
             historial = bas.Leer(direccion_archivo);
             historial2 = bas.Leer(direccion_archivo2);
-            
-            
+
+
 
             if (historial.Length >= historial2.Length)//esta la puse para el listbox saber cuantos items  va  a contener
             {
@@ -861,7 +887,7 @@ namespace tienda2.desinger
             Tex_base bas = new Tex_base();
             historial = bas.Leer(direccion_archivo);
 
-        
+
             for (int i = 0; i < historial.Length; i++)
             {
                 esplitedo = historial[i].Split(caracter_de_separacion);
@@ -926,7 +952,7 @@ namespace tienda2.desinger
 
         public void Combo_d(string direccion_archivo, char caracter_de_separacion = '|')
         {
-            
+
             Lbl_ganancia.Visible = false;
             Txt_ganancia.Visible = false;
 
@@ -948,7 +974,7 @@ namespace tienda2.desinger
 
         private void Btn_canbio_precios_Click(object sender, EventArgs e)
         {
-            Cambiar_precio cam_precio = new Cambiar_precio();
+            Cambiar_informacion cam_precio = new Cambiar_informacion();
             cam_precio.Show();
         }
 
@@ -957,8 +983,54 @@ namespace tienda2.desinger
             if (Lst_ventas.SelectedItem != null)
             {
 
-                Txt_total.Text = Lst_ventas.SelectedItem.ToString(); 
+                Txt_total.Text = Lst_ventas.SelectedItem.ToString();
             }
+        }
+
+        private void btn_inventario_Click(object sender, EventArgs e)
+        {
+            inventario invent = new inventario();
+            invent.Show();
+
+        }
+
+        private void btn_igualar_provedores_Click(object sender, EventArgs e)
+        {
+            igualar_provedores iguprov = new igualar_provedores();
+            iguprov.Show();
+        }
+
+        private void btn_inv_merc_Click(object sender, EventArgs e)
+        {
+            Lbl_ganancia.Visible = false;//pone invisible el label de ganancia
+            Txt_ganancia.Visible = false;//pone invisible el textbox de ganancia
+
+            investigacion_mercado inv_merc = new investigacion_mercado();//nuev_vent sera el form empleados
+            inv_merc.Show();// muestra el form empleados
+        }
+
+        private void btn_pedidos_Click(object sender, EventArgs e)
+        {
+            pedidos pe = new pedidos();
+            pe.Show();
+        }
+
+        private void btn_poner_a_cero_Click(object sender, EventArgs e)
+        {
+            poner_a_cero pon_a_0 = new poner_a_cero();
+            pon_a_0.Show();
+        }
+
+        private void btn_promociones_Click(object sender, EventArgs e)
+        {
+            promociones promo = new promociones();
+            promo.Show();
+        }
+
+        private void btn_porcentaje_ganancia_produc_Click(object sender, EventArgs e)
+        {
+            porcen_ganan_produc pgp = new porcen_ganan_produc();
+            pgp.Show();
         }
     }
 }

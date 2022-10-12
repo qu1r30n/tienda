@@ -1,0 +1,3 @@
+nombre_promocion|codigo_barras_1¬cantidad_del_producto¬nombre_producto_1°codigo_barras_2¬cantidad_del_producto¬nombre_productp_2|precio|
+pru1|70330717534¬1¬rastrillo comfort bic¬101¬115°9002490100070¬2¬red bull 250ml¬33.5¬41|199|
+pru2|20899087531¬1¬nutret fresa 40g¬0¬9°3014260846725¬1¬cepillodental¬18¬21|88|

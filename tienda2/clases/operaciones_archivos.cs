@@ -7,25 +7,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace tienda2
+namespace tienda2.clases
 {
-
     class Operaciones_archivos
     {
         static public string direccion_programa = System.Windows.Forms.Application.ExecutablePath.ToString();
         Tex_base bas = new Tex_base();//bas es la clase tex_base
-        string G_palabra = "",G_temp = "";
-        char[] G_parametros = { '|' };
+        string G_palabra = "", G_temp = "";
+        char[] G_parametros = { '|', '°', '¬', '^' };
         bool bandera = false;
 
-        
 
-        public string[] Contenido_directorio(string direccion_archivo,string decicion=null)
+
+        public string[] Contenido_directorio(string direccion_archivo, string decicion = null)
         {
             ArrayList lista = new ArrayList();
             DirectoryInfo di = new DirectoryInfo(direccion_archivo);
 
-            if (decicion==null)
+            if (decicion == null)
             {
                 foreach (var fi in di.GetFiles())
                 {
@@ -50,12 +49,12 @@ namespace tienda2
             return list_string;//devuelve la lista para ser usada
         }
 
-        public void Actualisar_resumen_venta(string direccion_archivo,string fecha ,decimal precio_o_cantidadProducto,decimal costos_de_compra=0)
+        public void Actualisar_resumen_venta(string direccion_archivo, string fecha, decimal precio_o_cantidadProducto, decimal costos_de_compra = 0)
         {
             char[] parametros2 = { '/', '\\' };
-            
-            bool bol=false;
-            string[] G_linea,linea;
+
+            bool bol = false;
+            string[] G_linea, linea;
             G_linea = direccion_archivo.Split(parametros2);//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
             bas.Crear_archivo_y_directorio(direccion_archivo);
@@ -70,7 +69,7 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
 
             StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
-            StreamWriter sw = new StreamWriter(G_temp,true);//abrimos el archivo a escribir
+            StreamWriter sw = new StreamWriter(G_temp, true);//abrimos el archivo a escribir
             try
             {
                 while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
@@ -79,7 +78,7 @@ namespace tienda2
                     //por aqui empesamos para poderlo comparar
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != fecha)
                         {
@@ -107,7 +106,7 @@ namespace tienda2
                 sw.WriteLine(escribir);
 
             }
-            
+
             sr.Close();
             sr.Dispose();
             sw.Close();
@@ -118,12 +117,12 @@ namespace tienda2
             File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
-        public void Actualisar_resumen_venta_productos(string direccion_archivo,string codigo_barras ,decimal cantidad,string nombre_producto=null)
+        public void Actualisar_resumen_venta_productos(string direccion_archivo, string codigo_barras, decimal cantidad, string nombre_producto = null)
         {
             char[] parametros2 = { '/', '\\' };
-            
-            bool bol=false;
-            string[] G_linea,linea;
+
+            bool bol = false;
+            string[] G_linea, linea;
             G_linea = direccion_archivo.Split(parametros2);//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
             bas.Crear_archivo_y_directorio(direccion_archivo);
@@ -138,7 +137,7 @@ namespace tienda2
             bas.Crear_archivo_y_directorio(G_temp);//creamos el archivo temporal
 
             StreamReader sr = new StreamReader(direccion_archivo);//abrimos el archivo a leer
-            StreamWriter sw = new StreamWriter(G_temp,true);//abrimos el archivo a escribir
+            StreamWriter sw = new StreamWriter(G_temp, true);//abrimos el archivo a escribir
             try
             {
                 while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
@@ -147,7 +146,7 @@ namespace tienda2
                     //por aqui empesamos para poderlo comparar
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != codigo_barras)
                         {
@@ -175,7 +174,7 @@ namespace tienda2
                 sw.WriteLine(escribir);
 
             }
-            
+
             sr.Close();
             sr.Dispose();
             sw.Close();
@@ -215,11 +214,11 @@ namespace tienda2
                     //por aqui empesamos para poderlo comparar
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != fecha)
                         {
-                            sw.WriteLine(linea[0] + G_parametros[0] + linea[1] );
+                            sw.WriteLine(linea[0] + G_parametros[0] + linea[1]);
                         }
                         else
                         {
@@ -283,7 +282,7 @@ namespace tienda2
                     //por aqui empesamos para poderlo comparar
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != fecha)
                         {
@@ -291,7 +290,7 @@ namespace tienda2
                         }
                         else
                         {
-                            sw.WriteLine(fecha + G_parametros[0] + ((precio-costo_compra) + Convert.ToDecimal(linea[1])));
+                            sw.WriteLine(fecha + G_parametros[0] + ((precio - costo_compra) + Convert.ToDecimal(linea[1])));
                             bol = true;
 
                         }
@@ -345,14 +344,14 @@ namespace tienda2
                     G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[3] != codigo_barras)
                         {
                             temp = "";
                             for (int i = 0; i < linea.Length; i++)
                             {
-                                if (i < (linea.Length-1))
+                                if (i < (linea.Length - 1))
                                 {
                                     temp = temp + linea[i] + G_parametros[0];
                                 }
@@ -365,57 +364,35 @@ namespace tienda2
                         }
                         else
                         {
-                            if (0 <= cantidad_a_act + Convert.ToDecimal(linea[4]))
+                            if (0 >= Convert.ToDecimal(linea[4]))
                             {
-                                temp = "";
-                                for (int i = 0; i < linea.Length; i++)
+                                linea[4] = "0";
+                            }
+
+
+                            temp = "";
+                            for (int i = 0; i < linea.Length; i++)
+                            {
+                                if (i < (linea.Length - 1))
                                 {
-                                    if (i < (linea.Length - 1))
+                                    if (i == 4)//la columna de cantidad de producto
                                     {
-                                        if (i == 4)//la columna de cantidad de producto
-                                        {
-                                            temp = temp + (cantidad_a_act + Convert.ToDecimal(linea[i])) + G_parametros[0];
-                                        }
-                                        else
-                                        {
-                                            temp = temp + linea[i] + G_parametros[0];
-                                        }
+                                        temp = temp + (cantidad_a_act + Convert.ToDecimal(linea[i])) + G_parametros[0];
                                     }
                                     else
                                     {
-                                        temp = temp + linea[i];
+                                        temp = temp + linea[i] + G_parametros[0];
                                     }
                                 }
-
-                                sw.WriteLine(temp);
-                            }
-                            else
-                            {
-
-                                temp = "";
-                                for (int i = 0; i < linea.Length; i++)
+                                else
                                 {
-                                    if (i < (linea.Length - 1))
-                                    {
-                                        if (i == 4)//la columna de cantidad de producto
-                                        {
-                                            temp = temp + (cantidad_a_act + Convert.ToDecimal(linea[i])) + G_parametros[0];
-                                        }
-                                        else
-                                        {
-                                            temp = temp + linea[i] + G_parametros[0];
-                                        }
-                                    }
-                                    else
-                                    {
-                                        temp = temp + linea[i];
-                                    }
+                                    temp = temp + linea[i];
                                 }
-
-                                sw.WriteLine(temp);
-
-                                System.Windows.Forms.MessageBox.Show("ya se acabo o falta poco para acabarse el producto: " + linea[1]);
                             }
+
+                            sw.WriteLine(temp);
+
+
 
                         }
                     }
@@ -440,7 +417,7 @@ namespace tienda2
 
             bandera = false;
             Tex_base bas = new Tex_base();
-            string[] G_linea, linea,dat_esplit=DATOS.Split(G_parametros);
+            string[] G_linea, linea, dat_esplit = DATOS.Split(G_parametros[0]);
             G_linea = direccion_archivo.Split('\\');//esplitea la direccion
             G_temp = G_linea[0];//temp es igual al primer directorio
             bas.Crear_archivo_y_directorio(direccion_archivo);
@@ -461,14 +438,14 @@ namespace tienda2
                 while (sr.Peek() >= 0)//verificamos si hay mas lineas a leer
                 {
                     G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
-                    
+
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[1] != dat_esplit[1])
                         {
-                            sw.WriteLine(linea[0] + G_parametros + linea[1] + G_parametros + linea[2]);
+                            sw.WriteLine(linea[0] + G_parametros[0] + linea[1] + G_parametros[0] + linea[2]);
                         }
                         else
                         {
@@ -476,19 +453,19 @@ namespace tienda2
                             {
                                 decimal cant1 = Convert.ToDecimal(linea[2]);
                                 decimal cant2 = Convert.ToDecimal(dat_esplit[2]);
-                                sw.WriteLine(linea[0] + G_parametros[0] + linea[1] + G_parametros[0] + (cant1+cant2));
+                                sw.WriteLine(linea[0] + G_parametros[0] + linea[1] + G_parametros[0] + (cant1 + cant2));
                                 bandera = true;
                             }
                             else
                             {
-                                sw.WriteLine(linea[0] + G_parametros + linea[1] + G_parametros + linea[2]);
-                                System.Windows.Forms.MessageBox.Show("ya se acabo o falta poco para acabarse el producto: " + linea[0]+ G_parametros[0] + linea[1]);
+                                sw.WriteLine(linea[0] + G_parametros[0] + linea[1] + G_parametros[0] + linea[2]);
+                                System.Windows.Forms.MessageBox.Show("ya se acabo o falta poco para acabarse el producto: " + linea[0] + G_parametros[0] + linea[1]);
                             }
 
                         }
                     }
                 }
-                
+
 
             }
             catch (Exception e)
@@ -551,30 +528,19 @@ namespace tienda2
             }
         }
 
-        public void Respaldo_inventario(string direccion_a_copiar, string direccion_a_pegar)
+        public string Respaldo_inventario(string direccion_a_copiar, string directorio_a_pegar, string nom_archivo_con_extencion = "temp.txt")
         {
-            //Now Create all of the directories
 
-            string [] direccion_carpeta = Directory.GetDirectories(direccion_a_copiar, "*", SearchOption.AllDirectories);
+            bas.Crear_archivo_y_directorio(directorio_a_pegar);
+            string temp = nom_archivo_con_extencion;
+            for (int i = 0; File.Exists(directorio_a_pegar + temp); i++)
 
-            if (0!=direccion_carpeta.Length)
             {
-                for (int i = 0; i < direccion_carpeta.Length; i++)               
-                {
-                    Directory.CreateDirectory(direccion_carpeta[i].Replace(direccion_a_copiar, direccion_a_pegar));
-                }
+                temp = i + nom_archivo_con_extencion;
             }
-            else
-            {
-                Directory.CreateDirectory(direccion_a_pegar + "\\respaldo\\inf\\inventario");
-            }
-            //Copy all the files & Replaces any files with the same name
-            string []newPath = Directory.GetFiles(direccion_a_copiar, "*.*", SearchOption.AllDirectories);
+            File.Copy(direccion_a_copiar, directorio_a_pegar + temp);
 
-            for (int i = 0; i < newPath.Length; i++)
-            {
-                File.Copy(newPath[i], newPath[i].Replace(direccion_a_copiar, direccion_a_pegar), true);
-            }
+            return temp;
         }
 
         public void Eliminar_carpeta(string direccion)
@@ -587,10 +553,23 @@ namespace tienda2
             {
 
             }
-            
+
         }
 
-        public void Pedido (string direccion_archivo,string[]agregar)
+        public void Eliminar_archivo(string direccion)
+        {
+            try
+            {
+                File.Delete(direccion);
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
+
+        public void Pedido(string direccion_archivo, string[] agregar)
         {
             Tex_base bas = new Tex_base();
             Operaciones_archivos op = new Operaciones_archivos();
@@ -635,7 +614,7 @@ namespace tienda2
                     G_palabra = sr.ReadLine();//leemos linea y lo guardamos en palabra
                     if (G_palabra != null)
                     {
-                        linea = G_palabra.Split(G_parametros);
+                        linea = G_palabra.Split(G_parametros[0]);
 
                         if (linea[0] != id_produc_act)
                         {
@@ -695,6 +674,13 @@ namespace tienda2
             File.Move(G_temp, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
         }
 
+        public void remplasar_archivo(string archivo_a_cambiar, string archivo_remplaso)
+        {
+            File.Delete(archivo_a_cambiar);//borramos el archivo original
+            Thread.Sleep(1);
+            File.Move(archivo_remplaso, archivo_a_cambiar);//renombramos el archivo temporal por el que tenia el original
+        }
+
         public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo, char caracter_separacion = '|')
         {
             Tex_base bas = new Tex_base();
@@ -705,10 +691,11 @@ namespace tienda2
                 string temporal_apoyo;
                 for (int i = 0; i < lineas.Length; i++)
                 {
-                    string[] num1 = lineas[i].Split(caracter_separacion);
-                    decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
                     for (int j = i + 1; j < lineas.Length; j++)
                     {
+
+                        string[] num1 = lineas[i].Split(caracter_separacion);
+                        decimal num1_decimal = Convert.ToDecimal(num1[columna_comparar]);
                         string[] num2 = lineas[j].Split(caracter_separacion);
                         decimal num2_decimal = Convert.ToDecimal(num2[columna_comparar]);
                         if (num1_decimal < num2_decimal)
@@ -725,6 +712,11 @@ namespace tienda2
                         {
                             //error
                         }
+
+
+
+
+
                     }//for linea_de_abajo
                 }//for linea_de_arriba
             }//if tipo
@@ -742,6 +734,23 @@ namespace tienda2
             File.Move(dir_tem, direccion_archivo);//renombramos el archivo temporal por el que tenia el original
             return lineas;
         }
+
+        public void mover_archivo(string direccion_archivo,string direccion_a_mover)
+        {
+            File.Move(direccion_archivo, direccion_a_mover);
+        }
+        public void mover_dir(string direccion_archivo, string direccion_a_mover)
+        {
+            
+            if (Directory.Exists(direccion_a_mover))
+            {
+                Directory.Delete(direccion_a_mover, true);
+            }
+            
+            Directory.Move(direccion_archivo, direccion_a_mover);
+
+        }
+
 
     }
 }

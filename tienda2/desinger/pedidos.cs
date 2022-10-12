@@ -1,452 +1,272 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using tienda2.clases;
 
-using System.IO;
-
 namespace tienda2.desinger
 {
-    public partial class Pedidos : Form
+    public partial class pedidos : Form
     {
-        char[] G_parametros = { '|' };
-        List<string> G_productos = new List<string>();
         Tex_base bas = new Tex_base();
-        string G_prov_anterior = null;//si el provedor trajera varios productos nuevos para no estar escribe y escribe el provedor solo se guarda temporalmente 
-        public Pedidos()
+        prediccion pre = new prediccion();
+        string direccion_ranking;
+
+        string[] provedores;
+        List<string> lst_productos=new List<string>();
+        public pedidos()
         {
             InitializeComponent();
             Recargar_texbox();
+
+            DateTime fecha = DateTime.Now;
+            direccion_ranking = "inf\\ranking\\" + fecha.ToString("yyyy") + "_ranking.txt";
+            string[] resultado = pre.compra(direccion_ranking, 4, 5, 6, 7);
+
+            carga_info_arreglo(resultado);
         }
 
-        private void Btn_agregar_Click(object sender, EventArgs e)
+        private void lstb_sugerencia_DoubleClick(object sender, EventArgs e)
         {
-            
-            Ventana_emergente ven_emer = new Ventana_emergente();
-            //a = 2;
-            string[] enviar = {"3°es_paquete°1", "3°es_por_pieza°2" };//el 3 del inicio es para saver que es boton y el final es su valor
-            string datos_ventana_emerg = ven_emer.Proceso_ventana_emergente(enviar);//mandamos a llamar a ventana emergente
-            string temp;
-
-            if (datos_ventana_emerg=="1")//si el valor del boton que apreto es 1 es que va a ser un paquete
+            string[] num_de_item_lstb = lstb_sugerencia.SelectedItem.ToString().Split('#');
+            bool hay_un_num_item_igual = false;
+            for (int i = 0; i < lstb_a_pedir.Items.Count; i++)
             {
-                DateTime fecha_hora = DateTime.Now;
-                string hora_min = fecha_hora.ToString("HH:mm");
-
-                string cantidad_por_pakete=bas.Seleccionar("inf\\inventario\\invent.txt",3,Txt_buscar_producto.Text,"9");
-
-                Ventana_emergente ven_emer2 = new Ventana_emergente();
-                //a = 3;
-                string[] enviar2 = { "1°costo°" + Txt_costo_compra.Text + "°2", "1°numero paketes°" + Txt_cantidad.Text + "°2", "1°cantidad_por_paquete°" + cantidad_por_pakete + "°2" };
-                string datos_ventana_emergente2 = ven_emer2.Proceso_ventana_emergente(enviar2);
-                string[] mensaje2_espli = datos_ventana_emergente2.Split(G_parametros[0]);
-                bas.Editar_espesifico("inf\\inventario\\invent.txt",3,Txt_buscar_producto.Text,"9",mensaje2_espli[2]);
-                string total_de_productos_por_paquetes = ""+(Convert.ToDouble(mensaje2_espli[1])* Convert.ToDouble(mensaje2_espli[2]));
-                string costo_por_producto = "" + Math.Round((Convert.ToDouble(mensaje2_espli[0])/Convert.ToDouble(total_de_productos_por_paquetes)),2);
-
-                Txt_cantidad.Text = total_de_productos_por_paquetes;
-                Txt_costo_compra.Text = costo_por_producto;
-                temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|" + mensaje2_espli[1]+"°paketes_de°"+mensaje2_espli[2];
-            }
-            else
-            {
-                temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text + "|";
-            }
-
-            bas.si_no_existe_agega_comparacion("inf\\inventario\\provedores.txt",cmb_provedor.Text);
-
-            Lbl_nom_product_list.Text = Lbl_nombre_producto.Text + "costo por pieza:" + Txt_costo_compra.Text + " costo por paquetes:  $" + (Convert.ToInt32(Txt_cantidad.Text) * Convert.ToDecimal(Txt_costo_compra.Text));
-            Lst_compras.Items.Add(temp);
-            
-            
-            string temporal;
-            string[] temporal_s;
-            decimal total = 0;
-            decimal total_cost_com = 0;
-            try
-            {
-                for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
+                string[] numero_de_item_lista_productos = lstb_a_pedir.Items[i].ToString().Split('#');
+                if (num_de_item_lstb[0] == numero_de_item_lista_productos[0])
                 {
-                    temporal = "" + Lst_compras.Items[coll];
-                    temporal_s = temporal.Split(G_parametros);
-
-                    if (temporal_s[0] != "")
-                    {
-                        total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
-                        total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
-                    }
-
+                    hay_un_num_item_igual = true;
+                    lstb_sugerencia.Items.RemoveAt(lstb_sugerencia.SelectedIndex);
                 }
-                Lbl_cuenta.Text = "" + total;
-            }
-            catch (Exception)
-            {
-
-                throw;
             }
 
-            Txt_buscar_producto.Focus();
-            Lbl_id.Text = "";
-            Lbl_nombre_producto.Text = "";
-            Lbl_precio_compra_cant.Text = "";
-            Lbl_precio_venta.Text = "";
-            Lbl_cantidad_cant.Text = "";
+            
+            if (hay_un_num_item_igual == false)
+            {
+                pasar_de_sugerencia_a_lsbapedir(lstb_sugerencia.SelectedItem + "");
+            }
 
-            Txt_buscar_producto.Text = "";
-            Txt_cantidad.Text = "";
-            Txt_costo_compra.Text = "";
-            Txt_nom_producto.Text = "";
-            cmb_provedor.Text = "";
-            if (Rdb_codigo_barras.Checked)
+            if (lstb_sugerencia.SelectedItem != null)
             {
-                Txt_buscar_producto.Focus();
+                lstb_a_pedir.Items.Add(lstb_sugerencia.SelectedItem);
+                lstb_sugerencia.Items.RemoveAt(lstb_sugerencia.SelectedIndex);
             }
-            else if (Rdb_producto.Checked)
+
+            
+        }
+
+        private void lstb_a_pedir_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstb_a_pedir.SelectedItem != null)
             {
-                Txt_nom_producto.Focus();
+                string[] num_de_item_lstb = lstb_a_pedir.SelectedItem.ToString().Split('#');
+                bool hay_un_num_item_igual = false;
+                for (int i = 0; i < lstb_sugerencia.Items.Count; i++)
+                {
+                    string[] numero_de_item_lista_productos = lstb_sugerencia.Items[i].ToString().Split('#');
+                    if (num_de_item_lstb[0]==numero_de_item_lista_productos[0])
+                    {
+                        hay_un_num_item_igual = true;
+                        lstb_a_pedir.Items.RemoveAt(lstb_a_pedir.SelectedIndex);
+                    }
+                }
+                if (hay_un_num_item_igual==false)
+                {
+                    pasar_de_lsbapedir_a_sugerencia(lstb_a_pedir.SelectedItem + "");
+                }
+                
             }
-            else
+        }
+
+        private void carga_info(string cargas, char caracter_separacion = '|')
+        {
+            string[] cargas_2 = cargas.Split(caracter_separacion);
+            for (int i = 0; i < cargas_2.Length; i++)
             {
-                Txt_nom_producto.Focus();
+                lstb_sugerencia.Items.Add(i + "#" + cargas_2[i]);
+
             }
 
         }
+        private void carga_info_arreglo(string[] cargas)
+        {
+            lstb_sugerencia.Items.Clear();
+            for (int i = 0; i < cargas.Length; i++)
+            {
+                //el string "||"es porque hai va a ser el espacio donde la aplicacion retorne precio y cantida
+                lstb_sugerencia.Items.Add(i + "#" + cargas[i] + "||");
+                lst_productos.Add(i + "#" + cargas[i] + "||");
+            }
+
+        }
+
+        private void pasar_de_lsbapedir_a_sugerencia(string item_seleccionado)
+        {
+
+            string[] datos_item_a_pedir = item_seleccionado.Split('#');
+            int posicion_item_a_pedir = Convert.ToInt32(datos_item_a_pedir[0]);
+            List<string> lista_productos = new List<string>();
+            for (int i = 0; i < lstb_sugerencia.Items.Count; i++)
+            {
+                lista_productos.Add(lstb_sugerencia.Items[i] + "");
+            }
+            lstb_sugerencia.Items.Clear();
+            int fin_del_listbox = lista_productos.Count;
+            bool encontro_otro_mayor = false;
+            bool puesto_anterior_mente = false;
+            for (int i = 0; i < fin_del_listbox; i++)
+            {
+                string[] datos_item_sugerencia = lista_productos[i].Split('#');
+                int posicion_item_sugerencia = Convert.ToInt32(datos_item_sugerencia[0]);
+
+                if (posicion_item_a_pedir < posicion_item_sugerencia)
+                {
+
+
+                    if (puesto_anterior_mente == false)
+                    {
+                        lstb_sugerencia.Items.Add(item_seleccionado);
+                        lstb_a_pedir.Items.RemoveAt(lstb_a_pedir.SelectedIndex);
+                        puesto_anterior_mente = true;
+                    }
+                    encontro_otro_mayor = true;
+                }
+                string chequeo_temp = lista_productos[i];
+                lstb_sugerencia.Items.Add(chequeo_temp);
+            }
+            if (encontro_otro_mayor == false)
+            {
+                lstb_sugerencia.Items.Add(item_seleccionado);
+                lstb_a_pedir.Items.RemoveAt(lstb_a_pedir.SelectedIndex);
+            }
+
+
+        }
+
+        private void pasar_de_sugerencia_a_lsbapedir(string item_seleccionado)
+        {
+
+            string[] datos_item_a_pedir = item_seleccionado.Split('#');
+            int posicion_item_a_pedir = Convert.ToInt32(datos_item_a_pedir[0]);
+            List<string> lista_productos = new List<string>();
+            for (int i = 0; i < lstb_a_pedir.Items.Count; i++)
+            {
+                lista_productos.Add(lstb_a_pedir.Items[i] + "");
+            }
+            lstb_a_pedir.Items.Clear();
+            int fin_del_listbox = lista_productos.Count;
+            bool encontro_otro_mayor = false;
+            bool puesto_anterior_mente = false;
+            for (int i = 0; i < fin_del_listbox; i++)
+            {
+                string[] datos_item_sugerencia = lista_productos[i].Split('#');
+                int posicion_item_sugerencia = Convert.ToInt32(datos_item_sugerencia[0]);
+
+                if (posicion_item_a_pedir < posicion_item_sugerencia)
+                {
+
+
+                    if (puesto_anterior_mente == false)
+                    {
+                        lstb_a_pedir.Items.Add(item_seleccionado);
+                        lstb_sugerencia.Items.RemoveAt(lstb_sugerencia.SelectedIndex);
+                        puesto_anterior_mente = true;
+                    }
+                    encontro_otro_mayor = true;
+                }
+                string chequeo_temp = lista_productos[i];
+                lstb_a_pedir.Items.Add(chequeo_temp);
+            }
+            if (encontro_otro_mayor == false)
+            {
+                lstb_a_pedir.Items.Add(item_seleccionado);
+                lstb_sugerencia.Items.RemoveAt(lstb_sugerencia.SelectedIndex);
+            }
+
+
+        }
+        private void btn_procesar_Click(object sender, EventArgs e)
+        {
+            arreglos_compuestos_y_simples arr_comp_simp = new arreglos_compuestos_y_simples();
+
+            DateTime fecha = DateTime.Now;
+            string año_mes_dia = fecha.ToString("yyyyMMdd");
+            if (lstb_a_pedir.Items.Count > 0)
+            {
+                string direccion = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\info_tienda\\pedidos\\" + año_mes_dia + "_pedido.txt";
+                bas.Crear_archivo_y_directorio(direccion);
+
+                for (int k = 0; k < lstb_a_pedir.Items.Count; k++)
+                {
+                    string[] items_a_pedir = lstb_a_pedir.Items[k].ToString().Split('#');
+                    bas.Agregar(direccion, items_a_pedir[1]);
+                }
+                lstb_a_pedir.Items.Clear();
+
+                //string[] resultado = pre.compra(direccion_ranking, 4, 5, 6, 7);
+                //carga_info_arreglo(resultado);
+
+                MessageBox.Show("listo");
+            }
+        }
+
 
         private void Recargar_texbox()
         {
-            string[] imprimir = bas.Leer("inf\\inventario\\invent.txt", "3|0|2|1|4|5|6|7", "" + G_parametros[0]);
-            Txt_buscar_producto.AutoCompleteCustomSource.Clear();
-            for (int k = 1; k < imprimir.Length; k++)
+            
+            string[] provedores_sin_split= bas.Leer("inf\\inventario\\provedores.txt");
+            for (int i = 0; i < provedores_sin_split.Length; i++)
             {
-                G_productos.Add(imprimir[k]);
-                Txt_buscar_producto.AutoCompleteCustomSource.Add(imprimir[k]);
+                provedores = provedores_sin_split[i].Split('|');
+                txt_buscar_provedor.AutoCompleteCustomSource.Add("" + provedores[0]);
+
             }
-
-            string[] imprimir2 = bas.Leer("inf\\inventario\\invent.txt", "1|0|2|3|4|5|6|7", "" + G_parametros[0]);
-            Txt_nom_producto.AutoCompleteCustomSource.Clear();
-            for (int k = 1; k < imprimir2.Length; k++)
-            {
-                Txt_nom_producto.AutoCompleteCustomSource.Add("" + imprimir2[k]);
-            }
-
-            string[] imprimir3 = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);
-            cmb_provedor.Items.Clear();
-            cmb_provedor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cmb_provedor.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            for (int k = 0; k < imprimir3.Length; k++)
-            {
-                cmb_provedor.Items.Add("" + imprimir3[k]);
-                cmb_provedor.AutoCompleteCustomSource.Add("" + imprimir3[k]);
-            }
-
-
+            
         }
 
-        private void Txt_buscar_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void txt_buscar_provedor_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == (char)(Keys.Enter))
             {
-                string[] info = Txt_buscar_producto.Text.Split(G_parametros);
-                Procesar_codigo(info[0]);
-                Txt_cantidad.Focus();
-            }
-        }
+                busqueda_de_prov(txt_buscar_provedor.Text);
 
-        private void Procesar_codigo(string codigo)
-        {
-            
-            bool bandera = false;
-            for (int i = 0; i < G_productos.Count; i++)
-            {
-                String[] temp = G_productos[i].Split(G_parametros);
-                if (codigo == temp[0])
+                if (txt_buscar_provedor.Text != "")
                 {
-                    Txt_buscar_producto.Text = temp[0];
-                    Lbl_id.Text = temp[1];
-                    Lbl_nombre_producto.Text = temp[3];
-                    Lbl_precio_compra_cant.Text = temp[5];
-                    Lbl_precio_venta.Text = temp[2];
-                    Lbl_cantidad_cant.Text = temp[4];
-                    cmb_provedor.Text = temp[6];
-                    Txt_costo_compra.Text = temp[5];
-
-                    bandera = true;
-                    break;
-                }
-            }
-
-            if (bandera == false)
-            {
-
-                Tex_base bas = new Tex_base();
-                string[] info_invent = bas.Leer("inf\\inventario\\invent.txt");
-                string[] espliteado = Txt_buscar_producto.Text.Split(G_parametros);
-                string[] provedores = bas.Leer("inf\\inventario\\provedores.txt", "0", "" + G_parametros[0]);//este regresa los provedores
-                Operaciones_textos op_text = new Operaciones_textos();
-                string provedores_txt = op_text.join_paresido('°', provedores);
-
-                //------------------------------------------------------------
-                Ventana_emergente vent_emergent = new Ventana_emergente();
-                //-------------------------------------------------------------
-                string[] enviar;
-                if (G_prov_anterior == null)
-                {
-                    G_prov_anterior = provedores[0];
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+                    busqueda_de_prov(txt_buscar_provedor.Text);
                 }
                 else
                 {
-                    enviar = new string[] { "2°id°" + (info_invent.Length), "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°1°1°2", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2" };
+                    for (int i = 0; i < lst_productos.Count; i++)
+                    {
+                        lstb_sugerencia.Items.Add(lst_productos[i]);
+                    }
                 }
 
-                //a = 4;
-                string mensage = vent_emergent.Proceso_ventana_emergente(enviar, 1);//el uno significa que modificara el inventario
-                string[] temp = mensage.Split(G_parametros);//lo espliteo para cambiar el orden de la informacion y adaptarlo a como lo tiene el textbox
+                lstb_sugerencia.Focus();
 
-                string[] temp2;
-                string temp3 = "";
+            }
+        }
 
-                if (temp.Length >= 3)//por si cierra la ventana no agregue a los text box
+        private void busqueda_de_prov(string info_buscar)
+        {
+            lstb_sugerencia.Items.Clear();
+
+            for (int i = 0; i < lst_productos.Count; i++)
+            {
+                string[] inf_prod = lst_productos[i].Split('|');
+
+                if (info_buscar == inf_prod[3])
                 {
-                    G_prov_anterior = temp[6];
-                    temp2 = new[] { temp[3], temp[0], temp[2], temp[1], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9] };//aqui lo pongo en el orden que deve llevar
-                    temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
-                    G_productos.Add(temp3);//agrego en lista de productos
-                    Txt_buscar_producto.AutoCompleteCustomSource.Add(temp3);//agrego en el autocompletar
-
-                    temp2 = new[] { temp[1], temp[0], temp[2], temp[3], temp[4], temp[5], temp[6], temp[7], temp[8], temp[9] };//aqui lo pongo en el orden que deve llevar
-                    temp3 = string.Join(G_parametros[0] + "", temp2);//uno todo en un string conforme al parametro o caracter de separacion
-                    Txt_nom_producto.AutoCompleteCustomSource.Add(temp3);
-                }
-
-
-                Txt_buscar_producto.Text = "";
-            }
-
-
-        }
-
-        private void Txt_nom_producto_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyValue == (char)(Keys.Enter))
-            {
-                string[] info = Txt_nom_producto.Text.Split(G_parametros);
-                Procesar_codigo2(info[0]);
-                Txt_cantidad.Focus();
-            }
-        }
-        private void Procesar_codigo2(string codigo)
-        {
-            for (int i = 0; i < G_productos.Count; i++)
-            {
-                String[] temp = G_productos[i].Split(G_parametros);
-                if (codigo == temp[3])
-                {
-                    Txt_buscar_producto.Text = temp[0];
-                    Lbl_id.Text = temp[1];
-                    Lbl_nombre_producto.Text = temp[3];
-                    Lbl_precio_compra_cant.Text = temp[5];
-                    Lbl_precio_venta.Text = temp[2];
-                    Lbl_cantidad_cant.Text = temp[4];
-                    cmb_provedor.Text = temp[6];
-                    Txt_nom_producto.Text = temp[3];
-                    break;
-                }
-            }
-
-            
-
-        }
-
-        private void Btn_procesar_venta_Click(object sender, EventArgs e)
-        {
-            Ventana_emergente ventana_emerg = new Ventana_emergente();
-            //a = 5;
-            string[] enviar = { "3°venta_directa°1", "3°preVenta°2" };
-            string valor_devuelto=ventana_emerg.Proceso_ventana_emergente(enviar,0);
-            bool compra_directa;
-            if (valor_devuelto=="1")
-            {
-                compra_directa = true;
-            }
-            else
-            {
-                compra_directa = false;
-            }
-            Modelo_compra_venta mod_com_ven = new Modelo_compra_venta();
-            for (int i = 0; i < Lst_compras.Items.Count; i++)
-            {
-                string[] item_spliteado = Lst_compras.Items[i].ToString().Split(G_parametros);
-                mod_com_ven.Modelo_compra(item_spliteado[0], item_spliteado[3], item_spliteado[2], item_spliteado[4], item_spliteado[1],item_spliteado[5],item_spliteado[6],compra_directa);
-            }
-            Lbl_nom_product_list.Text = "";
-            Lst_compras.Items.Clear();
-            Lbl_cuenta.Text = "0";
-
-        }
-
-        private void Btn_cargar_pedido_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog opfd = new OpenFileDialog();
-            opfd.InitialDirectory= Directory.GetCurrentDirectory() +"\\pedidos";
-            if (opfd.ShowDialog()== DialogResult.OK)
-            {
-                string[] info_compra = bas.Leer(opfd.FileName, "2|0|6");
-                for (int i = 0; i < info_compra.Length; i++)
-                {
-                    string[] info_producto_comp_spliteada = info_compra[i].Split(G_parametros);
-                    Procesar_codigo(info_producto_comp_spliteada[0]);
-                    Txt_cantidad.Text = info_producto_comp_spliteada[1];
-                    Txt_costo_compra.Text= info_producto_comp_spliteada[2];
-                    string temp = Txt_buscar_producto.Text + "|" + Lbl_nombre_producto.Text + "|" + Txt_cantidad.Text + "|" + Txt_costo_compra.Text + "|" + cmb_provedor.Text + "|" + Lbl_id.Text;
-                    Lst_compras.Items.Add(temp);
+                    lstb_sugerencia.Items.Add(lst_productos[i]);
                 }
             }
             
         }
 
-        private void Btn_elim_ultimo_Click(object sender, EventArgs e)
-        {
-            string temporal;
-            string[] temporal_s;
-            decimal total = 0;
-            decimal total_cost_com = 0;
-            try
-            {
-                
-                Lst_compras.Items.Remove(Lst_compras.Items[Lst_compras.Items.Count - 1]);
-                for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
-                {
-                    temporal = "" + Lst_compras.Items[coll];
-                    temporal_s = temporal.Split(G_parametros);
-
-                    if (temporal_s[0] != "")
-                    {
-                        total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
-                        total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
-                    }
-
-                }
-                Lbl_cuenta.Text = "" + total;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            Lbl_nom_product_list.Text = "";
-            Txt_buscar_producto.Focus();
-        }
-
-        private void Btn_eliminar_todo_Click(object sender, EventArgs e)
-        {
-            string temporal;
-            string[] temporal_s;
-            decimal total = 0;
-            decimal total_cost_com = 0;
-
-            try
-            {
-                Lst_compras.Items.Clear();
-                for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
-                {
-                    temporal = "" + Lst_compras.Items[coll];
-                    temporal_s = temporal.Split(G_parametros);
-
-                    if (temporal_s[0] != "")
-                    {
-                        total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
-                        total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
-                    }
-
-                }
-                Lbl_cuenta.Text = "" + total;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            Lbl_nom_product_list.Text = "";
-            Txt_buscar_producto.Focus();
-        }
-
-        private void Btn_eliminar_seleccionado_Click(object sender, EventArgs e)
-        {
-            string temporal;
-            string[] temporal_s;
-            decimal total = 0;
-            decimal total_cost_com = 0;
-
-            try
-            {
-                Lst_compras.Items.RemoveAt(Lst_compras.SelectedIndex);
-                for (int coll = 0; coll < Lst_compras.Items.Count; coll++)
-                {
-                    temporal = "" + Lst_compras.Items[coll];
-                    temporal_s = temporal.Split(G_parametros);
-
-                    if (temporal_s[0] != "")
-                    {
-                        total = total + (Convert.ToDecimal(temporal_s[2]) * Convert.ToDecimal(temporal_s[3]));
-                        total_cost_com = total_cost_com + Convert.ToDecimal(temporal_s[5]);
-                    }
-
-                }
-                Lbl_cuenta.Text = "" + total;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            Lbl_nom_product_list.Text = "";
-            Txt_buscar_producto.Focus();
-        }
-
-        private void Lst_compras_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Lst_compras.SelectedItem != null)
-            {
-                string[] info_producto_lista = Lst_compras.SelectedItem.ToString().Split(G_parametros[0]);
-                Lbl_nom_product_list.Text = info_producto_lista[1]+" $"+ (Convert.ToInt32(info_producto_lista[2])*Convert.ToDecimal(info_producto_lista[3]) );
-            }
-        }
-
-        private void Txt_cantidad_keypress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || '.' == e.KeyChar || '\b' == e.KeyChar)
-            {
-
-            }
-            /*
-            else if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
-            {
-                e.KeyChar = '\0';
-            }
-            */
-            else
-            {
-                e.KeyChar = '\0';
-            }
-        }
-
-        private void Txt_costo_compra_keypress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || '.' == e.KeyChar || '\b' == e.KeyChar)
-            {
-
-            }
-            /*
-            else if (char.IsLetter(e.KeyChar))//checa si lo introducido fue letra o no chart.IsLetter devuelve true o falce
-            {
-                e.KeyChar = '\0';
-            }
-            */
-            else
-            {
-                e.KeyChar = '\0';
-            }
-        }
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace tienda2.clases
 {
-    class var_glob_direcciones
+    class glob_var_direcciones
     {
+        public string GG_string_transferir = "";
+        public List<string> GG_list_transferir=new List<string>();
 
     }
 }

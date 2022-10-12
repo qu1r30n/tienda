@@ -1,18 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using tienda2.clases;
+using System.IO;
 
 namespace tienda2.desinger
 {
     public partial class Ventana_emergente : Form
     {
 
-        char[] G_parametros = { '|' };
+        char[] G_parametros = { '|', '°', '¬', '^' };
         string G_datos_de_boton = "";
         int G_contador = 0;
         int G_control_a_ocultar;
-        int G_bandera=0;
+        int G_bandera = 0;
 
 
 
@@ -23,8 +30,22 @@ namespace tienda2.desinger
 
         }
 
-        public string Proceso_ventana_emergente(string[] nom_datos_recolectados, int modificara = 0, string[] infoextra = null, char caracter_spliteo = '°')
+        public string Proceso_ventana_emergente(string[] nom_datos_recolectados, int modificara = 0, string titulo_ventana = "ventana_emergente", string[] infoextra = null, char caracter_spliteo = '°')
         {
+            //1=textbox  1°titulo_texbox°contenido_text_box°restriccion_de_dato      ejemplo "1°precio venta°0°2" //el 2 es la restriccion que solo resivira numeros y punto decimal         
+            //2=labels   2°titulo_label°abajo_pondra_otro_label_con_el_contenido    ejemplo "2°id°9999"
+            //3=boton    3°titulo_del_boton°valor_del_boton°numero_de_Funcion            ejemplo "3°es_paquete°1°0" //cuando oprima el boton devolvera el valor 1 
+            //4=combobox "4°
+            //            titulo_combobox°
+            //            valor_inicial_si anteriormente_no_se_a_modificado°
+            //            restriccion_de_dato_con_aparte_opcion_4_que_es_proyecto_quetiene_otra_funcion°
+            //            " + valor_inicial_si_se_modifico + '°'
+            //            + todas_las_opciones_del_combobox_separadas_por_"°"
+            //
+            //            ejemplo "4°grupo°2°4°1°1°2°3°4"
+
+            this.Text = titulo_ventana;
+
             int x = 120;
             int y = 0;
             int ancho = 100;
@@ -38,7 +59,7 @@ namespace tienda2.desinger
             string nuevo_boton = "";
             string union = "";
 
-            string bandera1 = "0", bandera2 = "0", bandera3 = "0";
+            string bandera1 = "0", bandera2 = "0", bandera3 = "0", bandera4 = "0";
 
             for (int i = 0; i < nom_datos_recolectados.Length; i++)
             {
@@ -56,9 +77,13 @@ namespace tienda2.desinger
                 {
                     bandera3 = "1";
                 }
+                else if (tipo_de_datos[0] == "4")
+                {
+                    bandera4 = "1";
+                }
             }
 
-            if (bandera3 == "1" && bandera1 == "0" && bandera2 == "0")
+            if (bandera3 == "1" && bandera1 == "0" && bandera2 == "0" && bandera4 == "0")
             {
                 info[0] = "solo_botones";
             }
@@ -110,7 +135,7 @@ namespace tienda2.desinger
 
                         if (espliteado.Length >= 4)
                         {
-                            string[] restriccion_de_caracteres_a_usar = espliteado[3].Split('¬');
+                            string[] restriccion_de_caracteres_a_usar = espliteado[3].Split(G_parametros[3]);
                             for (int j = 0; j < restriccion_de_caracteres_a_usar.Length; j++)
                             {
                                 string parametros = "";
@@ -196,17 +221,20 @@ namespace tienda2.desinger
                         contador_en_horisontal_Txtbox = contador_en_horisontal_Txtbox + 1;
 
 
+                        lb.Text = espliteado[1];
                         if (espliteado.Length == 3)
                         {
                             Lbl2.Text = espliteado[2];
                         }
 
-                        nom_datos_recolectados[i] = espliteado[1];
 
-                        lb.Text = nom_datos_recolectados[i];
+
+
+
 
                         Lbl2.Width = ancho;
                         //Lbl2.Height = alto;
+
 
                         lb.AutoSize = true;
                         this.Controls.Add(lb);//le agrega un indice al control para luego utilisarlo por su indise en  la funcion devolver string
@@ -221,6 +249,7 @@ namespace tienda2.desinger
                     else if (espliteado[0] == "3")
                     {
                         Button Btn_nuevoboton = new Button();
+
                         Btn_nuevoboton.Name = espliteado[2];
                         Btn_nuevoboton.Text = espliteado[1];
 
@@ -250,17 +279,11 @@ namespace tienda2.desinger
 
                         this.Controls.Add(Btn_nuevoboton);
 
-                        string parametros = i + "°" + espliteado[2];
+                        string parametros = i + "" + G_parametros[1] + espliteado[2] + G_parametros[1] + espliteado[3];
                         //Btn_nuevoboton.Click += new EventHandler(nuevoBoton_Click); 
-                        if (info[0] == "solo_botones")
-                        {
-                            Btn_nuevoboton.Click += new EventHandler((sender1, e1) => nuevo_boton = NuevoBoton_Click(sender1, e1, parametros, info));
 
-                        }
-                        else
-                        {
-                            Btn_nuevoboton.Click += new EventHandler((sender1, e1) => nuevo_boton = NuevoBoton_Click(sender1, e1, parametros));
-                        }
+                        Btn_nuevoboton.Click += new EventHandler((sender1, e1) => nuevo_boton = NuevoBoton_Click(sender1, e1, parametros, info));
+
                     }
 
                     //combobox
@@ -295,7 +318,7 @@ namespace tienda2.desinger
 
                         if (espliteado.Length >= 3)
                         {
-                            string[] restriccion_de_caracteres_a_usar = espliteado[3].Split('¬');
+                            string[] restriccion_de_caracteres_a_usar = espliteado[3].Split(G_parametros[3]);
                             for (int j = 0; j < restriccion_de_caracteres_a_usar.Length; j++)
                             {
                                 string parametros = "";
@@ -311,7 +334,7 @@ namespace tienda2.desinger
                                         parametros = "ingredientes_primarios";
                                         break;
                                     case "4":
-                                        parametros = "proyecto";
+                                        parametros = "ocultar_control";
                                         break;
 
                                     default:
@@ -360,14 +383,14 @@ namespace tienda2.desinger
 
                 //recuerda que el for que esta aqui arriba crea todos los controles
                 G_control_a_ocultar = 21;//se usa para ocultar el textbox que es el de productos_elaborados que es el control 21 y se pone aqui por que es cuando termina de poner todos los controles
-                
-                if (G_bandera==1)
+
+                if (G_bandera == 1)
                 {
                     this.Controls[15].Text = "1";// se pone 1 para que cambie el combobox de grupo que es el control 21 y luego la funcion  oculte el contro que usa G_control_a_ocultar
                 }
-                
 
-                if (bandera1 == "1")
+                //agrega el boton aceptar si hay un textbox o un combobox
+                if (bandera1 == "1" || bandera4 == "1")
                 {
                     Button Btn_aceptar = new Button();
 
@@ -385,7 +408,7 @@ namespace tienda2.desinger
                     //----------------------------------------------------------------------------------------------------------------------------
                     if (Btn_aceptar.DialogResult == DialogResult)
                     {
-                        arraytextbox = Boton_aceptar(arraytextbox, modificara, infoextra, caracter_spliteo);
+                        arraytextbox = Boton_aceptar(arraytextbox, modificara, null, caracter_spliteo);
 
                     }
                     else
@@ -397,7 +420,7 @@ namespace tienda2.desinger
 
                 }
 
-                else if (bandera2 == "1" || bandera3 == "1" && bandera1 != "1")
+                else if ((bandera2 == "1" || bandera3 == "1") && (bandera1 != "1" && bandera1 != "4"))
                 {
                     this.ShowDialog();
                     union = nuevo_boton;
@@ -415,7 +438,7 @@ namespace tienda2.desinger
                     union = union + arraytextbox[i] + G_parametros[0];
                 }
             }
-            
+
             return union;
         }
 
@@ -478,16 +501,11 @@ namespace tienda2.desinger
             switch (modificara)
             {
                 case 0:
-                    bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
+
                     break;
                 case 1:
                     bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
                     bas.Agregar("inf\\inventario\\invent.txt", temp2);
-                    break;
-                case 2:
-                    bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
-
-                    op.Actualisar_costo_compra("inf\\inventario\\invent.txt", infoextra[0], Convert.ToDecimal(arraytextbox[0]));
                     break;
                 case 3:
                     bas.Agregar("inf\\inventario\\cosas_no_estaban.txt", "movimiento origen: " + modificara + G_parametros[0] + temp2);
@@ -508,20 +526,37 @@ namespace tienda2.desinger
             Button Btn = sender as Button;
 
             //G_datos_de_boton = G_datos_de_boton + seccion + G_parametros[0];
-
+            string[] seccion_espliteado = seccion.Split('°');
             if (info_extra != null)
             {
                 if (info_extra[0] == "solo_botones")
                 {
-                    string[] seccion_espliteado = seccion.Split('°');
-                    seccion = seccion_espliteado[1];
-                    G_datos_de_boton = seccion;
-                    this.Close();
+
+                    if (seccion_espliteado[2] == "0")
+                    {
+                        seccion = seccion_espliteado[1];
+                        G_datos_de_boton = seccion;
+                        this.Close();
+                    }
+                    else
+                    {
+                        funcion_elegida_por_boton(seccion_espliteado[2]);
+                    }
+
+
                 }
+
                 else
                 {
-                    G_datos_de_boton = G_datos_de_boton + seccion + G_parametros[0];
-                    this.Close();
+                    if (seccion_espliteado[2] == "0")
+                    {
+                        G_datos_de_boton = G_datos_de_boton + seccion + G_parametros[0];
+                        this.Close();
+                    }
+                    else
+                    {
+                        funcion_elegida_por_boton(seccion_espliteado[2]);
+                    }
                 }
             }
             else
@@ -580,28 +615,32 @@ namespace tienda2.desinger
 
         public void tex_change_y_oculta_control_21(Object sender, EventArgs e, string parametros)
         {
-            
             //xb = 1;
             ComboBox contenido_contol = sender as ComboBox;
-            
-            if (parametros== "proyecto")
+
+            if (parametros == "ocultar_control")
             {
                 G_bandera = 1;
                 if (G_control_a_ocultar == 21)
                 {
-                    if (contenido_contol.Text == "2")
+
+
+                    if (contenido_contol.Text == "3")
                     {
                         this.Controls[G_control_a_ocultar].Visible = true;
                     }
+
                     else
                     {
                         this.Controls[G_control_a_ocultar].Visible = false;
                     }
                 }
+
             }
-            
 
         }
+
+
         public void restriccion_caracteres(Object sender, KeyPressEventArgs e, string parametros)
         {
             if (parametros == "solo_letras")
@@ -645,7 +684,7 @@ namespace tienda2.desinger
                         string[] mensaje_espliteado = mensaje.Split('|');
 
                         string temp = this.ActiveControl.Text;
-                        this.ActiveControl.Text = temp + "¬" + mensaje_espliteado[0] + "°";
+                        this.ActiveControl.Text = temp + G_parametros[3] + mensaje_espliteado[0] + "°";
 
                         //e.KeyChar = '°';
                         G_contador = 0;
@@ -674,6 +713,29 @@ namespace tienda2.desinger
             else
             {
 
+            }
+        }
+
+        public void funcion_elegida_por_boton(string id_funcion)
+        {
+            switch (id_funcion)
+            {
+                case "1":
+                    OpenFileDialog opfd = new OpenFileDialog();
+                    opfd.InitialDirectory = Directory.GetCurrentDirectory() + "\\pedidos";
+                    if (opfd.ShowDialog() == DialogResult.OK)
+                    {
+
+                        G_datos_de_boton = opfd.FileName;
+                        this.Close();
+                    }
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    break;
+                default:
+                    break;
             }
         }
     }
