@@ -2,7 +2,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 0|salsa huichol 355ml|12|012957100078|0|0|casa vargas|1||1|
 1|polvo p hornear rexal|12|013602000200|0|8.7|casa vargas|1||1|
 2|clamato 473ml|22|014800515329|0|18|marinela|1||1|
-3|sardina yavaros|40|017479831011|0|33.5|casa vargas|1||1|
+3|sardina yavaros|0|017479831011|0|33.5|casa vargas|1||1|
 4|orbit fresa 4 past|2.5|02201302|0|0|el toro|1||1|
 5|silk almendras946ml|46|025293002920|0|39|danone|1||1|
 6|jugo arandano 1Lt|25|031200454560|0|0|danone|1||1|

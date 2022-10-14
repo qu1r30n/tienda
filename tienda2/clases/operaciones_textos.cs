@@ -89,5 +89,11 @@ namespace tienda2.clases
             return resultado;
         }
 
+        public double cantidad_decimales(double value, int decimales)
+        {
+            double aux_value = Math.Pow(10, decimales);
+            return (Math.Truncate(value * aux_value) / aux_value);
+        }
+
     }
 }

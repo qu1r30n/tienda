@@ -1309,7 +1309,7 @@ namespace tienda2.clases
             return exito_o_fallo;
         }
 
-        public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo = "numero", string orden = "mayor_menor", char caracter_separacion = '|')
+        public string[] Ordenar(string direccion_archivo, int columna_comparar, string tipo = "numero", string orden = "mayor_menor", char caracter_separacion = '|',int fila_donde_comiensa=0)
         {
             Tex_base bas = new Tex_base();
             string[] lineas = bas.Leer(direccion_archivo);
@@ -1321,7 +1321,7 @@ namespace tienda2.clases
 
 
                     string temporal_apoyo;
-                    for (int i = 0; i < lineas.Length; i++)
+                    for (int i = fila_donde_comiensa; i < lineas.Length; i++)
                     {
                         for (int j = i + 1; j < lineas.Length; j++)
                         {
@@ -1356,7 +1356,7 @@ namespace tienda2.clases
                 else if (orden == "menor_mayor")
                 {
                     string temporal_apoyo;
-                    for (int i = 0; i < lineas.Length; i++)
+                    for (int i = fila_donde_comiensa; i < lineas.Length; i++)
                     {
                         for (int j = i + 1; j < lineas.Length; j++)
                         {
