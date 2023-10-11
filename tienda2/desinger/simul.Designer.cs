@@ -40,8 +40,8 @@ namespace tienda2.desinger
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroVendedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_retirar_dineri = new System.Windows.Forms.Button();
             this.pruToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_retirar_dineri = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +100,7 @@ namespace tienda2.desinger
             this.txt_dinero.Name = "txt_dinero";
             this.txt_dinero.Size = new System.Drawing.Size(100, 20);
             this.txt_dinero.TabIndex = 10;
+            this.txt_dinero.Text = "150";
             this.txt_dinero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_dinero_KeyDown);
             // 
             // lbl_id
@@ -141,9 +142,16 @@ namespace tienda2.desinger
             // registroVendedoresToolStripMenuItem
             // 
             this.registroVendedoresToolStripMenuItem.Name = "registroVendedoresToolStripMenuItem";
-            this.registroVendedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registroVendedoresToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.registroVendedoresToolStripMenuItem.Text = "registro vendedores";
             this.registroVendedoresToolStripMenuItem.Click += new System.EventHandler(this.registroVendedoresToolStripMenuItem_Click);
+            // 
+            // pruToolStripMenuItem
+            // 
+            this.pruToolStripMenuItem.Name = "pruToolStripMenuItem";
+            this.pruToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.pruToolStripMenuItem.Text = "pru";
+            this.pruToolStripMenuItem.Click += new System.EventHandler(this.pruToolStripMenuItem_Click);
             // 
             // btn_retirar_dineri
             // 
@@ -154,13 +162,6 @@ namespace tienda2.desinger
             this.btn_retirar_dineri.Text = "retirar dinero";
             this.btn_retirar_dineri.UseVisualStyleBackColor = true;
             this.btn_retirar_dineri.Click += new System.EventHandler(this.btn_retirar_dineri_Click);
-            // 
-            // pruToolStripMenuItem
-            // 
-            this.pruToolStripMenuItem.Name = "pruToolStripMenuItem";
-            this.pruToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pruToolStripMenuItem.Text = "pru";
-            this.pruToolStripMenuItem.Click += new System.EventHandler(this.pruToolStripMenuItem_Click);
             // 
             // simul
             // 

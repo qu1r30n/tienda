@@ -3,9 +3,9 @@ bic|0
 orbit|0
 las delicias|15
 kinder|286
-casa vargas|664.5
+casa vargas|43
 skarch|0
-red cola|0
+red cola|20
 dorco|5
 marinela|45.5
 nestle|0
@@ -13,14 +13,14 @@ valentina|25
 marlboro|126
 coca|0
 maravilla|247.5
-medicamento|2783
+medicamento|3243
 pepsi|68
-dulceria|36
+dulceria|48
 magadan|1204
 salma|183
-guna|451
+guna|492
 pomada labiual|24
-no se sabe|27
+no se sabe|36
 bodega aurrera|40
 bimbo|14
 bimbo dulce|0

@@ -22,6 +22,7 @@ namespace tienda2
         {
 
             InitializeComponent();
+                        
             Tex_base bas = new Tex_base(); //clase creada para haser una base de datos con Txt
             //pedidos pedi = new pedidos();
             //pedi.Show();

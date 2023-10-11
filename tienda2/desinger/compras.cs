@@ -589,7 +589,7 @@ namespace tienda2.desinger
             {
                 MessageBox.Show("subio:" + (costo_por_producto - costo_compra_invent));
                 double costo_venta = Convert.ToDouble(produc_inf_esplit[2]);
-                if ((costo_por_producto * 1.1) > costo_venta)
+                if ((costo_por_producto * 1.15) > costo_venta)
                 {
                     
                     MessageBox.Show("nuevo_precio_de_venta: " + (costo_por_producto*1.15));

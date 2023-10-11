@@ -1,8 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
+
 
 namespace tienda2.clases
 {
@@ -243,6 +249,46 @@ namespace tienda2.clases
             }
         }
 
-        
+
+        private PrintDocument doc = new PrintDocument();
+        private PrintPreviewDialog vista = new PrintPreviewDialog();
+
+
+
+        string[] texto;
+        public void imp_tiket(string[] texto_linea)
+        {
+            texto = texto_linea;
+            doc.PrinterSettings.PrinterName = doc.DefaultPageSettings.PrinterSettings.PrinterName;
+            doc.PrintPage += new PrintPageEventHandler(imprimir_tiket);
+            vista.Document = doc;
+            vista.Show();
+            //doc.Print();
+
+            texto=null;
+            
+        }
+
+        public void imprimir_tiket(object sender,PrintPageEventArgs e)
+        {
+            int posx = 10, posy = 100;
+            
+            try
+            {
+
+                for (int i = 0; i < texto.Length; i++)
+                {
+                    Font fuente = new Font("consola", 15);
+                    e.Graphics.DrawString(texto[i], fuente, Brushes.Black, posx, posy);
+                    posy += 20;
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

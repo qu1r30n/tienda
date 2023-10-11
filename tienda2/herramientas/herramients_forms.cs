@@ -65,5 +65,13 @@ namespace tienda2.herramientas
                 }
             }
         }
+
+        public void editar_colum_listbox(ListBox list_box, int index_fila_modificar, int columna, string nueva_info, char caracter_separacion = '|')
+        {
+
+            string[] info_mod = list_box.Items[index_fila_modificar].ToString().Split(caracter_separacion);
+            info_mod[columna] = nueva_info;
+            list_box.Items[index_fila_modificar] = string.Join(caracter_separacion + "", info_mod);
+        }
     }
 }

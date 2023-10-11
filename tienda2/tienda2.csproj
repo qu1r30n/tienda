@@ -148,6 +148,12 @@
     <Compile Include="desinger\porcen_ganan_produc.Designer.cs">
       <DependentUpon>porcen_ganan_produc.cs</DependentUpon>
     </Compile>
+    <Compile Include="desinger\prestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="desinger\prestamos.Designer.cs">
+      <DependentUpon>prestamos.cs</DependentUpon>
+    </Compile>
     <Compile Include="desinger\promociones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\porcen_ganan_produc.resx">
       <DependentUpon>porcen_ganan_produc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="desinger\prestamos.resx">
+      <DependentUpon>prestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="desinger\promociones.resx">
       <DependentUpon>promociones.cs</DependentUpon>

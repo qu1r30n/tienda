@@ -102,7 +102,7 @@ namespace tienda2.desinger
             // 
             // Btn_procesar_venta
             // 
-            this.Btn_procesar_venta.Location = new System.Drawing.Point(503, 240);
+            this.Btn_procesar_venta.Location = new System.Drawing.Point(506, 240);
             this.Btn_procesar_venta.Name = "Btn_procesar_venta";
             this.Btn_procesar_venta.Size = new System.Drawing.Size(75, 23);
             this.Btn_procesar_venta.TabIndex = 41;

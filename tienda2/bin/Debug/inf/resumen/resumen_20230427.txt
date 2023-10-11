@@ -1,0 +1,4 @@
+0_res_inverciones|0
+1_res_venta|9
+2_res_compra|0
+3_res_pag_emp|0

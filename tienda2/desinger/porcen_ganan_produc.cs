@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using tienda2.clases;
+using tienda2.herramientas;
+
+
 
 namespace tienda2.desinger
 {
     public partial class porcen_ganan_produc : Form
     {
+        herramients_forms herr_form = new herramients_forms();
         Tex_base bas = new Tex_base();
         string dir_invent = "inf\\inventario\\invent.txt";
         public porcen_ganan_produc()
@@ -101,15 +105,37 @@ namespace tienda2.desinger
 
         private void btn_edit_nom_Click(object sender, EventArgs e)
         {
-            //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
-            bas.Editar_espesifico(dir_invent,1,)
+            if (lstb_productos.SelectedItem != null)
+            {
+
+                string[] info_esplit = lstb_productos.SelectedItem.ToString().Split('|');
+                int index_del_producto = lstb_productos.SelectedIndex;
+                DialogResult respuesta = MessageBox.Show("cambiar_nombre:"+info_esplit[1], "cambiar NOMBRE", MessageBoxButtons.YesNo);
+                if (respuesta == DialogResult.Yes)
+                {
+                    Ventana_emergente vent_emerg = new Ventana_emergente();
+                    string[] enviar = new string[] { "1°nuevo_nombre"};
+                    string nom_nuevo=vent_emerg.Proceso_ventana_emergente(enviar, titulo_ventana: "cambiar: " + info_esplit[1]);
+                    nom_nuevo = bas.Trimend_paresido(nom_nuevo);
+                    DialogResult respuesta2 = MessageBox.Show(nom_nuevo+" lo aceptas", "cambiar NOMBRE", MessageBoxButtons.YesNo);
+                    if (respuesta2 == DialogResult.Yes)
+                    {
+
+                        //id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo_7|multiusos_8|cantidad_productos_por_paquete_9|
+                        bas.Editar_espesifico(dir_invent, 0, info_esplit[0], "1", nom_nuevo);
+                        herr_form.editar_colum_listbox(lstb_productos,index_del_producto, 1, nom_nuevo);
+                    }
+                }
+            }    
         }
 
         private void btn_edit_compr_Click(object sender, EventArgs e)
         {
+            if (lstb_productos.SelectedItem != null)
+            {
 
+            }
         }
-
         private void btn_edit_venta_Click(object sender, EventArgs e)
         {
 
@@ -134,5 +160,8 @@ namespace tienda2.desinger
         {
 
         }
+
+        
+
     }
 }

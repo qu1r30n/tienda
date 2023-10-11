@@ -79,7 +79,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 77|boin mango 340ml|13|19836500028|0|0|operadora avicola san miguel santa ana|1||1|
 78|boing guayaba340ml|13|19836500035|0|0|operadora avicola san miguel santa ana|1||6|
 79|boing manzana 340ml|13|19836500301|0|0|operadora avicola san miguel santa ana|1||1|
-80|nutret fresa 40g|9|20899087531|0|0|no se sabe|1°producto||1|
+80|nutret fresa 40g|9|20899087531|-1|0|no se sabe|1°producto||1|
 81|orbit americano 16.2g|9|22000279033|0|0|orbit|1°producto||1|
 82|orbit fresa 5.6|3|2201302|0|0.75|orbit|1°producto||1|
 83|orbit fresa|3.5|2201302|0|62.5|orbit|1||1|
@@ -157,8 +157,8 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 155|pringles 40g|17|38000846755|0|12|el toro|1||1|
 156|chicharron saldaña|9|3805565154|0|7.2|saldaña|1°producto||1|
 157|energizer pila reloj ch|26|39800112781|0|18.75|ghd|1||4|
-158|agua skarch 1Lt|10|40232838699|0|5.83|red cola|1°producto||12|
-159|skarch 1lt|7|40232838699|0|5.83|red cola|1||1|
+158|agua skarch 1Lt|10|40232838699|-1|5.83|red cola|1°producto||12|
+159|skarch 1lt|7|40232838699|-1|5.83|red cola|1||1|
 160|titan mandarina 3lts|26|40232886652|0|22.5|red cola|1°producto||1|
 161|titan piña 3 lts|26|40232886669|0|22.5|red cola|1°producto||1|
 162|titan manzana 3lts|26|40232886676|0|22.5|red cola|1°producto||1|
@@ -220,7 +220,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 218|smirnoff 750ml|217|5410316950527|0|0|marinela|1||1|
 219|cliper|17|5507921791659|0|11.6|pall mall|1||1|
 220|always seca 8 toallas|23|56100024798|0|18|salma|1°producto||1|
-221|trueno pop|4|603554043051|0|0|dulceria|1||1|
+221|trueno pop|4|603554043051|2|2|dulceria|1||1|
 222|pulseras|5|603554054033|0|0|salma|1||1|
 223|choco huevo sorpresa12g|16|603554102017|0|12|las delicias|1°producto||1|
 224|choco huevo sorpresa 12gr|16|603554114034|0|12.5|vendedor x|1||1|
@@ -2729,7 +2729,7 @@ id_0|producto_1|precio_de_venta_2|0_3|cantidad_4|costo_compra_5|provedor_6|grupo
 2727|cepillo clinic|13|798136320061|0|10.8|salma|1°producto||1|
 2728|paleta guanamango 9g|2|798190122939|0|0.5|guna|1°producto||1|
 2729|paleta sandia 9g|2|798190122960|0|0|guna|1°producto||1|
-2730|ferrero 50g|43|8000500126936|-2|0|casa vargas|1||1|
+2730|ferrero 50g|43|8000500126936|-1|0|casa vargas|1||1|
 2731|kinder chocolate 50g|16|8000500134702|0|0|kinder|1°producto||1|
 2732|ferrero 2|17.5|8000500186930|0|14.63|ferrero kinder|1||2|
 2733|kinder bueno mini|4|8000500253687|0|0|ferrero kinder|1||19|

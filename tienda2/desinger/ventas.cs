@@ -401,13 +401,13 @@ namespace tienda2.desinger
                     }
 
 
-
-                    enviar = new string[] { "2°id°" + info_invent.Length, "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°marinela°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
+                                          //"2°id°1",                     "1°producto", "1°precio venta°0°2", "2°cod_bar         °asd"             , "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°nose°°nose                   °    provedor_0   ", "4°grupo°2°4°1°1°2°3°4", "2°multiusos    °", "1°cantidad_productos_por_paquete°1°2", "1°ligar_productos_para_sabor°°","1°impuesto°0°2","1°tipo_producto_para_impuesto°"
+                    enviar = new string[] { "2°id°" + info_invent.Length, "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°nose°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3", "1°ligar_productos_sabor", "1°precio impuesto°0°2", "4°tipo_producto_para_impuesto°nose°°" /* + tipo_impuesto_anterior* +'°' + todos los impuestos anteriores */ };
                 }
                 else
                 {
 
-                    enviar = new string[] { "2°id°" + info_invent.Length, "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3" };
+                    enviar = new string[] { "2°id°" + info_invent.Length, "1°producto", "1°precio venta°0°2", "2°codigo de barras°" + espliteado[0], "1°cantidad°1°2", "1°costo de compra°0°2", "4°provedor°" + G_prov_anterior + "°°" + G_prov_anterior + '°' + provedores_txt, "4°grupo°2°4°1°1°2°3°4", "2°no poner nada°", "1°cantidad_productos_por_paquete°1°2", "1°productos_elaborados°°3", "1°ligar_productos_para_sabor", "1°precio impuesto°0°2", "4°tipo_producto_para_impuesto°nose°°" /* + tipo_impuesto_anterior* +'°' + todos los impuestos anteriores */ };
                 }
 
                 //a = 7;
@@ -596,6 +596,7 @@ namespace tienda2.desinger
             {
                 lbl_ventas_compras_resultado.Visible = false;
             }
+            Txt_buscar_producto.Focus();
         }
 
 
@@ -635,7 +636,7 @@ namespace tienda2.desinger
                 lbl_modo_inventario.Text = ".";
             }
 
-
+            Txt_buscar_producto.Focus();
         }
 
         
@@ -649,6 +650,7 @@ namespace tienda2.desinger
         {
             if (e.KeyValue == (char)(Keys.Add))
             {
+                
                 string[] item_spliteado = Lst_ventas.Items[Lst_ventas.SelectedIndex].ToString().Split(G_parametros[0]);
                 Procesar_codigo(item_spliteado[0], "1");
             }
