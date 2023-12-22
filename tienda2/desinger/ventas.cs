@@ -549,6 +549,7 @@ namespace tienda2.desinger
         {
             if (e.KeyValue == (char)(Keys.Enter))
             {
+                Txt_nom_producto.Text = Txt_nom_producto.Text.ToUpper();
                 string[] info = Txt_nom_producto.Text.Split(G_parametros[0]);
                 Procesar_codigo2(info[0]);
                 Txt_buscar_producto.Focus();
@@ -746,6 +747,7 @@ namespace tienda2.desinger
         {
             if (e.KeyValue == (char)(Keys.Enter))
             {
+                Txt_buscar_producto.Text = Txt_buscar_producto.Text.ToUpper();
                 string[] info = Txt_buscar_producto.Text.Split(G_parametros[0]);
                 Procesar_codigo(info[0]);
             }

@@ -29,6 +29,8 @@ namespace tienda2.desinger
             
             string directorio_actual= Directory.GetCurrentDirectory();
             string direccion_cursos= directorio_actual + "\\sismul2\\";
+            bas.Crear_archivo_y_directorio(direccion_cursos);
+
             string[] direccion_cursos_cada1 = Directory.GetFiles(direccion_cursos);
 
             
