@@ -93,7 +93,7 @@ namespace tienda2.clases
             return info_base.Length+"";
         }
 
-        public void entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porsentajes_de_comision = "10|10|10", char caracter_separacion = '|', bool viene_pago_comp = false)
+        public void entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porsentajes_de_comision = "20|10", char caracter_separacion = '|', bool viene_pago_comp = false)
         {
             if (viene_pago_comp==false)
             {
