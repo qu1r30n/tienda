@@ -116,7 +116,7 @@ namespace tienda2.clases
 
             if (porsentajes_de_comision_para_usuarios != "")
             {
-                bas.Incrementa_celda(tabla_usuario, 0, id_usuario, "6", "" + (cantidad_dinero * (Convert.ToDouble(porsentajes_de_comision_para_usuarios) / 100)));
+                bas.Incrementa_celda(direccion_tab_enc, 0, id_usuario, "6", "" + (cantidad_dinero * (Convert.ToDouble(porsentajes_de_comision_para_usuarios) / 100)));
             }
             
 

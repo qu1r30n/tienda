@@ -1,0 +1,30 @@
+registro_complejo|0|fonda|0|fonda|sn|sn|sn|0|0|0|0|0|0|nanacamilpa|0|0|
+reg_comp|0|fonda|0|fonda|sn°sn°sn°0°0°0°0°0°0°nanacamilpa°0°0°|
+registro_complejo|0|fonda|0|fonda|0|0|0|0|0|0|0|0|0|nanacamilpa|0|0|
+reg_comp|0|fonda|0|fonda|0°0°0°0°0°0°0°0°0°nanacamilpa°0°0°|
+registro_complejo|2|fonda|2|fonda|victor hugo|quintanilla|fernandez|0123|banco|curp|0|juarez 36|barrio villa|nanacamilpa|tlaxcala|qu1r30n@gmail.com|
+reg_comp|2|fonda|2|fonda|victor hugo°quintanilla°fernandez°0123°banco°curp°0°juarez 36°barrio villa°nanacamilpa°tlaxcala°qu1r30n@gmail.com°|
+entrada_dinero|fonda|3|100
+ent_simp|fonda|3|100|20|10|
+entrada_dinero|fonda|3|100
+ent_simp|fonda|3|100|20|10|
+registro_complejo|3|fonda|3|fonda|jose adiel|arroyo|lara|0123|banco|laaa680927hdfrrd04|2411854030|revolucion 107|infonavit mineros|nanacamilpa|tlaxcala|correo|
+reg_comp|3|fonda|3|fonda|jose adiel°arroyo°lara°0123°banco°laaa680927hdfrrd04°2411854030°revolucion 107°infonavit mineros°nanacamilpa°tlaxcala°correo°|
+registro_complejo|3|fonda|3|fonda|shaid alejandro|aguilar|muñoz|0123|banco|aums030414htlgha8|5637351358|reforma 46 4|barrio arenas|nanacamilpa|tlaxcala|correo|
+reg_comp|3|fonda|3|fonda|shaid alejandro°aguilar°muñoz°0123°banco°aums030414htlgha8°5637351358°reforma 46 4°barrio arenas°nanacamilpa°tlaxcala°correo°|
+registro_complejo|3|fonda|3|fonda|yocelin alondra|sandoval|buendia|0|banco|curp|7481055137|matamoros 63|barrio arenas|nanacamilpa|tlaxcala|yocelinsandova20@gmail.com|
+reg_comp|3|fonda|3|fonda|yocelin alondra°sandoval°buendia°0°banco°curp°7481055137°matamoros 63°barrio arenas°nanacamilpa°tlaxcala°yocelinsandova20@gmail.com°|
+registro_complejo|3|fonda|3|fonda|michel ivon|vargas|hernandez|0|banco|vahm030826mtlrrca1|5646878326|vicente suares 161|bario de chapultepec|nanacamilpa|tlaxcala|correo|
+reg_comp|3|fonda|3|fonda|michel ivon°vargas°hernandez°0°banco°vahm030826mtlrrca1°5646878326°vicente suares 161°bario de chapultepec°nanacamilpa°tlaxcala°correo°|
+entrada_dinero|fonda|3|100
+ent_simp|fonda|3|100|10|
+entrada_dinero|fonda|3|100
+ent_simp|fonda|3|100|10|
+entrada_dinero|fonda|3|100
+ent_simp|fonda|3|100|10|
+entrada_dinero|fonda|3|100
+ent_simp|fonda|3|100|10|
+entrada_dinero|fonda|3|100
+ent_simp|fonda|3|100|10|
+entrada_dinero|fonda|3|100
+ent_simp|fonda|3|100|10|
