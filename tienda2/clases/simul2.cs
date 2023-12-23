@@ -93,7 +93,7 @@ namespace tienda2.clases
             return info_base.Length+"";
         }
 
-        public void entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porsentajes_de_comision = "20|10", char caracter_separacion = '|', bool viene_pago_comp = false)
+        public void entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porsentajes_de_comision_para_usuarios = "20", string porsentajes_de_comision_para_patrosinadores = "10", char caracter_separacion = '|', bool viene_pago_comp = false)
         {
             if (viene_pago_comp==false)
             {
@@ -101,20 +101,24 @@ namespace tienda2.clases
                 string año_mes_dia = fecha_hora.ToString("yyyyMMdd");
                 string dir = "sismul2\\mov\\mov_diario_det\\" + año_mes_dia + "_mov.txt";
                 bas.Crear_archivo_y_directorio(dir);
-                string info_movimiento = "ent_simp" + caracter_separacion + tabla_usuario + caracter_separacion + id_usuario + caracter_separacion + cantidad_dinero_string + caracter_separacion + porsentajes_de_comision + caracter_separacion;
+                string info_movimiento = "ent_simp" + caracter_separacion + tabla_usuario + caracter_separacion + id_usuario + caracter_separacion + cantidad_dinero_string + caracter_separacion + porsentajes_de_comision_para_patrosinadores + caracter_separacion;
                 bas.Agregar(dir, info_movimiento);
             }
 
             string direccion_tab_enc = "sismul2\\" + G_sucursal + G_compu + tabla_usuario + ".txt";
             double cantidad_dinero = Convert.ToDouble(cantidad_dinero_string);
 
-            string[] comiciones = porsentajes_de_comision.Split(caracter_separacion);
+            string[] comiciones = porsentajes_de_comision_para_patrosinadores.Split(caracter_separacion);
             //0_id_usuario|1_id_patrocinador|2_tabla_patrocinador|3_id_encargado|5_tabla_encargado|5_diner|6_a_pagar|7_datos|8_encargados|
             string usu = bas.Seleccionar(direccion_tab_enc, 0, id_usuario);
             string[] usu_esp = usu.Split(caracter_separacion);
             string id_a_pagar = usu_esp[3];
+
+            bas.Incrementa_celda(tabla_usuario, 0, id_usuario, "6", "" + (cantidad_dinero * (Convert.ToDouble(porsentajes_de_comision_para_usuarios) / 100)));
+
             for (int i = 0; i < comiciones.Length; i++)
             {
+
                 bas.Incrementa_celda(direccion_tab_enc, 0, id_a_pagar, "6", "" + (cantidad_dinero * (Convert.ToDouble(comiciones[i]) / 100)));
                 usu = bas.Seleccionar(direccion_tab_enc, 0, id_a_pagar);
                 usu_esp = usu.Split(caracter_separacion);
