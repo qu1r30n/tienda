@@ -93,7 +93,7 @@ namespace tienda2.clases
             return info_base.Length+"";
         }
 
-        public void entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porsentajes_de_comision_para_usuarios = "20", string porsentajes_de_comision_para_patrosinadores = "10", char caracter_separacion = '|', bool viene_pago_comp = false)
+        public void entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(string tabla_usuario, string id_usuario, string cantidad_dinero_string, string porsentajes_de_comision_para_patrosinadores = "10", string porsentajes_de_comision_para_usuarios = "", char caracter_separacion = '|', bool viene_pago_comp = false)
         {
             if (viene_pago_comp==false)
             {
@@ -114,7 +114,11 @@ namespace tienda2.clases
             string[] usu_esp = usu.Split(caracter_separacion);
             string id_a_pagar = usu_esp[3];
 
-            bas.Incrementa_celda(tabla_usuario, 0, id_usuario, "6", "" + (cantidad_dinero * (Convert.ToDouble(porsentajes_de_comision_para_usuarios) / 100)));
+            if (porsentajes_de_comision_para_usuarios != "")
+            {
+                bas.Incrementa_celda(tabla_usuario, 0, id_usuario, "6", "" + (cantidad_dinero * (Convert.ToDouble(porsentajes_de_comision_para_usuarios) / 100)));
+            }
+            
 
             for (int i = 0; i < comiciones.Length; i++)
             {
