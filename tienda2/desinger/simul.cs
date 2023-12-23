@@ -55,7 +55,7 @@ namespace tienda2.desinger
             registro_movimiento(datos);
 
             simul2 sim = new simul2();
-            sim.entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(cmb_curso.Text, txt_id.Text, txt_dinero.Text);
+            sim.entrada_dinero_simple_metodo_sin_lista_de_patrocinadores(cmb_curso.Text, txt_id.Text, txt_dinero.Text,porsentajes_de_comision_para_usuarios:"20");
             
             MessageBox.Show("listo");
             cmb_curso.Text = "";
