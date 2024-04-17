@@ -1,0 +1,239 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|c:\\users\\pc1\\documents\\github\\tienda\\tienda2\\clases\\tex_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\clases\\tex_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|c:\\users\\pc1\\documents\\github\\tienda\\tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\modelo_compra_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\clases\\modelo_compra_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\simul2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\clases\\simul2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\simul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\simul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\simul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\simul.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\area_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\area_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\porcen_ganan_produc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\porcen_ganan_produc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\area_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\area_principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\area_principal_comparar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\area_principal_comparar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 301,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Tex_base.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\tex_base.cs",
+              "RelativeDocumentMoniker": "tienda2\\clases\\tex_base.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\tex_base.cs",
+              "RelativeToolTip": "tienda2\\clases\\tex_base.cs",
+              "ViewState": "AQIAAHwFAAAAAAAAAAAUwMAFAACUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:33.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ventas.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\ventas.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs",
+              "RelativeToolTip": "tienda2\\desinger\\ventas.cs",
+              "ViewState": "AQIAAFECAAAAAAAAAAAkwGUCAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ventas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Ventas.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\Ventas.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\inf\\tienda2\\tienda2\\tienda2\\desinger\\Ventas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\inf\\tienda2\\tienda2\\tienda2\\desinger\\Ventas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\Form1.cs",
+              "RelativeDocumentMoniker": "tienda2\\Form1.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\Form1.cs",
+              "RelativeToolTip": "tienda2\\Form1.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAkwBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "simul2.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\simul2.cs",
+              "RelativeDocumentMoniker": "tienda2\\clases\\simul2.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\simul2.cs",
+              "RelativeToolTip": "tienda2\\clases\\simul2.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAkwH0AAAAYAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "simul.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\simul.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\simul.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\simul.cs",
+              "RelativeToolTip": "tienda2\\desinger\\simul.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADcAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "simul.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\simul.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\simul.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\inf\\tienda2\\tienda2\\tienda2\\desinger\\simul.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\inf\\tienda2\\tienda2\\tienda2\\desinger\\simul.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Modelo_compra_venta.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\Modelo_compra_venta.cs",
+              "RelativeDocumentMoniker": "tienda2\\clases\\Modelo_compra_venta.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\Modelo_compra_venta.cs",
+              "RelativeToolTip": "tienda2\\clases\\Modelo_compra_venta.cs",
+              "ViewState": "AQIAAPwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\Form1.cs",
+              "RelativeDocumentMoniker": "tienda2\\Form1.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\inf\\tienda2\\tienda2\\tienda2\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\inf\\tienda2\\tienda2\\tienda2\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "porcen_ganan_produc.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\porcen_ganan_produc.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs",
+              "RelativeToolTip": "tienda2\\desinger\\porcen_ganan_produc.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "porcen_ganan_produc.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\porcen_ganan_produc.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\inf\\tienda2\\tienda2\\tienda2\\desinger\\porcen_ganan_produc.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\inf\\tienda2\\tienda2\\tienda2\\desinger\\porcen_ganan_produc.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Area_principal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Area_principal.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\Area_principal.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\inf\\tienda2\\tienda2\\tienda2\\desinger\\Area_principal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\inf\\tienda2\\tienda2\\tienda2\\desinger\\Area_principal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Area_principal.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Area_principal.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\Area_principal.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Area_principal.cs",
+              "RelativeToolTip": "tienda2\\desinger\\Area_principal.cs",
+              "ViewState": "AQIAAP4DAAAAAAAAAAAewAgEAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "area_principal_Comparar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\area_principal_Comparar.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\area_principal_Comparar.cs",
+              "ToolTip": "D:\\pr\\tienda2\\tienda2\\tienda2\\desinger\\area_principal_Comparar.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-12T20:47:21.672Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
