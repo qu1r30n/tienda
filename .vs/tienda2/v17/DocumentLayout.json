@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|c:\\users\\pc1\\documents\\github\\tienda\\tienda2\\clases\\tex_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\tex_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\clases\\tex_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|c:\\users\\pc1\\documents\\github\\tienda\\tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|c:\\users\\pc1\\documents\\github\\tienda\\tienda2\\clases\\modelo_compra_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\clases\\modelo_compra_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\compras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\compras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\investigacion_mercado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\investigacion_mercado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\investigacion_mercado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\investigacion_mercado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\prediccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\clases\\prediccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas_confirmar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\ventas_confirmar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas_confirmar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\ventas_confirmar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\desinger\\ventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\modelo_compra_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|solutionrelative:tienda2\\clases\\modelo_compra_venta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15D25107-344C-46E3-8F86-248FC77F7F78}|tienda2\\tienda2.csproj|C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,8 +98,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 301,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Compras.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\compras.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\compras.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\compras.cs",
+              "RelativeToolTip": "tienda2\\desinger\\compras.cs",
+              "ViewState": "AQIAALgCAAAAAAAAAAAlwMgCAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T08:18:00.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "prediccion.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\prediccion.cs",
+              "RelativeDocumentMoniker": "tienda2\\clases\\prediccion.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\prediccion.cs",
+              "RelativeToolTip": "tienda2\\clases\\prediccion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T08:32:59.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Ventas.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\ventas.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs",
+              "RelativeToolTip": "tienda2\\desinger\\ventas.cs",
+              "ViewState": "AQIAAIsBAAAAAAAAAAAAAIsBAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Ventas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\ventas.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "tienda2\\desinger\\ventas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Modelo_compra_venta.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\modelo_compra_venta.cs",
+              "RelativeDocumentMoniker": "tienda2\\clases\\modelo_compra_venta.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\modelo_compra_venta.cs",
+              "RelativeToolTip": "tienda2\\clases\\modelo_compra_venta.cs",
+              "ViewState": "AQIAAKoAAAAAAAAAAAAQwMAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.659Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -76,38 +169,60 @@
               "RelativeDocumentMoniker": "tienda2\\clases\\tex_base.cs",
               "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\tex_base.cs",
               "RelativeToolTip": "tienda2\\clases\\tex_base.cs",
-              "ViewState": "AQIAAHwFAAAAAAAAAAAUwMAFAACUAAAA",
+              "ViewState": "AQIAAB8FAAAAAAAAAAA2wA0GAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-12T20:47:33.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Ventas.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs",
-              "RelativeDocumentMoniker": "tienda2\\desinger\\ventas.cs",
-              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\ventas.cs",
-              "RelativeToolTip": "tienda2\\desinger\\ventas.cs",
-              "ViewState": "AQIAAFECAAAAAAAAAAAkwGUCAAAoAAAA",
+              "DocumentIndex": 6,
+              "Title": "investigacion_mercado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\investigacion_mercado.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\investigacion_mercado.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\investigacion_mercado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "tienda2\\desinger\\investigacion_mercado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T20:47:21.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-25T09:06:31.326Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Ventas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Ventas.cs",
-              "RelativeDocumentMoniker": "tienda2\\desinger\\Ventas.cs",
-              "ToolTip": "C:\\Users\\pc1\\Documents\\inf\\tienda2\\tienda2\\tienda2\\desinger\\Ventas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\inf\\tienda2\\tienda2\\tienda2\\desinger\\Ventas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-03-12T20:47:21.643Z"
+              "Title": "inventario.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\inventario.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\inventario.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\inventario.cs",
+              "RelativeToolTip": "tienda2\\desinger\\inventario.cs",
+              "ViewState": "AQIAAH8BAAAAAAAAAAAAAH8BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T09:11:06.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "investigacion_mercado.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\investigacion_mercado.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\investigacion_mercado.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\investigacion_mercado.cs",
+              "RelativeToolTip": "tienda2\\desinger\\investigacion_mercado.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAwwB8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T09:06:35.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "inventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\inventario.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\inventario.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\inventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "tienda2\\desinger\\inventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T09:10:51.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\Form1.cs",
               "RelativeDocumentMoniker": "tienda2\\Form1.cs",
@@ -119,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "simul2.cs",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\simul2.cs",
               "RelativeDocumentMoniker": "tienda2\\clases\\simul2.cs",
@@ -131,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "simul.cs",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\simul.cs",
               "RelativeDocumentMoniker": "tienda2\\desinger\\simul.cs",
@@ -143,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "simul.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\simul.cs",
               "RelativeDocumentMoniker": "tienda2\\desinger\\simul.cs",
@@ -154,19 +269,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Modelo_compra_venta.cs",
-              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\Modelo_compra_venta.cs",
-              "RelativeDocumentMoniker": "tienda2\\clases\\Modelo_compra_venta.cs",
-              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\clases\\Modelo_compra_venta.cs",
-              "RelativeToolTip": "tienda2\\clases\\Modelo_compra_venta.cs",
-              "ViewState": "AQIAAPwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "Ventas_confirmar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Ventas_confirmar.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\Ventas_confirmar.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Ventas_confirmar.cs [Dise\u00F1o]",
+              "RelativeToolTip": "tienda2\\desinger\\Ventas_confirmar.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T20:47:21.659Z"
+              "WhenOpened": "2024-04-25T08:12:37.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "Ventas_confirmar.cs",
+              "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Ventas_confirmar.cs",
+              "RelativeDocumentMoniker": "tienda2\\desinger\\Ventas_confirmar.cs",
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Ventas_confirmar.cs",
+              "RelativeToolTip": "tienda2\\desinger\\Ventas_confirmar.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAcwCwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T08:12:39.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\Form1.cs",
               "RelativeDocumentMoniker": "tienda2\\Form1.cs",
@@ -177,53 +303,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "porcen_ganan_produc.cs",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs",
               "RelativeDocumentMoniker": "tienda2\\desinger\\porcen_ganan_produc.cs",
               "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs",
               "RelativeToolTip": "tienda2\\desinger\\porcen_ganan_produc.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACIAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-03-12T20:47:21.664Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "porcen_ganan_produc.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs",
               "RelativeDocumentMoniker": "tienda2\\desinger\\porcen_ganan_produc.cs",
-              "ToolTip": "C:\\Users\\pc1\\Documents\\inf\\tienda2\\tienda2\\tienda2\\desinger\\porcen_ganan_produc.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\inf\\tienda2\\tienda2\\tienda2\\desinger\\porcen_ganan_produc.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-03-12T20:47:21.666Z"
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\porcen_ganan_produc.cs [Dise\u00F1o]",
+              "RelativeToolTip": "tienda2\\desinger\\porcen_ganan_produc.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.666Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "Area_principal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Area_principal.cs",
               "RelativeDocumentMoniker": "tienda2\\desinger\\Area_principal.cs",
-              "ToolTip": "C:\\Users\\pc1\\Documents\\inf\\tienda2\\tienda2\\tienda2\\desinger\\Area_principal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "..\\..\\inf\\tienda2\\tienda2\\tienda2\\desinger\\Area_principal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-03-12T20:47:21.667Z"
+              "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Area_principal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "tienda2\\desinger\\Area_principal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.667Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "Area_principal.cs",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Area_principal.cs",
               "RelativeDocumentMoniker": "tienda2\\desinger\\Area_principal.cs",
               "ToolTip": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\Area_principal.cs",
               "RelativeToolTip": "tienda2\\desinger\\Area_principal.cs",
               "ViewState": "AQIAAP4DAAAAAAAAAAAewAgEAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2024-03-12T20:47:21.67Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T20:47:21.67Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "area_principal_Comparar.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\pc1\\Documents\\GitHub\\tienda\\tienda2\\desinger\\area_principal_Comparar.cs",
               "RelativeDocumentMoniker": "tienda2\\desinger\\area_principal_Comparar.cs",
